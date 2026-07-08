@@ -3,14 +3,16 @@
 [ext_resource type="Script" uid="uid://q1q4ki2fc8oo" path="res://scripts/Player.gd" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://bud6xyvo80vl3" path="res://scripts/click_link.gd" id="3_1bvp3"]
 [ext_resource type="Material" uid="uid://bnuir4b1t58xs" path="res://environment-csg/level-grid.tres" id="3_h2yge"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_y5qfa"]
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_w7dxp"]
+[ext_resource type="PackedScene" uid="uid://cu85ekmbqlk7a" path="res://models/player_step_shape.res" id="4_1bvp3"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_7tbbo"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_7tbbo"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1bvp3"]
+friction = 0.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_y5qfa"]
 
 [node name="Main" type="Node3D" unique_id=1018901499]
 
@@ -20,20 +22,6 @@ transform = Transform3D(-0.61119694, -0.25221133, 0.7502185, 9.107543e-09, 0.947
 [node name="Secondary directional" type="DirectionalLight3D" parent="." unique_id=1278070892]
 transform = Transform3D(-0.12747838, 0.31605855, -0.94013625, 0.958045, 0.2845646, -0.034240916, 0.25670755, -0.90505815, -0.3390743, 2.505683, 2.197227, 0)
 light_energy = 0.25
-
-[node name="Player" type="CharacterBody3D" parent="." unique_id=2125111312]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.595182, 0)
-up_direction = Vector3(-0.024992192, 0.9996877, 0)
-script = ExtResource("1_ig7tw")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Player" unique_id=1513228535]
-mesh = SubResource("CapsuleMesh_y5qfa")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=597167012]
-shape = SubResource("CapsuleShape3D_w7dxp")
-
-[node name="Camera3D" type="Camera3D" parent="Player" unique_id=618270034]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.72874236, -0.3611512)
 
 [node name="CSG Blockout" type="CSGCombiner3D" parent="." unique_id=250536827]
 use_collision = true
@@ -170,3 +158,23 @@ grow_vertical = 2
 size_flags_horizontal = 4
 text = "+"
 horizontal_alignment = 1
+
+[node name="PlayerPhysics" type="RigidBody3D" parent="." unique_id=684927845]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+mass = 4.0
+physics_material_override = SubResource("PhysicsMaterial_1bvp3")
+continuous_cd = true
+script = ExtResource("1_ig7tw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerPhysics" unique_id=1513228535]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.595182, 0)
+mesh = SubResource("CapsuleMesh_y5qfa")
+
+[node name="Camera3D" type="Camera3D" parent="PlayerPhysics" unique_id=618270034]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3239243, -0.3611512)
+
+[node name="player-step-shape" parent="PlayerPhysics" unique_id=900220688 instance=ExtResource("4_1bvp3")]
+transform = Transform3D(-175, 0, -2.6424266e-05, 0, 175, 0, 2.6424266e-05, 0, -175, 0, 1.5, 0)

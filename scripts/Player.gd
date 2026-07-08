@@ -1,4 +1,4 @@
-extends CharacterBody3D
+extends RigidBody3D
 
 # this script was started based on the short tutorial at:
 # https://www.youtube.com/watch?v=fAVetlIROXM
@@ -17,23 +17,29 @@ var lock_mouse = false
 ### movement
 
 func _physics_process(delta: float) -> void:
-	if not is_on_floor():
-		velocity += get_gravity() * delta
-
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+	# note: temporarily being lazy about ground check, this could allow wall jumping
+	if Input.is_action_just_pressed("jump") and get_contact_count() > 0:
+		apply_central_impulse(Vector3.UP * JUMP_VELOCITY)
 
 	var input_dir := Input.get_vector("left", "right", "up", "down")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
+		apply_central_force(direction * 60.0)
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
+		var ground_speed := Vector3(linear_velocity.x, 0, linear_velocity.z)
+		ground_speed = ground_speed.move_toward(Vector3.ZERO, 20.0 * delta)
+		linear_velocity.x = ground_speed.x
+		linear_velocity.z = ground_speed.z
+		
+	# keep lateral speed reasonable
+	var horizontal_velocity := Vector3(linear_velocity.x, 0, linear_velocity.z)
+
+	if horizontal_velocity.length() > SPEED:
+		horizontal_velocity = horizontal_velocity.normalized() * SPEED
+		linear_velocity.x = horizontal_velocity.x
+		linear_velocity.z = horizontal_velocity.z
 
 	_rotate_camera(delta)
-	move_and_slide()
 
 func _rotate_camera(delta: float, look_modifier: float = 1.0):
 	var input = Input.get_vector("look_left","look_right","look_down","look_up")
