@@ -1,9 +1,16 @@
 [gd_scene format=3 uid="uid://baos2k6gymk8n"]
 
+[ext_resource type="PackedScene" uid="uid://c0ug0wogf56tg" path="res://models/cyndrive_ships_ship.fbx" id="2_5t06w"]
 [ext_resource type="Script" uid="uid://bud6xyvo80vl3" path="res://scripts/click_link.gd" id="3_1bvp3"]
 [ext_resource type="Script" uid="uid://cl8kffkiyit6t" path="res://scripts/click_scene_change.gd" id="3_7mycd"]
 [ext_resource type="Material" uid="uid://bnuir4b1t58xs" path="res://environment-csg/level-grid.tres" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://ce0uc3f7i1cxo" path="res://entities-scene_prefabs/player_with_ui.tscn" id="3_lquwl"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_8jg5c"]
+viewport_path = NodePath("CSG Blockout/Cyndrive Ships/DevNote/SubViewport")
+
+[sub_resource type="LabelSettings" id="LabelSettings_auqj3"]
+font_size = 25
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_7tbbo"]
 
@@ -124,6 +131,55 @@ polygon = PackedVector2Array(5.5, -2, -5.5, -2, -2.5, 1, -0.5, 1, 1.5, 3, 3.5, 3
 depth = 6.0
 material = ExtResource("3_h2yge")
 
+[node name="Cyndrive Ships" type="CSGBox3D" parent="CSG Blockout" unique_id=1033830538]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 118.64973, 0.00299716, 4.5480576)
+size = Vector3(24, 1.9262695, 27)
+material = ExtResource("3_h2yge")
+
+[node name="cyndrive_ships_ship" parent="CSG Blockout/Cyndrive Ships" unique_id=877454750 instance=ExtResource("2_5t06w")]
+transform = Transform3D(-0.6511521, 0.46758366, 0.5978013, 0.7060882, 0.6620441, 0.2512704, -0.27828112, 0.5857159, -0.7612467, -4.8901906, 6.195468, 7.647873)
+
+[node name="cyndrive_ships_ship2" parent="CSG Blockout/Cyndrive Ships" unique_id=752929919 instance=ExtResource("2_5t06w")]
+transform = Transform3D(-0.85859096, 0.35519263, -0.36967534, 0.17798518, 0.88276315, 0.43479955, 0.48077318, 0.30751798, -0.8211515, 3.5230794, 5.683916, 8.395721)
+
+[node name="cyndrive_ships_ship3" parent="CSG Blockout/Cyndrive Ships" unique_id=1813257203 instance=ExtResource("2_5t06w")]
+transform = Transform3D(-0.9126494, -0.4064956, 0.042800464, -0.40671453, 0.89270943, -0.19404496, 0.040669966, -0.19450268, -0.98005855, -0.98821664, 11.858702, 4.059387)
+
+[node name="NegativeCube" type="CSGBox3D" parent="CSG Blockout/Cyndrive Ships" unique_id=162399428]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 5.2626038, 0.045150757)
+operation = 2
+size = Vector3(22.5, 11.267517, 25.090912)
+material = ExtResource("3_h2yge")
+
+[node name="Door Hole" type="CSGPolygon3D" parent="CSG Blockout/Cyndrive Ships" unique_id=1674208548]
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, 0, -0.6544514, 12.499996)
+operation = 2
+polygon = PackedVector2Array(-1.5, 0, -1.5, 2.5, -1, 3.5, 0, 4, 1, 3.5, 1.5, 2.5, 1.5, 0)
+depth = 2.0
+material = ExtResource("3_h2yge")
+
+[node name="DevNote" type="Sprite3D" parent="CSG Blockout/Cyndrive Ships" unique_id=1445491513]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7683716e-07, 2.281348, 13.867928)
+pixel_size = 0.03
+billboard = 1
+texture = SubResource("ViewportTexture_8jg5c")
+
+[node name="SubViewport" type="SubViewport" parent="CSG Blockout/Cyndrive Ships/DevNote" unique_id=1433292638]
+transparent_bg = true
+
+[node name="Label" type="Label" parent="CSG Blockout/Cyndrive Ships/DevNote/SubViewport" unique_id=566818203]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Dev note: Feel free to
+move the exhibit, rearrange etc..
+this is not final!"
+label_settings = SubResource("LabelSettings_auqj3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Museum Modern" type="CSGBox3D" parent="CSG Blockout" unique_id=691043333]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 6, -19.5)
 size = Vector3(24, 16, 27)
@@ -147,7 +203,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 6, 32.5)
 size = Vector3(24, 16, 27)
 material = ExtResource("3_h2yge")
 
-[node name="negative tunnel" type="CSGBox3D" parent="CSG Blockout/Museum Classical" unique_id=2047117778]
+[node name="NegativeCube" type="CSGBox3D" parent="CSG Blockout/Museum Classical" unique_id=2047117778]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0.5, 0.045150757)
 operation = 2
 size = Vector3(22.5, 15, 25.090912)
@@ -158,6 +214,11 @@ transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, -3.8
 operation = 2
 polygon = PackedVector2Array(-1.5, 0, -1.5, 2.5, -1, 3.5, 0, 4, 1, 3.5, 1.5, 2.5, 1.5, 0)
 depth = 2.0
+material = ExtResource("3_h2yge")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSG Blockout" unique_id=1281496673]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72.196, -3.75, 3.653)
+size = Vector3(66.381714, 5.5, 6.3066406)
 material = ExtResource("3_h2yge")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CSG Blockout" unique_id=429890971]
