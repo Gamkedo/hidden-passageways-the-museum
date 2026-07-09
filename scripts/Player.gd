@@ -89,3 +89,5 @@ func interaction_check():
 		if dist <= max_distance: # can later scan for switches/doors/items/etc
 			if hit.has_method("open_link"):
 				hit.open_link()
+			if hit.has_method("open_scene"):
+				hit.open_scene()

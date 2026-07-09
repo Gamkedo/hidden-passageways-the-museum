@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://baos2k6gymk8n"]
 
 [ext_resource type="Script" uid="uid://bud6xyvo80vl3" path="res://scripts/click_link.gd" id="3_1bvp3"]
+[ext_resource type="Script" uid="uid://cl8kffkiyit6t" path="res://scripts/click_scene_change.gd" id="3_7mycd"]
 [ext_resource type="Material" uid="uid://bnuir4b1t58xs" path="res://environment-csg/level-grid.tres" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://ce0uc3f7i1cxo" path="res://entities-scene_prefabs/player_with_ui.tscn" id="3_lquwl"]
 
@@ -132,6 +133,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2.5, -2.5)
 shape = SubResource("SphereShape3D_7tbbo")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Clickable 3d link test" unique_id=2110042834]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2.5, -2.5)
+mesh = SubResource("SphereMesh_7tbbo")
+
+[node name="Clickable Scene Change" type="StaticBody3D" parent="." unique_id=1285932327]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5)
+script = ExtResource("3_7mycd")
+goto_scene = "uid://deyi3ygip7r4c"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Clickable Scene Change" unique_id=1753182507]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2.5, -2.5)
+shape = SubResource("SphereShape3D_7tbbo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Clickable Scene Change" unique_id=1536834647]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2.5, -2.5)
 mesh = SubResource("SphereMesh_7tbbo")
 
