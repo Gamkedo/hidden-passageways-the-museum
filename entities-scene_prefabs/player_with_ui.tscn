@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://ce0uc3f7i1cxo"]
+
+[ext_resource type="Script" uid="uid://q1q4ki2fc8oo" path="res://scripts/Player.gd" id="1_4v70m"]
+[ext_resource type="PackedScene" uid="uid://cu85ekmbqlk7a" path="res://models/player_step_shape.res" id="2_ydgiv"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1bvp3"]
+friction = 0.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_y5qfa"]
+
+[node name="Player with UI" type="Node3D" unique_id=1354449472]
+
+[node name="UI Layer" type="CanvasLayer" parent="." unique_id=1635546215]
+
+[node name="Cursor (placeholder)" type="Label" parent="UI Layer" unique_id=2025409343]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "+"
+horizontal_alignment = 1
+
+[node name="PlayerPhysics" type="RigidBody3D" parent="." unique_id=1106753911]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+mass = 4.0
+physics_material_override = SubResource("PhysicsMaterial_1bvp3")
+continuous_cd = true
+script = ExtResource("1_4v70m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerPhysics" unique_id=367034565]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.595182, 0)
+mesh = SubResource("CapsuleMesh_y5qfa")
+
+[node name="Camera3D" type="Camera3D" parent="PlayerPhysics" unique_id=2051373162]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3239243, -0.3611512)
+
+[node name="player-step-shape" parent="PlayerPhysics" unique_id=900220688 instance=ExtResource("2_ydgiv")]
+transform = Transform3D(-175, 0, -2.6424266e-05, 0, 175, 0, 2.6424266e-05, 0, -175, 0, 1.5, 0)
