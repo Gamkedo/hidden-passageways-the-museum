@@ -42,7 +42,8 @@ script = ExtResource("1_4v70m")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.595182, 0)
 mesh = SubResource("CapsuleMesh_y5qfa")
 
-[node name="Camera3D" type="Camera3D" parent="PlayerPhysics" unique_id=2051373162]
+[node name="BodyCam" type="Camera3D" parent="PlayerPhysics" unique_id=2051373162]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3239243, -0.3611512)
 
 [node name="player-step-shape" parent="PlayerPhysics" unique_id=900220688 instance=ExtResource("2_ydgiv")]
