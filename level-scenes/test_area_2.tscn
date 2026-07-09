@@ -25,7 +25,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -1)
 size = Vector3(11, 2, 8)
 material = ExtResource("1_pbe1g")
 
-[node name="nega floor" type="CSGBox3D" parent="CSG Blockout/Starting room" unique_id=1831170557]
+[node name="negative floor" type="CSGBox3D" parent="CSG Blockout/Starting room" unique_id=1831170557]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.5, 0)
 operation = 2
 size = Vector3(11, 1, 6)
@@ -48,7 +48,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -4.5, -1)
 size = Vector3(11, 7, 8)
 material = ExtResource("1_pbe1g")
 
-[node name="nega tunnel" type="CSGBox3D" parent="CSG Blockout/Tunnel under start" unique_id=1303172700]
+[node name="negative tunnel" type="CSGBox3D" parent="CSG Blockout/Tunnel under start" unique_id=1303172700]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.5, 0)
 operation = 2
 size = Vector3(12, 6, 6)

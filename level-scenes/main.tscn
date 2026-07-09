@@ -26,7 +26,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -1)
 size = Vector3(11, 2, 8)
 material = ExtResource("3_h2yge")
 
-[node name="nega floor" type="CSGBox3D" parent="CSG Blockout/Starting room" unique_id=1831170557]
+[node name="negative floor" type="CSGBox3D" parent="CSG Blockout/Starting room" unique_id=1831170557]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.5, 0)
 operation = 2
 size = Vector3(11, 1, 6)
@@ -49,7 +49,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -4.5, -1)
 size = Vector3(11, 7, 8)
 material = ExtResource("3_h2yge")
 
-[node name="nega tunnel" type="CSGBox3D" parent="CSG Blockout/Tunnel under start" unique_id=1303172700]
+[node name="negative tunnel" type="CSGBox3D" parent="CSG Blockout/Tunnel under start" unique_id=1303172700]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.5, 0)
 operation = 2
 size = Vector3(12, 6, 6)
@@ -61,12 +61,52 @@ operation = 2
 polygon = PackedVector2Array(-1.5, 0, -1.5, 2.5, -1, 3.5, 0, 4, 1, 3.5, 1.5, 2.5, 1.5, 0)
 material = ExtResource("3_h2yge")
 
+[node name="stairs test" type="CSGBox3D" parent="CSG Blockout" unique_id=1519009200]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, -7.5, 2.5)
+size = Vector3(14, 1, 15)
+material = ExtResource("3_h2yge")
+
+[node name="stairs test2" type="CSGBox3D" parent="CSG Blockout/stairs test" unique_id=520699372]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, -3.5)
+size = Vector3(8, 1, 7)
+material = ExtResource("3_h2yge")
+
+[node name="stairs test3" type="CSGBox3D" parent="CSG Blockout/stairs test" unique_id=682605393]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 2, -3.5)
+size = Vector3(7, 1, 7)
+material = ExtResource("3_h2yge")
+
+[node name="stairs test4" type="CSGBox3D" parent="CSG Blockout/stairs test" unique_id=1460582675]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 3, -3.5)
+size = Vector3(6, 1, 7)
+material = ExtResource("3_h2yge")
+
+[node name="stairs test5" type="CSGBox3D" parent="CSG Blockout/stairs test" unique_id=719233759]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 4, -3.5)
+size = Vector3(5, 1, 7)
+material = ExtResource("3_h2yge")
+
+[node name="stairs test6" type="CSGBox3D" parent="CSG Blockout/stairs test" unique_id=1173910883]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 5, -3.5)
+size = Vector3(4, 1, 7)
+material = ExtResource("3_h2yge")
+
+[node name="stairs test7" type="CSGBox3D" parent="CSG Blockout/stairs test" unique_id=1899637177]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 6, -3.5)
+size = Vector3(3, 1, 7)
+material = ExtResource("3_h2yge")
+
+[node name="stairs test8" type="CSGBox3D" parent="CSG Blockout/stairs test" unique_id=1186116698]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 7, -3.5)
+size = Vector3(2, 1, 7)
+material = ExtResource("3_h2yge")
+
 [node name="Tunnel under start2" type="CSGBox3D" parent="CSG Blockout" unique_id=882668637]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -4.5, 6)
 size = Vector3(11, 7, 8)
 material = ExtResource("3_h2yge")
 
-[node name="nega tunnel" type="CSGBox3D" parent="CSG Blockout/Tunnel under start2" unique_id=395298804]
+[node name="negative tunnel" type="CSGBox3D" parent="CSG Blockout/Tunnel under start2" unique_id=395298804]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.5, -0.5)
 operation = 2
 size = Vector3(12, 6, 7)
@@ -89,7 +129,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 6, -19.5)
 size = Vector3(24, 16, 27)
 material = ExtResource("3_h2yge")
 
-[node name="nega tunnel" type="CSGBox3D" parent="CSG Blockout/Museum Modern" unique_id=570993560]
+[node name="negative tunnel" type="CSGBox3D" parent="CSG Blockout/Museum Modern" unique_id=570993560]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0.5, 0.045150757)
 operation = 2
 size = Vector3(22.5, 15, 25.090912)
@@ -107,7 +147,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 6, 32.5)
 size = Vector3(24, 16, 27)
 material = ExtResource("3_h2yge")
 
-[node name="nega tunnel" type="CSGBox3D" parent="CSG Blockout/Museum Classical" unique_id=2047117778]
+[node name="negative tunnel" type="CSGBox3D" parent="CSG Blockout/Museum Classical" unique_id=2047117778]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0.5, 0.045150757)
 operation = 2
 size = Vector3(22.5, 15, 25.090912)
