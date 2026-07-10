@@ -328,8 +328,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.5, 0, 33.5)
 
 [node name="Artillery Rampage" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=1993258165]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 1.25, 11.25)
+use_collision = true
 size = Vector3(3.5, 2.5, 1)
 material = ExtResource("6_q1lu7")
+script = ExtResource("3_1bvp3")
+url = "https://gamesalutes.itch.io/artillery-rampage"
 
 [node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Artillery Rampage" unique_id=675816587]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
@@ -340,8 +343,11 @@ material = SubResource("StandardMaterial3D_ewg6b")
 
 [node name="Cargo Bay" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=713632237]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.75, 1.25, 11.25)
+use_collision = true
 size = Vector3(3.5, 2.5, 1)
 material = ExtResource("6_q1lu7")
+script = ExtResource("3_1bvp3")
+url = "https://devpods.itch.io/cargo-bay-5n-afu"
 
 [node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Cargo Bay" unique_id=1544338814]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
@@ -352,8 +358,11 @@ material = SubResource("StandardMaterial3D_v6iic")
 
 [node name="Crash Em Up" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=2082509214]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.75, 1.25, 11.25)
+use_collision = true
 size = Vector3(3.5, 2.5, 1)
 material = ExtResource("6_q1lu7")
+script = ExtResource("3_1bvp3")
+url = "https://mdfewkes.itch.io/crash-em-up"
 
 [node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Crash Em Up" unique_id=228317423]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
@@ -364,8 +373,11 @@ material = SubResource("StandardMaterial3D_ewmbl")
 
 [node name="Crazy Arena Chaos" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=376533062]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.75, 1.25, 11.25)
+use_collision = true
 size = Vector3(3.5, 2.5, 1)
 material = ExtResource("6_q1lu7")
+script = ExtResource("3_1bvp3")
+url = "https://christiangabbianelli.itch.io/crazy-arena-chaos"
 
 [node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Crazy Arena Chaos" unique_id=966413932]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
@@ -376,8 +388,11 @@ material = SubResource("StandardMaterial3D_4y16h")
 
 [node name="Cyndrive Ships" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=1284891649]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.25, 1.25, 11.25)
+use_collision = true
 size = Vector3(3.5, 2.5, 1)
 material = ExtResource("6_q1lu7")
+script = ExtResource("3_1bvp3")
+url = "https://davids91.itch.io/cyndrive-ships"
 
 [node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Cyndrive Ships" unique_id=788663434]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
@@ -388,8 +403,11 @@ material = SubResource("StandardMaterial3D_qi2ty")
 
 [node name="Everchange" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=2076412294]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.049999, 1.25, -0.45000076)
+use_collision = true
 size = Vector3(3.5, 2.5, 1)
 material = ExtResource("6_q1lu7")
+script = ExtResource("3_1bvp3")
+url = "https://deep-rooted-games.itch.io/everchange"
 
 [node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Everchange" unique_id=564190632]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
@@ -400,8 +418,11 @@ material = SubResource("StandardMaterial3D_0m503")
 
 [node name="Forgotten Road" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=1563997844]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.049999, 1.25, -4.950001)
+use_collision = true
 size = Vector3(3.5, 2.5, 1)
 material = ExtResource("6_q1lu7")
+script = ExtResource("3_1bvp3")
+url = "https://devpods.itch.io/forgotten-road"
 
 [node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Forgotten Road" unique_id=1733288856]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
@@ -412,8 +433,11 @@ material = SubResource("StandardMaterial3D_iixjk")
 
 [node name="Gladiator of the Golden House" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=2093554487]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.049999, 1.25, 3.5499992)
+use_collision = true
 size = Vector3(3.5, 2.5, 1)
 material = ExtResource("6_q1lu7")
+script = ExtResource("3_1bvp3")
+url = "https://tarnishedmoth.itch.io/gladiator-of-the-golden-house"
 
 [node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Gladiator of the Golden House" unique_id=1749016341]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
@@ -422,12 +446,15 @@ operation = 2
 size = Vector3(2.5, 1.5, 0.5)
 material = SubResource("StandardMaterial3D_4fg2q")
 
-[node name="King Arthur" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=101377219]
+[node name="King Arthur Tales of the Sword" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=101377219]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.049999, 1.25, 7.549999)
+use_collision = true
 size = Vector3(3.5, 2.5, 1)
 material = ExtResource("6_q1lu7")
+script = ExtResource("3_1bvp3")
+url = "https://chaoticplay.itch.io/king-arthur-tales-of-the-sword"
 
-[node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/King Arthur" unique_id=850616755]
+[node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/King Arthur Tales of the Sword" unique_id=850616755]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
 material_override = SubResource("StandardMaterial3D_4h42u")
 operation = 2
@@ -436,8 +463,11 @@ material = SubResource("StandardMaterial3D_yuneh")
 
 [node name="Legend of Shadowtail" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=1846398690]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.049999, 1.25, -9.450001)
+use_collision = true
 size = Vector3(3.5, 2.5, 1)
 material = ExtResource("6_q1lu7")
+script = ExtResource("3_1bvp3")
+url = "https://mdfewkes.itch.io/legend-of-shadowtail"
 
 [node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Legend of Shadowtail" unique_id=1291495650]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
@@ -448,8 +478,11 @@ material = SubResource("StandardMaterial3D_057f4")
 
 [node name="Naous" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=1990037658]
 transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -10.950001, 1.25, -1.0499992)
+use_collision = true
 size = Vector3(3.5, 2.5, 1)
 material = ExtResource("6_q1lu7")
+script = ExtResource("3_1bvp3")
+url = "https://uraxii.itch.io/naous"
 
 [node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Naous" unique_id=1178703434]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
@@ -460,8 +493,11 @@ material = SubResource("StandardMaterial3D_5dt3m")
 
 [node name="Orbs and Dash" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=1061899117]
 transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -10.950001, 1.25, 3.4500008)
+use_collision = true
 size = Vector3(3.5, 2.5, 1)
 material = ExtResource("6_q1lu7")
+script = ExtResource("3_1bvp3")
+url = "https://iancher.itch.io/orbs-and-dash"
 
 [node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Orbs and Dash" unique_id=1746568817]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
@@ -472,8 +508,11 @@ material = SubResource("StandardMaterial3D_kl5ay")
 
 [node name="Planets Mobile" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=1953178221]
 transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -10.950001, 1.25, -5.049999)
+use_collision = true
 size = Vector3(3.5, 2.5, 1)
 material = ExtResource("6_q1lu7")
+script = ExtResource("3_1bvp3")
+url = "https://numenorian.itch.io/planets-mobile"
 
 [node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Planets Mobile" unique_id=1069114453]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
@@ -484,8 +523,11 @@ material = SubResource("StandardMaterial3D_3lbo0")
 
 [node name="Supply and Siege" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=1750601623]
 transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -10.950001, 1.25, -9.049999)
+use_collision = true
 size = Vector3(3.5, 2.5, 1)
 material = ExtResource("6_q1lu7")
+script = ExtResource("3_1bvp3")
+url = "https://null-mt.itch.io/supply-and-siege"
 
 [node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Supply and Siege" unique_id=1932559617]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
@@ -496,8 +538,11 @@ material = SubResource("StandardMaterial3D_tbq01")
 
 [node name="Talon" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=307707444]
 transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -10.950001, 1.25, 7.950001)
+use_collision = true
 size = Vector3(3.5, 2.5, 1)
 material = ExtResource("6_q1lu7")
+script = ExtResource("3_1bvp3")
+url = "https://patrickmck.itch.io/talon"
 
 [node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Talon" unique_id=666261940]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
