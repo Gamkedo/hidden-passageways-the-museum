@@ -5,6 +5,22 @@
 [ext_resource type="Script" uid="uid://cl8kffkiyit6t" path="res://scripts/click_scene_change.gd" id="3_7mycd"]
 [ext_resource type="Material" uid="uid://bnuir4b1t58xs" path="res://environment-csg/level-grid.tres" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://ce0uc3f7i1cxo" path="res://entities-scene_prefabs/player_with_ui.tscn" id="3_lquwl"]
+[ext_resource type="Material" uid="uid://gi1au7e50ftu" path="res://materials/picture-frame-placeholder-generic-wood.tres" id="6_q1lu7"]
+[ext_resource type="Texture2D" uid="uid://evopvlxedmk7" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/artillery-rampage.png" id="6_rlpi5"]
+[ext_resource type="Texture2D" uid="uid://bto3jcto20bmf" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/cargo-bay.png" id="8_506e2"]
+[ext_resource type="Texture2D" uid="uid://b2oyvwk41k0kr" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/crash-em-up.png" id="9_vcgox"]
+[ext_resource type="Texture2D" uid="uid://8siqjr4kxuft" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/crazy-arena-chaos.png" id="10_euau4"]
+[ext_resource type="Texture2D" uid="uid://c48m8oq1yaq3w" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/cyndrive-ships.png" id="11_u03oo"]
+[ext_resource type="Texture2D" uid="uid://cp3eu5k3e546n" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/everchange.png" id="12_qxgch"]
+[ext_resource type="Texture2D" uid="uid://dpvjb874dhfhp" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/forgotten-road.png" id="13_r54xu"]
+[ext_resource type="Texture2D" uid="uid://dlft5rt3mgqhu" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/gladiator-of-the-golden-house.png" id="14_er4o0"]
+[ext_resource type="Texture2D" uid="uid://87drxaweuioc" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/king-arthur.png" id="15_keiyw"]
+[ext_resource type="Texture2D" uid="uid://baj6x4ux7gvyt" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/legend-of-shadowtail.png" id="16_rvyx8"]
+[ext_resource type="Texture2D" uid="uid://c27yibhqlpdoi" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/naous.png" id="17_ifpan"]
+[ext_resource type="Texture2D" uid="uid://damvm32o7j3ie" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/orbs-and-dash.png" id="18_bib7n"]
+[ext_resource type="Texture2D" uid="uid://ce0iahuroaa7j" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/planets mobile.png" id="19_hgslh"]
+[ext_resource type="Texture2D" uid="uid://c6rqykvgq5oni" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/supply-and-siege.png" id="20_lahx7"]
+[ext_resource type="Texture2D" uid="uid://r870n6ekjct4" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/talon.png" id="21_yqwtw"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_8jg5c"]
 viewport_path = NodePath("CSG Blockout/Cyndrive Ships/DevNote/SubViewport")
@@ -15,6 +31,60 @@ font_size = 25
 [sub_resource type="SphereShape3D" id="SphereShape3D_7tbbo"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_7tbbo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tlwcc"]
+albedo_texture = ExtResource("6_rlpi5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ewg6b"]
+albedo_texture = ExtResource("6_rlpi5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u5gq0"]
+albedo_texture = ExtResource("8_506e2")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v6iic"]
+albedo_texture = ExtResource("8_506e2")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ewmbl"]
+albedo_texture = ExtResource("9_vcgox")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4h42u"]
+albedo_texture = ExtResource("10_euau4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4y16h"]
+albedo_texture = ExtResource("10_euau4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qi2ty"]
+albedo_texture = ExtResource("11_u03oo")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0m503"]
+albedo_texture = ExtResource("12_qxgch")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iixjk"]
+albedo_texture = ExtResource("13_r54xu")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4fg2q"]
+albedo_texture = ExtResource("14_er4o0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yuneh"]
+albedo_texture = ExtResource("15_keiyw")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_057f4"]
+albedo_texture = ExtResource("16_rvyx8")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5dt3m"]
+albedo_texture = ExtResource("17_ifpan")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kl5ay"]
+albedo_texture = ExtResource("18_bib7n")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3lbo0"]
+albedo_texture = ExtResource("19_hgslh")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tbq01"]
+albedo_texture = ExtResource("20_lahx7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mj7h6"]
+albedo_texture = ExtResource("21_yqwtw")
 
 [node name="Main" type="Node3D" unique_id=1018901499]
 
@@ -252,3 +322,186 @@ mesh = SubResource("SphereMesh_7tbbo")
 
 [node name="Player with UI" parent="." unique_id=1354449472 instance=ExtResource("3_lquwl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 1)
+
+[node name="Dev Pods Game Pictures" type="Node3D" parent="." unique_id=1270972283]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.5, 0, 33.5)
+
+[node name="Artillery Rampage" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=1993258165]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 1.25, 11.25)
+size = Vector3(3.5, 2.5, 1)
+material = ExtResource("6_q1lu7")
+
+[node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Artillery Rampage" unique_id=675816587]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
+material_override = SubResource("StandardMaterial3D_tlwcc")
+operation = 2
+size = Vector3(2.5, 1.5, 0.5)
+material = SubResource("StandardMaterial3D_ewg6b")
+
+[node name="Cargo Bay" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=713632237]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.75, 1.25, 11.25)
+size = Vector3(3.5, 2.5, 1)
+material = ExtResource("6_q1lu7")
+
+[node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Cargo Bay" unique_id=1544338814]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
+material_override = SubResource("StandardMaterial3D_u5gq0")
+operation = 2
+size = Vector3(2.5, 1.5, 0.5)
+material = SubResource("StandardMaterial3D_v6iic")
+
+[node name="Crash Em Up" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=2082509214]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.75, 1.25, 11.25)
+size = Vector3(3.5, 2.5, 1)
+material = ExtResource("6_q1lu7")
+
+[node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Crash Em Up" unique_id=228317423]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
+material_override = SubResource("StandardMaterial3D_u5gq0")
+operation = 2
+size = Vector3(2.5, 1.5, 0.5)
+material = SubResource("StandardMaterial3D_ewmbl")
+
+[node name="Crazy Arena Chaos" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=376533062]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.75, 1.25, 11.25)
+size = Vector3(3.5, 2.5, 1)
+material = ExtResource("6_q1lu7")
+
+[node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Crazy Arena Chaos" unique_id=966413932]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
+material_override = SubResource("StandardMaterial3D_4h42u")
+operation = 2
+size = Vector3(2.5, 1.5, 0.5)
+material = SubResource("StandardMaterial3D_4y16h")
+
+[node name="Cyndrive Ships" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=1284891649]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.25, 1.25, 11.25)
+size = Vector3(3.5, 2.5, 1)
+material = ExtResource("6_q1lu7")
+
+[node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Cyndrive Ships" unique_id=788663434]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
+material_override = SubResource("StandardMaterial3D_u5gq0")
+operation = 2
+size = Vector3(2.5, 1.5, 0.5)
+material = SubResource("StandardMaterial3D_qi2ty")
+
+[node name="Everchange" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=2076412294]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.049999, 1.25, -0.45000076)
+size = Vector3(3.5, 2.5, 1)
+material = ExtResource("6_q1lu7")
+
+[node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Everchange" unique_id=564190632]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
+material_override = SubResource("StandardMaterial3D_tlwcc")
+operation = 2
+size = Vector3(2.5, 1.5, 0.5)
+material = SubResource("StandardMaterial3D_0m503")
+
+[node name="Forgotten Road" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=1563997844]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.049999, 1.25, -4.950001)
+size = Vector3(3.5, 2.5, 1)
+material = ExtResource("6_q1lu7")
+
+[node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Forgotten Road" unique_id=1733288856]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
+material_override = SubResource("StandardMaterial3D_u5gq0")
+operation = 2
+size = Vector3(2.5, 1.5, 0.5)
+material = SubResource("StandardMaterial3D_iixjk")
+
+[node name="Gladiator of the Golden House" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=2093554487]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.049999, 1.25, 3.5499992)
+size = Vector3(3.5, 2.5, 1)
+material = ExtResource("6_q1lu7")
+
+[node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Gladiator of the Golden House" unique_id=1749016341]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
+material_override = SubResource("StandardMaterial3D_u5gq0")
+operation = 2
+size = Vector3(2.5, 1.5, 0.5)
+material = SubResource("StandardMaterial3D_4fg2q")
+
+[node name="King Arthur" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=101377219]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.049999, 1.25, 7.549999)
+size = Vector3(3.5, 2.5, 1)
+material = ExtResource("6_q1lu7")
+
+[node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/King Arthur" unique_id=850616755]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
+material_override = SubResource("StandardMaterial3D_4h42u")
+operation = 2
+size = Vector3(2.5, 1.5, 0.5)
+material = SubResource("StandardMaterial3D_yuneh")
+
+[node name="Legend of Shadowtail" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=1846398690]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.049999, 1.25, -9.450001)
+size = Vector3(3.5, 2.5, 1)
+material = ExtResource("6_q1lu7")
+
+[node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Legend of Shadowtail" unique_id=1291495650]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
+material_override = SubResource("StandardMaterial3D_u5gq0")
+operation = 2
+size = Vector3(2.5, 1.5, 0.5)
+material = SubResource("StandardMaterial3D_057f4")
+
+[node name="Naous" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=1990037658]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -10.950001, 1.25, -1.0499992)
+size = Vector3(3.5, 2.5, 1)
+material = ExtResource("6_q1lu7")
+
+[node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Naous" unique_id=1178703434]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
+material_override = SubResource("StandardMaterial3D_tlwcc")
+operation = 2
+size = Vector3(2.5, 1.5, 0.5)
+material = SubResource("StandardMaterial3D_5dt3m")
+
+[node name="Orbs and Dash" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=1061899117]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -10.950001, 1.25, 3.4500008)
+size = Vector3(3.5, 2.5, 1)
+material = ExtResource("6_q1lu7")
+
+[node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Orbs and Dash" unique_id=1746568817]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
+material_override = SubResource("StandardMaterial3D_u5gq0")
+operation = 2
+size = Vector3(2.5, 1.5, 0.5)
+material = SubResource("StandardMaterial3D_kl5ay")
+
+[node name="Planets Mobile" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=1953178221]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -10.950001, 1.25, -5.049999)
+size = Vector3(3.5, 2.5, 1)
+material = ExtResource("6_q1lu7")
+
+[node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Planets Mobile" unique_id=1069114453]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
+material_override = SubResource("StandardMaterial3D_u5gq0")
+operation = 2
+size = Vector3(2.5, 1.5, 0.5)
+material = SubResource("StandardMaterial3D_3lbo0")
+
+[node name="Supply and Siege" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=1750601623]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -10.950001, 1.25, -9.049999)
+size = Vector3(3.5, 2.5, 1)
+material = ExtResource("6_q1lu7")
+
+[node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Supply and Siege" unique_id=1932559617]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
+material_override = SubResource("StandardMaterial3D_4h42u")
+operation = 2
+size = Vector3(2.5, 1.5, 0.5)
+material = SubResource("StandardMaterial3D_tbq01")
+
+[node name="Talon" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=307707444]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -10.950001, 1.25, 7.950001)
+size = Vector3(3.5, 2.5, 1)
+material = ExtResource("6_q1lu7")
+
+[node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Talon" unique_id=666261940]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
+material_override = SubResource("StandardMaterial3D_u5gq0")
+operation = 2
+size = Vector3(2.5, 1.5, 0.5)
+material = SubResource("StandardMaterial3D_mj7h6")
