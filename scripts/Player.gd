@@ -14,6 +14,11 @@ var look_speed = 50
 
 var lock_mouse = false
 
+func _ready():
+	# used to check ground contact before jumping
+	contact_monitor = true
+	max_contacts_reported = 5
+
 func flight_point(nav_point: Vector3) -> Vector3:
 	var direction_from_pivot: Vector3 = (nav_point - flight_pivot_point).normalized()
 	return flight_pivot_point + direction_from_pivot * flight_height
@@ -69,8 +74,10 @@ func _physics_process(delta: float) -> void:
 			flight_target_point = flight_point(flight_anchor_point)
 	else: # Walking movement logic
 		# note: temporarily being lazy about ground check, this could allow wall jumping
-		if Input.is_action_just_pressed("jump") and get_contact_count() > 0:
-			apply_central_impulse(Vector3.UP * JUMP_VELOCITY)
+		if Input.is_action_just_pressed("jump"):
+			print( get_contact_count() )
+			if get_contact_count() > 0:
+				apply_central_impulse(Vector3.UP * JUMP_VELOCITY * 5.0)
 
 		if direction: apply_central_force(direction * 60.0)
 		else:
