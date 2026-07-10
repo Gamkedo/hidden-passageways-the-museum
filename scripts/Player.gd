@@ -1,12 +1,12 @@
 extends RigidBody3D
 
-# this script was started based on the short tutorial at:
+# this script was started based on (but has changed a lot since):
 # https://www.youtube.com/watch?v=fAVetlIROXM
 
 @export var max_distance := 3.0
 
 const SPEED = 5.0
-const JUMP_VELOCITY = 4.5
+const JUMP_VELOCITY = 6.5
 
 var look_dir: Vector2
 @onready var camera = %BodyCam
@@ -40,6 +40,15 @@ var flying_transition_tween: Tween:
 	set(v):
 		if flying_transition_tween: flying_transition_tween.kill()
 		flying_transition_tween = v
+		
+func touching_ground() -> bool:
+	var pos_state = get_world_3d().direct_space_state
+
+	var ray_test = PhysicsRayQueryParameters3D.create(global_position,
+		global_position + Vector3.DOWN * 0.7)
+
+	return pos_state.intersect_ray(ray_test).is_empty() == false
+
 func _physics_process(delta: float) -> void:
 	if was_flying != is_flying:
 		if not was_flying:
@@ -73,11 +82,9 @@ func _physics_process(delta: float) -> void:
 			flight_anchor_point += direction
 			flight_target_point = flight_point(flight_anchor_point)
 	else: # Walking movement logic
-		# note: temporarily being lazy about ground check, this could allow wall jumping
 		if Input.is_action_just_pressed("jump"):
-			print( get_contact_count() )
-			if get_contact_count() > 0:
-				apply_central_impulse(Vector3.UP * JUMP_VELOCITY * 5.0)
+			if touching_ground():
+				linear_velocity.y = JUMP_VELOCITY
 
 		if direction: apply_central_force(direction * 60.0)
 		else:
