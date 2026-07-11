@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://baos2k6gymk8n"]
 
 [ext_resource type="PackedScene" uid="uid://c0ug0wogf56tg" path="res://models/cyndrive_ships_ship.fbx" id="2_5t06w"]
+[ext_resource type="Material" uid="uid://b17jmjmvd5bw2" path="res://materials/taxi-placeholder.tres" id="2_r54xu"]
 [ext_resource type="Script" uid="uid://bud6xyvo80vl3" path="res://scripts/click_link.gd" id="3_1bvp3"]
 [ext_resource type="Script" uid="uid://cl8kffkiyit6t" path="res://scripts/click_scene_change.gd" id="3_7mycd"]
 [ext_resource type="Material" uid="uid://bgutakhbvq0mc" path="res://materials/modern-museum/museum-wall-white.tres" id="3_euau4"]
@@ -103,107 +104,31 @@ light_energy = 0.25
 [node name="CSG Blockout" type="CSGCombiner3D" parent="." unique_id=250536827]
 use_collision = true
 
-[node name="Starting room" type="CSGBox3D" parent="CSG Blockout" unique_id=1869336714]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -1)
-size = Vector3(11, 2, 8)
+[node name="Start Area" type="CSGBox3D" parent="CSG Blockout" unique_id=526968187]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -0.5, 6)
+size = Vector3(18, 3, 8)
 material = ExtResource("3_h2yge")
 
-[node name="negative floor" type="CSGBox3D" parent="CSG Blockout/Starting room" unique_id=1831170557]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.5, 0)
+[node name="negative tunnel" type="CSGBox3D" parent="CSG Blockout/Start Area" unique_id=1303172700]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 operation = 2
-size = Vector3(11, 1, 6)
+size = Vector3(18, 4, 6)
 material = ExtResource("3_h2yge")
 
-[node name="Little Ramp 2 Angles" type="CSGPolygon3D" parent="CSG Blockout/Starting room" unique_id=1810112412]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -1)
-polygon = PackedVector2Array(0, 0, -2, 0, 0, 1, 1, 1, 2, 0, 1, 0)
-depth = 2.0
+[node name="road" type="CSGBox3D" parent="CSG Blockout/Start Area" unique_id=1427076619]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5, -1.25, 0.25)
+size = Vector3(9, 1.5, 42.5)
 material = ExtResource("3_h2yge")
 
-[node name="Drop hole" type="CSGCylinder3D" parent="CSG Blockout/Starting room" unique_id=1390607308]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, 1)
-operation = 2
-radius = 1.0
-material = ExtResource("3_h2yge")
-
-[node name="Tunnel under start" type="CSGBox3D" parent="CSG Blockout" unique_id=526968187]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -4.5, -1)
-size = Vector3(11, 7, 8)
-material = ExtResource("3_h2yge")
-
-[node name="negative tunnel" type="CSGBox3D" parent="CSG Blockout/Tunnel under start" unique_id=1303172700]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.5, 0)
-operation = 2
-size = Vector3(12, 6, 6)
-material = ExtResource("3_h2yge")
-
-[node name="Door Hole" type="CSGPolygon3D" parent="CSG Blockout/Tunnel under start" unique_id=443294063]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, -2.5, 4)
-operation = 2
-polygon = PackedVector2Array(-1.5, 0, -1.5, 2.5, -1, 3.5, 0, 4, 1, 3.5, 1.5, 2.5, 1.5, 0)
-material = ExtResource("3_h2yge")
-
-[node name="stairs test" type="CSGBox3D" parent="CSG Blockout" unique_id=1519009200]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, -7.5, 2.5)
-size = Vector3(14, 1, 15)
-material = ExtResource("3_h2yge")
-
-[node name="stairs test2" type="CSGBox3D" parent="CSG Blockout/stairs test" unique_id=520699372]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, -3.5)
-size = Vector3(8, 1, 7)
-material = ExtResource("3_h2yge")
-
-[node name="stairs test3" type="CSGBox3D" parent="CSG Blockout/stairs test" unique_id=682605393]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 2, -3.5)
-size = Vector3(7, 1, 7)
-material = ExtResource("3_h2yge")
-
-[node name="stairs test4" type="CSGBox3D" parent="CSG Blockout/stairs test" unique_id=1460582675]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 3, -3.5)
-size = Vector3(6, 1, 7)
-material = ExtResource("3_h2yge")
-
-[node name="stairs test5" type="CSGBox3D" parent="CSG Blockout/stairs test" unique_id=719233759]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 4, -3.5)
-size = Vector3(5, 1, 7)
-material = ExtResource("3_h2yge")
-
-[node name="stairs test6" type="CSGBox3D" parent="CSG Blockout/stairs test" unique_id=1173910883]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 5, -3.5)
-size = Vector3(4, 1, 7)
-material = ExtResource("3_h2yge")
-
-[node name="stairs test7" type="CSGBox3D" parent="CSG Blockout/stairs test" unique_id=1899637177]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 6, -3.5)
-size = Vector3(3, 1, 7)
-material = ExtResource("3_h2yge")
-
-[node name="stairs test8" type="CSGBox3D" parent="CSG Blockout/stairs test" unique_id=1186116698]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 7, -3.5)
-size = Vector3(2, 1, 7)
-material = ExtResource("3_h2yge")
-
-[node name="Tunnel under start2" type="CSGBox3D" parent="CSG Blockout" unique_id=882668637]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -4.5, 6)
-size = Vector3(11, 7, 8)
-material = ExtResource("3_h2yge")
-
-[node name="negative tunnel" type="CSGBox3D" parent="CSG Blockout/Tunnel under start2" unique_id=395298804]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.5, -0.5)
-operation = 2
-size = Vector3(12, 6, 7)
-material = ExtResource("3_h2yge")
-
-[node name="Door Hole" type="CSGPolygon3D" parent="CSG Blockout/Tunnel under start2" unique_id=789902199]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, -2.5, 4)
-operation = 2
-polygon = PackedVector2Array(-1.5, 0, -1.5, 2.5, -1, 3.5, 0, 4, 1, 3.5, 1.5, 2.5, 1.5, 0)
-material = ExtResource("3_h2yge")
+[node name="Taxi" type="CSGBox3D" parent="CSG Blockout/Start Area" unique_id=280302966]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.25, 1, -0.5)
+size = Vector3(3.5, 3, 7)
+material = ExtResource("2_r54xu")
 
 [node name="Entry Ramp Stairs" type="CSGPolygon3D" parent="CSG Blockout" unique_id=1308910135]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, -5, 8.999999)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 39, 1, -10.500001)
 polygon = PackedVector2Array(5.5, -2, -5.5, -2, -2.5, 1, -0.5, 1, 1.5, 3, 3.5, 3, 4.5, 4, 5.5, 4)
-depth = 6.0
+depth = 24.0
 material = ExtResource("3_h2yge")
 
 [node name="Node3D" type="Node3D" parent="CSG Blockout/Entry Ramp Stairs" unique_id=1235152001]
@@ -251,7 +176,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Museum Classical (Oct 2019-mid 2025)" type="CSGBox3D" parent="CSG Blockout" unique_id=691043333]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 6, -19.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 12, -29.5)
 size = Vector3(24, 16, 27)
 material = ExtResource("3_h2yge")
 
@@ -267,6 +192,36 @@ operation = 2
 polygon = PackedVector2Array(-1.5, 0, -1.5, 2.5, -1, 3.5, 0, 4, 1, 3.5, 1.5, 2.5, 1.5, 0)
 depth = 2.0
 material = ExtResource("3_h2yge")
+
+[node name="FrontColumn" type="CSGCylinder3D" parent="CSG Blockout/Museum Classical (Oct 2019-mid 2025)" unique_id=2006035901]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 16.5)
+radius = 1.0
+height = 16.0
+
+[node name="FrontColumn2" type="CSGCylinder3D" parent="CSG Blockout/Museum Classical (Oct 2019-mid 2025)" unique_id=1259953913]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 16.5)
+radius = 1.0
+height = 16.0
+
+[node name="FrontColumn3" type="CSGCylinder3D" parent="CSG Blockout/Museum Classical (Oct 2019-mid 2025)" unique_id=510359819]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 16.5)
+radius = 1.0
+height = 16.0
+
+[node name="FrontColumn4" type="CSGCylinder3D" parent="CSG Blockout/Museum Classical (Oct 2019-mid 2025)" unique_id=1850783218]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 16.5)
+radius = 1.0
+height = 16.0
+
+[node name="FrontColumn5" type="CSGCylinder3D" parent="CSG Blockout/Museum Classical (Oct 2019-mid 2025)" unique_id=1297112122]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 16.5)
+radius = 1.0
+height = 16.0
+
+[node name="FrontColumn6" type="CSGCylinder3D" parent="CSG Blockout/Museum Classical (Oct 2019-mid 2025)" unique_id=823650826]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 16.5)
+radius = 1.0
+height = 16.0
 
 [node name="Node3D" type="Node3D" parent="CSG Blockout" unique_id=1149423350]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.5, 0, 32)
@@ -470,6 +425,7 @@ size = Vector3(24, 5.5, 25)
 material = ExtResource("3_h2yge")
 
 [node name="Clickable 3d link test" type="StaticBody3D" parent="." unique_id=1076222070]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.5, 0, 4.5)
 script = ExtResource("3_1bvp3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Clickable 3d link test" unique_id=772968395]
@@ -481,7 +437,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2.5, -2.5)
 mesh = SubResource("SphereMesh_7tbbo")
 
 [node name="Clickable Scene Change" type="StaticBody3D" parent="." unique_id=1285932327]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.5, 0, 7)
 script = ExtResource("3_7mycd")
 goto_scene = "uid://deyi3ygip7r4c"
 
@@ -494,7 +450,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2.5, -2.5)
 mesh = SubResource("SphereMesh_7tbbo")
 
 [node name="Player with UI" parent="." unique_id=1354449472 instance=ExtResource("3_lquwl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.5, 5.5)
 
 [node name="Dev Pods Game Pictures" type="Node3D" parent="." unique_id=1270972283]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.5, 0, 33.5)
