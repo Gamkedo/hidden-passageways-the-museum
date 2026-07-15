@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://ce0iahuroaa7j" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/planets mobile.png" id="19_hgslh"]
 [ext_resource type="Texture2D" uid="uid://c6rqykvgq5oni" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/supply-and-siege.png" id="20_lahx7"]
 [ext_resource type="Texture2D" uid="uid://r870n6ekjct4" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/talon.png" id="21_yqwtw"]
+[ext_resource type="PackedScene" uid="uid://bvln0oll5ttp0" path="res://entities-scene_prefabs/ionic_column.tscn" id="28_er4o0"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_8jg5c"]
 viewport_path = NodePath("CSG Blockout/Cyndrive Ships/DevNote/SubViewport")
@@ -679,3 +680,6 @@ material_override = SubResource("StandardMaterial3D_u5gq0")
 operation = 2
 size = Vector3(2.5, 1.5, 0.5)
 material = SubResource("StandardMaterial3D_mj7h6")
+
+[node name="Ionic_Column" parent="." unique_id=1313702386 instance=ExtResource("28_er4o0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -3)

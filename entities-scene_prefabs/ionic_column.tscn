@@ -1,0 +1,277 @@
+[gd_scene format=3 uid="uid://bvln0oll5ttp0"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_kdu0b"]
+height = 16.0
+radius = 1.0
+
+[node name="Ionic_Column" type="Node3D" unique_id=1313702386]
+
+[node name="shaft" type="CSGCylinder3D" parent="." unique_id=805710268]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
+radius = 1.0
+height = 16.0
+sides = 16
+
+[node name="shaft_flute" type="CSGCylinder3D" parent="shaft" unique_id=813602592]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+operation = 2
+radius = 0.125
+height = 16.0
+
+[node name="shaft_flute2" type="CSGCylinder3D" parent="shaft" unique_id=732105366]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+operation = 2
+radius = 0.125
+height = 16.0
+
+[node name="shaft_flute3" type="CSGCylinder3D" parent="shaft" unique_id=664778277]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+operation = 2
+radius = 0.125
+height = 16.0
+
+[node name="shaft_flute4" type="CSGCylinder3D" parent="shaft" unique_id=1038241077]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+operation = 2
+radius = 0.125
+height = 16.0
+
+[node name="shaft_flute5" type="CSGCylinder3D" parent="shaft" unique_id=991884561]
+transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 0.8660259, 0, 0.5)
+operation = 2
+radius = 0.125
+height = 16.0
+
+[node name="shaft_flute6" type="CSGCylinder3D" parent="shaft" unique_id=613964097]
+transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, -0.5, 0, 0.866025)
+operation = 2
+radius = 0.125
+height = 16.0
+
+[node name="shaft_flute7" type="CSGCylinder3D" parent="shaft" unique_id=1265576910]
+transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, -0.8660259, 0, -0.5)
+operation = 2
+radius = 0.125
+height = 16.0
+
+[node name="shaft_flute8" type="CSGCylinder3D" parent="shaft" unique_id=1682626659]
+transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 0.5, 0, -0.866025)
+operation = 2
+radius = 0.125
+height = 16.0
+
+[node name="shaft_flute9" type="CSGCylinder3D" parent="shaft" unique_id=1595269016]
+transform = Transform3D(0.5, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, 0.5, 0.5, 0, 0.8660259)
+operation = 2
+radius = 0.125
+height = 16.0
+
+[node name="shaft_flute10" type="CSGCylinder3D" parent="shaft" unique_id=391766685]
+transform = Transform3D(0.5, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, 0.5, -0.8660259, 0, 0.5)
+operation = 2
+radius = 0.125
+height = 16.0
+
+[node name="shaft_flute11" type="CSGCylinder3D" parent="shaft" unique_id=667741350]
+transform = Transform3D(0.5, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, 0.5, -0.5, 0, -0.8660259)
+operation = 2
+radius = 0.125
+height = 16.0
+
+[node name="shaft_flute12" type="CSGCylinder3D" parent="shaft" unique_id=211376806]
+transform = Transform3D(0.5, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, 0.5, 0.8660259, 0, -0.5)
+operation = 2
+radius = 0.125
+height = 16.0
+
+[node name="shaft_flute13" type="CSGCylinder3D" parent="shaft" unique_id=608878727]
+transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659258, 0.9659252, 0, 0.25881863)
+operation = 2
+radius = 0.125
+height = 16.0
+
+[node name="shaft_flute14" type="CSGCylinder3D" parent="shaft" unique_id=2113278785]
+transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659258, -0.25881958, 0, 0.9659262)
+operation = 2
+radius = 0.125
+height = 16.0
+
+[node name="shaft_flute15" type="CSGCylinder3D" parent="shaft" unique_id=211654952]
+transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659258, -0.9659252, 0, -0.25881863)
+operation = 2
+radius = 0.125
+height = 16.0
+
+[node name="shaft_flute16" type="CSGCylinder3D" parent="shaft" unique_id=1952884060]
+transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659258, 0.25881958, 0, -0.9659262)
+operation = 2
+radius = 0.125
+height = 16.0
+
+[node name="shaft_flute17" type="CSGCylinder3D" parent="shaft" unique_id=437038635]
+transform = Transform3D(0.7071067, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.7071067, 0.70710754, 0, 0.7071066)
+operation = 2
+radius = 0.125
+height = 16.0
+
+[node name="shaft_flute18" type="CSGCylinder3D" parent="shaft" unique_id=2100269446]
+transform = Transform3D(0.7071067, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.7071067, -0.70710754, 0, 0.7071066)
+operation = 2
+radius = 0.125
+height = 16.0
+
+[node name="shaft_flute19" type="CSGCylinder3D" parent="shaft" unique_id=2123916874]
+transform = Transform3D(0.7071067, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.7071067, -0.70710754, 0, -0.7071066)
+operation = 2
+radius = 0.125
+height = 16.0
+
+[node name="shaft_flute20" type="CSGCylinder3D" parent="shaft" unique_id=772141777]
+transform = Transform3D(0.7071067, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.7071067, 0.70710754, 0, -0.7071066)
+operation = 2
+radius = 0.125
+height = 16.0
+
+[node name="shaft_flute21" type="CSGCylinder3D" parent="shaft" unique_id=729639961]
+transform = Transform3D(0.25881904, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881904, 0.25881958, 0, 0.9659262)
+operation = 2
+radius = 0.125
+height = 16.0
+
+[node name="shaft_flute22" type="CSGCylinder3D" parent="shaft" unique_id=978121780]
+transform = Transform3D(0.25881904, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881904, -0.9659271, 0, 0.25881863)
+operation = 2
+radius = 0.125
+height = 16.0
+
+[node name="shaft_flute23" type="CSGCylinder3D" parent="shaft" unique_id=275818076]
+transform = Transform3D(0.25881904, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881904, -0.25881958, 0, -0.9659262)
+operation = 2
+radius = 0.125
+height = 16.0
+
+[node name="shaft_flute24" type="CSGCylinder3D" parent="shaft" unique_id=1161069809]
+transform = Transform3D(0.25881904, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881904, 0.9659271, 0, -0.25881863)
+operation = 2
+radius = 0.125
+height = 16.0
+
+[node name="capital_body" type="CSGBox3D" parent="shaft" unique_id=55757025]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.75, 0)
+size = Vector3(2, 0.5, 2)
+
+[node name="capital_volute" type="CSGCylinder3D" parent="shaft" unique_id=801037739]
+transform = Transform3D(0.99999994, 0, 0, 0, -4.3711385e-08, -1, 0, 0.99999994, -4.371139e-08, -1, 7.5, 1)
+height = 0.5
+sides = 16
+
+[node name="volute_flute" type="CSGTorus3D" parent="shaft/capital_volute" unique_id=656789946]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 1.0658141e-14, 1, 0, 0.25, -0.008)
+operation = 2
+inner_radius = 0.1
+outer_radius = 0.2
+sides = 16
+ring_sides = 4
+
+[node name="volute_flute2" type="CSGTorus3D" parent="shaft/capital_volute" unique_id=2127618552]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 1.0658141e-14, 1, 0, 0.25, -0.008)
+operation = 2
+inner_radius = 0.3
+outer_radius = 0.4
+sides = 16
+ring_sides = 4
+
+[node name="capital_volute2" type="CSGCylinder3D" parent="shaft" unique_id=915399363]
+transform = Transform3D(0.99999994, 0, 0, 0, -4.3711385e-08, -1, 0, 0.99999994, -4.371139e-08, 1, 7.5, 1)
+height = 0.5
+sides = 16
+
+[node name="volute_flute" type="CSGTorus3D" parent="shaft/capital_volute2" unique_id=444692389]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 1.0658141e-14, 1, 0, 0.25, -0.008)
+operation = 2
+inner_radius = 0.1
+outer_radius = 0.2
+sides = 16
+ring_sides = 4
+
+[node name="volute_flute2" type="CSGTorus3D" parent="shaft/capital_volute2" unique_id=1458643223]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 1.0658141e-14, 1, 0, 0.25, -0.008)
+operation = 2
+inner_radius = 0.3
+outer_radius = 0.4
+sides = 16
+ring_sides = 4
+
+[node name="capital_volute3" type="CSGCylinder3D" parent="shaft" unique_id=2033056868]
+transform = Transform3D(-0.99999994, -8.742277e-08, 3.821371e-15, 0, -4.3711385e-08, -1, 8.742277e-08, -0.99999994, 4.371139e-08, 1, 7.5, -1)
+height = 0.5
+sides = 16
+
+[node name="volute_flute" type="CSGTorus3D" parent="shaft/capital_volute3" unique_id=1820755049]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 1.0658141e-14, 1, 0, 0.25, -0.008)
+operation = 2
+inner_radius = 0.1
+outer_radius = 0.2
+sides = 16
+ring_sides = 4
+
+[node name="volute_flute2" type="CSGTorus3D" parent="shaft/capital_volute3" unique_id=2058827119]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 1.0658141e-14, 1, 0, 0.25, -0.008)
+operation = 2
+inner_radius = 0.3
+outer_radius = 0.4
+sides = 16
+ring_sides = 4
+
+[node name="capital_volute4" type="CSGCylinder3D" parent="shaft" unique_id=1919520058]
+transform = Transform3D(-0.99999994, -8.742277e-08, 3.821371e-15, 0, -4.3711385e-08, -1, 8.742277e-08, -0.99999994, 4.371139e-08, -1, 7.5, -1)
+height = 0.5
+sides = 16
+
+[node name="volute_flute" type="CSGTorus3D" parent="shaft/capital_volute4" unique_id=1086828788]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 1.0658141e-14, 1, 0, 0.25, -0.008)
+operation = 2
+inner_radius = 0.1
+outer_radius = 0.2
+sides = 16
+ring_sides = 4
+
+[node name="volute_flute2" type="CSGTorus3D" parent="shaft/capital_volute4" unique_id=71299166]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 1.0658141e-14, 1, 0, 0.25, -0.008)
+operation = 2
+inner_radius = 0.3
+outer_radius = 0.4
+sides = 16
+ring_sides = 4
+
+[node name="capital_cyl" type="CSGCylinder3D" parent="shaft" unique_id=2045708821]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.4, 0)
+radius = 1.0
+height = 0.25
+sides = 16
+
+[node name="plinth_ring" type="CSGTorus3D" parent="shaft" unique_id=690270956]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.4, 0)
+inner_radius = 0.9
+outer_radius = 1.1
+sides = 16
+ring_sides = 8
+
+[node name="plinth_cyl" type="CSGCylinder3D" parent="shaft" unique_id=1346298297]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.6, 0)
+radius = 1.05
+height = 0.25
+sides = 16
+
+[node name="plinth_ring2" type="CSGTorus3D" parent="shaft" unique_id=1468571649]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.9, 0)
+inner_radius = 0.8
+outer_radius = 1.25
+sides = 16
+ring_sides = 8
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=272496983]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1522492381]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
+shape = SubResource("CylinderShape3D_kdu0b")
