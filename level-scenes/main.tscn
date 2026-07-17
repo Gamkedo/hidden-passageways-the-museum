@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://baos2k6gymk8n"]
 
 [ext_resource type="PackedScene" uid="uid://c0ug0wogf56tg" path="res://models/cyndrive_ships_ship.fbx" id="2_5t06w"]
+[ext_resource type="PackedScene" uid="uid://bad4bwomkabyu" path="res://models/cyndrive_ships_silo.fbx" id="2_pw8xm"]
 [ext_resource type="Material" uid="uid://b17jmjmvd5bw2" path="res://materials/taxi-placeholder.tres" id="2_r54xu"]
 [ext_resource type="Script" uid="uid://bud6xyvo80vl3" path="res://scripts/click_link.gd" id="3_1bvp3"]
 [ext_resource type="Script" uid="uid://cl8kffkiyit6t" path="res://scripts/click_scene_change.gd" id="3_7mycd"]
@@ -8,6 +9,8 @@
 [ext_resource type="Material" uid="uid://bnuir4b1t58xs" path="res://environment-csg/level-grid.tres" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://ce0uc3f7i1cxo" path="res://entities-scene_prefabs/player_with_ui.tscn" id="3_lquwl"]
 [ext_resource type="Material" uid="uid://31x6objnfjff" path="res://materials/modern-museum/museum-modern-exterior-gray.tres" id="3_qxgch"]
+[ext_resource type="PackedScene" uid="uid://5oee2wihjes7" path="res://models/cyndrive_ships_carrier.fbx" id="3_rlpi5"]
+[ext_resource type="PackedScene" uid="uid://duy2brb5d32nn" path="res://models/cyndrive_ships_silo_door.fbx" id="3_ufbb7"]
 [ext_resource type="Material" uid="uid://cb0ohmlylauik" path="res://materials/modern-museum/museum-floor-dark-carpet.tres" id="4_u03oo"]
 [ext_resource type="Material" uid="uid://di6u3hjsvhh8i" path="res://materials/modern-museum/museum-floor-wood.tres" id="5_qxgch"]
 [ext_resource type="Material" uid="uid://i2mujh133810" path="res://materials/modern-museum/museum-modern-exterior-dark.tres" id="5_r54xu"]
@@ -29,11 +32,19 @@
 [ext_resource type="Texture2D" uid="uid://r870n6ekjct4" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/talon.png" id="21_yqwtw"]
 [ext_resource type="PackedScene" uid="uid://bvln0oll5ttp0" path="res://entities-scene_prefabs/ionic_column.tscn" id="28_er4o0"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_8jg5c"]
-viewport_path = NodePath("CSG Blockout/Cyndrive Ships/DevNote/SubViewport")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rvyx8"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv2_world_triplanar = true
 
-[sub_resource type="LabelSettings" id="LabelSettings_auqj3"]
-font_size = 25
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ifpan"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv2_world_triplanar = true
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_7tbbo"]
 
@@ -134,48 +145,6 @@ material = ExtResource("3_h2yge")
 
 [node name="Node3D" type="Node3D" parent="CSG Blockout/Entry Ramp Stairs" unique_id=1235152001]
 
-[node name="Cyndrive Ships" type="CSGBox3D" parent="CSG Blockout" unique_id=1033830538]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 57.649727, 3.5398624, 32.048058)
-size = Vector3(24, 11, 27)
-material = ExtResource("3_h2yge")
-
-[node name="cyndrive_ships_ship" parent="CSG Blockout/Cyndrive Ships" unique_id=877454750 instance=ExtResource("2_5t06w")]
-transform = Transform3D(-0.6511521, 0.46758366, 0.5978013, 0.7060882, 0.6620441, 0.2512704, -0.27828112, 0.5857159, -0.7612467, -4.8901863, 1.658603, 2.147873)
-
-[node name="cyndrive_ships_ship2" parent="CSG Blockout/Cyndrive Ships" unique_id=752929919 instance=ExtResource("2_5t06w")]
-transform = Transform3D(-0.85859096, 0.35519263, -0.36967534, 0.17798518, 0.88276315, 0.43479955, 0.48077318, 0.30751798, -0.8211515, 3.523079, 1.1470511, 2.8957214)
-
-[node name="cyndrive_ships_ship3" parent="CSG Blockout/Cyndrive Ships" unique_id=1813257203 instance=ExtResource("2_5t06w")]
-transform = Transform3D(-0.9126494, -0.4064956, 0.042800464, -0.40671453, 0.89270943, -0.19404496, 0.040669966, -0.19450268, -0.98005855, -0.9882126, 7.3218365, -1.4406128)
-
-[node name="NegativeCube" type="CSGBox3D" parent="CSG Blockout/Cyndrive Ships" unique_id=162399428]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24998665, 0.8594973, 0.7496948)
-operation = 2
-size = Vector3(22.5, 11, 26.5)
-material = ExtResource("3_h2yge")
-
-[node name="DevNote" type="Sprite3D" parent="CSG Blockout/Cyndrive Ships" unique_id=1445491513]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.108069, -0.1663971)
-pixel_size = 0.03
-billboard = 1
-texture = SubResource("ViewportTexture_8jg5c")
-
-[node name="SubViewport" type="SubViewport" parent="CSG Blockout/Cyndrive Ships/DevNote" unique_id=1433292638]
-transparent_bg = true
-
-[node name="Label" type="Label" parent="CSG Blockout/Cyndrive Ships/DevNote/SubViewport" unique_id=566818203]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "David T Dev note: Feel free to
-move the exhibit, rearrange etc..
-this is not final!"
-label_settings = SubResource("LabelSettings_auqj3")
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Museum Classical (Oct 2019-mid 2025)" type="CSGBox3D" parent="CSG Blockout" unique_id=691043333]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 12, -29.5)
 size = Vector3(24, 16, 27)
@@ -226,6 +195,59 @@ height = 16.0
 
 [node name="Node3D" type="Node3D" parent="CSG Blockout" unique_id=1149423350]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.5, 0, 32)
+
+[node name="Cyndrive Ships" type="CSGBox3D" parent="CSG Blockout" unique_id=1033830538]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 57.649727, -6.4135675, 33.940575)
+size = Vector3(17.097565, 11.175171, 27)
+material = ExtResource("3_h2yge")
+
+[node name="CyndriveShipsInvisibleBridge" type="CSGBox3D" parent="CSG Blockout/Cyndrive Ships" unique_id=602281386]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.094616, 8.776946, -21.01416)
+size = Vector3(32.198265, 13.552887, 47.645844)
+material = SubResource("StandardMaterial3D_rvyx8")
+
+[node name="EngineOutline" type="CSGBox3D" parent="CSG Blockout/Cyndrive Ships/CyndriveShipsInvisibleBridge" unique_id=863614970]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.30743408, -0.48849654, 13.434654)
+size = Vector3(19.921268, 9.030518, 50.841515)
+material = SubResource("StandardMaterial3D_rvyx8")
+
+[node name="CSGPolygon3D2" type="CSGPolygon3D" parent="CSG Blockout/Cyndrive Ships/CyndriveShipsInvisibleBridge" unique_id=1694607487]
+transform = Transform3D(-4.371139e-08, 0, 11.525, 0, 1, 0, -1, 0, -5.037737e-07, 3.486, -0.8430338, -3.104)
+operation = 2
+polygon = PackedVector2Array(-12.480685, 1.7731762, -5.1643248, 5.192993, 4.3064184, 4.8794007, 14.34516, 0.9077308, 15.168796, -2.0890944, -14.173218, -1.8835232)
+material = SubResource("StandardMaterial3D_rvyx8")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="CSG Blockout/Cyndrive Ships/CyndriveShipsInvisibleBridge" unique_id=307828627]
+transform = Transform3D(1.69, 0, 0, 0, 1.69, 0, 0, 0, 16.495, 0, 0, 3.3164616)
+operation = 2
+polygon = PackedVector2Array(-12.662315, 0.5377817, -2.4959602, 1.6462355, 4.059906, 1.796078, 16.159622, 0.1341188, 16.617012, -1.7789986, -14.173218, -1.8835232)
+material = SubResource("StandardMaterial3D_rvyx8")
+
+[node name="CyndriveShipsProps" type="Node3D" parent="CSG Blockout/Cyndrive Ships" unique_id=1701114588]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.142765, 6.569107, -55.045036)
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="CSG Blockout/Cyndrive Ships/CyndriveShipsProps" unique_id=852798590]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.054642, 3.7242918, 2.1917918)
+radius = 3.42
+material = SubResource("StandardMaterial3D_ifpan")
+
+[node name="cyndrive_ships_silo" parent="CSG Blockout/Cyndrive Ships/CyndriveShipsProps/CSGSphere3D" unique_id=2090904946 instance=ExtResource("2_pw8xm")]
+transform = Transform3D(-0.33161744, -0.943414, 0, 0.943414, -0.33161744, 0, 0, 0, 1, 6.9265213, 2.024488, -0.41749775)
+
+[node name="cyndrive_ships_silo_door" parent="CSG Blockout/Cyndrive Ships/CyndriveShipsProps" unique_id=275706413 instance=ExtResource("3_ufbb7")]
+transform = Transform3D(-0.33161744, -0.943414, 0, 0.943414, -0.33161744, 0, 0, 0, 1, -10.071716, 5.724245, 1.7644169)
+
+[node name="cyndrive_ships_ship" parent="CSG Blockout/Cyndrive Ships/CyndriveShipsProps" unique_id=752929919 instance=ExtResource("2_5t06w")]
+transform = Transform3D(0.19570023, -0.5234592, 0.82927185, 0.7060881, 0.66204405, 0.25127035, -0.6805445, 0.53636557, 0.49917048, -55.076828, 3.8273602, -2.104969)
+
+[node name="cyndrive_ships_ship2" parent="CSG Blockout/Cyndrive Ships/CyndriveShipsProps" unique_id=1891585473 instance=ExtResource("2_5t06w")]
+transform = Transform3D(-0.5831673, -0.26127842, 0.7691874, 0.17798519, 0.88276315, 0.43479955, -0.7926141, 0.39046472, -0.46829504, -54.779503, 3.3158083, 6.336237)
+
+[node name="cyndrive_ships_ship3" parent="CSG Blockout/Cyndrive Ships/CyndriveShipsProps" unique_id=1835317036 instance=ExtResource("2_5t06w")]
+transform = Transform3D(-0.1531148, 0.14279057, 0.9778378, -0.40671447, 0.89270943, -0.19404496, -0.90063244, -0.42741174, -0.07861219, -51.033752, 9.490594, 1.3237553)
+
+[node name="cyndrive_ships_carrier" parent="CSG Blockout/Cyndrive Ships/CyndriveShipsProps" unique_id=1723915703 instance=ExtResource("3_rlpi5")]
+transform = Transform3D(-1.965, 0, 2.9670676e-07, 0, 1.965, 0, -2.9670676e-07, 0, -1.965, -34.257263, -8.899204, 7.0070744)
 
 [node name="Museum Modern (past year)" type="CSGBox3D" parent="CSG Blockout" unique_id=26332029]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, -1.5, 32.5)
@@ -517,7 +539,7 @@ size = Vector3(2.5, 1.5, 0.5)
 material = SubResource("StandardMaterial3D_4y16h")
 
 [node name="Cyndrive Ships" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=1284891649]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 42.75, 1.25, -0.32627487)
+transform = Transform3D(-0.99925965, 0, 0.038473785, 0, 1, 0, -0.038473785, 0, -0.99925965, 50.922577, 1.25, -10.521889)
 use_collision = true
 size = Vector3(3.5, 2.5, 1)
 material = ExtResource("6_q1lu7")
@@ -681,5 +703,6 @@ operation = 2
 size = Vector3(2.5, 1.5, 0.5)
 material = SubResource("StandardMaterial3D_mj7h6")
 
+[editable path="CSG Blockout/Cyndrive Ships/CyndriveShipsProps/cyndrive_ships_carrier"]
 [node name="Ionic_Column" parent="." unique_id=1313702386 instance=ExtResource("28_er4o0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -3)

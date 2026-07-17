@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://n6y01orm2s0j"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_bib7n"]
+viewport_path = NodePath("CSG Blockout/Cyndrive Ships/Sprite3D/SubViewport")
+
+[sub_resource type="LabelSettings" id="LabelSettings_hgslh"]
+font_size = 25
+
+[node name="DevNote" type="Sprite3D" unique_id=463995309]
+pixel_size = 0.03
+billboard = 1
+texture = SubResource("ViewportTexture_bib7n")
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=2021040988]
+transparent_bg = true
+
+[node name="Label" type="Label" parent="SubViewport" unique_id=1228973510]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "This is a message you can leave within 3D space!"
+label_settings = SubResource("LabelSettings_hgslh")
+horizontal_alignment = 1
+vertical_alignment = 1
