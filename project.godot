@@ -11,12 +11,16 @@ config_version=5
 [application]
 
 config/name="Dev Pods Museum"
+config/description="Explore a virtual museum housing exhibits for game projects made by its members, a hub world to browse every game made by the DevPods community."
+config/version="0.0.1"
 run/main_scene="uid://baos2k6gymk8n"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://c51fo4p5wmrlm"
 
 [display]
 
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
@@ -73,6 +77,12 @@ map={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194306,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
+
+[layer_names]
+
+3d_physics/layer_1="Static"
+3d_physics/layer_2="Player"
+3d_physics/layer_3="Props"
 
 [physics]
 
