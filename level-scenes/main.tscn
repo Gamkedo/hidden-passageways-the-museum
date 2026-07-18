@@ -16,6 +16,7 @@
 [ext_resource type="Material" uid="uid://i2mujh133810" path="res://materials/modern-museum/museum-modern-exterior-dark.tres" id="5_r54xu"]
 [ext_resource type="Material" uid="uid://gi1au7e50ftu" path="res://materials/modern-museum/picture-frame-placeholder-generic-wood.tres" id="6_q1lu7"]
 [ext_resource type="Texture2D" uid="uid://evopvlxedmk7" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/artillery-rampage.png" id="6_rlpi5"]
+[ext_resource type="Texture2D" uid="uid://vnri2xppsmm0" path="res://models/legend_of_shadowtails_ratrick_ratrick.png" id="7_hgslh"]
 [ext_resource type="Texture2D" uid="uid://bto3jcto20bmf" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/cargo-bay.png" id="8_506e2"]
 [ext_resource type="Texture2D" uid="uid://b2oyvwk41k0kr" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/crash-em-up.png" id="9_vcgox"]
 [ext_resource type="Texture2D" uid="uid://8siqjr4kxuft" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/crazy-arena-chaos.png" id="10_euau4"]
@@ -31,6 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://c6rqykvgq5oni" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/supply-and-siege.png" id="20_lahx7"]
 [ext_resource type="Texture2D" uid="uid://r870n6ekjct4" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/talon.png" id="21_yqwtw"]
 [ext_resource type="PackedScene" uid="uid://bvln0oll5ttp0" path="res://entities-scene_prefabs/ionic_column.tscn" id="28_er4o0"]
+[ext_resource type="PackedScene" uid="uid://ccmjewtcqxp7" path="res://models/legend_of_shadowtails_ratrick_mesh.glb" id="33_hgslh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rvyx8"]
 transparency = 1
@@ -45,6 +47,9 @@ albedo_color = Color(1, 1, 1, 0)
 uv1_triplanar = true
 uv1_world_triplanar = true
 uv2_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lahx7"]
+albedo_texture = ExtResource("7_hgslh")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_7tbbo"]
 
@@ -103,6 +108,9 @@ albedo_texture = ExtResource("20_lahx7")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mj7h6"]
 albedo_texture = ExtResource("21_yqwtw")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_8jg5c"]
+radius = 1.0454303
 
 [node name="Main" type="Node3D" unique_id=1018901499]
 
@@ -251,6 +259,7 @@ transform = Transform3D(-1.965, 0, 2.9670676e-07, 0, 1.965, 0, -2.9670676e-07, 0
 
 [node name="Museum Modern (past year)" type="CSGBox3D" parent="CSG Blockout" unique_id=26332029]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, -1.5, 32.5)
+material_override = SubResource("StandardMaterial3D_lahx7")
 size = Vector3(34, 21, 27)
 material = ExtResource("3_qxgch")
 
@@ -273,7 +282,7 @@ size = Vector3(2, 8.5, 2)
 material = ExtResource("5_r54xu")
 
 [node name="NegativeCube" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=2047117778]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0.045150757)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.020410538, 0.2341137, 0.0602417)
 material_override = ExtResource("3_euau4")
 operation = 2
 size = Vector3(32, 20.5, 25.090912)
@@ -703,6 +712,16 @@ operation = 2
 size = Vector3(2.5, 1.5, 0.5)
 material = SubResource("StandardMaterial3D_mj7h6")
 
-[editable path="CSG Blockout/Cyndrive Ships/CyndriveShipsProps/cyndrive_ships_carrier"]
 [node name="Ionic_Column" parent="." unique_id=1313702386 instance=ExtResource("28_er4o0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -3)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1039440741]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.968307, 0.42840683, 27.523893)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=1661959815]
+shape = SubResource("SphereShape3D_8jg5c")
+
+[node name="legend_of_shadowtails_ratrick_mesh" parent="RigidBody3D" unique_id=1698964858 instance=ExtResource("33_hgslh")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, -0.9377037, 0)
+
+[editable path="CSG Blockout/Cyndrive Ships/CyndriveShipsProps/cyndrive_ships_carrier"]
