@@ -431,7 +431,7 @@ depth = 2.0
 material = ExtResource("5_r54xu")
 
 [node name="Interior Wide OpeningNorthX" type="CSGPolygon3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=13975697]
-transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, 15.999996, 0.5, 0.4999962)
+transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, 15.499996, 0.5, 0.4999962)
 operation = 2
 polygon = PackedVector2Array(-3.5, 0, -3.5, 2.5, -2, 4, 0, 4.5, 2, 4, 3.5, 2.5, 3.5, 0)
 depth = 2.0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://qfcqpxe6ua5w"
+path="res://.godot/imported/LandingSound.wav-353ebd4c39b0b6d649290f5abdb4fb8a.sample"
+
+[deps]
+
+source_file="res://audio/sound effects/LandingSound.wav"
+dest_files=["res://.godot/imported/LandingSound.wav-353ebd4c39b0b6d649290f5abdb4fb8a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

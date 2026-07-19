@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://q1q4ki2fc8oo" path="res://scripts/Player.gd" id="1_4v70m"]
 [ext_resource type="PackedScene" uid="uid://cu85ekmbqlk7a" path="res://models/player_step_shape.res" id="2_ydgiv"]
+[ext_resource type="AudioStream" uid="uid://qfcqpxe6ua5w" path="res://audio/sound effects/LandingSound.wav" id="3_ydgiv"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1bvp3"]
 friction = 0.0
@@ -49,3 +50,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3239243, -0.3611512)
 
 [node name="player-step-shape" parent="PlayerPhysics" unique_id=900220688 instance=ExtResource("2_ydgiv")]
 transform = Transform3D(-175, 0, -2.6424266e-05, 0, 175, 0, 2.6424266e-05, 0, -175, 0, 1.5, 0)
+
+[node name="SoundJumpLanding" type="AudioStreamPlayer" parent="PlayerPhysics" unique_id=1618692255]
+stream = ExtResource("3_ydgiv")

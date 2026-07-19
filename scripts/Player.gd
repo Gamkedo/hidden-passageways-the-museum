@@ -7,10 +7,13 @@ extends RigidBody3D
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 6.5
+var was_on_ground = false
 
 var look_dir: Vector2
 @onready var camera = %BodyCam
 var look_speed = 50
+
+@onready var sound_jump_landing: AudioStreamPlayer = $SoundJumpLanding
 
 var lock_mouse = false
 
@@ -73,6 +76,14 @@ func _physics_process(delta: float) -> void:
 				is_flying = true
 				camera_shake_smooth()
 	was_flying = is_flying
+	
+	var is_on_ground = touching_ground()
+	if(was_on_ground != is_on_ground):
+		if(was_on_ground == false):
+			sound_jump_landing.play()
+		was_on_ground = is_on_ground
+	
+	
 
 	var input_dir: Vector2 = Input.get_vector("left", "right", "up", "down")
 	var direction: Vector3 = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
