@@ -14,6 +14,7 @@ var look_dir: Vector2
 var look_speed = 50
 
 @onready var sound_jump_landing: AudioStreamPlayer = $SoundJumpLanding
+@onready var debugvis_stair_checker: CSGSphere3D = $StairChecker
 
 var lock_mouse = false
 
@@ -52,7 +53,25 @@ func touching_ground() -> bool:
 
 	return pos_state.intersect_ray(ray_test).is_empty() == false
 
+func approaching_stair() -> bool:
+	var project_forward = -global_transform.basis.z * 1.0
+	var stair_check_top = global_position + project_forward + Vector3.UP * 1.25
+	var stair_check_bottom = global_position + project_forward + Vector3.DOWN * 0.2
+	var params = PhysicsRayQueryParameters3D.create(stair_check_top, stair_check_bottom)
+	var result = get_world_3d().direct_space_state.intersect_ray(params)
+	
+	var found_something = !result.is_empty()
+	if found_something:
+		debugvis_stair_checker.global_position = result.position
+		# print( "stair detected" )
+	else:
+		debugvis_stair_checker.global_position = stair_check_top
+		# print( "no stair found" )
+	
+	return found_something
+
 func _physics_process(delta: float) -> void:
+	approaching_stair()
 	if was_flying != is_flying:
 		if not was_flying:
 			flight_anchor_point = Vector3(global_position.x, 0., global_position.z)
@@ -94,7 +113,7 @@ func _physics_process(delta: float) -> void:
 			flight_target_point = flight_point(flight_anchor_point)
 	else: # Walking movement logic
 		if Input.is_action_just_pressed("jump"):
-			if touching_ground():
+			if is_on_ground:
 				linear_velocity.y = JUMP_VELOCITY
 
 		if direction: apply_central_force(direction * 60.0)

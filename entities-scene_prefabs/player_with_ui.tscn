@@ -53,3 +53,7 @@ transform = Transform3D(-175, 0, -2.6424266e-05, 0, 175, 0, 2.6424266e-05, 0, -1
 
 [node name="SoundJumpLanding" type="AudioStreamPlayer" parent="PlayerPhysics" unique_id=1618692255]
 stream = ExtResource("3_ydgiv")
+
+[node name="StairChecker" type="CSGSphere3D" parent="PlayerPhysics" unique_id=1501459849]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+radius = 0.1

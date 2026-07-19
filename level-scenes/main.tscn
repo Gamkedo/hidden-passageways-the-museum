@@ -282,7 +282,7 @@ size = Vector3(2, 8.5, 2)
 material = ExtResource("5_r54xu")
 
 [node name="NegativeCube" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=2047117778]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.020410538, 0.2341137, 0.0602417)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.020410538, 0.7341137, 0.0602417)
 material_override = ExtResource("3_euau4")
 operation = 2
 size = Vector3(32, 20.5, 25.090912)
