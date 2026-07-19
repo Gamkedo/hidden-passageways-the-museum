@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bk6mm66shyd3p"
-path.s3tc="res://.godot/imported/CurvyFrame-basic-black.png-0df8115a538b5492fce76060497206bc.s3tc.ctex"
+path.s3tc="res://.godot/imported/CurvyFrame-basic-black.png-089b20cc212f3301a13097c301a6a678.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://models/source/CurvyFrame-basic-black.png"
-dest_files=["res://.godot/imported/CurvyFrame-basic-black.png-0df8115a538b5492fce76060497206bc.s3tc.ctex"]
+source_file="res://textures/CurvyFrame-basic-black.png"
+dest_files=["res://.godot/imported/CurvyFrame-basic-black.png-089b20cc212f3301a13097c301a6a678.s3tc.ctex"]
 
 [params]
 

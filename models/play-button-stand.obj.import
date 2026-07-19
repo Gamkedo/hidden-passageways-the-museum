@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cm2soemey2m52"
+path="res://.godot/imported/play-button-stand.obj-ea14d6de4fb1e7932e8fdb5d58bd2bff.mesh"
+
+[deps]
+
+files=["res://.godot/imported/play-button-stand.obj-ea14d6de4fb1e7932e8fdb5d58bd2bff.mesh"]
+
+source_file="res://models/play-button-stand.obj"
+dest_files=["res://.godot/imported/play-button-stand.obj-ea14d6de4fb1e7932e8fdb5d58bd2bff.mesh", "res://.godot/imported/play-button-stand.obj-ea14d6de4fb1e7932e8fdb5d58bd2bff.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
