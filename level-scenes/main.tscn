@@ -32,6 +32,8 @@
 [ext_resource type="Texture2D" uid="uid://c6rqykvgq5oni" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/supply-and-siege.png" id="20_lahx7"]
 [ext_resource type="Texture2D" uid="uid://r870n6ekjct4" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/talon.png" id="21_yqwtw"]
 [ext_resource type="PackedScene" uid="uid://bvln0oll5ttp0" path="res://entities-scene_prefabs/ionic_column.tscn" id="28_er4o0"]
+[ext_resource type="Texture2D" uid="uid://bk6mm66shyd3p" path="res://models/source/CurvyFrame-basic-black.png" id="31_yqwtw"]
+[ext_resource type="ArrayMesh" uid="uid://chk2yapw55ljh" path="res://models/basic-curvy-frame.obj" id="32_tlwcc"]
 [ext_resource type="PackedScene" uid="uid://ccmjewtcqxp7" path="res://models/legend_of_shadowtails_ratrick_mesh.glb" id="33_hgslh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rvyx8"]
@@ -85,9 +87,6 @@ albedo_texture = ExtResource("12_qxgch")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iixjk"]
 albedo_texture = ExtResource("13_r54xu")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4fg2q"]
-albedo_texture = ExtResource("14_er4o0")
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yuneh"]
 albedo_texture = ExtResource("15_keiyw")
 
@@ -108,6 +107,17 @@ albedo_texture = ExtResource("20_lahx7")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mj7h6"]
 albedo_texture = ExtResource("21_yqwtw")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7tbbo"]
+size = Vector3(1, 12, 19)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4fg2q"]
+albedo_texture = ExtResource("31_yqwtw")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gbu3n"]
+albedo_texture = ExtResource("14_er4o0")
+
+[sub_resource type="QuadMesh" id="QuadMesh_7tbbo"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_8jg5c"]
 radius = 1.0454303
@@ -592,21 +602,6 @@ operation = 2
 size = Vector3(2.5, 1.5, 0.5)
 material = SubResource("StandardMaterial3D_iixjk")
 
-[node name="Gladiator of the Golden House" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=2093554487]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6.716667, 1.25, -13.116669)
-use_collision = true
-size = Vector3(3.5, 2.5, 1)
-material = ExtResource("6_q1lu7")
-script = ExtResource("3_1bvp3")
-url = "https://tarnishedmoth.itch.io/gladiator-of-the-golden-house"
-
-[node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Gladiator of the Golden House" unique_id=1749016341]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
-material_override = SubResource("StandardMaterial3D_u5gq0")
-operation = 2
-size = Vector3(2.5, 1.5, 0.5)
-material = SubResource("StandardMaterial3D_4fg2q")
-
 [node name="King Arthur Tales of the Sword" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=101377219]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16.05, 1.25, 7.549999)
 use_collision = true
@@ -711,6 +706,25 @@ material_override = SubResource("StandardMaterial3D_u5gq0")
 operation = 2
 size = Vector3(2.5, 1.5, 0.5)
 material = SubResource("StandardMaterial3D_mj7h6")
+
+[node name="Game Picture Frame" type="StaticBody3D" parent="Dev Pods Game Pictures" unique_id=299075970]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 1, -13.4)
+script = ExtResource("3_1bvp3")
+url = "https://tarnishedmoth.itch.io/gladiator-of-the-golden-house"
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Dev Pods Game Pictures/Game Picture Frame" unique_id=586105222]
+transform = Transform3D(-8.742277e-09, 0, -0.19999999, 0, 0.19999999, 0, 0.19999999, 0, -8.742277e-09, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_7tbbo")
+
+[node name="BasicCurvyFrame Test" type="MeshInstance3D" parent="Dev Pods Game Pictures/Game Picture Frame" unique_id=324603645]
+transform = Transform3D(-8.742277e-09, 0, -0.19999999, 0, 0.19999999, 0, 0.19999999, 0, -8.742277e-09, 0, 0.5, 0)
+material_override = SubResource("StandardMaterial3D_4fg2q")
+mesh = ExtResource("32_tlwcc")
+
+[node name="Painting Image" type="MeshInstance3D" parent="Dev Pods Game Pictures/Game Picture Frame/BasicCurvyFrame Test" unique_id=258781107]
+transform = Transform3D(-6.089869e-07, 0, 1, 0, 8.600001, 0, -13.932004, 0, -4.371139e-08, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_gbu3n")
+mesh = SubResource("QuadMesh_7tbbo")
 
 [node name="Ionic_Column" parent="." unique_id=1313702386 instance=ExtResource("28_er4o0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -3)
