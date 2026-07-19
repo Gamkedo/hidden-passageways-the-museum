@@ -37,6 +37,7 @@
 [ext_resource type="PackedScene" uid="uid://ccmjewtcqxp7" path="res://models/legend_of_shadowtails_ratrick_mesh.glb" id="33_hgslh"]
 [ext_resource type="Texture2D" uid="uid://2432776vq113" path="res://textures/play-button-stand.png" id="34_ewg6b"]
 [ext_resource type="ArrayMesh" uid="uid://cm2soemey2m52" path="res://models/play-button-stand.obj" id="35_u5gq0"]
+[ext_resource type="Texture2D" uid="uid://cpakvdnl3rxxa" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/gladiator-framed-pic.png" id="36_u5gq0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rvyx8"]
 transparency = 1
@@ -123,6 +124,12 @@ size = Vector3(3.5, 3.5, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4fg2q"]
 albedo_texture = ExtResource("31_yqwtw")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ogkr3"]
+albedo_texture = ExtResource("36_u5gq0")
+emission = Color(0.17641911, 0.17641908, 0.17641908, 1)
+backlight_enabled = true
+backlight = Color(0.24840015, 0.24840018, 0.24840015, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y5qfa"]
 size = Vector3(3.7, 2.3500001, 0.55)
@@ -730,8 +737,10 @@ mesh = SubResource("QuadMesh_7tbbo")
 
 [node name="Label3D" type="Label3D" parent="Dev Pods Game Pictures/Game Frame with Button - Gladiator Example/Button Stand" unique_id=1580588700]
 transform = Transform3D(0.24000001, 0, 0, 0, 0.24000001, 0, 0, 0, 0.24000001, -0.07500076, 0.665, -0.31499863)
+modulate = Color(0, 0, 0, 1)
 text = "Gladiator of the
 Golden House"
+outline_size = 0
 
 [node name="PlayButtonStand" type="MeshInstance3D" parent="Dev Pods Game Pictures/Game Frame with Button - Gladiator Example/Button Stand" unique_id=1568301415]
 transform = Transform3D(-6.29444e-09, 0, 0.14400001, 0, 0.14400001, 0, -0.14400001, 0, -6.29444e-09, -0.08000028, -1, -0.039999425)
@@ -748,8 +757,8 @@ material_override = SubResource("StandardMaterial3D_4fg2q")
 mesh = ExtResource("32_tlwcc")
 
 [node name="Painting Image" type="MeshInstance3D" parent="Dev Pods Game Pictures/Game Frame with Button - Gladiator Example/BasicCurvyFrame Test" unique_id=258781107]
-transform = Transform3D(-6.089869e-07, 0, 1, 0, 8.600001, 0, -13.932004, 0, -4.371139e-08, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_gbu3n")
+transform = Transform3D(-7.033798e-07, 0, 1, 0, 9.407751, 0, -16.091467, 0, -4.371139e-08, -0.19434357, -0.026180267, 0)
+material_override = SubResource("StandardMaterial3D_ogkr3")
 mesh = SubResource("QuadMesh_7tbbo")
 
 [node name="CollisionFrame" type="CollisionShape3D" parent="Dev Pods Game Pictures/Game Frame with Button - Gladiator Example" unique_id=409454442]
