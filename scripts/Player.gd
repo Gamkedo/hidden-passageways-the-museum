@@ -51,7 +51,7 @@ func touching_ground() -> bool:
 	var pos_state = get_world_3d().direct_space_state
 
 	var ray_test = PhysicsRayQueryParameters3D.create(global_position,
-		global_position + Vector3.DOWN * 0.7)
+		global_position + Vector3.DOWN * 0.3)
 
 	return pos_state.intersect_ray(ray_test).is_empty() == false
 
@@ -107,6 +107,7 @@ func _physics_process(delta: float) -> void:
 	
 	# keeping previous state to tell when to play landing sound
 	var is_on_ground = touching_ground()
+	
 	if(was_on_ground != is_on_ground):
 		if(was_on_ground == false): # landing
 			if Time.get_ticks_msec() - time_last_on_ground > MS_OFF_GROUND_FOR_LANDING_SOUND:
@@ -123,6 +124,9 @@ func _physics_process(delta: float) -> void:
 			flight_anchor_point += direction
 			flight_target_point = flight_point(flight_anchor_point)
 	else: # Walking movement logic
+		if is_on_ground:
+			linear_velocity.y = 0
+
 		if Input.is_action_just_pressed("jump"):
 			if is_on_ground:
 				linear_velocity.y = JUMP_VELOCITY
@@ -132,8 +136,6 @@ func _physics_process(delta: float) -> void:
 			var stair_push_up = approaching_stair()
 			if stair_push_up >= 0.0:
 				apply_central_force((direction + Vector3.UP) * 50.0 * stair_push_up * stair_push_up)
-				
-				# apply_central_force(Vector3.UP * 20.0)
 		else:
 			var ground_speed := Vector3(linear_velocity.x, 0, linear_velocity.z)
 			ground_speed = ground_speed.move_toward(Vector3.ZERO, 20.0 * delta)
@@ -147,7 +149,7 @@ func _physics_process(delta: float) -> void:
 			horizontal_velocity = horizontal_velocity.normalized() * SPEED
 			linear_velocity.x = horizontal_velocity.x
 			linear_velocity.z = horizontal_velocity.z
-
+	
 	_rotate_camera(delta)
 
 func _rotate_camera(delta: float, look_modifier: float = 1.0):
