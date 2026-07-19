@@ -56,4 +56,5 @@ stream = ExtResource("3_ydgiv")
 
 [node name="StairChecker" type="CSGSphere3D" parent="PlayerPhysics" unique_id=1501459849]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+visible = false
 radius = 0.1

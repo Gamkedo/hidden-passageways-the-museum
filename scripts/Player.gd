@@ -8,6 +8,8 @@ extends RigidBody3D
 const SPEED = 5.0
 const JUMP_VELOCITY = 6.5
 var was_on_ground = false
+var time_last_on_ground = 0
+const MS_OFF_GROUND_FOR_LANDING_SOUND = 600
 
 var look_dir: Vector2
 @onready var camera = %BodyCam
@@ -53,25 +55,32 @@ func touching_ground() -> bool:
 
 	return pos_state.intersect_ray(ray_test).is_empty() == false
 
-func approaching_stair() -> bool:
-	var project_forward = -global_transform.basis.z * 1.0
-	var stair_check_top = global_position + project_forward + Vector3.UP * 1.25
-	var stair_check_bottom = global_position + project_forward + Vector3.DOWN * 0.2
-	var params = PhysicsRayQueryParameters3D.create(stair_check_top, stair_check_bottom)
-	var result = get_world_3d().direct_space_state.intersect_ray(params)
+func approaching_stair() -> float:
+	var test_distance = 0.7
+	var project_forward = -global_transform.basis.z * test_distance
+	var stair_ankle_offset = Vector3.DOWN * 0.2
+	var stair_check_ankle = global_position + stair_ankle_offset
+	var stair_check_bottom = global_position + project_forward + stair_ankle_offset
+	var params_forward = PhysicsRayQueryParameters3D.create(stair_check_ankle, stair_check_bottom)
+	var forward_test_result = get_world_3d().direct_space_state.intersect_ray(params_forward)
+
+	# top down step check instead of ankle forward, earlier method
+	# var stair_check_top = global_position + project_forward + Vector3.UP * 1.25
+	# var params_top = PhysicsRayQueryParameters3D.create(stair_check_top, stair_check_bottom)
+	# var top_test_result = get_world_3d().direct_space_state.intersect_ray(params_top)
 	
-	var found_something = !result.is_empty()
+	var found_something = !forward_test_result.is_empty()
+	var return_power = -1.0 # 0.0-test_distance as valid output
 	if found_something:
-		debugvis_stair_checker.global_position = result.position
-		# print( "stair detected" )
-	else:
-		debugvis_stair_checker.global_position = stair_check_top
+		return_power = forward_test_result.position.distance_to(stair_check_ankle)
+		debugvis_stair_checker.global_position = forward_test_result.position
+	else: # leave it negative so it gets ignored
+		debugvis_stair_checker.global_position = stair_check_bottom
 		# print( "no stair found" )
 	
-	return found_something
+	return return_power
 
 func _physics_process(delta: float) -> void:
-	approaching_stair()
 	if was_flying != is_flying:
 		if not was_flying:
 			flight_anchor_point = Vector3(global_position.x, 0., global_position.z)
@@ -96,13 +105,15 @@ func _physics_process(delta: float) -> void:
 				camera_shake_smooth()
 	was_flying = is_flying
 	
+	# keeping previous state to tell when to play landing sound
 	var is_on_ground = touching_ground()
 	if(was_on_ground != is_on_ground):
-		if(was_on_ground == false):
-			sound_jump_landing.play()
-		was_on_ground = is_on_ground
-	
-	
+		if(was_on_ground == false): # landing
+			if Time.get_ticks_msec() - time_last_on_ground > MS_OFF_GROUND_FOR_LANDING_SOUND:
+				sound_jump_landing.play()
+		else: # leaving the ground
+			time_last_on_ground = Time.get_ticks_msec()
+		was_on_ground = is_on_ground	
 
 	var input_dir: Vector2 = Input.get_vector("left", "right", "up", "down")
 	var direction: Vector3 = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
@@ -116,7 +127,13 @@ func _physics_process(delta: float) -> void:
 			if is_on_ground:
 				linear_velocity.y = JUMP_VELOCITY
 
-		if direction: apply_central_force(direction * 60.0)
+		if direction:
+			apply_central_force(direction * 60.0)
+			var stair_push_up = approaching_stair()
+			if stair_push_up >= 0.0:
+				apply_central_force((direction + Vector3.UP) * 50.0 * stair_push_up * stair_push_up)
+				
+				# apply_central_force(Vector3.UP * 20.0)
 		else:
 			var ground_speed := Vector3(linear_velocity.x, 0, linear_velocity.z)
 			ground_speed = ground_speed.move_toward(Vector3.ZERO, 20.0 * delta)
