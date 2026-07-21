@@ -1,0 +1,237 @@
+[gd_scene format=3 uid="uid://bu5ybpneao340"]
+
+[ext_resource type="PackedScene" uid="uid://ce0uc3f7i1cxo" path="res://entities-scene_prefabs/player_with_ui.tscn" id="1_w5a57"]
+[ext_resource type="Material" uid="uid://di6u3hjsvhh8i" path="res://materials/modern-museum/museum-floor-wood.tres" id="2_cqs3k"]
+[ext_resource type="Material" uid="uid://bnuir4b1t58xs" path="res://environment-csg/level-grid.tres" id="3_lwe8t"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w5a57"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_cqs3k"]
+sky_material = SubResource("ProceduralSkyMaterial_w5a57")
+
+[sub_resource type="Environment" id="Environment_lwe8t"]
+background_mode = 2
+sky = SubResource("Sky_cqs3k")
+tonemap_mode = 4
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_xteo1"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_xteo1"]
+material = ExtResource("2_cqs3k")
+top_radius = 2.0
+bottom_radius = 2.0
+height = 0.125
+radial_segments = 6
+rings = 0
+cap_bottom = false
+
+[node name="GotghPortal" type="Node3D" unique_id=1517149597]
+
+[node name="Player with UI" parent="." unique_id=1354449472 instance=ExtResource("1_w5a57")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.043212652, 0, 4.9978614)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2122988525]
+environment = SubResource("Environment_lwe8t")
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=1626961563]
+transform = Transform3D(-0.611197, -0.25221127, 0.7502184, 9.107544e-09, 0.9478697, 0.31865838, -0.7914786, 0.19476308, -0.57933503, 2.505683, 2.197227, 0)
+shadow_enabled = true
+shadow_reverse_cull_face = true
+
+[node name="Secondary directional" type="DirectionalLight3D" parent="." unique_id=1711006282]
+transform = Transform3D(0.09137888, -0.41648573, -0.90453833, 0.95804524, 0.2845646, -0.034240685, 0.27166036, -0.8634597, 0.42501533, 2.505683, 2.197227, 0)
+light_energy = 0.25
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=53797751]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=328491896]
+shape = SubResource("WorldBoundaryShape3D_xteo1")
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=46558294]
+use_collision = true
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGCombiner3D" unique_id=1995426372]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 0)
+radius = 32.0
+height = 18.0
+sides = 32
+
+[node name="Subtract" type="CSGCylinder3D" parent="CSGCombiner3D/CSGCylinder3D" unique_id=274956172]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
+operation = 2
+radius = 31.0
+height = 8.0
+sides = 32
+
+[node name="Subtract2" type="CSGCylinder3D" parent="CSGCombiner3D/CSGCylinder3D" unique_id=720139525]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+operation = 2
+radius = 28.0
+height = 8.0
+sides = 32
+
+[node name="Subtract3" type="CSGCylinder3D" parent="CSGCombiner3D/CSGCylinder3D" unique_id=584737920]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+operation = 2
+radius = 24.0
+height = 8.0
+sides = 32
+
+[node name="Subtract4" type="CSGCylinder3D" parent="CSGCombiner3D/CSGCylinder3D" unique_id=1462404445]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
+operation = 2
+radius = 20.0
+height = 8.0
+sides = 32
+
+[node name="Tiles" type="Node3D" parent="." unique_id=1748294719]
+
+[node name="Tile" type="MeshInstance3D" parent="Tiles" unique_id=283213731]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 12)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile4" type="MeshInstance3D" parent="Tiles" unique_id=1032599620]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 12)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile2" type="MeshInstance3D" parent="Tiles" unique_id=24476151]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile25" type="MeshInstance3D" parent="Tiles" unique_id=1027681715]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 8)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile3" type="MeshInstance3D" parent="Tiles" unique_id=327149011]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 4)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="TileCENTER" type="MeshInstance3D" parent="Tiles" unique_id=1795339386]
+mesh = SubResource("CylinderMesh_xteo1")
+surface_material_override/0 = ExtResource("3_lwe8t")
+
+[node name="Tile5" type="MeshInstance3D" parent="Tiles" unique_id=364592155]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -4)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile27" type="MeshInstance3D" parent="Tiles" unique_id=69918204]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 4)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile28" type="MeshInstance3D" parent="Tiles" unique_id=1928159883]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -4)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile6" type="MeshInstance3D" parent="Tiles" unique_id=1184903453]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile26" type="MeshInstance3D" parent="Tiles" unique_id=610674449]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -8)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile33" type="MeshInstance3D" parent="Tiles" unique_id=2107982757]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 8)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile34" type="MeshInstance3D" parent="Tiles" unique_id=368575774]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 4)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile35" type="MeshInstance3D" parent="Tiles" unique_id=445789400]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -4)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile36" type="MeshInstance3D" parent="Tiles" unique_id=1172315946]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -8)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile7" type="MeshInstance3D" parent="Tiles" unique_id=1764241139]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -12)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile8" type="MeshInstance3D" parent="Tiles" unique_id=446920390]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -12)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile9" type="MeshInstance3D" parent="Tiles" unique_id=505464257]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 12)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile24" type="MeshInstance3D" parent="Tiles" unique_id=101337678]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 12)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile10" type="MeshInstance3D" parent="Tiles" unique_id=1492212132]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile11" type="MeshInstance3D" parent="Tiles" unique_id=134833384]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -4)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile12" type="MeshInstance3D" parent="Tiles" unique_id=1889063447]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -12)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile23" type="MeshInstance3D" parent="Tiles" unique_id=1204629660]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -12)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile13" type="MeshInstance3D" parent="Tiles" unique_id=603398760]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 8)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile14" type="MeshInstance3D" parent="Tiles" unique_id=881471806]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile15" type="MeshInstance3D" parent="Tiles" unique_id=1264296610]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile16" type="MeshInstance3D" parent="Tiles" unique_id=275725362]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 4)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile17" type="MeshInstance3D" parent="Tiles" unique_id=1019104210]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -4)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile29" type="MeshInstance3D" parent="Tiles" unique_id=1627537638]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 8)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile30" type="MeshInstance3D" parent="Tiles" unique_id=1415020776]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -8)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile31" type="MeshInstance3D" parent="Tiles" unique_id=1196197051]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 4)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile32" type="MeshInstance3D" parent="Tiles" unique_id=1708010798]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -4)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile18" type="MeshInstance3D" parent="Tiles" unique_id=382004492]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile19" type="MeshInstance3D" parent="Tiles" unique_id=82086472]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile20" type="MeshInstance3D" parent="Tiles" unique_id=746938271]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile21" type="MeshInstance3D" parent="Tiles" unique_id=310628846]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Tile22" type="MeshInstance3D" parent="Tiles" unique_id=508334252]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 0)
+mesh = SubResource("CylinderMesh_xteo1")
