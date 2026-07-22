@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://c48m8oq1yaq3w" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/cyndrive-ships.png" id="11_u03oo"]
 [ext_resource type="Texture2D" uid="uid://cp3eu5k3e546n" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/everchange.png" id="12_qxgch"]
 [ext_resource type="Texture2D" uid="uid://dpvjb874dhfhp" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/forgotten-road.png" id="13_r54xu"]
+[ext_resource type="Material" uid="uid://dajoyj6fev1j7" path="res://materials/floor-materials/marble_tile_floor.tres" id="13_v6iic"]
 [ext_resource type="Texture2D" uid="uid://dlft5rt3mgqhu" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/gladiator-of-the-golden-house.png" id="14_er4o0"]
 [ext_resource type="Texture2D" uid="uid://87drxaweuioc" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/king-arthur.png" id="15_keiyw"]
 [ext_resource type="Texture2D" uid="uid://baj6x4ux7gvyt" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/legend-of-shadowtail.png" id="16_rvyx8"]
@@ -478,8 +479,9 @@ material = ExtResource("5_r54xu")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CSG Blockout" unique_id=429890971]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, -3.75, 6.5)
+material_override = ExtResource("13_v6iic")
 size = Vector3(24, 5.5, 25)
-material = ExtResource("3_h2yge")
+material = ExtResource("13_v6iic")
 
 [node name="Clickable 3d link test" type="StaticBody3D" parent="." unique_id=1076222070]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.5, 0, 4.5)
