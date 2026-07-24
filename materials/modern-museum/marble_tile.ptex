@@ -187,12 +187,6 @@
 			"to_port": 0
 		},
 		{
-			"from": "blend2_2",
-			"from_port": 0,
-			"to": "Material",
-			"to_port": 0
-		},
-		{
 			"from": "transform2",
 			"from_port": 0,
 			"to": "blend2_5",
@@ -245,6 +239,12 @@
 			"from_port": 0,
 			"to": "blend2_6",
 			"to_port": 1
+		},
+		{
+			"from": "blend2_2",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 0
 		}
 	],
 	"label": "Graph",
@@ -262,8 +262,8 @@
 			},
 			"name": "Material",
 			"node_position": {
-				"x": 1016.31805419922,
-				"y": 353.544616699219
+				"x": 1275.85192871094,
+				"y": 350.001495361328
 			},
 			"parameters": {
 				"albedo_color": {
