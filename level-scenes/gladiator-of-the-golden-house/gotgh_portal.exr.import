@@ -3,7 +3,7 @@
 importer="2d_array_texture"
 type="CompressedTexture2DArray"
 uid="uid://c5qyb2k7qwa8a"
-path.bptc="res://.godot/imported/gotgh_portal.exr-0b2f8b20fb5fdb1ee6de02655f3cac51.bptc.ctexarray"
+path="res://.godot/imported/gotgh_portal.exr-0b2f8b20fb5fdb1ee6de02655f3cac51.ctexarray"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,7 +12,7 @@ metadata={
 [deps]
 
 source_file="res://level-scenes/gladiator-of-the-golden-house/gotgh_portal.exr"
-dest_files=["res://.godot/imported/gotgh_portal.exr-0b2f8b20fb5fdb1ee6de02655f3cac51.bptc.ctexarray"]
+dest_files=["res://.godot/imported/gotgh_portal.exr-0b2f8b20fb5fdb1ee6de02655f3cac51.ctexarray"]
 
 [params]
 
@@ -21,9 +21,9 @@ compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
-compress/hdr_compression=1
+compress/hdr_compression=0
 compress/channel_pack=1
 mipmaps/generate=false
 mipmaps/limit=-1
 slices/horizontal=1
-slices/vertical=1
+slices/vertical=2
