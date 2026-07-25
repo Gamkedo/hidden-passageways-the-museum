@@ -7,3 +7,4 @@ albedo_texture = ExtResource("1_j32vo")
 uv1_triplanar = true
 uv1_world_triplanar = true
 uv2_world_triplanar = true
+texture_filter = 5
