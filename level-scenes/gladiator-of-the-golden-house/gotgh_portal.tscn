@@ -3,6 +3,7 @@
 [ext_resource type="LightmapGIData" uid="uid://bxlqpuok42wli" path="res://level-scenes/gladiator-of-the-golden-house/gotgh_portal.lmbake" id="1_cqs3k"]
 [ext_resource type="PackedScene" uid="uid://ce0uc3f7i1cxo" path="res://entities-scene_prefabs/player_with_ui.tscn" id="1_w5a57"]
 [ext_resource type="Material" uid="uid://di6u3hjsvhh8i" path="res://materials/modern-museum/museum-floor-wood.tres" id="2_cqs3k"]
+[ext_resource type="Material" uid="uid://dukv1r4leba6p" path="res://materials/colosseumbricks.tres" id="3_cm5gx"]
 [ext_resource type="Material" uid="uid://bnuir4b1t58xs" path="res://environment-csg/level-grid.tres" id="3_lwe8t"]
 [ext_resource type="PackedScene" uid="uid://cj76xwy52oldt" path="res://entities-scene_prefabs/ionic_column-baked.tscn" id="5_lwe8t"]
 
@@ -99,206 +100,18 @@ environment = SubResource("Environment_lwe8t")
 quality = 2
 supersampling = true
 bounces = 5
+directional = true
 use_texture_for_bounces = false
 denoiser_strength = 0.11
 denoiser_range = 5
-texel_scale = 0.25
-max_texture_size = 2048
+texel_scale = 0.3
+max_texture_size = 4096
 light_data = ExtResource("1_cqs3k")
-
-[node name="ProbeRow" type="Node3D" parent="LightmapGI" unique_id=479731428]
-transform = Transform3D(2.2, 0, 0, 0, 2.2, 0, 0, 0, 2.2, -14.916941, 0, 0)
-visible = false
-
-[node name="LightmapProbe" type="LightmapProbe" parent="LightmapGI/ProbeRow" unique_id=520998712]
-
-[node name="LightmapProbe2" type="LightmapProbe" parent="LightmapGI/ProbeRow" unique_id=158627711]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
-
-[node name="LightmapProbe3" type="LightmapProbe" parent="LightmapGI/ProbeRow" unique_id=1712735301]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
-
-[node name="LightmapProbe4" type="LightmapProbe" parent="LightmapGI/ProbeRow" unique_id=850442092]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
-
-[node name="LightmapProbe5" type="LightmapProbe" parent="LightmapGI/ProbeRow" unique_id=1373117707]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
-
-[node name="LightmapProbe6" type="LightmapProbe" parent="LightmapGI/ProbeRow" unique_id=1431798074]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
-
-[node name="LightmapProbe7" type="LightmapProbe" parent="LightmapGI/ProbeRow" unique_id=1901572838]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)
-
-[node name="LightmapProbe8" type="LightmapProbe" parent="LightmapGI/ProbeRow" unique_id=899860770]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 0)
-
-[node name="ProbeRow2" type="Node3D" parent="LightmapGI" unique_id=2098111380]
-transform = Transform3D(2.2, 0, 0, 0, 2.2, 0, 0, 0, 2.2, -14.916941, 0, 5.1178794)
-visible = false
-
-[node name="LightmapProbe" type="LightmapProbe" parent="LightmapGI/ProbeRow2" unique_id=1648054571]
-
-[node name="LightmapProbe2" type="LightmapProbe" parent="LightmapGI/ProbeRow2" unique_id=889168537]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
-
-[node name="LightmapProbe3" type="LightmapProbe" parent="LightmapGI/ProbeRow2" unique_id=208088370]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
-
-[node name="LightmapProbe4" type="LightmapProbe" parent="LightmapGI/ProbeRow2" unique_id=1996162682]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
-
-[node name="LightmapProbe5" type="LightmapProbe" parent="LightmapGI/ProbeRow2" unique_id=487660477]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
-
-[node name="LightmapProbe6" type="LightmapProbe" parent="LightmapGI/ProbeRow2" unique_id=1831722597]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
-
-[node name="LightmapProbe7" type="LightmapProbe" parent="LightmapGI/ProbeRow2" unique_id=597830553]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)
-
-[node name="LightmapProbe8" type="LightmapProbe" parent="LightmapGI/ProbeRow2" unique_id=818357479]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 0)
-
-[node name="ProbeRow7" type="Node3D" parent="LightmapGI" unique_id=1788399199]
-transform = Transform3D(2.2, 0, 0, 0, 2.2, 0, 0, 0, 2.2, -14.916941, 0, -5.715524)
-visible = false
-
-[node name="LightmapProbe" type="LightmapProbe" parent="LightmapGI/ProbeRow7" unique_id=286319180]
-
-[node name="LightmapProbe2" type="LightmapProbe" parent="LightmapGI/ProbeRow7" unique_id=1683881857]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
-
-[node name="LightmapProbe3" type="LightmapProbe" parent="LightmapGI/ProbeRow7" unique_id=161783325]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
-
-[node name="LightmapProbe4" type="LightmapProbe" parent="LightmapGI/ProbeRow7" unique_id=1382222664]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
-
-[node name="LightmapProbe5" type="LightmapProbe" parent="LightmapGI/ProbeRow7" unique_id=1366090250]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
-
-[node name="LightmapProbe6" type="LightmapProbe" parent="LightmapGI/ProbeRow7" unique_id=1286321374]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
-
-[node name="LightmapProbe7" type="LightmapProbe" parent="LightmapGI/ProbeRow7" unique_id=1895054046]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)
-
-[node name="LightmapProbe8" type="LightmapProbe" parent="LightmapGI/ProbeRow7" unique_id=644078609]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 0)
-
-[node name="ProbeRow3" type="Node3D" parent="LightmapGI" unique_id=2517702]
-transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, -12.500582, 0, 9.997173)
-visible = false
-
-[node name="LightmapProbe" type="LightmapProbe" parent="LightmapGI/ProbeRow3" unique_id=1425143617]
-
-[node name="LightmapProbe2" type="LightmapProbe" parent="LightmapGI/ProbeRow3" unique_id=180774542]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
-
-[node name="LightmapProbe3" type="LightmapProbe" parent="LightmapGI/ProbeRow3" unique_id=707842343]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
-
-[node name="LightmapProbe4" type="LightmapProbe" parent="LightmapGI/ProbeRow3" unique_id=379510835]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
-
-[node name="LightmapProbe5" type="LightmapProbe" parent="LightmapGI/ProbeRow3" unique_id=11746546]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
-
-[node name="LightmapProbe6" type="LightmapProbe" parent="LightmapGI/ProbeRow3" unique_id=611730974]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
-
-[node name="LightmapProbe7" type="LightmapProbe" parent="LightmapGI/ProbeRow3" unique_id=893919284]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)
-
-[node name="LightmapProbe8" type="LightmapProbe" parent="LightmapGI/ProbeRow3" unique_id=1365330922]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 0)
-
-[node name="ProbeRow6" type="Node3D" parent="LightmapGI" unique_id=669435791]
-transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, -12.129721, 0, -10.941383)
-visible = false
-
-[node name="LightmapProbe" type="LightmapProbe" parent="LightmapGI/ProbeRow6" unique_id=515002177]
-
-[node name="LightmapProbe2" type="LightmapProbe" parent="LightmapGI/ProbeRow6" unique_id=168423321]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
-
-[node name="LightmapProbe3" type="LightmapProbe" parent="LightmapGI/ProbeRow6" unique_id=340334257]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
-
-[node name="LightmapProbe4" type="LightmapProbe" parent="LightmapGI/ProbeRow6" unique_id=417055333]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
-
-[node name="LightmapProbe5" type="LightmapProbe" parent="LightmapGI/ProbeRow6" unique_id=496662211]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
-
-[node name="LightmapProbe6" type="LightmapProbe" parent="LightmapGI/ProbeRow6" unique_id=468321562]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
-
-[node name="LightmapProbe7" type="LightmapProbe" parent="LightmapGI/ProbeRow6" unique_id=1753940118]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)
-
-[node name="LightmapProbe8" type="LightmapProbe" parent="LightmapGI/ProbeRow6" unique_id=91380009]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 0)
-
-[node name="ProbeRow4" type="Node3D" parent="LightmapGI" unique_id=1843678664]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -10.794136, 0, 15.633553)
-visible = false
-
-[node name="LightmapProbe" type="LightmapProbe" parent="LightmapGI/ProbeRow4" unique_id=921239800]
-
-[node name="LightmapProbe2" type="LightmapProbe" parent="LightmapGI/ProbeRow4" unique_id=1372519256]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
-
-[node name="LightmapProbe3" type="LightmapProbe" parent="LightmapGI/ProbeRow4" unique_id=1512085763]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
-
-[node name="LightmapProbe4" type="LightmapProbe" parent="LightmapGI/ProbeRow4" unique_id=687357140]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
-
-[node name="LightmapProbe5" type="LightmapProbe" parent="LightmapGI/ProbeRow4" unique_id=188330330]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
-
-[node name="LightmapProbe6" type="LightmapProbe" parent="LightmapGI/ProbeRow4" unique_id=1373550025]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
-
-[node name="LightmapProbe7" type="LightmapProbe" parent="LightmapGI/ProbeRow4" unique_id=1957765937]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)
-
-[node name="LightmapProbe8" type="LightmapProbe" parent="LightmapGI/ProbeRow4" unique_id=896414442]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 0)
-
-[node name="ProbeRow5" type="Node3D" parent="LightmapGI" unique_id=1702440090]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -10.794136, 0, -15.121542)
-visible = false
-
-[node name="LightmapProbe" type="LightmapProbe" parent="LightmapGI/ProbeRow5" unique_id=1719913168]
-
-[node name="LightmapProbe2" type="LightmapProbe" parent="LightmapGI/ProbeRow5" unique_id=1359578600]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
-
-[node name="LightmapProbe3" type="LightmapProbe" parent="LightmapGI/ProbeRow5" unique_id=747336545]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
-
-[node name="LightmapProbe4" type="LightmapProbe" parent="LightmapGI/ProbeRow5" unique_id=2099384196]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
-
-[node name="LightmapProbe5" type="LightmapProbe" parent="LightmapGI/ProbeRow5" unique_id=1548154294]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
-
-[node name="LightmapProbe6" type="LightmapProbe" parent="LightmapGI/ProbeRow5" unique_id=394364284]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
-
-[node name="LightmapProbe7" type="LightmapProbe" parent="LightmapGI/ProbeRow5" unique_id=1028856693]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)
-
-[node name="LightmapProbe8" type="LightmapProbe" parent="LightmapGI/ProbeRow5" unique_id=21209322]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 0)
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=1626961563]
 transform = Transform3D(-1, 4.645632e-08, -7.405774e-08, 7.572948e-09, 0.8899697, 0.45601967, 8.709413e-08, 0.45601958, -0.88996977, 2.505683, 2.197227, 0)
 light_color = Color(0.9053587, 0.832431, 0.73077035, 1)
-light_energy = 2.6
+light_energy = 3.6
 light_indirect_energy = 1.5
 light_angular_distance = 0.4
 light_bake_mode = 1
@@ -319,6 +132,7 @@ shape = SubResource("WorldBoundaryShape3D_xteo1")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=1628286915]
 gi_lightmap_texel_scale = 2.0
 mesh = SubResource("PlaneMesh_xteo1")
+surface_material_override/0 = ExtResource("3_lwe8t")
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=46558294]
 visible = false
@@ -395,6 +209,7 @@ depth = 3.0
 [node name="CSGBakedMeshInstance3D2" type="MeshInstance3D" parent="Colosseum" unique_id=1237082900]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22881222, 0)
 mesh = SubResource("ArrayMesh_lwe8t")
+surface_material_override/0 = ExtResource("3_cm5gx")
 
 [node name="CSGBakedCollisionShape3D2" type="CollisionShape3D" parent="Colosseum" unique_id=1533860008]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22881222, 0)

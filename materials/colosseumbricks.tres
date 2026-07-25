@@ -1,0 +1,15 @@
+[gd_resource type="ORMMaterial3D" format=3 uid="uid://dukv1r4leba6p"]
+
+[ext_resource type="Texture2D" uid="uid://bk2x2jv1nm5x3" path="res://materials/colosseumbricks_albedo.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://gws3fhmo5b1t" path="res://materials/colosseumbricks_orm.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bhhe1p56guowt" path="res://materials/colosseumbricks_normal.png" id="3"]
+
+[resource]
+albedo_texture = ExtResource("1")
+orm_texture = ExtResource("2")
+normal_enabled = true
+normal_texture = ExtResource("3")
+uv1_scale = Vector3(0.25, 0.25, 0.25)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 50.0
+texture_filter = 5
