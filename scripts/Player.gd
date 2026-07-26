@@ -117,7 +117,9 @@ func _physics_process(delta: float) -> void:
 		was_on_ground = is_on_ground	
 
 	var input_dir: Vector2 = Input.get_vector("left", "right", "up", "down")
-	var direction: Vector3 = (camera.global_transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	var direction: Vector3 = (camera.global_transform.basis * Vector3(input_dir.x, 0, input_dir.y))
+	direction.y = 0 # prevents looking up or down affecting stair climbing
+	direction = direction.normalized()
 	if is_flying and not flying_transition_tween:
 		global_position = lerp(global_position, flight_target_point, 0.8)
 		if direction:
