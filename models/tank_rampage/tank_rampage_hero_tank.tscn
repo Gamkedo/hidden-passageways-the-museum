@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://b4lenin8uv1jc"]
+
+[ext_resource type="PackedScene" uid="uid://byown3kkcxwo5" path="res://models/tank_rampage/hero_tank.glb" id="1_dweov"]
+[ext_resource type="Material" uid="uid://cujgasbkkjc2c" path="res://models/tank_rampage/hero_body_material.tres" id="2_ni3w2"]
+[ext_resource type="Material" uid="uid://dd50ig6r55a2h" path="res://models/tank_rampage/treads_material.tres" id="3_xgu8p"]
+[ext_resource type="Material" uid="uid://dweobtql83d38" path="res://models/tank_rampage/wheels_material.tres" id="4_u5dgd"]
+[ext_resource type="Material" uid="uid://2cfu7bky27vv" path="res://models/tank_rampage/barrel_material.tres" id="5_us5m3"]
+[ext_resource type="Material" uid="uid://cspyk34sesgai" path="res://models/tank_rampage/hero_turret_material.tres" id="6_hd1ln"]
+
+[node name="hero_tank" unique_id=1017196529 instance=ExtResource("1_dweov")]
+
+[node name="BodyBackDetail" parent="Scene Collection/Tank/Body" parent_id_path=PackedInt32Array(1784591906) index="0" unique_id=1504839057]
+surface_material_override/0 = ExtResource("2_ni3w2")
+
+[node name="BodyFrontHatch" parent="Scene Collection/Tank/Body" parent_id_path=PackedInt32Array(1784591906) index="1" unique_id=1497189248]
+surface_material_override/0 = ExtResource("2_ni3w2")
+
+[node name="BodyMachineGunHole" parent="Scene Collection/Tank/Body" parent_id_path=PackedInt32Array(1784591906) index="2" unique_id=1950057964]
+surface_material_override/0 = ExtResource("2_ni3w2")
+
+[node name="BodyMain" parent="Scene Collection/Tank/Body" parent_id_path=PackedInt32Array(1784591906) index="3" unique_id=2030590932]
+surface_material_override/0 = ExtResource("2_ni3w2")
+
+[node name="Track" parent="Scene Collection/Tank/Treads/Left/Tracks" parent_id_path=PackedInt32Array(672731282) index="0" unique_id=105635434]
+surface_material_override/0 = ExtResource("3_xgu8p")
+
+[node name="FrontWheel" parent="Scene Collection/Tank/Treads/Left/Wheels" parent_id_path=PackedInt32Array(1996826308) index="0" unique_id=633510932]
+surface_material_override/0 = ExtResource("4_u5dgd")
+
+[node name="FrontWheel_001" parent="Scene Collection/Tank/Treads/Left/Wheels" parent_id_path=PackedInt32Array(1996826308) index="1" unique_id=1589370723]
+surface_material_override/0 = ExtResource("4_u5dgd")
+
+[node name="Wheel" parent="Scene Collection/Tank/Treads/Left/Wheels" parent_id_path=PackedInt32Array(1996826308) index="2" unique_id=1545439032]
+surface_material_override/0 = ExtResource("4_u5dgd")
+
+[node name="Wheel_001" parent="Scene Collection/Tank/Treads/Left/Wheels" parent_id_path=PackedInt32Array(1996826308) index="3" unique_id=446359182]
+surface_material_override/0 = ExtResource("4_u5dgd")
+
+[node name="Wheel_002" parent="Scene Collection/Tank/Treads/Left/Wheels" parent_id_path=PackedInt32Array(1996826308) index="4" unique_id=1052844383]
+surface_material_override/0 = ExtResource("4_u5dgd")
+
+[node name="Wheel_003" parent="Scene Collection/Tank/Treads/Left/Wheels" parent_id_path=PackedInt32Array(1996826308) index="5" unique_id=222459184]
+surface_material_override/0 = ExtResource("4_u5dgd")
+
+[node name="Wheel_004" parent="Scene Collection/Tank/Treads/Left/Wheels" parent_id_path=PackedInt32Array(1996826308) index="6" unique_id=1906445497]
+surface_material_override/0 = ExtResource("4_u5dgd")
+
+[node name="Wheel_005" parent="Scene Collection/Tank/Treads/Left/Wheels" parent_id_path=PackedInt32Array(1996826308) index="7" unique_id=4008355]
+surface_material_override/0 = ExtResource("4_u5dgd")
+
+[node name="Wheel_006" parent="Scene Collection/Tank/Treads/Left/Wheels" parent_id_path=PackedInt32Array(1996826308) index="8" unique_id=1640246497]
+surface_material_override/0 = ExtResource("4_u5dgd")
+
+[node name="Wheel_007" parent="Scene Collection/Tank/Treads/Left/Wheels" parent_id_path=PackedInt32Array(1996826308) index="9" unique_id=1181246194]
+surface_material_override/0 = ExtResource("4_u5dgd")
+
+[node name="Track_001" parent="Scene Collection/Tank/Treads/Right/Tracks2" parent_id_path=PackedInt32Array(1694400889) index="0" unique_id=300750089]
+surface_material_override/0 = ExtResource("3_xgu8p")
+
+[node name="FrontWheel_002" parent="Scene Collection/Tank/Treads/Right/Wheels2" parent_id_path=PackedInt32Array(2094550783) index="0" unique_id=1127302974]
+surface_material_override/0 = ExtResource("4_u5dgd")
+
+[node name="FrontWheel_003" parent="Scene Collection/Tank/Treads/Right/Wheels2" parent_id_path=PackedInt32Array(2094550783) index="1" unique_id=371878958]
+surface_material_override/0 = ExtResource("4_u5dgd")
+
+[node name="Wheel_008" parent="Scene Collection/Tank/Treads/Right/Wheels2" parent_id_path=PackedInt32Array(2094550783) index="2" unique_id=362116331]
+surface_material_override/0 = ExtResource("4_u5dgd")
+
+[node name="Wheel_009" parent="Scene Collection/Tank/Treads/Right/Wheels2" parent_id_path=PackedInt32Array(2094550783) index="3" unique_id=1559166614]
+surface_material_override/0 = ExtResource("4_u5dgd")
+
+[node name="Wheel_010" parent="Scene Collection/Tank/Treads/Right/Wheels2" parent_id_path=PackedInt32Array(2094550783) index="4" unique_id=2119283714]
+surface_material_override/0 = ExtResource("4_u5dgd")
+
+[node name="Wheel_011" parent="Scene Collection/Tank/Treads/Right/Wheels2" parent_id_path=PackedInt32Array(2094550783) index="5" unique_id=4882139]
+surface_material_override/0 = ExtResource("4_u5dgd")
+
+[node name="Wheel_012" parent="Scene Collection/Tank/Treads/Right/Wheels2" parent_id_path=PackedInt32Array(2094550783) index="6" unique_id=535313727]
+surface_material_override/0 = ExtResource("4_u5dgd")
+
+[node name="Wheel_013" parent="Scene Collection/Tank/Treads/Right/Wheels2" parent_id_path=PackedInt32Array(2094550783) index="7" unique_id=1820007083]
+surface_material_override/0 = ExtResource("4_u5dgd")
+
+[node name="Wheel_014" parent="Scene Collection/Tank/Treads/Right/Wheels2" parent_id_path=PackedInt32Array(2094550783) index="8" unique_id=433513420]
+surface_material_override/0 = ExtResource("4_u5dgd")
+
+[node name="Wheel_015" parent="Scene Collection/Tank/Treads/Right/Wheels2" parent_id_path=PackedInt32Array(2094550783) index="9" unique_id=37863992]
+surface_material_override/0 = ExtResource("4_u5dgd")
+
+[node name="Gun" parent="Scene Collection/Tank/TurretHousing/Gun2" parent_id_path=PackedInt32Array(1204383515) index="0" unique_id=563749808]
+surface_material_override/0 = ExtResource("5_us5m3")
+
+[node name="Turret" parent="Scene Collection/Tank/TurretHousing/Turret2" parent_id_path=PackedInt32Array(1840274048) index="0" unique_id=230341561]
+surface_material_override/0 = ExtResource("6_hd1ln")
+
+[node name="TurretDetail01" parent="Scene Collection/Tank/TurretHousing/Turret2" parent_id_path=PackedInt32Array(1840274048) index="1" unique_id=1469711842]
+surface_material_override/0 = ExtResource("6_hd1ln")
+
+[node name="TurretDetail02" parent="Scene Collection/Tank/TurretHousing/Turret2" parent_id_path=PackedInt32Array(1840274048) index="2" unique_id=176897941]
+surface_material_override/0 = ExtResource("6_hd1ln")
+
+[node name="TurretRectHatch" parent="Scene Collection/Tank/TurretHousing/Turret2" parent_id_path=PackedInt32Array(1840274048) index="3" unique_id=1192369976]
+surface_material_override/0 = ExtResource("6_hd1ln")
+
+[node name="TurretRectHatchHandle" parent="Scene Collection/Tank/TurretHousing/Turret2" parent_id_path=PackedInt32Array(1840274048) index="4" unique_id=382400166]
+surface_material_override/0 = ExtResource("6_hd1ln")
