@@ -15,7 +15,7 @@ config/description="Explore a virtual museum housing exhibits for game projects 
 config/version="0.0.1"
 run/main_scene="uid://baos2k6gymk8n"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="uid://c51fo4p5wmrlm"
+config/icon="res://icon.png"
 
 [display]
 
