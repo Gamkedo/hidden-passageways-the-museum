@@ -1,6 +1,5 @@
 # Blender 4.5.1 LTS
 # www.blender.org
-mtllib play-button-stand.mtl
 o Cube
 v -2.000000 9.000000 -2.000000
 v -2.000000 8.000000 -2.000000
