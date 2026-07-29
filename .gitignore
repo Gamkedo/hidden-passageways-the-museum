@@ -2,3 +2,32 @@
 .godot/
 /android/
 .godotlauncher
+
+build/
+logs/
+
+# Mac OS ignores
+.DS_Store
+
+# local VSCode settings
+.vscode/
+*.code-workspace
+
+#JetBrains IDE ignores
+.idea
+
+# Blender backup files
+*.blend[0-9]
+
+# Audacity temp files
+*.aup3-*
+
+# Krita temp files
+*.kra~
+*.png~
+
+# Material Maker Temp Files
+*.ptex.mmcr
+
+# Affinity
+*.af~lock~
