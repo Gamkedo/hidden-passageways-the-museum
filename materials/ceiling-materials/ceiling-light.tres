@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b8paggwklaeo3"]
+
+[ext_resource type="Texture2D" uid="uid://ccjq0rlruiagp" path="res://textures/ceiling-light-glowing.png" id="1_rsu17"]
+[ext_resource type="Texture2D" uid="uid://uqk7hscou3pf" path="res://textures/ceiling-light-normal.png" id="2_3ja3a"]
+
+[resource]
+albedo_texture = ExtResource("1_rsu17")
+emission_enabled = true
+emission_texture = ExtResource("1_rsu17")
+normal_enabled = true
+normal_texture = ExtResource("2_3ja3a")
+uv1_scale = Vector3(0.25, 0.25, 0.25)
+uv1_triplanar = true
