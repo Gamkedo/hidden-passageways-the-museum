@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bvln0oll5ttp0"]
 
+[ext_resource type="Material" uid="uid://b5j7a6q6jdkv5" path="res://materials/concrete.tres" id="1_nd5tv"]
+
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_kdu0b"]
 height = 16.0
 radius = 1.0
@@ -8,6 +10,7 @@ radius = 1.0
 
 [node name="shaft" type="CSGCylinder3D" parent="." unique_id=805710268]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
+material_override = ExtResource("1_nd5tv")
 radius = 1.0
 height = 16.0
 sides = 16

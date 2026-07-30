@@ -17,10 +17,12 @@
 [ext_resource type="Texture2D" uid="uid://evopvlxedmk7" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/artillery-rampage.png" id="6_rlpi5"]
 [ext_resource type="Texture2D" uid="uid://vnri2xppsmm0" path="res://models/legend_of_shadowtails_ratrick_ratrick.png" id="7_hgslh"]
 [ext_resource type="Texture2D" uid="uid://bto3jcto20bmf" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/cargo-bay.png" id="8_506e2"]
+[ext_resource type="Material" uid="uid://b5j7a6q6jdkv5" path="res://materials/concrete.tres" id="9_4h42u"]
 [ext_resource type="Texture2D" uid="uid://b2oyvwk41k0kr" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/crash-em-up.png" id="9_vcgox"]
 [ext_resource type="Texture2D" uid="uid://8siqjr4kxuft" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/crazy-arena-chaos.png" id="10_euau4"]
 [ext_resource type="Texture2D" uid="uid://c48m8oq1yaq3w" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/cyndrive-ships.png" id="11_u03oo"]
 [ext_resource type="Material" uid="uid://r6515yywtwib" path="res://materials/floor-materials/wood_floor.tres" id="11_v6iic"]
+[ext_resource type="Material" uid="uid://b8paggwklaeo3" path="res://materials/ceiling-materials/ceiling-light.tres" id="12_4y16h"]
 [ext_resource type="Texture2D" uid="uid://cp3eu5k3e546n" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/everchange.png" id="12_qxgch"]
 [ext_resource type="Texture2D" uid="uid://dpvjb874dhfhp" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/forgotten-road.png" id="13_r54xu"]
 [ext_resource type="Material" uid="uid://dajoyj6fev1j7" path="res://materials/floor-materials/marble_tile_floor.tres" id="13_v6iic"]
@@ -291,9 +293,9 @@ material = ExtResource("3_qxgch")
 
 [node name="Overhang" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=694304834]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.75, -17.250305)
-material_override = ExtResource("3_euau4")
+material_override = ExtResource("9_4h42u")
 size = Vector3(34, 1.5, 7.5)
-material = ExtResource("5_r54xu")
+material = ExtResource("9_4h42u")
 
 [node name="OverhangSupport" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)/Overhang" unique_id=1871187180]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -5, -0.25)
@@ -311,8 +313,15 @@ material = ExtResource("5_r54xu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.020410538, 0.7341137, 0.0602417)
 material_override = ExtResource("3_euau4")
 operation = 2
-size = Vector3(32, 20.5, 25.090912)
+size = Vector3(32, 17.41, 25.091)
 material = ExtResource("3_euau4")
+
+[node name="NegativeCubeCeiling" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=1715248502]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02, 9.46, 0.06)
+material_override = ExtResource("3_euau4")
+operation = 2
+size = Vector3(32, 0.07, 25.091)
+material = ExtResource("12_4y16h")
 
 [node name="Front High Windows" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=818352758]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 7.75, -12.750305)
@@ -432,22 +441,22 @@ material = ExtResource("5_qxgch")
 [node name="ColumnBackLeft" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=2073493395]
 transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 9.499992, 0.5, 6.999695)
 size = Vector3(1, 20, 1)
-material = ExtResource("3_euau4")
+material = ExtResource("9_4h42u")
 
 [node name="ColumnBackRight" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=329570867]
 transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, -10.500008, 0.5, 6.999695)
 size = Vector3(1, 20, 1)
-material = ExtResource("3_euau4")
+material = ExtResource("9_4h42u")
 
 [node name="ColumnFrontLeft2" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=1449096520]
 transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 9.499992, 0.5, -7.000305)
 size = Vector3(1, 20, 1)
-material = ExtResource("3_euau4")
+material = ExtResource("9_4h42u")
 
 [node name="ColumnFrontRight2" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=153010020]
 transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, -10.500008, 0.5, -7.000305)
 size = Vector3(1, 20, 1)
-material = ExtResource("3_euau4")
+material = ExtResource("9_4h42u")
 
 [node name="Front Entrance Hole" type="CSGPolygon3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=808746896]
 transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, -3.8146973e-06, 0.5, -13.500004)

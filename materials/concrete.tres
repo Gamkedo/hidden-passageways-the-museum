@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b5j7a6q6jdkv5"]
+
+[ext_resource type="Texture2D" uid="uid://bce0j3olvssfh" path="res://textures/concrete.png" id="1_ek8mu"]
+[ext_resource type="Texture2D" uid="uid://c2wjqqxsww4s8" path="res://textures/concrete-normal.png" id="2_5atok"]
+
+[resource]
+albedo_texture = ExtResource("1_ek8mu")
+normal_enabled = true
+normal_texture = ExtResource("2_5atok")
+uv1_triplanar = true
