@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dgahdbu6k5v7a"]
+
+[ext_resource type="PackedScene" uid="uid://djswlx7g40xvk" path="res://models/extinguisher-base.glb" id="1_oc6or"]
+[ext_resource type="Material" uid="uid://mqmp0u34poa8" path="res://materials/extinguisher-cylinder-red.tres" id="2_4orsk"]
+
+[node name="Node3D" type="Node3D" unique_id=786241607]
+
+[node name="extinguisher-base" parent="." unique_id=1581437173 instance=ExtResource("1_oc6or")]
+
+[node name="fire_extinguisher" parent="extinguisher-base" index="0" unique_id=1399361188]
+surface_material_override/0 = ExtResource("2_4orsk")
+
+[editable path="extinguisher-base"]
