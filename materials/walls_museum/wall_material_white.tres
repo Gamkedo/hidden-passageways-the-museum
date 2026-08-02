@@ -12,5 +12,6 @@ normal_enabled = true
 normal_texture = ExtResource("3_1sfbg")
 ao_enabled = true
 ao_texture = ExtResource("2_72uov")
-uv1_scale = Vector3(32, 32, 32)
+uv1_scale = Vector3(0.05, 0.05, 0.05)
+uv1_triplanar = true
 texture_filter = 5

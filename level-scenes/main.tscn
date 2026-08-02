@@ -310,10 +310,10 @@ size = Vector3(2, 8.5, 2)
 material = ExtResource("5_r54xu")
 
 [node name="NegativeCube" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=2047117778]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006872177, 0.72606134, 0.060886383)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006872177, -0.06893873, 0.060886383)
 material_override = ExtResource("3_euau4")
 operation = 2
-size = Vector3(32, 17.41, 25.091)
+size = Vector3(32, 19, 25.091)
 material = ExtResource("12_qi2ty")
 
 [node name="NegativeCubeCeiling" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=1715248502]
@@ -486,10 +486,10 @@ polygon = PackedVector2Array(-3.5, 0, -3.5, 2.5, -2, 4, 0, 4.5, 2, 4, 3.5, 2.5, 
 depth = 2.0
 material = ExtResource("5_r54xu")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="CSG Blockout" unique_id=429890971]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, -3.75, 6.5)
+[node name="entrance placeholder CSG" type="CSGBox3D" parent="CSG Blockout" unique_id=429890971]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, -1.5, 6.5)
 material_override = ExtResource("13_v6iic")
-size = Vector3(24, 5.5, 25)
+size = Vector3(24, 1, 25)
 material = ExtResource("13_v6iic")
 
 [node name="Clickable 3d link test" type="StaticBody3D" parent="." unique_id=1076222070]
