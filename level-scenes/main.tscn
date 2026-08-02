@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://baos2k6gymk8n"]
 
+[ext_resource type="Script" uid="uid://kvgkgln5sjsh" path="res://scripts/main_scene_setup.gd" id="1_qi2ty"]
 [ext_resource type="PackedScene" uid="uid://c0ug0wogf56tg" path="res://models/cyndrive_ships_ship.fbx" id="2_5t06w"]
 [ext_resource type="PackedScene" uid="uid://bad4bwomkabyu" path="res://models/cyndrive_ships_silo.fbx" id="2_pw8xm"]
 [ext_resource type="Material" uid="uid://b17jmjmvd5bw2" path="res://materials/taxi-placeholder.tres" id="2_r54xu"]
@@ -142,12 +143,13 @@ size = Vector3(3.7, 2.3500001, 0.55)
 radius = 1.0454303
 
 [node name="Main" type="Node3D" unique_id=1018901499]
+script = ExtResource("1_qi2ty")
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=1462107]
 transform = Transform3D(-0.61119694, -0.25221133, 0.7502185, 9.107543e-09, 0.9478697, 0.3186585, -0.7914785, 0.19476302, -0.5793351, 2.505683, 2.197227, 0)
 
 [node name="Secondary directional" type="DirectionalLight3D" parent="." unique_id=1278070892]
-transform = Transform3D(0.091378875, -0.41648567, -0.9045384, 0.9580452, 0.2845648, -0.034240738, 0.27166033, -0.8634596, 0.42501497, 2.505683, 2.197227, 0)
+transform = Transform3D(0.11348676, -0.48943374, -0.86462426, 0.9582356, 0.2838423, -0.03489949, 0.26249793, -0.82455325, 0.5012052, 2.505683, 2.197227, 0)
 light_energy = 0.25
 
 [node name="CSG Blockout" type="CSGCombiner3D" parent="." unique_id=250536827]

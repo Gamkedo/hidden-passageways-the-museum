@@ -5,6 +5,8 @@
 [ext_resource type="Material" uid="uid://bgutakhbvq0mc" path="res://materials/modern-museum/museum-wall-white.tres" id="3_lvdt1"]
 [ext_resource type="Material" uid="uid://i2mujh133810" path="res://materials/modern-museum/museum-modern-exterior-dark.tres" id="4_m0kxd"]
 [ext_resource type="Material" uid="uid://dajoyj6fev1j7" path="res://materials/floor-materials/marble_tile_floor.tres" id="5_u45lx"]
+[ext_resource type="Material" uid="uid://r6515yywtwib" path="res://materials/floor-materials/wood_floor.tres" id="5_xaifo"]
+[ext_resource type="PackedScene" uid="uid://ce0uc3f7i1cxo" path="res://entities-scene_prefabs/player_with_ui.tscn" id="7_lvdt1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lahx7"]
 albedo_texture = ExtResource("1_vujxr")
@@ -19,10 +21,10 @@ size = Vector3(34, 21, 27)
 material = ExtResource("2_xaifo")
 
 [node name="NegativeCube" type="CSGBox3D" parent="Museum Modern (past year)" unique_id=513936689]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006872177, -0.06893873, 0.060886383)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006872177, 0.9310608, 0.060886383)
 material_override = ExtResource("3_lvdt1")
 operation = 2
-size = Vector3(32, 19, 25.091)
+size = Vector3(32, 21, 25.091)
 material = ExtResource("2_xaifo")
 
 [node name="Interior Wide Opening Basement" type="CSGPolygon3D" parent="Museum Modern (past year)" unique_id=597447482]
@@ -32,8 +34,26 @@ polygon = PackedVector2Array(-3, 0, -3, 4, -2, 5, 1, 5, 2, 4, 2, 0)
 depth = 1.1
 material = ExtResource("4_m0kxd")
 
+[node name="Entrance Floor" type="CSGBox3D" parent="." unique_id=509362862]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.002178, -11.497253, 5.499962)
+material_override = SubResource("StandardMaterial3D_lahx7")
+size = Vector3(6, 1, 25)
+material = ExtResource("5_xaifo")
+
 [node name="sidewalk above ground, hard top" type="CSGBox3D" parent="." unique_id=820135251]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, -1.5, 6.5)
 material_override = ExtResource("5_u45lx")
 size = Vector3(24, 1, 25)
 material = ExtResource("5_u45lx")
+
+[node name="EditorQuickTestGroup" type="Node3D" parent="." unique_id=1153197710 groups=["EditorQuickTestGroup"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.650959, -10.997258, 16.423002)
+
+[node name="Player with UI" parent="EditorQuickTestGroup" unique_id=1354449472 instance=ExtResource("7_lvdt1")]
+
+[node name="Sun" type="DirectionalLight3D" parent="EditorQuickTestGroup" unique_id=2082646063]
+transform = Transform3D(-0.61119694, -0.25221133, 0.7502185, 9.107543e-09, 0.9478697, 0.3186585, -0.7914785, 0.19476302, -0.5793351, 2.505683, 2.197227, 0)
+
+[node name="Secondary directional" type="DirectionalLight3D" parent="EditorQuickTestGroup" unique_id=1708783359]
+transform = Transform3D(0.11432615, -0.48895866, -0.8647827, 0.9580452, 0.2845648, -0.034240738, 0.26282877, -0.8245861, 0.5009774, 2.505684, 2.1972265, 0)
+light_energy = 0.25
