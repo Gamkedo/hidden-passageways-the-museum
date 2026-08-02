@@ -28,7 +28,7 @@ material = ExtResource("2_xaifo")
 [node name="Interior Wide Opening Basement" type="CSGPolygon3D" parent="Museum Modern (past year)" unique_id=597447482]
 transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, -3.8146973e-06, 1.5, 12.44725)
 operation = 2
-polygon = PackedVector2Array(-3, 0, -3, 2, -2, 3, 1, 3, 2, 2, 2, 0)
+polygon = PackedVector2Array(-3, 0, -3, 4, -2, 5, 1, 5, 2, 4, 2, 0)
 depth = 1.1
 material = ExtResource("4_m0kxd")
 
