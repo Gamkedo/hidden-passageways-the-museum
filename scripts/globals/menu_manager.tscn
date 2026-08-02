@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dk2cm322a07g5"]
+
+[ext_resource type="Script" uid="uid://cle3pkpipqj4a" path="res://scripts/globals/menu_manager.gd" id="1_xj3ew"]
+[ext_resource type="PackedScene" uid="uid://8im42nlra3br" path="res://ui/pause_screen/pause_screen.tscn" id="2_0t7dw"]
+
+[node name="MenuManager" type="Node" unique_id=1538967038]
+script = ExtResource("1_xj3ew")
+
+[node name="PauseScreenLayer" type="CanvasLayer" parent="." unique_id=1939292718]
+unique_name_in_owner = true
+process_mode = 3
+layer = 2
+
+[node name="PauseScreen" parent="PauseScreenLayer" unique_id=929555340 instance=ExtResource("2_0t7dw")]
+unique_name_in_owner = true
