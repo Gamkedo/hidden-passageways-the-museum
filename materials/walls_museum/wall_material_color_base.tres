@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bj52q3rh6k6w0"]
+
+[ext_resource type="Texture2D" uid="uid://c0u0v7wd4cwpn" path="res://materials/walls_museum/wall_albedo.png" id="1_6w7na"]
+[ext_resource type="Texture2D" uid="uid://cdv7fw14c07v7" path="res://materials/walls_museum/wall_orm.png" id="2_hahf8"]
+[ext_resource type="Texture2D" uid="uid://d2kvrjlnnyqrw" path="res://materials/walls_museum/wall_normal.png" id="3_q6nqn"]
+
+[resource]
+albedo_texture = ExtResource("1_6w7na")
+roughness_texture = ExtResource("2_hahf8")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_q6nqn")
+ao_enabled = true
+ao_texture = ExtResource("2_hahf8")
+uv1_scale = Vector3(8, 8, 1)
+texture_filter = 5

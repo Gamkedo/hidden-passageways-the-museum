@@ -1,0 +1,230 @@
+{
+	"connections": [
+		{
+			"from": "clouds_noise_2",
+			"from_port": 0,
+			"to": "tiler_advanced_3",
+			"to_port": 0
+		},
+		{
+			"from": "tiler_advanced_3",
+			"from_port": 0,
+			"to": "normal_map2",
+			"to_port": 0
+		},
+		{
+			"from": "normal_map2",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 4
+		},
+		{
+			"from": "tiler_advanced_3",
+			"from_port": 0,
+			"to": "colorize_2",
+			"to_port": 0
+		},
+		{
+			"from": "colorize_2",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 0
+		},
+		{
+			"from": "colorize",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 2
+		},
+		{
+			"from": "tiler_advanced_3",
+			"from_port": 0,
+			"to": "colorize",
+			"to_port": 0
+		},
+		{
+			"from": "tiler_advanced_3",
+			"from_port": 0,
+			"to": "occlusion2",
+			"to_port": 0
+		},
+		{
+			"from": "occlusion2",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 5
+		}
+	],
+	"label": "Graph",
+	"longdesc": "",
+	"name": "@Node@912",
+	"node_position": {
+		"x": 0.0,
+		"y": 0.0
+	},
+	"nodes": [
+		{
+			"export_last_target": "Godot/Godot 4 Standard",
+			"export_paths": {
+				"Godot/Godot 4 Standard": "C:/Users/funga/source/repos/godot/gdtv-level-design/level-design-sandbox/materials/wall"
+			},
+			"name": "Material",
+			"node_position": {
+				"x": 1171.63940429688,
+				"y": -716.367065429688
+			},
+			"parameters": {
+				"albedo_color": {
+					"a": 1.0,
+					"b": 1.0,
+					"g": 1.0,
+					"r": 1.0,
+					"type": "Color"
+				},
+				"ao": 1.0,
+				"depth_scale": 1.0,
+				"emission_energy": 1.0,
+				"flags_transparent": true,
+				"metallic": 0.0,
+				"normal": 1.0,
+				"roughness": 1.0,
+				"size": 10,
+				"sss": 1.0
+			},
+			"seed_int": 0,
+			"type": "material"
+		},
+		{
+			"name": "clouds_noise_2",
+			"node_position": {
+				"x": -251.131958007813,
+				"y": -837.144470214844
+			},
+			"parameters": {
+				"n_scale": 1.5,
+				"param0": 10,
+				"param1": 0
+			},
+			"seed_int": 0,
+			"type": "clouds_noise"
+		},
+		{
+			"name": "tiler_advanced_3",
+			"node_position": {
+				"x": 196.733703613281,
+				"y": -766.020568847656
+			},
+			"parameters": {
+				"inputs": 0.0,
+				"overlap": 3.0,
+				"rotate": 117.2,
+				"scale_x": 1.0,
+				"scale_y": 1.0,
+				"translate_x": 0.61,
+				"translate_y": 0.85,
+				"tx": 64.0,
+				"ty": 64.0,
+				"variations": false
+			},
+			"seed_int": 0,
+			"type": "tiler_advanced"
+		},
+		{
+			"name": "normal_map2",
+			"node_position": {
+				"x": 479.815521240234,
+				"y": -392.036437988281
+			},
+			"parameters": {
+				"buffer": 1.0,
+				"param2": 0.0,
+				"size": 10,
+				"strength": 0.38
+			},
+			"seed_int": 0,
+			"type": "normal_map2"
+		},
+		{
+			"name": "colorize_2",
+			"node_position": {
+				"x": 740.639526367188,
+				"y": -753.153686523438
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 0.0,
+							"r": 1.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.899999976158142,
+							"g": 0.899999976158142,
+							"pos": 1.0,
+							"r": 0.899999976158142
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "colorize",
+			"node_position": {
+				"x": 821.923278808594,
+				"y": -615.075927734375
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1.0,
+							"b": 1.0,
+							"g": 1.0,
+							"pos": 0.0,
+							"r": 1.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.627451002597809,
+							"g": 0.627451002597809,
+							"pos": 1.0,
+							"r": 0.627451002597809
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		},
+		{
+			"name": "occlusion2",
+			"node_position": {
+				"x": 873.713256835938,
+				"y": -301.290069580078
+			},
+			"parameters": {
+				"param0": 10,
+				"param1": 1.0,
+				"param2": 1.5,
+				"param3": 1.0
+			},
+			"seed_int": 0,
+			"type": "occlusion2"
+		}
+	],
+	"parameters": {},
+	"project_thumbnail": "UklGRs4EAABXRUJQVlA4WAoAAAAQAAAALwAALwAAQUxQSJQCAAANoCNteyJJevXrV9HAMpNX7Q9UrMd4gGEea5ksZmYGi3n3AG12ZIzVFT0X4BmrrOXdqqiUUlooyNIJImICmFOsBzh//bn89tcvAK6K1C9SVmbLdb1uM1Y0ZXysX6yVaIx1aRmvObyDqe3OZd3edRt/+PQkGmqR5K945gZIFWIwJFLELu3cv/LMWWPifFry8D0QxFomGoxAjK2Dj374ZtIwjxtd9BN4dcwrksL6lzZvGzg/mxtu+gavDeo0msLNn+xZdX4WN7z2PXyHuo36S5fvP+L8NB1teo/QZoEuNIv7VzVMkvKibwgtFqqhubxnIHFC4id8mwWrv/STbYn/q38Y32Hhzt+8+U0NIOUV96BkqLz04VmJSHwa38jB+PWPPCtRymtuQMlSObhyUmx1GN/Iw/jOvk+tNzuwZGrZ+UPJFlI2kpY2rnEdVTZU9rqCHln3+nSRfITusfObmHwMl43XR7LuyLkVJh9Du0n2vzXbyWSTzGj8l3TIeRh/GV+WTDbJDOBYN0o2UY5Bv0fOfSius/lYCljbuBQlk2iP/YErf9hZ2Uwq+z2u4tN9nWSySA3/FVXUkysHg2YR9HO0JPLsI+uTySA1xq8QIerZD18KmkHQx9ASCObNzTd7tzDfKY4az/9N2vbJpUEXFNo/34lJE6IO9iw3gy4ktKo70JLJwa3eXzS9W4BvV9fhRkz37sj9y5d6NTWl0Pn5DtyQWb1b3fPJzXg1NaTQ0OJO3JDZvQ62bX5pPUFkjhidjh87io6YN0h688NHD7ZIFWIwJFLEWgmfv4wxJfNH9OwzK/t3LlkmGozAse+/BPWJWoPIyU9/2Hhdr3tZp81oODjWL/4AjSV1xyi2XCv6x8bSZBz5v6tKZgdWUDggFAIAADAOAJ0BKjAAMAA+hTSWR6UjIiEx2Z34oBCJZwDFk4Ef4ZVgSoJCZ9LX/E8oPzf/z/cD/kP9K/3vWr/Wb2AP1pFsvbrJs33x9nYq06vnqntaK6N6HpAK1seZ9yxUmdJHSEaeALZzDawqwWes3F9s2p592454Zdd59WkAAP78Rq9Ac3U1N5rB7OElzPeLj8E/VDHxcvH3YT9u9wXt12rR9JoHfVEF///ZRbBtIMJVZwSixkgdgrXHE8mobu6wx6xajEf4Bmuvjn4VD38b+rYArywSWgK0nRbcZmtHfdE///AZRk8lyuIgQZJnlZMRDCF6Dr/IIHxUq/O04pwTlr0O5/BU42jqfRrPSc+BH3y9yTtFk5fcpW6AN1dbr0OSebu9afjgNaEJ1/3yGd5ME+9+/nP7lh+QQoAjKL5x6JOm477+YqQQBbSKkF4pZLZH7XL/iJUbDvJ0TIctQg5E3/iY/kJEC9ybOSW/1kNP4sCL01Df9jzU7U6X4tbXLjn8Msp1gxypbX7XFRBBIeWS6nMkkIMGZCEdXllijHe2TeF615bVeauws6tlRKw+uyhtiuAlvK3Hro05zqlojuLleaZPJtkMhSEFWZ96r+/NYyaV+wA9cR433v0Wefi3CgsD4Hpv3+aoT7cHmo/Tk1LkzfbGl+MS9CM6y8lU7eGFH2aZM2WXukhkkPlnFZaQ4U2Jeoi+CWMAAAA=",
+	"seed_int": 0,
+	"shortdesc": "",
+	"type": "graph"
+}
