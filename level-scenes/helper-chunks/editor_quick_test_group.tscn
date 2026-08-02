@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://sa8s0p3pnpp0"]
+
+[ext_resource type="PackedScene" uid="uid://ce0uc3f7i1cxo" path="res://entities-scene_prefabs/player_with_ui.tscn" id="1_tp0ha"]
+
+[node name="EditorQuickTestGroup" type="Node3D" unique_id=259214251 groups=["EditorQuickTestGroup"]]
+
+[node name="Player with UI" parent="." unique_id=1354449472 instance=ExtResource("1_tp0ha")]
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=1247252107]
+transform = Transform3D(-0.61119694, -0.25221133, 0.7502185, 9.107543e-09, 0.9478697, 0.3186585, -0.7914785, 0.19476302, -0.5793351, 2.505683, 2.197227, 0)
+
+[node name="Secondary directional" type="DirectionalLight3D" parent="." unique_id=634356168]
+transform = Transform3D(0.11432615, -0.48895866, -0.8647827, 0.9580452, 0.2845648, -0.034240738, 0.26282877, -0.8245861, 0.5009774, 2.505684, 2.1972265, 0)
+light_energy = 0.25
