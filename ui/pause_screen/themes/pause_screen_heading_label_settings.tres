@@ -1,0 +1,14 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://bm2t12rww8q6s"]
+
+[sub_resource type="FontVariation" id="FontVariation_tbhhi"]
+variation_embolden = 0.4
+variation_transform = Transform2D(1, -0.284, 0, 1, 0, 0)
+spacing_glyph = 1
+
+[resource]
+font = SubResource("FontVariation_tbhhi")
+font_size = 25
+font_color = Color(0.9160668, 0.91606677, 0.91606677, 1)
+shadow_size = 4
+shadow_color = Color(0.69, 0.27600002, 0, 0.70980394)
+shadow_offset = Vector2(2, 2)

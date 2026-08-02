@@ -1,0 +1,29 @@
+[gd_resource type="Theme" format=3 uid="uid://bcyk3d4r2kn1t"]
+
+[ext_resource type="StyleBox" uid="uid://co8sn8015vlua" path="res://ui/pause_screen/themes/styleboxes/pause_screen_button_focus.tres" id="1_3vthu"]
+[ext_resource type="StyleBox" uid="uid://b3af5r0ssm2g3" path="res://ui/pause_screen/themes/styleboxes/pause_screen_button_normal.tres" id="1_p7rlm"]
+[ext_resource type="StyleBox" uid="uid://c6japk5q2n411" path="res://ui/pause_screen/themes/styleboxes/pause_screen_button_hover_pressed.tres" id="2_t4rv2"]
+[ext_resource type="StyleBox" uid="uid://cxe5sbt7wdov0" path="res://ui/pause_screen/themes/styleboxes/pause_screen_button_pressed.tres" id="3_6k0d1"]
+
+[sub_resource type="FontVariation" id="FontVariation_ct17i"]
+
+[sub_resource type="Gradient" id="Gradient_q1ok2"]
+offsets = PackedFloat32Array(0, 0.71016556, 1)
+colors = PackedColorArray(0.12941177, 0.12941177, 0.12941177, 0.9607843, 0.21176471, 0.21176471, 0.21176471, 0.9137255, 0.3254902, 0.3254902, 0.3254902, 0.57254905)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_hsda3"]
+gradient = SubResource("Gradient_q1ok2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yfpbd"]
+content_margin_top = 233.0
+texture = SubResource("GradientTexture1D_hsda3")
+
+[resource]
+Button/font_sizes/font_size = 18
+Button/fonts/font = SubResource("FontVariation_ct17i")
+Button/styles/focus = ExtResource("1_3vthu")
+Button/styles/hover = ExtResource("1_3vthu")
+Button/styles/hover_pressed = ExtResource("2_t4rv2")
+Button/styles/normal = ExtResource("1_p7rlm")
+Button/styles/pressed = ExtResource("3_6k0d1")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_yfpbd")

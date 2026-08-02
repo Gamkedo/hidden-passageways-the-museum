@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://c6japk5q2n411"]
+
+[ext_resource type="Texture2D" uid="uid://be6dgto7yqg0w" path="res://ui/pause_screen/themes/styleboxes/pause_screen_button_normal_texture.tres" id="1_m6p7x"]
+
+[resource]
+content_margin_left = 40.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+texture = ExtResource("1_m6p7x")
+modulate_color = Color(0.75, 0.75, 0.75, 1)

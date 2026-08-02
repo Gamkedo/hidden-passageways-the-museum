@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://8im42nlra3br"]
+
+[ext_resource type="Theme" uid="uid://bcyk3d4r2kn1t" path="res://ui/pause_screen/themes/pause_screen_theme.tres" id="1_bupvi"]
+[ext_resource type="Script" uid="uid://deedrbfmemtvn" path="res://ui/pause_screen/pause_screen.gd" id="1_yfpbd"]
+[ext_resource type="LabelSettings" uid="uid://bm2t12rww8q6s" path="res://ui/pause_screen/themes/pause_screen_heading_label_settings.tres" id="3_hsda3"]
+[ext_resource type="Script" uid="uid://b6e3846js4fip" path="res://ui/pause_screen/pause_screen_button.gd" id="6_t2ogi"]
+
+[sub_resource type="Animation" id="Animation_g5gtg"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_ecykq"]
+resource_name = "test"
+length = 2.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t2ogi"]
+_data = {
+&"RESET": SubResource("Animation_g5gtg"),
+&"test": SubResource("Animation_ecykq")
+}
+
+[node name="PauseScreen" type="Control" unique_id=929555340]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_bupvi")
+script = ExtResource("1_yfpbd")
+
+[node name="BackgroundContainer" type="PanelContainer" parent="." unique_id=6002021]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1399702365]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 400.0
+grow_vertical = 2
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_bottom = 60
+
+[node name="ControlsContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1853074642]
+custom_minimum_size = Vector2(466, 0)
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="HeadingLabel" type="Label" parent="MarginContainer/ControlsContainer" unique_id=688761603]
+layout_mode = 2
+text = "Hidden Passageways: Musuem"
+label_settings = ExtResource("3_hsda3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonContainer" type="VBoxContainer" parent="MarginContainer/ControlsContainer" unique_id=895817576]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="ResumeButton" type="Button" parent="MarginContainer/ControlsContainer/ButtonContainer" unique_id=520798456]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Resume"
+alignment = 0
+script = ExtResource("6_t2ogi")
+metadata/_custom_type_script = "uid://b6e3846js4fip"
+
+[node name="SettingsButton" type="Button" parent="MarginContainer/ControlsContainer/ButtonContainer" unique_id=1767759695]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Settings"
+alignment = 0
+script = ExtResource("6_t2ogi")
+metadata/_custom_type_script = "uid://b6e3846js4fip"
+
+[node name="MainMenuButton" type="Button" parent="MarginContainer/ControlsContainer/ButtonContainer" unique_id=139093755]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Main Menu"
+alignment = 0
+script = ExtResource("6_t2ogi")
+metadata/_custom_type_script = "uid://b6e3846js4fip"
+
+[node name="QuitButton" type="Button" parent="MarginContainer/ControlsContainer/ButtonContainer" unique_id=995385002]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Quit"
+alignment = 0
+script = ExtResource("6_t2ogi")
+metadata/_custom_type_script = "uid://b6e3846js4fip"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MarginContainer/ControlsContainer/ButtonContainer" unique_id=1896801874]
+libraries/ = SubResource("AnimationLibrary_t2ogi")
