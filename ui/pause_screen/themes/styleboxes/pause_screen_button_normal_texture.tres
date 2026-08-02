@@ -1,0 +1,6 @@
+[gd_resource type="GradientTexture1D" format=3 uid="uid://be6dgto7yqg0w"]
+
+[ext_resource type="Gradient" uid="uid://cr4y8p2hu8bdr" path="res://ui/pause_screen/themes/styleboxes/pause_screen_button_normal_gradient.tres" id="1_66bx0"]
+
+[resource]
+gradient = ExtResource("1_66bx0")

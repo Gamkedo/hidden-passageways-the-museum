@@ -1,0 +1,9 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://co8sn8015vlua"]
+
+[ext_resource type="Texture2D" uid="uid://d3qq1uy3ki1m6" path="res://ui/pause_screen/themes/styleboxes/pause_screen_button_focus_texture.tres" id="1_ux6xl"]
+
+[resource]
+content_margin_left = 40.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+texture = ExtResource("1_ux6xl")
