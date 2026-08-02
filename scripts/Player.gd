@@ -17,11 +17,13 @@ var look_speed = 50
 
 @onready var sound_jump_landing: AudioStreamPlayer = $SoundJumpLanding
 @onready var debugvis_stair_checker: CSGSphere3D = $StairChecker
+@onready var camera_transform: Marker3D = $CameraAiming3D
 
 var lock_mouse = false
 
 func _ready():
 	# used to check ground contact before jumping
+	camera.set_chase_transform(camera_transform)
 	contact_monitor = true
 	max_contacts_reported = 5
 
