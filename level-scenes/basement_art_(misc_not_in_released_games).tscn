@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://d0hl0sude541s"]
+
+[ext_resource type="Texture2D" uid="uid://vnri2xppsmm0" path="res://models/legend_of_shadowtails_ratrick_ratrick.png" id="1_vujxr"]
+[ext_resource type="Material" uid="uid://duojbedij8awq" path="res://materials/walls_museum/wall_material_white.tres" id="2_xaifo"]
+[ext_resource type="Material" uid="uid://bgutakhbvq0mc" path="res://materials/modern-museum/museum-wall-white.tres" id="3_lvdt1"]
+[ext_resource type="Material" uid="uid://i2mujh133810" path="res://materials/modern-museum/museum-modern-exterior-dark.tres" id="4_m0kxd"]
+[ext_resource type="Material" uid="uid://dajoyj6fev1j7" path="res://materials/floor-materials/marble_tile_floor.tres" id="5_u45lx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lahx7"]
+albedo_texture = ExtResource("1_vujxr")
+
+[node name="Basement Art (Misc not in released games)" type="CSGCombiner3D" unique_id=1453491612]
+use_collision = true
+
+[node name="Museum Modern (past year)" type="CSGBox3D" parent="." unique_id=343654118]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.002178, -12.497253, 5.499962)
+material_override = SubResource("StandardMaterial3D_lahx7")
+size = Vector3(34, 21, 27)
+material = ExtResource("2_xaifo")
+
+[node name="NegativeCube" type="CSGBox3D" parent="Museum Modern (past year)" unique_id=513936689]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006872177, -0.06893873, 0.060886383)
+material_override = ExtResource("3_lvdt1")
+operation = 2
+size = Vector3(32, 19, 25.091)
+material = ExtResource("2_xaifo")
+
+[node name="Interior Wide Opening Basement" type="CSGPolygon3D" parent="Museum Modern (past year)" unique_id=597447482]
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, -3.8146973e-06, 1.5, 12.44725)
+operation = 2
+polygon = PackedVector2Array(-3, 0, -3, 2, -2, 3, 1, 3, 2, 2, 2, 0)
+depth = 1.1
+material = ExtResource("4_m0kxd")
+
+[node name="sidewalk above ground, hard top" type="CSGBox3D" parent="." unique_id=820135251]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, -1.5, 6.5)
+material_override = ExtResource("5_u45lx")
+size = Vector3(24, 1, 25)
+material = ExtResource("5_u45lx")
