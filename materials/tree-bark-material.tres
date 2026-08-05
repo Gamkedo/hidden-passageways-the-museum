@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dsqdgdr2wwr53"]
+
+[ext_resource type="Texture2D" uid="uid://x578gmfjqnjk" path="res://textures/tree-bark.jpg" id="1_eqd8i"]
+[ext_resource type="Texture2D" uid="uid://bxtncwisbi22d" path="res://textures/tree-bark-normalmap.jpg" id="2_d41vc"]
+
+[resource]
+albedo_texture = ExtResource("1_eqd8i")
+normal_enabled = true
+normal_texture = ExtResource("2_d41vc")
+uv1_scale = Vector3(2, 2, 2)
+uv1_triplanar = true
+uv1_world_triplanar = true
