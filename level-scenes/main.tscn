@@ -30,7 +30,9 @@
 [ext_resource type="Texture2D" uid="uid://dlft5rt3mgqhu" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/gladiator-of-the-golden-house.png" id="14_er4o0"]
 [ext_resource type="Texture2D" uid="uid://87drxaweuioc" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/king-arthur.png" id="15_keiyw"]
 [ext_resource type="PackedScene" uid="uid://d0hl0sude541s" path="res://level-scenes/basement_art_(misc_not_in_released_games).tscn" id="16_4y16h"]
+[ext_resource type="PackedScene" uid="uid://bs0x6kcocwrn8" path="res://entities-scene_prefabs/tree_small.tscn" id="16_iixjk"]
 [ext_resource type="Texture2D" uid="uid://baj6x4ux7gvyt" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/legend-of-shadowtail.png" id="16_rvyx8"]
+[ext_resource type="PackedScene" uid="uid://cocic8dfy1sa6" path="res://entities-scene_prefabs/tree_big.tscn" id="17_4fg2q"]
 [ext_resource type="Texture2D" uid="uid://c27yibhqlpdoi" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/naous.png" id="17_ifpan"]
 [ext_resource type="Texture2D" uid="uid://damvm32o7j3ie" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/orbs-and-dash.png" id="18_bib7n"]
 [ext_resource type="Texture2D" uid="uid://ce0iahuroaa7j" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/planets mobile.png" id="19_hgslh"]
@@ -43,15 +45,6 @@
 [ext_resource type="Texture2D" uid="uid://2432776vq113" path="res://textures/play-button-stand.png" id="34_ewg6b"]
 [ext_resource type="ArrayMesh" uid="uid://cm2soemey2m52" path="res://models/play-button-stand.obj" id="35_u5gq0"]
 [ext_resource type="Texture2D" uid="uid://cpakvdnl3rxxa" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/gladiator-framed-pic.png" id="36_u5gq0"]
-
-[sub_resource type="GDScript" id="GDScript_1hn7u"]
-script/source = "# Main
-extends Node3D
-
-
-func _ready() -> void:
-	MenuManager.set_pause_screen_enabled(true)
-"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rvyx8"]
 transparency = 1
@@ -497,6 +490,12 @@ operation = 2
 polygon = PackedVector2Array(-3, 0, -3, 4, -2, 5, 1, 5, 2, 4, 2, 0)
 depth = 1.1
 material = ExtResource("5_r54xu")
+
+[node name="tree-small" parent="CSG Blockout/Museum Modern (past year)" unique_id=2030102197 instance=ExtResource("16_iixjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.468834, 0.4972527, -31.049181)
+
+[node name="tree-big" parent="CSG Blockout/Museum Modern (past year)" unique_id=1613927015 instance=ExtResource("17_4fg2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.428558, 0.49725246, -25.973488)
 
 [node name="entrance placeholder CSG" type="CSGBox3D" parent="CSG Blockout" unique_id=429890971]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, -1.5, 6.5)
