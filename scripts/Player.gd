@@ -190,23 +190,29 @@ func interaction_check():
 	var space_state = get_world_3d().direct_space_state
 
 	var from = camera.global_transform.origin
-	var to = from + -camera.global_transform.basis.z * max_distance
+	var to = from + (-camera.global_transform.basis.z * max_distance)
 
 	var query = PhysicsRayQueryParameters3D.create(from, to)
 	query.collide_with_areas = true
 	query.collide_with_bodies = true
+	query.collision_mask = collision_mask ## Could always change this later
 
 	var result = space_state.intersect_ray(query)
 
 	if result:
+		#print(result)
 		var hit = result.collider
-		var dist = global_transform.origin.distance_to(hit.global_position)
+		
+		#var dist = global_position.distance_to(hit.global_position)
+		#if dist <= max_distance: # can later scan for switches/doors/items/etc
+		# redundant - we already limit the raycast to this length
+		
+		if hit.has_method("open_link"):
+			hit.open_link()
+		if hit.has_method("open_scene"):
+			hit.open_scene()
 
-		if dist <= max_distance: # can later scan for switches/doors/items/etc
-			if hit.has_method("open_link"):
-				hit.open_link()
-			if hit.has_method("open_scene"):
-				hit.open_scene()
+
 @export var camera_shake_intensity: float = 5.
 @export var camera_shake_duration: float = 0.1
 func camera_shake_smooth(intensity: float = camera_shake_intensity, duration: float = camera_shake_duration) -> Tween:
