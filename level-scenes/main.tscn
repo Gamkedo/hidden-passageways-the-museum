@@ -16,8 +16,10 @@
 [ext_resource type="Material" uid="uid://2cfu7bky27vv" path="res://models/tank_rampage/barrel_material.tres" id="4_kl5ay"]
 [ext_resource type="Material" uid="uid://di6u3hjsvhh8i" path="res://materials/modern-museum/museum-floor-wood.tres" id="5_qxgch"]
 [ext_resource type="Material" uid="uid://i2mujh133810" path="res://materials/modern-museum/museum-modern-exterior-dark.tres" id="5_r54xu"]
+[ext_resource type="Material" uid="uid://bj8ho62a7oj07" path="res://materials/spotlight-decal.tres" id="6_kl5ay"]
 [ext_resource type="Material" uid="uid://gi1au7e50ftu" path="res://materials/modern-museum/picture-frame-placeholder-generic-wood.tres" id="6_q1lu7"]
 [ext_resource type="Texture2D" uid="uid://evopvlxedmk7" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/artillery-rampage.png" id="6_rlpi5"]
+[ext_resource type="Material" uid="uid://biecmslvyaivk" path="res://materials/spotlight-decal_crossfade.tres" id="7_3lbo0"]
 [ext_resource type="Texture2D" uid="uid://vnri2xppsmm0" path="res://models/legend_of_shadowtails_ratrick_ratrick.png" id="7_hgslh"]
 [ext_resource type="Texture2D" uid="uid://bto3jcto20bmf" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/cargo-bay.png" id="8_506e2"]
 [ext_resource type="Material" uid="uid://b5j7a6q6jdkv5" path="res://materials/concrete.tres" id="9_4h42u"]
@@ -69,53 +71,201 @@ ssao_enabled = true
 ssao_radius = 5.0
 ssao_intensity = 3.0
 
-[sub_resource type="BoxMesh" id="BoxMesh_5dt3m"]
-material = ExtResource("4_kl5ay")
-size = Vector3(0.04, 3.8027525, 0.04)
-
-[sub_resource type="BoxMesh" id="BoxMesh_kl5ay"]
-material = ExtResource("4_kl5ay")
-size = Vector3(0.04, 3.8027525, 0.04)
+[sub_resource type="SphereMesh" id="SphereMesh_xteo1"]
+radius = 2.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_3lbo0"]
 material = ExtResource("4_kl5ay")
-size = Vector3(0.04, 3.5027523, 0.04)
+size = Vector3(0.04, 3.8027525, 0.04)
 
-[sub_resource type="BoxMesh" id="BoxMesh_tbq01"]
+[sub_resource type="BoxMesh" id="BoxMesh_x4vg3"]
 material = ExtResource("4_kl5ay")
-size = Vector3(0.04, 3.5027518, 0.04)
+size = Vector3(0.04, 3.8027525, 0.04)
 
-[sub_resource type="BoxMesh" id="BoxMesh_mj7h6"]
-material = ExtResource("4_kl5ay")
-size = Vector3(0.04, 2.6135378, 0.04)
+[sub_resource type="QuadMesh" id="QuadMesh_rr0nd"]
+material = ExtResource("7_3lbo0")
+size = Vector2(7.3389645, 7.3389645)
+orientation = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_c6q64"]
+material = ExtResource("7_3lbo0")
+size = Vector2(7.3389645, 7.3389645)
+orientation = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_v80x0"]
+material = ExtResource("7_3lbo0")
+size = Vector2(7.3389645, 7.3389645)
+orientation = 1
 
 [sub_resource type="BoxMesh" id="BoxMesh_gbu3n"]
 material = ExtResource("4_kl5ay")
-size = Vector3(0.04, 2.6135378, 0.04)
+size = Vector3(0.02, 2.8449974, 0.02)
 
 [sub_resource type="BoxMesh" id="BoxMesh_880y8"]
 material = ExtResource("4_kl5ay")
 size = Vector3(0.02, 2.8449974, 0.02)
 
-[sub_resource type="BoxMesh" id="BoxMesh_ogkr3"]
+[sub_resource type="QuadMesh" id="QuadMesh_nw8jh"]
+material = ExtResource("6_kl5ay")
+size = Vector2(5.3280034, 5.3280034)
+orientation = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_oa8v2"]
+material = ExtResource("6_kl5ay")
+size = Vector2(5.3280034, 5.3280034)
+orientation = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_xub5d"]
 material = ExtResource("4_kl5ay")
 size = Vector3(0.02, 2.8449974, 0.02)
 
-[sub_resource type="BoxMesh" id="BoxMesh_27nw5"]
+[sub_resource type="BoxMesh" id="BoxMesh_iit47"]
+material = ExtResource("4_kl5ay")
+size = Vector3(0.02, 2.8449974, 0.02)
+
+[sub_resource type="QuadMesh" id="QuadMesh_fof07"]
+material = ExtResource("6_kl5ay")
+size = Vector2(5.3280044, 5.3280044)
+orientation = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_1tes7"]
+material = ExtResource("6_kl5ay")
+size = Vector2(5.328004, 5.328004)
+orientation = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_8lwxr"]
+material = ExtResource("4_kl5ay")
+size = Vector3(0.02, 2.8449974, 0.02)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ktaoq"]
+material = ExtResource("4_kl5ay")
+size = Vector3(0.02, 2.8449974, 0.02)
+
+[sub_resource type="QuadMesh" id="QuadMesh_ub3ge"]
+material = ExtResource("6_kl5ay")
+size = Vector2(5.3280034, 5.3280034)
+orientation = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_42c7c"]
+material = ExtResource("6_kl5ay")
+size = Vector2(5.3280034, 5.3280034)
+orientation = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_uq4bu"]
+material = ExtResource("4_kl5ay")
+size = Vector3(0.02, 2.8449974, 0.02)
+
+[sub_resource type="BoxMesh" id="BoxMesh_clxtu"]
+material = ExtResource("4_kl5ay")
+size = Vector3(0.02, 2.8449974, 0.02)
+
+[sub_resource type="QuadMesh" id="QuadMesh_jyhy3"]
+material = ExtResource("6_kl5ay")
+size = Vector2(8.880007, 8.880007)
+orientation = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_u2fsq"]
+material = ExtResource("6_kl5ay")
+size = Vector2(8.880007, 8.880007)
+orientation = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_cph74"]
+material = ExtResource("4_kl5ay")
+size = Vector3(0.02, 2.8500051, 0.02)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wadld"]
+material = ExtResource("4_kl5ay")
+size = Vector3(0.02, 2.8500051, 0.02)
+
+[sub_resource type="QuadMesh" id="QuadMesh_ovxnu"]
+material = ExtResource("6_kl5ay")
+size = Vector2(8.843085, 8.843085)
+orientation = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_3tvjp"]
+material = ExtResource("6_kl5ay")
+size = Vector2(8.843085, 8.843085)
+orientation = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_e37vr"]
+material = ExtResource("4_kl5ay")
+size = Vector3(0.02, 2.8500051, 0.02)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6oq67"]
+material = ExtResource("4_kl5ay")
+size = Vector3(0.02, 2.8500051, 0.02)
+
+[sub_resource type="QuadMesh" id="QuadMesh_anu3i"]
+material = ExtResource("6_kl5ay")
+size = Vector2(5.89539, 5.89539)
+orientation = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_14tmg"]
+material = ExtResource("6_kl5ay")
+size = Vector2(5.89539, 5.89539)
+orientation = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_tbq01"]
 material = ExtResource("4_kl5ay")
 size = Vector3(0.02, 6.9949975, 0.02)
 
-[sub_resource type="BoxMesh" id="BoxMesh_b2w3e"]
+[sub_resource type="BoxMesh" id="BoxMesh_mj7h6"]
 material = ExtResource("4_kl5ay")
 size = Vector3(0.02, 6.9949975, 0.02)
+
+[sub_resource type="QuadMesh" id="QuadMesh_880y8"]
+material = ExtResource("6_kl5ay")
+size = Vector2(11.843085, 11.843085)
+orientation = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_ogkr3"]
+material = ExtResource("6_kl5ay")
+size = Vector2(11.843085, 11.843085)
+orientation = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_27nw5"]
+material = ExtResource("4_kl5ay")
+size = Vector3(0.02, 6.994997, 0.02)
+
+[sub_resource type="BoxMesh" id="BoxMesh_b2w3e"]
+material = ExtResource("4_kl5ay")
+size = Vector3(0.02, 6.994997, 0.02)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ogkr3"]
+material = ExtResource("4_kl5ay")
+size = Vector3(0.04, 1.4949975, 0.04)
 
 [sub_resource type="BoxMesh" id="BoxMesh_nw8jh"]
 material = ExtResource("4_kl5ay")
 size = Vector3(0.04, 1.4949975, 0.04)
 
-[sub_resource type="BoxMesh" id="BoxMesh_oa8v2"]
+[sub_resource type="QuadMesh" id="QuadMesh_27nw5"]
+material = ExtResource("7_3lbo0")
+size = Vector2(10.380006, 10.380006)
+orientation = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_b2w3e"]
+material = ExtResource("7_3lbo0")
+size = Vector2(10.380006, 10.380006)
+orientation = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_rr0nd"]
 material = ExtResource("4_kl5ay")
 size = Vector3(0.04, 1.4949975, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_c6q64"]
+material = ExtResource("4_kl5ay")
+size = Vector3(0.04, 1.4949975, 0.04)
+
+[sub_resource type="QuadMesh" id="QuadMesh_8lwxr"]
+material = ExtResource("7_3lbo0")
+size = Vector2(10.380006, 10.380006)
+orientation = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_ktaoq"]
+material = ExtResource("7_3lbo0")
+size = Vector2(10.380006, 10.380006)
+orientation = 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rvyx8"]
 transparency = 1
@@ -233,9 +383,24 @@ directional_shadow_max_distance = 80.0
 [node name="Secondary directional" type="DirectionalLight3D" parent="." unique_id=1278070892]
 transform = Transform3D(0.11348676, -0.48943374, -0.86462426, 0.9582356, 0.2838423, -0.03489949, 0.26249793, -0.82455325, 0.5012052, 2.505683, 2.197227, 0)
 light_energy = 0.25
+light_specular = 0.0
 sky_mode = 1
 
 [node name="TestTracklights" type="Node3D" parent="." unique_id=724158392]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TestTracklights" unique_id=1488054082]
+transform = Transform3D(-1, 0, 1.1920929e-07, 0, 1, 0, -1.1920929e-07, 0, -1, 36.508755, -9.204277, 32.005657)
+mesh = SubResource("SphereMesh_xteo1")
+
+[node name="Label3D" type="Label3D" parent="TestTracklights/MeshInstance3D" unique_id=1420183524]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.721653, 1.4510584, 0)
+pixel_size = 0.008
+text = "This track light combines realtime dynamic lights,
+and transparent quad mesh \"projected\" lights.
+They smoothly crossfade to optimize scenes with many lights.
+The rest of the tracklights in this scene use no true lighting."
+vertical_alignment = 2
+line_spacing = 8.0
 
 [node name="Autotracklight" type="CSGCombiner3D" parent="TestTracklights" unique_id=1182993890]
 transform = Transform3D(-1, 0, 1.1920929e-07, 0, 1, 0, -1.1920929e-07, 0, -1, 36.508755, -6, 26.469524)
@@ -245,7 +410,9 @@ track_height = 0.2
 track_width = 0.5
 lights_quantity = 3
 lights_range = 10.0
-lights_energy = 3.0
+lights_spot_angle = 30.0
+projected_lights_generate_quads = true
+projected_lights_scale = 1.5
 mount_length = 10.0
 mount_raycast_mask = 1
 mount_track_padding = 1.0
@@ -253,574 +420,375 @@ mats_track = ExtResource("3_5dt3m")
 mats_cable = ExtResource("4_kl5ay")
 metadata/_custom_type_script = "uid://cm6176wsxfdqx"
 
-[node name="@CSGPolygon3D@69619" type="CSGPolygon3D" parent="TestTracklights/Autotracklight" unique_id=1284961313]
+[node name="@CSGPolygon3D@96935" type="CSGPolygon3D" parent="TestTracklights/Autotracklight" unique_id=79337435]
 polygon = PackedVector2Array(-0.25, 0, -0.25, 0.12, -0.1, 0.2, 0.1, 0.2, 0.25, 0.12, 0.25, 0)
 depth = 12.0
 material = ExtResource("3_5dt3m")
 
-[node name="@MeshInstance3D@69620" type="MeshInstance3D" parent="TestTracklights/Autotracklight" unique_id=1546998009]
+[node name="@MeshInstance3D@96936" type="MeshInstance3D" parent="TestTracklights/Autotracklight" unique_id=1691913439]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1013763, -1)
-mesh = SubResource("BoxMesh_5dt3m")
+mesh = SubResource("BoxMesh_3lbo0")
 
-[node name="@MeshInstance3D@69621" type="MeshInstance3D" parent="TestTracklights/Autotracklight" unique_id=1183143822]
+[node name="@MeshInstance3D@96937" type="MeshInstance3D" parent="TestTracklights/Autotracklight" unique_id=924567478]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1013763, -11)
-mesh = SubResource("BoxMesh_kl5ay")
+mesh = SubResource("BoxMesh_x4vg3")
 
-[node name="@CSGBox3D@69623" type="CSGBox3D" parent="TestTracklights/Autotracklight" unique_id=1674473964]
+[node name="@CSGBox3D@96940" type="CSGBox3D" parent="TestTracklights/Autotracklight" unique_id=1306766591]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -2)
 operation = 2
 size = Vector3(0.2, 0.25, 0.2)
 material = ExtResource("3_yuneh")
 
-[node name="@SpotLight3D@69622" type="SpotLight3D" parent="TestTracklights/Autotracklight/@CSGBox3D@69623" unique_id=1743193851]
+[node name="@SpotLight3D@96938" type="SpotLight3D" parent="TestTracklights/Autotracklight/@CSGBox3D@96940" unique_id=1062718027]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
-light_energy = 3.0
+light_energy = 2.0
 light_size = 0.05
 light_bake_mode = 1
 shadow_reverse_cull_face = true
 distance_fade_enabled = true
-distance_fade_begin = 25.0
+distance_fade_begin = 10.0
+distance_fade_length = 5.0
 spot_range = 10.0
-spot_angle = 25.0
+spot_angle = 30.0
 
-[node name="@CSGBox3D@69625" type="CSGBox3D" parent="TestTracklights/Autotracklight" unique_id=236371467]
+[node name="@MeshInstance3D@96939" type="MeshInstance3D" parent="TestTracklights/Autotracklight/@CSGBox3D@96940" unique_id=1447557100]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.8826427, 0)
+mesh = SubResource("QuadMesh_rr0nd")
+
+[node name="@CSGBox3D@96943" type="CSGBox3D" parent="TestTracklights/Autotracklight" unique_id=2014577798]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -6)
 operation = 2
 size = Vector3(0.2, 0.25, 0.2)
 material = ExtResource("3_yuneh")
 
-[node name="@SpotLight3D@69624" type="SpotLight3D" parent="TestTracklights/Autotracklight/@CSGBox3D@69625" unique_id=76538962]
+[node name="@SpotLight3D@96941" type="SpotLight3D" parent="TestTracklights/Autotracklight/@CSGBox3D@96943" unique_id=725519342]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
-light_energy = 3.0
+light_energy = 2.0
 light_size = 0.05
 light_bake_mode = 1
 shadow_reverse_cull_face = true
 distance_fade_enabled = true
-distance_fade_begin = 25.0
+distance_fade_begin = 10.0
+distance_fade_length = 5.0
 spot_range = 10.0
-spot_angle = 25.0
+spot_angle = 30.0
 
-[node name="@CSGBox3D@69627" type="CSGBox3D" parent="TestTracklights/Autotracklight" unique_id=1020860100]
+[node name="@MeshInstance3D@96942" type="MeshInstance3D" parent="TestTracklights/Autotracklight/@CSGBox3D@96943" unique_id=1894663796]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.8826427, 0)
+mesh = SubResource("QuadMesh_c6q64")
+
+[node name="@CSGBox3D@96946" type="CSGBox3D" parent="TestTracklights/Autotracklight" unique_id=346851268]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -10)
 operation = 2
 size = Vector3(0.2, 0.25, 0.2)
 material = ExtResource("3_yuneh")
 
-[node name="@SpotLight3D@69626" type="SpotLight3D" parent="TestTracklights/Autotracklight/@CSGBox3D@69627" unique_id=448130871]
+[node name="@SpotLight3D@96944" type="SpotLight3D" parent="TestTracklights/Autotracklight/@CSGBox3D@96946" unique_id=1416849330]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
-light_energy = 3.0
+light_energy = 2.0
 light_size = 0.05
 light_bake_mode = 1
 shadow_reverse_cull_face = true
 distance_fade_enabled = true
-distance_fade_begin = 25.0
+distance_fade_begin = 10.0
+distance_fade_length = 5.0
 spot_range = 10.0
-spot_angle = 25.0
+spot_angle = 30.0
 
-[node name="Autotracklight2" type="CSGCombiner3D" parent="TestTracklights" unique_id=514482932]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 31.663658, -6, 22.40565)
-script = ExtResource("43_0m503")
-track_length = 6.0
-lights_quantity = 6
-mount_raycast_mask = 1
-mats_track = ExtResource("3_5dt3m")
-mats_cable = ExtResource("4_kl5ay")
-metadata/_custom_type_script = "uid://cm6176wsxfdqx"
-
-[node name="@CSGPolygon3D@70661" type="CSGPolygon3D" parent="TestTracklights/Autotracklight2" unique_id=1261401810]
-polygon = PackedVector2Array(-0.15, 0, -0.15, 0.3, -0.06, 0.5, 0.06, 0.5, 0.15, 0.3, 0.15, 0)
-depth = 6.0
-material = ExtResource("3_5dt3m")
-
-[node name="@MeshInstance3D@70662" type="MeshInstance3D" parent="TestTracklights/Autotracklight2" unique_id=1184515501]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2513762, -0.5)
-mesh = SubResource("BoxMesh_3lbo0")
-
-[node name="@MeshInstance3D@70663" type="MeshInstance3D" parent="TestTracklights/Autotracklight2" unique_id=772296181]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.251376, -5.5)
-mesh = SubResource("BoxMesh_tbq01")
-
-[node name="@CSGBox3D@70665" type="CSGBox3D" parent="TestTracklights/Autotracklight2" unique_id=661940985]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -0.5)
-operation = 2
-size = Vector3(0.12, 0.25, 0.12)
-material = ExtResource("3_yuneh")
-
-[node name="@SpotLight3D@70664" type="SpotLight3D" parent="TestTracklights/Autotracklight2/@CSGBox3D@70665" unique_id=880509497]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
-light_energy = 1.5
-light_size = 0.05
-light_bake_mode = 1
-shadow_reverse_cull_face = true
-distance_fade_enabled = true
-distance_fade_begin = 25.0
-spot_range = 15.0
-spot_angle = 25.0
-
-[node name="@CSGBox3D@70667" type="CSGBox3D" parent="TestTracklights/Autotracklight2" unique_id=1795953859]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -1.5)
-operation = 2
-size = Vector3(0.12, 0.25, 0.12)
-material = ExtResource("3_yuneh")
-
-[node name="@CSGBox3D@70669" type="CSGBox3D" parent="TestTracklights/Autotracklight2" unique_id=97153566]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -2.5)
-operation = 2
-size = Vector3(0.12, 0.25, 0.12)
-material = ExtResource("3_yuneh")
-
-[node name="@SpotLight3D@70668" type="SpotLight3D" parent="TestTracklights/Autotracklight2/@CSGBox3D@70669" unique_id=333737639]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, -0.5060921)
-light_energy = 1.5
-light_size = 0.05
-light_bake_mode = 1
-shadow_reverse_cull_face = true
-distance_fade_enabled = true
-distance_fade_begin = 25.0
-spot_range = 15.0
-spot_angle = 25.0
-
-[node name="@CSGBox3D@70671" type="CSGBox3D" parent="TestTracklights/Autotracklight2" unique_id=1422806047]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -3.5)
-operation = 2
-size = Vector3(0.12, 0.25, 0.12)
-material = ExtResource("3_yuneh")
-
-[node name="@CSGBox3D@70673" type="CSGBox3D" parent="TestTracklights/Autotracklight2" unique_id=98814916]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -4.5)
-operation = 2
-size = Vector3(0.12, 0.25, 0.12)
-material = ExtResource("3_yuneh")
-
-[node name="@CSGBox3D@70675" type="CSGBox3D" parent="TestTracklights/Autotracklight2" unique_id=940798108]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -5.5)
-operation = 2
-size = Vector3(0.12, 0.25, 0.12)
-material = ExtResource("3_yuneh")
-
-[node name="@SpotLight3D@70674" type="SpotLight3D" parent="TestTracklights/Autotracklight2/@CSGBox3D@70675" unique_id=397920366]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
-light_energy = 1.5
-light_size = 0.05
-light_bake_mode = 1
-shadow_reverse_cull_face = true
-distance_fade_enabled = true
-distance_fade_begin = 25.0
-spot_range = 15.0
-spot_angle = 25.0
-
-[node name="Autotracklight3" type="CSGCombiner3D" parent="TestTracklights" unique_id=1111914952]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 25.498363, -5.1107855, 20.347717)
-script = ExtResource("43_0m503")
-track_length = 4.0
-lights_range = 10.0
-mount_length = 10.0
-mount_raycast_mask = 1
-mount_track_padding = 1.0
-mats_track = ExtResource("3_5dt3m")
-mats_cable = ExtResource("4_kl5ay")
-metadata/_custom_type_script = "uid://cm6176wsxfdqx"
-
-[node name="@CSGPolygon3D@90204" type="CSGPolygon3D" parent="TestTracklights/Autotracklight3" unique_id=433282563]
-polygon = PackedVector2Array(-0.15, 0, -0.15, 0.3, -0.06, 0.5, 0.06, 0.5, 0.15, 0.3, 0.15, 0)
-depth = 4.0
-material = ExtResource("3_5dt3m")
-
-[node name="@MeshInstance3D@90205" type="MeshInstance3D" parent="TestTracklights/Autotracklight3" unique_id=1366017986]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8067689, -1)
-mesh = SubResource("BoxMesh_mj7h6")
-
-[node name="@MeshInstance3D@90206" type="MeshInstance3D" parent="TestTracklights/Autotracklight3" unique_id=646018204]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8067689, -3)
-mesh = SubResource("BoxMesh_gbu3n")
-
-[node name="@CSGBox3D@90208" type="CSGBox3D" parent="TestTracklights/Autotracklight3" unique_id=888346986]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -1)
-operation = 2
-size = Vector3(0.12, 0.25, 0.12)
-material = ExtResource("3_yuneh")
-
-[node name="@SpotLight3D@90207" type="SpotLight3D" parent="TestTracklights/Autotracklight3/@CSGBox3D@90208" unique_id=1482437618]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
-light_energy = 1.5
-light_size = 0.05
-light_bake_mode = 1
-shadow_reverse_cull_face = true
-distance_fade_enabled = true
-distance_fade_begin = 25.0
-spot_range = 10.0
-spot_angle = 25.0
-
-[node name="@CSGBox3D@90210" type="CSGBox3D" parent="TestTracklights/Autotracklight3" unique_id=993359162]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -3)
-operation = 2
-size = Vector3(0.12, 0.25, 0.12)
-material = ExtResource("3_yuneh")
-
-[node name="@SpotLight3D@90209" type="SpotLight3D" parent="TestTracklights/Autotracklight3/@CSGBox3D@90210" unique_id=60269124]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
-light_energy = 1.5
-light_size = 0.05
-light_bake_mode = 1
-shadow_reverse_cull_face = true
-distance_fade_enabled = true
-distance_fade_begin = 25.0
-spot_range = 10.0
-spot_angle = 25.0
+[node name="@MeshInstance3D@96945" type="MeshInstance3D" parent="TestTracklights/Autotracklight/@CSGBox3D@96946" unique_id=1397539555]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.8826427, 0)
+mesh = SubResource("QuadMesh_v80x0")
 
 [node name="SkinnyLight" type="CSGCombiner3D" parent="." unique_id=259970494]
 transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 39.50217, 5.002747, 39.499657)
 script = ExtResource("43_0m503")
 track_height = 0.15
 track_shoulder_ratio = 0.8
+lights_generate_spotlights = false
 lights_range = 10.0
+lights_energy = 1.5
+projected_lights_generate_quads = true
 mount_raycast_mask = 1
 mount_thickness = 0.02
 mats_track = ExtResource("4_kl5ay")
 mats_cable = ExtResource("4_kl5ay")
 metadata/_custom_type_script = "uid://cm6176wsxfdqx"
 
-[node name="@CSGPolygon3D@54925" type="CSGPolygon3D" parent="SkinnyLight" unique_id=1405106776]
+[node name="@CSGPolygon3D@99237" type="CSGPolygon3D" parent="SkinnyLight" unique_id=2058539230]
 polygon = PackedVector2Array(-0.15, 0, -0.15, 0.12, -0.06, 0.15, 0.06, 0.15, 0.15, 0.12, 0.15, 0)
 depth = 3.0
 material = ExtResource("4_kl5ay")
 
-[node name="@MeshInstance3D@54926" type="MeshInstance3D" parent="SkinnyLight" unique_id=253568824]
+[node name="@MeshInstance3D@99238" type="MeshInstance3D" parent="SkinnyLight" unique_id=768914261]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5724987, -0.5)
+mesh = SubResource("BoxMesh_gbu3n")
+
+[node name="@MeshInstance3D@99239" type="MeshInstance3D" parent="SkinnyLight" unique_id=772026803]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5724987, -2.5)
 mesh = SubResource("BoxMesh_880y8")
 
-[node name="@MeshInstance3D@54927" type="MeshInstance3D" parent="SkinnyLight" unique_id=418086402]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5724987, -2.5)
-mesh = SubResource("BoxMesh_ogkr3")
-
-[node name="@CSGBox3D@54929" type="CSGBox3D" parent="SkinnyLight" unique_id=2037846531]
+[node name="@CSGBox3D@99241" type="CSGBox3D" parent="SkinnyLight" unique_id=77617636]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -0.75)
 operation = 2
 size = Vector3(0.12, 0.25, 0.12)
 material = ExtResource("3_yuneh")
 
-[node name="@SpotLight3D@54928" type="SpotLight3D" parent="SkinnyLight/@CSGBox3D@54929" unique_id=1612003409]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
-light_energy = 1.5
-light_size = 0.05
-light_bake_mode = 1
-shadow_reverse_cull_face = true
-distance_fade_enabled = true
-distance_fade_begin = 25.0
-spot_range = 10.0
-spot_angle = 25.0
+[node name="@MeshInstance3D@99240" type="MeshInstance3D" parent="SkinnyLight/@CSGBox3D@99241" unique_id=1673983069]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.9100037, 0)
+mesh = SubResource("QuadMesh_nw8jh")
 
-[node name="@CSGBox3D@54931" type="CSGBox3D" parent="SkinnyLight" unique_id=1265391675]
+[node name="@CSGBox3D@99243" type="CSGBox3D" parent="SkinnyLight" unique_id=2042809049]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -2.25)
 operation = 2
 size = Vector3(0.12, 0.25, 0.12)
 material = ExtResource("3_yuneh")
 
-[node name="@SpotLight3D@54930" type="SpotLight3D" parent="SkinnyLight/@CSGBox3D@54931" unique_id=1872024650]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
-light_energy = 1.5
-light_size = 0.05
-light_bake_mode = 1
-shadow_reverse_cull_face = true
-distance_fade_enabled = true
-distance_fade_begin = 25.0
-spot_range = 10.0
-spot_angle = 25.0
+[node name="@MeshInstance3D@99242" type="MeshInstance3D" parent="SkinnyLight/@CSGBox3D@99243" unique_id=421435067]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.9100037, 0)
+mesh = SubResource("QuadMesh_oa8v2")
 
 [node name="SkinnyLight2" type="CSGCombiner3D" parent="." unique_id=1387717097]
 transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 39.50217, 5.002747, 22.499657)
 script = ExtResource("43_0m503")
 track_height = 0.15
 track_shoulder_ratio = 0.8
+lights_generate_spotlights = false
 lights_range = 10.0
+lights_energy = 1.5
+projected_lights_generate_quads = true
 mount_raycast_mask = 1
 mount_thickness = 0.02
 mats_track = ExtResource("4_kl5ay")
 mats_cable = ExtResource("4_kl5ay")
 metadata/_custom_type_script = "uid://cm6176wsxfdqx"
 
-[node name="_CSGPolygon3D_54925" type="CSGPolygon3D" parent="SkinnyLight2" unique_id=673713188]
+[node name="@CSGPolygon3D@98636" type="CSGPolygon3D" parent="SkinnyLight2" unique_id=1861490069]
 polygon = PackedVector2Array(-0.15, 0, -0.15, 0.12, -0.06, 0.15, 0.06, 0.15, 0.15, 0.12, 0.15, 0)
 depth = 3.0
 material = ExtResource("4_kl5ay")
 
-[node name="_MeshInstance3D_54926" type="MeshInstance3D" parent="SkinnyLight2" unique_id=258641910]
+[node name="@MeshInstance3D@98637" type="MeshInstance3D" parent="SkinnyLight2" unique_id=1889250058]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5724987, -0.5)
-mesh = SubResource("BoxMesh_880y8")
+mesh = SubResource("BoxMesh_xub5d")
 
-[node name="_MeshInstance3D_54927" type="MeshInstance3D" parent="SkinnyLight2" unique_id=701485946]
+[node name="@MeshInstance3D@98638" type="MeshInstance3D" parent="SkinnyLight2" unique_id=1255176430]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5724987, -2.5)
-mesh = SubResource("BoxMesh_ogkr3")
+mesh = SubResource("BoxMesh_iit47")
 
-[node name="_CSGBox3D_54929" type="CSGBox3D" parent="SkinnyLight2" unique_id=1280033770]
+[node name="@CSGBox3D@98640" type="CSGBox3D" parent="SkinnyLight2" unique_id=682935590]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -0.75)
 operation = 2
 size = Vector3(0.12, 0.25, 0.12)
 material = ExtResource("3_yuneh")
 
-[node name="_SpotLight3D_54928" type="SpotLight3D" parent="SkinnyLight2/_CSGBox3D_54929" unique_id=1427114540]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
-light_energy = 1.5
-light_size = 0.05
-light_bake_mode = 1
-shadow_reverse_cull_face = true
-distance_fade_enabled = true
-distance_fade_begin = 25.0
-spot_range = 10.0
-spot_angle = 25.0
+[node name="@MeshInstance3D@98639" type="MeshInstance3D" parent="SkinnyLight2/@CSGBox3D@98640" unique_id=941543533]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.9100046, 0)
+mesh = SubResource("QuadMesh_fof07")
 
-[node name="_CSGBox3D_54931" type="CSGBox3D" parent="SkinnyLight2" unique_id=557146105]
+[node name="@CSGBox3D@98642" type="CSGBox3D" parent="SkinnyLight2" unique_id=1305872348]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -2.25)
 operation = 2
 size = Vector3(0.12, 0.25, 0.12)
 material = ExtResource("3_yuneh")
 
-[node name="_SpotLight3D_54930" type="SpotLight3D" parent="SkinnyLight2/_CSGBox3D_54931" unique_id=395059180]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
-light_energy = 1.5
-light_size = 0.05
-light_bake_mode = 1
-shadow_reverse_cull_face = true
-distance_fade_enabled = true
-distance_fade_begin = 25.0
-spot_range = 10.0
-spot_angle = 25.0
+[node name="@MeshInstance3D@98641" type="MeshInstance3D" parent="SkinnyLight2/@CSGBox3D@98642" unique_id=172298442]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.910004, 0)
+mesh = SubResource("QuadMesh_1tes7")
 
 [node name="SkinnyLight3" type="CSGCombiner3D" parent="." unique_id=1603337215]
 transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 13.502171, 5.002747, 39.499657)
 script = ExtResource("43_0m503")
 track_height = 0.15
 track_shoulder_ratio = 0.8
+lights_generate_spotlights = false
 lights_range = 10.0
+lights_energy = 1.5
+projected_lights_generate_quads = true
 mount_raycast_mask = 1
 mount_thickness = 0.02
 mats_track = ExtResource("4_kl5ay")
 mats_cable = ExtResource("4_kl5ay")
 metadata/_custom_type_script = "uid://cm6176wsxfdqx"
 
-[node name="_CSGPolygon3D_54925" type="CSGPolygon3D" parent="SkinnyLight3" unique_id=53992756]
+[node name="@CSGPolygon3D@100432" type="CSGPolygon3D" parent="SkinnyLight3" unique_id=1971911878]
 polygon = PackedVector2Array(-0.15, 0, -0.15, 0.12, -0.06, 0.15, 0.06, 0.15, 0.15, 0.12, 0.15, 0)
 depth = 3.0
 material = ExtResource("4_kl5ay")
 
-[node name="_MeshInstance3D_54926" type="MeshInstance3D" parent="SkinnyLight3" unique_id=1479795726]
+[node name="@MeshInstance3D@100433" type="MeshInstance3D" parent="SkinnyLight3" unique_id=1609753281]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5724987, -0.5)
-mesh = SubResource("BoxMesh_880y8")
+mesh = SubResource("BoxMesh_8lwxr")
 
-[node name="_MeshInstance3D_54927" type="MeshInstance3D" parent="SkinnyLight3" unique_id=1036120416]
+[node name="@MeshInstance3D@100434" type="MeshInstance3D" parent="SkinnyLight3" unique_id=337272612]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5724987, -2.5)
-mesh = SubResource("BoxMesh_ogkr3")
+mesh = SubResource("BoxMesh_ktaoq")
 
-[node name="_CSGBox3D_54929" type="CSGBox3D" parent="SkinnyLight3" unique_id=1525052584]
+[node name="@CSGBox3D@100436" type="CSGBox3D" parent="SkinnyLight3" unique_id=163779591]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -0.75)
 operation = 2
 size = Vector3(0.12, 0.25, 0.12)
 material = ExtResource("3_yuneh")
 
-[node name="_SpotLight3D_54928" type="SpotLight3D" parent="SkinnyLight3/_CSGBox3D_54929" unique_id=788852842]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
-light_energy = 1.5
-light_size = 0.05
-light_bake_mode = 1
-shadow_reverse_cull_face = true
-distance_fade_enabled = true
-distance_fade_begin = 25.0
-spot_range = 10.0
-spot_angle = 25.0
+[node name="@MeshInstance3D@100435" type="MeshInstance3D" parent="SkinnyLight3/@CSGBox3D@100436" unique_id=1513016718]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.9100037, 0)
+mesh = SubResource("QuadMesh_ub3ge")
 
-[node name="_CSGBox3D_54931" type="CSGBox3D" parent="SkinnyLight3" unique_id=438093217]
+[node name="@CSGBox3D@100438" type="CSGBox3D" parent="SkinnyLight3" unique_id=215841602]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -2.25)
 operation = 2
 size = Vector3(0.12, 0.25, 0.12)
 material = ExtResource("3_yuneh")
 
-[node name="_SpotLight3D_54930" type="SpotLight3D" parent="SkinnyLight3/_CSGBox3D_54931" unique_id=1908098317]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
-light_energy = 1.5
-light_size = 0.05
-light_bake_mode = 1
-shadow_reverse_cull_face = true
-distance_fade_enabled = true
-distance_fade_begin = 25.0
-spot_range = 10.0
-spot_angle = 25.0
+[node name="@MeshInstance3D@100437" type="MeshInstance3D" parent="SkinnyLight3/@CSGBox3D@100438" unique_id=1195100638]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.9100037, 0)
+mesh = SubResource("QuadMesh_42c7c")
 
 [node name="SkinnyLight4" type="CSGCombiner3D" parent="." unique_id=1579856636]
 transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 13.502171, 5.002747, 22.499657)
 script = ExtResource("43_0m503")
 track_height = 0.15
 track_shoulder_ratio = 0.8
+lights_generate_spotlights = false
 lights_range = 10.0
+lights_energy = 1.5
+projected_lights_generate_quads = true
+projected_lights_scale = 1.5
 mount_raycast_mask = 1
 mount_thickness = 0.02
 mats_track = ExtResource("4_kl5ay")
 mats_cable = ExtResource("4_kl5ay")
 metadata/_custom_type_script = "uid://cm6176wsxfdqx"
 
-[node name="_CSGPolygon3D_54925" type="CSGPolygon3D" parent="SkinnyLight4" unique_id=333794320]
+[node name="@CSGPolygon3D@101036" type="CSGPolygon3D" parent="SkinnyLight4" unique_id=233738889]
 polygon = PackedVector2Array(-0.15, 0, -0.15, 0.12, -0.06, 0.15, 0.06, 0.15, 0.15, 0.12, 0.15, 0)
 depth = 3.0
 material = ExtResource("4_kl5ay")
 
-[node name="_MeshInstance3D_54926" type="MeshInstance3D" parent="SkinnyLight4" unique_id=1196719874]
+[node name="@MeshInstance3D@101037" type="MeshInstance3D" parent="SkinnyLight4" unique_id=749943186]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5724987, -0.5)
-mesh = SubResource("BoxMesh_880y8")
+mesh = SubResource("BoxMesh_uq4bu")
 
-[node name="_MeshInstance3D_54927" type="MeshInstance3D" parent="SkinnyLight4" unique_id=990461839]
+[node name="@MeshInstance3D@101038" type="MeshInstance3D" parent="SkinnyLight4" unique_id=1161668388]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5724987, -2.5)
-mesh = SubResource("BoxMesh_ogkr3")
+mesh = SubResource("BoxMesh_clxtu")
 
-[node name="_CSGBox3D_54929" type="CSGBox3D" parent="SkinnyLight4" unique_id=640338427]
+[node name="@CSGBox3D@101040" type="CSGBox3D" parent="SkinnyLight4" unique_id=91394663]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -0.75)
 operation = 2
 size = Vector3(0.12, 0.25, 0.12)
 material = ExtResource("3_yuneh")
 
-[node name="_SpotLight3D_54928" type="SpotLight3D" parent="SkinnyLight4/_CSGBox3D_54929" unique_id=2029396478]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
-light_energy = 1.5
-light_size = 0.05
-light_bake_mode = 1
-shadow_reverse_cull_face = true
-distance_fade_enabled = true
-distance_fade_begin = 25.0
-spot_range = 10.0
-spot_angle = 25.0
+[node name="@MeshInstance3D@101039" type="MeshInstance3D" parent="SkinnyLight4/@CSGBox3D@101040" unique_id=439969800]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.9100046, 0)
+mesh = SubResource("QuadMesh_jyhy3")
 
-[node name="_CSGBox3D_54931" type="CSGBox3D" parent="SkinnyLight4" unique_id=2052519354]
+[node name="@CSGBox3D@101042" type="CSGBox3D" parent="SkinnyLight4" unique_id=995845688]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -2.25)
 operation = 2
 size = Vector3(0.12, 0.25, 0.12)
 material = ExtResource("3_yuneh")
 
-[node name="_SpotLight3D_54930" type="SpotLight3D" parent="SkinnyLight4/_CSGBox3D_54931" unique_id=1336868777]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
-light_energy = 1.5
-light_size = 0.05
-light_bake_mode = 1
-shadow_reverse_cull_face = true
-distance_fade_enabled = true
-distance_fade_begin = 25.0
-spot_range = 10.0
-spot_angle = 25.0
+[node name="@MeshInstance3D@101041" type="MeshInstance3D" parent="SkinnyLight4/@CSGBox3D@101042" unique_id=1779990634]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.9100046, 0)
+mesh = SubResource("QuadMesh_u2fsq")
 
 [node name="SkinnyLight5" type="CSGCombiner3D" parent="." unique_id=890406783]
 transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 13.589249, -4.997253, 28.981344)
 script = ExtResource("43_0m503")
 track_height = 0.15
 track_shoulder_ratio = 0.8
+lights_generate_spotlights = false
 lights_range = 10.0
+lights_energy = 1.5
+projected_lights_generate_quads = true
+projected_lights_scale = 1.5
 mount_raycast_mask = 1
 mount_thickness = 0.02
 mats_track = ExtResource("4_kl5ay")
 mats_cable = ExtResource("4_kl5ay")
 metadata/_custom_type_script = "uid://cm6176wsxfdqx"
 
-[node name="_CSGPolygon3D_54925" type="CSGPolygon3D" parent="SkinnyLight5" unique_id=1635020647]
+[node name="@CSGPolygon3D@102846" type="CSGPolygon3D" parent="SkinnyLight5" unique_id=487919758]
 polygon = PackedVector2Array(-0.15, 0, -0.15, 0.12, -0.06, 0.15, 0.06, 0.15, 0.15, 0.12, 0.15, 0)
 depth = 3.0
 material = ExtResource("4_kl5ay")
 
-[node name="_MeshInstance3D_54926" type="MeshInstance3D" parent="SkinnyLight5" unique_id=1874642319]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5724987, -0.5)
-mesh = SubResource("BoxMesh_880y8")
+[node name="@MeshInstance3D@102847" type="MeshInstance3D" parent="SkinnyLight5" unique_id=1581599367]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5750026, -0.5)
+mesh = SubResource("BoxMesh_cph74")
 
-[node name="_MeshInstance3D_54927" type="MeshInstance3D" parent="SkinnyLight5" unique_id=740034552]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5724987, -2.5)
-mesh = SubResource("BoxMesh_ogkr3")
+[node name="@MeshInstance3D@102848" type="MeshInstance3D" parent="SkinnyLight5" unique_id=1364250552]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5750026, -2.5)
+mesh = SubResource("BoxMesh_wadld")
 
-[node name="_CSGBox3D_54929" type="CSGBox3D" parent="SkinnyLight5" unique_id=1903522142]
+[node name="@CSGBox3D@102850" type="CSGBox3D" parent="SkinnyLight5" unique_id=344331146]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -0.75)
 operation = 2
 size = Vector3(0.12, 0.25, 0.12)
 material = ExtResource("3_yuneh")
 
-[node name="_SpotLight3D_54928" type="SpotLight3D" parent="SkinnyLight5/_CSGBox3D_54929" unique_id=188404551]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
-light_energy = 1.5
-light_size = 0.05
-light_bake_mode = 1
-shadow_reverse_cull_face = true
-distance_fade_enabled = true
-distance_fade_begin = 25.0
-spot_range = 10.0
-spot_angle = 25.0
+[node name="@MeshInstance3D@102849" type="MeshInstance3D" parent="SkinnyLight5/@CSGBox3D@102850" unique_id=1080143609]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.88539, 0)
+mesh = SubResource("QuadMesh_ovxnu")
 
-[node name="_CSGBox3D_54931" type="CSGBox3D" parent="SkinnyLight5" unique_id=1968155233]
+[node name="@CSGBox3D@102852" type="CSGBox3D" parent="SkinnyLight5" unique_id=1872740758]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -2.25)
 operation = 2
 size = Vector3(0.12, 0.25, 0.12)
 material = ExtResource("3_yuneh")
 
-[node name="_SpotLight3D_54930" type="SpotLight3D" parent="SkinnyLight5/_CSGBox3D_54931" unique_id=1802001959]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
-light_energy = 1.5
-light_size = 0.05
-light_bake_mode = 1
-shadow_reverse_cull_face = true
-distance_fade_enabled = true
-distance_fade_begin = 25.0
-spot_range = 10.0
-spot_angle = 25.0
+[node name="@MeshInstance3D@102851" type="MeshInstance3D" parent="SkinnyLight5/@CSGBox3D@102852" unique_id=584570905]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.88539, 0)
+mesh = SubResource("QuadMesh_3tvjp")
 
 [node name="SkinnyLight6" type="CSGCombiner3D" parent="." unique_id=1127410809]
 transform = Transform3D(-4.569558e-08, 0, 1, 0, 1, 0, -1, 0, -4.569558e-08, 21.589249, -4.997253, 21.981344)
 script = ExtResource("43_0m503")
 track_height = 0.15
 track_shoulder_ratio = 0.8
+lights_generate_spotlights = false
 lights_range = 10.0
+lights_energy = 1.5
+projected_lights_generate_quads = true
+projected_lights_scale = 1.0
 mount_raycast_mask = 1
 mount_thickness = 0.02
 mats_track = ExtResource("4_kl5ay")
 mats_cable = ExtResource("4_kl5ay")
 metadata/_custom_type_script = "uid://cm6176wsxfdqx"
 
-[node name="_CSGPolygon3D_54925" type="CSGPolygon3D" parent="SkinnyLight6" unique_id=1433525999]
+[node name="@CSGPolygon3D@102231" type="CSGPolygon3D" parent="SkinnyLight6" unique_id=1236786487]
 polygon = PackedVector2Array(-0.15, 0, -0.15, 0.12, -0.06, 0.15, 0.06, 0.15, 0.15, 0.12, 0.15, 0)
 depth = 3.0
 material = ExtResource("4_kl5ay")
 
-[node name="_MeshInstance3D_54926" type="MeshInstance3D" parent="SkinnyLight6" unique_id=112563699]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5724987, -0.5)
-mesh = SubResource("BoxMesh_880y8")
+[node name="@MeshInstance3D@102232" type="MeshInstance3D" parent="SkinnyLight6" unique_id=524646569]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5750026, -0.5)
+mesh = SubResource("BoxMesh_e37vr")
 
-[node name="_MeshInstance3D_54927" type="MeshInstance3D" parent="SkinnyLight6" unique_id=998953356]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5724987, -2.5)
-mesh = SubResource("BoxMesh_ogkr3")
+[node name="@MeshInstance3D@102233" type="MeshInstance3D" parent="SkinnyLight6" unique_id=1033562802]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5750026, -2.5)
+mesh = SubResource("BoxMesh_6oq67")
 
-[node name="_CSGBox3D_54929" type="CSGBox3D" parent="SkinnyLight6" unique_id=1493564056]
+[node name="@CSGBox3D@102235" type="CSGBox3D" parent="SkinnyLight6" unique_id=1170617382]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -0.75)
 operation = 2
 size = Vector3(0.12, 0.25, 0.12)
 material = ExtResource("3_yuneh")
 
-[node name="_SpotLight3D_54928" type="SpotLight3D" parent="SkinnyLight6/_CSGBox3D_54929" unique_id=1160267229]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
-light_energy = 1.5
-light_size = 0.05
-light_bake_mode = 1
-shadow_reverse_cull_face = true
-distance_fade_enabled = true
-distance_fade_begin = 25.0
-spot_range = 10.0
-spot_angle = 25.0
+[node name="@MeshInstance3D@102234" type="MeshInstance3D" parent="SkinnyLight6/@CSGBox3D@102235" unique_id=1375738040]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9073486e-06, -5.88539, 0)
+mesh = SubResource("QuadMesh_anu3i")
 
-[node name="_CSGBox3D_54931" type="CSGBox3D" parent="SkinnyLight6" unique_id=1916475500]
+[node name="@CSGBox3D@102237" type="CSGBox3D" parent="SkinnyLight6" unique_id=101630449]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -2.25)
 operation = 2
 size = Vector3(0.12, 0.25, 0.12)
 material = ExtResource("3_yuneh")
 
-[node name="_SpotLight3D_54930" type="SpotLight3D" parent="SkinnyLight6/_CSGBox3D_54931" unique_id=1845434747]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
-light_energy = 1.5
-light_size = 0.05
-light_bake_mode = 1
-shadow_reverse_cull_face = true
-distance_fade_enabled = true
-distance_fade_begin = 25.0
-spot_range = 10.0
-spot_angle = 25.0
+[node name="@MeshInstance3D@102236" type="MeshInstance3D" parent="SkinnyLight6/@CSGBox3D@102237" unique_id=648174314]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9073486e-06, -5.88539, 0)
+mesh = SubResource("QuadMesh_14tmg")
 
 [node name="FeatureLight" type="CSGCombiner3D" parent="." unique_id=885320061]
 transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 18.589254, -2.997253, 28.981339)
@@ -830,58 +798,50 @@ track_height = 4.0
 track_width = 0.75
 track_shoulder_ratio = 0.1
 track_shoulder_width = 0.25
-lights_quantity = 5
 lights_rectangularity = 0.5
 lights_generate_spotlights = false
 lights_range = 10.0
+lights_energy = 5.0
+projected_lights_generate_quads = true
+projected_lights_scale = 1.5
 mount_raycast_mask = 1
 mount_thickness = 0.02
 mats_track = ExtResource("3_5dt3m")
 mats_cable = ExtResource("4_kl5ay")
 metadata/_custom_type_script = "uid://cm6176wsxfdqx"
 
-[node name="@CSGPolygon3D@65417" type="CSGPolygon3D" parent="FeatureLight" unique_id=1756158726]
+[node name="@CSGPolygon3D@93389" type="CSGPolygon3D" parent="FeatureLight" unique_id=1466790805]
 polygon = PackedVector2Array(-0.375, 0, -0.375, 0.4, -0.09375, 4, 0.09375, 4, 0.375, 0.4, 0.375, 0)
 depth = 2.5
 material = ExtResource("3_5dt3m")
 
-[node name="@MeshInstance3D@65418" type="MeshInstance3D" parent="FeatureLight" unique_id=1412012268]
+[node name="@MeshInstance3D@93390" type="MeshInstance3D" parent="FeatureLight" unique_id=1650148183]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.4974985, -0.5)
-mesh = SubResource("BoxMesh_27nw5")
+mesh = SubResource("BoxMesh_tbq01")
 
-[node name="@MeshInstance3D@65419" type="MeshInstance3D" parent="FeatureLight" unique_id=199624439]
+[node name="@MeshInstance3D@93391" type="MeshInstance3D" parent="FeatureLight" unique_id=1050293011]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.4974985, -2)
-mesh = SubResource("BoxMesh_b2w3e")
+mesh = SubResource("BoxMesh_mj7h6")
 
-[node name="@CSGBox3D@65420" type="CSGBox3D" parent="FeatureLight" unique_id=1090434177]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -0.25)
+[node name="@CSGBox3D@93393" type="CSGBox3D" parent="FeatureLight" unique_id=232150570]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -0.625)
 operation = 2
 size = Vector3(0.3, 0.25, 0.15)
 material = ExtResource("3_yuneh")
 
-[node name="@CSGBox3D@65421" type="CSGBox3D" parent="FeatureLight" unique_id=751401208]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -0.75)
+[node name="@MeshInstance3D@93392" type="MeshInstance3D" parent="FeatureLight/@CSGBox3D@93393" unique_id=1564462034]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.88539, 0)
+mesh = SubResource("QuadMesh_880y8")
+
+[node name="@CSGBox3D@93395" type="CSGBox3D" parent="FeatureLight" unique_id=189760991]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -1.875)
 operation = 2
 size = Vector3(0.3, 0.25, 0.15)
 material = ExtResource("3_yuneh")
 
-[node name="@CSGBox3D@65422" type="CSGBox3D" parent="FeatureLight" unique_id=1498715809]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -1.25)
-operation = 2
-size = Vector3(0.3, 0.25, 0.15)
-material = ExtResource("3_yuneh")
-
-[node name="@CSGBox3D@65423" type="CSGBox3D" parent="FeatureLight" unique_id=221985928]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -1.75)
-operation = 2
-size = Vector3(0.3, 0.25, 0.15)
-material = ExtResource("3_yuneh")
-
-[node name="@CSGBox3D@65424" type="CSGBox3D" parent="FeatureLight" unique_id=2004376013]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -2.25)
-operation = 2
-size = Vector3(0.3, 0.25, 0.15)
-material = ExtResource("3_yuneh")
+[node name="@MeshInstance3D@93394" type="MeshInstance3D" parent="FeatureLight/@CSGBox3D@93395" unique_id=664948523]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.88539, 0)
+mesh = SubResource("QuadMesh_ogkr3")
 
 [node name="FeatureLight2" type="CSGCombiner3D" parent="." unique_id=1112301362]
 transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 34.589256, -2.997253, 28.981339)
@@ -891,171 +851,174 @@ track_height = 4.0
 track_width = 0.75
 track_shoulder_ratio = 0.1
 track_shoulder_width = 0.25
-lights_quantity = 5
+lights_quantity = 0
 lights_rectangularity = 0.5
 lights_generate_spotlights = false
 lights_range = 10.0
+lights_energy = 5.0
+projected_lights_scale = 1.5
 mount_raycast_mask = 1
 mount_thickness = 0.02
 mats_track = ExtResource("3_5dt3m")
 mats_cable = ExtResource("4_kl5ay")
 metadata/_custom_type_script = "uid://cm6176wsxfdqx"
 
-[node name="_CSGPolygon3D_65417" type="CSGPolygon3D" parent="FeatureLight2" unique_id=1125751778]
+[node name="@CSGPolygon3D@94064" type="CSGPolygon3D" parent="FeatureLight2" unique_id=1056245816]
 polygon = PackedVector2Array(-0.375, 0, -0.375, 0.4, -0.09375, 4, 0.09375, 4, 0.375, 0.4, 0.375, 0)
 depth = 2.5
 material = ExtResource("3_5dt3m")
 
-[node name="_MeshInstance3D_65418" type="MeshInstance3D" parent="FeatureLight2" unique_id=1171838100]
+[node name="@MeshInstance3D@94065" type="MeshInstance3D" parent="FeatureLight2" unique_id=472313040]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.4974985, -0.5)
 mesh = SubResource("BoxMesh_27nw5")
 
-[node name="_MeshInstance3D_65419" type="MeshInstance3D" parent="FeatureLight2" unique_id=265353532]
+[node name="@MeshInstance3D@94066" type="MeshInstance3D" parent="FeatureLight2" unique_id=868818948]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.4974985, -2)
 mesh = SubResource("BoxMesh_b2w3e")
-
-[node name="_CSGBox3D_65420" type="CSGBox3D" parent="FeatureLight2" unique_id=593286713]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -0.25)
-operation = 2
-size = Vector3(0.3, 0.25, 0.15)
-material = ExtResource("3_yuneh")
-
-[node name="_CSGBox3D_65421" type="CSGBox3D" parent="FeatureLight2" unique_id=1320817335]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -0.75)
-operation = 2
-size = Vector3(0.3, 0.25, 0.15)
-material = ExtResource("3_yuneh")
-
-[node name="_CSGBox3D_65422" type="CSGBox3D" parent="FeatureLight2" unique_id=1922335244]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -1.25)
-operation = 2
-size = Vector3(0.3, 0.25, 0.15)
-material = ExtResource("3_yuneh")
-
-[node name="_CSGBox3D_65423" type="CSGBox3D" parent="FeatureLight2" unique_id=167926206]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -1.75)
-operation = 2
-size = Vector3(0.3, 0.25, 0.15)
-material = ExtResource("3_yuneh")
-
-[node name="_CSGBox3D_65424" type="CSGBox3D" parent="FeatureLight2" unique_id=2075364068]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -2.25)
-operation = 2
-size = Vector3(0.3, 0.25, 0.15)
-material = ExtResource("3_yuneh")
 
 [node name="LongBarLight" type="CSGCombiner3D" parent="." unique_id=1376952222]
 transform = Transform3D(-4.569558e-08, 0, 1, 0, 1, 0, -1, 0, -4.569558e-08, 33.50217, 6.002747, 39.499657)
 script = ExtResource("43_0m503")
 track_length = 14.0
 lights_rectangularity = 35.0
+lights_range = 12.0
+lights_spot_angle = 35.0
+lights_energy = 3.0
+projected_lights_generate_quads = true
+projected_lights_scale = 1.5
 mount_raycast_mask = 1
 mats_track = ExtResource("3_5dt3m")
 mats_cable = ExtResource("4_kl5ay")
 metadata/_custom_type_script = "uid://cm6176wsxfdqx"
 
-[node name="@CSGPolygon3D@46903" type="CSGPolygon3D" parent="LongBarLight" unique_id=1835178275]
+[node name="@CSGPolygon3D@114502" type="CSGPolygon3D" parent="LongBarLight" unique_id=328128167]
 polygon = PackedVector2Array(-0.15, 0, -0.15, 0.3, -0.06, 0.5, 0.06, 0.5, 0.15, 0.3, 0.15, 0)
 depth = 14.0
+material = ExtResource("3_5dt3m")
 
-[node name="@MeshInstance3D@46904" type="MeshInstance3D" parent="LongBarLight" unique_id=507279435]
+[node name="@MeshInstance3D@114503" type="MeshInstance3D" parent="LongBarLight" unique_id=669823604]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2474988, -0.5)
+mesh = SubResource("BoxMesh_ogkr3")
+
+[node name="@MeshInstance3D@114504" type="MeshInstance3D" parent="LongBarLight" unique_id=1633058142]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2474988, -13.5)
 mesh = SubResource("BoxMesh_nw8jh")
 
-[node name="@MeshInstance3D@46905" type="MeshInstance3D" parent="LongBarLight" unique_id=1209280782]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2474988, -13.5)
-mesh = SubResource("BoxMesh_oa8v2")
-
-[node name="@CSGBox3D@46907" type="CSGBox3D" parent="LongBarLight" unique_id=1300678521]
+[node name="@CSGBox3D@114507" type="CSGBox3D" parent="LongBarLight" unique_id=2749330]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -3.5)
 operation = 2
 size = Vector3(0.12, 0.25, 4.2)
 material = ExtResource("3_yuneh")
 
-[node name="_SpotLight3D_46906" type="AreaLight3D" parent="LongBarLight/@CSGBox3D@46907" unique_id=2072624409]
+[node name="@SpotLight3D@114505" type="SpotLight3D" parent="LongBarLight/@CSGBox3D@114507" unique_id=290776928]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
-light_energy = 1.5
+light_energy = 3.0
 light_size = 0.05
 light_bake_mode = 1
 shadow_reverse_cull_face = true
 distance_fade_enabled = true
-distance_fade_begin = 25.0
-area_range = 15.0
-area_size = Vector2(0.20994568, 4.1363754)
+distance_fade_begin = 10.0
+distance_fade_length = 5.0
+spot_range = 12.0
+spot_angle = 35.0
 
-[node name="@CSGBox3D@46909" type="CSGBox3D" parent="LongBarLight" unique_id=2031016370]
+[node name="@MeshInstance3D@114506" type="MeshInstance3D" parent="LongBarLight/@CSGBox3D@114507" unique_id=796904345]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.9100037, -1.9073486e-06)
+mesh = SubResource("QuadMesh_27nw5")
+
+[node name="@CSGBox3D@114510" type="CSGBox3D" parent="LongBarLight" unique_id=57220474]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -10.5)
 operation = 2
 size = Vector3(0.12, 0.25, 4.2)
 material = ExtResource("3_yuneh")
 
-[node name="_SpotLight3D_46908" type="AreaLight3D" parent="LongBarLight/@CSGBox3D@46909" unique_id=1965803698]
+[node name="@SpotLight3D@114508" type="SpotLight3D" parent="LongBarLight/@CSGBox3D@114510" unique_id=1014899743]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
-light_energy = 1.5
+light_energy = 3.0
 light_size = 0.05
 light_bake_mode = 1
 shadow_reverse_cull_face = true
 distance_fade_enabled = true
-distance_fade_begin = 25.0
-area_range = 15.0
-area_size = Vector2(0.23996735, 4.200634)
+distance_fade_begin = 10.0
+distance_fade_length = 5.0
+spot_range = 12.0
+spot_angle = 35.0
+
+[node name="@MeshInstance3D@114509" type="MeshInstance3D" parent="LongBarLight/@CSGBox3D@114510" unique_id=1129917549]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.9100037, -1.9073486e-06)
+mesh = SubResource("QuadMesh_b2w3e")
 
 [node name="LongBarLight2" type="CSGCombiner3D" parent="." unique_id=1090071038]
 transform = Transform3D(-4.569558e-08, 0, 1, 0, 1, 0, -1, 0, -4.569558e-08, 33.50217, 6.002747, 25.499657)
 script = ExtResource("43_0m503")
 track_length = 14.0
 lights_rectangularity = 35.0
+lights_range = 12.0
+lights_spot_angle = 35.0
+lights_energy = 3.0
+projected_lights_generate_quads = true
+projected_lights_scale = 1.5
 mount_raycast_mask = 1
 mats_track = ExtResource("3_5dt3m")
 mats_cable = ExtResource("4_kl5ay")
 metadata/_custom_type_script = "uid://cm6176wsxfdqx"
 
-[node name="_CSGPolygon3D_46903" type="CSGPolygon3D" parent="LongBarLight2" unique_id=468523627]
+[node name="@CSGPolygon3D@115111" type="CSGPolygon3D" parent="LongBarLight2" unique_id=530122484]
 polygon = PackedVector2Array(-0.15, 0, -0.15, 0.3, -0.06, 0.5, 0.06, 0.5, 0.15, 0.3, 0.15, 0)
 depth = 14.0
 material = ExtResource("3_5dt3m")
 
-[node name="_MeshInstance3D_46904" type="MeshInstance3D" parent="LongBarLight2" unique_id=863615707]
+[node name="@MeshInstance3D@115112" type="MeshInstance3D" parent="LongBarLight2" unique_id=284922191]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2474988, -0.5)
-mesh = SubResource("BoxMesh_nw8jh")
+mesh = SubResource("BoxMesh_rr0nd")
 
-[node name="_MeshInstance3D_46905" type="MeshInstance3D" parent="LongBarLight2" unique_id=1393880186]
+[node name="@MeshInstance3D@115113" type="MeshInstance3D" parent="LongBarLight2" unique_id=1744747725]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2474988, -13.5)
-mesh = SubResource("BoxMesh_oa8v2")
+mesh = SubResource("BoxMesh_c6q64")
 
-[node name="_CSGBox3D_46907" type="CSGBox3D" parent="LongBarLight2" unique_id=592384246]
+[node name="@CSGBox3D@115116" type="CSGBox3D" parent="LongBarLight2" unique_id=898374066]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -3.5)
 operation = 2
 size = Vector3(0.12, 0.25, 4.2)
 material = ExtResource("3_yuneh")
 
-[node name="_SpotLight3D_46906" type="AreaLight3D" parent="LongBarLight2/_CSGBox3D_46907" unique_id=271691529]
+[node name="@SpotLight3D@115114" type="SpotLight3D" parent="LongBarLight2/@CSGBox3D@115116" unique_id=560720935]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
-light_energy = 1.5
+light_energy = 3.0
 light_size = 0.05
 light_bake_mode = 1
 shadow_reverse_cull_face = true
 distance_fade_enabled = true
-distance_fade_begin = 25.0
-area_range = 15.0
-area_size = Vector2(0.20994568, 4.1363754)
+distance_fade_begin = 10.0
+distance_fade_length = 5.0
+spot_range = 12.0
+spot_angle = 35.0
 
-[node name="_CSGBox3D_46909" type="CSGBox3D" parent="LongBarLight2" unique_id=612459072]
+[node name="@MeshInstance3D@115115" type="MeshInstance3D" parent="LongBarLight2/@CSGBox3D@115116" unique_id=2045667213]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.9100037, -1.9073486e-06)
+mesh = SubResource("QuadMesh_8lwxr")
+
+[node name="@CSGBox3D@115119" type="CSGBox3D" parent="LongBarLight2" unique_id=1543892311]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -10.5)
 operation = 2
 size = Vector3(0.12, 0.25, 4.2)
 material = ExtResource("3_yuneh")
 
-[node name="_SpotLight3D_46908" type="AreaLight3D" parent="LongBarLight2/_CSGBox3D_46909" unique_id=1711050498]
+[node name="@SpotLight3D@115117" type="SpotLight3D" parent="LongBarLight2/@CSGBox3D@115119" unique_id=636960868]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
-light_energy = 1.5
+light_energy = 3.0
 light_size = 0.05
 light_bake_mode = 1
 shadow_reverse_cull_face = true
 distance_fade_enabled = true
-distance_fade_begin = 25.0
-area_range = 15.0
-area_size = Vector2(0.23996735, 4.200634)
+distance_fade_begin = 10.0
+distance_fade_length = 5.0
+spot_range = 12.0
+spot_angle = 35.0
+
+[node name="@MeshInstance3D@115118" type="MeshInstance3D" parent="LongBarLight2/@CSGBox3D@115119" unique_id=89685834]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.9100037, -1.9073486e-06)
+mesh = SubResource("QuadMesh_ktaoq")
 
 [node name="CSG Blockout" type="CSGCombiner3D" parent="." unique_id=250536827]
 use_collision = true

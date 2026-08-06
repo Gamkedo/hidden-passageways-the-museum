@@ -4,6 +4,8 @@ extends CSGCombiner3D
 
 const CLEAR_ALL_CHILDREN: bool = true
 const EMISSIVE_WHITE = preload("uid://gatwpkkuaqht")
+const SPOT_LIGHT_DECAL = preload("uid://bj8ho62a7oj07")
+const SPOT_LIGHT_DECAL_CROSSFADE = preload("uid://biecmslvyaivk")
 
 static var is_editor: bool:
 	get: return Engine.is_editor_hint()
@@ -24,8 +26,15 @@ static var is_editor: bool:
 @export var lights_generate_spotlights: bool = true
 @export var lights_range: float = 15.0
 @export var lights_spot_angle: float = 25.0
-@export var lights_energy: float = 1.5
+@export var lights_energy: float = 2.0
 @export var lights_color: Color = Color(0.939, 0.955, 0.961, 1.0)
+
+@export_subgroup("Projected light quads", "projected_lights_")
+@export var projected_lights_generate_quads: bool = false
+@export var projected_lights_use_raycast_normal: bool = true
+@export var projected_lights_raycast_distance: float = 12.0
+@export var projected_lights_scale: float = 0.9
+@export var projected_lights_scale_with_distance: bool = true
 
 @export_group("Mounting", "mount_")
 @export var mount_length: float = 5.0 ## Length of the cable going from the fixture to the ceiling.
@@ -138,8 +147,11 @@ func make_cable(pos_along_track: float) -> MeshInstance3D:
 	return cable
 	
 func make_dot_light(pos_along_track: float) -> CSGBox3D:
+	var pos: Vector3 = Vector3(0.0, -0.08, -track_length * pos_along_track)
+	
 	var light: SpotLight3D
 	if lights_generate_spotlights:
+		## Real static lighting
 		light = SpotLight3D.new()
 		light.spot_range = lights_range
 		light.spot_angle = lights_spot_angle
@@ -151,9 +163,60 @@ func make_dot_light(pos_along_track: float) -> CSGBox3D:
 		light.light_bake_mode = Light3D.BAKE_STATIC
 		
 		light.distance_fade_enabled = true
-		light.distance_fade_begin = 25.0
+		if projected_lights_generate_quads:
+			## crossfade
+			light.distance_fade_begin = 10.0
+			light.distance_fade_length = 5.0
+		else:
+			light.distance_fade_begin = 25.0
 		
 		light.rotation_degrees.x = -90.0
+	
+	var projected_light: MeshInstance3D
+	if projected_lights_generate_quads:
+		## Fake lighting using quads
+		var projection_position: Vector3
+		var projection_normal: Vector3
+		
+		## Raycast to locate our light
+		var space_state := get_world_3d().direct_space_state
+		var query := PhysicsRayQueryParameters3D.create(
+			to_global(pos), to_global(pos + Vector3.DOWN * projected_lights_raycast_distance), mount_raycast_mask )
+		var result: Dictionary = space_state.intersect_ray(query)
+		if not result:
+			print("Projected light quad ray didn't hit.")
+			pass
+		else:
+			var hit_pos: Vector3 = to_local(result.position) - pos
+			print("Projected light quad ray hit at %s." % hit_pos)
+			
+			projection_position = hit_pos
+			if projected_lights_use_raycast_normal:
+				projection_normal = result.normal
+			else:
+				## face up
+				projection_normal = Vector3.UP
+			
+			var quad := QuadMesh.new()
+			quad.size *= projected_lights_scale
+			if projected_lights_scale_with_distance:
+				quad.size *= absf(projection_position.length())
+			#quad.orientation = PlaneMesh.FACE_Z ## Would use for "look_at" methods typically
+			quad.orientation = PlaneMesh.FACE_Y
+			
+			if lights_generate_spotlights:
+				quad.material = SPOT_LIGHT_DECAL_CROSSFADE
+			else:
+				quad.material = SPOT_LIGHT_DECAL
+			
+			projected_light = MeshInstance3D.new()
+			projected_light.mesh = quad
+			projected_light.position = projection_position
+			
+			#projected_light.look_at_from_position(projected_light.position, projection_normal) ## not working correctly
+			projected_light.position.y += 0.01 ## bias to be above the floor
+			
+			_revealed.append(projected_light)
 	
 	var light_box := CSGBox3D.new()
 	var light_thickness: float = track_width * 0.4
@@ -161,11 +224,15 @@ func make_dot_light(pos_along_track: float) -> CSGBox3D:
 	light_box.material = EMISSIVE_WHITE
 	light_box.operation = CSGShape3D.OPERATION_SUBTRACTION
 	
-	light_box.position = Vector3(0.0, -0.08, -track_length * pos_along_track)
+	light_box.position = pos
 	
-	if lights_generate_spotlights:
+	if light:
 		light_box.add_child(light)
 		_revealed.append(light)
+	
+	if projected_light:
+		light_box.add_child(projected_light)
+		_revealed.append(projected_light)
 	
 	_revealed.append(light_box)
 	return light_box
