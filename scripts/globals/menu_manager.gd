@@ -49,7 +49,7 @@ func hide_pause_screen(capture_mouse: bool = true) -> void:
 func go_to_main_menu() -> void:
 	# TODO: Use a global class/handler for this
 	hide_pause_screen(false)
-	get_tree().change_scene_to_packed(MAIN_MENU)
+	SceneManager.change_scene_to_packed(MAIN_MENU)
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func quit_game() -> void:

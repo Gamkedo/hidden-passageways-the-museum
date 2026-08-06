@@ -9,4 +9,4 @@ func open_scene():
 		return
 	
 	print("Changing scene (did file change?) to:", goto_scene)
-	get_tree().change_scene_to_file(goto_scene)
+	SceneManager.change_scene_to_file(goto_scene)

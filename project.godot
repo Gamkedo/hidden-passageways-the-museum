@@ -20,6 +20,7 @@ config/icon="res://icon.png"
 [autoload]
 
 MenuManager="*uid://dk2cm322a07g5"
+SceneManager="*uid://w6usnf86c7b5"
 
 [display]
 

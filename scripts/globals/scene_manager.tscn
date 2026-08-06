@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://w6usnf86c7b5"]
+
+[ext_resource type="Script" uid="uid://cx6vo4ow1ymxx" path="res://scripts/globals/scene_manager.gd" id="1_ok1n6"]
+
+[node name="SceneManager" type="Node" unique_id=2134491783]
+script = ExtResource("1_ok1n6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1016609709]
+process_mode = 3
+layer = 99
+
+[node name="DebugSceneLabel" type="RichTextLabel" parent="CanvasLayer" unique_id=1113938554]
+unique_name_in_owner = true
+offset_right = 40.0
+offset_bottom = 23.0
+bbcode_enabled = true
+fit_content = true
+autowrap_mode = 0
