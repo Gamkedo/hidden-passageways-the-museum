@@ -5,12 +5,15 @@
 [ext_resource type="PackedScene" uid="uid://bad4bwomkabyu" path="res://models/cyndrive_ships_silo.fbx" id="2_pw8xm"]
 [ext_resource type="Material" uid="uid://b17jmjmvd5bw2" path="res://materials/taxi-placeholder.tres" id="2_r54xu"]
 [ext_resource type="Script" uid="uid://bud6xyvo80vl3" path="res://scripts/click_link.gd" id="3_1bvp3"]
+[ext_resource type="Material" uid="uid://31x6objnfjff" path="res://materials/modern-museum/museum-modern-exterior-gray.tres" id="3_5dt3m"]
 [ext_resource type="Script" uid="uid://cl8kffkiyit6t" path="res://scripts/click_scene_change.gd" id="3_7mycd"]
 [ext_resource type="Material" uid="uid://bgutakhbvq0mc" path="res://materials/modern-museum/museum-wall-white.tres" id="3_euau4"]
 [ext_resource type="Material" uid="uid://bnuir4b1t58xs" path="res://environment-csg/level-grid.tres" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://ce0uc3f7i1cxo" path="res://entities-scene_prefabs/player_with_ui.tscn" id="3_lquwl"]
 [ext_resource type="PackedScene" uid="uid://5oee2wihjes7" path="res://models/cyndrive_ships_carrier.fbx" id="3_rlpi5"]
 [ext_resource type="PackedScene" uid="uid://duy2brb5d32nn" path="res://models/cyndrive_ships_silo_door.fbx" id="3_ufbb7"]
+[ext_resource type="Material" uid="uid://gatwpkkuaqht" path="res://materials/emissive_white.tres" id="3_yuneh"]
+[ext_resource type="Material" uid="uid://2cfu7bky27vv" path="res://models/tank_rampage/barrel_material.tres" id="4_kl5ay"]
 [ext_resource type="Material" uid="uid://di6u3hjsvhh8i" path="res://materials/modern-museum/museum-floor-wood.tres" id="5_qxgch"]
 [ext_resource type="Material" uid="uid://i2mujh133810" path="res://materials/modern-museum/museum-modern-exterior-dark.tres" id="5_r54xu"]
 [ext_resource type="Material" uid="uid://gi1au7e50ftu" path="res://materials/modern-museum/picture-frame-placeholder-generic-wood.tres" id="6_q1lu7"]
@@ -45,6 +48,53 @@
 [ext_resource type="Texture2D" uid="uid://2432776vq113" path="res://textures/play-button-stand.png" id="34_ewg6b"]
 [ext_resource type="ArrayMesh" uid="uid://cm2soemey2m52" path="res://models/play-button-stand.obj" id="35_u5gq0"]
 [ext_resource type="Texture2D" uid="uid://cpakvdnl3rxxa" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/gladiator-framed-pic.png" id="36_u5gq0"]
+[ext_resource type="Script" uid="uid://cm6176wsxfdqx" path="res://entities-scene_prefabs/tracklights/tracklight.gd" id="43_0m503"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_iixjk"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_4fg2q"]
+sky_material = SubResource("ProceduralSkyMaterial_iixjk")
+
+[sub_resource type="Environment" id="Environment_yuneh"]
+background_mode = 2
+sky = SubResource("Sky_4fg2q")
+ssao_enabled = true
+ssao_radius = 5.0
+ssao_intensity = 3.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_5dt3m"]
+material = ExtResource("4_kl5ay")
+size = Vector3(0.04, 5.8027525, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kl5ay"]
+material = ExtResource("4_kl5ay")
+size = Vector3(0.04, 5.802753, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3lbo0"]
+material = ExtResource("4_kl5ay")
+size = Vector3(0.04, 5.502752, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_tbq01"]
+material = ExtResource("4_kl5ay")
+size = Vector3(0.04, 5.502752, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mj7h6"]
+material = ExtResource("4_kl5ay")
+size = Vector3(0.04, 2.6135378, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_gbu3n"]
+material = ExtResource("4_kl5ay")
+size = Vector3(0.04, 2.6135378, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_880y8"]
+material = ExtResource("4_kl5ay")
+size = Vector3(0.06, 2.0027523, 0.06)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ogkr3"]
+material = ExtResource("4_kl5ay")
+size = Vector3(0.06, 11.997744, 0.06)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rvyx8"]
 transparency = 1
@@ -147,12 +197,404 @@ radius = 1.0454303
 [node name="Main" type="Node3D" unique_id=1018901499]
 script = ExtResource("1_qi2ty")
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1183794555]
+environment = SubResource("Environment_yuneh")
+
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=1462107]
 transform = Transform3D(-0.61119694, -0.25221133, 0.7502185, 9.107543e-09, 0.9478697, 0.3186585, -0.7914785, 0.19476302, -0.5793351, 2.505683, 2.197227, 0)
+light_angular_distance = 0.5
+light_bake_mode = 1
+shadow_enabled = true
+directional_shadow_mode = 1
+directional_shadow_split_1 = 0.2
+directional_shadow_max_distance = 80.0
 
 [node name="Secondary directional" type="DirectionalLight3D" parent="." unique_id=1278070892]
 transform = Transform3D(0.11348676, -0.48943374, -0.86462426, 0.9582356, 0.2838423, -0.03489949, 0.26249793, -0.82455325, 0.5012052, 2.505683, 2.197227, 0)
-light_energy = 0.25
+light_energy = 0.2
+sky_mode = 1
+
+[node name="TestTracklights" type="Node3D" parent="." unique_id=724158392]
+
+[node name="Autotracklight" type="CSGCombiner3D" parent="TestTracklights" unique_id=1182993890]
+transform = Transform3D(-0.50000006, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, -0.50000006, 31, -8, 24)
+script = ExtResource("43_0m503")
+track_length = 12.0
+track_height = 0.2
+track_width = 0.5
+lights_quantity = 3
+lights_range = 10.0
+lights_energy = 3.0
+mount_length = 10.0
+mount_raycast_mask = 1
+mount_track_padding = 1.0
+mats_track = ExtResource("3_5dt3m")
+mats_cable = ExtResource("4_kl5ay")
+metadata/_custom_type_script = "uid://cm6176wsxfdqx"
+
+[node name="@CSGPolygon3D@89019" type="CSGPolygon3D" parent="TestTracklights/Autotracklight" unique_id=30786349]
+polygon = PackedVector2Array(-0.25, 0, -0.25, 0.12, -0.1, 0.2, 0.1, 0.2, 0.25, 0.12, 0.25, 0)
+depth = 12.0
+material = ExtResource("3_5dt3m")
+
+[node name="@MeshInstance3D@89020" type="MeshInstance3D" parent="TestTracklights/Autotracklight" unique_id=1322024833]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1013763, -1)
+mesh = SubResource("BoxMesh_5dt3m")
+
+[node name="@MeshInstance3D@89021" type="MeshInstance3D" parent="TestTracklights/Autotracklight" unique_id=1823723027]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1013765, -11)
+mesh = SubResource("BoxMesh_kl5ay")
+
+[node name="@CSGBox3D@89023" type="CSGBox3D" parent="TestTracklights/Autotracklight" unique_id=1123310320]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -2)
+operation = 2
+size = Vector3(0.2, 0.25, 0.2)
+material = ExtResource("3_yuneh")
+
+[node name="@SpotLight3D@89022" type="SpotLight3D" parent="TestTracklights/Autotracklight/@CSGBox3D@89023" unique_id=1497556237]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_energy = 3.0
+light_size = 0.05
+light_bake_mode = 1
+shadow_reverse_cull_face = true
+distance_fade_enabled = true
+distance_fade_begin = 25.0
+spot_range = 10.0
+spot_angle = 25.0
+
+[node name="@CSGBox3D@89025" type="CSGBox3D" parent="TestTracklights/Autotracklight" unique_id=886211015]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -6)
+operation = 2
+size = Vector3(0.2, 0.25, 0.2)
+material = ExtResource("3_yuneh")
+
+[node name="@SpotLight3D@89024" type="SpotLight3D" parent="TestTracklights/Autotracklight/@CSGBox3D@89025" unique_id=1228507144]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_energy = 3.0
+light_size = 0.05
+light_bake_mode = 1
+shadow_reverse_cull_face = true
+distance_fade_enabled = true
+distance_fade_begin = 25.0
+spot_range = 10.0
+spot_angle = 25.0
+
+[node name="@CSGBox3D@89027" type="CSGBox3D" parent="TestTracklights/Autotracklight" unique_id=236125622]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -10)
+operation = 2
+size = Vector3(0.2, 0.25, 0.2)
+material = ExtResource("3_yuneh")
+
+[node name="@SpotLight3D@89026" type="SpotLight3D" parent="TestTracklights/Autotracklight/@CSGBox3D@89027" unique_id=1543286708]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_energy = 3.0
+light_size = 0.05
+light_bake_mode = 1
+shadow_reverse_cull_face = true
+distance_fade_enabled = true
+distance_fade_begin = 25.0
+spot_range = 10.0
+spot_angle = 25.0
+
+[node name="Autotracklight2" type="CSGCombiner3D" parent="TestTracklights" unique_id=514482932]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 31, -6, 23)
+script = ExtResource("43_0m503")
+track_length = 6.0
+lights_quantity = 6
+mount_raycast_mask = 1
+mats_track = ExtResource("3_5dt3m")
+mats_cable = ExtResource("4_kl5ay")
+metadata/_custom_type_script = "uid://cm6176wsxfdqx"
+
+[node name="@CSGPolygon3D@89625" type="CSGPolygon3D" parent="TestTracklights/Autotracklight2" unique_id=909712843]
+polygon = PackedVector2Array(-0.15, 0, -0.15, 0.3, -0.06, 0.5, 0.06, 0.5, 0.15, 0.3, 0.15, 0)
+depth = 6.0
+material = ExtResource("3_5dt3m")
+
+[node name="@MeshInstance3D@89626" type="MeshInstance3D" parent="TestTracklights/Autotracklight2" unique_id=1295722157]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.251376, -0.5)
+mesh = SubResource("BoxMesh_3lbo0")
+
+[node name="@MeshInstance3D@89627" type="MeshInstance3D" parent="TestTracklights/Autotracklight2" unique_id=1152733181]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.251376, -5.5)
+mesh = SubResource("BoxMesh_tbq01")
+
+[node name="@CSGBox3D@89629" type="CSGBox3D" parent="TestTracklights/Autotracklight2" unique_id=962088374]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -0.5)
+operation = 2
+size = Vector3(0.12, 0.25, 0.12)
+material = ExtResource("3_yuneh")
+
+[node name="@SpotLight3D@89628" type="SpotLight3D" parent="TestTracklights/Autotracklight2/@CSGBox3D@89629" unique_id=1651918083]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_energy = 1.5
+light_size = 0.05
+light_bake_mode = 1
+shadow_reverse_cull_face = true
+distance_fade_enabled = true
+distance_fade_begin = 25.0
+spot_range = 15.0
+spot_angle = 25.0
+
+[node name="@CSGBox3D@89631" type="CSGBox3D" parent="TestTracklights/Autotracklight2" unique_id=478829258]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -1.5)
+operation = 2
+size = Vector3(0.12, 0.25, 0.12)
+material = ExtResource("3_yuneh")
+
+[node name="@SpotLight3D@89630" type="SpotLight3D" parent="TestTracklights/Autotracklight2/@CSGBox3D@89631" unique_id=1400303956]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_energy = 1.5
+light_size = 0.05
+light_bake_mode = 1
+shadow_reverse_cull_face = true
+distance_fade_enabled = true
+distance_fade_begin = 25.0
+spot_range = 15.0
+spot_angle = 25.0
+
+[node name="@CSGBox3D@89633" type="CSGBox3D" parent="TestTracklights/Autotracklight2" unique_id=970558729]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -2.5)
+operation = 2
+size = Vector3(0.12, 0.25, 0.12)
+material = ExtResource("3_yuneh")
+
+[node name="@SpotLight3D@89632" type="SpotLight3D" parent="TestTracklights/Autotracklight2/@CSGBox3D@89633" unique_id=1372171001]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_energy = 1.5
+light_size = 0.05
+light_bake_mode = 1
+shadow_reverse_cull_face = true
+distance_fade_enabled = true
+distance_fade_begin = 25.0
+spot_range = 15.0
+spot_angle = 25.0
+
+[node name="@CSGBox3D@89635" type="CSGBox3D" parent="TestTracklights/Autotracklight2" unique_id=1773916824]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -3.5)
+operation = 2
+size = Vector3(0.12, 0.25, 0.12)
+material = ExtResource("3_yuneh")
+
+[node name="@SpotLight3D@89634" type="SpotLight3D" parent="TestTracklights/Autotracklight2/@CSGBox3D@89635" unique_id=1031846357]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_energy = 1.5
+light_size = 0.05
+light_bake_mode = 1
+shadow_reverse_cull_face = true
+distance_fade_enabled = true
+distance_fade_begin = 25.0
+spot_range = 15.0
+spot_angle = 25.0
+
+[node name="@CSGBox3D@89637" type="CSGBox3D" parent="TestTracklights/Autotracklight2" unique_id=1233904514]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -4.5)
+operation = 2
+size = Vector3(0.12, 0.25, 0.12)
+material = ExtResource("3_yuneh")
+
+[node name="@SpotLight3D@89636" type="SpotLight3D" parent="TestTracklights/Autotracklight2/@CSGBox3D@89637" unique_id=1836570966]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_energy = 1.5
+light_size = 0.05
+light_bake_mode = 1
+shadow_reverse_cull_face = true
+distance_fade_enabled = true
+distance_fade_begin = 25.0
+spot_range = 15.0
+spot_angle = 25.0
+
+[node name="@CSGBox3D@89639" type="CSGBox3D" parent="TestTracklights/Autotracklight2" unique_id=595444862]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -5.5)
+operation = 2
+size = Vector3(0.12, 0.25, 0.12)
+material = ExtResource("3_yuneh")
+
+[node name="@SpotLight3D@89638" type="SpotLight3D" parent="TestTracklights/Autotracklight2/@CSGBox3D@89639" unique_id=1621104004]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_energy = 1.5
+light_size = 0.05
+light_bake_mode = 1
+shadow_reverse_cull_face = true
+distance_fade_enabled = true
+distance_fade_begin = 25.0
+spot_range = 15.0
+spot_angle = 25.0
+
+[node name="Autotracklight3" type="CSGCombiner3D" parent="TestTracklights" unique_id=1111914952]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 25.498363, -5.1107855, 20.347717)
+script = ExtResource("43_0m503")
+track_length = 4.0
+lights_range = 10.0
+mount_length = 10.0
+mount_raycast_mask = 1
+mount_track_padding = 1.0
+mats_track = ExtResource("3_5dt3m")
+mats_cable = ExtResource("4_kl5ay")
+metadata/_custom_type_script = "uid://cm6176wsxfdqx"
+
+[node name="@CSGPolygon3D@90204" type="CSGPolygon3D" parent="TestTracklights/Autotracklight3" unique_id=433282563]
+polygon = PackedVector2Array(-0.15, 0, -0.15, 0.3, -0.06, 0.5, 0.06, 0.5, 0.15, 0.3, 0.15, 0)
+depth = 4.0
+material = ExtResource("3_5dt3m")
+
+[node name="@MeshInstance3D@90205" type="MeshInstance3D" parent="TestTracklights/Autotracklight3" unique_id=1366017986]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8067689, -1)
+mesh = SubResource("BoxMesh_mj7h6")
+
+[node name="@MeshInstance3D@90206" type="MeshInstance3D" parent="TestTracklights/Autotracklight3" unique_id=646018204]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8067689, -3)
+mesh = SubResource("BoxMesh_gbu3n")
+
+[node name="@CSGBox3D@90208" type="CSGBox3D" parent="TestTracklights/Autotracklight3" unique_id=888346986]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -1)
+operation = 2
+size = Vector3(0.12, 0.25, 0.12)
+material = ExtResource("3_yuneh")
+
+[node name="@SpotLight3D@90207" type="SpotLight3D" parent="TestTracklights/Autotracklight3/@CSGBox3D@90208" unique_id=1482437618]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_energy = 1.5
+light_size = 0.05
+light_bake_mode = 1
+shadow_reverse_cull_face = true
+distance_fade_enabled = true
+distance_fade_begin = 25.0
+spot_range = 10.0
+spot_angle = 25.0
+
+[node name="@CSGBox3D@90210" type="CSGBox3D" parent="TestTracklights/Autotracklight3" unique_id=993359162]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -3)
+operation = 2
+size = Vector3(0.12, 0.25, 0.12)
+material = ExtResource("3_yuneh")
+
+[node name="@SpotLight3D@90209" type="SpotLight3D" parent="TestTracklights/Autotracklight3/@CSGBox3D@90210" unique_id=60269124]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_energy = 1.5
+light_size = 0.05
+light_bake_mode = 1
+shadow_reverse_cull_face = true
+distance_fade_enabled = true
+distance_fade_begin = 25.0
+spot_range = 10.0
+spot_angle = 25.0
+
+[node name="Autotracklight4" type="CSGCombiner3D" parent="TestTracklights" unique_id=68258841]
+transform = Transform3D(-0.99999994, 0, 5.9604645e-08, 0, 1, 0, -5.9604645e-08, 0, -0.99999994, 31, -6, 25.591114)
+script = ExtResource("43_0m503")
+track_length = 2.0
+track_height = 2.0
+track_width = 0.75
+track_shoulder_ratio = 0.5
+track_shoulder_width = 0.5
+lights_quantity = 5
+lights_range = 10.0
+mount_length = 10.0
+mount_raycast_mask = 1
+mount_thickness = 0.06
+mount_track_padding = 0.25
+mats_track = ExtResource("3_5dt3m")
+mats_cable = ExtResource("4_kl5ay")
+metadata/_custom_type_script = "uid://cm6176wsxfdqx"
+
+[node name="@CSGPolygon3D@90802" type="CSGPolygon3D" parent="TestTracklights/Autotracklight4" unique_id=2062391848]
+polygon = PackedVector2Array(-0.375, 0, -0.375, 1, -0.1875, 2, 0.1875, 2, 0.375, 1, 0.375, 0)
+depth = 2.0
+material = ExtResource("3_5dt3m")
+
+[node name="@MeshInstance3D@90803" type="MeshInstance3D" parent="TestTracklights/Autotracklight4" unique_id=1457106296]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.0013762, -0.25)
+mesh = SubResource("BoxMesh_880y8")
+
+[node name="@MeshInstance3D@90804" type="MeshInstance3D" parent="TestTracklights/Autotracklight4" unique_id=607018422]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.998872, -1.75)
+mesh = SubResource("BoxMesh_ogkr3")
+
+[node name="@CSGBox3D@90806" type="CSGBox3D" parent="TestTracklights/Autotracklight4" unique_id=1342800315]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -0.2)
+operation = 2
+size = Vector3(0.3, 0.25, 0.3)
+material = ExtResource("3_yuneh")
+
+[node name="@SpotLight3D@90805" type="SpotLight3D" parent="TestTracklights/Autotracklight4/@CSGBox3D@90806" unique_id=1097167762]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_energy = 1.5
+light_size = 0.05
+light_bake_mode = 1
+shadow_reverse_cull_face = true
+distance_fade_enabled = true
+distance_fade_begin = 25.0
+spot_range = 10.0
+spot_angle = 25.0
+
+[node name="@CSGBox3D@90808" type="CSGBox3D" parent="TestTracklights/Autotracklight4" unique_id=2115272313]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -0.6)
+operation = 2
+size = Vector3(0.3, 0.25, 0.3)
+material = ExtResource("3_yuneh")
+
+[node name="@SpotLight3D@90807" type="SpotLight3D" parent="TestTracklights/Autotracklight4/@CSGBox3D@90808" unique_id=1912693256]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_energy = 1.5
+light_size = 0.05
+light_bake_mode = 1
+shadow_reverse_cull_face = true
+distance_fade_enabled = true
+distance_fade_begin = 25.0
+spot_range = 10.0
+spot_angle = 25.0
+
+[node name="@CSGBox3D@90810" type="CSGBox3D" parent="TestTracklights/Autotracklight4" unique_id=191255643]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -1)
+operation = 2
+size = Vector3(0.3, 0.25, 0.3)
+material = ExtResource("3_yuneh")
+
+[node name="@SpotLight3D@90809" type="SpotLight3D" parent="TestTracklights/Autotracklight4/@CSGBox3D@90810" unique_id=1591541572]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_energy = 1.5
+light_size = 0.05
+light_bake_mode = 1
+shadow_reverse_cull_face = true
+distance_fade_enabled = true
+distance_fade_begin = 25.0
+spot_range = 10.0
+spot_angle = 25.0
+
+[node name="@CSGBox3D@90812" type="CSGBox3D" parent="TestTracklights/Autotracklight4" unique_id=584691816]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -1.4)
+operation = 2
+size = Vector3(0.3, 0.25, 0.3)
+material = ExtResource("3_yuneh")
+
+[node name="@SpotLight3D@90811" type="SpotLight3D" parent="TestTracklights/Autotracklight4/@CSGBox3D@90812" unique_id=1573907685]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_energy = 1.5
+light_size = 0.05
+light_bake_mode = 1
+shadow_reverse_cull_face = true
+distance_fade_enabled = true
+distance_fade_begin = 25.0
+spot_range = 10.0
+spot_angle = 25.0
+
+[node name="@CSGBox3D@90814" type="CSGBox3D" parent="TestTracklights/Autotracklight4" unique_id=1984396163]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -1.8)
+operation = 2
+size = Vector3(0.3, 0.25, 0.3)
+material = ExtResource("3_yuneh")
+
+[node name="@SpotLight3D@90813" type="SpotLight3D" parent="TestTracklights/Autotracklight4/@CSGBox3D@90814" unique_id=24499771]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_energy = 1.5
+light_size = 0.05
+light_bake_mode = 1
+shadow_reverse_cull_face = true
+distance_fade_enabled = true
+distance_fade_begin = 25.0
+spot_range = 10.0
+spot_angle = 25.0
 
 [node name="CSG Blockout" type="CSGCombiner3D" parent="." unique_id=250536827]
 use_collision = true
