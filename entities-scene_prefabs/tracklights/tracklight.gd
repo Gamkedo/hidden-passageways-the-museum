@@ -20,6 +20,8 @@ static var is_editor: bool:
 
 @export_group("Lights", "lights_")
 @export_range(0, 10, 1.0, "or_greater") var lights_quantity: int = 2
+@export var lights_rectangularity: float = 1.0
+@export var lights_generate_spotlights: bool = true
 @export var lights_range: float = 15.0
 @export var lights_spot_angle: float = 25.0
 @export var lights_energy: float = 1.5
@@ -136,31 +138,35 @@ func make_cable(pos_along_track: float) -> MeshInstance3D:
 	return cable
 	
 func make_dot_light(pos_along_track: float) -> CSGBox3D:
-	var light := SpotLight3D.new()
-	light.spot_range = lights_range
-	light.spot_angle = lights_spot_angle
-	light.spot_attenuation = 1.0
-	light.light_energy = lights_energy
-	light.shadow_enabled = false
-	light.shadow_reverse_cull_face = true
-	light.light_size = 0.05
-	light.light_bake_mode = Light3D.BAKE_STATIC
-	
-	light.distance_fade_enabled = true
-	light.distance_fade_begin = 25.0
-	
-	light.rotation_degrees.x = -90.0
+	var light: SpotLight3D
+	if lights_generate_spotlights:
+		light = SpotLight3D.new()
+		light.spot_range = lights_range
+		light.spot_angle = lights_spot_angle
+		light.spot_attenuation = 1.0
+		light.light_energy = lights_energy
+		light.shadow_enabled = false
+		light.shadow_reverse_cull_face = true
+		light.light_size = 0.05
+		light.light_bake_mode = Light3D.BAKE_STATIC
+		
+		light.distance_fade_enabled = true
+		light.distance_fade_begin = 25.0
+		
+		light.rotation_degrees.x = -90.0
 	
 	var light_box := CSGBox3D.new()
 	var light_thickness: float = track_width * 0.4
-	light_box.size = Vector3(light_thickness, 0.25, light_thickness)
+	light_box.size = Vector3(light_thickness, 0.25, light_thickness * lights_rectangularity)
 	light_box.material = EMISSIVE_WHITE
 	light_box.operation = CSGShape3D.OPERATION_SUBTRACTION
 	
 	light_box.position = Vector3(0.0, -0.08, -track_length * pos_along_track)
-	light_box.add_child(light)
 	
-	_revealed.append(light)
+	if lights_generate_spotlights:
+		light_box.add_child(light)
+		_revealed.append(light)
+	
 	_revealed.append(light_box)
 	return light_box
 
