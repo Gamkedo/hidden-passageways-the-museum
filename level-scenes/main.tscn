@@ -1407,7 +1407,6 @@ size = Vector3(24, 1, 25)
 material = ExtResource("13_v6iic")
 
 [node name="Basement Art (Misc not in released games)" parent="." unique_id=1453491612 instance=ExtResource("16_4y16h")]
-visible = false
 
 [node name="Clickable 3d link test" type="StaticBody3D" parent="." unique_id=1076222070]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.5, 0, 4.5)
