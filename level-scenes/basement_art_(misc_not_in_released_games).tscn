@@ -7,9 +7,26 @@
 [ext_resource type="Material" uid="uid://dajoyj6fev1j7" path="res://materials/floor-materials/marble_tile_floor.tres" id="5_u45lx"]
 [ext_resource type="Material" uid="uid://r6515yywtwib" path="res://materials/floor-materials/wood_floor.tres" id="5_xaifo"]
 [ext_resource type="PackedScene" uid="uid://sa8s0p3pnpp0" path="res://level-scenes/helper-chunks/editor_quick_test_group.tscn" id="7_lvdt1"]
+[ext_resource type="Script" uid="uid://bppvgubl41ghp" path="res://scripts/click_manipulate-mesh.gd" id="8_lhbnf"]
+[ext_resource type="Material" uid="uid://31x6objnfjff" path="res://materials/modern-museum/museum-modern-exterior-gray.tres" id="8_p4vvg"]
+[ext_resource type="PackedScene" uid="uid://de5r1qejyqa71" path="res://environment-csg/csg_box-w-slope-support.tscn" id="8_u45lx"]
+[ext_resource type="Material" uid="uid://b5j7a6q6jdkv5" path="res://materials/concrete.tres" id="9_hilkn"]
+[ext_resource type="Texture2D" uid="uid://2432776vq113" path="res://textures/play-button-stand.png" id="9_xljnw"]
+[ext_resource type="Material" uid="uid://gatwpkkuaqht" path="res://materials/emissive_white.tres" id="9_ye0tm"]
+[ext_resource type="ArrayMesh" uid="uid://cm2soemey2m52" path="res://models/play-button-stand.obj" id="10_43mwv"]
+[ext_resource type="PackedScene" uid="uid://cowhc5ccs7xmv" path="res://models/naous_swords.gltf" id="12_uiqfr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lahx7"]
 albedo_texture = ExtResource("1_vujxr")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_880y8"]
+albedo_texture = ExtResource("9_xljnw")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7tbbo"]
+size = Vector3(3.5, 3.5, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xteo1"]
+size = Vector3(8.271118, 1.1351929, 12.026886)
 
 [node name="Basement Art (Misc not in released games)" type="CSGCombiner3D" unique_id=1453491612]
 use_collision = true
@@ -40,6 +57,11 @@ material_override = SubResource("StandardMaterial3D_lahx7")
 size = Vector3(5, 1, 25)
 material = ExtResource("5_xaifo")
 
+[node name="Littlewalkway" type="CSGBox3D" parent="Entrance Floor" unique_id=1391612538]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 7)
+size = Vector3(5, 1, 4)
+material = ExtResource("5_xaifo")
+
 [node name="sidewalk above ground, hard top" type="CSGBox3D" parent="." unique_id=820135251]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, -1.5, 6.5)
 material_override = ExtResource("5_u45lx")
@@ -49,3 +71,197 @@ material = ExtResource("5_u45lx")
 [node name="EditorQuickTestGroup" parent="." unique_id=259214251 instance=ExtResource("7_lvdt1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.650959, -10.997258, 16.423002)
 visible = false
+
+[node name="tarnishedmoth" type="Node3D" parent="." unique_id=485263981]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.75278, -10.137384, 12.146261)
+
+[node name="naous_swords" parent="tarnishedmoth" unique_id=1318131931 instance=ExtResource("12_uiqfr")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.01096344, 0.66993237, -2.5462608)
+
+[node name="Short2" parent="tarnishedmoth/naous_swords" index="0" unique_id=771962077]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Medium1" parent="tarnishedmoth/naous_swords" index="1" unique_id=1991700681]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Medium2" parent="tarnishedmoth/naous_swords" index="2" unique_id=601519989]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Short1" parent="tarnishedmoth/naous_swords" index="3" unique_id=1728228274]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Long1" parent="tarnishedmoth/naous_swords" index="4" unique_id=247779270]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Long2" parent="tarnishedmoth/naous_swords" index="5" unique_id=2129734508]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Short3" parent="tarnishedmoth/naous_swords" index="6" unique_id=1411074357]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Medium3" parent="tarnishedmoth/naous_swords" index="7" unique_id=500198530]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Short4" parent="tarnishedmoth/naous_swords" index="8" unique_id=361812727]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Short5" parent="tarnishedmoth/naous_swords" index="9" unique_id=1957342883]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Long3" parent="tarnishedmoth/naous_swords" index="10" unique_id=1118166116]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Hilt" parent="tarnishedmoth/naous_swords" index="11" unique_id=1753931807]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Hilt_001" parent="tarnishedmoth/naous_swords" index="12" unique_id=459770931]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Hilt_002" parent="tarnishedmoth/naous_swords" index="13" unique_id=741861721]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Hilt_003" parent="tarnishedmoth/naous_swords" index="14" unique_id=1445459504]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Hilt_004" parent="tarnishedmoth/naous_swords" index="15" unique_id=690277438]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Hilt_005" parent="tarnishedmoth/naous_swords" index="16" unique_id=434978100]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Hilt_006" parent="tarnishedmoth/naous_swords" index="17" unique_id=697992283]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Hilt_007" parent="tarnishedmoth/naous_swords" index="18" unique_id=657222989]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Hilt_008" parent="tarnishedmoth/naous_swords" index="19" unique_id=71160714]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Node3D" type="Node3D" parent="tarnishedmoth" unique_id=687199009]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 0, 0, 0)
+
+[node name="Button Stand" type="StaticBody3D" parent="tarnishedmoth/Node3D" unique_id=1440399840 node_paths=PackedStringArray("nodes")]
+transform = Transform3D(-0.25000003, 0, -0.43301266, 0, 0.5, 0, 0.43301266, 0, -0.25000003, 0.09421921, 0.8776846, -1.2691936)
+script = ExtResource("8_lhbnf")
+nodes = [NodePath("../../naous_swords/Short2"), NodePath("../../naous_swords/Medium1"), NodePath("../../naous_swords/Medium2"), NodePath("../../naous_swords/Short1"), NodePath("../../naous_swords/Long1"), NodePath("../../naous_swords/Long2"), NodePath("../../naous_swords/Short3"), NodePath("../../naous_swords/Medium3"), NodePath("../../naous_swords/Short4"), NodePath("../../naous_swords/Short5"), NodePath("../../naous_swords/Long3"), NodePath("../../naous_swords/Hilt"), NodePath("../../naous_swords/Hilt_001"), NodePath("../../naous_swords/Hilt_002"), NodePath("../../naous_swords/Hilt_003"), NodePath("../../naous_swords/Hilt_004"), NodePath("../../naous_swords/Hilt_005"), NodePath("../../naous_swords/Hilt_006"), NodePath("../../naous_swords/Hilt_007"), NodePath("../../naous_swords/Hilt_008")]
+
+[node name="Label3D" type="Label3D" parent="tarnishedmoth/Node3D/Button Stand" unique_id=1183973093]
+transform = Transform3D(0.24000001, 0, 0, 0, 0.24000001, 0, 0, 0, 0.24000001, -0.07500076, 0.52923775, -0.31500244)
+pixel_size = 0.03
+modulate = Color(0, 0, 0, 1)
+text = "Clay"
+font_size = 24
+outline_size = 0
+
+[node name="PlayButtonStand" type="MeshInstance3D" parent="tarnishedmoth/Node3D/Button Stand" unique_id=432524272]
+transform = Transform3D(-6.29444e-09, 0, 0.14400001, 0, 0.14400001, 0, -0.14400001, 0, -6.29444e-09, -0.08000028, -1, -0.039999425)
+material_override = SubResource("StandardMaterial3D_880y8")
+mesh = ExtResource("10_43mwv")
+
+[node name="CollisionShapeStand" type="CollisionShape3D" parent="tarnishedmoth/Node3D/Button Stand" unique_id=1668333291]
+transform = Transform3D(-8.742277e-09, 0, -0.19999999, 0, 0.19999999, 0, 0.19999999, 0, -8.742277e-09, -0.099998474, 0.45, -0.050001144)
+shape = SubResource("BoxShape3D_7tbbo")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="tarnishedmoth/Node3D" unique_id=96068076]
+transform = Transform3D(-0.25881904, -0.68301284, -0.68301266, -3.0908627e-08, 0.70710677, -0.7071069, 0.9659259, -0.18301272, -0.1830127, -1.5, 1.5806923, 0)
+light_energy = 0.5
+light_specular = 1.0
+light_bake_mode = 0
+light_cull_mask = 4293918724
+distance_fade_enabled = true
+distance_fade_begin = 15.0
+spot_range = 4.5
+spot_attenuation = 0.0
+spot_angle = 71.24
+spot_angle_attenuation = 0.07432526
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="tarnishedmoth/Node3D" unique_id=451537772]
+transform = Transform3D(0.49999982, 0.6123725, 0.61237234, -3.0908616e-08, 0.7071067, -0.7071069, -0.86602527, 0.35355338, 0.35355332, 1.5, 1.6806922, 0)
+light_energy = 0.5
+light_specular = 1.0
+light_bake_mode = 0
+light_cull_mask = 4293918724
+distance_fade_enabled = true
+distance_fade_begin = 15.0
+spot_range = 4.5
+spot_attenuation = 0.0
+spot_angle = 71.24
+spot_angle_attenuation = 0.07432526
+
+[node name="Platform" type="StaticBody3D" parent="tarnishedmoth" unique_id=227829515]
+
+[node name="CSG" type="CSGCombiner3D" parent="tarnishedmoth/Platform" unique_id=1959797424]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="tarnishedmoth/Platform/CSG" unique_id=1501385525]
+size = Vector3(8, 0.75, 10)
+material = ExtResource("5_xaifo")
+
+[node name="DisplayBox" type="CSGBox3D" parent="tarnishedmoth/Platform/CSG" unique_id=1347245743]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+size = Vector3(0.75, 0.75, 5.5)
+material = ExtResource("8_p4vvg")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="tarnishedmoth/Platform/CSG/DisplayBox" unique_id=432453444]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.37809086, 0)
+operation = 2
+size = Vector3(0.125, 0.1, 5.25)
+material = ExtResource("9_ye0tm")
+
+[node name="CSGPolygonTemplate" parent="tarnishedmoth/Platform/CSG" unique_id=1136570024 instance=ExtResource("8_u45lx")]
+transform = Transform3D(-7.5, 0, -1.509958e-07, 0, 3, 0, 1.1324685e-06, 0, -1, 4.2612915, -3, -5.7934513)
+polygon = PackedVector2Array(0, 0.75, 0, 1, 1, 1, 1, 0.75, 0.66, 0.75, 0.48, 0.69, 0.32, 0.55, 0.2, 0.4, 0.14, 0.17, 0.05, 0, 0, 0)
+depth = 12.0
+material = ExtResource("9_hilkn")
+
+[node name="FrontGreeble" type="CSGBox3D" parent="tarnishedmoth/Platform/CSG" unique_id=715806218]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.533966, -0.45392036, 0.009643555)
+operation = 2
+size = Vector3(1.295, 1.25, 9.6)
+material = ExtResource("3_lvdt1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tarnishedmoth/Platform" unique_id=402829918]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14093018, -0.20150757, 0.19709778)
+shape = SubResource("BoxShape3D_xteo1")
+
+[editable path="tarnishedmoth/naous_swords"]
