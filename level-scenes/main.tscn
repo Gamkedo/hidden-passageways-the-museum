@@ -1634,8 +1634,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 1, -13.4)
 
 [node name="Button Stand" type="StaticBody3D" parent="Dev Pods Game Pictures/Game Frame with Button - Gladiator Example" unique_id=63349514]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, -1, 0.8999996)
-script = ExtResource("3_1bvp3")
-url = "https://tarnishedmoth.itch.io/gladiator-of-the-golden-house"
+script = ExtResource("3_7mycd")
+goto_scene = "uid://bu5ybpneao340"
 
 [node name="Button image" type="MeshInstance3D" parent="Dev Pods Game Pictures/Game Frame with Button - Gladiator Example/Button Stand" unique_id=1396255101]
 transform = Transform3D(0.44582403, 0, 0, 0, 0.27519998, 0, 1.1368682e-14, 0, 0.031999994, -0.06468767, 0.46111998, -0.3172)
