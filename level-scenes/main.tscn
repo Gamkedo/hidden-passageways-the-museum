@@ -52,6 +52,7 @@
 [ext_resource type="ArrayMesh" uid="uid://cm2soemey2m52" path="res://models/play-button-stand.obj" id="35_u5gq0"]
 [ext_resource type="Texture2D" uid="uid://cpakvdnl3rxxa" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/gladiator-framed-pic.png" id="36_u5gq0"]
 [ext_resource type="Script" uid="uid://cm6176wsxfdqx" path="res://entities-scene_prefabs/tracklights/tracklight.gd" id="43_0m503"]
+[ext_resource type="PackedScene" uid="uid://dgahdbu6k5v7a" path="res://entities-scene_prefabs/fire_extinguisher.tscn" id="53_mj7h6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_iixjk"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -396,24 +397,25 @@ light_energy = 0.25
 light_specular = 0.0
 sky_mode = 1
 
-[node name="TestTracklights" type="Node3D" parent="." unique_id=724158392]
+[node name="Light Fixtures" type="Node3D" parent="." unique_id=725833799]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="TestTracklights" unique_id=1488054082]
-transform = Transform3D(-1, 0, 1.1920929e-07, 0, 1, 0, -1.1920929e-07, 0, -1, 36.508755, -9.204277, 32.005657)
+[node name="TestTracklights" type="Node3D" parent="Light Fixtures" unique_id=724158392]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Light Fixtures/TestTracklights" unique_id=1488054082]
+transform = Transform3D(-1, 0, 1.1920929e-07, 0, 1, 0, -1.1920929e-07, 0, -1, 36.508755, -9.204277, 33.09507)
 mesh = SubResource("SphereMesh_xteo1")
 
-[node name="Label3D" type="Label3D" parent="TestTracklights/MeshInstance3D" unique_id=1420183524]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.721653, 1.4510584, 0)
+[node name="Label3D" type="Label3D" parent="Light Fixtures/TestTracklights/MeshInstance3D" unique_id=1420183524]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.721653, 1.8818955, 0)
 pixel_size = 0.008
 text = "This track light combines realtime dynamic lights,
 and transparent quad mesh \"projected\" lights.
-They smoothly crossfade to optimize scenes with many lights.
-The rest of the tracklights in this scene use no true lighting."
+They smoothly crossfade to optimize scenes with many lights."
 vertical_alignment = 2
 line_spacing = 8.0
 
-[node name="Autotracklight" type="CSGCombiner3D" parent="TestTracklights" unique_id=1182993890]
-transform = Transform3D(-1, 0, 1.1920929e-07, 0, 1, 0, -1.1920929e-07, 0, -1, 36.508755, -6, 26.469524)
+[node name="Autotracklight" type="CSGCombiner3D" parent="Light Fixtures/TestTracklights" unique_id=1182993890]
+transform = Transform3D(-1, 0, 1.1920929e-07, 0, 1, 0, -1.1920929e-07, 0, -1, 36.508755, -6, 27.02396)
 script = ExtResource("43_0m503")
 track_length = 12.0
 track_height = 0.2
@@ -430,26 +432,26 @@ mats_track = ExtResource("3_5dt3m")
 mats_cable = ExtResource("4_kl5ay")
 metadata/_custom_type_script = "uid://cm6176wsxfdqx"
 
-[node name="@CSGPolygon3D@96935" type="CSGPolygon3D" parent="TestTracklights/Autotracklight" unique_id=79337435]
+[node name="@CSGPolygon3D@96935" type="CSGPolygon3D" parent="Light Fixtures/TestTracklights/Autotracklight" unique_id=79337435]
 polygon = PackedVector2Array(-0.25, 0, -0.25, 0.12, -0.1, 0.2, 0.1, 0.2, 0.25, 0.12, 0.25, 0)
 depth = 12.0
 material = ExtResource("3_5dt3m")
 
-[node name="@MeshInstance3D@96936" type="MeshInstance3D" parent="TestTracklights/Autotracklight" unique_id=1691913439]
+[node name="@MeshInstance3D@96936" type="MeshInstance3D" parent="Light Fixtures/TestTracklights/Autotracklight" unique_id=1691913439]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1013763, -1)
 mesh = SubResource("BoxMesh_3lbo0")
 
-[node name="@MeshInstance3D@96937" type="MeshInstance3D" parent="TestTracklights/Autotracklight" unique_id=924567478]
+[node name="@MeshInstance3D@96937" type="MeshInstance3D" parent="Light Fixtures/TestTracklights/Autotracklight" unique_id=924567478]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1013763, -11)
 mesh = SubResource("BoxMesh_x4vg3")
 
-[node name="@CSGBox3D@96940" type="CSGBox3D" parent="TestTracklights/Autotracklight" unique_id=1306766591]
+[node name="@CSGBox3D@96940" type="CSGBox3D" parent="Light Fixtures/TestTracklights/Autotracklight" unique_id=1306766591]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -2)
 operation = 2
 size = Vector3(0.2, 0.25, 0.2)
 material = ExtResource("3_yuneh")
 
-[node name="@SpotLight3D@96938" type="SpotLight3D" parent="TestTracklights/Autotracklight/@CSGBox3D@96940" unique_id=1062718027]
+[node name="@SpotLight3D@96938" type="SpotLight3D" parent="Light Fixtures/TestTracklights/Autotracklight/@CSGBox3D@96940" unique_id=1062718027]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 light_energy = 2.0
 light_size = 0.05
@@ -461,17 +463,17 @@ distance_fade_length = 5.0
 spot_range = 10.0
 spot_angle = 30.0
 
-[node name="@MeshInstance3D@96939" type="MeshInstance3D" parent="TestTracklights/Autotracklight/@CSGBox3D@96940" unique_id=1447557100]
+[node name="@MeshInstance3D@96939" type="MeshInstance3D" parent="Light Fixtures/TestTracklights/Autotracklight/@CSGBox3D@96940" unique_id=1447557100]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.8826427, 0)
 mesh = SubResource("QuadMesh_rr0nd")
 
-[node name="@CSGBox3D@96943" type="CSGBox3D" parent="TestTracklights/Autotracklight" unique_id=2014577798]
+[node name="@CSGBox3D@96943" type="CSGBox3D" parent="Light Fixtures/TestTracklights/Autotracklight" unique_id=2014577798]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -6)
 operation = 2
 size = Vector3(0.2, 0.25, 0.2)
 material = ExtResource("3_yuneh")
 
-[node name="@SpotLight3D@96941" type="SpotLight3D" parent="TestTracklights/Autotracklight/@CSGBox3D@96943" unique_id=725519342]
+[node name="@SpotLight3D@96941" type="SpotLight3D" parent="Light Fixtures/TestTracklights/Autotracklight/@CSGBox3D@96943" unique_id=725519342]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 light_energy = 2.0
 light_size = 0.05
@@ -483,17 +485,17 @@ distance_fade_length = 5.0
 spot_range = 10.0
 spot_angle = 30.0
 
-[node name="@MeshInstance3D@96942" type="MeshInstance3D" parent="TestTracklights/Autotracklight/@CSGBox3D@96943" unique_id=1894663796]
+[node name="@MeshInstance3D@96942" type="MeshInstance3D" parent="Light Fixtures/TestTracklights/Autotracklight/@CSGBox3D@96943" unique_id=1894663796]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.8826427, 0)
 mesh = SubResource("QuadMesh_c6q64")
 
-[node name="@CSGBox3D@96946" type="CSGBox3D" parent="TestTracklights/Autotracklight" unique_id=346851268]
+[node name="@CSGBox3D@96946" type="CSGBox3D" parent="Light Fixtures/TestTracklights/Autotracklight" unique_id=346851268]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -10)
 operation = 2
 size = Vector3(0.2, 0.25, 0.2)
 material = ExtResource("3_yuneh")
 
-[node name="@SpotLight3D@96944" type="SpotLight3D" parent="TestTracklights/Autotracklight/@CSGBox3D@96946" unique_id=1416849330]
+[node name="@SpotLight3D@96944" type="SpotLight3D" parent="Light Fixtures/TestTracklights/Autotracklight/@CSGBox3D@96946" unique_id=1416849330]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 light_energy = 2.0
 light_size = 0.05
@@ -505,11 +507,11 @@ distance_fade_length = 5.0
 spot_range = 10.0
 spot_angle = 30.0
 
-[node name="@MeshInstance3D@96945" type="MeshInstance3D" parent="TestTracklights/Autotracklight/@CSGBox3D@96946" unique_id=1397539555]
+[node name="@MeshInstance3D@96945" type="MeshInstance3D" parent="Light Fixtures/TestTracklights/Autotracklight/@CSGBox3D@96946" unique_id=1397539555]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.8826427, 0)
 mesh = SubResource("QuadMesh_v80x0")
 
-[node name="SkinnyLight" type="CSGCombiner3D" parent="." unique_id=259970494]
+[node name="SkinnyLight" type="CSGCombiner3D" parent="Light Fixtures" unique_id=259970494]
 transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 39.50217, 5.002747, 39.499657)
 script = ExtResource("43_0m503")
 track_height = 0.15
@@ -524,40 +526,40 @@ mats_track = ExtResource("4_kl5ay")
 mats_cable = ExtResource("4_kl5ay")
 metadata/_custom_type_script = "uid://cm6176wsxfdqx"
 
-[node name="@CSGPolygon3D@99237" type="CSGPolygon3D" parent="SkinnyLight" unique_id=2058539230]
+[node name="@CSGPolygon3D@99237" type="CSGPolygon3D" parent="Light Fixtures/SkinnyLight" unique_id=2058539230]
 polygon = PackedVector2Array(-0.15, 0, -0.15, 0.12, -0.06, 0.15, 0.06, 0.15, 0.15, 0.12, 0.15, 0)
 depth = 3.0
 material = ExtResource("4_kl5ay")
 
-[node name="@MeshInstance3D@99238" type="MeshInstance3D" parent="SkinnyLight" unique_id=768914261]
+[node name="@MeshInstance3D@99238" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight" unique_id=768914261]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5724987, -0.5)
 mesh = SubResource("BoxMesh_gbu3n")
 
-[node name="@MeshInstance3D@99239" type="MeshInstance3D" parent="SkinnyLight" unique_id=772026803]
+[node name="@MeshInstance3D@99239" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight" unique_id=772026803]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5724987, -2.5)
 mesh = SubResource("BoxMesh_880y8")
 
-[node name="@CSGBox3D@99241" type="CSGBox3D" parent="SkinnyLight" unique_id=77617636]
+[node name="@CSGBox3D@99241" type="CSGBox3D" parent="Light Fixtures/SkinnyLight" unique_id=77617636]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -0.75)
 operation = 2
 size = Vector3(0.12, 0.25, 0.12)
 material = ExtResource("3_yuneh")
 
-[node name="@MeshInstance3D@99240" type="MeshInstance3D" parent="SkinnyLight/@CSGBox3D@99241" unique_id=1673983069]
+[node name="@MeshInstance3D@99240" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight/@CSGBox3D@99241" unique_id=1673983069]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.9100037, 0)
 mesh = SubResource("QuadMesh_nw8jh")
 
-[node name="@CSGBox3D@99243" type="CSGBox3D" parent="SkinnyLight" unique_id=2042809049]
+[node name="@CSGBox3D@99243" type="CSGBox3D" parent="Light Fixtures/SkinnyLight" unique_id=2042809049]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -2.25)
 operation = 2
 size = Vector3(0.12, 0.25, 0.12)
 material = ExtResource("3_yuneh")
 
-[node name="@MeshInstance3D@99242" type="MeshInstance3D" parent="SkinnyLight/@CSGBox3D@99243" unique_id=421435067]
+[node name="@MeshInstance3D@99242" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight/@CSGBox3D@99243" unique_id=421435067]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.9100037, 0)
 mesh = SubResource("QuadMesh_oa8v2")
 
-[node name="SkinnyLight2" type="CSGCombiner3D" parent="." unique_id=1387717097]
+[node name="SkinnyLight2" type="CSGCombiner3D" parent="Light Fixtures" unique_id=1387717097]
 transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 39.50217, 5.002747, 22.499657)
 script = ExtResource("43_0m503")
 track_height = 0.15
@@ -572,40 +574,40 @@ mats_track = ExtResource("4_kl5ay")
 mats_cable = ExtResource("4_kl5ay")
 metadata/_custom_type_script = "uid://cm6176wsxfdqx"
 
-[node name="@CSGPolygon3D@98636" type="CSGPolygon3D" parent="SkinnyLight2" unique_id=1861490069]
+[node name="@CSGPolygon3D@98636" type="CSGPolygon3D" parent="Light Fixtures/SkinnyLight2" unique_id=1861490069]
 polygon = PackedVector2Array(-0.15, 0, -0.15, 0.12, -0.06, 0.15, 0.06, 0.15, 0.15, 0.12, 0.15, 0)
 depth = 3.0
 material = ExtResource("4_kl5ay")
 
-[node name="@MeshInstance3D@98637" type="MeshInstance3D" parent="SkinnyLight2" unique_id=1889250058]
+[node name="@MeshInstance3D@98637" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight2" unique_id=1889250058]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5724987, -0.5)
 mesh = SubResource("BoxMesh_xub5d")
 
-[node name="@MeshInstance3D@98638" type="MeshInstance3D" parent="SkinnyLight2" unique_id=1255176430]
+[node name="@MeshInstance3D@98638" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight2" unique_id=1255176430]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5724987, -2.5)
 mesh = SubResource("BoxMesh_iit47")
 
-[node name="@CSGBox3D@98640" type="CSGBox3D" parent="SkinnyLight2" unique_id=682935590]
+[node name="@CSGBox3D@98640" type="CSGBox3D" parent="Light Fixtures/SkinnyLight2" unique_id=682935590]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -0.75)
 operation = 2
 size = Vector3(0.12, 0.25, 0.12)
 material = ExtResource("3_yuneh")
 
-[node name="@MeshInstance3D@98639" type="MeshInstance3D" parent="SkinnyLight2/@CSGBox3D@98640" unique_id=941543533]
+[node name="@MeshInstance3D@98639" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight2/@CSGBox3D@98640" unique_id=941543533]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.9100046, 0)
 mesh = SubResource("QuadMesh_fof07")
 
-[node name="@CSGBox3D@98642" type="CSGBox3D" parent="SkinnyLight2" unique_id=1305872348]
+[node name="@CSGBox3D@98642" type="CSGBox3D" parent="Light Fixtures/SkinnyLight2" unique_id=1305872348]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -2.25)
 operation = 2
 size = Vector3(0.12, 0.25, 0.12)
 material = ExtResource("3_yuneh")
 
-[node name="@MeshInstance3D@98641" type="MeshInstance3D" parent="SkinnyLight2/@CSGBox3D@98642" unique_id=172298442]
+[node name="@MeshInstance3D@98641" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight2/@CSGBox3D@98642" unique_id=172298442]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.910004, 0)
 mesh = SubResource("QuadMesh_1tes7")
 
-[node name="SkinnyLight3" type="CSGCombiner3D" parent="." unique_id=1603337215]
+[node name="SkinnyLight3" type="CSGCombiner3D" parent="Light Fixtures" unique_id=1603337215]
 transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 13.502171, 5.002747, 39.499657)
 script = ExtResource("43_0m503")
 track_height = 0.15
@@ -620,40 +622,40 @@ mats_track = ExtResource("4_kl5ay")
 mats_cable = ExtResource("4_kl5ay")
 metadata/_custom_type_script = "uid://cm6176wsxfdqx"
 
-[node name="@CSGPolygon3D@100432" type="CSGPolygon3D" parent="SkinnyLight3" unique_id=1971911878]
+[node name="@CSGPolygon3D@100432" type="CSGPolygon3D" parent="Light Fixtures/SkinnyLight3" unique_id=1971911878]
 polygon = PackedVector2Array(-0.15, 0, -0.15, 0.12, -0.06, 0.15, 0.06, 0.15, 0.15, 0.12, 0.15, 0)
 depth = 3.0
 material = ExtResource("4_kl5ay")
 
-[node name="@MeshInstance3D@100433" type="MeshInstance3D" parent="SkinnyLight3" unique_id=1609753281]
+[node name="@MeshInstance3D@100433" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight3" unique_id=1609753281]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5724987, -0.5)
 mesh = SubResource("BoxMesh_8lwxr")
 
-[node name="@MeshInstance3D@100434" type="MeshInstance3D" parent="SkinnyLight3" unique_id=337272612]
+[node name="@MeshInstance3D@100434" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight3" unique_id=337272612]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5724987, -2.5)
 mesh = SubResource("BoxMesh_ktaoq")
 
-[node name="@CSGBox3D@100436" type="CSGBox3D" parent="SkinnyLight3" unique_id=163779591]
+[node name="@CSGBox3D@100436" type="CSGBox3D" parent="Light Fixtures/SkinnyLight3" unique_id=163779591]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -0.75)
 operation = 2
 size = Vector3(0.12, 0.25, 0.12)
 material = ExtResource("3_yuneh")
 
-[node name="@MeshInstance3D@100435" type="MeshInstance3D" parent="SkinnyLight3/@CSGBox3D@100436" unique_id=1513016718]
+[node name="@MeshInstance3D@100435" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight3/@CSGBox3D@100436" unique_id=1513016718]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.9100037, 0)
 mesh = SubResource("QuadMesh_ub3ge")
 
-[node name="@CSGBox3D@100438" type="CSGBox3D" parent="SkinnyLight3" unique_id=215841602]
+[node name="@CSGBox3D@100438" type="CSGBox3D" parent="Light Fixtures/SkinnyLight3" unique_id=215841602]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -2.25)
 operation = 2
 size = Vector3(0.12, 0.25, 0.12)
 material = ExtResource("3_yuneh")
 
-[node name="@MeshInstance3D@100437" type="MeshInstance3D" parent="SkinnyLight3/@CSGBox3D@100438" unique_id=1195100638]
+[node name="@MeshInstance3D@100437" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight3/@CSGBox3D@100438" unique_id=1195100638]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.9100037, 0)
 mesh = SubResource("QuadMesh_42c7c")
 
-[node name="SkinnyLight4" type="CSGCombiner3D" parent="." unique_id=1579856636]
+[node name="SkinnyLight4" type="CSGCombiner3D" parent="Light Fixtures" unique_id=1579856636]
 transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 13.502171, 5.002747, 22.499657)
 script = ExtResource("43_0m503")
 track_height = 0.15
@@ -669,40 +671,40 @@ mats_track = ExtResource("4_kl5ay")
 mats_cable = ExtResource("4_kl5ay")
 metadata/_custom_type_script = "uid://cm6176wsxfdqx"
 
-[node name="@CSGPolygon3D@101036" type="CSGPolygon3D" parent="SkinnyLight4" unique_id=233738889]
+[node name="@CSGPolygon3D@101036" type="CSGPolygon3D" parent="Light Fixtures/SkinnyLight4" unique_id=233738889]
 polygon = PackedVector2Array(-0.15, 0, -0.15, 0.12, -0.06, 0.15, 0.06, 0.15, 0.15, 0.12, 0.15, 0)
 depth = 3.0
 material = ExtResource("4_kl5ay")
 
-[node name="@MeshInstance3D@101037" type="MeshInstance3D" parent="SkinnyLight4" unique_id=749943186]
+[node name="@MeshInstance3D@101037" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight4" unique_id=749943186]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5724987, -0.5)
 mesh = SubResource("BoxMesh_uq4bu")
 
-[node name="@MeshInstance3D@101038" type="MeshInstance3D" parent="SkinnyLight4" unique_id=1161668388]
+[node name="@MeshInstance3D@101038" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight4" unique_id=1161668388]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5724987, -2.5)
 mesh = SubResource("BoxMesh_clxtu")
 
-[node name="@CSGBox3D@101040" type="CSGBox3D" parent="SkinnyLight4" unique_id=91394663]
+[node name="@CSGBox3D@101040" type="CSGBox3D" parent="Light Fixtures/SkinnyLight4" unique_id=91394663]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -0.75)
 operation = 2
 size = Vector3(0.12, 0.25, 0.12)
 material = ExtResource("3_yuneh")
 
-[node name="@MeshInstance3D@101039" type="MeshInstance3D" parent="SkinnyLight4/@CSGBox3D@101040" unique_id=439969800]
+[node name="@MeshInstance3D@101039" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight4/@CSGBox3D@101040" unique_id=439969800]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.9100046, 0)
 mesh = SubResource("QuadMesh_jyhy3")
 
-[node name="@CSGBox3D@101042" type="CSGBox3D" parent="SkinnyLight4" unique_id=995845688]
+[node name="@CSGBox3D@101042" type="CSGBox3D" parent="Light Fixtures/SkinnyLight4" unique_id=995845688]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -2.25)
 operation = 2
 size = Vector3(0.12, 0.25, 0.12)
 material = ExtResource("3_yuneh")
 
-[node name="@MeshInstance3D@101041" type="MeshInstance3D" parent="SkinnyLight4/@CSGBox3D@101042" unique_id=1779990634]
+[node name="@MeshInstance3D@101041" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight4/@CSGBox3D@101042" unique_id=1779990634]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.9100046, 0)
 mesh = SubResource("QuadMesh_u2fsq")
 
-[node name="SkinnyLight5" type="CSGCombiner3D" parent="." unique_id=890406783]
+[node name="SkinnyLight5" type="CSGCombiner3D" parent="Light Fixtures" unique_id=890406783]
 transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 13.589249, -4.997253, 28.981344)
 script = ExtResource("43_0m503")
 track_height = 0.15
@@ -718,40 +720,40 @@ mats_track = ExtResource("4_kl5ay")
 mats_cable = ExtResource("4_kl5ay")
 metadata/_custom_type_script = "uid://cm6176wsxfdqx"
 
-[node name="@CSGPolygon3D@102846" type="CSGPolygon3D" parent="SkinnyLight5" unique_id=487919758]
+[node name="@CSGPolygon3D@102846" type="CSGPolygon3D" parent="Light Fixtures/SkinnyLight5" unique_id=487919758]
 polygon = PackedVector2Array(-0.15, 0, -0.15, 0.12, -0.06, 0.15, 0.06, 0.15, 0.15, 0.12, 0.15, 0)
 depth = 3.0
 material = ExtResource("4_kl5ay")
 
-[node name="@MeshInstance3D@102847" type="MeshInstance3D" parent="SkinnyLight5" unique_id=1581599367]
+[node name="@MeshInstance3D@102847" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight5" unique_id=1581599367]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5750026, -0.5)
 mesh = SubResource("BoxMesh_cph74")
 
-[node name="@MeshInstance3D@102848" type="MeshInstance3D" parent="SkinnyLight5" unique_id=1364250552]
+[node name="@MeshInstance3D@102848" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight5" unique_id=1364250552]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5750026, -2.5)
 mesh = SubResource("BoxMesh_wadld")
 
-[node name="@CSGBox3D@102850" type="CSGBox3D" parent="SkinnyLight5" unique_id=344331146]
+[node name="@CSGBox3D@102850" type="CSGBox3D" parent="Light Fixtures/SkinnyLight5" unique_id=344331146]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -0.75)
 operation = 2
 size = Vector3(0.12, 0.25, 0.12)
 material = ExtResource("3_yuneh")
 
-[node name="@MeshInstance3D@102849" type="MeshInstance3D" parent="SkinnyLight5/@CSGBox3D@102850" unique_id=1080143609]
+[node name="@MeshInstance3D@102849" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight5/@CSGBox3D@102850" unique_id=1080143609]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.88539, 0)
 mesh = SubResource("QuadMesh_ovxnu")
 
-[node name="@CSGBox3D@102852" type="CSGBox3D" parent="SkinnyLight5" unique_id=1872740758]
+[node name="@CSGBox3D@102852" type="CSGBox3D" parent="Light Fixtures/SkinnyLight5" unique_id=1872740758]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -2.25)
 operation = 2
 size = Vector3(0.12, 0.25, 0.12)
 material = ExtResource("3_yuneh")
 
-[node name="@MeshInstance3D@102851" type="MeshInstance3D" parent="SkinnyLight5/@CSGBox3D@102852" unique_id=584570905]
+[node name="@MeshInstance3D@102851" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight5/@CSGBox3D@102852" unique_id=584570905]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.88539, 0)
 mesh = SubResource("QuadMesh_3tvjp")
 
-[node name="SkinnyLight6" type="CSGCombiner3D" parent="." unique_id=1127410809]
+[node name="SkinnyLight6" type="CSGCombiner3D" parent="Light Fixtures" unique_id=1127410809]
 transform = Transform3D(-4.569558e-08, 0, 1, 0, 1, 0, -1, 0, -4.569558e-08, 21.589249, -4.997253, 21.981344)
 script = ExtResource("43_0m503")
 track_height = 0.15
@@ -767,40 +769,40 @@ mats_track = ExtResource("4_kl5ay")
 mats_cable = ExtResource("4_kl5ay")
 metadata/_custom_type_script = "uid://cm6176wsxfdqx"
 
-[node name="@CSGPolygon3D@102231" type="CSGPolygon3D" parent="SkinnyLight6" unique_id=1236786487]
+[node name="@CSGPolygon3D@102231" type="CSGPolygon3D" parent="Light Fixtures/SkinnyLight6" unique_id=1236786487]
 polygon = PackedVector2Array(-0.15, 0, -0.15, 0.12, -0.06, 0.15, 0.06, 0.15, 0.15, 0.12, 0.15, 0)
 depth = 3.0
 material = ExtResource("4_kl5ay")
 
-[node name="@MeshInstance3D@102232" type="MeshInstance3D" parent="SkinnyLight6" unique_id=524646569]
+[node name="@MeshInstance3D@102232" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight6" unique_id=524646569]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5750026, -0.5)
 mesh = SubResource("BoxMesh_e37vr")
 
-[node name="@MeshInstance3D@102233" type="MeshInstance3D" parent="SkinnyLight6" unique_id=1033562802]
+[node name="@MeshInstance3D@102233" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight6" unique_id=1033562802]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5750026, -2.5)
 mesh = SubResource("BoxMesh_6oq67")
 
-[node name="@CSGBox3D@102235" type="CSGBox3D" parent="SkinnyLight6" unique_id=1170617382]
+[node name="@CSGBox3D@102235" type="CSGBox3D" parent="Light Fixtures/SkinnyLight6" unique_id=1170617382]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -0.75)
 operation = 2
 size = Vector3(0.12, 0.25, 0.12)
 material = ExtResource("3_yuneh")
 
-[node name="@MeshInstance3D@102234" type="MeshInstance3D" parent="SkinnyLight6/@CSGBox3D@102235" unique_id=1375738040]
+[node name="@MeshInstance3D@102234" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight6/@CSGBox3D@102235" unique_id=1375738040]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9073486e-06, -5.88539, 0)
 mesh = SubResource("QuadMesh_anu3i")
 
-[node name="@CSGBox3D@102237" type="CSGBox3D" parent="SkinnyLight6" unique_id=101630449]
+[node name="@CSGBox3D@102237" type="CSGBox3D" parent="Light Fixtures/SkinnyLight6" unique_id=101630449]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -2.25)
 operation = 2
 size = Vector3(0.12, 0.25, 0.12)
 material = ExtResource("3_yuneh")
 
-[node name="@MeshInstance3D@102236" type="MeshInstance3D" parent="SkinnyLight6/@CSGBox3D@102237" unique_id=648174314]
+[node name="@MeshInstance3D@102236" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight6/@CSGBox3D@102237" unique_id=648174314]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9073486e-06, -5.88539, 0)
 mesh = SubResource("QuadMesh_14tmg")
 
-[node name="FeatureLight" type="CSGCombiner3D" parent="." unique_id=885320061]
+[node name="FeatureLight" type="CSGCombiner3D" parent="Light Fixtures" unique_id=885320061]
 transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 18.589254, -2.997253, 28.981339)
 script = ExtResource("43_0m503")
 track_length = 2.5
@@ -820,40 +822,40 @@ mats_track = ExtResource("3_5dt3m")
 mats_cable = ExtResource("4_kl5ay")
 metadata/_custom_type_script = "uid://cm6176wsxfdqx"
 
-[node name="@CSGPolygon3D@93389" type="CSGPolygon3D" parent="FeatureLight" unique_id=1466790805]
+[node name="@CSGPolygon3D@93389" type="CSGPolygon3D" parent="Light Fixtures/FeatureLight" unique_id=1466790805]
 polygon = PackedVector2Array(-0.375, 0, -0.375, 0.4, -0.09375, 4, 0.09375, 4, 0.375, 0.4, 0.375, 0)
 depth = 2.5
 material = ExtResource("3_5dt3m")
 
-[node name="@MeshInstance3D@93390" type="MeshInstance3D" parent="FeatureLight" unique_id=1650148183]
+[node name="@MeshInstance3D@93390" type="MeshInstance3D" parent="Light Fixtures/FeatureLight" unique_id=1650148183]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.4974985, -0.5)
 mesh = SubResource("BoxMesh_tbq01")
 
-[node name="@MeshInstance3D@93391" type="MeshInstance3D" parent="FeatureLight" unique_id=1050293011]
+[node name="@MeshInstance3D@93391" type="MeshInstance3D" parent="Light Fixtures/FeatureLight" unique_id=1050293011]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.4974985, -2)
 mesh = SubResource("BoxMesh_mj7h6")
 
-[node name="@CSGBox3D@93393" type="CSGBox3D" parent="FeatureLight" unique_id=232150570]
+[node name="@CSGBox3D@93393" type="CSGBox3D" parent="Light Fixtures/FeatureLight" unique_id=232150570]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -0.625)
 operation = 2
 size = Vector3(0.3, 0.25, 0.15)
 material = ExtResource("3_yuneh")
 
-[node name="@MeshInstance3D@93392" type="MeshInstance3D" parent="FeatureLight/@CSGBox3D@93393" unique_id=1564462034]
+[node name="@MeshInstance3D@93392" type="MeshInstance3D" parent="Light Fixtures/FeatureLight/@CSGBox3D@93393" unique_id=1564462034]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.88539, 0)
 mesh = SubResource("QuadMesh_880y8")
 
-[node name="@CSGBox3D@93395" type="CSGBox3D" parent="FeatureLight" unique_id=189760991]
+[node name="@CSGBox3D@93395" type="CSGBox3D" parent="Light Fixtures/FeatureLight" unique_id=189760991]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -1.875)
 operation = 2
 size = Vector3(0.3, 0.25, 0.15)
 material = ExtResource("3_yuneh")
 
-[node name="@MeshInstance3D@93394" type="MeshInstance3D" parent="FeatureLight/@CSGBox3D@93395" unique_id=664948523]
+[node name="@MeshInstance3D@93394" type="MeshInstance3D" parent="Light Fixtures/FeatureLight/@CSGBox3D@93395" unique_id=664948523]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.88539, 0)
 mesh = SubResource("QuadMesh_ogkr3")
 
-[node name="FeatureLight2" type="CSGCombiner3D" parent="." unique_id=1112301362]
+[node name="FeatureLight2" type="CSGCombiner3D" parent="Light Fixtures" unique_id=1112301362]
 transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 34.589256, -2.997253, 28.981339)
 script = ExtResource("43_0m503")
 track_length = 2.5
@@ -873,28 +875,28 @@ mats_track = ExtResource("3_5dt3m")
 mats_cable = ExtResource("4_kl5ay")
 metadata/_custom_type_script = "uid://cm6176wsxfdqx"
 
-[node name="@CSGPolygon3D@94064" type="CSGPolygon3D" parent="FeatureLight2" unique_id=1056245816]
+[node name="@CSGPolygon3D@94064" type="CSGPolygon3D" parent="Light Fixtures/FeatureLight2" unique_id=1056245816]
 polygon = PackedVector2Array(-0.375, 0, -0.375, 0.4, -0.09375, 4, 0.09375, 4, 0.375, 0.4, 0.375, 0)
 depth = 2.5
 material = ExtResource("3_5dt3m")
 
-[node name="@MeshInstance3D@94065" type="MeshInstance3D" parent="FeatureLight2" unique_id=472313040]
+[node name="@MeshInstance3D@94065" type="MeshInstance3D" parent="Light Fixtures/FeatureLight2" unique_id=472313040]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.4974985, -0.5)
 mesh = SubResource("BoxMesh_27nw5")
 
-[node name="@MeshInstance3D@94066" type="MeshInstance3D" parent="FeatureLight2" unique_id=868818948]
+[node name="@MeshInstance3D@94066" type="MeshInstance3D" parent="Light Fixtures/FeatureLight2" unique_id=868818948]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.4974985, -2)
 mesh = SubResource("BoxMesh_b2w3e")
 
-[node name="Lightshaft" type="MeshInstance3D" parent="." unique_id=160108649]
+[node name="Lightshaft" type="MeshInstance3D" parent="Light Fixtures" unique_id=160108649]
 transform = Transform3D(-1.7484556e-08, 0, 1, 0, 1, 0, -0.4, 0, -4.371139e-08, 30.002169, 2.520017, 39.499657)
 mesh = SubResource("CylinderMesh_xteo1")
 
-[node name="Lightshaft2" type="MeshInstance3D" parent="." unique_id=1668884693]
+[node name="Lightshaft2" type="MeshInstance3D" parent="Light Fixtures" unique_id=1668884693]
 transform = Transform3D(-1.7484556e-08, 0, 1, 0, 1, 0, -0.4, 0, -4.371139e-08, 23.002169, 2.520017, 39.499657)
 mesh = SubResource("CylinderMesh_xteo1")
 
-[node name="LongBarLight" type="CSGCombiner3D" parent="." unique_id=1376952222]
+[node name="LongBarLight" type="CSGCombiner3D" parent="Light Fixtures" unique_id=1376952222]
 transform = Transform3D(-4.569558e-08, 0, 1, 0, 1, 0, -1, 0, -4.569558e-08, 33.50217, 6.002747, 39.499657)
 script = ExtResource("43_0m503")
 track_length = 14.0
@@ -908,26 +910,26 @@ mats_track = ExtResource("3_5dt3m")
 mats_cable = ExtResource("4_kl5ay")
 metadata/_custom_type_script = "uid://cm6176wsxfdqx"
 
-[node name="@CSGPolygon3D@46372" type="CSGPolygon3D" parent="LongBarLight" unique_id=1488336675]
+[node name="@CSGPolygon3D@46372" type="CSGPolygon3D" parent="Light Fixtures/LongBarLight" unique_id=1488336675]
 polygon = PackedVector2Array(-0.15, 0, -0.15, 0.3, -0.06, 0.5, 0.06, 0.5, 0.15, 0.3, 0.15, 0)
 depth = 14.0
 material = ExtResource("3_5dt3m")
 
-[node name="@MeshInstance3D@46373" type="MeshInstance3D" parent="LongBarLight" unique_id=1954872120]
+[node name="@MeshInstance3D@46373" type="MeshInstance3D" parent="Light Fixtures/LongBarLight" unique_id=1954872120]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2474988, -0.5)
 mesh = SubResource("BoxMesh_ogkr3")
 
-[node name="@MeshInstance3D@46374" type="MeshInstance3D" parent="LongBarLight" unique_id=48761809]
+[node name="@MeshInstance3D@46374" type="MeshInstance3D" parent="Light Fixtures/LongBarLight" unique_id=48761809]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2474988, -13.5)
 mesh = SubResource("BoxMesh_nw8jh")
 
-[node name="@CSGBox3D@46377" type="CSGBox3D" parent="LongBarLight" unique_id=1501622709]
+[node name="@CSGBox3D@46377" type="CSGBox3D" parent="Light Fixtures/LongBarLight" unique_id=1501622709]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -3.5)
 operation = 2
 size = Vector3(0.12, 0.25, 1.2)
 material = ExtResource("3_yuneh")
 
-[node name="@SpotLight3D@46375" type="SpotLight3D" parent="LongBarLight/@CSGBox3D@46377" unique_id=68616776]
+[node name="@SpotLight3D@46375" type="SpotLight3D" parent="Light Fixtures/LongBarLight/@CSGBox3D@46377" unique_id=68616776]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 light_energy = 2.0
 light_size = 0.05
@@ -939,17 +941,17 @@ distance_fade_length = 5.0
 spot_range = 12.0
 spot_angle = 35.0
 
-[node name="@MeshInstance3D@46376" type="MeshInstance3D" parent="LongBarLight/@CSGBox3D@46377" unique_id=1158383673]
+[node name="@MeshInstance3D@46376" type="MeshInstance3D" parent="Light Fixtures/LongBarLight/@CSGBox3D@46377" unique_id=1158383673]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.9100037, -1.9073486e-06)
 mesh = SubResource("QuadMesh_27nw5")
 
-[node name="@CSGBox3D@46380" type="CSGBox3D" parent="LongBarLight" unique_id=1260039058]
+[node name="@CSGBox3D@46380" type="CSGBox3D" parent="Light Fixtures/LongBarLight" unique_id=1260039058]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -10.5)
 operation = 2
 size = Vector3(0.12, 0.25, 1.2)
 material = ExtResource("3_yuneh")
 
-[node name="@SpotLight3D@46378" type="SpotLight3D" parent="LongBarLight/@CSGBox3D@46380" unique_id=242655778]
+[node name="@SpotLight3D@46378" type="SpotLight3D" parent="Light Fixtures/LongBarLight/@CSGBox3D@46380" unique_id=242655778]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 light_energy = 2.0
 light_size = 0.05
@@ -961,11 +963,11 @@ distance_fade_length = 5.0
 spot_range = 12.0
 spot_angle = 35.0
 
-[node name="@MeshInstance3D@46379" type="MeshInstance3D" parent="LongBarLight/@CSGBox3D@46380" unique_id=1521875278]
+[node name="@MeshInstance3D@46379" type="MeshInstance3D" parent="Light Fixtures/LongBarLight/@CSGBox3D@46380" unique_id=1521875278]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.9100037, -1.9073486e-06)
 mesh = SubResource("QuadMesh_b2w3e")
 
-[node name="LongBarLight2" type="CSGCombiner3D" parent="." unique_id=1090071038]
+[node name="LongBarLight2" type="CSGCombiner3D" parent="Light Fixtures" unique_id=1090071038]
 transform = Transform3D(-4.569558e-08, 0, 1, 0, 1, 0, -1, 0, -4.569558e-08, 33.50217, 6.002747, 25.499657)
 script = ExtResource("43_0m503")
 track_length = 14.0
@@ -980,26 +982,26 @@ mats_track = ExtResource("3_5dt3m")
 mats_cable = ExtResource("4_kl5ay")
 metadata/_custom_type_script = "uid://cm6176wsxfdqx"
 
-[node name="@CSGPolygon3D@115111" type="CSGPolygon3D" parent="LongBarLight2" unique_id=530122484]
+[node name="@CSGPolygon3D@115111" type="CSGPolygon3D" parent="Light Fixtures/LongBarLight2" unique_id=530122484]
 polygon = PackedVector2Array(-0.15, 0, -0.15, 0.3, -0.06, 0.5, 0.06, 0.5, 0.15, 0.3, 0.15, 0)
 depth = 14.0
 material = ExtResource("3_5dt3m")
 
-[node name="@MeshInstance3D@115112" type="MeshInstance3D" parent="LongBarLight2" unique_id=284922191]
+[node name="@MeshInstance3D@115112" type="MeshInstance3D" parent="Light Fixtures/LongBarLight2" unique_id=284922191]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2474988, -0.5)
 mesh = SubResource("BoxMesh_rr0nd")
 
-[node name="@MeshInstance3D@115113" type="MeshInstance3D" parent="LongBarLight2" unique_id=1744747725]
+[node name="@MeshInstance3D@115113" type="MeshInstance3D" parent="Light Fixtures/LongBarLight2" unique_id=1744747725]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2474988, -13.5)
 mesh = SubResource("BoxMesh_c6q64")
 
-[node name="@CSGBox3D@115116" type="CSGBox3D" parent="LongBarLight2" unique_id=898374066]
+[node name="@CSGBox3D@115116" type="CSGBox3D" parent="Light Fixtures/LongBarLight2" unique_id=898374066]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -3.5)
 operation = 2
 size = Vector3(0.12, 0.25, 4.2)
 material = ExtResource("3_yuneh")
 
-[node name="@SpotLight3D@115114" type="SpotLight3D" parent="LongBarLight2/@CSGBox3D@115116" unique_id=560720935]
+[node name="@SpotLight3D@115114" type="SpotLight3D" parent="Light Fixtures/LongBarLight2/@CSGBox3D@115116" unique_id=560720935]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 light_energy = 3.0
 light_size = 0.05
@@ -1011,17 +1013,17 @@ distance_fade_length = 5.0
 spot_range = 12.0
 spot_angle = 35.0
 
-[node name="@MeshInstance3D@115115" type="MeshInstance3D" parent="LongBarLight2/@CSGBox3D@115116" unique_id=2045667213]
+[node name="@MeshInstance3D@115115" type="MeshInstance3D" parent="Light Fixtures/LongBarLight2/@CSGBox3D@115116" unique_id=2045667213]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.9100037, -1.9073486e-06)
 mesh = SubResource("QuadMesh_8lwxr")
 
-[node name="@CSGBox3D@115119" type="CSGBox3D" parent="LongBarLight2" unique_id=1543892311]
+[node name="@CSGBox3D@115119" type="CSGBox3D" parent="Light Fixtures/LongBarLight2" unique_id=1543892311]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -10.5)
 operation = 2
 size = Vector3(0.12, 0.25, 4.2)
 material = ExtResource("3_yuneh")
 
-[node name="@SpotLight3D@115117" type="SpotLight3D" parent="LongBarLight2/@CSGBox3D@115119" unique_id=636960868]
+[node name="@SpotLight3D@115117" type="SpotLight3D" parent="Light Fixtures/LongBarLight2/@CSGBox3D@115119" unique_id=636960868]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 light_energy = 3.0
 light_size = 0.05
@@ -1033,7 +1035,7 @@ distance_fade_length = 5.0
 spot_range = 12.0
 spot_angle = 35.0
 
-[node name="@MeshInstance3D@115118" type="MeshInstance3D" parent="LongBarLight2/@CSGBox3D@115119" unique_id=89685834]
+[node name="@MeshInstance3D@115118" type="MeshInstance3D" parent="Light Fixtures/LongBarLight2/@CSGBox3D@115119" unique_id=89685834]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.9100037, -1.9073486e-06)
 mesh = SubResource("QuadMesh_ktaoq")
 
@@ -1245,15 +1247,25 @@ material_override = ExtResource("3_euau4")
 size = Vector3(32, 0.5, 25.090912)
 material = ExtResource("11_v6iic")
 
+[node name="UpperFloorRailing" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=1402482642]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 2.25, 0.541)
+size = Vector3(20, 0.25, 13.5)
+material = ExtResource("3_5dt3m")
+
+[node name="UpperFloorRailing2" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)/UpperFloorRailing" unique_id=667959337]
+operation = 2
+size = Vector3(20.5, 0.5, 13)
+material = ExtResource("3_5dt3m")
+
 [node name="Upper Floor" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=291562752]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.00030517578)
 size = Vector3(32, 1, 25)
 material = ExtResource("5_qxgch")
 
 [node name="Upper Floor Hole" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=36121505]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -0.25, -0.00030517578)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -0.25, 0.49969482)
 operation = 2
-size = Vector3(19, 1.5, 13)
+size = Vector3(19, 1.5, 12)
 material = ExtResource("5_qxgch")
 
 [node name="StairsLeft" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=160147903]
@@ -1337,31 +1349,31 @@ size = Vector3(1, 20, 1)
 material = ExtResource("9_4h42u")
 
 [node name="ColumnFrontLeft2" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=1449096520]
-transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 9.499992, 0.5, -7.000305)
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 9.499992, 0.5, -6.000305)
 size = Vector3(1, 20, 1)
 material = ExtResource("9_4h42u")
 
 [node name="ColumnFrontRight2" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=153010020]
-transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, -10.500008, 0.5, -7.000305)
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, -10.500008, 0.5, -6.000305)
 size = Vector3(1, 20, 1)
 material = ExtResource("9_4h42u")
 
 [node name="Front Entrance Hole" type="CSGPolygon3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=808746896]
-transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, -3.8146973e-06, 0.5, -13.500004)
+transform = Transform3D(-1, 0, 1.509958e-07, 0, 1.33, 0, -1.509958e-07, 0, -1, -3.8146973e-06, 0.5, -13.500004)
 operation = 2
 polygon = PackedVector2Array(-1.5, 0, -1.5, 2.5, -1, 3.5, 0, 4, 1, 3.5, 1.5, 2.5, 1.5, 0)
 depth = 2.0
 material = ExtResource("5_r54xu")
 
 [node name="Interior Wide OpeningNorthX" type="CSGPolygon3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=13975697]
-transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, 15.499996, 0.5, 0.4999962)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1.33, 0, 1, 0, -4.371139e-08, 15.499996, 0.5, 0.4999962)
 operation = 2
 polygon = PackedVector2Array(-3.5, 0, -3.5, 2.5, -2, 4, 0, 4.5, 2, 4, 3.5, 2.5, 3.5, 0)
 depth = 2.0
 material = ExtResource("5_r54xu")
 
 [node name="Interior Wide OpeningSouthX" type="CSGPolygon3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=1705882595]
-transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, -17.000004, 0.5, 0.4999962)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1.33, 0, 1, 0, -4.371139e-08, -17.000004, 0.5, 0.4999962)
 operation = 2
 polygon = PackedVector2Array(-3.5, 0, -3.5, 2.5, -2, 4, 0, 4.5, 2, 4, 3.5, 2.5, 3.5, 0)
 depth = 2.0
@@ -1417,7 +1429,7 @@ mesh = SubResource("SphereMesh_7tbbo")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.5, 5.5)
 
 [node name="Dev Pods Game Pictures" type="Node3D" parent="." unique_id=1270972283]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.5, 0, 33.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.5, 0.5, 33.5)
 
 [node name="Artillery Rampage" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=1993258165]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25, 1.25, 11.25)
@@ -1633,7 +1645,7 @@ material = SubResource("StandardMaterial3D_mj7h6")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 1, -13.4)
 
 [node name="Button Stand" type="StaticBody3D" parent="Dev Pods Game Pictures/Game Frame with Button - Gladiator Example" unique_id=63349514]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, -1, 0.8999996)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, -1.5, 0.9)
 script = ExtResource("3_7mycd")
 goto_scene = "uid://bu5ybpneao340"
 
@@ -1686,5 +1698,11 @@ shape = SubResource("SphereShape3D_8jg5c")
 
 [node name="legend_of_shadowtails_ratrick_mesh" parent="RigidBody3D" unique_id=1698964858 instance=ExtResource("33_hgslh")]
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, -0.9377037, 0)
+
+[node name="Extinguisher" parent="." unique_id=786241607 instance=ExtResource("53_mj7h6")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 24.011044, 0.9385146, 20.2431)
+
+[node name="Extinguisher2" parent="." unique_id=319937067 instance=ExtResource("53_mj7h6")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 24.011044, -9.463224, 20.2431)
 
 [editable path="CSG Blockout/Cyndrive Ships/CyndriveShipsProps/cyndrive_ships_carrier"]
