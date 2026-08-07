@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://bppvgubl41ghp" path="res://scripts/click_manipulate-mesh.gd" id="8_lhbnf"]
 [ext_resource type="Material" uid="uid://31x6objnfjff" path="res://materials/modern-museum/museum-modern-exterior-gray.tres" id="8_p4vvg"]
 [ext_resource type="PackedScene" uid="uid://de5r1qejyqa71" path="res://environment-csg/csg_box-w-slope-support.tscn" id="8_u45lx"]
+[ext_resource type="Script" uid="uid://bcbsmve6pf08c" path="res://entities-scene_prefabs/auto-stairs.gd" id="8_xljnw"]
 [ext_resource type="Material" uid="uid://b5j7a6q6jdkv5" path="res://materials/concrete.tres" id="9_hilkn"]
 [ext_resource type="Texture2D" uid="uid://2432776vq113" path="res://textures/play-button-stand.png" id="9_xljnw"]
 [ext_resource type="Material" uid="uid://gatwpkkuaqht" path="res://materials/emissive_white.tres" id="9_ye0tm"]
@@ -27,6 +28,9 @@ size = Vector3(3.5, 3.5, 3)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xteo1"]
 size = Vector3(8.271118, 1.1351929, 12.026886)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tbq01"]
+size = Vector3(0.75, 0.75, 5.5)
 
 [node name="Basement Art (Misc not in released games)" type="CSGCombiner3D" unique_id=1453491612]
 use_collision = true
@@ -74,6 +78,44 @@ visible = false
 
 [node name="tarnishedmoth" type="Node3D" parent="." unique_id=485263981]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.75278, -10.137384, 12.146261)
+
+[node name="AutoStairs" type="CSGCombiner3D" parent="tarnishedmoth" unique_id=925557102]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 0.51060104, 0.36259365)
+use_collision = true
+script = ExtResource("8_xljnw")
+step_count = 7
+width = 4.0
+rise_degrees = -32.44470325921144
+rise_height = -0.178
+metadata/_custom_type_script = "uid://bcbsmve6pf08c"
+
+[node name="@CSGBox3D@44484" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=106111172]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.178, 0.14)
+size = Vector3(4, 0.08, 0.238)
+
+[node name="@CSGBox3D@44485" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=849228325]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.356, 0.42000002)
+size = Vector3(4, 0.08, 0.238)
+
+[node name="@CSGBox3D@44486" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=719962843]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.53400004, 0.70000005)
+size = Vector3(4, 0.08, 0.238)
+
+[node name="@CSGBox3D@44487" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=281538327]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.712, 0.98)
+size = Vector3(4, 0.08, 0.238)
+
+[node name="@CSGBox3D@44488" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=70321836]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.89, 1.26)
+size = Vector3(4, 0.08, 0.238)
+
+[node name="@CSGBox3D@44489" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=1606643898]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0680001, 1.5400001)
+size = Vector3(4, 0.08, 0.238)
+
+[node name="@CSGBox3D@44490" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=1380480394]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.246, 1.82)
+size = Vector3(4, 0.08, 0.238)
 
 [node name="naous_swords" parent="tarnishedmoth" unique_id=1318131931 instance=ExtResource("12_uiqfr")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.01096344, 0.66993237, -2.5462608)
@@ -178,6 +220,19 @@ layers = 4
 cast_shadow = 0
 visibility_range_end = 25.0
 
+[node name="SpotLight3D" type="SpotLight3D" parent="tarnishedmoth" unique_id=1729698725]
+transform = Transform3D(5.879908e-08, -0.9015282, 0.43272045, -7.410546e-08, 0.43272045, 0.9015282, -1, -8.5075975e-08, -4.136459e-08, 1.548687, 5.9042253, 0.25)
+light_energy = 0.5
+light_specular = 0.015
+light_bake_mode = 0
+light_cull_mask = 4293918725
+distance_fade_enabled = true
+distance_fade_begin = 15.0
+spot_range = 7.0
+spot_attenuation = 0.0
+spot_angle = 43.78
+spot_angle_attenuation = 0.43527538
+
 [node name="Node3D" type="Node3D" parent="tarnishedmoth" unique_id=687199009]
 transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 0, 0, 0)
 
@@ -263,5 +318,9 @@ material = ExtResource("3_lvdt1")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="tarnishedmoth/Platform" unique_id=402829918]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14093018, -0.20150757, 0.19709778)
 shape = SubResource("BoxShape3D_xteo1")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="tarnishedmoth/Platform" unique_id=971377609]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0008621216, 0.49988747, 0.0022258759)
+shape = SubResource("BoxShape3D_tbq01")
 
 [editable path="tarnishedmoth/naous_swords"]

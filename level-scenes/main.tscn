@@ -49,7 +49,7 @@
 [ext_resource type="ArrayMesh" uid="uid://chk2yapw55ljh" path="res://models/basic-curvy-frame.obj" id="32_tlwcc"]
 [ext_resource type="PackedScene" uid="uid://ccmjewtcqxp7" path="res://models/legend_of_shadowtails_ratrick_mesh.glb" id="33_hgslh"]
 [ext_resource type="Texture2D" uid="uid://cpakvdnl3rxxa" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/gladiator-framed-pic.png" id="36_u5gq0"]
-[ext_resource type="Script" uid="uid://cm6176wsxfdqx" path="res://entities-scene_prefabs/tracklights/tracklight.gd" id="43_0m503"]
+[ext_resource type="Script" uid="uid://cm6176wsxfdqx" path="res://entities-scene_prefabs/auto-tracklight.gd" id="43_0m503"]
 [ext_resource type="PackedScene" uid="uid://bjbv5y5fcm1dy" path="res://entities-scene_prefabs/button_stand.tscn" id="46_tbq01"]
 [ext_resource type="PackedScene" uid="uid://dgahdbu6k5v7a" path="res://entities-scene_prefabs/fire_extinguisher.tscn" id="53_mj7h6"]
 
