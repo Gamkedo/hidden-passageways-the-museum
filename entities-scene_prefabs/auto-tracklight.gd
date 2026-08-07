@@ -72,6 +72,7 @@ func delete_all() -> void:
 	_revealed.clear()
 
 func generate() -> void:
+	if not is_inside_tree(): return
 	if not Engine.is_editor_hint():
 		if PREVENT_RUNTIME_REGEN: return
 		push_warning("CSG regenerating at runtime")

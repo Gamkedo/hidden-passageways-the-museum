@@ -11,10 +11,12 @@
 [ext_resource type="Material" uid="uid://31x6objnfjff" path="res://materials/modern-museum/museum-modern-exterior-gray.tres" id="8_p4vvg"]
 [ext_resource type="PackedScene" uid="uid://de5r1qejyqa71" path="res://environment-csg/csg_box-w-slope-support.tscn" id="8_u45lx"]
 [ext_resource type="Script" uid="uid://bcbsmve6pf08c" path="res://entities-scene_prefabs/auto-stairs.gd" id="8_xljnw"]
+[ext_resource type="Material" uid="uid://cb0ohmlylauik" path="res://materials/modern-museum/museum-floor-dark-carpet.tres" id="9_43mwv"]
 [ext_resource type="Material" uid="uid://b5j7a6q6jdkv5" path="res://materials/concrete.tres" id="9_hilkn"]
 [ext_resource type="Texture2D" uid="uid://2432776vq113" path="res://textures/play-button-stand.png" id="9_xljnw"]
 [ext_resource type="Material" uid="uid://gatwpkkuaqht" path="res://materials/emissive_white.tres" id="9_ye0tm"]
 [ext_resource type="ArrayMesh" uid="uid://cm2soemey2m52" path="res://models/play-button-stand.obj" id="10_43mwv"]
+[ext_resource type="ArrayMesh" uid="uid://chk2yapw55ljh" path="res://models/basic-curvy-frame.obj" id="10_jaagg"]
 [ext_resource type="PackedScene" uid="uid://cowhc5ccs7xmv" path="res://models/naous_swords.gltf" id="12_uiqfr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lahx7"]
@@ -83,39 +85,61 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.75278, -10.137384, 12.1462
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 0.51060104, 0.36259365)
 use_collision = true
 script = ExtResource("8_xljnw")
+step_material = ExtResource("9_43mwv")
 step_count = 7
 width = 4.0
 rise_degrees = -32.44470325921144
 rise_height = -0.178
 metadata/_custom_type_script = "uid://bcbsmve6pf08c"
 
-[node name="@CSGBox3D@44484" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=106111172]
+[node name="@CSGBox3D@54827" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=913196534]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.178, 0.14)
 size = Vector3(4, 0.08, 0.238)
+material = ExtResource("9_43mwv")
 
-[node name="@CSGBox3D@44485" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=849228325]
+[node name="@CSGBox3D@54828" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=1201618309]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.356, 0.42000002)
 size = Vector3(4, 0.08, 0.238)
+material = ExtResource("9_43mwv")
 
-[node name="@CSGBox3D@44486" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=719962843]
+[node name="@CSGBox3D@54829" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=1631593565]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.53400004, 0.70000005)
 size = Vector3(4, 0.08, 0.238)
+material = ExtResource("9_43mwv")
 
-[node name="@CSGBox3D@44487" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=281538327]
+[node name="@CSGBox3D@54830" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=1515646501]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.712, 0.98)
 size = Vector3(4, 0.08, 0.238)
+material = ExtResource("9_43mwv")
 
-[node name="@CSGBox3D@44488" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=70321836]
+[node name="@CSGBox3D@54831" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=2108023160]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.89, 1.26)
 size = Vector3(4, 0.08, 0.238)
+material = ExtResource("9_43mwv")
 
-[node name="@CSGBox3D@44489" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=1606643898]
+[node name="@CSGBox3D@54832" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=914882948]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0680001, 1.5400001)
 size = Vector3(4, 0.08, 0.238)
+material = ExtResource("9_43mwv")
 
-[node name="@CSGBox3D@44490" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=1380480394]
+[node name="@CSGBox3D@54833" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=1143666631]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.246, 1.82)
 size = Vector3(4, 0.08, 0.238)
+material = ExtResource("9_43mwv")
+
+[node name="Label3D" type="Label3D" parent="tarnishedmoth" unique_id=848502522]
+transform = Transform3D(-1.0927846e-08, 0.43301272, -0.24999999, 1.8927587e-08, 0.24999999, 0.43301272, 0.5, 0, -2.1855694e-08, -0.34999847, 0.8999996, 0)
+double_sided = false
+texture_filter = 5
+text = "Swords & Hilts variations (2025)
+Subdivision box modeling
+by Michael Avrie (tarnished moth)"
+font_size = 24
+outline_size = 4
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="tarnishedmoth/Label3D" unique_id=789401005]
+transform = Transform3D(-2.6226832e-09, 0, -0.125, 0, 0.06, 0, 0.06, 0, -5.4639235e-09, 0, 0, 0)
+mesh = ExtResource("10_jaagg")
 
 [node name="naous_swords" parent="tarnishedmoth" unique_id=1318131931 instance=ExtResource("12_uiqfr")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.01096344, 0.66993237, -2.5462608)
@@ -220,6 +244,28 @@ layers = 4
 cast_shadow = 0
 visibility_range_end = 25.0
 
+[node name="Button Stand" type="StaticBody3D" parent="tarnishedmoth" unique_id=1440399840 node_paths=PackedStringArray("nodes")]
+transform = Transform3D(-4.4703484e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -4.4703484e-08, -0.5530014, 0.8776846, -1.1462631)
+script = ExtResource("8_lhbnf")
+nodes = [NodePath("../naous_swords/Short2"), NodePath("../naous_swords/Medium1"), NodePath("../naous_swords/Medium2"), NodePath("../naous_swords/Short1"), NodePath("../naous_swords/Long1"), NodePath("../naous_swords/Long2"), NodePath("../naous_swords/Short3"), NodePath("../naous_swords/Medium3"), NodePath("../naous_swords/Short4"), NodePath("../naous_swords/Short5"), NodePath("../naous_swords/Long3"), NodePath("../naous_swords/Hilt"), NodePath("../naous_swords/Hilt_001"), NodePath("../naous_swords/Hilt_002"), NodePath("../naous_swords/Hilt_003"), NodePath("../naous_swords/Hilt_004"), NodePath("../naous_swords/Hilt_005"), NodePath("../naous_swords/Hilt_006"), NodePath("../naous_swords/Hilt_007"), NodePath("../naous_swords/Hilt_008")]
+
+[node name="Label3D" type="Label3D" parent="tarnishedmoth/Button Stand" unique_id=1183973093]
+transform = Transform3D(0.24000001, 0, 0, 0, 0.24000001, 0, 0, 0, 0.24000001, -0.07500076, 0.52923775, -0.31500244)
+pixel_size = 0.03
+modulate = Color(0, 0, 0, 1)
+text = "Clay"
+font_size = 24
+outline_size = 0
+
+[node name="PlayButtonStand" type="MeshInstance3D" parent="tarnishedmoth/Button Stand" unique_id=432524272]
+transform = Transform3D(-6.29444e-09, 0, 0.14400001, 0, 0.14400001, 0, -0.14400001, 0, -6.29444e-09, -0.08000028, -1, -0.039999425)
+material_override = SubResource("StandardMaterial3D_880y8")
+mesh = ExtResource("10_43mwv")
+
+[node name="CollisionShapeStand" type="CollisionShape3D" parent="tarnishedmoth/Button Stand" unique_id=1668333291]
+transform = Transform3D(-8.742277e-09, 0, -0.19999999, 0, 0.19999999, 0, 0.19999999, 0, -8.742277e-09, -0.099998474, 0.45, -0.050001144)
+shape = SubResource("BoxShape3D_7tbbo")
+
 [node name="SpotLight3D" type="SpotLight3D" parent="tarnishedmoth" unique_id=1729698725]
 transform = Transform3D(5.879908e-08, -0.9015282, 0.43272045, -7.410546e-08, 0.43272045, 0.9015282, -1, -8.5075975e-08, -4.136459e-08, 1.548687, 5.9042253, 0.25)
 light_energy = 0.5
@@ -233,33 +279,8 @@ spot_attenuation = 0.0
 spot_angle = 43.78
 spot_angle_attenuation = 0.43527538
 
-[node name="Node3D" type="Node3D" parent="tarnishedmoth" unique_id=687199009]
-transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 0, 0, 0)
-
-[node name="Button Stand" type="StaticBody3D" parent="tarnishedmoth/Node3D" unique_id=1440399840 node_paths=PackedStringArray("nodes")]
-transform = Transform3D(-0.25000003, 0, -0.43301266, 0, 0.5, 0, 0.43301266, 0, -0.25000003, 0.09421921, 0.8776846, -1.2691936)
-script = ExtResource("8_lhbnf")
-nodes = [NodePath("../../naous_swords/Short2"), NodePath("../../naous_swords/Medium1"), NodePath("../../naous_swords/Medium2"), NodePath("../../naous_swords/Short1"), NodePath("../../naous_swords/Long1"), NodePath("../../naous_swords/Long2"), NodePath("../../naous_swords/Short3"), NodePath("../../naous_swords/Medium3"), NodePath("../../naous_swords/Short4"), NodePath("../../naous_swords/Short5"), NodePath("../../naous_swords/Long3"), NodePath("../../naous_swords/Hilt"), NodePath("../../naous_swords/Hilt_001"), NodePath("../../naous_swords/Hilt_002"), NodePath("../../naous_swords/Hilt_003"), NodePath("../../naous_swords/Hilt_004"), NodePath("../../naous_swords/Hilt_005"), NodePath("../../naous_swords/Hilt_006"), NodePath("../../naous_swords/Hilt_007"), NodePath("../../naous_swords/Hilt_008")]
-
-[node name="Label3D" type="Label3D" parent="tarnishedmoth/Node3D/Button Stand" unique_id=1183973093]
-transform = Transform3D(0.24000001, 0, 0, 0, 0.24000001, 0, 0, 0, 0.24000001, -0.07500076, 0.52923775, -0.31500244)
-pixel_size = 0.03
-modulate = Color(0, 0, 0, 1)
-text = "Clay"
-font_size = 24
-outline_size = 0
-
-[node name="PlayButtonStand" type="MeshInstance3D" parent="tarnishedmoth/Node3D/Button Stand" unique_id=432524272]
-transform = Transform3D(-6.29444e-09, 0, 0.14400001, 0, 0.14400001, 0, -0.14400001, 0, -6.29444e-09, -0.08000028, -1, -0.039999425)
-material_override = SubResource("StandardMaterial3D_880y8")
-mesh = ExtResource("10_43mwv")
-
-[node name="CollisionShapeStand" type="CollisionShape3D" parent="tarnishedmoth/Node3D/Button Stand" unique_id=1668333291]
-transform = Transform3D(-8.742277e-09, 0, -0.19999999, 0, 0.19999999, 0, 0.19999999, 0, -8.742277e-09, -0.099998474, 0.45, -0.050001144)
-shape = SubResource("BoxShape3D_7tbbo")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="tarnishedmoth/Node3D" unique_id=96068076]
-transform = Transform3D(-0.25881904, -0.68301284, -0.68301266, -3.0908627e-08, 0.70710677, -0.7071069, 0.9659259, -0.18301272, -0.1830127, -1.5, 1.5806923, 0)
+[node name="SpotLight3D2" type="SpotLight3D" parent="tarnishedmoth" unique_id=96068076]
+transform = Transform3D(0.25881907, -0.68301284, -0.68301266, -3.0908627e-08, 0.70710677, -0.7071069, 0.9659258, 0.18301278, 0.1830127, -1.2990379, 1.5806923, 0.75)
 light_energy = 0.5
 light_specular = 1.0
 light_bake_mode = 0
@@ -271,8 +292,8 @@ spot_attenuation = 0.0
 spot_angle = 71.24
 spot_angle_attenuation = 0.07432526
 
-[node name="SpotLight3D2" type="SpotLight3D" parent="tarnishedmoth/Node3D" unique_id=451537772]
-transform = Transform3D(0.49999982, 0.6123725, 0.61237234, -3.0908616e-08, 0.7071067, -0.7071069, -0.86602527, 0.35355338, 0.35355332, 1.5, 1.6806922, 0)
+[node name="SpotLight3D3" type="SpotLight3D" parent="tarnishedmoth" unique_id=451537772]
+transform = Transform3D(-8.940699e-08, 0.7071068, 0.7071067, -3.0908623e-08, 0.7071067, -0.7071068, -1, -8.507598e-08, -4.136458e-08, 1.2990379, 1.6806927, -0.75)
 light_energy = 0.5
 light_specular = 1.0
 light_bake_mode = 0
