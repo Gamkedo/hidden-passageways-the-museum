@@ -211,6 +211,8 @@ func interaction_check():
 			hit.open_link()
 		if hit.has_method("open_scene"):
 			hit.open_scene()
+		if hit.has_method("manipulate_mesh"):
+			hit.manipulate_mesh()
 
 
 @export var camera_shake_intensity: float = 5.

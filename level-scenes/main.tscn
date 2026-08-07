@@ -34,7 +34,6 @@
 [ext_resource type="Texture2D" uid="uid://cp3eu5k3e546n" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/everchange.png" id="12_qxgch"]
 [ext_resource type="Texture2D" uid="uid://dpvjb874dhfhp" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/forgotten-road.png" id="13_r54xu"]
 [ext_resource type="Material" uid="uid://dajoyj6fev1j7" path="res://materials/floor-materials/marble_tile_floor.tres" id="13_v6iic"]
-[ext_resource type="Texture2D" uid="uid://dlft5rt3mgqhu" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/gladiator-of-the-golden-house.png" id="14_er4o0"]
 [ext_resource type="Texture2D" uid="uid://87drxaweuioc" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/king-arthur.png" id="15_keiyw"]
 [ext_resource type="PackedScene" uid="uid://d0hl0sude541s" path="res://level-scenes/basement_art_(misc_not_in_released_games).tscn" id="16_4y16h"]
 [ext_resource type="PackedScene" uid="uid://bs0x6kcocwrn8" path="res://entities-scene_prefabs/tree_small.tscn" id="16_iixjk"]
@@ -49,10 +48,9 @@
 [ext_resource type="Texture2D" uid="uid://bk6mm66shyd3p" path="res://textures/CurvyFrame-basic-black.png" id="31_yqwtw"]
 [ext_resource type="ArrayMesh" uid="uid://chk2yapw55ljh" path="res://models/basic-curvy-frame.obj" id="32_tlwcc"]
 [ext_resource type="PackedScene" uid="uid://ccmjewtcqxp7" path="res://models/legend_of_shadowtails_ratrick_mesh.glb" id="33_hgslh"]
-[ext_resource type="Texture2D" uid="uid://2432776vq113" path="res://textures/play-button-stand.png" id="34_ewg6b"]
-[ext_resource type="ArrayMesh" uid="uid://cm2soemey2m52" path="res://models/play-button-stand.obj" id="35_u5gq0"]
 [ext_resource type="Texture2D" uid="uid://cpakvdnl3rxxa" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/gladiator-framed-pic.png" id="36_u5gq0"]
 [ext_resource type="Script" uid="uid://cm6176wsxfdqx" path="res://entities-scene_prefabs/tracklights/tracklight.gd" id="43_0m503"]
+[ext_resource type="PackedScene" uid="uid://bjbv5y5fcm1dy" path="res://entities-scene_prefabs/button_stand.tscn" id="46_tbq01"]
 [ext_resource type="PackedScene" uid="uid://dgahdbu6k5v7a" path="res://entities-scene_prefabs/fire_extinguisher.tscn" id="53_mj7h6"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_xteo1"]
@@ -334,17 +332,6 @@ albedo_texture = ExtResource("20_lahx7")
 shading_mode = 0
 albedo_texture = ExtResource("21_yqwtw")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gbu3n"]
-albedo_texture = ExtResource("14_er4o0")
-
-[sub_resource type="QuadMesh" id="QuadMesh_7tbbo"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_880y8"]
-albedo_texture = ExtResource("34_ewg6b")
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_7tbbo"]
-size = Vector3(3.5, 3.5, 3)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4fg2q"]
 albedo_texture = ExtResource("31_yqwtw")
 roughness = 0.4
@@ -352,6 +339,8 @@ roughness = 0.4
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ogkr3"]
 shading_mode = 0
 albedo_texture = ExtResource("36_u5gq0")
+
+[sub_resource type="QuadMesh" id="QuadMesh_7tbbo"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y5qfa"]
 size = Vector3(3.7, 2.3500001, 0.55)
@@ -1627,31 +1616,8 @@ material = SubResource("StandardMaterial3D_mj7h6")
 [node name="Game Frame with Button - Gladiator Example" type="StaticBody3D" parent="Dev Pods Game Pictures" unique_id=299075970]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 1, -13.4)
 
-[node name="Button Stand" type="StaticBody3D" parent="Dev Pods Game Pictures/Game Frame with Button - Gladiator Example" unique_id=63349514]
+[node name="Button Stand" parent="Dev Pods Game Pictures/Game Frame with Button - Gladiator Example" unique_id=1440399840 instance=ExtResource("46_tbq01")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, -1.5, 0.9)
-script = ExtResource("3_7mycd")
-goto_scene = "uid://bu5ybpneao340"
-
-[node name="Button image" type="MeshInstance3D" parent="Dev Pods Game Pictures/Game Frame with Button - Gladiator Example/Button Stand" unique_id=1396255101]
-transform = Transform3D(0.44582403, 0, 0, 0, 0.27519998, 0, 1.1368682e-14, 0, 0.031999994, -0.06468767, 0.46111998, -0.3172)
-material_override = SubResource("StandardMaterial3D_gbu3n")
-mesh = SubResource("QuadMesh_7tbbo")
-
-[node name="Label3D" type="Label3D" parent="Dev Pods Game Pictures/Game Frame with Button - Gladiator Example/Button Stand" unique_id=1580588700]
-transform = Transform3D(0.24000001, 0, 0, 0, 0.24000001, 0, 0, 0, 0.24000001, -0.07500076, 0.665, -0.31499863)
-modulate = Color(0, 0, 0, 1)
-text = "Gladiator of the
-Golden House"
-outline_size = 0
-
-[node name="PlayButtonStand" type="MeshInstance3D" parent="Dev Pods Game Pictures/Game Frame with Button - Gladiator Example/Button Stand" unique_id=1568301415]
-transform = Transform3D(-6.29444e-09, 0, 0.14400001, 0, 0.14400001, 0, -0.14400001, 0, -6.29444e-09, -0.08000028, -1, -0.039999425)
-material_override = SubResource("StandardMaterial3D_880y8")
-mesh = ExtResource("35_u5gq0")
-
-[node name="CollisionShapeStand" type="CollisionShape3D" parent="Dev Pods Game Pictures/Game Frame with Button - Gladiator Example/Button Stand" unique_id=586105222]
-transform = Transform3D(-8.742277e-09, 0, -0.19999999, 0, 0.19999999, 0, 0.19999999, 0, -8.742277e-09, -0.099998474, 0.45, -0.050001144)
-shape = SubResource("BoxShape3D_7tbbo")
 
 [node name="BasicCurvyFrame Test" type="MeshInstance3D" parent="Dev Pods Game Pictures/Game Frame with Button - Gladiator Example" unique_id=324603645]
 transform = Transform3D(-8.742277e-09, 0, -0.19999999, 0, 0.19999999, 0, 0.19999999, 0, -8.742277e-09, 0, 0.5, 0)

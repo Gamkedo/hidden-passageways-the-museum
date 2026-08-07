@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bjbv5y5fcm1dy"]
+
+[ext_resource type="Script" uid="uid://cl8kffkiyit6t" path="res://scripts/click_scene_change.gd" id="1_nupf2"]
+[ext_resource type="Texture2D" uid="uid://dlft5rt3mgqhu" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/gladiator-of-the-golden-house.png" id="2_qm8vf"]
+[ext_resource type="Texture2D" uid="uid://2432776vq113" path="res://textures/play-button-stand.png" id="3_smyr0"]
+[ext_resource type="ArrayMesh" uid="uid://cm2soemey2m52" path="res://models/play-button-stand.obj" id="4_8ahea"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gbu3n"]
+albedo_texture = ExtResource("2_qm8vf")
+
+[sub_resource type="QuadMesh" id="QuadMesh_7tbbo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_880y8"]
+albedo_texture = ExtResource("3_smyr0")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7tbbo"]
+size = Vector3(3.5, 3.5, 3)
+
+[node name="Button Stand" type="StaticBody3D" unique_id=1440399840]
+script = ExtResource("1_nupf2")
+goto_scene = "uid://bu5ybpneao340"
+
+[node name="Button image" type="MeshInstance3D" parent="." unique_id=1896630648]
+transform = Transform3D(0.44582403, 0, 0, 0, 0.27519998, 0, 1.1368682e-14, 0, 0.031999994, -0.06468767, 0.46111998, -0.3172)
+material_override = SubResource("StandardMaterial3D_gbu3n")
+mesh = SubResource("QuadMesh_7tbbo")
+
+[node name="Label3D" type="Label3D" parent="." unique_id=1183973093]
+transform = Transform3D(0.24000001, 0, 0, 0, 0.24000001, 0, 0, 0, 0.24000001, -0.07500076, 0.665, -0.31499863)
+modulate = Color(0, 0, 0, 1)
+text = "Gladiator of the
+Golden House"
+outline_size = 0
+
+[node name="PlayButtonStand" type="MeshInstance3D" parent="." unique_id=432524272]
+transform = Transform3D(-6.29444e-09, 0, 0.14400001, 0, 0.14400001, 0, -0.14400001, 0, -6.29444e-09, -0.08000028, -1, -0.039999425)
+material_override = SubResource("StandardMaterial3D_880y8")
+mesh = ExtResource("4_8ahea")
+
+[node name="CollisionShapeStand" type="CollisionShape3D" parent="." unique_id=1668333291]
+transform = Transform3D(-8.742277e-09, 0, -0.19999999, 0, 0.19999999, 0, 0.19999999, 0, -8.742277e-09, -0.099998474, 0.45, -0.050001144)
+shape = SubResource("BoxShape3D_7tbbo")
