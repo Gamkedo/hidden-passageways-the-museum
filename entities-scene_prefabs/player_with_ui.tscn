@@ -9,6 +9,7 @@
 friction = 0.0
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_y5qfa"]
+radial_segments = 16
 
 [node name="Player with UI" type="Node3D" unique_id=1354449472]
 
@@ -31,7 +32,7 @@ text = "+"
 horizontal_alignment = 1
 
 [node name="PlayerPhysics" type="RigidBody3D" parent="." unique_id=1106753911]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 collision_layer = 2
 collision_mask = 5
 axis_lock_angular_x = true
@@ -44,27 +45,23 @@ continuous_cd = true
 script = ExtResource("1_4v70m")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerPhysics" unique_id=367034565]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.595182, 0)
-visible = false
 cast_shadow = 0
 gi_mode = 2
 mesh = SubResource("CapsuleMesh_y5qfa")
 
 [node name="CameraAiming3D" type="Marker3D" parent="PlayerPhysics" unique_id=532280439]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8239243, -0.3611512)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83, -0.25)
 
 [node name="player-step-shape" parent="PlayerPhysics" unique_id=900220688 instance=ExtResource("2_ydgiv")]
-transform = Transform3D(-175, 0, -2.6424266e-05, 0, 175, 0, 2.6424266e-05, 0, -175, 0, 1.5, 0)
+transform = Transform3D(-100, 0, -1.509958e-05, 0, 100, 0, 1.509958e-05, 0, -100, 0, 0, 0)
 
 [node name="SoundJumpLanding" type="AudioStreamPlayer" parent="PlayerPhysics" unique_id=1618692255]
 stream = ExtResource("3_ydgiv")
 
 [node name="StairChecker" type="CSGSphere3D" parent="PlayerPhysics" unique_id=1501459849]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
 visible = false
 radius = 0.1
 
 [node name="BodyCam" type="Camera3D" parent="." unique_id=2051373162]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8239243, -0.3611512)
 script = ExtResource("4_6eayc")

@@ -53,7 +53,7 @@ func touching_ground() -> bool:
 	var pos_state = get_world_3d().direct_space_state
 
 	var ray_test = PhysicsRayQueryParameters3D.create(global_position,
-		global_position + Vector3.DOWN * 0.3)
+		global_position + Vector3.DOWN * 1.1, 1)
 
 	return pos_state.intersect_ray(ray_test).is_empty() == false
 

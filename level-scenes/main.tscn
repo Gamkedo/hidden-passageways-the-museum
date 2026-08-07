@@ -1220,7 +1220,7 @@ size = Vector3(32, 0.5, 25.090912)
 material = ExtResource("11_v6iic")
 
 [node name="UpperFloorRailing" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=1402482642]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 2.25, 0.541)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1.6330957, 0.54100037)
 size = Vector3(20, 0.25, 13.5)
 material = ExtResource("3_5dt3m")
 
@@ -1331,21 +1331,21 @@ size = Vector3(1, 20, 1)
 material = ExtResource("9_4h42u")
 
 [node name="Front Entrance Hole" type="CSGPolygon3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=808746896]
-transform = Transform3D(-1, 0, 1.509958e-07, 0, 1.33, 0, -1.509958e-07, 0, -1, -3.8146973e-06, 0.5, -13.500004)
+transform = Transform3D(-1, 0, 1.509958e-07, 0, 1, 0, -1.509958e-07, 0, -1, -3.8146973e-06, 0.5, -13.500004)
 operation = 2
 polygon = PackedVector2Array(-1.5, 0, -1.5, 2.5, -1, 3.5, 0, 4, 1, 3.5, 1.5, 2.5, 1.5, 0)
 depth = 2.0
 material = ExtResource("5_r54xu")
 
 [node name="Interior Wide OpeningNorthX" type="CSGPolygon3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=13975697]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1.33, 0, 1, 0, -4.371139e-08, 15.499996, 0.5, 0.4999962)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 15.499996, 0.5, 0.4999962)
 operation = 2
 polygon = PackedVector2Array(-3.5, 0, -3.5, 2.5, -2, 4, 0, 4.5, 2, 4, 3.5, 2.5, 3.5, 0)
 depth = 2.0
 material = ExtResource("5_r54xu")
 
 [node name="Interior Wide OpeningSouthX" type="CSGPolygon3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=1705882595]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1.33, 0, 1, 0, -4.371139e-08, -17.000004, 0.5, 0.4999962)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -17.000004, 0.5, 0.4999962)
 operation = 2
 polygon = PackedVector2Array(-3.5, 0, -3.5, 2.5, -2, 4, 0, 4.5, 2, 4, 3.5, 2.5, 3.5, 0)
 depth = 2.0
@@ -1401,7 +1401,7 @@ mesh = SubResource("SphereMesh_7tbbo")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.5, 5.5)
 
 [node name="Dev Pods Game Pictures" type="Node3D" parent="." unique_id=1270972283]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.5, 0.5, 33.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.5, 0, 33.5)
 
 [node name="Artillery Rampage" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=1993258165]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25, 1.25, 11.25)
@@ -1617,7 +1617,7 @@ material = SubResource("StandardMaterial3D_mj7h6")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 1, -13.4)
 
 [node name="Button Stand" parent="Dev Pods Game Pictures/Game Frame with Button - Gladiator Example" unique_id=1440399840 instance=ExtResource("46_tbq01")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, -1.5, 0.9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, -0.7291305, 0.8999996)
 
 [node name="BasicCurvyFrame Test" type="MeshInstance3D" parent="Dev Pods Game Pictures/Game Frame with Button - Gladiator Example" unique_id=324603645]
 transform = Transform3D(-8.742277e-09, 0, -0.19999999, 0, 0.19999999, 0, 0.19999999, 0, -8.742277e-09, 0, 0.5, 0)
