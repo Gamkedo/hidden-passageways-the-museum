@@ -48,3 +48,4 @@ material = ExtResource("5_u45lx")
 
 [node name="EditorQuickTestGroup" parent="." unique_id=259214251 instance=ExtResource("7_lvdt1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.650959, -10.997258, 16.423002)
+visible = false

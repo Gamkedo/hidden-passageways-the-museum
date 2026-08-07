@@ -23,23 +23,26 @@ static var is_editor: bool:
 @export_group("Lights", "lights_")
 @export_range(0, 10, 1.0, "or_greater") var lights_quantity: int = 2
 @export var lights_rectangularity: float = 1.0
-@export var lights_generate_spotlights: bool = true
+@export var lights_generate_spotlights: bool = true ## Generates [SpotLight3D].
 @export var lights_range: float = 15.0
 @export var lights_spot_angle: float = 25.0
 @export var lights_energy: float = 2.0
 @export var lights_color: Color = Color(0.939, 0.955, 0.961, 1.0)
 
 @export_subgroup("Projected light quads", "projected_lights_")
+## Generates quad meshes with additive light blobs for cheap fake lighting.
+## If spotlights are also enabled, cross-fading is automatically applied.
+## The quad mesh's look is not customizable.
 @export var projected_lights_generate_quads: bool = false
-@export var projected_lights_use_raycast_normal: bool = true
+@export var projected_lights_use_raycast_normal: bool = true ## Not implemented (will always face up)
 @export var projected_lights_raycast_distance: float = 12.0
 @export var projected_lights_scale: float = 0.9
 @export var projected_lights_scale_with_distance: bool = true
 
 @export_group("Mounting", "mount_")
-@export var mount_length: float = 5.0 ## Length of the cable going from the fixture to the ceiling.
 @export var mount_use_raycast: bool = true
 @export_flags_3d_physics var mount_raycast_mask: int = self.collision_mask
+@export var mount_length: float = 5.0 ## Length of the cable going from the fixture to the ceiling, if not raycasted.
 @export var mount_thickness: float = 0.04
 @export var mount_track_padding: float = 0.5 ## distance from the end of the track
 
@@ -52,7 +55,8 @@ var _revealed: Array[Node] = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	if get_children().is_empty():
+		generate()
 
 func delete_all() -> void:
 	if CLEAR_ALL_CHILDREN:
@@ -239,5 +243,4 @@ func make_dot_light(pos_along_track: float) -> CSGBox3D:
 
 func bake() -> void:
 	print("Bake not yet implemented")
-	pass
-	#self.bake_static_mesh()
+	#var mesh: ArrayMesh = self.bake_static_mesh()

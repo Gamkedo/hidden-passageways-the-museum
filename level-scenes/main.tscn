@@ -22,6 +22,7 @@
 [ext_resource type="Material" uid="uid://biecmslvyaivk" path="res://materials/spotlight-decal_crossfade.tres" id="7_3lbo0"]
 [ext_resource type="Texture2D" uid="uid://vnri2xppsmm0" path="res://models/legend_of_shadowtails_ratrick_ratrick.png" id="7_hgslh"]
 [ext_resource type="Texture2D" uid="uid://bto3jcto20bmf" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/cargo-bay.png" id="8_506e2"]
+[ext_resource type="Material" uid="uid://cf52fvd2ucb8h" path="res://materials/light-shaft.tres" id="8_tbq01"]
 [ext_resource type="Material" uid="uid://b5j7a6q6jdkv5" path="res://materials/concrete.tres" id="9_4h42u"]
 [ext_resource type="Texture2D" uid="uid://b2oyvwk41k0kr" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/crash-em-up.png" id="9_vcgox"]
 [ext_resource type="Texture2D" uid="uid://8siqjr4kxuft" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/crazy-arena-chaos.png" id="10_euau4"]
@@ -62,9 +63,8 @@ sky_material = SubResource("ProceduralSkyMaterial_iixjk")
 [sub_resource type="Environment" id="Environment_yuneh"]
 background_mode = 2
 sky = SubResource("Sky_4fg2q")
-ambient_light_color = Color(0.72849315, 0.70418406, 0.67645955, 1)
-ambient_light_sky_contribution = 0.7
-ambient_light_energy = 2.02
+ambient_light_color = Color(0.5756888, 0.5492039, 0.5138223, 1)
+ambient_light_sky_contribution = 0.35
 tonemap_mode = 3
 tonemap_white = 2.0
 ssao_enabled = true
@@ -231,6 +231,13 @@ size = Vector3(0.02, 6.994997, 0.02)
 material = ExtResource("4_kl5ay")
 size = Vector3(0.02, 6.994997, 0.02)
 
+[sub_resource type="CylinderMesh" id="CylinderMesh_xteo1"]
+material = ExtResource("8_tbq01")
+bottom_radius = 3.338
+height = 6.91
+radial_segments = 4
+rings = 0
+
 [sub_resource type="BoxMesh" id="BoxMesh_ogkr3"]
 material = ExtResource("4_kl5ay")
 size = Vector3(0.04, 1.4949975, 0.04)
@@ -288,55 +295,59 @@ albedo_texture = ExtResource("7_hgslh")
 
 [sub_resource type="SphereMesh" id="SphereMesh_7tbbo"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tlwcc"]
-albedo_texture = ExtResource("6_rlpi5")
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ewg6b"]
+shading_mode = 0
 albedo_texture = ExtResource("6_rlpi5")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u5gq0"]
-albedo_texture = ExtResource("8_506e2")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v6iic"]
+shading_mode = 0
 albedo_texture = ExtResource("8_506e2")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ewmbl"]
+shading_mode = 0
 albedo_texture = ExtResource("9_vcgox")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4h42u"]
-albedo_texture = ExtResource("10_euau4")
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4y16h"]
+shading_mode = 0
 albedo_texture = ExtResource("10_euau4")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qi2ty"]
+shading_mode = 0
 albedo_texture = ExtResource("11_u03oo")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0m503"]
+shading_mode = 0
 albedo_texture = ExtResource("12_qxgch")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iixjk"]
+shading_mode = 0
 albedo_texture = ExtResource("13_r54xu")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yuneh"]
 albedo_texture = ExtResource("15_keiyw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_057f4"]
+shading_mode = 0
 albedo_texture = ExtResource("16_rvyx8")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5dt3m"]
+shading_mode = 0
 albedo_texture = ExtResource("17_ifpan")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kl5ay"]
+shading_mode = 0
 albedo_texture = ExtResource("18_bib7n")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3lbo0"]
+shading_mode = 0
 albedo_texture = ExtResource("19_hgslh")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tbq01"]
+shading_mode = 0
 albedo_texture = ExtResource("20_lahx7")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mj7h6"]
+shading_mode = 0
 albedo_texture = ExtResource("21_yqwtw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gbu3n"]
@@ -352,12 +363,11 @@ size = Vector3(3.5, 3.5, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4fg2q"]
 albedo_texture = ExtResource("31_yqwtw")
+roughness = 0.4
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ogkr3"]
+shading_mode = 0
 albedo_texture = ExtResource("36_u5gq0")
-emission = Color(0.17641911, 0.17641908, 0.17641908, 1)
-backlight_enabled = true
-backlight = Color(0.24840015, 0.24840018, 0.24840015, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y5qfa"]
 size = Vector3(3.7, 2.3500001, 0.55)
@@ -372,7 +382,7 @@ script = ExtResource("1_qi2ty")
 environment = SubResource("Environment_yuneh")
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=1462107]
-transform = Transform3D(-0.61119694, -0.25221133, 0.7502185, 9.107543e-09, 0.9478697, 0.3186585, -0.7914785, 0.19476302, -0.5793351, 2.505683, 2.197227, 0)
+transform = Transform3D(-0.13398622, -0.340561, 0.93062675, 0, 0.93909436, 0.34365973, -0.9909831, 0.046045672, -0.12582572, 2.505683, 2.197227, 0)
 light_angular_distance = 0.5
 light_bake_mode = 1
 shadow_enabled = true
@@ -413,8 +423,8 @@ lights_range = 10.0
 lights_spot_angle = 30.0
 projected_lights_generate_quads = true
 projected_lights_scale = 1.5
-mount_length = 10.0
 mount_raycast_mask = 1
+mount_length = 10.0
 mount_track_padding = 1.0
 mats_track = ExtResource("3_5dt3m")
 mats_cable = ExtResource("4_kl5ay")
@@ -876,14 +886,21 @@ mesh = SubResource("BoxMesh_27nw5")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.4974985, -2)
 mesh = SubResource("BoxMesh_b2w3e")
 
+[node name="Lightshaft" type="MeshInstance3D" parent="." unique_id=160108649]
+transform = Transform3D(-1.7484556e-08, 0, 1, 0, 1, 0, -0.4, 0, -4.371139e-08, 30.002169, 2.520017, 39.499657)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Lightshaft2" type="MeshInstance3D" parent="." unique_id=1668884693]
+transform = Transform3D(-1.7484556e-08, 0, 1, 0, 1, 0, -0.4, 0, -4.371139e-08, 23.002169, 2.520017, 39.499657)
+mesh = SubResource("CylinderMesh_xteo1")
+
 [node name="LongBarLight" type="CSGCombiner3D" parent="." unique_id=1376952222]
 transform = Transform3D(-4.569558e-08, 0, 1, 0, 1, 0, -1, 0, -4.569558e-08, 33.50217, 6.002747, 39.499657)
 script = ExtResource("43_0m503")
 track_length = 14.0
-lights_rectangularity = 35.0
+lights_rectangularity = 10.0
 lights_range = 12.0
 lights_spot_angle = 35.0
-lights_energy = 3.0
 projected_lights_generate_quads = true
 projected_lights_scale = 1.5
 mount_raycast_mask = 1
@@ -891,28 +908,28 @@ mats_track = ExtResource("3_5dt3m")
 mats_cable = ExtResource("4_kl5ay")
 metadata/_custom_type_script = "uid://cm6176wsxfdqx"
 
-[node name="@CSGPolygon3D@114502" type="CSGPolygon3D" parent="LongBarLight" unique_id=328128167]
+[node name="@CSGPolygon3D@46372" type="CSGPolygon3D" parent="LongBarLight" unique_id=1488336675]
 polygon = PackedVector2Array(-0.15, 0, -0.15, 0.3, -0.06, 0.5, 0.06, 0.5, 0.15, 0.3, 0.15, 0)
 depth = 14.0
 material = ExtResource("3_5dt3m")
 
-[node name="@MeshInstance3D@114503" type="MeshInstance3D" parent="LongBarLight" unique_id=669823604]
+[node name="@MeshInstance3D@46373" type="MeshInstance3D" parent="LongBarLight" unique_id=1954872120]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2474988, -0.5)
 mesh = SubResource("BoxMesh_ogkr3")
 
-[node name="@MeshInstance3D@114504" type="MeshInstance3D" parent="LongBarLight" unique_id=1633058142]
+[node name="@MeshInstance3D@46374" type="MeshInstance3D" parent="LongBarLight" unique_id=48761809]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2474988, -13.5)
 mesh = SubResource("BoxMesh_nw8jh")
 
-[node name="@CSGBox3D@114507" type="CSGBox3D" parent="LongBarLight" unique_id=2749330]
+[node name="@CSGBox3D@46377" type="CSGBox3D" parent="LongBarLight" unique_id=1501622709]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -3.5)
 operation = 2
-size = Vector3(0.12, 0.25, 4.2)
+size = Vector3(0.12, 0.25, 1.2)
 material = ExtResource("3_yuneh")
 
-[node name="@SpotLight3D@114505" type="SpotLight3D" parent="LongBarLight/@CSGBox3D@114507" unique_id=290776928]
+[node name="@SpotLight3D@46375" type="SpotLight3D" parent="LongBarLight/@CSGBox3D@46377" unique_id=68616776]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
-light_energy = 3.0
+light_energy = 2.0
 light_size = 0.05
 light_bake_mode = 1
 shadow_reverse_cull_face = true
@@ -922,19 +939,19 @@ distance_fade_length = 5.0
 spot_range = 12.0
 spot_angle = 35.0
 
-[node name="@MeshInstance3D@114506" type="MeshInstance3D" parent="LongBarLight/@CSGBox3D@114507" unique_id=796904345]
+[node name="@MeshInstance3D@46376" type="MeshInstance3D" parent="LongBarLight/@CSGBox3D@46377" unique_id=1158383673]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.9100037, -1.9073486e-06)
 mesh = SubResource("QuadMesh_27nw5")
 
-[node name="@CSGBox3D@114510" type="CSGBox3D" parent="LongBarLight" unique_id=57220474]
+[node name="@CSGBox3D@46380" type="CSGBox3D" parent="LongBarLight" unique_id=1260039058]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -10.5)
 operation = 2
-size = Vector3(0.12, 0.25, 4.2)
+size = Vector3(0.12, 0.25, 1.2)
 material = ExtResource("3_yuneh")
 
-[node name="@SpotLight3D@114508" type="SpotLight3D" parent="LongBarLight/@CSGBox3D@114510" unique_id=1014899743]
+[node name="@SpotLight3D@46378" type="SpotLight3D" parent="LongBarLight/@CSGBox3D@46380" unique_id=242655778]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
-light_energy = 3.0
+light_energy = 2.0
 light_size = 0.05
 light_bake_mode = 1
 shadow_reverse_cull_face = true
@@ -944,7 +961,7 @@ distance_fade_length = 5.0
 spot_range = 12.0
 spot_angle = 35.0
 
-[node name="@MeshInstance3D@114509" type="MeshInstance3D" parent="LongBarLight/@CSGBox3D@114510" unique_id=1129917549]
+[node name="@MeshInstance3D@46379" type="MeshInstance3D" parent="LongBarLight/@CSGBox3D@46380" unique_id=1521875278]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.9100037, -1.9073486e-06)
 mesh = SubResource("QuadMesh_b2w3e")
 
@@ -1412,7 +1429,7 @@ url = "https://gamesalutes.itch.io/artillery-rampage"
 
 [node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Artillery Rampage" unique_id=675816587]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
-material_override = SubResource("StandardMaterial3D_tlwcc")
+cast_shadow = 0
 operation = 2
 size = Vector3(2.5, 1.5, 0.5)
 material = SubResource("StandardMaterial3D_ewg6b")
@@ -1427,7 +1444,7 @@ url = "https://devpods.itch.io/cargo-bay-5n-afu"
 
 [node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Cargo Bay" unique_id=1544338814]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
-material_override = SubResource("StandardMaterial3D_u5gq0")
+cast_shadow = 0
 operation = 2
 size = Vector3(2.5, 1.5, 0.5)
 material = SubResource("StandardMaterial3D_v6iic")
@@ -1442,7 +1459,7 @@ url = "https://mdfewkes.itch.io/crash-em-up"
 
 [node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Crash Em Up" unique_id=228317423]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
-material_override = SubResource("StandardMaterial3D_u5gq0")
+cast_shadow = 0
 operation = 2
 size = Vector3(2.5, 1.5, 0.5)
 material = SubResource("StandardMaterial3D_ewmbl")
@@ -1457,7 +1474,7 @@ url = "https://christiangabbianelli.itch.io/crazy-arena-chaos"
 
 [node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Crazy Arena Chaos" unique_id=966413932]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
-material_override = SubResource("StandardMaterial3D_4h42u")
+cast_shadow = 0
 operation = 2
 size = Vector3(2.5, 1.5, 0.5)
 material = SubResource("StandardMaterial3D_4y16h")
@@ -1472,7 +1489,7 @@ url = "https://davids91.itch.io/cyndrive-ships"
 
 [node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Cyndrive Ships" unique_id=788663434]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
-material_override = SubResource("StandardMaterial3D_u5gq0")
+cast_shadow = 0
 operation = 2
 size = Vector3(2.5, 1.5, 0.5)
 material = SubResource("StandardMaterial3D_qi2ty")
@@ -1487,7 +1504,7 @@ url = "https://deep-rooted-games.itch.io/everchange"
 
 [node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Everchange" unique_id=564190632]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
-material_override = SubResource("StandardMaterial3D_tlwcc")
+cast_shadow = 0
 operation = 2
 size = Vector3(2.5, 1.5, 0.5)
 material = SubResource("StandardMaterial3D_0m503")
@@ -1502,7 +1519,7 @@ url = "https://devpods.itch.io/forgotten-road"
 
 [node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Forgotten Road" unique_id=1733288856]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
-material_override = SubResource("StandardMaterial3D_u5gq0")
+cast_shadow = 0
 operation = 2
 size = Vector3(2.5, 1.5, 0.5)
 material = SubResource("StandardMaterial3D_iixjk")
@@ -1517,7 +1534,7 @@ url = "https://chaoticplay.itch.io/king-arthur-tales-of-the-sword"
 
 [node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/King Arthur Tales of the Sword" unique_id=850616755]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
-material_override = SubResource("StandardMaterial3D_4h42u")
+cast_shadow = 0
 operation = 2
 size = Vector3(2.5, 1.5, 0.5)
 material = SubResource("StandardMaterial3D_yuneh")
@@ -1532,7 +1549,7 @@ url = "https://mdfewkes.itch.io/legend-of-shadowtail"
 
 [node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Legend of Shadowtail" unique_id=1291495650]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
-material_override = SubResource("StandardMaterial3D_u5gq0")
+cast_shadow = 0
 operation = 2
 size = Vector3(2.5, 1.5, 0.5)
 material = SubResource("StandardMaterial3D_057f4")
@@ -1547,7 +1564,7 @@ url = "https://uraxii.itch.io/naous"
 
 [node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Naous" unique_id=1178703434]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
-material_override = SubResource("StandardMaterial3D_tlwcc")
+cast_shadow = 0
 operation = 2
 size = Vector3(2.5, 1.5, 0.5)
 material = SubResource("StandardMaterial3D_5dt3m")
@@ -1562,7 +1579,7 @@ url = "https://iancher.itch.io/orbs-and-dash"
 
 [node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Orbs and Dash" unique_id=1746568817]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
-material_override = SubResource("StandardMaterial3D_u5gq0")
+cast_shadow = 0
 operation = 2
 size = Vector3(2.5, 1.5, 0.5)
 material = SubResource("StandardMaterial3D_kl5ay")
@@ -1577,7 +1594,7 @@ url = "https://numenorian.itch.io/planets-mobile"
 
 [node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Planets Mobile" unique_id=1069114453]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
-material_override = SubResource("StandardMaterial3D_u5gq0")
+cast_shadow = 0
 operation = 2
 size = Vector3(2.5, 1.5, 0.5)
 material = SubResource("StandardMaterial3D_3lbo0")
@@ -1592,7 +1609,7 @@ url = "https://null-mt.itch.io/supply-and-siege"
 
 [node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Supply and Siege" unique_id=1932559617]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
-material_override = SubResource("StandardMaterial3D_4h42u")
+cast_shadow = 0
 operation = 2
 size = Vector3(2.5, 1.5, 0.5)
 material = SubResource("StandardMaterial3D_tbq01")
@@ -1607,7 +1624,7 @@ url = "https://patrickmck.itch.io/talon"
 
 [node name="painting" type="CSGBox3D" parent="Dev Pods Game Pictures/Talon" unique_id=666261940]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
-material_override = SubResource("StandardMaterial3D_u5gq0")
+cast_shadow = 0
 operation = 2
 size = Vector3(2.5, 1.5, 0.5)
 material = SubResource("StandardMaterial3D_mj7h6")
@@ -1649,6 +1666,7 @@ mesh = ExtResource("32_tlwcc")
 [node name="Painting Image" type="MeshInstance3D" parent="Dev Pods Game Pictures/Game Frame with Button - Gladiator Example/BasicCurvyFrame Test" unique_id=258781107]
 transform = Transform3D(-7.033798e-07, 0, 1, 0, 9.407751, 0, -16.091467, 0, -4.371139e-08, -0.19434357, -0.026180267, 0)
 material_override = SubResource("StandardMaterial3D_ogkr3")
+cast_shadow = 0
 mesh = SubResource("QuadMesh_7tbbo")
 
 [node name="CollisionFrame" type="CollisionShape3D" parent="Dev Pods Game Pictures/Game Frame with Button - Gladiator Example" unique_id=409454442]
