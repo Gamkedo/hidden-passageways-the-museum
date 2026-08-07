@@ -180,7 +180,7 @@ func make_dot_light(pos_along_track: float) -> CSGBox3D:
 	if projected_lights_generate_quads:
 		## Fake lighting using quads
 		var projection_position: Vector3
-		var projection_normal: Vector3
+		var _projection_normal: Vector3
 		
 		## Raycast to locate our light
 		var space_state := get_world_3d().direct_space_state
@@ -196,10 +196,10 @@ func make_dot_light(pos_along_track: float) -> CSGBox3D:
 			
 			projection_position = hit_pos
 			if projected_lights_use_raycast_normal:
-				projection_normal = result.normal
+				_projection_normal = result.normal
 			else:
 				## face up
-				projection_normal = Vector3.UP
+				_projection_normal = Vector3.UP
 			
 			var quad := QuadMesh.new()
 			quad.size *= projected_lights_scale

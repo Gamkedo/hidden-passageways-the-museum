@@ -3,9 +3,15 @@
 [ext_resource type="LightmapGIData" uid="uid://bxlqpuok42wli" path="res://level-scenes/gladiator-of-the-golden-house/gotgh_portal.lmbake" id="1_cqs3k"]
 [ext_resource type="PackedScene" uid="uid://ce0uc3f7i1cxo" path="res://entities-scene_prefabs/player_with_ui.tscn" id="1_w5a57"]
 [ext_resource type="Material" uid="uid://di6u3hjsvhh8i" path="res://materials/modern-museum/museum-floor-wood.tres" id="2_cqs3k"]
+[ext_resource type="Texture2D" uid="uid://lbuhexnw58d6" path="res://level-scenes/gladiator-of-the-golden-house/assets/zombie_anim.png" id="2_ogd0y"]
+[ext_resource type="Texture2D" uid="uid://b1vl802qahuvt" path="res://level-scenes/gladiator-of-the-golden-house/assets/gladiator-godot-icon.png" id="2_qcddt"]
 [ext_resource type="Material" uid="uid://dukv1r4leba6p" path="res://materials/colosseumbricks.tres" id="3_cm5gx"]
 [ext_resource type="Material" uid="uid://bnuir4b1t58xs" path="res://environment-csg/level-grid.tres" id="3_lwe8t"]
+[ext_resource type="Script" uid="uid://keem1yf8rpj2" path="res://level-scenes/gladiator-of-the-golden-house/animate-sprite.gd" id="3_uf5hv"]
+[ext_resource type="Texture2D" uid="uid://dn3peytgo6pv4" path="res://level-scenes/gladiator-of-the-golden-house/assets/hand.png" id="4_5xvd4"]
 [ext_resource type="PackedScene" uid="uid://cj76xwy52oldt" path="res://entities-scene_prefabs/ionic_column-baked.tscn" id="5_lwe8t"]
+[ext_resource type="Texture2D" uid="uid://cjgmabwg04fy2" path="res://level-scenes/gladiator-of-the-golden-house/assets/japanese-woodblock-1x.png" id="5_tu82b"]
+[ext_resource type="Texture2D" uid="uid://bks1gcll6p01b" path="res://level-scenes/gladiator-of-the-golden-house/assets/boulders.png" id="6_diu1h"]
 
 [sub_resource type="Gradient" id="Gradient_xc10t"]
 interpolation_mode = 2
@@ -158,6 +164,131 @@ shadow_blur = 3.0
 directional_shadow_mode = 0
 directional_shadow_max_distance = 60.0
 
+[node name="Logo" type="Sprite3D" parent="." unique_id=8730245]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.2155485, -24.430557)
+pixel_size = 0.04
+alpha_cut = 1
+texture = ExtResource("2_qcddt")
+
+[node name="EntryExhibit" type="Node3D" parent="." unique_id=1656851682]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.8928998, 0.9877399, 30.516563)
+
+[node name="Zombie" type="Node3D" parent="EntryExhibit" unique_id=1776585063]
+
+[node name="Label3D" type="Label3D" parent="EntryExhibit/Zombie" unique_id=1666210632]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.15282822, 0.024295688, 1.3566732)
+text = "Zombie"
+font_size = 24
+
+[node name="Sprite3D" type="Sprite3D" parent="EntryExhibit/Zombie" unique_id=1638755227]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13318825, 0.03661251, 0.65470934)
+cast_shadow = 0
+pixel_size = 0.03
+axis = 1
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("2_ogd0y")
+
+[node name="Sprite3D2" type="Sprite3D" parent="EntryExhibit/Zombie" unique_id=860730508]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5383301, 1.3243042, -0.6776264)
+cast_shadow = 0
+pixel_size = 0.08
+shaded = true
+texture_filter = 2
+texture = ExtResource("2_ogd0y")
+hframes = 6
+frame = 5
+script = ExtResource("3_uf5hv")
+frame_time = 0.2
+
+[node name="Sprite3D4" type="Sprite3D" parent="EntryExhibit/Zombie" unique_id=199883462]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0039024353, 1.3243042, 0.1402955)
+cast_shadow = 0
+pixel_size = 0.08
+shaded = true
+texture_filter = 2
+texture = ExtResource("2_ogd0y")
+hframes = 6
+frame = 5
+script = ExtResource("3_uf5hv")
+frame_time = 0.2
+
+[node name="Sprite3D3" type="Sprite3D" parent="EntryExhibit/Zombie" unique_id=1370533944]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4616699, 1.3243042, -0.6776264)
+cast_shadow = 0
+pixel_size = 0.08
+shaded = true
+texture_filter = 2
+texture = ExtResource("2_ogd0y")
+hframes = 6
+frame = 5
+script = ExtResource("3_uf5hv")
+frame_time = 0.2
+
+[node name="SpotLight3D" type="SpotLight3D" parent="EntryExhibit/Zombie" unique_id=176560076]
+transform = Transform3D(0.61708593, 0.14067088, 0.7742201, 0.012463229, 0.9820209, -0.18836068, -0.7867971, 0.125884, 0.60423803, 2.9897099, 0.75180006, 1.9643109)
+light_color = Color(0.9226154, 0.85311824, 0.7740258, 1)
+light_energy = 4.0
+light_specular = 0.495
+light_bake_mode = 0
+spot_range = 8.658857
+spot_attenuation = 2.0
+spot_angle = 42.839222
+spot_angle_attenuation = 3.9999776
+
+[node name="Thumbalina" type="Sprite3D" parent="EntryExhibit" unique_id=1644524869]
+transform = Transform3D(-0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, -0.70710677, 2.3627899, 1.332782, 5.3026395)
+cast_shadow = 0
+pixel_size = 0.032
+shaded = true
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("4_5xvd4")
+
+[node name="Label3D2" type="Label3D" parent="EntryExhibit/Thumbalina" unique_id=922507246]
+transform = Transform3D(0.99999994, 0, -3.0908623e-08, 3.0908623e-08, 3.0908616e-08, 1, 0, -0.99999994, 3.0908616e-08, 0.03262947, -1.2719152, 0.66313887)
+double_sided = false
+text = "\"Thumbalina\"
+inspired by Mac Miller"
+font_size = 24
+line_spacing = 16.0
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="EntryExhibit/Thumbalina" unique_id=1511541550]
+transform = Transform3D(0.42691112, -0.1093093, -0.89766276, 0.0037758201, 0.9928745, -0.119107544, 0.90428567, 0.047458947, 0.42428178, -1.9501398, -0.46868652, 0.91811264)
+light_color = Color(0.9226154, 0.85311824, 0.7740258, 1)
+light_energy = 4.0
+light_specular = 0.0
+light_bake_mode = 0
+spot_range = 3.932
+spot_attenuation = 2.0
+spot_angle = 34.91
+spot_angle_attenuation = 8.282063
+
+[node name="ColorPalette" type="Sprite3D" parent="EntryExhibit" unique_id=1843070316]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6441746, 0)
+cast_shadow = 0
+pixel_size = 0.3
+double_sided = false
+texture_filter = 0
+texture = ExtResource("5_tu82b")
+
+[node name="Boulders" type="Sprite3D" parent="EntryExhibit" unique_id=2041867577]
+transform = Transform3D(-0.1470992, 0, 0.98912174, 0, 1, 0, -0.98912174, 0, -0.1470992, -2.9553223, 1.3049651, 5.04335)
+pixel_size = 0.04
+alpha_cut = 1
+texture_filter = 2
+texture = ExtResource("6_diu1h")
+
+[node name="Label3D" type="Label3D" parent="EntryExhibit/Boulders" unique_id=145260987]
+transform = Transform3D(1, 0, -1.4901161e-08, 0, 0.20501702, 0.97875845, 0, -0.97875845, 0.20501684, -0.7328858, -1.2282751, 0.6583014)
+text = "Made on the endless night before release
+(still seeking new gameplay mechanics),
+these Boulders are only rarely spawned
+by one enemy in one level, making it
+one of the rarest actors encountered..."
+font_size = 16
+horizontal_alignment = 0
+
 [node name="Torch" type="SpotLight3D" parent="." unique_id=1496969056]
 transform = Transform3D(0.9659258, -1.131334e-08, 0.25881904, -0.25881904, -4.222196e-08, 0.9659258, 0, -1, -4.371139e-08, 11.3428335, 6.7411566, 31.111973)
 light_color = Color(0.60696036, 0.79323924, 0.864832, 1)
@@ -305,7 +436,7 @@ mesh = SubResource("ArrayMesh_cm5gx")
 surface_material_override/0 = ExtResource("3_cm5gx")
 
 [node name="Tiles" type="Node3D" parent="." unique_id=1748294719]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3775823, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03367114, 0)
 
 [node name="Tile" type="MeshInstance3D" parent="Tiles" unique_id=283213731]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 12)
