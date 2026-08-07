@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://kvgkgln5sjsh" path="res://scripts/main_scene_setup.gd" id="1_qi2ty"]
 [ext_resource type="PackedScene" uid="uid://c0ug0wogf56tg" path="res://models/cyndrive_ships_ship.fbx" id="2_5t06w"]
+[ext_resource type="Environment" uid="uid://cesku5vcw05no" path="res://materials/museum_environment.tres" id="2_gbu3n"]
 [ext_resource type="PackedScene" uid="uid://bad4bwomkabyu" path="res://models/cyndrive_ships_silo.fbx" id="2_pw8xm"]
 [ext_resource type="Material" uid="uid://b17jmjmvd5bw2" path="res://materials/taxi-placeholder.tres" id="2_r54xu"]
 [ext_resource type="Script" uid="uid://bud6xyvo80vl3" path="res://scripts/click_link.gd" id="3_1bvp3"]
@@ -53,24 +54,6 @@
 [ext_resource type="Texture2D" uid="uid://cpakvdnl3rxxa" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/gladiator-framed-pic.png" id="36_u5gq0"]
 [ext_resource type="Script" uid="uid://cm6176wsxfdqx" path="res://entities-scene_prefabs/tracklights/tracklight.gd" id="43_0m503"]
 [ext_resource type="PackedScene" uid="uid://dgahdbu6k5v7a" path="res://entities-scene_prefabs/fire_extinguisher.tscn" id="53_mj7h6"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_iixjk"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-
-[sub_resource type="Sky" id="Sky_4fg2q"]
-sky_material = SubResource("ProceduralSkyMaterial_iixjk")
-
-[sub_resource type="Environment" id="Environment_yuneh"]
-background_mode = 2
-sky = SubResource("Sky_4fg2q")
-ambient_light_color = Color(0.5756888, 0.5492039, 0.5138223, 1)
-ambient_light_sky_contribution = 0.35
-tonemap_mode = 3
-tonemap_white = 2.0
-ssao_enabled = true
-ssao_radius = 5.0
-ssao_intensity = 3.0
 
 [sub_resource type="SphereMesh" id="SphereMesh_xteo1"]
 radius = 2.0
@@ -380,7 +363,7 @@ radius = 1.0454303
 script = ExtResource("1_qi2ty")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1183794555]
-environment = SubResource("Environment_yuneh")
+environment = ExtResource("2_gbu3n")
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=1462107]
 transform = Transform3D(-0.13398622, -0.340561, 0.93062675, 0, 0.93909436, 0.34365973, -0.9909831, 0.046045672, -0.12582572, 2.505683, 2.197227, 0)
