@@ -3,14 +3,15 @@
 [ext_resource type="PackedScene" uid="uid://cqq8q3sgrg35b" path="res://ui/guidebook.tscn" id="1_ec6g6"]
 [ext_resource type="PackedScene" uid="uid://cxl7h3vtvfn66" path="res://models/guidebook.gltf" id="1_lvjpm"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_idw7o"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_ec6g6"]
 viewport_path = NodePath("../SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hy870"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_idw7o"]
 resource_local_to_scene = true
 resource_name = "Pages"
-cull_mode = 2
-albedo_texture = SubResource("ViewportTexture_idw7o")
+transparency = 1
+cull_mode = 1
+albedo_texture = SubResource("ViewportTexture_ec6g6")
 roughness = 0.8
 texture_filter = 5
 
@@ -18,6 +19,7 @@ texture_filter = 5
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=1214087469]
 disable_3d = true
+transparent_bg = true
 handle_input_locally = false
 snap_2d_transforms_to_pixel = true
 positional_shadow_atlas_quad_0 = 0
@@ -37,6 +39,6 @@ cast_shadow = 0
 [node name="Pages" parent="guidebook" index="1" unique_id=1231375428]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 2
-surface_material_override/0 = SubResource("StandardMaterial3D_hy870")
+surface_material_override/0 = SubResource("StandardMaterial3D_idw7o")
 
 [editable path="guidebook"]

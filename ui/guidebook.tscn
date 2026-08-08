@@ -1,49 +1,193 @@
 [gd_scene format=3 uid="uid://cqq8q3sgrg35b"]
 
+[ext_resource type="Theme" uid="uid://ds3g6uu3wweuv" path="res://ui/theme_guidebook.tres" id="1_h7fks"]
+[ext_resource type="Script" uid="uid://dnd6tnxvov3lt" path="res://ui/guidebook-demo.gd" id="2_m08e3"]
+[ext_resource type="Texture2D" uid="uid://di83c1pa3ix7" path="res://Dev_Pods_Logo_Large.png" id="2_sw7vr"]
+[ext_resource type="Texture2D" uid="uid://cyfidqioe344i" path="res://models/ratrick.png" id="3_kmlox"]
+[ext_resource type="Texture2D" uid="uid://r870n6ekjct4" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/talon.png" id="4_m08e3"]
+
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1238244302]
 
-[node name="Control" type="Control" parent="." unique_id=503424374]
+[node name="Root" type="Control" parent="." unique_id=503424374]
 custom_minimum_size = Vector2(512, 512)
 custom_maximum_size = Vector2(512, 512)
 propagate_maximum_size = true
 clip_contents = true
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_h7fks")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=1943260663]
+[node name="MarginContainer" type="MarginContainer" parent="Root" unique_id=976663831]
 custom_minimum_size = Vector2(512, 512)
+custom_maximum_size = Vector2(512, 512)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TabContainer" type="TabContainer" parent="Root/MarginContainer" unique_id=1395074237]
+layout_mode = 2
+tab_alignment = 2
+current_tab = 1
+tabs_position = 1
+use_hidden_tabs_for_min_size = true
+script = ExtResource("2_m08e3")
+
+[node name="1" type="HBoxContainer" parent="Root/MarginContainer/TabContainer" unique_id=1943260663]
+visible = false
+layout_mode = 2
 alignment = 1
+metadata/_tab_index = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer" unique_id=1798362628]
+[node name="PanelContainer" type="PanelContainer" parent="Root/MarginContainer/TabContainer/1" unique_id=341336565]
+custom_maximum_size = Vector2(256, -1)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="Control/HBoxContainer/VBoxContainer" unique_id=485380624]
-layout_mode = 2
-text = "Testing"
-
-[node name="Label2" type="Label" parent="Control/HBoxContainer/VBoxContainer" unique_id=1755555890]
-layout_mode = 2
-text = "Testing"
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="Control/HBoxContainer" unique_id=767136806]
+[node name="VBoxContainer" type="VBoxContainer" parent="Root/MarginContainer/TabContainer/1/PanelContainer" unique_id=1798362628]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Label3" type="Label" parent="Control/HBoxContainer/VBoxContainer2" unique_id=1840304515]
+[node name="TextureRect" type="TextureRect" parent="Root/MarginContainer/TabContainer/1/PanelContainer/VBoxContainer" unique_id=1277405662]
+modulate = Color(0.23392558, 0.2339254, 0.23392543, 1)
 layout_mode = 2
-text = "Testing"
+texture = ExtResource("2_sw7vr")
+expand_mode = 4
+stretch_mode = 5
 
-[node name="Label4" type="Label" parent="Control/HBoxContainer/VBoxContainer2" unique_id=478786398]
+[node name="Heading" type="Label" parent="Root/MarginContainer/TabContainer/1/PanelContainer/VBoxContainer" unique_id=485380624]
 layout_mode = 2
-text = "Testing"
+text = "Welcome to
+Hidden Passageways!"
+horizontal_alignment = 1
+
+[node name="RichText" type="RichTextLabel" parent="Root/MarginContainer/TabContainer/1/PanelContainer/VBoxContainer" unique_id=176857357]
+layout_mode = 2
+bbcode_enabled = true
+text = "Lorem ipsum dolor etc etc..."
+fit_content = true
+
+[node name="PanelContainer2" type="PanelContainer" parent="Root/MarginContainer/TabContainer/1" unique_id=1728895463]
+custom_maximum_size = Vector2(256, -1)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Root/MarginContainer/TabContainer/1/PanelContainer2" unique_id=767136806]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label3" type="Label" parent="Root/MarginContainer/TabContainer/1/PanelContainer2/VBoxContainer2" unique_id=1840304515]
+layout_mode = 2
+text = "Museum Areas:"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Root/MarginContainer/TabContainer/1/PanelContainer2/VBoxContainer2" unique_id=238250060]
+layout_mode = 2
+bbcode_enabled = true
+text = "Main area
+Basement
+Cyndrive Ships
+
+We could have photos, a map or maybe even a real time minimap.
+
+[b]You can't pick me up, yet ...[/b]"
+fit_content = true
+
+[node name="2" type="HBoxContainer" parent="Root/MarginContainer/TabContainer" unique_id=1939967442]
+layout_mode = 2
+alignment = 1
+metadata/_tab_index = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Root/MarginContainer/TabContainer/2" unique_id=1955937939]
+custom_maximum_size = Vector2(256, -1)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Root/MarginContainer/TabContainer/2/PanelContainer" unique_id=201604877]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichText" type="RichTextLabel" parent="Root/MarginContainer/TabContainer/2/PanelContainer/VBoxContainer" unique_id=1205195171]
+layout_mode = 2
+bbcode_enabled = true
+text = "Look it's another page
+
+also Ratrick"
+fit_content = true
+
+[node name="TextureRect" type="TextureRect" parent="Root/MarginContainer/TabContainer/2/PanelContainer/VBoxContainer" unique_id=2113943672]
+layout_mode = 2
+texture = ExtResource("3_kmlox")
+stretch_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Root/MarginContainer/TabContainer/2/PanelContainer/VBoxContainer" unique_id=757019496]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Root/MarginContainer/TabContainer/2/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1238211636]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "OK"
+
+[node name="Button2" type="Button" parent="Root/MarginContainer/TabContainer/2/PanelContainer/VBoxContainer/HBoxContainer" unique_id=51515932]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Read More..."
+
+[node name="TextureRect2" type="TextureRect" parent="Root/MarginContainer/TabContainer/2/PanelContainer/VBoxContainer" unique_id=1507905850]
+layout_mode = 2
+texture = ExtResource("4_m08e3")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="PanelContainer2" type="PanelContainer" parent="Root/MarginContainer/TabContainer/2" unique_id=84169642]
+custom_maximum_size = Vector2(256, -1)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Root/MarginContainer/TabContainer/2/PanelContainer2" unique_id=1637595513]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label3" type="Label" parent="Root/MarginContainer/TabContainer/2/PanelContainer2/VBoxContainer2" unique_id=1963110427]
+layout_mode = 2
+text = "Other Opportunities:"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Root/MarginContainer/TabContainer/2/PanelContainer2/VBoxContainer2" unique_id=2141687121]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "Buttons...
+Diegetic ui...
+Checklist that automatically marks where you've been"
+
+[node name="HSeparator" type="HSeparator" parent="Root/MarginContainer/TabContainer/2/PanelContainer2/VBoxContainer2" unique_id=1740749]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="Root/MarginContainer/TabContainer/2/PanelContainer2/VBoxContainer2" unique_id=2140098863]
+layout_mode = 2
+text = "Visited basement"
+
+[node name="CheckBox2" type="CheckBox" parent="Root/MarginContainer/TabContainer/2/PanelContainer2/VBoxContainer2" unique_id=1655705950]
+layout_mode = 2
+text = "Visited Cyndrive Ships"
+
+[node name="CheckBox3" type="CheckBox" parent="Root/MarginContainer/TabContainer/2/PanelContainer2/VBoxContainer2" unique_id=1812027345]
+layout_mode = 2
+text = "Visited Golden House"
+
+[node name="CheckBox4" type="CheckBox" parent="Root/MarginContainer/TabContainer/2/PanelContainer2/VBoxContainer2" unique_id=828242834]
+layout_mode = 2
+text = "Took a taxi"
