@@ -51,6 +51,7 @@
 [ext_resource type="Texture2D" uid="uid://cpakvdnl3rxxa" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/gladiator-framed-pic.png" id="36_u5gq0"]
 [ext_resource type="Script" uid="uid://cm6176wsxfdqx" path="res://entities-scene_prefabs/auto-tracklight.gd" id="43_0m503"]
 [ext_resource type="PackedScene" uid="uid://bjbv5y5fcm1dy" path="res://entities-scene_prefabs/button_stand.tscn" id="46_tbq01"]
+[ext_resource type="PackedScene" uid="uid://dbngi8xk7go57" path="res://models/tank_rampage_command_marine.tscn" id="53_gbu3n"]
 [ext_resource type="PackedScene" uid="uid://dgahdbu6k5v7a" path="res://entities-scene_prefabs/fire_extinguisher.tscn" id="53_mj7h6"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_xteo1"]
@@ -1653,5 +1654,24 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 24.011044, 0.9385146, 20.2431
 
 [node name="Extinguisher2" parent="." unique_id=319937067 instance=ExtResource("53_mj7h6")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 24.011044, -9.463224, 20.2431)
+
+[node name="tank-rampage-command_marine" parent="." unique_id=2103342501 instance=ExtResource("53_gbu3n")]
+transform = Transform3D(-0.627159, 0, -0.7788914, 0, 1, 0, 0.7788914, 0, -0.627159, 30.876, -0.997, 43.822)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="tank-rampage-command_marine" unique_id=262737274]
+transform = Transform3D(0.90630776, 0.32136145, -0.2744686, 0, 0.64944804, 0.76040596, 0.42261827, -0.68916184, 0.5885998, -0.44, 2.69, 0.848)
+layers = 4
+light_bake_mode = 0
+distance_fade_enabled = true
+distance_fade_begin = 10.0
+spot_range = 4.535
+spot_angle = 33.37
+
+[node name="Label3D" type="Label3D" parent="tank-rampage-command_marine" unique_id=1297228397]
+transform = Transform3D(0.9788673, 0, -0.20449601, 0, 1, 0, 0.20449601, 0, 0.9788673, 0, 1.8, 0.445)
+pixel_size = 0.002
+text = "I'm from the prequel, Tank Rampage Command!"
+font_size = 16
+outline_size = 4
 
 [editable path="CSG Blockout/Cyndrive Ships/CyndriveShipsProps/cyndrive_ships_carrier"]
