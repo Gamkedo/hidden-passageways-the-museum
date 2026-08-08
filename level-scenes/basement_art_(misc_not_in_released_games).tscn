@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b6fbyq5ixmjt4" path="res://level-scenes/tarnishedmoth_basement.tscn" id="8_m0kxd"]
 [ext_resource type="Script" uid="uid://bcbsmve6pf08c" path="res://entities-scene_prefabs/auto-stairs.gd" id="8_xljnw"]
 [ext_resource type="Material" uid="uid://cb0ohmlylauik" path="res://materials/modern-museum/museum-floor-dark-carpet.tres" id="9_43mwv"]
+[ext_resource type="PackedScene" uid="uid://dnet2j3i5v35v" path="res://environment-csg/zero_gravity_elevator.tscn" id="11_xap7t"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lahx7"]
 albedo_texture = ExtResource("1_vujxr")
@@ -106,3 +107,6 @@ material = ExtResource("9_43mwv")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.246, 1.82)
 size = Vector3(4, 0.08, 0.238)
 material = ExtResource("9_43mwv")
+
+[node name="ZeroGravityElevator" parent="." unique_id=65243958 instance=ExtResource("11_xap7t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, -22, -4.5)
