@@ -1521,7 +1521,7 @@ transform = Transform3D(-8.742277e-09, 0, -0.19999999, 0, 0.19999999, 0, 0.19999
 shape = SubResource("BoxShape3D_7tbbo")
 
 [node name="Player with UI" parent="." unique_id=1354449472 instance=ExtResource("3_lquwl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.5, 5.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -0.8355012, 5.5)
 
 [node name="Dev Pods Game Pictures" type="Node3D" parent="." unique_id=1270972283]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.5, 0, 33.5)

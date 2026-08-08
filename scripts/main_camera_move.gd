@@ -3,7 +3,7 @@ extends Node3D
 # this script is a small workaround to prevent camera shake
 # lets camera ignore subtle player physics bounce
 
-var physics_child_camera_transform: Marker3D
+@export var physics_child_camera_transform: Marker3D
 
 func set_chase_transform(transform: Marker3D):
 	physics_child_camera_transform = transform

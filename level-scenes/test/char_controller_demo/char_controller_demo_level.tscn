@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://dlu4pm22uop0o"]
+
+[ext_resource type="PackedScene" uid="uid://ce0uc3f7i1cxo" path="res://entities-scene_prefabs/player_with_ui.tscn" id="1_spdrn"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_spdrn"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_taalm"]
+sky_material = SubResource("ProceduralSkyMaterial_spdrn")
+
+[sub_resource type="Environment" id="Environment_6g3pp"]
+background_mode = 2
+sky = SubResource("Sky_taalm")
+
+[node name="CharControllerDemoLevel" type="Node3D" unique_id=2043592664]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1089062840]
+environment = SubResource("Environment_6g3pp")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1493488457]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Geo" type="Node3D" parent="." unique_id=1660604107]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Geo" unique_id=1028714289]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.745575, 0, -14.888771)
+use_collision = true
+size = Vector3(500, 1, 500)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Geo" unique_id=1521595587]
+transform = Transform3D(0.8541174, 0, 0.52008027, 0, 1, 0, -0.52008027, 0, 0.8541174, -4.756953, 0.9593749, -2.790168)
+use_collision = true
+size = Vector3(3.5708008, 1, 1)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Geo" unique_id=654545820]
+transform = Transform3D(0.41041726, 0, -0.91189784, 0, 1, 0, 0.91189784, 0, 0.41041726, 4.2575026, 0.7366576, -1.8750899)
+use_collision = true
+size = Vector3(3.5708008, 0.5545654, 1)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Geo" unique_id=2065524020]
+transform = Transform3D(0.41041726, 0, -0.91189784, 0, 1, 0, 0.91189784, 0, 0.41041726, 6.951979, 1.1937194, -4.152314)
+use_collision = true
+size = Vector3(3.5708008, 1.468689, 2.4248047)
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="Geo" unique_id=331125860]
+transform = Transform3D(0.41041726, 0, -0.91189784, 0, 1, 0, 0.91189784, 0, 0.41041726, 0.34026957, 1.1937184, 10.394241)
+use_collision = true
+size = Vector3(1.6885986, 1.468689, 5.4970703)
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="Geo" unique_id=1086730432]
+transform = Transform3D(0.41041726, 0, -0.91189784, 0, 1, 0, 0.91189784, 0, 0.41041726, 15.76021, 3.8931737, 8.529136)
+use_collision = true
+size = Vector3(1.6885986, 6.8675995, 0.92285156)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Geo" unique_id=69222803]
+transform = Transform3D(0.6135353, 0, -0.78966725, 0, 1, 0, 0.78966725, 0, 0.6135353, 9.196377, 1.5428557, -8.12401)
+use_collision = true
+size = Vector3(5.4299316, 2.1669617, 3.053711)
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="Geo" unique_id=1611512887]
+transform = Transform3D(0.8377689, 0, -0.5460249, 0, 1, 0, 0.5460249, 0, 0.8377689, 11.556447, 2.231645, -12.782364)
+use_collision = true
+size = Vector3(5.4299316, 3.5445404, 3.6240234)
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="Geo" unique_id=438524915]
+transform = Transform3D(0.33465424, 0, -0.9423411, 0, 1, 0, 0.9423411, 0, 0.33465424, 15.973555, 2.5355124, -6.8717384)
+use_collision = true
+size = Vector3(3.2418213, 4.152275, 3.2138672)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Geo" unique_id=1058074786]
+transform = Transform3D(0.41041726, 0, -0.91189784, 0, 1, 0, 0.91189784, 0, 0.41041726, -0.7086543, 3.477838, -17.431944)
+use_collision = true
+size = Vector3(3.5708008, 6.0369263, 5.199341)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Geo" unique_id=1447396023]
+transform = Transform3D(-0.99853003, 0, -0.054202467, 0, 1, 0, 0.054202467, 0, -0.99853003, -12.188632, 2.369729, -2.9330463)
+use_collision = true
+size = Vector3(3.5708008, 3.8207092, 2.0269165)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Geo" unique_id=797848181]
+transform = Transform3D(-0.99853003, 0, -0.054202467, 0, 1, 0, 0.054202467, 0, -0.99853003, -5.85447, 1.1503916, 4.0606027)
+use_collision = true
+size = Vector3(3.5708008, 1.3820343, 2.0269165)
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Geo" unique_id=514939976]
+transform = Transform3D(-0.4030309, 0, -0.91518646, 0, 1, 0, 0.91518646, 0, -0.4030309, 0.5592458, 0.46246147, -12.963402)
+use_collision = true
+polygon = PackedVector2Array(0, 0, -0.017782211, 1.6366016, 2, 1, 5.08623, 0.6144142, 7, 0)
+depth = 3.17
+
+[node name="Player with UI" parent="." unique_id=1354449472 instance=ExtResource("1_spdrn")]
