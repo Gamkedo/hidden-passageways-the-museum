@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://5up8u6sfnpqw"]
+
+[ext_resource type="PackedScene" uid="uid://cqq8q3sgrg35b" path="res://ui/guidebook.tscn" id="1_ec6g6"]
+[ext_resource type="PackedScene" uid="uid://cxl7h3vtvfn66" path="res://models/guidebook.gltf" id="1_lvjpm"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_idw7o"]
+viewport_path = NodePath("../SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hy870"]
+resource_local_to_scene = true
+resource_name = "Pages"
+cull_mode = 2
+albedo_texture = SubResource("ViewportTexture_idw7o")
+roughness = 0.8
+texture_filter = 5
+
+[node name="Guidebook3d" type="Node3D" unique_id=509619269]
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=1214087469]
+disable_3d = true
+handle_input_locally = false
+snap_2d_transforms_to_pixel = true
+positional_shadow_atlas_quad_0 = 0
+positional_shadow_atlas_quad_1 = 0
+positional_shadow_atlas_quad_2 = 0
+positional_shadow_atlas_quad_3 = 0
+size_2d_override = Vector2i(512, 512)
+
+[node name="CanvasLayer" parent="SubViewport" unique_id=1238244302 instance=ExtResource("1_ec6g6")]
+
+[node name="guidebook" parent="." unique_id=1630787135 instance=ExtResource("1_lvjpm")]
+
+[node name="Book" parent="guidebook" index="0" unique_id=1462561935]
+layers = 2
+cast_shadow = 0
+
+[node name="Pages" parent="guidebook" index="1" unique_id=1231375428]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
+layers = 2
+surface_material_override/0 = SubResource("StandardMaterial3D_hy870")
+
+[editable path="guidebook"]

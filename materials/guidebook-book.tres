@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c37fx8ridj71r"]
+
+[resource]
+resource_name = "Book"
+cull_mode = 2
+albedo_color = Color(0.83033526, 0.83033514, 0.830335, 1)
+roughness = 0.51

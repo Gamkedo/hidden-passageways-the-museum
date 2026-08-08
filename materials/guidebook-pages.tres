@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://8fsr45o07oq4"]
+
+[resource]
+resource_name = "Pages"
+cull_mode = 2
+roughness = 0.8
+texture_filter = 5
