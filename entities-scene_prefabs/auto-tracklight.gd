@@ -2,6 +2,7 @@
 class_name Autotracklight
 extends CSGCombiner3D
 
+const PREVENT_RUNTIME_REGEN: bool = true
 const CLEAR_ALL_CHILDREN: bool = true
 const EMISSIVE_WHITE = preload("uid://gatwpkkuaqht")
 const SPOT_LIGHT_DECAL = preload("uid://bj8ho62a7oj07")
@@ -10,6 +11,7 @@ const SPOT_LIGHT_DECAL_CROSSFADE = preload("uid://biecmslvyaivk")
 static var is_editor: bool:
 	get: return Engine.is_editor_hint()
 
+## *Warning!* Destroys all children!
 @export_tool_button("Generate") var generate_button := generate
 #@export_tool_button("Bake") var bake_button := bake
 
@@ -70,10 +72,11 @@ func delete_all() -> void:
 	_revealed.clear()
 
 func generate() -> void:
+	if not is_inside_tree(): return
+	if not Engine.is_editor_hint():
+		if PREVENT_RUNTIME_REGEN: return
+		push_warning("CSG regenerating at runtime")
 	EditorInterface.mark_scene_as_unsaved()
-	if not is_editor:
-		push_warning("Not designed for use in game but go off king")
-	
 	delete_all()
 	
 	add_to_scene(make_track())

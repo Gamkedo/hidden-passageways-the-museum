@@ -1,0 +1,42 @@
+[gd_resource type="Theme" format=3 uid="uid://ds3g6uu3wweuv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vdoma"]
+bg_color = Color(0.9297146, 0.9297147, 0.9297146, 1)
+border_width_left = 16
+border_width_top = 16
+border_width_right = 16
+border_width_bottom = 16
+border_color = Color(0.86467505, 0.86467516, 0.864675, 1)
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+corner_detail = 4
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cwd1n"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mmn5s"]
+bg_color = Color(0.8164105, 0.40103096, 0, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 4
+
+[resource]
+CheckBox/colors/font_color = Color(0.19793725, 0.19793722, 0.19793722, 1)
+Label/colors/font_color = Color(0.1584723, 0.15847233, 0.1584723, 1)
+Label/constants/outline_size = 0
+MarginContainer/constants/margin_bottom = 4
+MarginContainer/constants/margin_left = 4
+MarginContainer/constants/margin_right = 4
+MarginContainer/constants/margin_top = 4
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_vdoma")
+RichTextLabel/colors/default_color = Color(0.21230483, 0.21230483, 0.21230483, 1)
+TabContainer/constants/outline_size = 8
+TabContainer/constants/side_margin = 12
+TabContainer/font_sizes/font_size = 12
+TabContainer/styles/panel = SubResource("StyleBoxEmpty_cwd1n")
+TabContainer/styles/tabbar_background = SubResource("StyleBoxFlat_mmn5s")
+VBoxContainer/constants/separation = 10

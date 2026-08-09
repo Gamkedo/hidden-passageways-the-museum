@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://dnet2j3i5v35v"]
+
+[ext_resource type="Material" uid="uid://cf52fvd2ucb8h" path="res://materials/light-shaft.tres" id="1_s0imw"]
+[ext_resource type="Material" uid="uid://bnuir4b1t58xs" path="res://environment-csg/level-grid.tres" id="2_b16do"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s0imw"]
+size = Vector3(2, 15, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xteo1"]
+material = ExtResource("1_s0imw")
+size = Vector3(2, 15, 2)
+subdivide_height = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_v6xrf"]
+material = ExtResource("2_b16do")
+size = Vector3(2, 0.25, 2)
+
+[node name="ZeroGravityElevator" type="Area3D" unique_id=65243958]
+collision_mask = 6
+gravity_space_override = 3
+gravity = 1.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=265291830]
+transform = Transform3D(1, 0, 0, 0, -1, 1.509958e-07, 0, -1.509958e-07, -1, 0, 7.5, 0)
+shape = SubResource("BoxShape3D_s0imw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D" unique_id=790054284]
+transform = Transform3D(1, 0, 0, 0, -1, -1.509958e-07, 0, 1.509958e-07, -1, 0, 0, 0)
+cast_shadow = 0
+mesh = SubResource("BoxMesh_xteo1")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="CollisionShape3D" unique_id=1658478402]
+transform = Transform3D(0.8, 0, 0, 0, 0.98, 5.0858418e-08, 0, -6.2301574e-08, 0.8, 0, 0, 0)
+cast_shadow = 0
+mesh = SubResource("BoxMesh_xteo1")
+
+[node name="Platform" type="MeshInstance3D" parent="CollisionShape3D" unique_id=646645942]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.5, -1.1324685e-06)
+mesh = SubResource("BoxMesh_v6xrf")
+
+[node name="Label3D" type="Label3D" parent="CollisionShape3D" unique_id=1364110162]
+transform = Transform3D(4.3711374e-08, -1, 8.742278e-08, -1, -4.3711402e-08, -3.019916e-07, 3.019916e-07, -8.742276e-08, -1, 0, 0, 1.0437647)
+pixel_size = 0.035
+shaded = true
+alpha_cut = 1
+modulate = Color(0.605005, 0.7088323, 0.73848355, 1)
+text = "Elevator"
+font_size = 64
+outline_size = 0
+uppercase = true
+
+[node name="Label3D2" type="Label3D" parent="CollisionShape3D" unique_id=574292886]
+transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0.099, 5.8, 1.044)
+visibility_range_end = 4.5
+visibility_range_end_margin = 1.0
+pixel_size = 0.0115
+shaded = true
+alpha_cut = 1
+modulate = Color(0.605005, 0.7088323, 0.73848355, 1)
+text = "Jump"
+font_size = 52
+outline_size = 0
+uppercase = true

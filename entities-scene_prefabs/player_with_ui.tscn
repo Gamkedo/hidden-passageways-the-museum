@@ -1,20 +1,20 @@
 [gd_scene format=3 uid="uid://ce0uc3f7i1cxo"]
 
-[ext_resource type="Script" uid="uid://q1q4ki2fc8oo" path="res://scripts/Player.gd" id="1_4v70m"]
-[ext_resource type="PackedScene" uid="uid://cu85ekmbqlk7a" path="res://models/player_step_shape.res" id="2_ydgiv"]
-[ext_resource type="AudioStream" uid="uid://qfcqpxe6ua5w" path="res://audio/sound effects/LandingSound.wav" id="3_ydgiv"]
-[ext_resource type="Script" uid="uid://b1qwfaxqeb01i" path="res://scripts/main_camera_move.gd" id="4_6eayc"]
+[ext_resource type="Script" uid="uid://bir504dnh2v0a" path="res://scripts/input/controller/character_controller.gd" id="1_jty3e"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1bvp3"]
-friction = 0.0
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jty3e"]
+radius = 0.437
+height = 1.9316132
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_y5qfa"]
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_4v70m"]
+radial_segments = 16
 
 [node name="Player with UI" type="Node3D" unique_id=1354449472]
 
-[node name="UI Layer" type="CanvasLayer" parent="." unique_id=1635546215]
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=1635546215]
+unique_name_in_owner = true
 
-[node name="Cursor (placeholder)" type="Label" parent="UI Layer" unique_id=2025409343]
+[node name="Cursor (placeholder)" type="Label" parent="UILayer" unique_id=2025409343]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -30,41 +30,48 @@ size_flags_horizontal = 4
 text = "+"
 horizontal_alignment = 1
 
-[node name="PlayerPhysics" type="RigidBody3D" parent="." unique_id=1106753911]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+[node name="ControlsList" type="RichTextLabel" parent="UILayer" unique_id=1320377003]
+offset_right = 368.0
+offset_bottom = 40.0
+bbcode_enabled = true
+text = "
+
+[u]Controls (Keyboard / Gamepad)[/u]
+Move:  WASD / Joystick
+Jump:  Spacebar / Bottom Face Button
+Interact:  F / Left Face Button
+Sprint:  LShift / LT
+Flight:  LCtrl / Dpad Up
+
+Capture mouse: Left click
+Release mouse: Right click"
+fit_content = true
+scroll_active = false
+
+[node name="CharacterController" type="Node" parent="." unique_id=479219601 node_paths=PackedStringArray("target_node", "target_camera")]
+script = ExtResource("1_jty3e")
+target_node = NodePath("../PlayerCharacterBody")
+target_camera = NodePath("../PlayerCharacterBody/BodyCam")
+interact_mask = 5
+metadata/_custom_type_script = "uid://bir504dnh2v0a"
+
+[node name="PlayerCharacterBody" type="CharacterBody3D" parent="." unique_id=752693534]
+unique_name_in_owner = true
 collision_layer = 2
 collision_mask = 5
-axis_lock_angular_x = true
-axis_lock_angular_y = true
-axis_lock_angular_z = true
-mass = 4.0
-physics_material_override = SubResource("PhysicsMaterial_1bvp3")
-can_sleep = false
-continuous_cd = true
-script = ExtResource("1_4v70m")
+floor_constant_speed = true
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerPhysics" unique_id=367034565]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.595182, 0)
-visible = false
+[node name="BodyCam" type="Camera3D" parent="PlayerCharacterBody" unique_id=1575625798]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9973092, 0)
+cull_mask = 1048573
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerCharacterBody" unique_id=1548911228]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.021, 0)
+shape = SubResource("CapsuleShape3D_jty3e")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerCharacterBody/CollisionShape3D" unique_id=688479349]
+layers = 2
 cast_shadow = 0
 gi_mode = 2
-mesh = SubResource("CapsuleMesh_y5qfa")
-
-[node name="CameraAiming3D" type="Marker3D" parent="PlayerPhysics" unique_id=532280439]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8239243, -0.3611512)
-
-[node name="player-step-shape" parent="PlayerPhysics" unique_id=900220688 instance=ExtResource("2_ydgiv")]
-transform = Transform3D(-175, 0, -2.6424266e-05, 0, 175, 0, 2.6424266e-05, 0, -175, 0, 1.5, 0)
-
-[node name="SoundJumpLanding" type="AudioStreamPlayer" parent="PlayerPhysics" unique_id=1618692255]
-stream = ExtResource("3_ydgiv")
-
-[node name="StairChecker" type="CSGSphere3D" parent="PlayerPhysics" unique_id=1501459849]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
-visible = false
-radius = 0.1
-
-[node name="BodyCam" type="Camera3D" parent="." unique_id=2051373162]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8239243, -0.3611512)
-script = ExtResource("4_6eayc")
+mesh = SubResource("CapsuleMesh_4v70m")

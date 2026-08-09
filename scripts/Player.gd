@@ -53,7 +53,7 @@ func touching_ground() -> bool:
 	var pos_state = get_world_3d().direct_space_state
 
 	var ray_test = PhysicsRayQueryParameters3D.create(global_position,
-		global_position + Vector3.DOWN * 0.3)
+		global_position + Vector3.DOWN * 1.1, 1)
 
 	return pos_state.intersect_ray(ray_test).is_empty() == false
 
@@ -213,6 +213,8 @@ func interaction_check():
 			hit.open_scene()
 		if hit.has_method('teleport'):
 			hit.teleport()
+		if hit.has_method("manipulate_mesh"):
+			hit.manipulate_mesh()
 
 
 @export var camera_shake_intensity: float = 5.

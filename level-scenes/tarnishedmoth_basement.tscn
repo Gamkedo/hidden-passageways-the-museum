@@ -1,0 +1,392 @@
+[gd_scene format=3 uid="uid://b6fbyq5ixmjt4"]
+
+[ext_resource type="ArrayMesh" uid="uid://chk2yapw55ljh" path="res://models/basic-curvy-frame.obj" id="3_d37k8"]
+[ext_resource type="PackedScene" uid="uid://cowhc5ccs7xmv" path="res://models/naous_swords.gltf" id="4_jklea"]
+[ext_resource type="Script" uid="uid://bppvgubl41ghp" path="res://scripts/click_manipulate-mesh.gd" id="5_jf23v"]
+[ext_resource type="Texture2D" uid="uid://2432776vq113" path="res://textures/play-button-stand.png" id="6_xsi1w"]
+[ext_resource type="ArrayMesh" uid="uid://cm2soemey2m52" path="res://models/play-button-stand.obj" id="7_6hdpj"]
+[ext_resource type="Material" uid="uid://r6515yywtwib" path="res://materials/floor-materials/wood_floor.tres" id="8_6aalu"]
+[ext_resource type="Material" uid="uid://31x6objnfjff" path="res://materials/modern-museum/museum-modern-exterior-gray.tres" id="9_yu1s1"]
+[ext_resource type="Material" uid="uid://gatwpkkuaqht" path="res://materials/emissive_white.tres" id="10_c5elj"]
+[ext_resource type="PackedScene" uid="uid://de5r1qejyqa71" path="res://environment-csg/csg_box-w-slope-support.tscn" id="11_84p36"]
+[ext_resource type="Material" uid="uid://b5j7a6q6jdkv5" path="res://materials/concrete.tres" id="12_avvba"]
+[ext_resource type="Texture2D" uid="uid://brp3qkp7syp3" path="res://materials/tarnishedmoth_grass_albedo.jpg" id="12_pm1yi"]
+[ext_resource type="Material" uid="uid://bgutakhbvq0mc" path="res://materials/modern-museum/museum-wall-white.tres" id="13_2wgk6"]
+[ext_resource type="Texture2D" uid="uid://ntc48yuc5i3d" path="res://materials/tarnishedmoth_grass_normal.jpg" id="13_bhla7"]
+[ext_resource type="Script" uid="uid://cm6176wsxfdqx" path="res://entities-scene_prefabs/auto-tracklight.gd" id="14_d37k8"]
+[ext_resource type="Material" uid="uid://i2mujh133810" path="res://materials/modern-museum/museum-modern-exterior-dark.tres" id="15_jf23v"]
+[ext_resource type="Material" uid="uid://biecmslvyaivk" path="res://materials/spotlight-decal_crossfade.tres" id="15_jklea"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_880y8"]
+albedo_texture = ExtResource("6_xsi1w")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7tbbo"]
+size = Vector3(3.5, 3.5, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xteo1"]
+size = Vector3(8.271118, 1.1351929, 12.026886)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tbq01"]
+size = Vector3(0.75, 0.75, 5.5)
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_v6xrf"]
+albedo_texture = ExtResource("12_pm1yi")
+orm_texture = ExtResource("13_bhla7")
+normal_enabled = true
+normal_scale = 0.6
+normal_texture = ExtResource("13_bhla7")
+uv1_scale = Vector3(2, 2, 2)
+texture_filter = 5
+
+[sub_resource type="QuadMesh" id="QuadMesh_xteo1"]
+material = SubResource("ORMMaterial3D_v6xrf")
+size = Vector2(3, 3)
+orientation = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_xsi1w"]
+material = ExtResource("15_jf23v")
+size = Vector3(0.04, 4, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6hdpj"]
+material = ExtResource("15_jf23v")
+size = Vector3(0.04, 4, 0.04)
+
+[sub_resource type="QuadMesh" id="QuadMesh_6aalu"]
+material = ExtResource("15_jklea")
+size = Vector2(3.0898643, 3.0898643)
+orientation = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_yu1s1"]
+material = ExtResource("15_jklea")
+size = Vector2(3.0898643, 3.0898643)
+orientation = 1
+
+[node name="tarnishedmoth" type="Node3D" unique_id=216412751]
+
+[node name="Sign" type="Label3D" parent="." unique_id=1804450175]
+transform = Transform3D(-1.0927846e-08, 0.43301272, -0.24999999, 1.8927587e-08, 0.24999999, 0.43301272, 0.5, 0, -2.1855694e-08, -0.34999847, 0.8999996, 0)
+double_sided = false
+texture_filter = 5
+text = "Swords & Hilts variations (2025)
+Subdivision box modeling
+by Michael Avrie (tarnished moth)"
+font_size = 24
+outline_size = 4
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sign" unique_id=632570279]
+transform = Transform3D(-2.6226832e-09, 0, -0.125, 0, 0.06, 0, 0.06, 0, -5.4639235e-09, 0, 0, 0)
+mesh = ExtResource("3_d37k8")
+
+[node name="Sign2" type="Label3D" parent="." unique_id=376281101]
+transform = Transform3D(-4.371139e-08, -0.5, -2.980232e-08, 2.1855692e-08, -2.9802322e-08, 0.5, -0.5, 4.371139e-08, 2.1855696e-08, 0.6500015, 0.39999962, 0)
+double_sided = false
+texture_filter = 5
+text = "RTS grasslands texture (2026)
+Material Maker procedural material
+by Michael Avrie (tarnished moth)"
+font_size = 22
+outline_size = 4
+line_spacing = 6.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sign2" unique_id=667224144]
+transform = Transform3D(-2.6226832e-09, 0, -0.125, 0, 0.06, 0, 0.06, 0, -5.4639235e-09, 0, 0, 0)
+mesh = ExtResource("3_d37k8")
+
+[node name="naous_swords" parent="." unique_id=2112230378 instance=ExtResource("4_jklea")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.01096344, 0.66993237, -2.5462608)
+
+[node name="Short2" parent="naous_swords" index="0" unique_id=771962077]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Medium1" parent="naous_swords" index="1" unique_id=1991700681]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Medium2" parent="naous_swords" index="2" unique_id=601519989]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Short1" parent="naous_swords" index="3" unique_id=1728228274]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Long1" parent="naous_swords" index="4" unique_id=247779270]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Long2" parent="naous_swords" index="5" unique_id=2129734508]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Short3" parent="naous_swords" index="6" unique_id=1411074357]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Medium3" parent="naous_swords" index="7" unique_id=500198530]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Short4" parent="naous_swords" index="8" unique_id=361812727]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Short5" parent="naous_swords" index="9" unique_id=1957342883]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Long3" parent="naous_swords" index="10" unique_id=1118166116]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.205, 0)
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Hilt" parent="naous_swords" index="11" unique_id=1753931807]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Hilt_001" parent="naous_swords" index="12" unique_id=459770931]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Hilt_002" parent="naous_swords" index="13" unique_id=741861721]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Hilt_003" parent="naous_swords" index="14" unique_id=1445459504]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Hilt_004" parent="naous_swords" index="15" unique_id=690277438]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Hilt_005" parent="naous_swords" index="16" unique_id=434978100]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Hilt_006" parent="naous_swords" index="17" unique_id=697992283]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Hilt_007" parent="naous_swords" index="18" unique_id=657222989]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="Hilt_008" parent="naous_swords" index="19" unique_id=71160714]
+layers = 4
+cast_shadow = 0
+visibility_range_end = 25.0
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="naous_swords" unique_id=893610410]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.5462608, 1.5800676, 0.01096344)
+layers = 4
+max_distance = 72.0
+size = Vector3(11, 6, 13)
+origin_offset = Vector3(0.01, 0, -0.1)
+box_projection = true
+interior = true
+enable_shadows = true
+reflection_mask = 4
+
+[node name="Button Stand" type="StaticBody3D" parent="." unique_id=1447850471 node_paths=PackedStringArray("nodes")]
+transform = Transform3D(-4.4703484e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -4.4703484e-08, -0.5530014, 0.8776846, -1.1462631)
+script = ExtResource("5_jf23v")
+nodes = [NodePath("../naous_swords/Short2"), NodePath("../naous_swords/Medium1"), NodePath("../naous_swords/Medium2"), NodePath("../naous_swords/Short1"), NodePath("../naous_swords/Long1"), NodePath("../naous_swords/Long2"), NodePath("../naous_swords/Short3"), NodePath("../naous_swords/Medium3"), NodePath("../naous_swords/Short4"), NodePath("../naous_swords/Short5"), NodePath("../naous_swords/Long3"), NodePath("../naous_swords/Hilt"), NodePath("../naous_swords/Hilt_001"), NodePath("../naous_swords/Hilt_002"), NodePath("../naous_swords/Hilt_003"), NodePath("../naous_swords/Hilt_004"), NodePath("../naous_swords/Hilt_005"), NodePath("../naous_swords/Hilt_006"), NodePath("../naous_swords/Hilt_007"), NodePath("../naous_swords/Hilt_008")]
+
+[node name="Label3D" type="Label3D" parent="Button Stand" unique_id=1832447864]
+transform = Transform3D(0.24000001, 0, 0, 0, 0.24000001, 0, 0, 0, 0.24000001, -0.07500076, 0.52923775, -0.31500244)
+pixel_size = 0.03
+modulate = Color(0, 0, 0, 1)
+text = "Clay"
+font_size = 24
+outline_size = 0
+
+[node name="PlayButtonStand" type="MeshInstance3D" parent="Button Stand" unique_id=1593102335]
+transform = Transform3D(-6.29444e-09, 0, 0.14400001, 0, 0.14400001, 0, -0.14400001, 0, -6.29444e-09, -0.08000028, -1, -0.039999425)
+material_override = SubResource("StandardMaterial3D_880y8")
+mesh = ExtResource("7_6hdpj")
+
+[node name="CollisionShapeStand" type="CollisionShape3D" parent="Button Stand" unique_id=995547809]
+transform = Transform3D(-8.742277e-09, 0, -0.19999999, 0, 0.19999999, 0, 0.19999999, 0, -8.742277e-09, -0.099998474, 0.45, -0.050001144)
+shape = SubResource("BoxShape3D_7tbbo")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=905006128]
+transform = Transform3D(5.879908e-08, -0.9015282, 0.43272045, -7.410546e-08, 0.43272045, 0.9015282, -1, -8.5075975e-08, -4.136459e-08, 1.548687, 5.9042253, 0.25)
+light_energy = 0.5
+light_specular = 0.015
+light_bake_mode = 0
+light_cull_mask = 4293918725
+distance_fade_enabled = true
+distance_fade_begin = 15.0
+spot_range = 7.0
+spot_attenuation = 0.0
+spot_angle = 43.78
+spot_angle_attenuation = 0.43527538
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=2011880290]
+transform = Transform3D(0.25881907, -0.68301284, -0.68301266, -3.0908627e-08, 0.70710677, -0.7071069, 0.9659258, 0.18301278, 0.1830127, -1.2990379, 1.5806923, 0.75)
+light_energy = 0.5
+light_specular = 1.0
+light_bake_mode = 0
+light_cull_mask = 4293918724
+distance_fade_enabled = true
+distance_fade_begin = 15.0
+spot_range = 4.5
+spot_attenuation = 0.0
+spot_angle = 71.24
+spot_angle_attenuation = 0.07432526
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="." unique_id=859147264]
+transform = Transform3D(-8.940699e-08, 0.7071068, 0.7071067, -3.0908623e-08, 0.7071067, -0.7071068, -1, -8.507598e-08, -4.136458e-08, 1.2990379, 1.6806927, -0.75)
+light_energy = 0.5
+light_specular = 1.0
+light_bake_mode = 0
+light_cull_mask = 4293918724
+distance_fade_enabled = true
+distance_fade_begin = 15.0
+spot_range = 4.5
+spot_attenuation = 0.0
+spot_angle = 71.24
+spot_angle_attenuation = 0.07432526
+
+[node name="Platform" type="StaticBody3D" parent="." unique_id=1350758023]
+
+[node name="CSG" type="CSGCombiner3D" parent="Platform" unique_id=1308724317]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Platform/CSG" unique_id=1160866631]
+size = Vector3(8, 0.75, 10)
+material = ExtResource("8_6aalu")
+
+[node name="DisplayBox" type="CSGBox3D" parent="Platform/CSG" unique_id=294383807]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+size = Vector3(0.75, 0.75, 5.5)
+material = ExtResource("9_yu1s1")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Platform/CSG/DisplayBox" unique_id=350087182]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.37809086, 0)
+operation = 2
+size = Vector3(0.125, 0.1, 5.25)
+material = ExtResource("10_c5elj")
+
+[node name="CSGPolygonTemplate" parent="Platform/CSG" unique_id=1136570024 instance=ExtResource("11_84p36")]
+transform = Transform3D(-7.5, 0, -1.509958e-07, 0, 3, 0, 1.1324685e-06, 0, -1, 4.2612915, -3, -5.7934513)
+polygon = PackedVector2Array(0, 0.75, 0, 1, 1, 1, 1, 0.75, 0.66, 0.75, 0.48, 0.69, 0.32, 0.55, 0.2, 0.4, 0.14, 0.17, 0.05, 0, 0, 0)
+depth = 12.0
+material = ExtResource("12_avvba")
+
+[node name="FrontGreeble" type="CSGBox3D" parent="Platform/CSG" unique_id=2101964067]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.533966, -0.45392036, 0.009643555)
+operation = 2
+size = Vector3(1.295, 1.25, 9.6)
+material = ExtResource("13_2wgk6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform" unique_id=417717393]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14093018, -0.20150757, 0.19709778)
+shape = SubResource("BoxShape3D_xteo1")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Platform" unique_id=2074448351]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0008621216, 0.49988747, 0.0022258759)
+shape = SubResource("BoxShape3D_tbq01")
+
+[node name="GrassTextureMesh" type="MeshInstance3D" parent="." unique_id=1681787485]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0.37927127, 0)
+cast_shadow = 0
+gi_mode = 0
+mesh = SubResource("QuadMesh_xteo1")
+
+[node name="Autotracklight" type="CSGCombiner3D" parent="GrassTextureMesh" unique_id=1483570511]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, 1.5)
+script = ExtResource("14_d37k8")
+track_height = 0.8
+track_shoulder_ratio = 0.8
+track_shoulder_width = 0.25
+lights_rectangularity = 8.0
+lights_range = 10.0
+lights_spot_angle = 26.0
+lights_energy = 3.0
+projected_lights_generate_quads = true
+mount_raycast_mask = 1
+mount_length = 4.0
+mats_track = ExtResource("15_jf23v")
+mats_cable = ExtResource("15_jf23v")
+metadata/_custom_type_script = "uid://cm6176wsxfdqx"
+
+[node name="@CSGPolygon3D@41724" type="CSGPolygon3D" parent="GrassTextureMesh/Autotracklight" unique_id=1908893775]
+polygon = PackedVector2Array(-0.15, 0, -0.15, 0.64, -0.0375, 0.8, 0.0375, 0.8, 0.15, 0.64, 0.15, 0)
+depth = 3.0
+material = ExtResource("15_jf23v")
+
+[node name="@MeshInstance3D@41725" type="MeshInstance3D" parent="GrassTextureMesh/Autotracklight" unique_id=1695812884]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, -0.5)
+mesh = SubResource("BoxMesh_xsi1w")
+
+[node name="@MeshInstance3D@41726" type="MeshInstance3D" parent="GrassTextureMesh/Autotracklight" unique_id=1364792689]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8, -2.5)
+mesh = SubResource("BoxMesh_6hdpj")
+
+[node name="@CSGBox3D@41729" type="CSGBox3D" parent="GrassTextureMesh/Autotracklight" unique_id=1070695371]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -0.75)
+operation = 2
+size = Vector3(0.12, 0.25, 0.96)
+material = ExtResource("10_c5elj")
+
+[node name="@SpotLight3D@41727" type="SpotLight3D" parent="GrassTextureMesh/Autotracklight/@CSGBox3D@41729" unique_id=303986337]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_energy = 3.0
+light_size = 0.05
+light_bake_mode = 1
+shadow_reverse_cull_face = true
+distance_fade_enabled = true
+distance_fade_begin = 10.0
+distance_fade_length = 5.0
+spot_range = 6.552
+spot_angle = 27.0
+spot_angle_attenuation = 0.48296952
+
+[node name="@MeshInstance3D@41728" type="MeshInstance3D" parent="GrassTextureMesh/Autotracklight/@CSGBox3D@41729" unique_id=1886032237]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.4231827, 0)
+mesh = SubResource("QuadMesh_6aalu")
+
+[node name="@CSGBox3D@41732" type="CSGBox3D" parent="GrassTextureMesh/Autotracklight" unique_id=295133266]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -2.25)
+operation = 2
+size = Vector3(0.12, 0.25, 0.96)
+material = ExtResource("10_c5elj")
+
+[node name="@SpotLight3D@41730" type="SpotLight3D" parent="GrassTextureMesh/Autotracklight/@CSGBox3D@41732" unique_id=764339428]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_energy = 3.0
+light_size = 0.05
+light_bake_mode = 1
+shadow_reverse_cull_face = true
+distance_fade_enabled = true
+distance_fade_begin = 10.0
+distance_fade_length = 5.0
+spot_range = 6.552
+spot_angle = 27.0
+spot_angle_attenuation = 0.48296952
+
+[node name="@MeshInstance3D@41731" type="MeshInstance3D" parent="GrassTextureMesh/Autotracklight/@CSGBox3D@41732" unique_id=144394795]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.4231827, 0)
+mesh = SubResource("QuadMesh_yu1s1")
+
+[editable path="naous_swords"]

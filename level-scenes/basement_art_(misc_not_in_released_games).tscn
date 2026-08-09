@@ -7,6 +7,10 @@
 [ext_resource type="Material" uid="uid://dajoyj6fev1j7" path="res://materials/floor-materials/marble_tile_floor.tres" id="5_u45lx"]
 [ext_resource type="Material" uid="uid://r6515yywtwib" path="res://materials/floor-materials/wood_floor.tres" id="5_xaifo"]
 [ext_resource type="PackedScene" uid="uid://sa8s0p3pnpp0" path="res://level-scenes/helper-chunks/editor_quick_test_group.tscn" id="7_lvdt1"]
+[ext_resource type="PackedScene" uid="uid://b6fbyq5ixmjt4" path="res://level-scenes/tarnishedmoth_basement.tscn" id="8_m0kxd"]
+[ext_resource type="Script" uid="uid://bcbsmve6pf08c" path="res://entities-scene_prefabs/auto-stairs.gd" id="8_xljnw"]
+[ext_resource type="Material" uid="uid://cb0ohmlylauik" path="res://materials/modern-museum/museum-floor-dark-carpet.tres" id="9_43mwv"]
+[ext_resource type="PackedScene" uid="uid://dnet2j3i5v35v" path="res://environment-csg/zero_gravity_elevator.tscn" id="11_xap7t"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lahx7"]
 albedo_texture = ExtResource("1_vujxr")
@@ -40,6 +44,11 @@ material_override = SubResource("StandardMaterial3D_lahx7")
 size = Vector3(5, 1, 25)
 material = ExtResource("5_xaifo")
 
+[node name="Littlewalkway" type="CSGBox3D" parent="Entrance Floor" unique_id=1391612538]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 7)
+size = Vector3(5, 1, 4)
+material = ExtResource("5_xaifo")
+
 [node name="sidewalk above ground, hard top" type="CSGBox3D" parent="." unique_id=820135251]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, -1.5, 6.5)
 material_override = ExtResource("5_u45lx")
@@ -49,3 +58,55 @@ material = ExtResource("5_u45lx")
 [node name="EditorQuickTestGroup" parent="." unique_id=259214251 instance=ExtResource("7_lvdt1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.650959, -10.997258, 16.423002)
 visible = false
+
+[node name="tarnishedmoth" parent="." unique_id=216412751 instance=ExtResource("8_m0kxd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.75278, -10.137384, 12.146261)
+
+[node name="AutoStairs" type="CSGCombiner3D" parent="tarnishedmoth" unique_id=488584196]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 0.51060104, 0.36259365)
+use_collision = true
+script = ExtResource("8_xljnw")
+step_material = ExtResource("9_43mwv")
+step_count = 7
+width = 4.0
+rise_degrees = -32.44470325921144
+rise_height = -0.178
+metadata/_custom_type_script = "uid://bcbsmve6pf08c"
+
+[node name="_CSGBox3D_54827" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=299516883]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.178, 0.14)
+size = Vector3(4, 0.08, 0.238)
+material = ExtResource("9_43mwv")
+
+[node name="_CSGBox3D_54828" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=313892217]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.356, 0.42000002)
+size = Vector3(4, 0.08, 0.238)
+material = ExtResource("9_43mwv")
+
+[node name="_CSGBox3D_54829" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=203219972]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.53400004, 0.70000005)
+size = Vector3(4, 0.08, 0.238)
+material = ExtResource("9_43mwv")
+
+[node name="_CSGBox3D_54830" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=521965979]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.712, 0.98)
+size = Vector3(4, 0.08, 0.238)
+material = ExtResource("9_43mwv")
+
+[node name="_CSGBox3D_54831" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=363735598]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.89, 1.26)
+size = Vector3(4, 0.08, 0.238)
+material = ExtResource("9_43mwv")
+
+[node name="_CSGBox3D_54832" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=465023549]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0680001, 1.5400001)
+size = Vector3(4, 0.08, 0.238)
+material = ExtResource("9_43mwv")
+
+[node name="_CSGBox3D_54833" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=1920709385]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.246, 1.82)
+size = Vector3(4, 0.08, 0.238)
+material = ExtResource("9_43mwv")
+
+[node name="ZeroGravityElevator" parent="." unique_id=65243958 instance=ExtResource("11_xap7t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, -22, -4.5)

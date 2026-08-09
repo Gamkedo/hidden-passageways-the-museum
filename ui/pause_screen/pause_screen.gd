@@ -59,7 +59,7 @@ func _input(event: InputEvent) -> void:
 	var menu_inputs := ["ui_up", "ui_down", "ui_left", "ui_right"]
 	var menu_input_pressed := menu_inputs.any(func(input): return Input.is_action_just_pressed_by_event(input, event))
 	var current_focus := get_viewport().gui_get_focus_owner()
-	if menu_input_pressed and current_focus == null:
+	if menu_input_pressed and current_focus == null and last_focused != null:
 		last_focused.grab_focus()
 		# Prevent the input from also navigating up/down
 		get_viewport().set_input_as_handled()

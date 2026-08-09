@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="CharacterControlProperties" format=3 uid="uid://cnjhwt3wsomqd"]
+
+[ext_resource type="Script" uid="uid://c4fojoqqi1dsa" path="res://scripts/input/controller/character_control_properties.gd" id="1_ebfmc"]
+
+[resource]
+script = ExtResource("1_ebfmc")
+metadata/_custom_type_script = "uid://c4fojoqqi1dsa"

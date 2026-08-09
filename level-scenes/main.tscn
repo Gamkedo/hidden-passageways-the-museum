@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://kvgkgln5sjsh" path="res://scripts/main_scene_setup.gd" id="1_qi2ty"]
 [ext_resource type="PackedScene" uid="uid://c0ug0wogf56tg" path="res://models/cyndrive_ships_ship.fbx" id="2_5t06w"]
+[ext_resource type="Environment" uid="uid://cesku5vcw05no" path="res://materials/museum_environment.tres" id="2_gbu3n"]
 [ext_resource type="PackedScene" uid="uid://bad4bwomkabyu" path="res://models/cyndrive_ships_silo.fbx" id="2_pw8xm"]
 [ext_resource type="Material" uid="uid://b17jmjmvd5bw2" path="res://materials/taxi-placeholder.tres" id="2_r54xu"]
 [ext_resource type="Script" uid="uid://bud6xyvo80vl3" path="res://scripts/click_link.gd" id="3_1bvp3"]
@@ -33,7 +34,6 @@
 [ext_resource type="Texture2D" uid="uid://cp3eu5k3e546n" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/everchange.png" id="12_qxgch"]
 [ext_resource type="Texture2D" uid="uid://dpvjb874dhfhp" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/forgotten-road.png" id="13_r54xu"]
 [ext_resource type="Material" uid="uid://dajoyj6fev1j7" path="res://materials/floor-materials/marble_tile_floor.tres" id="13_v6iic"]
-[ext_resource type="Texture2D" uid="uid://dlft5rt3mgqhu" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/gladiator-of-the-golden-house.png" id="14_er4o0"]
 [ext_resource type="Texture2D" uid="uid://87drxaweuioc" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/king-arthur.png" id="15_keiyw"]
 [ext_resource type="PackedScene" uid="uid://d0hl0sude541s" path="res://level-scenes/basement_art_(misc_not_in_released_games).tscn" id="16_4y16h"]
 [ext_resource type="PackedScene" uid="uid://bs0x6kcocwrn8" path="res://entities-scene_prefabs/tree_small.tscn" id="16_iixjk"]
@@ -45,32 +45,18 @@
 [ext_resource type="Texture2D" uid="uid://c6rqykvgq5oni" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/supply-and-siege.png" id="20_lahx7"]
 [ext_resource type="Texture2D" uid="uid://r870n6ekjct4" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/talon.png" id="21_yqwtw"]
 [ext_resource type="PackedScene" uid="uid://bvln0oll5ttp0" path="res://entities-scene_prefabs/ionic_column.tscn" id="28_er4o0"]
+[ext_resource type="PackedScene" uid="uid://cqq8q3sgrg35b" path="res://ui/guidebook.tscn" id="30_nw8jh"]
+[ext_resource type="Texture2D" uid="uid://2432776vq113" path="res://textures/play-button-stand.png" id="31_nw8jh"]
+[ext_resource type="PackedScene" uid="uid://cxl7h3vtvfn66" path="res://models/guidebook.gltf" id="31_oa8v2"]
 [ext_resource type="Texture2D" uid="uid://bk6mm66shyd3p" path="res://textures/CurvyFrame-basic-black.png" id="31_yqwtw"]
+[ext_resource type="ArrayMesh" uid="uid://cm2soemey2m52" path="res://models/play-button-stand.obj" id="32_oa8v2"]
 [ext_resource type="ArrayMesh" uid="uid://chk2yapw55ljh" path="res://models/basic-curvy-frame.obj" id="32_tlwcc"]
 [ext_resource type="PackedScene" uid="uid://ccmjewtcqxp7" path="res://models/legend_of_shadowtails_ratrick_mesh.glb" id="33_hgslh"]
-[ext_resource type="Texture2D" uid="uid://2432776vq113" path="res://textures/play-button-stand.png" id="34_ewg6b"]
-[ext_resource type="ArrayMesh" uid="uid://cm2soemey2m52" path="res://models/play-button-stand.obj" id="35_u5gq0"]
 [ext_resource type="Texture2D" uid="uid://cpakvdnl3rxxa" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/gladiator-framed-pic.png" id="36_u5gq0"]
-[ext_resource type="Script" uid="uid://cm6176wsxfdqx" path="res://entities-scene_prefabs/tracklights/tracklight.gd" id="43_0m503"]
+[ext_resource type="Script" uid="uid://cm6176wsxfdqx" path="res://entities-scene_prefabs/auto-tracklight.gd" id="43_0m503"]
+[ext_resource type="PackedScene" uid="uid://bjbv5y5fcm1dy" path="res://entities-scene_prefabs/button_stand.tscn" id="46_tbq01"]
+[ext_resource type="PackedScene" uid="uid://dbngi8xk7go57" path="res://models/tank_rampage_command_marine.tscn" id="53_gbu3n"]
 [ext_resource type="PackedScene" uid="uid://dgahdbu6k5v7a" path="res://entities-scene_prefabs/fire_extinguisher.tscn" id="53_mj7h6"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_iixjk"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-
-[sub_resource type="Sky" id="Sky_4fg2q"]
-sky_material = SubResource("ProceduralSkyMaterial_iixjk")
-
-[sub_resource type="Environment" id="Environment_yuneh"]
-background_mode = 2
-sky = SubResource("Sky_4fg2q")
-ambient_light_color = Color(0.5756888, 0.5492039, 0.5138223, 1)
-ambient_light_sky_contribution = 0.35
-tonemap_mode = 3
-tonemap_white = 2.0
-ssao_enabled = true
-ssao_radius = 5.0
-ssao_intensity = 3.0
 
 [sub_resource type="SphereMesh" id="SphereMesh_xteo1"]
 radius = 2.0
@@ -296,6 +282,48 @@ albedo_texture = ExtResource("7_hgslh")
 
 [sub_resource type="SphereMesh" id="SphereMesh_7tbbo"]
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_nw8jh"]
+viewport_path = NodePath("../../Guidebook3d/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oa8v2"]
+resource_local_to_scene = true
+resource_name = "Pages"
+transparency = 1
+cull_mode = 1
+albedo_texture = SubResource("ViewportTexture_nw8jh")
+roughness = 0.8
+texture_filter = 5
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_27nw5"]
+viewport_path = NodePath("../../Guidebook3d/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b2w3e"]
+resource_local_to_scene = true
+resource_name = "Pages"
+transparency = 1
+cull_mode = 1
+albedo_texture = SubResource("ViewportTexture_27nw5")
+roughness = 0.8
+texture_filter = 5
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_xub5d"]
+viewport_path = NodePath("../../Guidebook3d/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x4vg3"]
+resource_local_to_scene = true
+resource_name = "Pages"
+transparency = 1
+cull_mode = 1
+albedo_texture = SubResource("ViewportTexture_xub5d")
+roughness = 0.8
+texture_filter = 5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_880y8"]
+albedo_texture = ExtResource("31_nw8jh")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7tbbo"]
+size = Vector3(3.5, 3.5, 3)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ewg6b"]
 shading_mode = 0
 albedo_texture = ExtResource("6_rlpi5")
@@ -351,17 +379,6 @@ albedo_texture = ExtResource("20_lahx7")
 shading_mode = 0
 albedo_texture = ExtResource("21_yqwtw")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gbu3n"]
-albedo_texture = ExtResource("14_er4o0")
-
-[sub_resource type="QuadMesh" id="QuadMesh_7tbbo"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_880y8"]
-albedo_texture = ExtResource("34_ewg6b")
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_7tbbo"]
-size = Vector3(3.5, 3.5, 3)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4fg2q"]
 albedo_texture = ExtResource("31_yqwtw")
 roughness = 0.4
@@ -369,6 +386,8 @@ roughness = 0.4
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ogkr3"]
 shading_mode = 0
 albedo_texture = ExtResource("36_u5gq0")
+
+[sub_resource type="QuadMesh" id="QuadMesh_7tbbo"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y5qfa"]
 size = Vector3(3.7, 2.3500001, 0.55)
@@ -380,7 +399,7 @@ radius = 1.0454303
 script = ExtResource("1_qi2ty")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1183794555]
-environment = SubResource("Environment_yuneh")
+environment = ExtResource("2_gbu3n")
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=1462107]
 transform = Transform3D(-0.13398622, -0.340561, 0.93062675, 0, 0.93909436, 0.34365973, -0.9909831, 0.046045672, -0.12582572, 2.505683, 2.197227, 0)
@@ -1248,7 +1267,7 @@ size = Vector3(32, 0.5, 25.090912)
 material = ExtResource("11_v6iic")
 
 [node name="UpperFloorRailing" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=1402482642]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 2.25, 0.541)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1.6330957, 0.54100037)
 size = Vector3(20, 0.25, 13.5)
 material = ExtResource("3_5dt3m")
 
@@ -1359,21 +1378,21 @@ size = Vector3(1, 20, 1)
 material = ExtResource("9_4h42u")
 
 [node name="Front Entrance Hole" type="CSGPolygon3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=808746896]
-transform = Transform3D(-1, 0, 1.509958e-07, 0, 1.33, 0, -1.509958e-07, 0, -1, -3.8146973e-06, 0.5, -13.500004)
+transform = Transform3D(-1, 0, 1.509958e-07, 0, 1, 0, -1.509958e-07, 0, -1, -3.8146973e-06, 0.5, -13.500004)
 operation = 2
 polygon = PackedVector2Array(-1.5, 0, -1.5, 2.5, -1, 3.5, 0, 4, 1, 3.5, 1.5, 2.5, 1.5, 0)
 depth = 2.0
 material = ExtResource("5_r54xu")
 
 [node name="Interior Wide OpeningNorthX" type="CSGPolygon3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=13975697]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1.33, 0, 1, 0, -4.371139e-08, 15.499996, 0.5, 0.4999962)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 15.499996, 0.5, 0.4999962)
 operation = 2
 polygon = PackedVector2Array(-3.5, 0, -3.5, 2.5, -2, 4, 0, 4.5, 2, 4, 3.5, 2.5, 3.5, 0)
 depth = 2.0
 material = ExtResource("5_r54xu")
 
 [node name="Interior Wide OpeningSouthX" type="CSGPolygon3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=1705882595]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1.33, 0, 1, 0, -4.371139e-08, -17.000004, 0.5, 0.4999962)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -17.000004, 0.5, 0.4999962)
 operation = 2
 polygon = PackedVector2Array(-3.5, 0, -3.5, 2.5, -2, 4, 0, 4.5, 2, 4, 3.5, 2.5, 3.5, 0)
 depth = 2.0
@@ -1425,11 +1444,87 @@ shape = SubResource("SphereShape3D_7tbbo")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2.5, -2.5)
 mesh = SubResource("SphereMesh_7tbbo")
 
+[node name="Guidebook Stand" type="StaticBody3D" parent="." unique_id=651460049]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 26.382, 0.003, 25.855)
+
+[node name="Guidebook3d" type="Node3D" parent="Guidebook Stand" unique_id=509619269]
+transform = Transform3D(0.8660254, 0, 0.49999997, 0, 1, 0, -0.49999997, 0, 0.8660254, -0.06468773, 0.3186257, -0.028995514)
+
+[node name="SubViewport" type="SubViewport" parent="Guidebook Stand/Guidebook3d" unique_id=1214087469]
+disable_3d = true
+transparent_bg = true
+handle_input_locally = false
+snap_2d_transforms_to_pixel = true
+positional_shadow_atlas_quad_0 = 0
+positional_shadow_atlas_quad_1 = 0
+positional_shadow_atlas_quad_2 = 0
+positional_shadow_atlas_quad_3 = 0
+size_2d_override = Vector2i(512, 512)
+
+[node name="CanvasLayer" parent="Guidebook Stand/Guidebook3d/SubViewport" unique_id=1238244302 instance=ExtResource("30_nw8jh")]
+
+[node name="guidebook" parent="Guidebook Stand/Guidebook3d" unique_id=1630787135 instance=ExtResource("31_oa8v2")]
+
+[node name="Book" parent="Guidebook Stand/Guidebook3d/guidebook" index="0" unique_id=1462561935]
+layers = 6
+cast_shadow = 0
+
+[node name="Pages" parent="Guidebook Stand/Guidebook3d/guidebook" index="1" unique_id=1231375428]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
+layers = 6
+surface_material_override/0 = SubResource("StandardMaterial3D_oa8v2")
+
+[node name="Guidebook3d2" type="Node3D" parent="Guidebook Stand" unique_id=1034692829]
+transform = Transform3D(0.99572617, -6.976736e-08, 0.092355326, 0.07370379, 0.60259724, -0.79463464, -0.05565301, 0.7980456, 0.60002184, 0.33789635, 0.5955966, 0.11873436)
+
+[node name="guidebook" parent="Guidebook Stand/Guidebook3d2" unique_id=914161945 instance=ExtResource("31_oa8v2")]
+
+[node name="Book" parent="Guidebook Stand/Guidebook3d2/guidebook" index="0" unique_id=1462561935]
+layers = 6
+cast_shadow = 0
+
+[node name="Pages" parent="Guidebook Stand/Guidebook3d2/guidebook" index="1" unique_id=1231375428]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
+layers = 6
+surface_material_override/0 = SubResource("StandardMaterial3D_b2w3e")
+
+[node name="Guidebook3d3" type="Node3D" parent="Guidebook Stand" unique_id=1679212863]
+transform = Transform3D(-0.9742656, -0.12668496, -0.18643428, 0.14209789, -0.98725104, -0.07172081, -0.1749714, -0.0963671, 0.979846, -0.58836937, 0.5955966, 0.11873436)
+
+[node name="guidebook" parent="Guidebook Stand/Guidebook3d3" unique_id=962682289 instance=ExtResource("31_oa8v2")]
+
+[node name="Book" parent="Guidebook Stand/Guidebook3d3/guidebook" index="0" unique_id=1462561935]
+layers = 6
+cast_shadow = 0
+
+[node name="Pages" parent="Guidebook Stand/Guidebook3d3/guidebook" index="1" unique_id=1231375428]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
+visible = false
+layers = 6
+surface_material_override/0 = SubResource("StandardMaterial3D_x4vg3")
+
+[node name="Label3D" type="Label3D" parent="Guidebook Stand" unique_id=1183973093]
+transform = Transform3D(0.24000001, 0, 0, 0, 0.24000001, 0, 0, 0, 0.24000001, -0.07500076, 0.61191887, -0.31499863)
+pixel_size = 0.007
+modulate = Color(0, 0, 0, 1)
+text = "Museum
+Guidebook"
+outline_size = 0
+
+[node name="PlayButtonStand" type="MeshInstance3D" parent="Guidebook Stand" unique_id=432524272]
+transform = Transform3D(-6.29444e-09, 0, 0.14400001, 0, 0.14400001, 0, -0.14400001, 0, -6.29444e-09, -0.08000028, -1, -0.039999425)
+material_override = SubResource("StandardMaterial3D_880y8")
+mesh = ExtResource("32_oa8v2")
+
+[node name="CollisionShapeStand" type="CollisionShape3D" parent="Guidebook Stand" unique_id=1668333291]
+transform = Transform3D(-8.742277e-09, 0, -0.19999999, 0, 0.19999999, 0, 0.19999999, 0, -8.742277e-09, -0.099998474, 0.45, -0.050001144)
+shape = SubResource("BoxShape3D_7tbbo")
+
 [node name="Player with UI" parent="." unique_id=1354449472 instance=ExtResource("3_lquwl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.5, 5.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -0.8355012, 5.5)
 
 [node name="Dev Pods Game Pictures" type="Node3D" parent="." unique_id=1270972283]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.5, 0.5, 33.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.5, 0, 33.5)
 
 [node name="Artillery Rampage" type="CSGBox3D" parent="Dev Pods Game Pictures" unique_id=1993258165]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25, 1.25, 11.25)
@@ -1644,31 +1739,8 @@ material = SubResource("StandardMaterial3D_mj7h6")
 [node name="Game Frame with Button - Gladiator Example" type="StaticBody3D" parent="Dev Pods Game Pictures" unique_id=299075970]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 1, -13.4)
 
-[node name="Button Stand" type="StaticBody3D" parent="Dev Pods Game Pictures/Game Frame with Button - Gladiator Example" unique_id=63349514]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, -1.5, 0.9)
-script = ExtResource("3_7mycd")
-goto_scene = "uid://bu5ybpneao340"
-
-[node name="Button image" type="MeshInstance3D" parent="Dev Pods Game Pictures/Game Frame with Button - Gladiator Example/Button Stand" unique_id=1396255101]
-transform = Transform3D(0.44582403, 0, 0, 0, 0.27519998, 0, 1.1368682e-14, 0, 0.031999994, -0.06468767, 0.46111998, -0.3172)
-material_override = SubResource("StandardMaterial3D_gbu3n")
-mesh = SubResource("QuadMesh_7tbbo")
-
-[node name="Label3D" type="Label3D" parent="Dev Pods Game Pictures/Game Frame with Button - Gladiator Example/Button Stand" unique_id=1580588700]
-transform = Transform3D(0.24000001, 0, 0, 0, 0.24000001, 0, 0, 0, 0.24000001, -0.07500076, 0.665, -0.31499863)
-modulate = Color(0, 0, 0, 1)
-text = "Gladiator of the
-Golden House"
-outline_size = 0
-
-[node name="PlayButtonStand" type="MeshInstance3D" parent="Dev Pods Game Pictures/Game Frame with Button - Gladiator Example/Button Stand" unique_id=1568301415]
-transform = Transform3D(-6.29444e-09, 0, 0.14400001, 0, 0.14400001, 0, -0.14400001, 0, -6.29444e-09, -0.08000028, -1, -0.039999425)
-material_override = SubResource("StandardMaterial3D_880y8")
-mesh = ExtResource("35_u5gq0")
-
-[node name="CollisionShapeStand" type="CollisionShape3D" parent="Dev Pods Game Pictures/Game Frame with Button - Gladiator Example/Button Stand" unique_id=586105222]
-transform = Transform3D(-8.742277e-09, 0, -0.19999999, 0, 0.19999999, 0, 0.19999999, 0, -8.742277e-09, -0.099998474, 0.45, -0.050001144)
-shape = SubResource("BoxShape3D_7tbbo")
+[node name="Button Stand" parent="Dev Pods Game Pictures/Game Frame with Button - Gladiator Example" unique_id=1440399840 instance=ExtResource("46_tbq01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, -0.7291305, 0.8999996)
 
 [node name="BasicCurvyFrame Test" type="MeshInstance3D" parent="Dev Pods Game Pictures/Game Frame with Button - Gladiator Example" unique_id=324603645]
 transform = Transform3D(-8.742277e-09, 0, -0.19999999, 0, 0.19999999, 0, 0.19999999, 0, -8.742277e-09, 0, 0.5, 0)
@@ -1705,4 +1777,26 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 24.011044, 0.9385146, 20.2431
 [node name="Extinguisher2" parent="." unique_id=319937067 instance=ExtResource("53_mj7h6")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 24.011044, -9.463224, 20.2431)
 
+[node name="tank-rampage-command_marine" parent="." unique_id=2103342501 instance=ExtResource("53_gbu3n")]
+transform = Transform3D(-0.627159, 0, -0.7788914, 0, 1, 0, 0.7788914, 0, -0.627159, 30.876, -0.997, 43.822)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="tank-rampage-command_marine" unique_id=262737274]
+transform = Transform3D(0.90630776, 0.32136145, -0.2744686, 0, 0.64944804, 0.76040596, 0.42261827, -0.68916184, 0.5885998, -0.44, 2.69, 0.848)
+layers = 4
+light_bake_mode = 0
+distance_fade_enabled = true
+distance_fade_begin = 10.0
+spot_range = 4.535
+spot_angle = 33.37
+
+[node name="Label3D" type="Label3D" parent="tank-rampage-command_marine" unique_id=1297228397]
+transform = Transform3D(0.9788673, 0, -0.20449601, 0, 1, 0, 0.20449601, 0, 0.9788673, 0, 1.8, 0.445)
+pixel_size = 0.002
+text = "I'm from the prequel, Tank Rampage Command!"
+font_size = 16
+outline_size = 4
+
 [editable path="CSG Blockout/Cyndrive Ships/CyndriveShipsProps/cyndrive_ships_carrier"]
+[editable path="Guidebook Stand/Guidebook3d/guidebook"]
+[editable path="Guidebook Stand/Guidebook3d2/guidebook"]
+[editable path="Guidebook Stand/Guidebook3d3/guidebook"]

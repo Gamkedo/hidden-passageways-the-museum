@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://de5r1qejyqa71"]
+
+[node name="CSGPolygonTemplate" type="CSGPolygon3D" unique_id=1136570024]
+polygon = PackedVector2Array(0, 0.75, 0, 1, 1, 1, 1, 0.5, 0.66, 0.5, 0.48, 0.48, 0.32, 0.42, 0.2, 0.3, 0.1, 0.1, 0.025, 0, 0, 0)
+smooth_faces = true
