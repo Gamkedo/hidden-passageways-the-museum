@@ -57,6 +57,7 @@
 [ext_resource type="PackedScene" uid="uid://bjbv5y5fcm1dy" path="res://entities-scene_prefabs/button_stand.tscn" id="46_tbq01"]
 [ext_resource type="PackedScene" uid="uid://dbngi8xk7go57" path="res://models/tank_rampage_command_marine.tscn" id="53_gbu3n"]
 [ext_resource type="PackedScene" uid="uid://dgahdbu6k5v7a" path="res://entities-scene_prefabs/fire_extinguisher.tscn" id="53_mj7h6"]
+[ext_resource type="Script" uid="uid://78d2xtti3yje" path="res://level-scenes/tween-off-on-screen.gd" id="58_oa8v2"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_xteo1"]
 radius = 2.0
@@ -282,39 +283,39 @@ albedo_texture = ExtResource("7_hgslh")
 
 [sub_resource type="SphereMesh" id="SphereMesh_7tbbo"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_nw8jh"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_oa8v2"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oa8v2"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_27nw5"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
 cull_mode = 1
-albedo_texture = SubResource("ViewportTexture_nw8jh")
+albedo_texture = SubResource("ViewportTexture_oa8v2")
 roughness = 0.8
 texture_filter = 5
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_27nw5"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_b2w3e"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b2w3e"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xub5d"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
 cull_mode = 1
-albedo_texture = SubResource("ViewportTexture_27nw5")
+albedo_texture = SubResource("ViewportTexture_b2w3e")
 roughness = 0.8
 texture_filter = 5
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_xub5d"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_x4vg3"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x4vg3"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iit47"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
 cull_mode = 1
-albedo_texture = SubResource("ViewportTexture_xub5d")
+albedo_texture = SubResource("ViewportTexture_x4vg3")
 roughness = 0.8
 texture_filter = 5
 
@@ -1472,7 +1473,7 @@ cast_shadow = 0
 [node name="Pages" parent="Guidebook Stand/Guidebook3d/guidebook" index="1" unique_id=1231375428]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_oa8v2")
+surface_material_override/0 = SubResource("StandardMaterial3D_27nw5")
 
 [node name="Guidebook3d2" type="Node3D" parent="Guidebook Stand" unique_id=1034692829]
 transform = Transform3D(0.99572617, -6.976736e-08, 0.092355326, 0.07370379, 0.60259724, -0.79463464, -0.05565301, 0.7980456, 0.60002184, 0.33789635, 0.5955966, 0.11873436)
@@ -1486,7 +1487,7 @@ cast_shadow = 0
 [node name="Pages" parent="Guidebook Stand/Guidebook3d2/guidebook" index="1" unique_id=1231375428]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_b2w3e")
+surface_material_override/0 = SubResource("StandardMaterial3D_xub5d")
 
 [node name="Guidebook3d3" type="Node3D" parent="Guidebook Stand" unique_id=1679212863]
 transform = Transform3D(-0.9742656, -0.12668496, -0.18643428, 0.14209789, -0.98725104, -0.07172081, -0.1749714, -0.0963671, 0.979846, -0.58836937, 0.5955966, 0.11873436)
@@ -1501,7 +1502,7 @@ cast_shadow = 0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 visible = false
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_x4vg3")
+surface_material_override/0 = SubResource("StandardMaterial3D_iit47")
 
 [node name="Label3D" type="Label3D" parent="Guidebook Stand" unique_id=1183973093]
 transform = Transform3D(0.24000001, 0, 0, 0, 0.24000001, 0, 0, 0, 0.24000001, -0.07500076, 0.61191887, -0.31499863)
@@ -1795,6 +1796,10 @@ pixel_size = 0.002
 text = "I'm from the prequel, Tank Rampage Command!"
 font_size = 16
 outline_size = 4
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="tank-rampage-command_marine" unique_id=2101512599]
+layers = 4
+script = ExtResource("58_oa8v2")
 
 [editable path="CSG Blockout/Cyndrive Ships/CyndriveShipsProps/cyndrive_ships_carrier"]
 [editable path="Guidebook Stand/Guidebook3d/guidebook"]
