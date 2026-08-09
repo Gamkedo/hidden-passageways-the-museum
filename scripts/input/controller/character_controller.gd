@@ -263,6 +263,8 @@ func interaction_check():
 			hit.open_scene()
 		if hit.has_method("manipulate_mesh"):
 			hit.manipulate_mesh()
+		if hit.has_method("teleport"):
+			hit.teleport(self.get_parent()) # need "Player with UI" node here
 
 #endregion Interact
 

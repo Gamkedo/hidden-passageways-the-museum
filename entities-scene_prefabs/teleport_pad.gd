@@ -8,7 +8,14 @@ extends Node3D
 # var pad_id := 0
 
 func _ready():
-	print('telepad "', name, '" ready')
+	# print('telepad "', name, '" ready')
+	pass
 
-func teleport():
-	print('Teleport player to pad ', dest_telepad.name)
+func teleport(player):
+	print('Teleport player: ', player.name, ' to pad ', dest_telepad.name)
+	player.global_position = (dest_telepad.global_position + Vector3(0, 2, 0))
+	
+	
+	
+	
+	
