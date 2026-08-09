@@ -146,6 +146,7 @@ cast_shadow = 0
 visibility_range_end = 25.0
 
 [node name="Long3" parent="naous_swords" index="10" unique_id=1118166116]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.205, 0)
 layers = 4
 cast_shadow = 0
 visibility_range_end = 25.0

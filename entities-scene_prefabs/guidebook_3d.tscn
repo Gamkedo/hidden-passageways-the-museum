@@ -33,12 +33,12 @@ size_2d_override = Vector2i(512, 512)
 [node name="guidebook" parent="." unique_id=1630787135 instance=ExtResource("1_lvjpm")]
 
 [node name="Book" parent="guidebook" index="0" unique_id=1462561935]
-layers = 2
+layers = 6
 cast_shadow = 0
 
 [node name="Pages" parent="guidebook" index="1" unique_id=1231375428]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
-layers = 2
+layers = 6
 surface_material_override/0 = SubResource("StandardMaterial3D_idw7o")
 
 [editable path="guidebook"]

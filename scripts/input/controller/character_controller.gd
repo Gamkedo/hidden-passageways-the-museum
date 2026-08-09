@@ -19,6 +19,8 @@ const INPUT_SETTINGS = preload("uid://b0g4cokh6wa10")
 @export var sprint_enabled: bool = true:
 	set = set_sprint_enabled
 @export var interact_enabled: bool = true
+@export var interact_distance: float = 3.0
+@export_flags_3d_physics var interact_mask: int = 1 ## i dont know what the default value should be in integer format but it isn't just 1.
 @export var flight_enabled: bool = true:
 	set = set_flight_enabled
 
@@ -224,13 +226,44 @@ func _handle_interact(is_pressed: bool) -> void:
 	if not interact_enabled:
 		return
 	
-	if is_pressed and not _is_interacting:
-		_is_interacting = true
-		interact_started.emit()
-	else:
-		if _is_interacting:
-			interact_stopped.emit()
-		_is_interacting = false
+	# hack ?
+	if not is_pressed:
+		return
+	#print("interacted")
+	interaction_check()
+	
+	## hook this back up when interactions are redone
+	#if is_pressed and not _is_interacting:
+		#_is_interacting = true
+		#interact_started.emit()
+	#else:
+		#if _is_interacting:
+			#interact_stopped.emit()
+		#_is_interacting = false
+
+## adapted from old code
+func interaction_check():
+	var space_state = target_node.get_world_3d().direct_space_state
+
+	var from = target_camera.global_transform.origin
+	var to = from + (-target_camera.global_transform.basis.z * interact_distance)
+
+	var query = PhysicsRayQueryParameters3D.create(from, to)
+	query.collide_with_areas = true
+	query.collide_with_bodies = true
+	query.collision_mask = interact_mask
+
+	var result = space_state.intersect_ray(query)
+	print("interaction: ", result)
+	if result:
+		var hit = result.collider
+		if hit.has_method("open_link"):
+			hit.open_link()
+		if hit.has_method("open_scene"):
+			hit.open_scene()
+		if hit.has_method("manipulate_mesh"):
+			hit.manipulate_mesh()
+
 #endregion Interact
 
 #region Flight

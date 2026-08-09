@@ -30,15 +30,35 @@ size_flags_horizontal = 4
 text = "+"
 horizontal_alignment = 1
 
+[node name="ControlsList" type="RichTextLabel" parent="UILayer" unique_id=1320377003]
+offset_right = 368.0
+offset_bottom = 40.0
+bbcode_enabled = true
+text = "
+
+[u]Controls (Keyboard / Gamepad)[/u]
+Move:  WASD / Joystick
+Jump:  Spacebar / Bottom Face Button
+Interact:  F / Left Face Button
+Sprint:  LShift / LT
+Flight:  LCtrl / Dpad Up
+
+Capture mouse: Left click
+Release mouse: Right click"
+fit_content = true
+scroll_active = false
+
 [node name="CharacterController" type="Node" parent="." unique_id=479219601 node_paths=PackedStringArray("target_node", "target_camera")]
 script = ExtResource("1_jty3e")
 target_node = NodePath("../PlayerCharacterBody")
 target_camera = NodePath("../PlayerCharacterBody/BodyCam")
+interact_mask = 5
 metadata/_custom_type_script = "uid://bir504dnh2v0a"
 
 [node name="PlayerCharacterBody" type="CharacterBody3D" parent="." unique_id=752693534]
 unique_name_in_owner = true
-collision_layer = 3
+collision_layer = 2
+collision_mask = 5
 floor_constant_speed = true
 
 [node name="BodyCam" type="Camera3D" parent="PlayerCharacterBody" unique_id=1575625798]
