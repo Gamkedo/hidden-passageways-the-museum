@@ -5,6 +5,8 @@ signal jumped
 signal interact_started
 signal interact_stopped
 
+const RESET_POSITION_META: StringName = &"WorldFloor"
+
 @export var target_node: CharacterBody3D
 @export var target_camera: Camera3D
 
@@ -28,11 +30,16 @@ enum STATE {GROUNDED, AIRBORNE, FLYING}
 
 var current_available_air_jumps: int = 0
 
+var _onready_global_origin: Vector3
 var _last_movement_vector: Vector2 = Vector2.ZERO
 var _is_sprinting: bool = false
 var _is_interacting: bool = false
 var _flight_mode_active: bool = false
 var _coyote_frame_timer: int = 0
+
+func _ready() -> void:
+	if target_node:
+		_onready_global_origin = target_node.global_position
 
 #region Aiming & Mouse Capture
 func _handle_aim(aim_vector: Vector2, delta: float) -> void:
@@ -102,7 +109,13 @@ func _handle_movement(movement_vector: Vector2, delta: float) -> void:
 	target_node.velocity.z = new_velocity.z
 	
 	#print("Player moving!")
-	target_node.move_and_slide()
+	var slide_collided: bool = target_node.move_and_slide()
+	
+	if slide_collided:
+		## Return player to origin when out of bounds
+		var collider = target_node.get_last_slide_collision().get_collider()
+		if collider.get_meta(RESET_POSITION_META, false) == true:
+			reset_position(_onready_global_origin)
 	
 	_last_movement_vector = movement_vector
 
@@ -340,3 +353,10 @@ func _physics_process_callback(_delta: float) -> void:
 
 func _process_callback(_delta: float) -> void:
 	_process_coyote_jump()
+
+func reset_position(to: Vector3) -> void:
+	if not target_node:
+		return
+	target_node.global_position = to
+	target_node.velocity = Vector3.ZERO
+	
