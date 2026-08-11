@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://ce0uc3f7i1cxo"]
 
+[ext_resource type="Script" uid="uid://dragnfiluvlif" path="res://scripts/debug_details.gd" id="1_4v70m"]
 [ext_resource type="Script" uid="uid://bir504dnh2v0a" path="res://scripts/input/controller/character_controller.gd" id="1_jty3e"]
+[ext_resource type="Script" uid="uid://dsoaew313i5ei" path="res://scripts/fps_label.gd" id="1_ydgiv"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jty3e"]
 radius = 0.437
@@ -47,6 +49,31 @@ Capture mouse: Left click
 Release mouse: Right click"
 fit_content = true
 scroll_active = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UILayer" unique_id=1817808499]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -320.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="FPSLabel" type="Label" parent="UILayer/VBoxContainer" unique_id=474987211]
+layout_mode = 2
+horizontal_alignment = 1
+script = ExtResource("1_ydgiv")
+
+[node name="DebugDetails" type="RichTextLabel" parent="UILayer/VBoxContainer" unique_id=1143786817]
+custom_minimum_size = Vector2(320, 0)
+custom_maximum_size = Vector2(320, -1)
+layout_mode = 2
+focus_mode = 0
+focus_behavior_recursive = 1
+mouse_filter = 2
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+script = ExtResource("1_4v70m")
 
 [node name="CharacterController" type="Node" parent="." unique_id=479219601 node_paths=PackedStringArray("target_node", "target_camera")]
 script = ExtResource("1_jty3e")
