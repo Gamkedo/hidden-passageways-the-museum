@@ -11,7 +11,7 @@ height = 1.9316132
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_4v70m"]
 radial_segments = 16
 
-[node name="Player with UI" type="Node3D" unique_id=1354449472]
+[node name="Player with UI" type="CharacterBody3D" unique_id=2066310668]
 
 [node name="UILayer" type="CanvasLayer" parent="." unique_id=1635546215]
 unique_name_in_owner = true
@@ -77,27 +77,21 @@ script = ExtResource("1_4v70m")
 
 [node name="CharacterController" type="Node" parent="." unique_id=479219601 node_paths=PackedStringArray("target_node", "target_camera")]
 script = ExtResource("1_jty3e")
-target_node = NodePath("../PlayerCharacterBody")
-target_camera = NodePath("../PlayerCharacterBody/BodyCam")
+target_node = NodePath("..")
+target_camera = NodePath("../BodyCam")
 interact_mask = 5
 metadata/_custom_type_script = "uid://bir504dnh2v0a"
 
-[node name="PlayerCharacterBody" type="CharacterBody3D" parent="." unique_id=752693534]
-unique_name_in_owner = true
-collision_layer = 2
-collision_mask = 5
-floor_constant_speed = true
-
-[node name="BodyCam" type="Camera3D" parent="PlayerCharacterBody" unique_id=1575625798]
+[node name="BodyCam" type="Camera3D" parent="." unique_id=1575625798]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9973092, 0)
 cull_mask = 1048573
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerCharacterBody" unique_id=1548911228]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1548911228]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.021, 0)
 shape = SubResource("CapsuleShape3D_jty3e")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerCharacterBody/CollisionShape3D" unique_id=688479349]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D" unique_id=688479349]
 layers = 2
 cast_shadow = 0
 gi_mode = 2
