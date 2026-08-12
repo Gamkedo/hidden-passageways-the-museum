@@ -96,17 +96,9 @@ func _handle_movement(movement_vector: Vector2, delta: float) -> void:
 	if not movement_enabled:
 		return
 	
-	if _flight_mode_active:
-		# No gravity for flight mode
-		target_node.velocity.y = 0
-	else:
-		# Apply gravity
-		target_node.velocity += target_node.get_gravity() * delta
-	
 	# Apply movement (horizontal only)
 	var new_velocity := _calculate_movement_velocity(target_node.velocity, movement_vector, delta)
-	target_node.velocity.x = new_velocity.x
-	target_node.velocity.z = new_velocity.z
+	target_node.velocity = new_velocity
 	
 	#print("Player moving!")
 	var slide_collided: bool = target_node.move_and_slide()
@@ -131,17 +123,24 @@ func _calculate_movement_velocity(
 	var target_velocity_vector := world_movement_vector * target_velocity
 	
 	var new_velocity := current_velocity.lerp(target_velocity_vector, acceleration * delta)
+	if not _flight_mode_active:
+		# Apply gravity
+		new_velocity.y = current_velocity.y
+		new_velocity += target_node.get_gravity() * delta
+	#print("New player velocity: ", new_velocity)
 	return new_velocity
 
 func _translate_movement_to_world(movement_vector: Vector2) -> Vector3:
 	var world_movement_vector := Vector3.ZERO
-	# Horizontal only - ignore the 'y' for 3rd-dimension
+	# Horizontal only - ignore the 'y' for 3rd-dimension when interpreting inputs
 	world_movement_vector.x = movement_vector.x
 	world_movement_vector.z = movement_vector.y
 	
 	# Straight from the Godot docs :)
 	var cam_basis = target_camera.global_transform.basis
-	cam_basis = cam_basis.rotated(cam_basis.x, -cam_basis.get_euler().x)
+	if not _flight_mode_active:
+		# remove the X-axis rotation (up/down from camera view)
+		cam_basis = cam_basis.rotated(cam_basis.x, -cam_basis.get_euler().x)
 	world_movement_vector = cam_basis * world_movement_vector
 	
 	return world_movement_vector
@@ -289,6 +288,10 @@ func _handle_toggle_flight(is_pressed: bool) -> void:
 	# Toggle flight mode on press
 	if is_pressed:
 		_flight_mode_active = !_flight_mode_active
+	
+	if _flight_mode_active == true:
+		# Stop the player's motion upon entering flight mode
+		target_node.velocity.y = 0
 
 func set_flight_enabled(enabled: bool) -> void:
 	flight_enabled = enabled
