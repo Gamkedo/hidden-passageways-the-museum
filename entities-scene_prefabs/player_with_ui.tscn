@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://dragnfiluvlif" path="res://scripts/debug_details.gd" id="1_4v70m"]
 [ext_resource type="Script" uid="uid://bir504dnh2v0a" path="res://scripts/input/controller/character_controller.gd" id="1_jty3e"]
 [ext_resource type="Script" uid="uid://dsoaew313i5ei" path="res://scripts/fps_label.gd" id="1_ydgiv"]
+[ext_resource type="AudioStream" uid="uid://qfcqpxe6ua5w" path="res://audio/sound effects/LandingSound.wav" id="3_io1g6"]
+[ext_resource type="Script" uid="uid://doqquv1yr1ie7" path="res://scripts/player_audio_stream.gd" id="4_io1g6"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jty3e"]
 radius = 0.437
@@ -14,6 +16,7 @@ radial_segments = 16
 [node name="Player with UI" type="CharacterBody3D" unique_id=2066310668]
 collision_layer = 2
 collision_mask = 5
+floor_max_angle = 1.3962634
 
 [node name="UILayer" type="CanvasLayer" parent="." unique_id=1635546215]
 unique_name_in_owner = true
@@ -77,7 +80,14 @@ fit_content = true
 scroll_active = false
 script = ExtResource("1_4v70m")
 
+[node name="LandingAudioStream" type="AudioStreamPlayer" parent="." unique_id=486965921 node_paths=PackedStringArray("target_body")]
+unique_name_in_owner = true
+stream = ExtResource("3_io1g6")
+script = ExtResource("4_io1g6")
+target_body = NodePath("..")
+
 [node name="CharacterController" type="Node" parent="." unique_id=479219601 node_paths=PackedStringArray("target_node", "target_camera")]
+unique_name_in_owner = true
 script = ExtResource("1_jty3e")
 target_node = NodePath("..")
 target_camera = NodePath("../BodyCam")
