@@ -22,7 +22,7 @@ light_energy = 0.25
 use_collision = true
 
 [node name="Starting room" type="CSGBox3D" parent="CSG Blockout" unique_id=1869336714]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 23.438885, -1)
 size = Vector3(11, 2, 8)
 material = ExtResource("1_2ea2s")
 
@@ -69,18 +69,39 @@ operation = 2
 polygon = PackedVector2Array(-1.5, 0, -1.5, 2.5, -1, 3.5, 0, 4, 1, 3.5, 1.5, 2.5, 1.5, 0)
 material = ExtResource("1_2ea2s")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="CSG Blockout/Tunnel under start" unique_id=1627241918]
+[node name="Walkway" type="CSGBox3D" parent="CSG Blockout/Tunnel under start" unique_id=1627241918]
 transform = Transform3D(19.816288, 0, 0, 0, 0.978254, 0, 0, 0, 4.5592427, -14.3146305, -3.028304, 0)
 material = ExtResource("1_2ea2s")
 
+[node name="Teleport Pad A2" parent="CSG Blockout/Tunnel under start" unique_id=298439931 node_paths=PackedStringArray("dest_telepad") instance=ExtResource("4_dtqeb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.02801, -2.7125788, 0.020154953)
+dest_telepad = NodePath("../../Platform A/Teleport Pad A")
+
 [node name="Platform A" type="CSGBox3D" parent="CSG Blockout" unique_id=890521203]
-transform = Transform3D(13.342806, 0, 0, 0, 1.8252358, 0, 0, 0, 6.448243, -23.911121, -5.365469, -19.313744)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.973808, -1.0215611, -32.856453)
+size = Vector3(19.468376, 12.216, 20.366)
 material = ExtResource("1_2ea2s")
 
+[node name="Teleport Pad A" parent="CSG Blockout/Platform A" unique_id=1306437297 node_paths=PackedStringArray("dest_telepad") instance=ExtResource("4_dtqeb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2062817, -5.4853926, 6.022011)
+dest_telepad = NodePath("../../Tunnel under start/Teleport Pad A2")
+
 [node name="floor hole" type="CSGBox3D" parent="CSG Blockout/Platform A" unique_id=1908171439]
-transform = Transform3D(0.85348344, 0, 0, 0, 0.7221884, 0, 0, 0, 0.7639304, -0.029735208, 0.45391464, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09661484, 0.44058466, -3.5340805)
 operation = 2
+size = Vector3(16.240433, 11.561878, 25.31)
 material = ExtResource("1_2ea2s")
+
+[node name="window hole" type="CSGBox3D" parent="CSG Blockout/Platform A" unique_id=759863927]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8831882, -2.136189, 9.183254)
+operation = 2
+size = Vector3(3.8150787, 3.4865417, 2.5521317)
+material = ExtResource("1_2ea2s")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="CSG Blockout/Platform A" unique_id=506214351]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.610074, 12.00391)
+polygon = PackedVector2Array(-13.548447, -1.0430665, -0.5649719, 5.9106507, 12.216114, -0.510942)
+depth = 37.85
 
 [node name="Clickable Scene Change" type="StaticBody3D" parent="." unique_id=1285932327]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -0.2217412, -2.1336958)
@@ -96,12 +117,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2.5, -2.5)
 mesh = SubResource("SphereMesh_7tbbo")
 
 [node name="Player with UI" parent="." unique_id=1354449472 instance=ExtResource("3_7mwwm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.5)
-
-[node name="Teleport Pad A" parent="." unique_id=1306437297 node_paths=PackedStringArray("dest_telepad") instance=ExtResource("4_dtqeb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.70484, -5.365469, -19.313744)
-dest_telepad = NodePath("../Teleport Pad A2")
-
-[node name="Teleport Pad A2" parent="." unique_id=298439931 node_paths=PackedStringArray("dest_telepad") instance=ExtResource("4_dtqeb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.52801, -7.212579, -0.97984505)
-dest_telepad = NodePath("../Teleport Pad A")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 24.074429, 0.5)
