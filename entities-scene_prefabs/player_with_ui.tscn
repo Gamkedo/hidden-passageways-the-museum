@@ -5,8 +5,10 @@
 [ext_resource type="Script" uid="uid://dsoaew313i5ei" path="res://scripts/fps_label.gd" id="1_ydgiv"]
 [ext_resource type="AudioStream" uid="uid://qfcqpxe6ua5w" path="res://audio/sound effects/LandingSound.wav" id="3_io1g6"]
 [ext_resource type="Script" uid="uid://doqquv1yr1ie7" path="res://scripts/player_audio_stream.gd" id="4_io1g6"]
+[ext_resource type="Script" uid="uid://cq71t77ycqntx" path="res://scripts/stair_step_raycast.gd" id="6_ujqyo"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jty3e"]
+margin = 0.07
 radius = 0.437
 height = 1.9316132
 
@@ -16,7 +18,7 @@ radial_segments = 16
 [node name="Player with UI" type="CharacterBody3D" unique_id=2066310668]
 collision_layer = 2
 collision_mask = 5
-floor_max_angle = 1.3962634
+floor_max_angle = 1.0471976
 
 [node name="UILayer" type="CanvasLayer" parent="." unique_id=1635546215]
 unique_name_in_owner = true
@@ -86,13 +88,24 @@ stream = ExtResource("3_io1g6")
 script = ExtResource("4_io1g6")
 target_body = NodePath("..")
 
-[node name="CharacterController" type="Node" parent="." unique_id=479219601 node_paths=PackedStringArray("target_node", "target_camera")]
+[node name="CharacterController" type="Node" parent="." unique_id=479219601 node_paths=PackedStringArray("target_node", "target_camera", "stair_step_ray_cast")]
 unique_name_in_owner = true
 script = ExtResource("1_jty3e")
 target_node = NodePath("..")
 target_camera = NodePath("../BodyCam")
+stair_step_ray_cast = NodePath("../RayCast3D")
 interact_mask = 5
 metadata/_custom_type_script = "uid://bir504dnh2v0a"
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=2031723844 node_paths=PackedStringArray("input_controller")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1223687, -0.6091355)
+target_position = Vector3(0, -0.876, 0)
+hit_back_faces = false
+debug_shape_custom_color = Color(0.94, 0.73696, 0.26319999, 1)
+debug_shape_thickness = 3
+script = ExtResource("6_ujqyo")
+input_controller = NodePath("../CharacterController")
 
 [node name="BodyCam" type="Camera3D" parent="." unique_id=1575625798]
 unique_name_in_owner = true

@@ -28,3 +28,8 @@ extends Resource
 @export_range(0, 100) var max_flight_velocity: float = 15
 @export_range(0, 100) var flight_acceleration: float = 30
 @export_range(0, 100) var flight_decceleration: float = 50
+
+
+@export_category("Stair Step (Mantle)")
+## How much the character body is moved upwards when attempting to stair step
+@export_range(0, 100) var stair_step_strength: float = 7

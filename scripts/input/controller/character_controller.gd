@@ -9,6 +9,7 @@ const RESET_POSITION_META: StringName = &"WorldFloor"
 
 @export var target_node: CharacterBody3D
 @export var target_camera: Camera3D
+@export var stair_step_ray_cast: RayCast3D
 
 const DEFAULT_CHARACTER_CONTROL_PROPERTIES = preload("uid://cnjhwt3wsomqd")
 @export var character_control_properties: CharacterControlProperties = DEFAULT_CHARACTER_CONTROL_PROPERTIES
@@ -101,15 +102,52 @@ func _handle_movement(movement_vector: Vector2, delta: float) -> void:
 	target_node.velocity = new_velocity
 	
 	#print("Player moving!")
+	var last_collision := target_node.get_last_slide_collision()
+	if last_collision != null:
+		#print("Body collided after moving")
+		_attempt_stair_step(target_node, movement_vector, delta)
+	
 	var slide_collided: bool = target_node.move_and_slide()
 	
 	if slide_collided:
 		## Return player to origin when out of bounds
-		var collider = target_node.get_last_slide_collision().get_collider()
+		var collider := target_node.get_last_slide_collision().get_collider()
 		if collider.get_meta(RESET_POSITION_META, false) == true:
 			reset_position(_onready_global_origin)
 	
 	_last_movement_vector = movement_vector
+
+# Adjust the height of objects the body can climb by adjusting the position and
+# length of the ray cast
+# Note that this is also influenced by the "Max Angle" on the CharacterBody3D to
+# determine what qualifies as a "wall" versus "floor"
+func _attempt_stair_step(body_node: CharacterBody3D, movement_direction: Vector2, delta: float) -> void:
+	if not is_instance_valid(stair_step_ray_cast) or not stair_step_ray_cast.is_colliding():
+		# Ray cast must exist and be colliding with something to climb stairs!
+		return
+	
+	# Translate movement to 3D and ignore y-axis
+	var body_movement_direction := Vector3()
+	body_movement_direction.x = movement_direction.x
+	body_movement_direction.z = movement_direction.y
+	
+	# If the body is moving towards the wall/stair (approximately)...
+	# - Get the wall normal 
+	# - Reverse it based on the body's facing direction
+	# - Get the angle between the wall normal and the movement direction
+	var wall_normal := body_node.get_wall_normal() * Vector3(1, 0, 1)
+	var rotated_wall_normal := wall_normal.rotated(body_node.basis.x, PI)
+	var angle_to_wall_normal := rotated_wall_normal.angle_to(body_movement_direction)
+	
+	# If the movement towards the wall is sharp enough, begin climbing stairs
+	if absf(angle_to_wall_normal) < PI and not body_movement_direction.is_zero_approx():
+		# Arbitrary number here, helps prevent positional jitter when gravity kicks back in
+		body_node.velocity.y = 120 * delta
+		
+		# Push the body upwards to "climb" the stairs/wall
+		var position_adjust := Vector3(0, character_control_properties.stair_step_strength, 0)
+		body_node.global_position += position_adjust * delta
+	
 
 func _calculate_movement_velocity(
 	current_velocity: Vector3,
