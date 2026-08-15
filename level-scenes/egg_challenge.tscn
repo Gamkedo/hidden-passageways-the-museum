@@ -1,0 +1,343 @@
+[gd_scene format=3 uid="uid://c4vtkvb04er8b"]
+
+[ext_resource type="Material" uid="uid://b5j7a6q6jdkv5" path="res://materials/concrete.tres" id="1_3mhmp"]
+[ext_resource type="Material" uid="uid://pbcfbq1j1kga" path="res://materials/concrete-tiles.tres" id="2_jcmj1"]
+
+[sub_resource type="Curve3D" id="Curve3D_ekwlp"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0.25, 0, 0, 0, 0, 0, 0, 0, 15, 0.6, 0, 0, 0, 0, 0, 0, 0, 20, 1.2, 0, 0, 0, 0, 0, 0, 0, 25, 2.1, 0, 0, 0, 0, 0, 0, 0, 30, 3.2, 0, 0, 0, 0, 0, 0, 0, 35, 4.4, 0, 0, 0, 0, 0, 0, 0, 40, 5.7, 0, 0, 0, 0, 0, 0, 0, 45, 7.2, 0, 0, 0, 0, 0, 0, 0, 50, 9, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 11
+
+[node name="EggChallenge" type="Node3D" unique_id=1099479422]
+
+[node name="Track" type="Node3D" parent="." unique_id=1860930090]
+
+[node name="Path3D" type="Path3D" parent="Track" unique_id=1918350513]
+curve = SubResource("Curve3D_ekwlp")
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="Track" unique_id=77636780]
+material_override = ExtResource("1_3mhmp")
+autosmooth = true
+smoothing_angle = 87.6
+use_collision = true
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Track/CSGCombiner3D" unique_id=1735668775]
+polygon = PackedVector2Array(0, -1, 0, 1, 3, 1, 6, 1, 9, 1, 9, -1, 6, -1, 3, -1)
+mode = 2
+path_node = NodePath("../../Path3D")
+path_interval_type = 1
+path_interval = 0.36
+path_simplify_angle = 0.0
+path_rotation = 2
+path_rotation_accurate = false
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="CSGPolygon3D2" type="CSGPolygon3D" parent="Track/CSGCombiner3D" unique_id=1228053704]
+transform = Transform3D(0.99996555, 0.008317284, 0, -0.008317285, 0.9999654, 0, 0, 0, 1.0000001, -0.05095625, 0.526, 3.5)
+operation = 2
+polygon = PackedVector2Array(0, 0, -2, 1, 4, 1, 2, 0)
+mode = 2
+path_node = NodePath("../../Path3D")
+path_interval_type = 1
+path_interval = 0.5
+path_simplify_angle = 0.0
+path_rotation = 2
+path_rotation_accurate = false
+path_local = true
+path_continuous_u = true
+path_u_distance = 1.0
+path_joined = false
+
+[node name="Rail" type="CSGCylinder3D" parent="Track" unique_id=1529932161]
+transform = Transform3D(0.8660254, 0.5, 0, 2.1855694e-08, -3.7855173e-08, 1, 0.5, -0.8660254, -4.371139e-08, 4, 0.8999999, 2.5)
+use_collision = true
+radius = 0.1
+height = 5.0
+material = ExtResource("2_jcmj1")
+
+[node name="Rail8" type="CSGCylinder3D" parent="Track" unique_id=106205761]
+transform = Transform3D(0.8660253, -0.49999997, 0, -2.1855696e-08, -3.785517e-08, 1, -0.49999997, -0.8660253, -4.371139e-08, 4, 0.8999999, 6.5)
+use_collision = true
+radius = 0.1
+height = 5.0
+material = ExtResource("2_jcmj1")
+
+[node name="Rail2" type="CSGCylinder3D" parent="Track" unique_id=741355068]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 5, 1.0999999, 4.5)
+use_collision = true
+radius = 0.1
+height = 5.0
+material = ExtResource("2_jcmj1")
+
+[node name="Rail3" type="CSGCylinder3D" parent="Track" unique_id=740168344]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 7, 1.3, 4.5)
+use_collision = true
+radius = 0.1
+height = 5.0
+material = ExtResource("2_jcmj1")
+
+[node name="Rail4" type="CSGCylinder3D" parent="Track" unique_id=1412461448]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 9, 1.5, 4.5)
+use_collision = true
+radius = 0.1
+height = 5.0
+material = ExtResource("2_jcmj1")
+
+[node name="Rail5" type="CSGCylinder3D" parent="Track" unique_id=751720860]
+transform = Transform3D(0.70710677, 0.704416, -0.061628386, 0, 0.08715569, 0.9961947, 0.70710677, -0.704416, 0.061628386, 12.645102, 1.2435777, 4.240685)
+use_collision = true
+radius = 0.1
+height = 5.0
+material = ExtResource("2_jcmj1")
+
+[node name="Rail6" type="CSGCylinder3D" parent="Track" unique_id=1906487233]
+transform = Transform3D(0.70710677, 0.704416, -0.061628386, 0, 0.08715569, 0.9961947, 0.70710677, -0.704416, 0.061628386, 13.910923, 1.369344, 4.296183)
+use_collision = true
+radius = 0.1
+height = 5.0
+material = ExtResource("2_jcmj1")
+
+[node name="Rail7" type="CSGCylinder3D" parent="Track" unique_id=201072164]
+transform = Transform3D(0.70710677, 0.704416, -0.061628386, 0, 0.08715569, 0.9961947, 0.70710677, -0.704416, 0.061628386, 14.963806, 1.5212569, 4.5160923)
+use_collision = true
+radius = 0.1
+height = 5.0
+material = ExtResource("2_jcmj1")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Track" unique_id=1380017503]
+transform = Transform3D(0.8653289, 0.49740085, -0.061628383, 0.022557558, 0.08418593, 0.9961948, 0.5006964, -0.86342627, 0.061628383, 15.472475, 2.75713, 1.2737304)
+use_collision = true
+size = Vector3(5, 0.5, 3)
+material = ExtResource("2_jcmj1")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Track" unique_id=1389294691]
+transform = Transform3D(0.9385553, 0.33958137, -0.061628383, 0.03683359, 0.078989886, 0.9961949, 0.34315732, -0.93725383, 0.061628375, 9.010053, 1.5043652, 8.571164)
+use_collision = true
+size = Vector3(5, 0.5, 2)
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Track" unique_id=224370634]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1, 6)
+use_collision = true
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Track" unique_id=1015034788]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1, 3)
+use_collision = true
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="Track" unique_id=1412164108]
+transform = Transform3D(0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.49999997, 15.700962, 2, 5.25)
+use_collision = true
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="Track" unique_id=1124658499]
+transform = Transform3D(0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.49999997, 18.825832, 2, 5.062436)
+use_collision = true
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D5" type="CSGCylinder3D" parent="Track" unique_id=423437503]
+transform = Transform3D(-0.2588191, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.2588191, 25.551111, 4, 1.1117716)
+use_collision = true
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D6" type="CSGCylinder3D" parent="Track" unique_id=2113951494]
+transform = Transform3D(-0.2588191, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.2588191, 28.448889, 4, 4.8882284)
+use_collision = true
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D7" type="CSGCylinder3D" parent="Track" unique_id=1947059702]
+transform = Transform3D(-0.2588191, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.2588191, 25.551111, 3, 4.1117716)
+use_collision = true
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D8" type="CSGCylinder3D" parent="Track" unique_id=82227597]
+transform = Transform3D(-0.2588191, -7.45058e-09, -0.9659258, -0.6830127, 0.70710677, 0.18301278, 0.68301266, 0.7071068, -0.18301275, 25.551111, 3, 7.1117716)
+use_collision = true
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D9" type="CSGCylinder3D" parent="Track" unique_id=1103187369]
+transform = Transform3D(-0.2588191, -7.45058e-09, -0.9659258, 0.68301266, 0.7071068, -0.18301277, 0.68301266, -0.7071068, -0.18301274, 31.55111, 4, 2.1117716)
+use_collision = true
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D10" type="CSGCylinder3D" parent="Track" unique_id=8390064]
+transform = Transform3D(-0.2588191, -7.45058e-09, -0.9659258, 0.68301266, 0.7071068, -0.18301277, 0.68301266, -0.7071068, -0.18301274, 31.55111, 4, 4.1117716)
+use_collision = true
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D11" type="CSGCylinder3D" parent="Track" unique_id=29777089]
+transform = Transform3D(-0.5656502, 0.3535534, -0.7450099, 0.68301266, 0.7071068, -0.18301275, 0.46209675, -0.61237246, -0.6414566, 31.55111, 4, 6.1117716)
+use_collision = true
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D12" type="CSGCylinder3D" parent="Track" unique_id=673941178]
+transform = Transform3D(-0.11736229, 0.35355335, 0.9280227, 0.23104835, 0.9185586, -0.32072833, -0.9658378, 0.17677669, -0.18949226, 31.55111, 4.8, 7.1117716)
+use_collision = true
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D13" type="CSGCylinder3D" parent="Track" unique_id=28897879]
+transform = Transform3D(-0.25783423, 0.08715574, -0.9622502, -0.06171424, 0.9924039, 0.1064232, 0.9642162, 0.08682408, -0.25049692, 36.44889, 4.15, 4.8882284)
+use_collision = true
+height = 2.3000002
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D14" type="CSGCylinder3D" parent="Track" unique_id=1850657831]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.44889, 4.15, 3.8882284)
+use_collision = true
+height = 2.3000002
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D15" type="CSGCylinder3D" parent="Track" unique_id=988249574]
+transform = Transform3D(0.00050877035, 0.10665771, -0.9942956, -0.061714243, 0.9924039, 0.1064232, 0.9980937, 0.061308056, 0.007087216, 36.5783, 5.15, 7.8711915)
+use_collision = true
+height = 2.3000002
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D16" type="CSGCylinder3D" parent="Track" unique_id=826070460]
+transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, 36.31948, 5.15, 6.9052653)
+use_collision = true
+height = 2.3000002
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D17" type="CSGCylinder3D" parent="Track" unique_id=449195834]
+transform = Transform3D(0.49948746, 0.12302231, -0.8575416, -0.06171424, 0.99240386, 0.1064232, 0.8641201, -0.00023452938, 0.5032855, 33.202446, 5.15, 0.9417818)
+use_collision = true
+height = 2.3000002
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D18" type="CSGCylinder3D" parent="Track" unique_id=1950096243]
+transform = Transform3D(0.7071068, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, 0.7071068, 32.49534, 5.15, 0.234675)
+use_collision = true
+height = 2.3000002
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D19" type="CSGCylinder3D" parent="Track" unique_id=1262177667]
+transform = Transform3D(-0.9639528, -0.03161399, -0.26418835, -0.12659818, 0.9278173, 0.3508961, 0.2340253, 0.37169302, -0.8983742, 35.41588, 6.15, 2.3382287)
+use_collision = true
+height = 2.3000002
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D20" type="CSGCylinder3D" parent="Track" unique_id=19669664]
+transform = Transform3D(0.5, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.5, 34.281906, 5.15, 4.3382277)
+use_collision = true
+height = 2.3000002
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D21" type="CSGCylinder3D" parent="Track" unique_id=1740709138]
+transform = Transform3D(-0.21916123, -0.029703017, -0.9752365, -0.21449116, 0.97655165, 0.018458813, 0.9518204, 0.21322504, -0.22039326, 38.13048, 6.320609, 3.3472042)
+use_collision = true
+height = 2.3000002
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D23" type="CSGCylinder3D" parent="Track" unique_id=1117995818]
+transform = Transform3D(0.9067867, -0.24918234, -0.34006768, 0.32707074, 0.92476404, 0.19451615, 0.26601225, -0.28761083, 0.920064, 39.339756, 7.055132, 8.006736)
+use_collision = true
+height = 2.3000002
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D25" type="CSGCylinder3D" parent="Track" unique_id=162814671]
+transform = Transform3D(-0.08648276, 0.100908495, -0.9911297, -0.06171424, 0.99240386, 0.1064232, 0.99434006, 0.07037059, -0.07959832, 42.5783, 5.75, 4.8711915)
+use_collision = true
+height = 2.3000002
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D26" type="CSGCylinder3D" parent="Track" unique_id=1452898675]
+transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, 42.31948, 5.75, 3.9052653)
+use_collision = true
+height = 2.3000002
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D27" type="CSGCylinder3D" parent="Track" unique_id=1175010982]
+transform = Transform3D(0.00050877035, 0.10665771, -0.9942956, -0.061714243, 0.9924039, 0.1064232, 0.9980937, 0.061308056, 0.007087216, 43.9783, 6.35, 4.8711915)
+use_collision = true
+height = 2.3000002
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D28" type="CSGCylinder3D" parent="Track" unique_id=1136929553]
+transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, 43.71948, 6.35, 3.9052653)
+use_collision = true
+height = 2.3000002
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D29" type="CSGCylinder3D" parent="Track" unique_id=936249475]
+transform = Transform3D(-0.2650216, 0.34103906, -0.9019178, 0.007121004, 0.9360313, 0.35184562, 0.9642165, 0.08682409, -0.2504969, 44.847466, 6.827364, 4.9647717)
+use_collision = true
+height = 2.3000002
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D30" type="CSGCylinder3D" parent="Track" unique_id=398124912]
+transform = Transform3D(0.96225023, 0.25881904, 0.08418598, -0.25783417, 0.9659258, -0.022557566, -0.087155744, 0, 0.9961948, 44.76328, 6.849922, 3.9685771)
+use_collision = true
+height = 2.3000002
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D31" type="CSGCylinder3D" parent="Track" unique_id=1018036490]
+transform = Transform3D(-0.18290035, 0.348028, -0.9194693, -0.014883274, 0.93415815, 0.35654843, 0.98301864, 0.07889756, -0.16567805, 46.334503, 7.050079, 5.207879)
+use_collision = true
+height = 2.3000002
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D32" type="CSGCylinder3D" parent="Track" unique_id=168548013]
+transform = Transform3D(0.96225023, 0.25881904, 0.08418598, -0.25783417, 0.9659258, -0.022557566, -0.087155744, 0, 0.9961948, 46.250317, 7.072637, 4.2116838)
+use_collision = true
+height = 2.3000002
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D33" type="CSGCylinder3D" parent="Track" unique_id=680970924]
+transform = Transform3D(0.28611103, 0.08088899, -0.9547762, -0.21449119, 0.97655183, 0.018458797, 0.93388134, 0.1995098, 0.2967521, 41.91605, 8.02061, 1.1766566)
+use_collision = true
+height = 2.3000002
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D34" type="CSGCylinder3D" parent="Track" unique_id=257203368]
+transform = Transform3D(-0.51720333, -0.39182046, 0.76090574, 0.014676525, 0.8848603, 0.46562532, -0.8557368, 0.2519904, -0.4519022, 46.37245, 9.14487, 2.4402647)
+use_collision = true
+height = 2.3000002
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D35" type="CSGCylinder3D" parent="Track" unique_id=614911717]
+transform = Transform3D(0.28611103, 0.08088898, -0.9547762, 0.28118584, 0.9454735, 0.16436182, 0.9160105, -0.31549534, 0.24776547, 42.756382, 7.5031824, 5.928198)
+use_collision = true
+height = 2.3000002
+material = ExtResource("2_jcmj1")
+
+[node name="CSGCylinder3D36" type="CSGCylinder3D" parent="Track" unique_id=1202149643]
+transform = Transform3D(-0.51720333, -0.39182046, 0.76090574, -0.41515818, 0.8923066, 0.1772922, -0.74842805, -0.2242001, -0.62417144, 46.37245, 9.385461, 7.074554)
+use_collision = true
+height = 2.3000002
+material = ExtResource("2_jcmj1")
+
+[node name="CSGTorus3D" type="CSGTorus3D" parent="Track" unique_id=1907032810]
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1, 53.37245, 6.0854607, 4.574554)
+use_collision = true
+inner_radius = 0.9
+outer_radius = 6.0
+sides = 16
+ring_sides = 24
+material = ExtResource("2_jcmj1")
+
+[node name="Label3D5" type="Label3D" parent="." unique_id=526756758]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10, 1.5999999, 8)
+text = "10m"
+
+[node name="Label3D" type="Label3D" parent="." unique_id=1858846513]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 20, 2.5, 8)
+text = "20m"
+
+[node name="Label3D2" type="Label3D" parent="." unique_id=85390081]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 30, 4.5, 8)
+text = "30m"
+
+[node name="Label3D3" type="Label3D" parent="." unique_id=1121298790]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 40, 7, 8)
+text = "40m"
+
+[node name="Label3D4" type="Label3D" parent="." unique_id=1914670873]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 50, 10.5, 8)
+text = "50m"

@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://nk81ub7tjkl6" path="res://models/egg.gltf" id="1_wyjka"]
 [ext_resource type="Texture2D" uid="uid://dhx8v7clwjyi4" path="res://textures/eggshell.png" id="2_ktpvp"]
+[ext_resource type="Script" uid="uid://djv2p6keggvik" path="res://scripts/oob-return-to-spawn.gd" id="2_wrd3x"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cwd1n"]
 albedo_color = Color(0.7294118, 0.53333336, 0.38431373, 1)
@@ -20,6 +21,9 @@ collision_mask = 7
 mass = 3.8
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -0.25, 0)
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("2_wrd3x")
 
 [node name="Icosphere" parent="." index="0" unique_id=1002519157]
 gi_mode = 0
@@ -27,3 +31,5 @@ surface_material_override/0 = SubResource("StandardMaterial3D_cwd1n")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=1142632039]
 shape = SubResource("ConvexPolygonShape3D_ktpvp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
