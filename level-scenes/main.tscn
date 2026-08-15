@@ -60,6 +60,7 @@
 [ext_resource type="Script" uid="uid://78d2xtti3yje" path="res://level-scenes/tween-off-on-screen.gd" id="58_oa8v2"]
 [ext_resource type="PackedScene" uid="uid://b6vhbs03grq4q" path="res://entities-scene_prefabs/barrier.tscn" id="59_27nw5"]
 [ext_resource type="PackedScene" uid="uid://csx07hxskuxjn" path="res://entities-scene_prefabs/barrier_single.tscn" id="60_b2w3e"]
+[ext_resource type="PackedScene" uid="uid://coah6xph85mbj" path="res://models/egg.tscn" id="61_xub5d"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_xteo1"]
 
@@ -287,36 +288,36 @@ albedo_texture = ExtResource("7_hgslh")
 
 [sub_resource type="SphereMesh" id="SphereMesh_7tbbo"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_b2w3e"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_xub5d"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xub5d"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x4vg3"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_b2w3e")
+albedo_texture = SubResource("ViewportTexture_xub5d")
 roughness = 0.8
 texture_filter = 5
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_x4vg3"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_iit47"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iit47"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rr0nd"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_x4vg3")
+albedo_texture = SubResource("ViewportTexture_iit47")
 roughness = 0.8
 texture_filter = 5
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_rr0nd"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_c6q64"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c6q64"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v80x0"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_rr0nd")
+albedo_texture = SubResource("ViewportTexture_c6q64")
 roughness = 0.8
 texture_filter = 5
 
@@ -1477,42 +1478,42 @@ size_2d_override = Vector2i(512, 512)
 
 [node name="guidebook" parent="Guidebook Stand/Guidebook3d" unique_id=1630787135 instance=ExtResource("31_oa8v2")]
 
-[node name="Book" parent="Guidebook Stand/Guidebook3d/guidebook" index="0" unique_id=405780648]
+[node name="Book" parent="Guidebook Stand/Guidebook3d/guidebook" index="0" unique_id=277928507]
 layers = 6
 cast_shadow = 0
 
-[node name="Pages" parent="Guidebook Stand/Guidebook3d/guidebook" index="1" unique_id=2104188923]
+[node name="Pages" parent="Guidebook Stand/Guidebook3d/guidebook" index="1" unique_id=1787011692]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_xub5d")
+surface_material_override/0 = SubResource("StandardMaterial3D_x4vg3")
 
 [node name="Guidebook3d2" type="Node3D" parent="Guidebook Stand" unique_id=1034692829]
 transform = Transform3D(0.99572617, -6.976736e-08, 0.092355326, 0.07370379, 0.60259724, -0.79463464, -0.05565301, 0.7980456, 0.60002184, 0.33789635, 0.5955966, 0.11873436)
 
 [node name="guidebook" parent="Guidebook Stand/Guidebook3d2" unique_id=914161945 instance=ExtResource("31_oa8v2")]
 
-[node name="Book" parent="Guidebook Stand/Guidebook3d2/guidebook" index="0" unique_id=405780648]
+[node name="Book" parent="Guidebook Stand/Guidebook3d2/guidebook" index="0" unique_id=277928507]
 layers = 6
 cast_shadow = 0
 
-[node name="Pages" parent="Guidebook Stand/Guidebook3d2/guidebook" index="1" unique_id=2104188923]
+[node name="Pages" parent="Guidebook Stand/Guidebook3d2/guidebook" index="1" unique_id=1787011692]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_iit47")
+surface_material_override/0 = SubResource("StandardMaterial3D_rr0nd")
 
 [node name="Guidebook3d3" type="Node3D" parent="Guidebook Stand" unique_id=1679212863]
 transform = Transform3D(-0.9742656, -0.12668496, -0.18643428, 0.14209789, -0.98725104, -0.07172081, -0.1749714, -0.0963671, 0.979846, -0.58836937, 0.5955966, 0.11873436)
 
 [node name="guidebook" parent="Guidebook Stand/Guidebook3d3" unique_id=962682289 instance=ExtResource("31_oa8v2")]
 
-[node name="Book" parent="Guidebook Stand/Guidebook3d3/guidebook" index="0" unique_id=405780648]
+[node name="Book" parent="Guidebook Stand/Guidebook3d3/guidebook" index="0" unique_id=277928507]
 layers = 6
 cast_shadow = 0
 
-[node name="Pages" parent="Guidebook Stand/Guidebook3d3/guidebook" index="1" unique_id=2104188923]
+[node name="Pages" parent="Guidebook Stand/Guidebook3d3/guidebook" index="1" unique_id=1787011692]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_c6q64")
+surface_material_override/0 = SubResource("StandardMaterial3D_v80x0")
 
 [node name="Label3D" type="Label3D" parent="Guidebook Stand" unique_id=1183973093]
 transform = Transform3D(0.24000001, 0, 0, 0, 0.24000001, 0, 0, 0, 0.24000001, -0.07500076, 0.61191887, -0.31499863)
@@ -1816,6 +1817,9 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 29, 
 
 [node name="barrier-single" parent="." unique_id=776348516 instance=ExtResource("60_b2w3e")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 31, -1, 10)
+
+[node name="egg" parent="." unique_id=641449275 instance=ExtResource("61_xub5d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.593784, 0.3277843, 37.548336)
 
 [editable path="CSG Blockout/Cyndrive Ships/CyndriveShipsProps/cyndrive_ships_carrier"]
 [editable path="Guidebook Stand/Guidebook3d/guidebook"]

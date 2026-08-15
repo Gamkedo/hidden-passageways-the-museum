@@ -27,6 +27,8 @@ const INPUT_SETTINGS = preload("uid://b0g4cokh6wa10")
 @export var flight_enabled: bool = true:
 	set = set_flight_enabled
 
+@export var push_force: float = 3.0
+
 enum STATE {GROUNDED, AIRBORNE, FLYING}
 
 var current_available_air_jumps: int = 0
@@ -111,9 +113,13 @@ func _handle_movement(movement_vector: Vector2, delta: float) -> void:
 	
 	if slide_collided:
 		## Return player to origin when out of bounds
-		var collider := target_node.get_last_slide_collision().get_collider()
+		var collision: KinematicCollision3D = target_node.get_last_slide_collision()
+		var collider = collision.get_collider()
 		if collider.get_meta(RESET_POSITION_META, false) == true:
 			reset_position(_onready_global_origin)
+		elif collider is RigidBody3D:
+			## Pushing objects
+			collider.apply_central_impulse(-collision.get_normal() * push_force)
 	
 	_last_movement_vector = movement_vector
 
