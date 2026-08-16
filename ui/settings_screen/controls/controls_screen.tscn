@@ -1,0 +1,316 @@
+[gd_scene format=3 uid="uid://c706g67wmabya"]
+
+[ext_resource type="Script" uid="uid://dcx7lcx1syj5v" path="res://ui/settings_screen/controls/controls_screen.gd" id="1_hrbp8"]
+
+[node name="ControlsScreen" type="PanelContainer" unique_id=121165579]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hrbp8")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1776715834]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 4
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer" unique_id=1717987997]
+layout_mode = 2
+horizontal_scroll_mode = 0
+scroll_hint_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer" unique_id=257615435]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="KeyboardBindings" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=186984603]
+layout_mode = 2
+text = "Keyboard Bindings"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=557479020]
+layout_mode = 2
+
+[node name="KeyboardInputs" type="GridContainer" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=341921080]
+layout_mode = 2
+theme_override_constants/h_separation = 22
+theme_override_constants/v_separation = 10
+columns = 2
+
+[node name="KMoveLeft" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=626694541]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Move Left"
+
+[node name="KMoveLeftInputChange" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=1986408756]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="KMoveRight" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=1813405819]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Move Right"
+
+[node name="KMoveRightInputChange" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=745084819]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="KMoveForward" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=1980094097]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Move Forward"
+
+[node name="KMoveForwardInputChange" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=1876240654]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="KMoveBackward" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=1309773715]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Move Backward"
+
+[node name="KMoveBackwardInputChange" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=589222551]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="KJump" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=1501091930]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Jump"
+
+[node name="KJumpInputChange" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=1783749667]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="KInteract" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=2089267735]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Interact"
+
+[node name="KInteractInputChange" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=390319298]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="KSprint" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=1661129604]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Sprint"
+
+[node name="KSprintInputChange" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=1142659338]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="KToggleFlight" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=1079639693]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Toggle Flight"
+
+[node name="KToggleFlightInputChange" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=809611843]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="KPause" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=1259157340]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Pause"
+
+[node name="KPauseInputChange" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=836181401]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="KMap" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=1802918807]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Map"
+
+[node name="KMapInputChange" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=1724664446]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CaptureMouse" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=1921177462]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Capture Mouse"
+
+[node name="CaptureMouseInputChange" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=1016301790]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ReleaseMouse" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=481689728]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Release Mouse"
+
+[node name="ReleaseMouseInputChange" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=403523566]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1613635761]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="ControllerBindings" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1716252278]
+layout_mode = 2
+text = "Controller Bindings"
+
+[node name="HSeparator3" type="HSeparator" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1014729074]
+layout_mode = 2
+
+[node name="ControllerInputs" type="GridContainer" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1390981890]
+layout_mode = 2
+theme_override_constants/h_separation = 22
+theme_override_constants/v_separation = 10
+columns = 2
+
+[node name="CMoveLeft" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=21865918]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Move Left"
+
+[node name="CMoveLeftInputChange" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=18816859]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CMoveRight" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=830070923]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Move Right"
+
+[node name="CMoveRightInputChange" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=193611598]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CMoveForward" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=778021865]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Move Forward"
+
+[node name="CMoveForwardInputChange" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=1189050779]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CMoveBackward" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=513796616]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Move Backward"
+
+[node name="CMoveBackwardInputChange" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=320881244]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CJump" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=335998915]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Jump"
+
+[node name="CJumpInputChange" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=1082830796]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CInteract" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=1476567370]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Interact"
+
+[node name="CInteractInputChange" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=1226862412]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CSprint" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=86891881]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Sprint"
+
+[node name="CSprintInputChange" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=72366416]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CToggleFlight" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=1380253283]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Toggle Flight"
+
+[node name="CToggleFlightInputChange" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=1256241769]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CPause" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=1618448101]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Pause"
+
+[node name="CPauseInputChange" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=1410305381]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CMap" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=317157422]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Map"
+
+[node name="CMapInputChange" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=1024729253]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="InputRecordOverlay" type="PanelContainer" parent="." unique_id=968911738]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="InputRecordOverlay" unique_id=1152401524]
+custom_minimum_size = Vector2(500, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="InputRecordOverlay/PanelContainer" unique_id=1061758214]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InputRecordOverlay/PanelContainer/MarginContainer" unique_id=1948912810]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="InputRecordHeading" type="Label" parent="InputRecordOverlay/PanelContainer/MarginContainer/VBoxContainer" unique_id=1839777785]
+layout_mode = 2
+text = "Recording Input..."
+horizontal_alignment = 1
+
+[node name="InputDisplayHint" type="Label" parent="InputRecordOverlay/PanelContainer/MarginContainer/VBoxContainer" unique_id=980497576]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ConfirmNewInputButton" type="Button" parent="InputRecordOverlay/PanelContainer/MarginContainer/VBoxContainer" unique_id=488702021]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Confirm"
