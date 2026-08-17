@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://b7l0g2p16ot2u"]
 
 [ext_resource type="Material" uid="uid://dbt3uwkctb147" path="res://materials/clouds_material.tres" id="1_fk0hv"]
+[ext_resource type="Script" uid="uid://dbbtyru7fqkd2" path="res://entities-scene_prefabs/clouds_mesh.gd" id="2_4wfa7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nmuyh"]
 resource_name = "02 - Default"
@@ -48,3 +49,4 @@ transform = Transform3D(20000, 0, 0, 0, 20000, -0.0008742278, 0, 0.0008742278, 2
 gi_mode = 0
 mesh = SubResource("ArrayMesh_86eds")
 surface_material_override/0 = ExtResource("1_fk0hv")
+script = ExtResource("2_4wfa7")
