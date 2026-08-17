@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c7n4suthdoabn"]
+
+[ext_resource type="Script" uid="uid://dex3fje4oafjt" path="res://scripts/globals/settings_manager.gd" id="1_8n017"]
+
+[node name="SettingsManager" type="Node" unique_id=1451448793]
+script = ExtResource("1_8n017")
+metadata/_custom_type_script = "uid://dex3fje4oafjt"
+
+[node name="SaveDebounceTimer" type="Timer" parent="." unique_id=2077954506]
+unique_name_in_owner = true
+one_shot = true

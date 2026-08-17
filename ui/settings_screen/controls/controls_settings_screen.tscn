@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://c706g67wmabya"]
 
-[ext_resource type="Script" uid="uid://dcx7lcx1syj5v" path="res://ui/settings_screen/controls/controls_screen.gd" id="1_hrbp8"]
+[ext_resource type="Script" uid="uid://dcx7lcx1syj5v" path="res://ui/settings_screen/controls/controls_settings_screen.gd" id="1_hrbp8"]
 
-[node name="ControlsScreen" type="PanelContainer" unique_id=121165579]
+[node name="ControlsSettingsScreen" type="PanelContainer" unique_id=121165579]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -307,6 +307,7 @@ horizontal_alignment = 1
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+horizontal_alignment = 1
 
 [node name="ConfirmNewInputButton" type="Button" parent="InputRecordOverlay/PanelContainer/MarginContainer/VBoxContainer" unique_id=488702021]
 unique_name_in_owner = true

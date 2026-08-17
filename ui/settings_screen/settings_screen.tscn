@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://csjv7icgfyohw" path="res://ui/settings_screen/settings_screen.gd" id="1_1rens"]
 [ext_resource type="PackedScene" uid="uid://biqqthvuxm28m" path="res://ui/settings_screen/input_settings/input_settings_screen.tscn" id="2_t0aaf"]
-[ext_resource type="PackedScene" uid="uid://c706g67wmabya" path="res://ui/settings_screen/controls/controls_screen.tscn" id="3_ktpoh"]
+[ext_resource type="PackedScene" uid="uid://c706g67wmabya" path="res://ui/settings_screen/controls/controls_settings_screen.tscn" id="3_ktpoh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3e5oy"]
 font_size = 24

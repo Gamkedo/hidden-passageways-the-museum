@@ -10,17 +10,19 @@ const INPUT_SETTINGS_SECTION := "InputSettings"
 const INPUT_SETTINGS: InputSettings = preload("uid://b0g4cokh6wa10")
 
 
-## Load settings from a saved file and apply them to the running project
+## Load settings from the saved file and apply them to the running project
 func load_and_apply_settings() -> void:
-	load_settings()
+	var load_status := load_settings()
 	
-	# Apply custom user settings from saved data
-	var input_settings := build_input_settings()
-	apply_input_settings(input_settings)
-	
-	# Apply controls to InputMap from saved data
-	var control_settings := build_controls()
-	apply_control_settings(control_settings)
+	# Use loaded data if possible, but if the file isn't found that's fine
+	if load_status == Error.OK:
+		# Apply custom user settings from saved data
+		var input_settings := build_input_settings()
+		apply_input_settings(input_settings)
+		
+		# Apply controls to InputMap from saved data
+		var control_settings := build_controls()
+		apply_control_settings(control_settings)
 
 ## Save the settings currently active in the project to the save file
 func save_current_settings() -> void:
@@ -79,17 +81,19 @@ func hydrate_input_settings() -> void:
 
 #region Save & Load
 ## Hydrate this ConfigFile with data from the save file
-func load_settings() -> void:
+func load_settings() -> Error:
 	var file_path := get_settings_file_path()
 	# "self" is required here otherwise the Global "load" takes precedence
 	var load_status := self.load(file_path)
 	print("[UserSettings] Load status: ", load_status)
+	return load_status
 
 ## Save a ".ini"-style file to the file system with settings data from this ConfigFile
-func save_settings() -> void:
+func save_settings() -> Error:
 	var file_path := get_settings_file_path()
 	var save_status := save(file_path)
 	print("[UserSettings] Save status: ", save_status)
+	return save_status
 
 func get_settings_file_path() -> String:
 	return SAVE_FILE_PATH_ROOT + USER_SETTINGS_PATH
