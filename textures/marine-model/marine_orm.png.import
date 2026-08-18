@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmfroi6yiyd2o"
-path="res://.godot/imported/marine_albedo.png-e19c7c636c2171862607e0fc08eed57f.ctex"
+uid="uid://cb2re7tl78yt1"
+path="res://.godot/imported/marine_orm.png-51717097a7658f57cf7c969d20ce6510.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://materials/marine-model/marine_albedo.png"
-dest_files=["res://.godot/imported/marine_albedo.png-e19c7c636c2171862607e0fc08eed57f.ctex"]
+source_file="res://textures/marine-model/marine_orm.png"
+dest_files=["res://.godot/imported/marine_orm.png-51717097a7658f57cf7c969d20ce6510.ctex"]
 
 [params]
 
