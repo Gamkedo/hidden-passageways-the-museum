@@ -9,7 +9,7 @@ func _handle_movement(_movement_vector: Vector2, _delta: float) -> void: pass
 
 # Input event handlers
 func _handle_mouse_movement(_mouse_motion_event: InputEventMouseMotion) -> void: pass
-func _handle_sprint(_is_pressed: bool) -> void: pass
+func _handle_sprint(_is_pressed: bool, _is_released: bool) -> void: pass
 func _handle_jump(_is_pressed: bool) -> void: pass
 func _handle_interact(_is_pressed: bool) -> void: pass
 func _handle_toggle_flight(_is_pressed: bool) -> void: pass
@@ -68,7 +68,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		_handle_jump(jump_is_pressed)
 	if event.is_action("sprint"):
 		var sprint_is_pressed := Input.is_action_just_pressed_by_event("sprint", event)
-		_handle_sprint(sprint_is_pressed)
+		var sprint_is_released := Input.is_action_just_released_by_event("sprint", event)
+		_handle_sprint(sprint_is_pressed, sprint_is_released)
 	if event.is_action("interact"):
 		var interact_is_pressed := Input.is_action_just_pressed_by_event("interact", event)
 		_handle_interact(interact_is_pressed)

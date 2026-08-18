@@ -1,5 +1,9 @@
-class_name ControlSettingsScreen
+class_name InputBindsScreen
 extends PanelContainer
+
+signal reset_binds
+
+const INPUT_BINDS: InputBinds = preload("uid://dnfis17edcjtb")
 
 #region Mouse & Keyboard
 @onready var k_move_left_input_change: Button = %KMoveLeftInputChange
@@ -29,6 +33,8 @@ extends PanelContainer
 @onready var c_map_input_change: Button = %CMapInputChange
 #endregion Controller
 
+@onready var reset_binds_button: Button = %ResetBinds
+
 #region Input Change Prompt
 @onready var input_record_overlay: PanelContainer = %InputRecordOverlay
 @onready var input_display_hint: Label = %InputDisplayHint
@@ -36,42 +42,43 @@ extends PanelContainer
 #endregion Input Change Prompt
 
 enum INPUT_METHOD { NONE, MOUSE_AND_KEYBOARD, CONTROLLER }
-@onready var MOUSE_AND_KEYBOARD_ACTION_MAP: Dictionary[Button, ControlSettings.ACTIONS] = {
+@onready var MOUSE_AND_KEYBOARD_ACTION_MAP: Dictionary[Button, InputBinds.ACTIONS] = {
 	# M&K
-	k_move_left_input_change: ControlSettings.ACTIONS.LEFT,
-	k_move_right_input_change: ControlSettings.ACTIONS.RIGHT,
-	k_move_forward_input_change: ControlSettings.ACTIONS.UP,
-	k_move_backward_input_change: ControlSettings.ACTIONS.DOWN,
-	k_jump_input_change: ControlSettings.ACTIONS.JUMP,
-	k_interact_input_change: ControlSettings.ACTIONS.INTERACT,
-	k_sprint_input_change: ControlSettings.ACTIONS.SPRINT,
-	k_toggle_flight_input_change: ControlSettings.ACTIONS.TOGGLE_FLIGHT,
-	k_pause_input_change: ControlSettings.ACTIONS.PAUSE,
-	k_map_input_change: ControlSettings.ACTIONS.MAP,
-	capture_mouse_input_change: ControlSettings.ACTIONS.CAPTURE_MOUSE,
-	release_mouse_input_change: ControlSettings.ACTIONS.RELEASE_MOUSE,
+	k_move_left_input_change: InputBinds.ACTIONS.LEFT,
+	k_move_right_input_change: InputBinds.ACTIONS.RIGHT,
+	k_move_forward_input_change: InputBinds.ACTIONS.UP,
+	k_move_backward_input_change: InputBinds.ACTIONS.DOWN,
+	k_jump_input_change: InputBinds.ACTIONS.JUMP,
+	k_interact_input_change: InputBinds.ACTIONS.INTERACT,
+	k_sprint_input_change: InputBinds.ACTIONS.SPRINT,
+	k_toggle_flight_input_change: InputBinds.ACTIONS.TOGGLE_FLIGHT,
+	k_pause_input_change: InputBinds.ACTIONS.PAUSE,
+	k_map_input_change: InputBinds.ACTIONS.MAP,
+	capture_mouse_input_change: InputBinds.ACTIONS.CAPTURE_MOUSE,
+	release_mouse_input_change: InputBinds.ACTIONS.RELEASE_MOUSE,
 }
 @onready var CONTROLLER_ACTION_MAP := {
 	# Controller
-	c_move_left_input_change: ControlSettings.ACTIONS.LEFT,
-	c_move_right_input_change: ControlSettings.ACTIONS.RIGHT,
-	c_move_forward_input_change: ControlSettings.ACTIONS.UP,
-	c_move_backward_input_change: ControlSettings.ACTIONS.DOWN,
-	c_jump_input_change: ControlSettings.ACTIONS.JUMP,
-	c_interact_input_change: ControlSettings.ACTIONS.INTERACT,
-	c_sprint_input_change: ControlSettings.ACTIONS.SPRINT,
-	c_toggle_flight_input_change: ControlSettings.ACTIONS.TOGGLE_FLIGHT,
-	c_pause_input_change: ControlSettings.ACTIONS.PAUSE,
-	c_map_input_change: ControlSettings.ACTIONS.MAP,
+	c_move_left_input_change: InputBinds.ACTIONS.LEFT,
+	c_move_right_input_change: InputBinds.ACTIONS.RIGHT,
+	c_move_forward_input_change: InputBinds.ACTIONS.UP,
+	c_move_backward_input_change: InputBinds.ACTIONS.DOWN,
+	c_jump_input_change: InputBinds.ACTIONS.JUMP,
+	c_interact_input_change: InputBinds.ACTIONS.INTERACT,
+	c_sprint_input_change: InputBinds.ACTIONS.SPRINT,
+	c_toggle_flight_input_change: InputBinds.ACTIONS.TOGGLE_FLIGHT,
+	c_pause_input_change: InputBinds.ACTIONS.PAUSE,
+	c_map_input_change: InputBinds.ACTIONS.MAP,
 }
 
 var target_input_change_button: Button
 var target_input_method: INPUT_METHOD
 var recorded_change_input: InputEvent
 
+
 func save_input_to_settings(action_name: StringName, input_event: InputEvent) -> void:
 	if input_event != null:
-		ControlSettings.remap_event_in_input_map(action_name, input_event)
+		INPUT_BINDS.remap_event_in_input_map(action_name, input_event)
 
 #region Input Change Prompt
 func process_input_change_event(event: InputEvent) -> void:
@@ -129,7 +136,7 @@ func _get_action_name_from_button(target_button: Button, method: INPUT_METHOD) -
 		target_action_key = MOUSE_AND_KEYBOARD_ACTION_MAP[target_button]
 	elif method == INPUT_METHOD.CONTROLLER:
 		target_action_key = CONTROLLER_ACTION_MAP[target_button]
-	var target_action_name := ControlSettings.ACTION_STRINGS[target_action_key]
+	var target_action_name := InputBinds.ACTION_STRINGS[target_action_key]
 	return target_action_name
 
 func _get_action_from_button(target_button: Button, method: INPUT_METHOD) -> InputEvent:
@@ -142,7 +149,8 @@ func _get_action_from_button(target_button: Button, method: INPUT_METHOD) -> Inp
 			return true
 		# Not matching
 		return false
-	)# If there's ever more than one something isn't right...
+	)
+	# If there's ever more (or less) than one something isn't right...
 	var first_event: InputEvent = matching_events[0]
 	return first_event
 
@@ -159,10 +167,19 @@ func _load_input_change_button_displays() -> void:
 		var action_text := _get_action_text_from_button(controller_button, INPUT_METHOD.CONTROLLER)
 		controller_button.text = action_text
 
+func _on_input_map_updated() -> void:
+	_load_input_change_button_displays()
+
+func _on_reset_binds_pressed() -> void:
+	SettingsManager.reset_binds_to_default()
+	reset_binds.emit()
+
 func _ready() -> void:
 	connect_input_change_button_signals()
 	confirm_new_input_button.pressed.connect(_on_confirm_new_input_button_pressed)
+	reset_binds_button.pressed.connect(_on_reset_binds_pressed)
 	_load_input_change_button_displays()
+	INPUT_BINDS.input_map_updated.connect(_on_input_map_updated)
 	hide_input_change_prompt()
 
 func _unhandled_input(event: InputEvent) -> void:

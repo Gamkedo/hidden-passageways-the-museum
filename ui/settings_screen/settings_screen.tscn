@@ -4,8 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://biqqthvuxm28m" path="res://ui/settings_screen/input_settings/input_settings_screen.tscn" id="2_t0aaf"]
 [ext_resource type="PackedScene" uid="uid://c706g67wmabya" path="res://ui/settings_screen/controls/controls_settings_screen.tscn" id="3_ktpoh"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g5gtg"]
+
 [sub_resource type="LabelSettings" id="LabelSettings_3e5oy"]
 font_size = 24
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ccpi0"]
 
 [node name="SettingsScreen" type="PanelContainer" unique_id=1421676451]
 anchors_preset = 15
@@ -13,6 +17,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_g5gtg")
 script = ExtResource("1_1rens")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1040329941]
@@ -35,16 +40,19 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/tab_separation = 10
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ccpi0")
 current_tab = 0
 tab_0/title = "Settings"
 tab_1/title = "Controls"
 
 [node name="InputSettingsScreen" parent="MarginContainer/VBoxContainer/TabContainer" unique_id=466531856 instance=ExtResource("2_t0aaf")]
+unique_name_in_owner = true
 layout_mode = 2
 metadata/_tab_index = 0
 metadata/_tab_name = "Settings"
 
 [node name="ControlsScreen" parent="MarginContainer/VBoxContainer/TabContainer" unique_id=121165579 instance=ExtResource("3_ktpoh")]
+unique_name_in_owner = true
 visible = false
 layout_mode = 2
 metadata/_tab_index = 1

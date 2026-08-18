@@ -11,38 +11,45 @@ var INPUT_SETTINGS: InputSettings = preload("uid://b0g4cokh6wa10")
 @onready var c_horizontal_slider: HSlider = %CHorizontalSlider
 @onready var c_vertical_slider: HSlider = %CVerticalSlider
 @onready var c_invert_y_look_check_box: CheckBox = %CInvertYLookCheckBox
+@onready var toggle_sprint_checkbox: CheckBox = %ToggleSprintCheckbox
 
 
 func load_settings_to_ui() -> void:
+	print("[InputSettingsScreen] Loading settings to ui")
 	m_horizontal_slider.value = INPUT_SETTINGS.mouse_horizontal_sensitivity
 	m_vertical_slider.value = INPUT_SETTINGS.mouse_vertical_sensitivity
-	m_invert_y_look_checkbox.value = INPUT_SETTINGS.mouse_invert_y_look
+	m_invert_y_look_checkbox.button_pressed = INPUT_SETTINGS.mouse_invert_y_look
 	c_horizontal_slider.value = INPUT_SETTINGS.controller_horizontal_sensitivity
 	c_vertical_slider.value = INPUT_SETTINGS.controller_vertical_sensitivity
-	c_invert_y_look_check_box.value = INPUT_SETTINGS.controller_invert_y_look
+	c_invert_y_look_check_box.button_pressed = INPUT_SETTINGS.controller_invert_y_look
+	toggle_sprint_checkbox.button_pressed = INPUT_SETTINGS.toggle_sprint
 
-func sync_m_horizontal_sens_to_settings() -> void:
-	INPUT_SETTINGS.mouse_horizontal_sensitivity = m_horizontal_slider.value
+func sync_m_horizontal_sens_to_settings(value: float) -> void:
+	INPUT_SETTINGS.mouse_horizontal_sensitivity = value
 	input_settings_ui_changed.emit()
 
-func sync_m_vertical_sens_to_settings() -> void:
-	INPUT_SETTINGS.mouse_vertical_sensitivity = m_vertical_slider.value
+func sync_m_vertical_sens_to_settings(value: float) -> void:
+	INPUT_SETTINGS.mouse_vertical_sensitivity = value
 	input_settings_ui_changed.emit()
 
-func sync_m_invert_y_to_settings() -> void:
-	INPUT_SETTINGS.mouse_invert_y_look = m_invert_y_look_checkbox.value
+func sync_m_invert_y_to_settings(toggled: bool) -> void:
+	INPUT_SETTINGS.mouse_invert_y_look = toggled
 	input_settings_ui_changed.emit()
 
-func sync_c_horizontal_sens_to_settings() -> void:
-	INPUT_SETTINGS.controller_horizontal_sensitivity = c_horizontal_slider.value
+func sync_c_horizontal_sens_to_settings(value: float) -> void:
+	INPUT_SETTINGS.controller_horizontal_sensitivity = value
 	input_settings_ui_changed.emit()
 
-func sync_c_vertical_sens_to_settings() -> void:
-	INPUT_SETTINGS.controller_vertical_sensitivity = c_vertical_slider.value
+func sync_c_vertical_sens_to_settings(value: float) -> void:
+	INPUT_SETTINGS.controller_vertical_sensitivity = value
 	input_settings_ui_changed.emit()
 
-func sync_c_invert_y_to_settings() -> void:
-	INPUT_SETTINGS.controller_invert_y_look = c_invert_y_look_check_box.value
+func sync_c_invert_y_to_settings(toggled: bool) -> void:
+	INPUT_SETTINGS.controller_invert_y_look = toggled
+	input_settings_ui_changed.emit()
+
+func sync_toggle_sprint_to_settings(toggled: bool) -> void:
+	INPUT_SETTINGS.toggle_sprint = toggled
 	input_settings_ui_changed.emit()
 
 
@@ -53,7 +60,14 @@ func _connect_signals() -> void:
 	c_horizontal_slider.value_changed.connect(sync_c_horizontal_sens_to_settings)
 	c_vertical_slider.value_changed.connect(sync_c_vertical_sens_to_settings)
 	c_invert_y_look_check_box.toggled.connect(sync_c_invert_y_to_settings)
+	toggle_sprint_checkbox.toggled.connect(sync_toggle_sprint_to_settings)
 
+func _on_input_settings_updated() -> void:
+	load_settings_to_ui()
 
 func _ready() -> void:
+	load_settings_to_ui()
+	
+	# Intentionally connecting signal after loading setting state
+	INPUT_SETTINGS.input_settings_updated.connect(_on_input_settings_updated)
 	_connect_signals()

@@ -3,6 +3,7 @@
 [ext_resource type="Theme" uid="uid://bcyk3d4r2kn1t" path="res://ui/pause_screen/themes/pause_screen_theme.tres" id="1_bupvi"]
 [ext_resource type="Script" uid="uid://deedrbfmemtvn" path="res://ui/pause_screen/pause_screen.gd" id="1_yfpbd"]
 [ext_resource type="LabelSettings" uid="uid://bm2t12rww8q6s" path="res://ui/pause_screen/themes/pause_screen_heading_label_settings.tres" id="3_hsda3"]
+[ext_resource type="PackedScene" uid="uid://idntkuufrb64" path="res://ui/settings_screen/settings_screen.tscn" id="5_g5gtg"]
 [ext_resource type="Script" uid="uid://b6e3846js4fip" path="res://ui/pause_screen/pause_screen_button.gd" id="6_t2ogi"]
 
 [sub_resource type="Animation" id="Animation_g5gtg"]
@@ -36,33 +37,49 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1399702365]
-layout_mode = 1
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_right = 400.0
-grow_vertical = 2
+[node name="VBoxContainer" type="VBoxContainer" parent="BackgroundContainer" unique_id=1036452840]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="BackgroundContainer/VBoxContainer" unique_id=286342349]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "↩ Back"
+
+[node name="ScreenTabContainer" type="TabContainer" parent="BackgroundContainer/VBoxContainer" unique_id=1427360705]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+current_tab = 0
+tabs_visible = false
+tab_focus_mode = 0
+
+[node name="MainPauseScreen" type="MarginContainer" parent="BackgroundContainer/VBoxContainer/ScreenTabContainer" unique_id=1399702365]
+unique_name_in_owner = true
+layout_mode = 2
 theme_override_constants/margin_left = 60
 theme_override_constants/margin_top = 80
 theme_override_constants/margin_bottom = 60
+metadata/_tab_index = 0
 
-[node name="ControlsContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1853074642]
+[node name="ControlsContainer" type="VBoxContainer" parent="BackgroundContainer/VBoxContainer/ScreenTabContainer/MainPauseScreen" unique_id=1853074642]
 custom_minimum_size = Vector2(466, 0)
 layout_mode = 2
+size_flags_horizontal = 0
 theme_override_constants/separation = 25
 
-[node name="HeadingLabel" type="Label" parent="MarginContainer/ControlsContainer" unique_id=688761603]
+[node name="HeadingLabel" type="Label" parent="BackgroundContainer/VBoxContainer/ScreenTabContainer/MainPauseScreen/ControlsContainer" unique_id=688761603]
 layout_mode = 2
 text = "Hidden Passageways: Musuem"
 label_settings = ExtResource("3_hsda3")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ButtonContainer" type="VBoxContainer" parent="MarginContainer/ControlsContainer" unique_id=895817576]
+[node name="ButtonContainer" type="VBoxContainer" parent="BackgroundContainer/VBoxContainer/ScreenTabContainer/MainPauseScreen/ControlsContainer" unique_id=895817576]
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="ResumeButton" type="Button" parent="MarginContainer/ControlsContainer/ButtonContainer" unique_id=520798456]
+[node name="ResumeButton" type="Button" parent="BackgroundContainer/VBoxContainer/ScreenTabContainer/MainPauseScreen/ControlsContainer/ButtonContainer" unique_id=520798456]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
@@ -72,7 +89,7 @@ alignment = 0
 script = ExtResource("6_t2ogi")
 metadata/_custom_type_script = "uid://b6e3846js4fip"
 
-[node name="SettingsButton" type="Button" parent="MarginContainer/ControlsContainer/ButtonContainer" unique_id=1767759695]
+[node name="SettingsButton" type="Button" parent="BackgroundContainer/VBoxContainer/ScreenTabContainer/MainPauseScreen/ControlsContainer/ButtonContainer" unique_id=1767759695]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
@@ -82,7 +99,7 @@ alignment = 0
 script = ExtResource("6_t2ogi")
 metadata/_custom_type_script = "uid://b6e3846js4fip"
 
-[node name="MainMenuButton" type="Button" parent="MarginContainer/ControlsContainer/ButtonContainer" unique_id=139093755]
+[node name="MainMenuButton" type="Button" parent="BackgroundContainer/VBoxContainer/ScreenTabContainer/MainPauseScreen/ControlsContainer/ButtonContainer" unique_id=139093755]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
@@ -92,7 +109,7 @@ alignment = 0
 script = ExtResource("6_t2ogi")
 metadata/_custom_type_script = "uid://b6e3846js4fip"
 
-[node name="QuitButton" type="Button" parent="MarginContainer/ControlsContainer/ButtonContainer" unique_id=995385002]
+[node name="QuitButton" type="Button" parent="BackgroundContainer/VBoxContainer/ScreenTabContainer/MainPauseScreen/ControlsContainer/ButtonContainer" unique_id=995385002]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
@@ -102,5 +119,11 @@ alignment = 0
 script = ExtResource("6_t2ogi")
 metadata/_custom_type_script = "uid://b6e3846js4fip"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="MarginContainer/ControlsContainer/ButtonContainer" unique_id=1896801874]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BackgroundContainer/VBoxContainer/ScreenTabContainer/MainPauseScreen/ControlsContainer/ButtonContainer" unique_id=1896801874]
 libraries/ = SubResource("AnimationLibrary_t2ogi")
+
+[node name="SettingsScreen" parent="BackgroundContainer/VBoxContainer/ScreenTabContainer" unique_id=1421676451 instance=ExtResource("5_g5gtg")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1

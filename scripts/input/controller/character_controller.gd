@@ -216,7 +216,7 @@ func _get_target_velocity(
 #endregion Movement
 
 #region Sprint
-func _handle_sprint(is_pressed: bool) -> void:
+func _handle_sprint(is_pressed: bool, is_released: bool) -> void:
 	if not sprint_enabled:
 		return
 	
@@ -228,7 +228,10 @@ func _handle_sprint(is_pressed: bool) -> void:
 			#print("Sprint is now:", _is_sprinting)
 	# Enable sprint on press, disable on release
 	else:
-		_is_sprinting = is_pressed
+		if _is_sprinting and is_released:
+			_is_sprinting = false
+		elif not _is_sprinting and is_pressed:
+			_is_sprinting = true
 		#print("Sprint is now:", _is_sprinting)
 
 func set_sprint_enabled(enabled: bool) -> void:

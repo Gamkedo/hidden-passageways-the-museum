@@ -15,7 +15,6 @@ colors = PackedColorArray(0.12941177, 0.12941177, 0.12941177, 0.9607843, 0.21176
 gradient = SubResource("Gradient_q1ok2")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yfpbd"]
-content_margin_top = 233.0
 texture = SubResource("GradientTexture1D_hsda3")
 
 [resource]
