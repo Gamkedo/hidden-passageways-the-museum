@@ -290,36 +290,36 @@ albedo_texture = ExtResource("7_hgslh")
 
 [sub_resource type="SphereMesh" id="SphereMesh_7tbbo"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_rr0nd"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_iit47"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c6q64"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rr0nd"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_rr0nd")
+albedo_texture = SubResource("ViewportTexture_iit47")
 roughness = 0.8
 texture_filter = 5
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_v80x0"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_c6q64"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fof07"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v80x0"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_v80x0")
+albedo_texture = SubResource("ViewportTexture_c6q64")
 roughness = 0.8
 texture_filter = 5
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_1tes7"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_fof07"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8lwxr"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1tes7"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_1tes7")
+albedo_texture = SubResource("ViewportTexture_fof07")
 roughness = 0.8
 texture_filter = 5
 
@@ -1480,42 +1480,42 @@ size_2d_override = Vector2i(512, 512)
 
 [node name="guidebook" parent="Guidebook Stand/Guidebook3d" unique_id=1630787135 instance=ExtResource("31_oa8v2")]
 
-[node name="Book" parent="Guidebook Stand/Guidebook3d/guidebook" index="0" unique_id=405780648]
+[node name="Book" parent="Guidebook Stand/Guidebook3d/guidebook" index="0" unique_id=277928507]
 layers = 6
 cast_shadow = 0
 
-[node name="Pages" parent="Guidebook Stand/Guidebook3d/guidebook" index="1" unique_id=2104188923]
+[node name="Pages" parent="Guidebook Stand/Guidebook3d/guidebook" index="1" unique_id=1787011692]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_c6q64")
+surface_material_override/0 = SubResource("StandardMaterial3D_rr0nd")
 
 [node name="Guidebook3d2" type="Node3D" parent="Guidebook Stand" unique_id=1034692829]
 transform = Transform3D(0.99572617, -6.976736e-08, 0.092355326, 0.07370379, 0.60259724, -0.79463464, -0.05565301, 0.7980456, 0.60002184, 0.33789635, 0.5955966, 0.11873436)
 
 [node name="guidebook" parent="Guidebook Stand/Guidebook3d2" unique_id=914161945 instance=ExtResource("31_oa8v2")]
 
-[node name="Book" parent="Guidebook Stand/Guidebook3d2/guidebook" index="0" unique_id=405780648]
+[node name="Book" parent="Guidebook Stand/Guidebook3d2/guidebook" index="0" unique_id=277928507]
 layers = 6
 cast_shadow = 0
 
-[node name="Pages" parent="Guidebook Stand/Guidebook3d2/guidebook" index="1" unique_id=2104188923]
+[node name="Pages" parent="Guidebook Stand/Guidebook3d2/guidebook" index="1" unique_id=1787011692]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_fof07")
+surface_material_override/0 = SubResource("StandardMaterial3D_v80x0")
 
 [node name="Guidebook3d3" type="Node3D" parent="Guidebook Stand" unique_id=1679212863]
 transform = Transform3D(-0.9742656, -0.12668496, -0.18643428, 0.14209789, -0.98725104, -0.07172081, -0.1749714, -0.0963671, 0.979846, -0.58836937, 0.5955966, 0.11873436)
 
 [node name="guidebook" parent="Guidebook Stand/Guidebook3d3" unique_id=962682289 instance=ExtResource("31_oa8v2")]
 
-[node name="Book" parent="Guidebook Stand/Guidebook3d3/guidebook" index="0" unique_id=405780648]
+[node name="Book" parent="Guidebook Stand/Guidebook3d3/guidebook" index="0" unique_id=277928507]
 layers = 6
 cast_shadow = 0
 
-[node name="Pages" parent="Guidebook Stand/Guidebook3d3/guidebook" index="1" unique_id=2104188923]
+[node name="Pages" parent="Guidebook Stand/Guidebook3d3/guidebook" index="1" unique_id=1787011692]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_8lwxr")
+surface_material_override/0 = SubResource("StandardMaterial3D_1tes7")
 
 [node name="Label3D" type="Label3D" parent="Guidebook Stand" unique_id=1183973093]
 transform = Transform3D(0.24000001, 0, 0, 0, 0.24000001, 0, 0, 0, 0.24000001, -0.07500076, 0.61191887, -0.31499863)
@@ -1536,6 +1536,7 @@ shape = SubResource("BoxShape3D_7tbbo")
 
 [node name="Player with UI" parent="." unique_id=1354449472 instance=ExtResource("3_lquwl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -0.8355012, 5.5)
+platform_floor_layers = 4294967291
 
 [node name="Dev Pods Game Pictures" type="Node3D" parent="." unique_id=1270972283]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.5, 0, 33.5)
@@ -1792,16 +1793,27 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 24.011044, 0.9385146, 20.2431
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 24.011044, -9.463224, 20.2431)
 
 [node name="tank-rampage-command_marine" parent="." unique_id=2103342501 instance=ExtResource("53_gbu3n")]
-transform = Transform3D(-0.627159, 0, -0.7788914, 0, 1, 0, 0.7788914, 0, -0.627159, 30.876, -0.997, 43.822)
+transform = Transform3D(-0.15368994, 0, -0.98811924, 0, 1, 0, 0.98811924, 0, -0.15368994, 30.90065, -0.997, 43.499187)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="tank-rampage-command_marine" unique_id=262737274]
 transform = Transform3D(0.90630776, 0.32136145, -0.2744686, 0, 0.64944804, 0.76040596, 0.42261827, -0.68916184, 0.5885998, -0.44, 2.69, 0.848)
 layers = 4
+light_energy = 2.0
 light_bake_mode = 0
+light_cull_mask = 4293918724
 distance_fade_enabled = true
 distance_fade_begin = 10.0
 spot_range = 4.535
-spot_angle = 33.37
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="tank-rampage-command_marine" unique_id=424020353]
+transform = Transform3D(-0.8289249, -0.01399643, 0.5591846, 0.30139002, 0.8309863, 0.46757466, -0.47121915, 0.5561169, -0.68460673, 0.76000214, 2.022767, -1.2033386)
+layers = 4
+light_color = Color(0.66611975, 0.8609713, 0.9478937, 1)
+light_bake_mode = 0
+light_cull_mask = 4293918724
+distance_fade_enabled = true
+distance_fade_begin = 10.0
+spot_range = 4.535
 
 [node name="Label3D" type="Label3D" parent="tank-rampage-command_marine" unique_id=1297228397]
 transform = Transform3D(0.9788673, 0, -0.20449601, 0, 1, 0, 0.20449601, 0, 0.9788673, 0, 1.8, 0.445)
