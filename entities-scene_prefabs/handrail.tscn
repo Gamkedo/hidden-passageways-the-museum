@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://chqeb335cf70u"]
+
+[ext_resource type="Material" uid="uid://b5j7a6q6jdkv5" path="res://materials/concrete.tres" id="1_rpa1f"]
+[ext_resource type="Material" uid="uid://gi1au7e50ftu" path="res://materials/modern-museum/picture-frame-placeholder-generic-wood.tres" id="2_5ge38"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kdu0b"]
+size = Vector3(2, 1.9, 0.3)
+
+[node name="handrail" type="CSGCombiner3D" unique_id=179172242]
+
+[node name="railing-baluster" type="CSGBox3D" parent="." unique_id=1779330375]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.2, 0.85, 0)
+size = Vector3(0.05, 1.7, 0.05)
+material = ExtResource("1_rpa1f")
+
+[node name="railing-baluster2" type="CSGBox3D" parent="." unique_id=331616061]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.7, 0.85, 0)
+size = Vector3(0.05, 1.7, 0.05)
+material = ExtResource("1_rpa1f")
+
+[node name="railing-baluster3" type="CSGBox3D" parent="." unique_id=2129934036]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 1.2, 0.85, 0)
+size = Vector3(0.05, 1.7, 0.05)
+material = ExtResource("1_rpa1f")
+
+[node name="railing-baluster4" type="CSGBox3D" parent="." unique_id=105733837]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 1.7, 0.85, 0)
+size = Vector3(0.05, 1.7, 0.05)
+material = ExtResource("1_rpa1f")
+
+[node name="railing-handrail" type="CSGBox3D" parent="." unique_id=140635821]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0.9999999, 1.7, -0.1)
+size = Vector3(2, 0.2, 0.1)
+material = ExtResource("2_5ge38")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=927391211]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1911709379]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0.9999999, 0.9, -0.05000001)
+shape = SubResource("BoxShape3D_kdu0b")

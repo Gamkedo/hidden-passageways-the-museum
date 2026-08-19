@@ -44,6 +44,7 @@
 [ext_resource type="Texture2D" uid="uid://ce0iahuroaa7j" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/planets mobile.png" id="19_hgslh"]
 [ext_resource type="Texture2D" uid="uid://c6rqykvgq5oni" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/supply-and-siege.png" id="20_lahx7"]
 [ext_resource type="Texture2D" uid="uid://r870n6ekjct4" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/talon.png" id="21_yqwtw"]
+[ext_resource type="PackedScene" uid="uid://o8idbyowpqvw" path="res://entities-scene_prefabs/railing.tscn" id="26_c6q64"]
 [ext_resource type="PackedScene" uid="uid://bvln0oll5ttp0" path="res://entities-scene_prefabs/ionic_column.tscn" id="28_er4o0"]
 [ext_resource type="PackedScene" uid="uid://cqq8q3sgrg35b" path="res://ui/guidebook.tscn" id="30_nw8jh"]
 [ext_resource type="Texture2D" uid="uid://2432776vq113" path="res://textures/play-button-stand.png" id="31_nw8jh"]
@@ -63,6 +64,7 @@
 [ext_resource type="PackedScene" uid="uid://coah6xph85mbj" path="res://models/egg.tscn" id="61_xub5d"]
 [ext_resource type="PackedScene" uid="uid://c4vtkvb04er8b" path="res://level-scenes/egg_challenge.tscn" id="62_x4vg3"]
 [ext_resource type="PackedScene" uid="uid://b7l0g2p16ot2u" path="res://entities-scene_prefabs/clouds.tscn" id="63_iit47"]
+[ext_resource type="PackedScene" uid="uid://chqeb335cf70u" path="res://entities-scene_prefabs/handrail.tscn" id="65_v80x0"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_xteo1"]
 
@@ -290,17 +292,6 @@ albedo_texture = ExtResource("7_hgslh")
 
 [sub_resource type="SphereMesh" id="SphereMesh_7tbbo"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_iit47"]
-viewport_path = NodePath("../../Guidebook3d/SubViewport")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rr0nd"]
-resource_local_to_scene = true
-resource_name = "Pages"
-transparency = 1
-albedo_texture = SubResource("ViewportTexture_iit47")
-roughness = 0.8
-texture_filter = 5
-
 [sub_resource type="ViewportTexture" id="ViewportTexture_c6q64"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
@@ -320,6 +311,17 @@ resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
 albedo_texture = SubResource("ViewportTexture_fof07")
+roughness = 0.8
+texture_filter = 5
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_8lwxr"]
+viewport_path = NodePath("../../Guidebook3d/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ktaoq"]
+resource_local_to_scene = true
+resource_name = "Pages"
+transparency = 1
+albedo_texture = SubResource("ViewportTexture_8lwxr")
 roughness = 0.8
 texture_filter = 5
 
@@ -1426,6 +1428,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.468834, 0.4972527, -31.049
 [node name="tree-big" parent="CSG Blockout/Museum Modern (past year)" unique_id=1613927015 instance=ExtResource("17_4fg2q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.428558, 0.49725246, -25.973488)
 
+[node name="railing" parent="CSG Blockout/Museum Modern (past year)" unique_id=179172242 instance=ExtResource("26_c6q64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.099995, 0.49999994, 6.5)
+
+[node name="railing2" parent="CSG Blockout/Museum Modern (past year)" unique_id=1733756487 instance=ExtResource("26_c6q64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 10.099995, 0.49999994, 2.5)
+
+[node name="railing3" parent="CSG Blockout/Museum Modern (past year)" unique_id=570244277 instance=ExtResource("26_c6q64")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -11.100004, 0.49999994, 2.5)
+
+[node name="railing4" parent="CSG Blockout/Museum Modern (past year)" unique_id=1771788176 instance=ExtResource("26_c6q64")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, -8.742278e-08, 0, 1, -11.100004, 0.49999994, 6.5)
+
+[node name="railing5" parent="CSG Blockout/Museum Modern (past year)" unique_id=2048182566 instance=ExtResource("26_c6q64")]
+transform = Transform3D(0.42261824, 0, -0.90630776, 0, 1, 0, 0.90630776, 0, 0.42261824, -2.6000042, -4.4, 2.2000008)
+
+[node name="railing6" parent="CSG Blockout/Museum Modern (past year)" unique_id=73214226 instance=ExtResource("26_c6q64")]
+transform = Transform3D(-0.42261833, 0, 0.90630776, 0, 1, 0, 0.90630776, 0, 0.42261833, 1.5999966, -4.4, 2.2000008)
+
 [node name="entrance placeholder CSG" type="CSGBox3D" parent="CSG Blockout" unique_id=429890971]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, -1.5, 6.5)
 material_override = ExtResource("13_v6iic")
@@ -1487,7 +1507,7 @@ cast_shadow = 0
 [node name="Pages" parent="Guidebook Stand/Guidebook3d/guidebook" index="1" unique_id=2104188923]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_rr0nd")
+surface_material_override/0 = SubResource("StandardMaterial3D_v80x0")
 
 [node name="Guidebook3d2" type="Node3D" parent="Guidebook Stand" unique_id=1034692829]
 transform = Transform3D(0.99572617, -6.976736e-08, 0.092355326, 0.07370379, 0.60259724, -0.79463464, -0.05565301, 0.7980456, 0.60002184, 0.33789635, 0.5955966, 0.11873436)
@@ -1501,7 +1521,7 @@ cast_shadow = 0
 [node name="Pages" parent="Guidebook Stand/Guidebook3d2/guidebook" index="1" unique_id=2104188923]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_v80x0")
+surface_material_override/0 = SubResource("StandardMaterial3D_1tes7")
 
 [node name="Guidebook3d3" type="Node3D" parent="Guidebook Stand" unique_id=1679212863]
 transform = Transform3D(-0.9742656, -0.12668496, -0.18643428, 0.14209789, -0.98725104, -0.07172081, -0.1749714, -0.0963671, 0.979846, -0.58836937, 0.5955966, 0.11873436)
@@ -1515,7 +1535,7 @@ cast_shadow = 0
 [node name="Pages" parent="Guidebook Stand/Guidebook3d3/guidebook" index="1" unique_id=2104188923]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_1tes7")
+surface_material_override/0 = SubResource("StandardMaterial3D_ktaoq")
 
 [node name="Label3D" type="Label3D" parent="Guidebook Stand" unique_id=1183973093]
 transform = Transform3D(0.24000001, 0, 0, 0, 0.24000001, 0, 0, 0, 0.24000001, -0.07500076, 0.61191887, -0.31499863)
@@ -1840,6 +1860,33 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -12,
 
 [node name="clouds" parent="." unique_id=797589118 instance=ExtResource("63_iit47")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 52, 0)
+
+[node name="handrail" parent="." unique_id=857131082 instance=ExtResource("65_v80x0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.599998, -6, 38.9)
+
+[node name="handrail6" parent="." unique_id=1061664687 instance=ExtResource("65_v80x0")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 22.999996, -6.05, 34.950005)
+
+[node name="handrail7" parent="." unique_id=754978998 instance=ExtResource("65_v80x0")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 24.499996, -6.05, 34.950005)
+
+[node name="handrail8" parent="." unique_id=2104837594 instance=ExtResource("65_v80x0")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 30.399996, -6.05, 34.950005)
+
+[node name="handrail9" parent="." unique_id=1323639715 instance=ExtResource("65_v80x0")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 31.899996, -6.05, 34.950005)
+
+[node name="handrail2" parent="." unique_id=240380227 instance=ExtResource("65_v80x0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.599998, -6, 38.9)
+
+[node name="handrail3" parent="." unique_id=1911250788 instance=ExtResource("65_v80x0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.599998, -6, 38.9)
+
+[node name="handrail4" parent="." unique_id=1256897905 instance=ExtResource("65_v80x0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.599998, -6, 38.9)
+
+[node name="handrail5" parent="." unique_id=574958099 instance=ExtResource("65_v80x0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.599998, -6, 38.9)
 
 [editable path="CSG Blockout/Cyndrive Ships/CyndriveShipsProps/cyndrive_ships_carrier"]
 [editable path="Guidebook Stand/Guidebook3d/guidebook"]
