@@ -41,6 +41,8 @@ const ACTION_STRINGS: Dictionary[ACTIONS, String]= {
 	ACTIONS.CAPTURE_MOUSE: "capture_mouse", ACTIONS.RELEASE_MOUSE: "release_mouse"
 }
 
+enum INPUT_METHOD { NONE, MOUSE_AND_KEYBOARD, CONTROLLER }
+
 const INPUT_BINDS_SECTION := "InputBinds"
 
 ## Get the controls currently registered in this Resource file

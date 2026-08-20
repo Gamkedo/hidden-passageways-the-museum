@@ -4,6 +4,7 @@ extends PanelContainer
 signal reset_binds
 
 const INPUT_BINDS: InputBinds = preload("uid://dnfis17edcjtb")
+const CONTROLLER_ICON_ACTION_MAP: ControllerIconActionMap = preload("uid://b0v8pfiulviyt")
 
 #region Mouse & Keyboard
 @onready var k_move_left_input_change: Button = %KMoveLeftInputChange
@@ -41,7 +42,6 @@ const INPUT_BINDS: InputBinds = preload("uid://dnfis17edcjtb")
 @onready var confirm_new_input_button: Button = %ConfirmNewInputButton
 #endregion Input Change Prompt
 
-enum INPUT_METHOD { NONE, MOUSE_AND_KEYBOARD, CONTROLLER }
 @onready var MOUSE_AND_KEYBOARD_ACTION_MAP: Dictionary[Button, InputBinds.ACTIONS] = {
 	# M&K
 	k_move_left_input_change: InputBinds.ACTIONS.LEFT,
@@ -57,7 +57,7 @@ enum INPUT_METHOD { NONE, MOUSE_AND_KEYBOARD, CONTROLLER }
 	capture_mouse_input_change: InputBinds.ACTIONS.CAPTURE_MOUSE,
 	release_mouse_input_change: InputBinds.ACTIONS.RELEASE_MOUSE,
 }
-@onready var CONTROLLER_ACTION_MAP := {
+@onready var CONTROLLER_ACTION_MAP: Dictionary[Button, InputBinds.ACTIONS] = {
 	# Controller
 	c_move_left_input_change: InputBinds.ACTIONS.LEFT,
 	c_move_right_input_change: InputBinds.ACTIONS.RIGHT,
@@ -72,7 +72,7 @@ enum INPUT_METHOD { NONE, MOUSE_AND_KEYBOARD, CONTROLLER }
 }
 
 var target_input_change_button: Button
-var target_input_method: INPUT_METHOD
+var target_input_method: InputBinds.INPUT_METHOD
 var recorded_change_input: InputEvent
 
 
@@ -85,12 +85,12 @@ func process_input_change_event(event: InputEvent) -> void:
 	recorded_change_input = event
 	input_display_hint.text = event.as_text()
 
-func display_input_change_prompt(action_name: StringName, method: INPUT_METHOD) -> void:
+func display_input_change_prompt(action_name: StringName, method: InputBinds.INPUT_METHOD) -> void:
 	var action_events := InputMap.action_get_events(action_name)
 	var matching_events := action_events.filter(func(event):
-		if method == INPUT_METHOD.MOUSE_AND_KEYBOARD and event is InputEventKey:
+		if method == InputBinds.INPUT_METHOD.MOUSE_AND_KEYBOARD and event is InputEventKey:
 			return true
-		elif method == INPUT_METHOD.CONTROLLER and (event is InputEventJoypadButton or event is InputEventJoypadMotion):
+		elif method == InputBinds.INPUT_METHOD.CONTROLLER and (event is InputEventJoypadButton or event is InputEventJoypadMotion):
 			return true
 		# Not matching
 		return false
@@ -107,7 +107,7 @@ func hide_input_change_prompt() -> void:
 	input_record_overlay.hide()
 #endregion Input Change Prompt
 
-func _on_input_change_button_pressed(target_button: Button, method: INPUT_METHOD) -> void:
+func _on_input_change_button_pressed(target_button: Button, method: InputBinds.INPUT_METHOD) -> void:
 	target_input_change_button = target_button
 	target_input_method = method
 	var target_action_name := _get_action_name_from_button(target_button, method)
@@ -116,36 +116,37 @@ func _on_input_change_button_pressed(target_button: Button, method: INPUT_METHOD
 func connect_input_change_button_signals() -> void:
 	# Keys for this dictionary are the buttons themselves
 	for mnk_button in MOUSE_AND_KEYBOARD_ACTION_MAP:
-		mnk_button.pressed.connect(_on_input_change_button_pressed.bind(mnk_button, INPUT_METHOD.MOUSE_AND_KEYBOARD))
+		mnk_button.pressed.connect(_on_input_change_button_pressed.bind(mnk_button, InputBinds.INPUT_METHOD.MOUSE_AND_KEYBOARD))
 	for controller_button in CONTROLLER_ACTION_MAP:
-		controller_button.pressed.connect(_on_input_change_button_pressed.bind(controller_button, INPUT_METHOD.CONTROLLER))
+		controller_button.pressed.connect(_on_input_change_button_pressed.bind(controller_button, InputBinds.INPUT_METHOD.CONTROLLER))
 
 func _on_confirm_new_input_button_pressed() -> void:
 	var target_action_name := _get_action_name_from_button(target_input_change_button, target_input_method)
 	save_input_to_settings(target_action_name, recorded_change_input)
-	target_input_change_button.text = recorded_change_input.as_text()
+	_update_display_for_button(target_input_change_button)
+	#target_input_change_button.text = recorded_change_input.as_text()
 	
 	target_input_change_button = null
-	target_input_method = INPUT_METHOD.NONE
+	target_input_method = InputBinds.INPUT_METHOD.NONE
 	recorded_change_input = null
 	hide_input_change_prompt()
 
-func _get_action_name_from_button(target_button: Button, method: INPUT_METHOD) -> StringName:
+func _get_action_name_from_button(target_button: Button, method: InputBinds.INPUT_METHOD) -> StringName:
 	var target_action_key: int
-	if method == INPUT_METHOD.MOUSE_AND_KEYBOARD:
+	if method == InputBinds.INPUT_METHOD.MOUSE_AND_KEYBOARD:
 		target_action_key = MOUSE_AND_KEYBOARD_ACTION_MAP[target_button]
-	elif method == INPUT_METHOD.CONTROLLER:
+	elif method == InputBinds.INPUT_METHOD.CONTROLLER:
 		target_action_key = CONTROLLER_ACTION_MAP[target_button]
 	var target_action_name := InputBinds.ACTION_STRINGS[target_action_key]
 	return target_action_name
 
-func _get_action_from_button(target_button: Button, method: INPUT_METHOD) -> InputEvent:
+func _get_action_from_button(target_button: Button, method: InputBinds.INPUT_METHOD) -> InputEvent:
 	var action_name := _get_action_name_from_button(target_button, method)
 	var action_events := InputMap.action_get_events(action_name)
 	var matching_events := action_events.filter(func(event):
-		if method == INPUT_METHOD.MOUSE_AND_KEYBOARD and (event is InputEventKey or event is InputEventMouse):
+		if method == InputBinds.INPUT_METHOD.MOUSE_AND_KEYBOARD and (event is InputEventKey or event is InputEventMouse):
 			return true
-		elif method == INPUT_METHOD.CONTROLLER and (event is InputEventJoypadButton or event is InputEventJoypadMotion):
+		elif method == InputBinds.INPUT_METHOD.CONTROLLER and (event is InputEventJoypadButton or event is InputEventJoypadMotion):
 			return true
 		# Not matching
 		return false
@@ -154,18 +155,34 @@ func _get_action_from_button(target_button: Button, method: INPUT_METHOD) -> Inp
 	var first_event: InputEvent = matching_events[0]
 	return first_event
 
-func _get_action_text_from_button(target_button: Button, method: INPUT_METHOD) -> String:
+func _get_action_text_from_button(target_button: Button, method: InputBinds.INPUT_METHOD) -> String:
 	var action_event := _get_action_from_button(target_button, method)
 	var action_text := action_event.as_text()
 	return action_text
 
 func _load_input_change_button_displays() -> void:
-	for mnk_button in MOUSE_AND_KEYBOARD_ACTION_MAP:
-		var action_text := _get_action_text_from_button(mnk_button, INPUT_METHOD.MOUSE_AND_KEYBOARD)
-		mnk_button.text = action_text
-	for controller_button in CONTROLLER_ACTION_MAP:
-		var action_text := _get_action_text_from_button(controller_button, INPUT_METHOD.CONTROLLER)
-		controller_button.text = action_text
+	for mnk_button: Button in MOUSE_AND_KEYBOARD_ACTION_MAP:
+		_update_display_for_button(mnk_button)
+	for controller_button: Button in CONTROLLER_ACTION_MAP:
+		_update_display_for_button(controller_button)
+
+func _update_display_for_button(button: Button) -> void:
+	if MOUSE_AND_KEYBOARD_ACTION_MAP.has(button):
+		# TODO: Add M&K icon action map
+		#var button_action := _get_action_from_button(button, InputBinds.INPUT_METHOD.MOUSE_AND_KEYBOARD)
+		var action_text := _get_action_text_from_button(button, InputBinds.INPUT_METHOD.MOUSE_AND_KEYBOARD)
+		button.text = action_text
+	elif CONTROLLER_ACTION_MAP.has(button):
+		var button_action := _get_action_from_button(button, InputBinds.INPUT_METHOD.CONTROLLER)
+		var controller_action_icon := CONTROLLER_ICON_ACTION_MAP.get_icon_for_event(button_action)
+		if controller_action_icon != null:
+			button.icon = controller_action_icon
+			button.text = ""
+		else:
+			var action_text := _get_action_text_from_button(button, InputBinds.INPUT_METHOD.CONTROLLER)
+			button.text = action_text
+			button.icon = null
+
 
 func _on_input_map_updated() -> void:
 	_load_input_change_button_displays()

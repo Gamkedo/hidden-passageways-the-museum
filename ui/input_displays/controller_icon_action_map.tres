@@ -1,0 +1,133 @@
+[gd_resource type="Resource" script_class="ControllerIconActionMap" format=3 uid="uid://b0v8pfiulviyt"]
+
+[ext_resource type="Script" uid="uid://dh7nga1p7te0i" path="res://ui/input_displays/controller_icon_action_map.gd" id="1_3q3mp"]
+[ext_resource type="Texture2D" uid="uid://dkcbv4ihll6ip" path="res://textures/gamepad-face-button-down.png" id="1_oxb2t"]
+[ext_resource type="Texture2D" uid="uid://c12vrcvwv0y1d" path="res://textures/gamepad-face-button-left.png" id="2_gflx2"]
+[ext_resource type="Texture2D" uid="uid://dalj7h44x862l" path="res://textures/gamepad-face-button-right.png" id="3_teu24"]
+[ext_resource type="Texture2D" uid="uid://8mlceu2ilpyq" path="res://textures/gamepad-face-button-up.png" id="5_53yxs"]
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_022cq"]
+pressed = true
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_gflx2"]
+button_index = 12
+pressed = true
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_teu24"]
+button_index = 13
+pressed = true
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_53yxs"]
+button_index = 14
+pressed = true
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_5od4o"]
+button_index = 11
+pressed = true
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_6t3a3"]
+button_index = 9
+pressed = true
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_i0ad0"]
+button_index = 2
+pressed = true
+
+[sub_resource type="InputEventJoypadMotion" id="InputEventJoypadMotion_kjdey"]
+axis = 1
+axis_value = 1.0
+
+[sub_resource type="InputEventJoypadMotion" id="InputEventJoypadMotion_f58u5"]
+axis_value = -1.0
+
+[sub_resource type="InputEventJoypadMotion" id="InputEventJoypadMotion_jw3v4"]
+axis_value = 1.0
+
+[sub_resource type="InputEventJoypadMotion" id="InputEventJoypadMotion_i0ad0"]
+axis = 1
+axis_value = -1.0
+
+[sub_resource type="InputEventJoypadMotion" id="InputEventJoypadMotion_022cq"]
+axis = 4
+axis_value = 1.0
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_kjdey"]
+button_index = 4
+pressed = true
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_f58u5"]
+button_index = 6
+pressed = true
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_jw3v4"]
+button_index = 10
+pressed = true
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_iair1"]
+button_index = 1
+pressed = true
+
+[sub_resource type="InputEventJoypadMotion" id="InputEventJoypadMotion_iair1"]
+axis = 5
+axis_value = 1.0
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_oxb2t"]
+button_index = 3
+pressed = true
+
+[resource]
+script = ExtResource("1_3q3mp")
+left_joystick_left = Dictionary[InputEventJoypadMotion, Texture2D]({
+SubResource("InputEventJoypadMotion_f58u5"): null
+})
+left_joystick_right = Dictionary[InputEventJoypadMotion, Texture2D]({
+SubResource("InputEventJoypadMotion_jw3v4"): null
+})
+left_joystick_up = Dictionary[InputEventJoypadMotion, Texture2D]({
+SubResource("InputEventJoypadMotion_i0ad0"): null
+})
+left_joystick_down = Dictionary[InputEventJoypadMotion, Texture2D]({
+SubResource("InputEventJoypadMotion_kjdey"): null
+})
+left_face_button = Dictionary[InputEventJoypadButton, Texture2D]({
+SubResource("InputEventJoypadButton_i0ad0"): ExtResource("2_gflx2")
+})
+right_face_button = Dictionary[InputEventJoypadButton, Texture2D]({
+SubResource("InputEventJoypadButton_iair1"): ExtResource("3_teu24")
+})
+top_face_button = Dictionary[InputEventJoypadButton, Texture2D]({
+SubResource("InputEventJoypadButton_oxb2t"): ExtResource("5_53yxs")
+})
+bottom_face_button = Dictionary[InputEventJoypadButton, Texture2D]({
+SubResource("InputEventJoypadButton_022cq"): ExtResource("1_oxb2t")
+})
+dpad_left = Dictionary[InputEventJoypadButton, Texture2D]({
+SubResource("InputEventJoypadButton_teu24"): null
+})
+dpad_right = Dictionary[InputEventJoypadButton, Texture2D]({
+SubResource("InputEventJoypadButton_53yxs"): null
+})
+dpad_top = Dictionary[InputEventJoypadButton, Texture2D]({
+SubResource("InputEventJoypadButton_5od4o"): null
+})
+dpad_bottom = Dictionary[InputEventJoypadButton, Texture2D]({
+SubResource("InputEventJoypadButton_gflx2"): null
+})
+left_bumper = Dictionary[InputEventJoypadButton, Texture2D]({
+SubResource("InputEventJoypadButton_6t3a3"): null
+})
+right_bumper = Dictionary[InputEventJoypadButton, Texture2D]({
+SubResource("InputEventJoypadButton_jw3v4"): null
+})
+left_trigger = Dictionary[InputEventJoypadMotion, Texture2D]({
+SubResource("InputEventJoypadMotion_022cq"): null
+})
+right_trigger = Dictionary[InputEventJoypadMotion, Texture2D]({
+SubResource("InputEventJoypadMotion_iair1"): null
+})
+menu_left = Dictionary[InputEventJoypadButton, Texture2D]({
+SubResource("InputEventJoypadButton_kjdey"): null
+})
+menu_right = Dictionary[InputEventJoypadButton, Texture2D]({
+SubResource("InputEventJoypadButton_f58u5"): null
+})

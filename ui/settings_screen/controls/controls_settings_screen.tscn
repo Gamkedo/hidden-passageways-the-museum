@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://c706g67wmabya"]
 
+[ext_resource type="Theme" uid="uid://1vj1tlr2y17u" path="res://ui/settings_screen/controls/controls_screen_theme.tres" id="1_3c4xr"]
 [ext_resource type="Script" uid="uid://dcx7lcx1syj5v" path="res://ui/settings_screen/controls/controls_settings_screen.gd" id="1_hrbp8"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2yrbc"]
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_3c4xr")
 theme_override_styles/panel = SubResource("StyleBoxEmpty_2yrbc")
 script = ExtResource("1_hrbp8")
 
@@ -51,6 +53,7 @@ text = "Move Left"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+icon_alignment = 1
 
 [node name="KMoveRight" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=1813405819]
 custom_minimum_size = Vector2(200, 0)
@@ -61,6 +64,7 @@ text = "Move Right"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+icon_alignment = 1
 
 [node name="KMoveForward" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=1980094097]
 custom_minimum_size = Vector2(200, 0)
@@ -71,6 +75,7 @@ text = "Move Forward"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+icon_alignment = 1
 
 [node name="KMoveBackward" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=1309773715]
 custom_minimum_size = Vector2(200, 0)
@@ -81,6 +86,7 @@ text = "Move Backward"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+icon_alignment = 1
 
 [node name="KJump" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=1501091930]
 custom_minimum_size = Vector2(200, 0)
@@ -91,6 +97,7 @@ text = "Jump"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+icon_alignment = 1
 
 [node name="KInteract" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=2089267735]
 custom_minimum_size = Vector2(200, 0)
@@ -101,6 +108,7 @@ text = "Interact"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+icon_alignment = 1
 
 [node name="KSprint" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=1661129604]
 custom_minimum_size = Vector2(200, 0)
@@ -111,6 +119,7 @@ text = "Sprint"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+icon_alignment = 1
 
 [node name="KToggleFlight" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=1079639693]
 custom_minimum_size = Vector2(200, 0)
@@ -121,6 +130,7 @@ text = "Toggle Flight"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+icon_alignment = 1
 
 [node name="KPause" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=1259157340]
 custom_minimum_size = Vector2(200, 0)
@@ -131,6 +141,7 @@ text = "Pause"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+icon_alignment = 1
 
 [node name="KMap" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=1802918807]
 custom_minimum_size = Vector2(200, 0)
@@ -141,6 +152,7 @@ text = "Map"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+icon_alignment = 1
 
 [node name="CaptureMouse" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=1921177462]
 custom_minimum_size = Vector2(200, 0)
@@ -151,6 +163,7 @@ text = "Capture Mouse"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+icon_alignment = 1
 
 [node name="ReleaseMouse" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=481689728]
 custom_minimum_size = Vector2(200, 0)
@@ -161,6 +174,7 @@ text = "Release Mouse"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+icon_alignment = 1
 
 [node name="HSeparator2" type="HSeparator" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1613635761]
 layout_mode = 2
@@ -188,6 +202,8 @@ text = "Move Left"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_constants/icon_max_width = 70
+icon_alignment = 1
 
 [node name="CMoveRight" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=830070923]
 custom_minimum_size = Vector2(200, 0)
@@ -198,6 +214,8 @@ text = "Move Right"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_constants/icon_max_width = 70
+icon_alignment = 1
 
 [node name="CMoveForward" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=778021865]
 custom_minimum_size = Vector2(200, 0)
@@ -208,6 +226,8 @@ text = "Move Forward"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_constants/icon_max_width = 70
+icon_alignment = 1
 
 [node name="CMoveBackward" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=513796616]
 custom_minimum_size = Vector2(200, 0)
@@ -218,6 +238,8 @@ text = "Move Backward"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_constants/icon_max_width = 70
+icon_alignment = 1
 
 [node name="CJump" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=335998915]
 custom_minimum_size = Vector2(200, 0)
@@ -228,6 +250,8 @@ text = "Jump"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_constants/icon_max_width = 70
+icon_alignment = 1
 
 [node name="CInteract" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=1476567370]
 custom_minimum_size = Vector2(200, 0)
@@ -238,6 +262,8 @@ text = "Interact"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_constants/icon_max_width = 70
+icon_alignment = 1
 
 [node name="CSprint" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=86891881]
 custom_minimum_size = Vector2(200, 0)
@@ -248,6 +274,8 @@ text = "Sprint"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_constants/icon_max_width = 70
+icon_alignment = 1
 
 [node name="CToggleFlight" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=1380253283]
 custom_minimum_size = Vector2(200, 0)
@@ -258,6 +286,8 @@ text = "Toggle Flight"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_constants/icon_max_width = 70
+icon_alignment = 1
 
 [node name="CPause" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=1618448101]
 custom_minimum_size = Vector2(200, 0)
@@ -268,6 +298,8 @@ text = "Pause"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_constants/icon_max_width = 70
+icon_alignment = 1
 
 [node name="CMap" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=317157422]
 custom_minimum_size = Vector2(200, 0)
@@ -278,6 +310,8 @@ text = "Map"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_constants/icon_max_width = 70
+icon_alignment = 1
 
 [node name="HSeparator4" type="HSeparator" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1752359314]
 layout_mode = 2
