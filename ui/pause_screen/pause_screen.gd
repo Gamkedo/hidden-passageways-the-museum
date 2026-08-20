@@ -22,6 +22,7 @@ var last_focused: PauseScreenButton
 
 func display_pause_screen() -> void:
 	show()
+	display_pause_menu()
 
 #region Buttons
 func resume_game() -> void:
@@ -29,6 +30,7 @@ func resume_game() -> void:
 
 func display_pause_menu() -> void:
 	_set_displayed_screen(main_pause_screen)
+	resume_button.grab_focus.call_deferred()
 
 func display_settings() -> void:
 	_set_displayed_screen(settings_screen)
@@ -64,7 +66,6 @@ func _connect_button_signals() -> void:
 
 func _ready() -> void:
 	_connect_button_signals()
-	resume_button.grab_focus()
 	
 	back_button.hide()
 
