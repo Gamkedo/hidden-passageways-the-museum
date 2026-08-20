@@ -8,12 +8,12 @@ func _ready():
 	pass
 
 func teleport(player):
-	print('Teleport player: ', player.name, ' to pad ', dest_telepad.name)
+	# print('Teleport player: ', player.name, ' to pad ', dest_telepad.name)
 	player.global_position = (dest_telepad.global_position + Vector3(0, 2, 0))
 
 func _on_teleport_area_body_entered(body: Node3D) -> void:
 	if(body.name == "Player with UI"):
-		print('player entered telepad area')
+		# print('player entered telepad area')
 		var char_controller = body.get_child(2)
 		if(char_controller is CharacterController):
 			char_controller.entered_teleport_pad_area(self)

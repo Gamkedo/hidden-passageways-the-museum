@@ -39,7 +39,9 @@ var _is_sprinting: bool = false
 var _is_interacting: bool = false
 var _flight_mode_active: bool = false
 var _coyote_frame_timer: int = 0
-var _on_teleport_pad: StaticBody3D = null
+
+var on_teleport_pad: StaticBody3D = null
+var recently_teleported: bool = false
 
 func _ready() -> void:
 	if target_node:
@@ -313,8 +315,8 @@ func interaction_check():
 	query.collide_with_bodies = true
 	query.collision_mask = interact_mask
 	
-	if _on_teleport_pad:
-		_on_teleport_pad.teleport(self)
+	if on_teleport_pad:
+		on_teleport_pad.teleport(self.get_parent())
 		pass # skip the rest of the interaction checks
 
 	var result = space_state.intersect_ray(query)
@@ -416,9 +418,11 @@ func reset_position(to: Vector3) -> void:
 	target_node.velocity = Vector3.ZERO
 	
 func entered_teleport_pad_area(teleport_pad):
-	print('player is in teleport pad: ', teleport_pad.name)
-	_on_teleport_pad = teleport_pad
+	# print('player is in teleport pad: ', teleport_pad.name)
+	if(!recently_teleported):
+		on_teleport_pad = teleport_pad
 	
 func exited_teleport_pad_area():
-	print('player is no longer in a teleport pad area')
-	_on_teleport_pad = null
+	# print('player is no longer in a teleport pad area')
+	on_teleport_pad = null
+	recently_teleported = false

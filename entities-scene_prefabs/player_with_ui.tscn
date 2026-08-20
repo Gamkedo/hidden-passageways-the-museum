@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ce0uc3f7i1cxo"]
 
 [ext_resource type="Script" uid="uid://dragnfiluvlif" path="res://scripts/debug_details.gd" id="1_4v70m"]
+[ext_resource type="Script" uid="uid://b5v2f557nsch4" path="res://entities-scene_prefabs/press_f_to_teleport.gd" id="1_bm1w4"]
 [ext_resource type="Script" uid="uid://bir504dnh2v0a" path="res://scripts/input/controller/character_controller.gd" id="1_jty3e"]
 [ext_resource type="Script" uid="uid://dsoaew313i5ei" path="res://scripts/fps_label.gd" id="1_ydgiv"]
 [ext_resource type="AudioStream" uid="uid://qfcqpxe6ua5w" path="res://audio/sound effects/LandingSound.wav" id="3_io1g6"]
@@ -56,6 +57,19 @@ Capture mouse: Left click
 Release mouse: Right click"
 fit_content = true
 scroll_active = false
+
+[node name="F to Teleport" type="RichTextLabel" parent="UILayer" unique_id=924718121]
+offset_left = 486.0
+offset_top = 390.0
+offset_right = 790.0
+offset_bottom = 430.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Press F/Left Face Button to Teleport"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_bm1w4")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UILayer" unique_id=1817808499]
 anchors_preset = 1
