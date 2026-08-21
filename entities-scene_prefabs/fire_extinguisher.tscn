@@ -1,13 +1,17 @@
 [gd_scene format=3 uid="uid://dgahdbu6k5v7a"]
 
-[ext_resource type="PackedScene" path="res://models/extinguisher-brass.glb" id="4_brass"]
 [ext_resource type="Material" uid="uid://mqmp0u34poa8" path="res://materials/extinguisher-cylinder-red.tres" id="2_4orsk"]
+[ext_resource type="PackedScene" uid="uid://ccuqrgko3ibip" path="res://models/extinguisher-brass.glb" id="4_brass"]
+[ext_resource type="Material" path="res://materials/extinguisher-brass.tres" id="5_brass"]
+[ext_resource type="Material" path="res://materials/extinguisher-hose-grey.tres" id="6_hose"]
 
 [node name="Node3D" type="Node3D" unique_id=786241607]
 
-[node name="extinguisher-brass" parent="." instance=ExtResource("4_brass")]
+[node name="extinguisher-brass" parent="." unique_id=63113388 instance=ExtResource("4_brass")]
 
-[node name="fire_extinguisher" parent="extinguisher-brass" index="0"]
+[node name="fire_extinguisher" parent="extinguisher-brass" index="0" unique_id=1114525336]
 surface_material_override/0 = ExtResource("2_4orsk")
+surface_material_override/1 = ExtResource("5_brass")
+surface_material_override/2 = ExtResource("6_hose")
 
 [editable path="extinguisher-brass"]
