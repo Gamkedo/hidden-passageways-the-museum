@@ -5,6 +5,7 @@ signal reset_binds
 
 const INPUT_BINDS: InputBinds = preload("uid://dnfis17edcjtb")
 const CONTROLLER_ICON_ACTION_MAP: ControllerIconActionMap = preload("uid://b0v8pfiulviyt")
+const MOUSE_AND_KEYBOARD_ICON_ACTION_MAP: MouseAndKeyboardIconActionMap = preload("uid://duqfhuqxn0yhc")
 
 #region Mouse & Keyboard
 @onready var k_move_left_input_change: Button = %KMoveLeftInputChange
@@ -38,8 +39,7 @@ const CONTROLLER_ICON_ACTION_MAP: ControllerIconActionMap = preload("uid://b0v8p
 
 #region Input Change Prompt
 @onready var input_record_overlay: PanelContainer = %InputRecordOverlay
-@onready var input_display_hint: Label = %InputDisplayHint
-@onready var confirm_new_input_button: Button = %ConfirmNewInputButton
+@onready var input_record: InputRecord = %InputRecord
 #endregion Input Change Prompt
 
 @onready var MOUSE_AND_KEYBOARD_ACTION_MAP: Dictionary[Button, InputBinds.ACTIONS] = {
@@ -73,39 +73,20 @@ const CONTROLLER_ICON_ACTION_MAP: ControllerIconActionMap = preload("uid://b0v8p
 
 var target_input_change_button: Button
 var target_input_method: InputBinds.INPUT_METHOD
-var recorded_change_input: InputEvent
 
 
 func save_input_to_settings(action_name: StringName, input_event: InputEvent) -> void:
-	if input_event != null:
-		INPUT_BINDS.remap_event_in_input_map(action_name, input_event)
+	SettingsManager.save_input_to_settings(action_name, input_event)
 
 #region Input Change Prompt
-func process_input_change_event(event: InputEvent) -> void:
-	recorded_change_input = event
-	input_display_hint.text = event.as_text()
-
 func display_input_change_prompt(action_name: StringName, method: InputBinds.INPUT_METHOD) -> void:
-	var action_events := InputMap.action_get_events(action_name)
-	var matching_events := action_events.filter(func(event):
-		if method == InputBinds.INPUT_METHOD.MOUSE_AND_KEYBOARD and event is InputEventKey:
-			return true
-		elif method == InputBinds.INPUT_METHOD.CONTROLLER and (event is InputEventJoypadButton or event is InputEventJoypadMotion):
-			return true
-		# Not matching
-		return false
-	)
-	
-	# If there's ever more than one something isn't right...
-	var first_event: InputEvent = matching_events[0]
-	var action_text := first_event.as_text()
-	input_display_hint.text = action_text
-	
+	input_record.display_prompt(action_name, method)
+	input_record.process_mode = Node.PROCESS_MODE_ALWAYS
 	input_record_overlay.show()
 
 func hide_input_change_prompt() -> void:
+	input_record.process_mode = Node.PROCESS_MODE_DISABLED
 	input_record_overlay.hide()
-#endregion Input Change Prompt
 
 func _on_input_change_button_pressed(target_button: Button, method: InputBinds.INPUT_METHOD) -> void:
 	target_input_change_button = target_button
@@ -113,24 +94,17 @@ func _on_input_change_button_pressed(target_button: Button, method: InputBinds.I
 	var target_action_name := _get_action_name_from_button(target_button, method)
 	display_input_change_prompt(target_action_name, method)
 
-func connect_input_change_button_signals() -> void:
-	# Keys for this dictionary are the buttons themselves
-	for mnk_button in MOUSE_AND_KEYBOARD_ACTION_MAP:
-		mnk_button.pressed.connect(_on_input_change_button_pressed.bind(mnk_button, InputBinds.INPUT_METHOD.MOUSE_AND_KEYBOARD))
-	for controller_button in CONTROLLER_ACTION_MAP:
-		controller_button.pressed.connect(_on_input_change_button_pressed.bind(controller_button, InputBinds.INPUT_METHOD.CONTROLLER))
-
-func _on_confirm_new_input_button_pressed() -> void:
+func _on_new_input_confirmed(event: InputEvent) -> void:
 	var target_action_name := _get_action_name_from_button(target_input_change_button, target_input_method)
-	save_input_to_settings(target_action_name, recorded_change_input)
+	save_input_to_settings(target_action_name, event)
 	_update_display_for_button(target_input_change_button)
-	#target_input_change_button.text = recorded_change_input.as_text()
 	
 	target_input_change_button = null
 	target_input_method = InputBinds.INPUT_METHOD.NONE
-	recorded_change_input = null
 	hide_input_change_prompt()
+#endregion Input Change Prompt
 
+#region Button Displays
 func _get_action_name_from_button(target_button: Button, method: InputBinds.INPUT_METHOD) -> StringName:
 	var target_action_key: int
 	if method == InputBinds.INPUT_METHOD.MOUSE_AND_KEYBOARD:
@@ -169,21 +143,28 @@ func _load_input_change_button_displays() -> void:
 func _update_display_for_button(button: Button) -> void:
 	if MOUSE_AND_KEYBOARD_ACTION_MAP.has(button):
 		# TODO: Add M&K icon action map
-		#var button_action := _get_action_from_button(button, InputBinds.INPUT_METHOD.MOUSE_AND_KEYBOARD)
-		var action_text := _get_action_text_from_button(button, InputBinds.INPUT_METHOD.MOUSE_AND_KEYBOARD)
-		button.text = action_text
+		var button_action := _get_action_from_button(button, InputBinds.INPUT_METHOD.MOUSE_AND_KEYBOARD)
+		var m_n_k_action_icon := MOUSE_AND_KEYBOARD_ICON_ACTION_MAP.get_icon_for_event(button_action)
+		if m_n_k_action_icon is Texture2D:
+			button.icon = m_n_k_action_icon
+			button.text = ""
+		else:
+			var action_text := _get_action_text_from_button(button, InputBinds.INPUT_METHOD.MOUSE_AND_KEYBOARD)
+			button.text = action_text
+			button.icon = null
 	elif CONTROLLER_ACTION_MAP.has(button):
 		var button_action := _get_action_from_button(button, InputBinds.INPUT_METHOD.CONTROLLER)
 		var controller_action_icon := CONTROLLER_ICON_ACTION_MAP.get_icon_for_event(button_action)
-		if controller_action_icon != null:
+		if controller_action_icon is Texture2D:
 			button.icon = controller_action_icon
 			button.text = ""
 		else:
 			var action_text := _get_action_text_from_button(button, InputBinds.INPUT_METHOD.CONTROLLER)
 			button.text = action_text
 			button.icon = null
+#endregion Button Displays
 
-
+#region Signal Connections
 func _on_input_map_updated() -> void:
 	_load_input_change_button_displays()
 
@@ -191,14 +172,26 @@ func _on_reset_binds_pressed() -> void:
 	SettingsManager.reset_binds_to_default()
 	reset_binds.emit()
 
+func _on_input_record_canceled() -> void:
+	hide_input_change_prompt()
+#endregion Signal Connections
+
+func connect_input_change_button_signals() -> void:
+	# Keys for this dictionary are the buttons themselves
+	for mnk_button in MOUSE_AND_KEYBOARD_ACTION_MAP:
+		mnk_button.pressed.connect(_on_input_change_button_pressed.bind(mnk_button, InputBinds.INPUT_METHOD.MOUSE_AND_KEYBOARD))
+	for controller_button in CONTROLLER_ACTION_MAP:
+		controller_button.pressed.connect(_on_input_change_button_pressed.bind(controller_button, InputBinds.INPUT_METHOD.CONTROLLER))
+
 func _ready() -> void:
 	connect_input_change_button_signals()
-	confirm_new_input_button.pressed.connect(_on_confirm_new_input_button_pressed)
-	reset_binds_button.pressed.connect(_on_reset_binds_pressed)
-	_load_input_change_button_displays()
-	INPUT_BINDS.input_map_updated.connect(_on_input_map_updated)
+	
+	input_record.input_confirmed.connect(_on_new_input_confirmed)
+	input_record.canceled.connect(_on_input_record_canceled)
 	hide_input_change_prompt()
-
-func _unhandled_input(event: InputEvent) -> void:
-	if input_record_overlay.visible: # Lazy flag
-		process_input_change_event(event)
+	
+	reset_binds_button.pressed.connect(_on_reset_binds_pressed)
+	
+	_load_input_change_button_displays()
+	
+	INPUT_BINDS.input_map_updated.connect(_on_input_map_updated)

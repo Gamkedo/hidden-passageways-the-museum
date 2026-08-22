@@ -1,0 +1,62 @@
+[gd_resource type="Resource" script_class="MouseAndKeyboardIconActionMap" format=3 uid="uid://duqfhuqxn0yhc"]
+
+[ext_resource type="Script" uid="uid://lcmogvbijfpj" path="res://ui/input_displays/mNk-icon-action-map.gd" id="1_genfc"]
+
+[sub_resource type="InputEventMouseButton" id="InputEventMouseButton_genfc"]
+device = -1
+button_mask = 1
+position = Vector2(320, 11)
+global_position = Vector2(334, 84)
+button_index = 1
+pressed = true
+
+[sub_resource type="InputEventMouseButton" id="InputEventMouseButton_50fkt"]
+device = -1
+button_mask = 4
+position = Vector2(350, 34)
+global_position = Vector2(364, 107)
+button_index = 3
+pressed = true
+
+[sub_resource type="InputEventMouseButton" id="InputEventMouseButton_tco5h"]
+device = -1
+button_mask = 2
+position = Vector2(351, 27)
+global_position = Vector2(365, 100)
+button_index = 2
+pressed = true
+
+[sub_resource type="InputEventMouseButton" id="InputEventMouseButton_esbit"]
+device = -1
+button_mask = 16
+position = Vector2(440, 34)
+global_position = Vector2(454, 107)
+button_index = 5
+pressed = true
+
+[sub_resource type="InputEventMouseButton" id="InputEventMouseButton_pe03v"]
+device = -1
+button_mask = 8
+position = Vector2(383, 23)
+global_position = Vector2(397, 96)
+button_index = 4
+pressed = true
+
+[resource]
+script = ExtResource("1_genfc")
+left_click = Dictionary[InputEventMouseButton, Texture2D]({
+SubResource("InputEventMouseButton_genfc"): null
+})
+right_click = Dictionary[InputEventMouseButton, Texture2D]({
+SubResource("InputEventMouseButton_tco5h"): null
+})
+middle_click = Dictionary[InputEventMouseButton, Texture2D]({
+SubResource("InputEventMouseButton_50fkt"): null
+})
+scroll_up = Dictionary[InputEventMouseButton, Texture2D]({
+SubResource("InputEventMouseButton_pe03v"): null
+})
+scroll_down = Dictionary[InputEventMouseButton, Texture2D]({
+SubResource("InputEventMouseButton_esbit"): null
+})
+metadata/_custom_type_script = "uid://lcmogvbijfpj"

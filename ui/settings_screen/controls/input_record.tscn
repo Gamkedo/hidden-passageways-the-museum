@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://bfs6ghb6e4xkl"]
+
+[ext_resource type="Script" uid="uid://blo3kvhkc66l4" path="res://ui/settings_screen/controls/input_record.gd" id="1_hen25"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1v7lf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rmc3d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5etmr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k3el8"]
+
+[node name="InputRecord" type="PanelContainer" unique_id=1334350745]
+custom_minimum_size = Vector2(500, 300)
+offset_right = 500.0
+offset_bottom = 307.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_force_pass_scroll_events = false
+script = ExtResource("1_hen25")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=817201334]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2003559292]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="InputRecordHeading" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1379971497]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Recording Input..."
+horizontal_alignment = 1
+
+[node name="InputDisplayHint" type="Button" parent="MarginContainer/VBoxContainer" unique_id=101736284]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 130)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+focus_neighbor_left = NodePath("../../../CancelButton")
+focus_neighbor_top = NodePath("../../../CancelButton")
+focus_neighbor_right = NodePath("../../../CancelButton")
+focus_neighbor_bottom = NodePath("../ConfirmNewInputButton")
+focus_next = NodePath("../ConfirmNewInputButton")
+focus_previous = NodePath("../../../CancelButton")
+theme_override_constants/icon_max_width = 70
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_1v7lf")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_rmc3d")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_5etmr")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_k3el8")
+action_mode = 0
+button_mask = 0
+icon_alignment = 1
+
+[node name="ConfirmNewInputButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=446655449]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_left = NodePath("../../../CancelButton")
+focus_neighbor_top = NodePath("../InputDisplayHint")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../../../CancelButton")
+focus_next = NodePath("../../../CancelButton")
+focus_previous = NodePath("../InputDisplayHint")
+text = "Confirm"
+
+[node name="CancelButton" type="Button" parent="." unique_id=340186907]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+offset_transform_enabled = true
+offset_transform_position = Vector2(8, 8)
+focus_neighbor_top = NodePath("../MarginContainer/VBoxContainer/ConfirmNewInputButton")
+focus_neighbor_right = NodePath("../MarginContainer/VBoxContainer/InputDisplayHint")
+focus_neighbor_bottom = NodePath("../MarginContainer/VBoxContainer/InputDisplayHint")
+focus_next = NodePath("../MarginContainer/VBoxContainer/InputDisplayHint")
+focus_previous = NodePath("../MarginContainer/VBoxContainer/ConfirmNewInputButton")
+text = "↩️Cancel"
+alignment = 0

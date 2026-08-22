@@ -39,6 +39,10 @@ const INPUT_BINDS_SAVE_PATH := "controls.save"
 @onready var save_debounce_timer: Timer = %SaveDebounceTimer
 
 
+func save_input_to_settings(action_name: StringName, input_event: InputEvent) -> void:
+	if input_event != null:
+		INPUT_BINDS.remap_event_in_input_map(action_name, input_event)
+
 #region Input Settings
 func load_and_apply_settings_from_file() -> void:
 	print("[SettingsManager] Loading settings state from file and applying")

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c706g67wmabya"]
 
-[ext_resource type="Theme" uid="uid://1vj1tlr2y17u" path="res://ui/settings_screen/controls/controls_screen_theme.tres" id="1_3c4xr"]
 [ext_resource type="Script" uid="uid://dcx7lcx1syj5v" path="res://ui/settings_screen/controls/controls_settings_screen.gd" id="1_hrbp8"]
+[ext_resource type="PackedScene" uid="uid://bfs6ghb6e4xkl" path="res://ui/settings_screen/controls/input_record.tscn" id="2_3c4xr"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2yrbc"]
 
@@ -11,7 +11,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_3c4xr")
 theme_override_styles/panel = SubResource("StyleBoxEmpty_2yrbc")
 script = ExtResource("1_hrbp8")
 
@@ -334,37 +333,6 @@ unique_name_in_owner = true
 visible = false
 layout_mode = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="InputRecordOverlay" unique_id=1152401524]
-custom_minimum_size = Vector2(500, 300)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="MarginContainer" type="MarginContainer" parent="InputRecordOverlay/PanelContainer" unique_id=1061758214]
-layout_mode = 2
-theme_override_constants/margin_left = 2
-theme_override_constants/margin_top = 12
-theme_override_constants/margin_right = 2
-theme_override_constants/margin_bottom = 20
-
-[node name="VBoxContainer" type="VBoxContainer" parent="InputRecordOverlay/PanelContainer/MarginContainer" unique_id=1948912810]
-layout_mode = 2
-theme_override_constants/separation = 20
-
-[node name="InputRecordHeading" type="Label" parent="InputRecordOverlay/PanelContainer/MarginContainer/VBoxContainer" unique_id=1839777785]
-layout_mode = 2
-text = "Recording Input..."
-horizontal_alignment = 1
-
-[node name="InputDisplayHint" type="Label" parent="InputRecordOverlay/PanelContainer/MarginContainer/VBoxContainer" unique_id=980497576]
+[node name="InputRecord" parent="InputRecordOverlay" unique_id=1334350745 instance=ExtResource("2_3c4xr")]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_vertical = 3
-horizontal_alignment = 1
-
-[node name="ConfirmNewInputButton" type="Button" parent="InputRecordOverlay/PanelContainer/MarginContainer/VBoxContainer" unique_id=488702021]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "Confirm"
