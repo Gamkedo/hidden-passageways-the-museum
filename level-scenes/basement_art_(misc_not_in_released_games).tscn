@@ -50,9 +50,9 @@ size = Vector3(5, 1, 4)
 material = ExtResource("5_xaifo")
 
 [node name="sidewalk above ground, hard top" type="CSGBox3D" parent="." unique_id=820135251]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, -1.5, 6.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, -2.5, 5.5)
 material_override = ExtResource("5_u45lx")
-size = Vector3(24, 1, 25)
+size = Vector3(32, 1, 25)
 material = ExtResource("5_u45lx")
 
 [node name="EditorQuickTestGroup" parent="." unique_id=259214251 instance=ExtResource("7_lvdt1")]
