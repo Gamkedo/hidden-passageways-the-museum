@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://c0ug0wogf56tg" path="res://models/cyndrive_ships_ship.fbx" id="2_5t06w"]
 [ext_resource type="Environment" uid="uid://cesku5vcw05no" path="res://materials/museum_environment.tres" id="2_gbu3n"]
 [ext_resource type="PackedScene" uid="uid://bad4bwomkabyu" path="res://models/cyndrive_ships_silo.fbx" id="2_pw8xm"]
-[ext_resource type="Material" uid="uid://b17jmjmvd5bw2" path="res://materials/taxi-placeholder.tres" id="2_r54xu"]
 [ext_resource type="Script" uid="uid://bud6xyvo80vl3" path="res://scripts/click_link.gd" id="3_1bvp3"]
 [ext_resource type="Material" uid="uid://31x6objnfjff" path="res://materials/modern-museum/museum-modern-exterior-gray.tres" id="3_5dt3m"]
 [ext_resource type="Script" uid="uid://cl8kffkiyit6t" path="res://scripts/click_scene_change.gd" id="3_7mycd"]
@@ -65,6 +64,7 @@
 [ext_resource type="PackedScene" uid="uid://c4vtkvb04er8b" path="res://level-scenes/egg_challenge.tscn" id="62_x4vg3"]
 [ext_resource type="PackedScene" uid="uid://b7l0g2p16ot2u" path="res://entities-scene_prefabs/clouds.tscn" id="63_iit47"]
 [ext_resource type="PackedScene" uid="uid://chqeb335cf70u" path="res://entities-scene_prefabs/handrail.tscn" id="65_v80x0"]
+[ext_resource type="ArrayMesh" uid="uid://jg527adis7cp" path="res://models/taxi.vox.obj" id="66_fof07"]
 [ext_resource type="Material" uid="uid://ueafojuqehx8" path="res://materials/under_construction_stripes_3d.tres" id="66_v80x0"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_xteo1"]
@@ -429,11 +429,6 @@ material = ExtResource("3_h2yge")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5, -1.25, 0.25)
 size = Vector3(9, 1.5, 42.5)
 material = ExtResource("3_h2yge")
-
-[node name="Taxi" type="CSGBox3D" parent="Outdoors with Portal Taxi/Start Area" unique_id=280302966]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -13.5, 1, -15.5)
-size = Vector3(3.5, 3, 7)
-material = ExtResource("2_r54xu")
 
 [node name="entrance placeholder CSG" type="CSGBox3D" parent="Outdoors with Portal Taxi/Start Area" unique_id=429890971]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -1, 0.5)
@@ -1892,6 +1887,10 @@ transform = Transform3D(0.11348677, -0.48943377, -0.86462444, 0.9582357, 0.28384
 light_energy = 0.25
 light_specular = 0.0
 sky_mode = 1
+
+[node name="Taxi_vox" type="MeshInstance3D" parent="." unique_id=1145635676]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, -1, -10.5)
+mesh = ExtResource("66_fof07")
 
 [editable path="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook"]
 [editable path="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook"]
