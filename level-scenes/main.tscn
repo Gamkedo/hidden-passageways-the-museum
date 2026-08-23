@@ -489,7 +489,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.971012, -1.0000002, -30.549
 [node name="tree-big" parent="Outdoors with Portal Taxi" unique_id=1613927015 instance=ExtResource("17_4fg2q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.9307365, -1.0000005, -25.473526)
 
-[node name="Under Construction Wall2" type="CSGBox3D" parent="Outdoors with Portal Taxi" unique_id=811038154]
+[node name="Under Construction Taxi Wall" type="CSGBox3D" parent="Outdoors with Portal Taxi" unique_id=811038154]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39, 0.5, -35)
 material_override = ExtResource("66_v80x0")
 use_collision = true
@@ -1821,6 +1821,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.599998, -6, 38.9)
 
 [node name="handrail5" parent="Modern Musem (Dev Pods era Games)/Decorations" unique_id=574958099 instance=ExtResource("65_v80x0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.599998, -6, 38.9)
+
+[node name="Under Construction Filling Open Hole" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)" unique_id=1462739756]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.25, 0.5, 33)
+material_override = ExtResource("66_v80x0")
+use_collision = true
+size = Vector3(9, 3, 0.5)
 
 [node name="Classical Musem (HomeTeam era Games)" type="Node3D" parent="." unique_id=1957518699]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -27)
