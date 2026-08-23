@@ -1125,35 +1125,17 @@ polygon = PackedVector2Array(-1.5, 0, -1.5, 2.5, -1, 3.5, 0, 4, 1, 3.5, 1.5, 2.5
 depth = 2.0
 material = ExtResource("3_h2yge")
 
-[node name="FrontColumn" type="CSGCylinder3D" parent="CSG Blockout/Museum Classical (Oct 2019-mid 2025)" unique_id=2006035901]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 16.5)
-radius = 1.0
-height = 16.0
+[node name="Ionic_Column" parent="CSG Blockout/Museum Classical (Oct 2019-mid 2025)" unique_id=1313702386 instance=ExtResource("28_er4o0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -7, 16.5)
 
-[node name="FrontColumn2" type="CSGCylinder3D" parent="CSG Blockout/Museum Classical (Oct 2019-mid 2025)" unique_id=1259953913]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 16.5)
-radius = 1.0
-height = 16.0
+[node name="Ionic_Column2" parent="CSG Blockout/Museum Classical (Oct 2019-mid 2025)" unique_id=478444603 instance=ExtResource("28_er4o0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -7, 16.5)
 
-[node name="FrontColumn3" type="CSGCylinder3D" parent="CSG Blockout/Museum Classical (Oct 2019-mid 2025)" unique_id=510359819]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 16.5)
-radius = 1.0
-height = 16.0
+[node name="Ionic_Column3" parent="CSG Blockout/Museum Classical (Oct 2019-mid 2025)" unique_id=393240046 instance=ExtResource("28_er4o0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -7, 16.5)
 
-[node name="FrontColumn4" type="CSGCylinder3D" parent="CSG Blockout/Museum Classical (Oct 2019-mid 2025)" unique_id=1850783218]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 16.5)
-radius = 1.0
-height = 16.0
-
-[node name="FrontColumn5" type="CSGCylinder3D" parent="CSG Blockout/Museum Classical (Oct 2019-mid 2025)" unique_id=1297112122]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 16.5)
-radius = 1.0
-height = 16.0
-
-[node name="FrontColumn6" type="CSGCylinder3D" parent="CSG Blockout/Museum Classical (Oct 2019-mid 2025)" unique_id=823650826]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 16.5)
-radius = 1.0
-height = 16.0
+[node name="Ionic_Column4" parent="CSG Blockout/Museum Classical (Oct 2019-mid 2025)" unique_id=1104881799 instance=ExtResource("28_er4o0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, -7, 16.5)
 
 [node name="Node3D" type="Node3D" parent="CSG Blockout" unique_id=1149423350]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.5, 0, 32)
@@ -1500,11 +1482,11 @@ size_2d_override = Vector2i(512, 512)
 
 [node name="guidebook" parent="Guidebook Stand/Guidebook3d" unique_id=1630787135 instance=ExtResource("31_oa8v2")]
 
-[node name="Book" parent="Guidebook Stand/Guidebook3d/guidebook" index="0" unique_id=405780648]
+[node name="Book" parent="Guidebook Stand/Guidebook3d/guidebook" index="0" unique_id=1404423609]
 layers = 6
 cast_shadow = 0
 
-[node name="Pages" parent="Guidebook Stand/Guidebook3d/guidebook" index="1" unique_id=2104188923]
+[node name="Pages" parent="Guidebook Stand/Guidebook3d/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
 surface_material_override/0 = SubResource("StandardMaterial3D_v80x0")
@@ -1514,11 +1496,11 @@ transform = Transform3D(0.99572617, -6.976736e-08, 0.092355326, 0.07370379, 0.60
 
 [node name="guidebook" parent="Guidebook Stand/Guidebook3d2" unique_id=914161945 instance=ExtResource("31_oa8v2")]
 
-[node name="Book" parent="Guidebook Stand/Guidebook3d2/guidebook" index="0" unique_id=405780648]
+[node name="Book" parent="Guidebook Stand/Guidebook3d2/guidebook" index="0" unique_id=1404423609]
 layers = 6
 cast_shadow = 0
 
-[node name="Pages" parent="Guidebook Stand/Guidebook3d2/guidebook" index="1" unique_id=2104188923]
+[node name="Pages" parent="Guidebook Stand/Guidebook3d2/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
 surface_material_override/0 = SubResource("StandardMaterial3D_1tes7")
@@ -1528,11 +1510,11 @@ transform = Transform3D(-0.9742656, -0.12668496, -0.18643428, 0.14209789, -0.987
 
 [node name="guidebook" parent="Guidebook Stand/Guidebook3d3" unique_id=962682289 instance=ExtResource("31_oa8v2")]
 
-[node name="Book" parent="Guidebook Stand/Guidebook3d3/guidebook" index="0" unique_id=405780648]
+[node name="Book" parent="Guidebook Stand/Guidebook3d3/guidebook" index="0" unique_id=1404423609]
 layers = 6
 cast_shadow = 0
 
-[node name="Pages" parent="Guidebook Stand/Guidebook3d3/guidebook" index="1" unique_id=2104188923]
+[node name="Pages" parent="Guidebook Stand/Guidebook3d3/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
 surface_material_override/0 = SubResource("StandardMaterial3D_ktaoq")
@@ -1791,9 +1773,6 @@ mesh = SubResource("QuadMesh_7tbbo")
 [node name="CollisionFrame" type="CollisionShape3D" parent="Dev Pods Game Pictures/Game Frame with Button - Gladiator Example" unique_id=409454442]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8146973e-06, 0.47500026, -0.125)
 shape = SubResource("BoxShape3D_y5qfa")
-
-[node name="Ionic_Column" parent="." unique_id=1313702386 instance=ExtResource("28_er4o0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -3)
 
 [node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1039440741]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.968307, 0.42840683, 27.523893)
