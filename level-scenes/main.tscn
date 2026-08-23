@@ -431,7 +431,7 @@ size = Vector3(9, 1.5, 42.5)
 material = ExtResource("3_h2yge")
 
 [node name="Taxi" type="CSGBox3D" parent="Outdoors with Portal Taxi/Start Area" unique_id=280302966]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.25, 1, -0.5)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -13.5, 1, -15.5)
 size = Vector3(3.5, 3, 7)
 material = ExtResource("2_r54xu")
 
@@ -493,6 +493,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.971012, -1.0000002, -30.549
 
 [node name="tree-big" parent="Outdoors with Portal Taxi" unique_id=1613927015 instance=ExtResource("17_4fg2q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.9307365, -1.0000005, -25.473526)
+
+[node name="Under Construction Wall2" type="CSGBox3D" parent="Outdoors with Portal Taxi" unique_id=811038154]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39, 0.5, -35)
+material_override = ExtResource("66_v80x0")
+use_collision = true
+size = Vector3(9, 3, 1)
 
 [node name="Modern Musem (Dev Pods era Games)" type="Node3D" parent="." unique_id=966479255]
 
