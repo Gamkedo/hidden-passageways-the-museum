@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dbsxcc7jt2qmd"]
 
 [ext_resource type="Script" uid="uid://bkor7ujax3vf1" path="res://entities-scene_prefabs/teleport_pad.gd" id="1_utihr"]
+[ext_resource type="ArrayMesh" uid="uid://dr3gbpogsacs4" path="res://models/teleport_pad_ring.glb" id="2_i2k4u"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_pjjmk"]
 height = 1.074
@@ -28,6 +29,18 @@ input_ray_pickable = false
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Teleport Area" unique_id=1108285571]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2506926, 0)
 shape = SubResource("CylinderShape3D_hltw1")
+
+[node name="TeleportPadRing1" type="MeshInstance3D" parent="." unique_id=549972313]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0060009956, -0.47782528, 0.08649206)
+mesh = ExtResource("2_i2k4u")
+
+[node name="TeleportPadRing2" type="MeshInstance3D" parent="." unique_id=1200957507]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0060009956, -0.47782528, 0.08649206)
+mesh = ExtResource("2_i2k4u")
+
+[node name="TeleportPadRing3" type="MeshInstance3D" parent="." unique_id=147218183]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0060009956, -0.47782528, 0.08649206)
+mesh = ExtResource("2_i2k4u")
 
 [connection signal="body_entered" from="Teleport Area" to="." method="_on_teleport_area_body_entered"]
 [connection signal="body_exited" from="Teleport Area" to="." method="_on_teleport_area_body_exited"]
