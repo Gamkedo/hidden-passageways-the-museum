@@ -11,10 +11,11 @@ const RING_TWEEN_DURATION = 0.3
 const RING_GAP = 0.8
 # const RING_TWEEN_DIFF = 0.1
 const DELAY_BETWEEN_RINGS = 0.2
-const DELAY_AFTER_RINGS = 10.6
+const DELAY_AFTER_RINGS = 0.6
 # const RING_ONE_MAX_HEIGHT = 3.5
 # const RING_TWO_MAX_HEIGHT = RING_ONE_MAX_HEIGHT - 2
 # const RING_THREE_MAX_HEIGHT = RING_TWO_MAX_HEIGHT - 2
+var teleport_glow = null
 
 func _ready():
 	# print('telepad "', name, '" ready')
@@ -23,6 +24,9 @@ func _ready():
 		self.get_child(4),
 		self.get_child(5),
 	]
+	
+	teleport_glow = self.get_child(6)
+	teleport_glow.hide()
 	pass
 	
 func get_char_controller(player):
@@ -48,7 +52,23 @@ func play_teleport_start_animation():
 		ring_stop_height -= RING_GAP
 		await get_tree().create_timer(DELAY_BETWEEN_RINGS).timeout
 	
+	teleport_glow.show()
+	print('glow should be visible')
 	await get_tree().create_timer(DELAY_AFTER_RINGS).timeout
+	pass
+	
+func play_teleport_end_animation():
+	rings.reverse()
+	for ring in rings:
+		create_tween().tween_property(
+		ring, 
+		'position',
+		Vector3(0, 0, 0),
+		RING_TWEEN_DURATION
+		)
+		await get_tree().create_timer(DELAY_BETWEEN_RINGS).timeout
+	
+	rings.reverse() # put the rings back in proper order for next time
 	pass
 
 func teleport(player):
@@ -56,6 +76,7 @@ func teleport(player):
 	var char_controller = get_char_controller(player)
 	char_controller.movement_enabled = false
 	# play a little cutscene...
+	dest_telepad.play_teleport_start_animation()
 	await play_teleport_start_animation()
 	# end little cutscene...
 	
@@ -63,11 +84,11 @@ func teleport(player):
 	# await get_tree().create_timer(1).timeout
 	player.global_position = (dest_telepad.global_position + Vector3(0, 0.5, 0))
 	char_controller.movement_enabled = true
+	teleport_glow.hide()
+	dest_telepad.teleport_glow.hide()
 	
-	# TODO: ending cutscene
-	for ring in rings:
-		ring.position = Vector3(0,0,0)
-		# ring.hide()
+	play_teleport_end_animation()
+	dest_telepad.play_teleport_end_animation()
 
 func _on_teleport_area_body_entered(body: Node3D) -> void:
 	if(body.name == "Player with UI"):

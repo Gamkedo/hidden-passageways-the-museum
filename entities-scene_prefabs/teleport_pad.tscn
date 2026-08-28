@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bkor7ujax3vf1" path="res://entities-scene_prefabs/teleport_pad.gd" id="1_utihr"]
 [ext_resource type="ArrayMesh" uid="uid://dr3gbpogsacs4" path="res://models/teleport_pad_ring.glb" id="2_i2k4u"]
+[ext_resource type="Material" uid="uid://gatwpkkuaqht" path="res://materials/emissive_white.tres" id="3_dpapn"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_pjjmk"]
 height = 1.074
@@ -31,16 +32,39 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2506926, 0)
 shape = SubResource("CylinderShape3D_hltw1")
 
 [node name="TeleportPadRing1" type="MeshInstance3D" parent="." unique_id=549972313]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0060009956, -0.47782528, 0.08649206)
 mesh = ExtResource("2_i2k4u")
 
 [node name="TeleportPadRing2" type="MeshInstance3D" parent="." unique_id=1200957507]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0060009956, -0.47782528, 0.08649206)
 mesh = ExtResource("2_i2k4u")
 
 [node name="TeleportPadRing3" type="MeshInstance3D" parent="." unique_id=147218183]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0060009956, -0.47782528, 0.08649206)
 mesh = ExtResource("2_i2k4u")
+
+[node name="TeleportGlow" type="Node3D" parent="." unique_id=836039141]
+
+[node name="TeleportGlowWalls" type="CSGTorus3D" parent="TeleportGlow" unique_id=1109061946]
+transform = Transform3D(1, 0, 0, 0, 48.775208, 0, 0, 0, 1, 0, 1.7477512, 0)
+transparency = 0.6
+cast_shadow = 0
+inner_radius = 1.8
+outer_radius = 1.9
+material = ExtResource("3_dpapn")
+
+[node name="TeleportGlowFloor" type="CSGCylinder3D" parent="TeleportGlow" unique_id=1817020492]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.23049712, 0)
+transparency = 0.8
+cast_shadow = 0
+radius = 1.9
+height = 0.01
+material = ExtResource("3_dpapn")
+
+[node name="TeleportGlowCeiling" type="CSGCylinder3D" parent="TeleportGlow" unique_id=1666009874]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8304577, 0)
+transparency = 0.2
+cast_shadow = 0
+radius = 1.9
+height = 0.01
+material = ExtResource("3_dpapn")
 
 [connection signal="body_entered" from="Teleport Area" to="." method="_on_teleport_area_body_entered"]
 [connection signal="body_exited" from="Teleport Area" to="." method="_on_teleport_area_body_exited"]
