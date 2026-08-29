@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://models/spy_boat/river-spy-boat.glb" id="1_glb"]
+[ext_resource type="Material" path="res://models/spy_boat/hull_material.tres" id="2_hull"]
+
+[node name="RiverSpyBoat" type="Node3D"]
+
+[node name="river-spy-boat" parent="." instance=ExtResource("1_glb")]
+
+[node name="spyboat_hull" parent="river-spy-boat" index="0"]
+surface_material_override/0 = ExtResource("2_hull")
+
