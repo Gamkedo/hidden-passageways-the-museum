@@ -26,7 +26,6 @@ func _ready():
 	]
 	
 	teleport_glow = self.get_child(6)
-	teleport_glow.hide()
 	pass
 	
 func get_char_controller(player):
@@ -42,7 +41,7 @@ func play_teleport_start_animation():
 	# see [tween docs](https://docs.godotengine.org/en/4.7/classes/class_tween.html)
 	ring_stop_height = 3
 	for ring in rings:
-		ring.show()
+		# ring.show()
 		create_tween().tween_property(
 			ring, 
 			'position', 
@@ -52,12 +51,37 @@ func play_teleport_start_animation():
 		ring_stop_height -= RING_GAP
 		await get_tree().create_timer(DELAY_BETWEEN_RINGS).timeout
 	
-	teleport_glow.show()
-	print('glow should be visible')
+	# print('teleport_glow.material', teleport_glow.material)
+	create_tween().tween_property(
+		teleport_glow.material, 
+		'alpha', 
+		255, 
+		DELAY_AFTER_RINGS
+	)
+	create_tween().tween_property(
+		dest_telepad.teleport_glow.material, 
+		'alpha', 
+		255, 
+		DELAY_AFTER_RINGS
+	)
 	await get_tree().create_timer(DELAY_AFTER_RINGS).timeout
 	pass
 	
 func play_teleport_end_animation():
+	create_tween().tween_property(
+		teleport_glow.material, 
+		'albeto', 
+		0, 
+		DELAY_AFTER_RINGS
+	)
+	create_tween().tween_property(
+		dest_telepad.teleport_glow.material, 
+		'albeto', 
+		0, 
+		DELAY_AFTER_RINGS
+	)
+	await get_tree().create_timer(DELAY_AFTER_RINGS).timeout
+	
 	rings.reverse()
 	for ring in rings:
 		create_tween().tween_property(
@@ -84,8 +108,8 @@ func teleport(player):
 	# await get_tree().create_timer(1).timeout
 	player.global_position = (dest_telepad.global_position + Vector3(0, 0.5, 0))
 	char_controller.movement_enabled = true
-	teleport_glow.hide()
-	dest_telepad.teleport_glow.hide()
+	# teleport_glow.hide()
+	# dest_telepad.teleport_glow.hide()
 	
 	play_teleport_end_animation()
 	dest_telepad.play_teleport_end_animation()
