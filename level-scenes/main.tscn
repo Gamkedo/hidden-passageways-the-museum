@@ -1831,7 +1831,125 @@ size = Vector3(9, 3, 0.5)
 
 [node name="Foam Cards" type="Node3D" parent="Modern Musem (Dev Pods era Games)" unique_id=1135052670]
 
-[node name="Gladiator" parent="Modern Musem (Dev Pods era Games)/Foam Cards" unique_id=390590116 instance=ExtResource("11_fof07")]
+[node name="Supply & Siege" parent="Modern Musem (Dev Pods era Games)/Foam Cards" unique_id=390590116 instance=ExtResource("11_fof07")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.967323, -8.292906, 26.259157)
+page_text = "[b]Supply And Siege[/b] credits
+Developed Feb 8-June 28, 2026
+
+Project lead, core gameplay, player/unit controls, building placement and interactions, resource, stockpile, and inventory systems, gatherer/depot harvesting and drop-off systems, drag selection, item descriptions, PCG system, general UI coding and implementation, logistics system, including villager work assignment and prioritization, combat system prototype, woman character model and rigging, lumber camp modeling, Caelium refinery modeling, Trebuchet Modeling, rigging, and animating (unused), assorted asset integration and bug fixes, main menu, showcase level and UI: Alex M.
+
+Gatherer hut with mill rotation setup, stone deposit modeling and texturing, voice integration prototype (unused), metal resource node modeling and texturing, crystal models, textures, and animations, arrow and bow variant: Tyrone Harmon
+
+Style guide creation, UI art and layout, including top bar, menu items, resource icons, context menu, and building placement visuals, related UI images, trees modeling and texturing, male character modeling, rigging, and texturing, voice line options for all unit types (unused), font selection and integration: Mel Fitzgerald
+
+Handcart modeling and texturing, sword modeling and texturing, Storage Depot texturing: Jaqueline Aldana
+
+Menu music, voice sounds, ambience, mixing setup, sound variation support: Bex Rodriguez
+
+Gameplay music: Aaron Sherman
+
+Mining camp modeling and texturing, rock meshes (unused), berry bush modeling and texturing, grass modeling and texturing, bow and arrow variant modeling and texturing, sound effects, including GUI, coins, wood chop, and anvil strike, logo and icon mockup: Christer Kaitila
+
+Initial opponent AI prototype (unused), unit movement formations, wood icon improvements, unit selection fix: Cody McCarty
+
+Depleted resource removal, floating island component prototype (unused), unit health component prototype (unused): Ryan Gaillard
+
+Greyboxed map for player and enemy islands, base lore writing (shown in the main menu): lunaquarius
+
+Storage Depot modeling: Tyler Funk
+
+Health and damage functionality prototype (unused): Arty
+
+Pause screen: Marshall Sandoval-Clark
+
+Minimap prototype (unused), debug tool: Jshaun Hookumchand"
+
+[node name="Talon Solitaire" parent="Modern Musem (Dev Pods era Games)/Foam Cards" unique_id=338795286 instance=ExtResource("11_fof07")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 10.967323, -8.292906, 33.259155)
+page_text = "[b]Talon Solitaire[/b] credits
+Developed Sep 14 - Dec 14, 2025
+
+Project lead, deck spritesheet, owl art, red-kite art, feather card-back, animated tutorial on Title scene, UI navigation, dynamic resize dropzones, scaling for sharper card font, card border and experimental shadow, deal & rewind animations, allow same-colour easy-moves and show remaining, sound system & UI volume settings, quack easy-move sound, scoring snd high-score storage, Peek reveal hidden cards while keydown, test if 4 Kings tableau offer quick-win, tableau card reveal by flip on central axis, random X shift cards, long tableau handling & dodge for menu-button, stop card-click triggering abandoned & placing sounds, scrolling Credits, text for Help, utilities for test, bugfixing: Patrick McKeown
+
+Animated particle fx for good card placement on tableau and foundation, victory animation card-splosion!! on win, eagle art, crow art, card-back art (birds & waves), cloth background art, sound fx files for shuffle, card-pickup, card-placement, foundation-add, complete-foundation, game-win, button-press, eagle cry (invalid-move), owl hoot (rewind), and integrating sounds in game: Christer Kaitila (McFunkypants)
+
+When card(s) move invalid they animate back to where they started, and bugfix, Menu button on game, with navigation, Escape key to title, nvmrc file: Dan Dela Rosa
+
+Music wav, two versions of medallion to count easymoves: Noah Wizard
+
+Talons card-back design, and integration on spritesheet: Elizabeth McMahill (McMahem)
+
+Video and audio feedback from multiple game playthroughs: Philippe Vaillancourt (snowfrogdev)
+
+Soundfx for Peek, and integration in-game: Jason Timms (fizzybuzzybeezy)
+
+Edit and typo fixes in Readme: Mike DiGiovanni
+
+QA playtesters: Philippe Vaillancourt (snowfrogdev), Michael Avrie, Tim Sargent, Noah Wizard, Simone | ZilpioGaming, Jason Timms, Mike DiGiovanni, Dominic Beacham
+
+itch.io dimensions workaround: Chris DeLeon"
+
+[node name="Naous" parent="Modern Musem (Dev Pods era Games)/Foam Cards" unique_id=1661513122 instance=ExtResource("11_fof07")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 17.467323, -8.292906, 20.0067)
+page_text = "[b]Naous[/b] credits
+Developed July 6 - Jan 11, 2026
+
+Project Lead, core gameplay, main network multiplayer with related backend (including a few rewrites and countless bug fixes), character creation/selection, UI actions, status effects and stat systems, skill cooldowns, spells, global logging, stats manager, assorted integration, entity spawning, camera behavior, collisions, separating gameplay from physics, hub level design, ring of fire: Uraxii (Nicole-Brandon Paul)
+
+Project Co-lead, Lake Natalie environment, town details, archa enemy with animations, models (cliff, crystals, town buildings, dungeon meshes, boulders, foliage, crates, sculptures, cloth flags, rope buntings), environment textures (sky, sun, water, foliage, clouds, cliffs, rocks, mud, sand, wood, wall trim, pipes, decals, hand drawn effects), particle effects (splash, smoke, falling leaves, sand dust), windy cloth shader, moving clouds, waterfall effects, sounds (ambient wind, gem socket, spell fail, footsteps, melee combat, UI tones): Christer Kaitila
+
+Tutorial dungeon with related HUD/hotbar, Coalescence dungeon layout, tutorial sequence authoring (opening, plaza, miniboss, initial horde, clear boulder, enemy reveal, heal, allies backup), music integration with tutorial sequence, interactables, cursor targeting system, controller support, drag & drop inventory, item tooltips, interaction prompts, healthbars, base enemy logic, spellcasting fix, various bug fixes, title screen UI, server install documentation: Jesse Rupe
+
+Music (complete soundtrack, 6 songs), scripted dynamic layered music with transitions, music integration with gameplay, skip-friendly animated credits scene, title screen background scene and lore display, music options menu, weapons models (swords, polearm), various scripting and bug fixes: Michael Avrie
+
+Local testing support and related UI, early version of server/client world scene replication, client API, player spawn with camera control, initialization correction, packet manager, docker build fix: Justin Montgomery
+
+Player base model and materials with idle/walk/run animations, Moebius-style shader: Tyler Funk
+
+Edge detection shader, windy cloth shader double-sided fix, dungeon post processing setup: Liyi Zhang
+
+Quickstart guide (internal doc), ground material detection, client side data saving: Dávid Tóth
+
+Spell icons (fireball, ice, lightning, block, parry, wind, caduceus), deselect target sound: Chad Serrant
+
+Zoom scroll smoothing, prevented camera flipping: David Bates"
+
+[node name="Forgotten Road" parent="Modern Musem (Dev Pods era Games)/Foam Cards" unique_id=1036172686 instance=ExtResource("11_fof07")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 32.467323, -8.292906, 20.0067)
+page_text = "[b]Forgotten Road[/b] credits
+Developed Mar 9-Sep 7, 2025
+
+Project lead, core gameplay, character art, quest system, level design, pressure plate, enemies (art, code, behavior for standard types and boss), main pathfinding, quest authoring, transitions, shops, projectiles, time of day, trees, item drops, screen shake, most outside tiles, NPCs (old man, chuck, farmer, red), moveable crate, additional weather features: Vince McKeown
+
+Chef Gormondo NPC, gamepad support, UI polish, chickens, slash sprite, enemy spritesheet integration, foliage, street lamp, pathfinding error repair, intro narrative voiceover, background music, intro story text, particles, shadows, sounds (boss, chest, coins, steps), destructibles, buildings, logo, doors, main menu and credits screen: Christer \"McFunkypants\" Kaitila
+
+Sprite facing hookup, button/UI core code, animation glitch repair, heart health sprites, damage indicator tuning, pause toggle: Michael Monty
+
+Enemy spawn testing, various UI/text readability additions, weather refactor, shop implementation, additional pathfinding code, staff attack: Patrick McKeown
+
+Pathfinding debugging, addressed graphics culling issue, confirmation dialog, bug fixes for input and pause screen, linux compability: Randy \"oneseedfruit\" Tan Shaoxian
+
+Weapon durability system, UI layout tweaks, stamina, additional snow code, weather UI, assorted fixes: solfish
+
+Attack hitbox improvements, NPC interaction tip, stamina potion sprite, step sounds: Vaan Hope Khani
+
+Health potion (sprite, healing effect, drop table integration), linux compatibility fix: Gwyn Henry
+
+Merchant NPC: Jason Timms
+
+Building collision improvements, sprint key, map key: Ryan Closs
+
+Bush art with variations: Rodrigo Bonzerr Lopez
+
+Game save and load system: Ryan Gaillard
+
+Ghoul front facing art, potion sprites: Luis Montaña
+
+Two doctor NPCs and related quest beginnings: Michael Avrie
+
+Mute toggle: Ian Cherabier "
+
+[node name="Gladiator" parent="Modern Musem (Dev Pods era Games)/Foam Cards" unique_id=251340453 instance=ExtResource("11_fof07")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 31.5, 1, 20)
 page_text = "[b]Gladiator of the Golden House[/b] credits
 Developed Feb 8 - Jun 28, 2026
