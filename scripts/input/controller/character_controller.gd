@@ -323,6 +323,8 @@ func interaction_check():
 	print("interaction: ", result)
 	if result:
 		var hit = result.collider
+		if hit.has_method("text_to_display"):
+			print("testing text")
 		if hit.has_method("open_link"):
 			hit.open_link()
 		if hit.has_method("open_scene"):

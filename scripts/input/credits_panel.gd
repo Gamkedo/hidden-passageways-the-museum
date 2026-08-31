@@ -1,10 +1,10 @@
 extends Control
 
-func _ready() -> void:
-	pass
+@onready var text_on_panel = $Background/Text
 
-func _process(delta: float) -> void:
-	pass
+func show_text(text: String):
+	text_on_panel.text = text
+	show()
 
 func _on_close_button_pressed() -> void:
 	hide()

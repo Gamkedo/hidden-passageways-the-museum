@@ -62,7 +62,7 @@ Release mouse: Right click"
 fit_content = true
 scroll_active = false
 
-[node name="Credits Panel" type="Control" parent="UILayer" unique_id=148988463]
+[node name="CreditsPanel" type="Control" parent="UILayer" unique_id=148988463]
 visible = false
 layout_mode = 3
 anchors_preset = 0
@@ -70,7 +70,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_5b2aq")
 
-[node name="Background Panel" type="Panel" parent="UILayer/Credits Panel" unique_id=2048744356]
+[node name="Background" type="Panel" parent="UILayer/CreditsPanel" unique_id=2048744356]
 layout_mode = 0
 offset_left = 41.0
 offset_top = 71.0
@@ -78,7 +78,7 @@ offset_right = 1221.0
 offset_bottom = 678.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_etush")
 
-[node name="DetailsPage" type="RichTextLabel" parent="UILayer/Credits Panel/Background Panel" unique_id=104508702]
+[node name="Text" type="RichTextLabel" parent="UILayer/CreditsPanel/Background" unique_id=104508702]
 layout_mode = 0
 offset_left = 22.0
 offset_top = 19.0
@@ -123,7 +123,7 @@ Enemies refactored to reuse common base code: David Bates
 
 Play testing: Baguette"
 
-[node name="Close Button" type="Button" parent="UILayer/Credits Panel/Background Panel" unique_id=840335474]
+[node name="Close Button" type="Button" parent="UILayer/CreditsPanel/Background" unique_id=840335474]
 layout_mode = 0
 offset_left = 490.0
 offset_top = 541.0
@@ -209,4 +209,4 @@ cast_shadow = 0
 gi_mode = 2
 mesh = SubResource("CapsuleMesh_4v70m")
 
-[connection signal="pressed" from="UILayer/Credits Panel/Background Panel/Close Button" to="UILayer/Credits Panel" method="_on_close_button_pressed"]
+[connection signal="pressed" from="UILayer/CreditsPanel/Background/Close Button" to="UILayer/CreditsPanel" method="_on_close_button_pressed"]
