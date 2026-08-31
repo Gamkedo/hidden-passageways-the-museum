@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ce0uc3f7i1cxo"]
 
 [ext_resource type="Script" uid="uid://dragnfiluvlif" path="res://scripts/debug_details.gd" id="1_4v70m"]
-[ext_resource type="Script" uid="uid://4sa8jq0tlmnp" path="res://scripts/input/credits_panel.gd" id="1_5b2aq"]
+[ext_resource type="Script" uid="uid://4sa8jq0tlmnp" path="res://scripts/input/page_text_panel.gd" id="1_5b2aq"]
 [ext_resource type="Script" uid="uid://b5v2f557nsch4" path="res://entities-scene_prefabs/press_f_to_teleport.gd" id="1_bm1w4"]
 [ext_resource type="Script" uid="uid://bir504dnh2v0a" path="res://scripts/input/controller/character_controller.gd" id="1_jty3e"]
 [ext_resource type="Script" uid="uid://dsoaew313i5ei" path="res://scripts/fps_label.gd" id="1_ydgiv"]
@@ -62,7 +62,7 @@ Release mouse: Right click"
 fit_content = true
 scroll_active = false
 
-[node name="CreditsPanel" type="Control" parent="UILayer" unique_id=148988463]
+[node name="PageTextPanel" type="Control" parent="UILayer" unique_id=148988463]
 visible = false
 layout_mode = 3
 anchors_preset = 0
@@ -70,7 +70,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_5b2aq")
 
-[node name="Background" type="Panel" parent="UILayer/CreditsPanel" unique_id=2048744356]
+[node name="Background" type="Panel" parent="UILayer/PageTextPanel" unique_id=2048744356]
 layout_mode = 0
 offset_left = 41.0
 offset_top = 71.0
@@ -78,7 +78,7 @@ offset_right = 1221.0
 offset_bottom = 678.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_etush")
 
-[node name="Text" type="RichTextLabel" parent="UILayer/CreditsPanel/Background" unique_id=104508702]
+[node name="Text" type="RichTextLabel" parent="UILayer/PageTextPanel/Background" unique_id=104508702]
 layout_mode = 0
 offset_left = 22.0
 offset_top = 19.0
@@ -86,44 +86,9 @@ offset_right = 1160.0
 offset_bottom = 526.0
 theme_override_colors/default_color = Color(0.103743516, 0.10374353, 0.103743516, 1)
 bbcode_enabled = true
-text = "[b]Legend of Shadowtail[/b] credits
-Developed Nov 16 - Feb 8, 2026
+text = "placeholder text, shouldn't see this"
 
-Project lead, core gameplay, hopping enemy, dungeon west wing level design, camera system, healthbar, putting out lights, player states, attack cooldowns, hitbox system and related tuning, knockback, audio manager, skill check gating, light flickering, various team asset integration, light tweening: Michael Fewkes
-
-Traps (all types), tail hook shot, key/door/items, sneaking area, boss intro, final chase, decoration tiles, screenshake, checkpoint, alert effect, projectile deflection, death animations, room persistence, breakable walls and bridges, cloaking, idle tail motion, water with shader, credits screen, bonfire placement, additional level design polish, assorted fixes: Mark Guinn
-
-Lore and related opening scroll, dungeon layout / level design (mainly east wing), entrance room with dialog, ghost NPCs, dialog authoring, quest item art / placement / merchant / related gating behavior, slime enemy sprite, quest givers show item picture, environment decoration placement, map color variants, boss arrival message: Noah Wizard
-
-Dialog system including conditionals and game action support, dartmonk behaviors (including target leading, LOS, states) and related animation code, enemy movement smoothed, enemy navigation baking, mute toggle, feature flag support (internal use), invulnerability testing mode, internal feature examples: Philippe Vaillancourt
-
-Music (dungeon, sneak, boss approach, boss chase, menu and credits music), sounds (star throw, squirrel steps, star hits, sword slash, sword hit, grab, rock trap, dart trap, trap dart firing, blow dart, bat enemy, menu click), cutscene music timing: Aaron Sherman
-
-Player animations (idle, 4-way run and attack), sewer wall tileset, boss badger sprite, environment decoration art (lamp, bush, bonfire, trashcan, sewer grate, pipes), dartmonk animations, raccoon patrol behavior and art, bonfire dynamic flame effects, game logo, bat art, keys, acorn item and related UI, bush particles: Jakob Harris
-
-Cutscene support with animation and text scroll including action commands, reset on death, cutscene map triggers, instructions screen, lore screen improvements, initial player death animation: Dan Dela Rosa
-
-Ghost implementation (raccoon and dartmonk), ninja star, decorations (crate, barrell, rope, cracks), additional ninja squirrel sounds, tail segment sprites, player shadow, footprints effect, gamepad fixes toggle, bug fixes (bat health, player damage): Christer Kaitila
-
-Initial lore (part of core story, tea pot, animal family clan names, basis for dartmunk backstory), voice sounds (hurt, item consumption, weak/med/strong effort): Amanda Stanley
-
-Procedural player tail, initial player art draft, Ratrick the Plush decoration: Dávid Tóth
-
-Wall banners with 3 variations, bed roll, 6 decorative clutter piles, broken ladder, green praying statue, fancy water bowl, 3 door types (fancy, pointy, wood), 3 door lock sprites: Mel Fitzgerald
-
-Patrolling behavior and initial bat sprite: William Goddard
-
-Dynamic light shadows, pause menu with key: Durondal
-
-Sounds (switch trap, goblin smokey defeat, flame attack, flight, splash with variations): JohnasaurusArt
-
-Reddish orange tail whip particles: Owen Peery
-
-Enemies refactored to reuse common base code: David Bates
-
-Play testing: Baguette"
-
-[node name="Close Button" type="Button" parent="UILayer/CreditsPanel/Background" unique_id=840335474]
+[node name="Close Button" type="Button" parent="UILayer/PageTextPanel/Background" unique_id=840335474]
 layout_mode = 0
 offset_left = 490.0
 offset_top = 541.0
@@ -175,9 +140,10 @@ stream = ExtResource("3_io1g6")
 script = ExtResource("4_io1g6")
 target_body = NodePath("..")
 
-[node name="CharacterController" type="Node" parent="." unique_id=479219601 node_paths=PackedStringArray("target_node", "target_camera", "stair_step_ray_cast")]
+[node name="CharacterController" type="Node" parent="." unique_id=479219601 node_paths=PackedStringArray("page_text_panel", "target_node", "target_camera", "stair_step_ray_cast")]
 unique_name_in_owner = true
 script = ExtResource("1_jty3e")
+page_text_panel = NodePath("../UILayer/PageTextPanel")
 target_node = NodePath("..")
 target_camera = NodePath("../BodyCam")
 stair_step_ray_cast = NodePath("../RayCast3D")
@@ -209,4 +175,4 @@ cast_shadow = 0
 gi_mode = 2
 mesh = SubResource("CapsuleMesh_4v70m")
 
-[connection signal="pressed" from="UILayer/CreditsPanel/Background/Close Button" to="UILayer/CreditsPanel" method="_on_close_button_pressed"]
+[connection signal="pressed" from="UILayer/PageTextPanel/Background/Close Button" to="UILayer/PageTextPanel" method="_on_close_button_pressed"]

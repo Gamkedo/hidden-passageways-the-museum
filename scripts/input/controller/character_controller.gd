@@ -6,7 +6,9 @@ signal interact_started
 signal interact_stopped
 
 const RESET_POSITION_META: StringName = &"WorldFloor"
+const PageTextPanelClass = preload("res://scripts/input/page_text_panel.gd")
 
+@export var page_text_panel: PageTextPanelClass
 @export var target_node: CharacterBody3D
 @export var target_camera: Camera3D
 @export var stair_step_ray_cast: RayCast3D
@@ -324,7 +326,7 @@ func interaction_check():
 	if result:
 		var hit = result.collider
 		if hit.has_method("text_to_display"):
-			print("testing text")
+			page_text_panel.show_text(hit.text_to_display())
 		if hit.has_method("open_link"):
 			hit.open_link()
 		if hit.has_method("open_scene"):

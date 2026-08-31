@@ -348,36 +348,36 @@ albedo_texture = ExtResource("36_u5gq0")
 [sub_resource type="BoxShape3D" id="BoxShape3D_y5qfa"]
 size = Vector3(3.7, 2.3500001, 0.55)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_v80x0"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_fof07"]
 viewport_path = NodePath("../SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fof07"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1tes7"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_v80x0")
+albedo_texture = SubResource("ViewportTexture_fof07")
 roughness = 0.8
 texture_filter = 5
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_1tes7"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_8lwxr"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8lwxr"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ktaoq"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_1tes7")
+albedo_texture = SubResource("ViewportTexture_8lwxr")
 roughness = 0.8
 texture_filter = 5
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_ktaoq"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_ub3ge"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ub3ge"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_42c7c"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_ktaoq")
+albedo_texture = SubResource("ViewportTexture_ub3ge")
 roughness = 0.8
 texture_filter = 5
 
@@ -487,7 +487,42 @@ mesh = SubResource("SphereMesh_7tbbo")
 [node name="Credits Activator Example" type="StaticBody3D" parent="Outdoors with Portal Taxi" unique_id=259065010]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 0, -27.5)
 script = ExtResource("11_fof07")
-page_text = "This is example text"
+page_text = "[b]Legend of Shadowtail[/b] credits
+Developed Nov 16 - Feb 8, 2026
+
+Project lead, core gameplay, hopping enemy, dungeon west wing level design, camera system, healthbar, putting out lights, player states, attack cooldowns, hitbox system and related tuning, knockback, audio manager, skill check gating, light flickering, various team asset integration, light tweening: Michael Fewkes
+
+Traps (all types), tail hook shot, key/door/items, sneaking area, boss intro, final chase, decoration tiles, screenshake, checkpoint, alert effect, projectile deflection, death animations, room persistence, breakable walls and bridges, cloaking, idle tail motion, water with shader, credits screen, bonfire placement, additional level design polish, assorted fixes: Mark Guinn
+
+Lore and related opening scroll, dungeon layout / level design (mainly east wing), entrance room with dialog, ghost NPCs, dialog authoring, quest item art / placement / merchant / related gating behavior, slime enemy sprite, quest givers show item picture, environment decoration placement, map color variants, boss arrival message: Noah Wizard
+
+Dialog system including conditionals and game action support, dartmonk behaviors (including target leading, LOS, states) and related animation code, enemy movement smoothed, enemy navigation baking, mute toggle, feature flag support (internal use), invulnerability testing mode, internal feature examples: Philippe Vaillancourt
+
+Music (dungeon, sneak, boss approach, boss chase, menu and credits music), sounds (star throw, squirrel steps, star hits, sword slash, sword hit, grab, rock trap, dart trap, trap dart firing, blow dart, bat enemy, menu click), cutscene music timing: Aaron Sherman
+
+Player animations (idle, 4-way run and attack), sewer wall tileset, boss badger sprite, environment decoration art (lamp, bush, bonfire, trashcan, sewer grate, pipes), dartmonk animations, raccoon patrol behavior and art, bonfire dynamic flame effects, game logo, bat art, keys, acorn item and related UI, bush particles: Jakob Harris
+
+Cutscene support with animation and text scroll including action commands, reset on death, cutscene map triggers, instructions screen, lore screen improvements, initial player death animation: Dan Dela Rosa
+
+Ghost implementation (raccoon and dartmonk), ninja star, decorations (crate, barrell, rope, cracks), additional ninja squirrel sounds, tail segment sprites, player shadow, footprints effect, gamepad fixes toggle, bug fixes (bat health, player damage): Christer Kaitila
+
+Initial lore (part of core story, tea pot, animal family clan names, basis for dartmunk backstory), voice sounds (hurt, item consumption, weak/med/strong effort): Amanda Stanley
+
+Procedural player tail, initial player art draft, Ratrick the Plush decoration: Dávid Tóth
+
+Wall banners with 3 variations, bed roll, 6 decorative clutter piles, broken ladder, green praying statue, fancy water bowl, 3 door types (fancy, pointy, wood), 3 door lock sprites: Mel Fitzgerald
+
+Patrolling behavior and initial bat sprite: William Goddard
+
+Dynamic light shadows, pause menu with key: Durondal
+
+Sounds (switch trap, goblin smokey defeat, flame attack, flight, splash with variations): JohnasaurusArt
+
+Reddish orange tail whip particles: Owen Peery
+
+Enemies refactored to reuse common base code: David Bates
+
+Play testing: Baguette"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Outdoors with Portal Taxi/Credits Activator Example" unique_id=48719506]
 shape = SubResource("SphereShape3D_7tbbo")
@@ -1458,7 +1493,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_fof07")
+surface_material_override/0 = SubResource("StandardMaterial3D_1tes7")
 
 [node name="Guidebook3d2" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1034692829]
 transform = Transform3D(0.99572617, -6.976736e-08, 0.092355326, 0.07370379, 0.60259724, -0.79463464, -0.05565301, 0.7980456, 0.60002184, 0.33789635, 0.5955966, 0.11873436)
@@ -1472,7 +1507,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_8lwxr")
+surface_material_override/0 = SubResource("StandardMaterial3D_ktaoq")
 
 [node name="Guidebook3d3" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1679212863]
 transform = Transform3D(-0.9742656, -0.12668496, -0.18643428, 0.14209789, -0.98725104, -0.07172081, -0.1749714, -0.0963671, 0.979846, -0.58836937, 0.5955966, 0.11873436)
@@ -1486,7 +1521,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_ub3ge")
+surface_material_override/0 = SubResource("StandardMaterial3D_42c7c")
 
 [node name="Label3D" type="Label3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1183973093]
 transform = Transform3D(0.24000001, 0, 0, 0, 0.24000001, 0, 0, 0, 0.24000001, -0.07500076, 0.61191887, -0.31499863)
