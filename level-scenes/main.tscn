@@ -1869,7 +1869,108 @@ Skeleton character drafts, initial color palette suggestions: Jakob Harris
 Playtesting: Chris Anderson, Connor Fitzpatrick, TopHatCroat"
 
 [node name="Shadowtail" parent="Modern Musem (Dev Pods era Games)/Foam Cards" unique_id=1888298456 instance=ExtResource("11_fof07")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43, 1.2070946, 21.259157)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43, 1.2070946, 21.759157)
+
+[node name="Cyndrive" parent="Modern Musem (Dev Pods era Games)/Foam Cards" unique_id=1985646771 instance=ExtResource("11_fof07")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43, 1.2070946, 28.759157)
+page_text = "[b]Cyndrive Ships[/b] credits
+Developed Nov 23-Apr 19, 2026
+
+Project lead, core gameplay, time travel system, ship physics, controls, main enemy/boss AI behaviors, main story and dialog, weapons systems, black hole, minimap, main menu (galaxy and buttons), in-game UI, scenario design, lasers, tutorial and guide, sounds (lasers, thrusters, explosions, UI sounds), assorted bug fixes, optimizations: Dávid Tóth
+
+Rewindable explosions with particles, dubstep style music track, star nebulae background elements in starfield, main menu particle effects, missile (implementation, art), dialog system iteration with scrolling text, ship thruster particle effects, Orange Queen boss, bugfixes, optimizations: Christer Kaitila
+
+Feature system, 90s Big Beat Music inspired background track, chain lightning with bouncing electric attack, focused detailed and thorough pre-release playtesting with recorded videos, raw pre-alpha version playtest with recorded videos, god mode cheat, bugfixes: Philippe Vaillancourt
+
+Lore and story, character art, game icon, time slower, difficulty concept, initial character dialouge, 3d model of player carrier ship, Mr Mustle radar cone: Noah Wizard
+
+Explosive mine (implementation and visuals, recall support, laser/lightning interaction), time travel improvement, pause menu, raw pre-alpha version playtest, assorted fixes: Jalent (Jason W)
+
+Enemy droid skin and voxel model, ship booster effect and sound, sonar radar blips and radar system refactor, weapon energy system, bugfixes: Drew Finstrom
+
+Mr Mustle ship art, Dr Speedo Ship art, Orange Queen Ship art, Ancient Time traveling race color palette: Leooftheblack
+
+Gorgeous volume settings in pause menu, raw pre-alpha version playtest: Michael Avrie
+
+Acid style music track, pre-release version playtest: Attila Bányai@Black Cathedral(UK)
+
+Dynamic starfield shader for space background: Ryan Malm
+
+Itch page design, title logo: Tim Ruswick
+
+Asteroid models, pre-release version playtest: Grestyák Dominik
+
+Level 1 dialog, tutorial dialog extension with time slowing mechanic explanations: lunaquarius
+
+Detailed pre-release playtesting, lots of guidance and support: Chris Deleon
+
+Infinite ammo cheat, infinite boost cheats: Len Winkler
+
+Raw pre-alpha version playtest, pre-release version playtest, typos in readme: J Patrick McKeown
+
+Dialog system UI base and structures: Travis Barnette
+
+Additional playtesting: ArtyT, Connor Fitzpatrick, Dragon, Zoli, Dorka "
+
+[node name="King Arthur Tales of the Sword" parent="Modern Musem (Dev Pods era Games)/Foam Cards" unique_id=1506090099 instance=ExtResource("11_fof07")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43, 1.2070946, 38.759155)
+page_text = "[b]King Arthur Tales of the Sword[/b] credits
+Developed May 18-Oct 5, 2025
+
+Project lead, core gameplay, turn based combat system, character models/animations/implementation (players, enemies, bosses), core level design and decorative models (church, windmill, haybale, inn), 4 cutscenes, spells and items, profile pictures & names, tutorial, objective display, city dialogs and character icons, party and overworld main UI, camera collision, game over screen iterations, particle systems, audio integration, damage notifications, bug fixes and gameplay tuning: Dani Noble
+
+Combat interaction improvements, party member data storage between levels, common UI widgets (battle HUD, item shop, start menu, victory screen, dialog), pause with system screens, chest model, bug fixes (consumables, combat mode, save system, input guides): m0nkeybrain
+
+Post processing cross hatch brushed effect, iteration on crit hit and dodge handling, water surface and underwater effect, battle cooldown timer, distance render optimization, lightning iterations, assorted bug fixes (save, battle target selection, defend and retreat, dangling references, dialog, sky box, HUD, chests, animation issue): Justin Montgomery
+
+Enemy chase and navigation, overworld to combat and combat to overworld transitions, enemy spawn zone and related save data, sword model, attack and shield particle vfx: Christian Gabbianelli
+
+13 talking cat NPCs, Models and textures (castle, guard tower, lamppost, gate, ivy, arches, stones, house, fences, stone paths), 8 plants (incl. bonsai, brambles, roots, shrubbery), environment (courtyard, edge hiding), ambient audio integration, title screen logo: Christer Kaitila
+
+Common combat data (items, magic) and connected to techniques (unused), unified battle/item/magic system, multi-targeting, attack commands and targeting, ranged attack sequence improvements, overworld map iteration, bug fixes around Gideon and healing: Jonartis
+
+Soundtracks (battle, defeat, victory, overworld, town, cat song), settings menu, quest display, objective checks, music zone adjustments, audio bug fix: Stephanie Urch
+
+Quest distance UI system, Music zone placement, castle room, level landscape adjustments, sky tint solved, music levels: Sergey_UE
+
+Sounds (sword clashing, taking damage, chest opening, attack debuff, magic spawning, wind, rain, waves): Darius Bryson Gourdine
+
+Game over screen functionality: Ian Rich
+
+Enemy health bar, battle save data: Luis Montaña
+
+Player character collision fix, Lady of the Lake animation bug fix: Pierre NOEL
+
+Coblynau enemy model (unused): Tyler Funk
+
+Fixed cobblestone collisions: Simone | ZilpioGaming
+
+Building position fix: Bradley OFarrell
+
+Inkpot plugin (unused): Gwynim
+
+Playtesting: Michael Avrie "
+
+[node name="Cargo Bay" parent="Modern Musem (Dev Pods era Games)/Foam Cards" unique_id=186264061 instance=ExtResource("11_fof07")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 37.5, 1.2070946, 44.759155)
+page_text = "[b]Cargo Bay 5N-AFU[/b] credits
+Developed Mar 1-July 5, 2026
+
+Project lead, core gameplay, cargo tanker models, level and hanger design, charge pad, gate operation, scoring, damage functionality, player drone (incl. model), obstructed object display, decals, shader work (RSUV), filling station with animations: deepbluezen
+
+Background music: Philippe Vaillancourt
+
+Background cargo, gantry crane, slide/head-on collision test, scrape sound, head-on collision particle effect, menu: Chris DeLeon
+
+Head-on collision sound, scraping particle effect: Justin Chin
+
+Power source model and integration: Ian Cherabier
+
+Cargo collision sound, cargo UI tweaks, lighting adjustment, additional level design: Adeel Bashir
+
+Sounds (UI, assorted physical sounds): Connor Fitzpatrick
+
+Cargo fill zone functionality, cable decor: Catwingzz"
 
 [node name="Classical Musem (HomeTeam era Games)" type="Node3D" parent="." unique_id=1957518699]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -27)

@@ -10,6 +10,9 @@ size = Vector3(0.05, 1, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wehve"]
 albedo_texture = ExtResource("2_t2u88")
+emission_enabled = true
+emission_energy_multiplier = 0.5
+emission_texture = ExtResource("2_t2u88")
 uv1_scale = Vector3(2.235, 2.235, 2.235)
 uv1_offset = Vector3(0.02, -0.16, 0)
 
