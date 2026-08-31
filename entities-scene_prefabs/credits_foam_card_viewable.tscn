@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://c8tqx7x66ewpd"]
+
+[ext_resource type="Script" uid="uid://chle43jlfqxrx" path="res://scripts/input/display_text.gd" id="1_506bs"]
+[ext_resource type="Texture2D" uid="uid://bfbr05hoa2f7w" path="res://textures/team-credits-texture.jpg" id="2_t2u88"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_7tbbo"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_1e3mb"]
+size = Vector3(0.05, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wehve"]
+albedo_texture = ExtResource("2_t2u88")
+uv1_scale = Vector3(2.235, 2.235, 2.235)
+uv1_offset = Vector3(0.02, -0.16, 0)
+
+[node name="Credits Foam Card Viewable" type="StaticBody3D" unique_id=390590116]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+script = ExtResource("1_506bs")
+page_text = "[b]Legend of Shadowtail[/b] credits
+Developed Nov 16 - Feb 8, 2026
+
+Project lead, core gameplay, hopping enemy, dungeon west wing level design, camera system, healthbar, putting out lights, player states, attack cooldowns, hitbox system and related tuning, knockback, audio manager, skill check gating, light flickering, various team asset integration, light tweening: Michael Fewkes
+
+Traps (all types), tail hook shot, key/door/items, sneaking area, boss intro, final chase, decoration tiles, screenshake, checkpoint, alert effect, projectile deflection, death animations, room persistence, breakable walls and bridges, cloaking, idle tail motion, water with shader, credits screen, bonfire placement, additional level design polish, assorted fixes: Mark Guinn
+
+Lore and related opening scroll, dungeon layout / level design (mainly east wing), entrance room with dialog, ghost NPCs, dialog authoring, quest item art / placement / merchant / related gating behavior, slime enemy sprite, quest givers show item picture, environment decoration placement, map color variants, boss arrival message: Noah Wizard
+
+Dialog system including conditionals and game action support, dartmonk behaviors (including target leading, LOS, states) and related animation code, enemy movement smoothed, enemy navigation baking, mute toggle, feature flag support (internal use), invulnerability testing mode, internal feature examples: Philippe Vaillancourt
+
+Music (dungeon, sneak, boss approach, boss chase, menu and credits music), sounds (star throw, squirrel steps, star hits, sword slash, sword hit, grab, rock trap, dart trap, trap dart firing, blow dart, bat enemy, menu click), cutscene music timing: Aaron Sherman
+
+Player animations (idle, 4-way run and attack), sewer wall tileset, boss badger sprite, environment decoration art (lamp, bush, bonfire, trashcan, sewer grate, pipes), dartmonk animations, raccoon patrol behavior and art, bonfire dynamic flame effects, game logo, bat art, keys, acorn item and related UI, bush particles: Jakob Harris
+
+Cutscene support with animation and text scroll including action commands, reset on death, cutscene map triggers, instructions screen, lore screen improvements, initial player death animation: Dan Dela Rosa
+
+Ghost implementation (raccoon and dartmonk), ninja star, decorations (crate, barrell, rope, cracks), additional ninja squirrel sounds, tail segment sprites, player shadow, footprints effect, gamepad fixes toggle, bug fixes (bat health, player damage): Christer Kaitila
+
+Initial lore (part of core story, tea pot, animal family clan names, basis for dartmunk backstory), voice sounds (hurt, item consumption, weak/med/strong effort): Amanda Stanley
+
+Procedural player tail, initial player art draft, Ratrick the Plush decoration: Dávid Tóth
+
+Wall banners with 3 variations, bed roll, 6 decorative clutter piles, broken ladder, green praying statue, fancy water bowl, 3 door types (fancy, pointy, wood), 3 door lock sprites: Mel Fitzgerald
+
+Patrolling behavior and initial bat sprite: William Goddard
+
+Dynamic light shadows, pause menu with key: Durondal
+
+Sounds (switch trap, goblin smokey defeat, flame attack, flight, splash with variations): JohnasaurusArt
+
+Reddish orange tail whip particles: Owen Peery
+
+Enemies refactored to reuse common base code: David Bates
+
+Play testing: Baguette"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=970778370]
+transform = Transform3D(0.63, 0, 0, 0, 0.63, 0, 0, 0, 0.63, 0, 0.05, 0.05000019)
+shape = SubResource("SphereShape3D_7tbbo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=64660529]
+transform = Transform3D(0.19999999, 0, 0, 0, 0.44, 0, 0, 0, 0.44, -0.025000572, 0.05, 0.05000019)
+mesh = SubResource("BoxMesh_1e3mb")
+surface_material_override/0 = SubResource("StandardMaterial3D_wehve")
