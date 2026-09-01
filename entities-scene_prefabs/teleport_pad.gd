@@ -51,35 +51,37 @@ func play_teleport_start_animation():
 		ring_stop_height -= RING_GAP
 		await get_tree().create_timer(DELAY_BETWEEN_RINGS).timeout
 	
-	# print('teleport_glow.material', teleport_glow.material)
+	# print('teleport_glow.material albeto_color: ', 
+	# 	teleport_glow.material.albedo_color)
+		
 	create_tween().tween_property(
 		teleport_glow.material, 
-		'alpha', 
-		255, 
+		'albedo_color', 
+		Color(0, 1, 1, 1), 
 		DELAY_AFTER_RINGS
 	)
-	create_tween().tween_property(
-		dest_telepad.teleport_glow.material, 
-		'alpha', 
-		255, 
-		DELAY_AFTER_RINGS
-	)
+	#create_tween().tween_property(
+	#	dest_telepad.teleport_glow.material.albedo_color, 
+	#	'a', 
+	#	1, 
+	#	DELAY_AFTER_RINGS
+	#)
 	await get_tree().create_timer(DELAY_AFTER_RINGS).timeout
 	pass
 	
 func play_teleport_end_animation():
 	create_tween().tween_property(
 		teleport_glow.material, 
-		'albeto', 
-		0, 
+		'albedo_color', 
+		Color(1, 0, 1, 0), 
 		DELAY_AFTER_RINGS
 	)
-	create_tween().tween_property(
-		dest_telepad.teleport_glow.material, 
-		'albeto', 
-		0, 
-		DELAY_AFTER_RINGS
-	)
+	#create_tween().tween_property(
+	#	dest_telepad.teleport_glow.material, 
+	#	'albeto', 
+	#	0, 
+	#	DELAY_AFTER_RINGS
+	#)
 	await get_tree().create_timer(DELAY_AFTER_RINGS).timeout
 	
 	rings.reverse()
