@@ -41,7 +41,7 @@ mesh = ExtResource("2_i2k4u")
 mesh = ExtResource("2_i2k4u")
 
 [node name="TeleportGlowWalls" type="CSGTorus3D" parent="." unique_id=1109061946]
-transform = Transform3D(1, 0, 0, 0, 48.775208, 0, 0, 0, 1, 0, 1.7477512, 0)
+transform = Transform3D(1, 0, 0, 0, 33.775, 0, 0, 0, 1, 0, 1.7477512, 0)
 transparency = 0.6
 cast_shadow = 0
 inner_radius = 1.8
@@ -57,7 +57,7 @@ height = 0.01
 material = ExtResource("3_dpapn")
 
 [node name="TeleportGlowFloor" type="CSGCylinder3D" parent="TeleportGlowWalls" unique_id=1817020492]
-transform = Transform3D(1, 0, 0, 0, 0.020502219, 0, 0, 0, 1, 0, -0.031107076, 0)
+transform = Transform3D(1, 0, 0, 0, 0.020502219, 0, 0, 0, 1, 0, -0.042727564, 0)
 transparency = 0.8
 cast_shadow = 0
 radius = 1.9

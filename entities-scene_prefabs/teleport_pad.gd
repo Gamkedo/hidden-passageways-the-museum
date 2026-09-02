@@ -26,6 +26,14 @@ func _ready():
 	]
 	
 	teleport_glow = self.get_child(6)
+	# duplicate the material & match all 3 pieces,
+	# this way _this_ teleport pad's material stays unique,
+	# but ceiling & floor will still match when material changes
+	var new_teleport_material = teleport_glow.material.duplicate()
+	teleport_glow.material = new_teleport_material
+	teleport_glow.get_child(0).material = new_teleport_material
+	teleport_glow.get_child(1).material = new_teleport_material
+	new_teleport_material.albedo_color = Color(1,0,1,0)
 	pass
 	
 func get_char_controller(player):
