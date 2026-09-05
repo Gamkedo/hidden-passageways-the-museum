@@ -427,8 +427,8 @@ size = Vector3(18, 4, 6)
 material = ExtResource("3_h2yge")
 
 [node name="road" type="CSGBox3D" parent="Outdoors with Portal Taxi/Start Area" unique_id=1427076619]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5, -1.25, 0.25)
-size = Vector3(9, 1.5, 42.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5, -1.25, -8)
+size = Vector3(9, 1.5, 26)
 material = ExtResource("3_h2yge")
 
 [node name="entrance placeholder CSG" type="CSGBox3D" parent="Outdoors with Portal Taxi/Start Area" unique_id=429890971]
@@ -454,7 +454,7 @@ debug_color = Color(0.9843728, 0, 0.34865567, 0.41960785)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.5, 52, -32)
 
 [node name="EggChallenge" parent="Outdoors with Portal Taxi" unique_id=1099479422 instance=ExtResource("62_x4vg3")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -43.559467, -1.6067085, -5.509506)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -43.559467, -1.6067085, -21.009506)
 
 [node name="egg" parent="Outdoors with Portal Taxi" unique_id=641449275 instance=ExtResource("61_xub5d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.93178, 0.50247455, -36.66358)
@@ -1782,6 +1782,217 @@ transform = Transform3D(0.42261824, 0, -0.90630776, 0, 1, 0, 0.90630776, 0, 0.42
 [node name="railing6" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)" unique_id=73214226 instance=ExtResource("26_c6q64")]
 transform = Transform3D(-0.42261833, 0, 0.90630776, 0, 1, 0, 0.90630776, 0, 0.42261833, 1.5999966, -4.4, 2.2000008)
 
+[node name="Museum Modern (past year)2" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=1032704564]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -6.997822, 8.502747, 33.49996)
+material_override = SubResource("StandardMaterial3D_lahx7")
+size = Vector3(34, 21, 27)
+material = ExtResource("12_qi2ty")
+
+[node name="NegativeCube" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=1259124328]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006872177, -0.06893873, 0.060886383)
+material_override = ExtResource("3_euau4")
+operation = 2
+size = Vector3(32, 19, 25.091)
+material = ExtResource("12_qi2ty")
+
+[node name="NegativeCubeCeiling" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=1576584247]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02, 9.46, 0.06)
+material_override = ExtResource("3_euau4")
+operation = 2
+size = Vector3(32, 0.07, 25.091)
+material = ExtResource("12_4y16h")
+
+[node name="Front High Windows" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=1093955540]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 7.75, -12.750305)
+material_override = ExtResource("3_euau4")
+operation = 2
+size = Vector3(6, 1.5, 1.5)
+material = ExtResource("3_euau4")
+
+[node name="Front High Windows2" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=1943046142]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 7.75, -12.750305)
+material_override = ExtResource("3_euau4")
+operation = 2
+size = Vector3(6, 1.5, 1.5)
+material = ExtResource("3_euau4")
+
+[node name="Front High Windows3" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=447373144]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 7.75, -12.750305)
+material_override = ExtResource("3_euau4")
+operation = 2
+size = Vector3(6, 1.5, 1.5)
+material = ExtResource("3_euau4")
+
+[node name="Front High Windows4" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=321533559]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 7.75, -12.750305)
+material_override = ExtResource("3_euau4")
+operation = 2
+size = Vector3(6, 1.5, 1.5)
+material = ExtResource("3_euau4")
+
+[node name="BasementCarpet" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=1271931222]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012775421, -9.725386, 0.037239075)
+material_override = ExtResource("3_euau4")
+size = Vector3(32, 0.5, 25.090912)
+material = ExtResource("11_v6iic")
+
+[node name="UpperFloorRailing" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=2140294876]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1.6330957, 0.54100037)
+size = Vector3(20, 0.25, 13.5)
+material = ExtResource("3_5dt3m")
+
+[node name="UpperFloorRailing2" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/UpperFloorRailing" unique_id=1683432304]
+operation = 2
+size = Vector3(20.5, 0.5, 13)
+material = ExtResource("3_5dt3m")
+
+[node name="Upper Floor" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=31230578]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.00030517578)
+size = Vector3(32, 1, 25)
+material = ExtResource("5_qxgch")
+
+[node name="Upper Floor Hole" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=1419619641]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -0.25, 0.49969482)
+operation = 2
+size = Vector3(19, 1.5, 12)
+material = ExtResource("5_qxgch")
+
+[node name="StairsLeft" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=1544210562]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.499992, -1.5, 4.499695)
+size = Vector3(1, 2, 4)
+material = ExtResource("5_qxgch")
+
+[node name="StairsLeft2" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/StairsLeft" unique_id=973915194]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1, 0)
+size = Vector3(1, 2, 4)
+material = ExtResource("5_qxgch")
+
+[node name="StairsLeft3" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/StairsLeft" unique_id=1292498821]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -2, 0)
+size = Vector3(1, 2, 4)
+material = ExtResource("5_qxgch")
+
+[node name="StairsLeft4" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/StairsLeft" unique_id=518854865]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -3, 0)
+size = Vector3(1, 2, 4)
+material = ExtResource("5_qxgch")
+
+[node name="StairsRight" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=1271544466]
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, -9.500008, -1.5, 4.499695)
+size = Vector3(1, 2, 4)
+material = ExtResource("5_qxgch")
+
+[node name="Stairs2" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/StairsRight" unique_id=1853395096]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1, 0)
+size = Vector3(1, 2, 4)
+material = ExtResource("5_qxgch")
+
+[node name="Stairs3" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/StairsRight" unique_id=995461462]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -2, 0)
+size = Vector3(1, 2, 4)
+material = ExtResource("5_qxgch")
+
+[node name="Stairs4" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/StairsRight" unique_id=2006564698]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -3, 0)
+size = Vector3(1, 2, 4)
+material = ExtResource("5_qxgch")
+
+[node name="StairsCenter" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=398751819]
+transform = Transform3D(1.3311836e-07, 0, -1, 0, 1, 0, 1, 0, 1.3311836e-07, -0.5000076, -5.5, 1.9996948)
+size = Vector3(1, 2, 5)
+material = ExtResource("5_qxgch")
+
+[node name="Stairs2" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/StairsCenter" unique_id=1681708658]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1, 0)
+size = Vector3(1, 2, 6)
+material = ExtResource("5_qxgch")
+
+[node name="Stairs3" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/StairsCenter" unique_id=1424526319]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -2, 0)
+size = Vector3(1, 2, 7)
+material = ExtResource("5_qxgch")
+
+[node name="Stairs4" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/StairsCenter" unique_id=1654605456]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -3, 0)
+size = Vector3(1, 2, 8)
+material = ExtResource("5_qxgch")
+
+[node name="Stairs5" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/StairsCenter" unique_id=1472989748]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -3.5, 0)
+size = Vector3(1, 1, 9)
+material = ExtResource("5_qxgch")
+
+[node name="StairsCenterPlatform" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=23924101]
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, -0.5000076, -5, 4.499695)
+size = Vector3(11, 1, 4)
+material = ExtResource("5_qxgch")
+
+[node name="ColumnBackLeft" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=257284197]
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 9.499992, 0.5, 6.999695)
+size = Vector3(1, 20, 1)
+material = ExtResource("9_4h42u")
+
+[node name="ColumnBackRight" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=1255250222]
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, -10.500008, 0.5, 6.999695)
+size = Vector3(1, 20, 1)
+material = ExtResource("9_4h42u")
+
+[node name="ColumnFrontLeft2" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=978895288]
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 9.499992, 0.5, -6.000305)
+size = Vector3(1, 20, 1)
+material = ExtResource("9_4h42u")
+
+[node name="ColumnFrontRight2" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=911142586]
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, -10.500008, 0.5, -6.000305)
+size = Vector3(1, 20, 1)
+material = ExtResource("9_4h42u")
+
+[node name="Front Entrance Hole" type="CSGPolygon3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=2036305727]
+transform = Transform3D(-1, 0, 1.509958e-07, 0, 1, 0, -1.509958e-07, 0, -1, -3.8146973e-06, 0.5, -13.500004)
+operation = 2
+polygon = PackedVector2Array(-1.5, 0, -1.5, 2.5, -1, 3.5, 0, 4, 1, 3.5, 1.5, 2.5, 1.5, 0)
+depth = 2.0
+material = ExtResource("5_r54xu")
+
+[node name="Interior Wide OpeningNorthX" type="CSGPolygon3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=579601255]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 15.499996, 0.5, 0.4999962)
+operation = 2
+polygon = PackedVector2Array(-3.5, 0, -3.5, 2.5, -2, 4, 0, 4.5, 2, 4, 3.5, 2.5, 3.5, 0)
+depth = 2.0
+material = ExtResource("5_r54xu")
+
+[node name="Interior Wide OpeningSouthX" type="CSGPolygon3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=1377430579]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -17.000004, -9.5, 0.4999962)
+operation = 2
+polygon = PackedVector2Array(-3.5, 0, -3.5, 2.5, -2, 4, 0, 4.5, 2, 4, 3.5, 2.5, 3.5, 0)
+depth = 2.0
+material = ExtResource("5_r54xu")
+
+[node name="Interior Wide Opening Basement" type="CSGPolygon3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=1695969613]
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, -3.8146973e-06, -9.5, -13.55275)
+operation = 2
+polygon = PackedVector2Array(-3, 0, -3, 4, -2, 5, 1, 5, 2, 4, 2, 0)
+depth = 1.1
+material = ExtResource("5_r54xu")
+
+[node name="railing" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=2108678827 instance=ExtResource("26_c6q64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.099995, 0.49999994, 6.5)
+
+[node name="railing2" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=758037152 instance=ExtResource("26_c6q64")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 10.099995, 0.49999994, 2.5)
+
+[node name="railing3" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=1481674990 instance=ExtResource("26_c6q64")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -11.100004, 0.49999994, 2.5)
+
+[node name="railing4" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=1853829763 instance=ExtResource("26_c6q64")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, -8.742278e-08, 0, 1, -11.100004, 0.49999994, 6.5)
+
+[node name="railing5" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=2142668102 instance=ExtResource("26_c6q64")]
+transform = Transform3D(0.42261824, 0, -0.90630776, 0, 1, 0, 0.90630776, 0, 0.42261824, -2.6000042, -4.4, 2.2000008)
+
+[node name="railing6" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=1994481515 instance=ExtResource("26_c6q64")]
+transform = Transform3D(-0.42261833, 0, 0.90630776, 0, 1, 0, 0.90630776, 0, 0.42261833, 1.5999966, -4.4, 2.2000008)
+
 [node name="Decorations" type="Node3D" parent="Modern Musem (Dev Pods era Games)" unique_id=777535549]
 
 [node name="Extinguisher" parent="Modern Musem (Dev Pods era Games)/Decorations" unique_id=786241607 instance=ExtResource("53_mj7h6")]
@@ -1822,12 +2033,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.599998, -6, 38.9)
 
 [node name="handrail5" parent="Modern Musem (Dev Pods era Games)/Decorations" unique_id=574958099 instance=ExtResource("65_v80x0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.599998, -6, 38.9)
-
-[node name="Under Construction Filling Open Hole" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)" unique_id=1462739756]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.25, 0.5, 33)
-material_override = ExtResource("66_v80x0")
-use_collision = true
-size = Vector3(9, 3, 0.5)
 
 [node name="Foam Cards" type="Node3D" parent="Modern Musem (Dev Pods era Games)" unique_id=1135052670]
 
