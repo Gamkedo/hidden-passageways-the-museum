@@ -1,12 +1,7 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene format=3 uid="uid://fkn5drbqa225"]
 
-[ext_resource type="PackedScene" path="res://models/spy_boat/river-spy-boat.glb" id="1_glb"]
-[ext_resource type="Material" path="res://models/spy_boat/hull_material.tres" id="2_hull"]
+[ext_resource type="PackedScene" uid="uid://bt18xpdddf4th" path="res://models/spy_boat/river-spy-boat.glb" id="1_glb"]
 
-[node name="RiverSpyBoat" type="Node3D"]
+[node name="RiverSpyBoat" type="Node3D" unique_id=1002160800]
 
-[node name="river-spy-boat" parent="." instance=ExtResource("1_glb")]
-
-[node name="spyboat_hull" parent="river-spy-boat" index="0"]
-surface_material_override/0 = ExtResource("2_hull")
-
+[node name="river-spy-boat" parent="." unique_id=1169481327 instance=ExtResource("1_glb")]
