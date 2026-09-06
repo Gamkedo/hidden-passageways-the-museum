@@ -1,4 +1,5 @@
 extends Node3D
+class_name ClickLink
 
 const DEVPODS_COLLECTION := "https://itch.io/c/188585/"
 

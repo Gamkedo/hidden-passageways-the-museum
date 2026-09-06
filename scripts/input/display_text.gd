@@ -1,4 +1,5 @@
 extends StaticBody3D
+class_name DisplayText
 
 @export_multiline var page_text: String
 

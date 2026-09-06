@@ -1,4 +1,5 @@
-extends StaticBody3D
+extends Node3D
+class_name ClickSceneChange
 
 @export_file("*.tscn")
 var goto_scene: String = ""
