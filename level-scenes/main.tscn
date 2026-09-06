@@ -279,25 +279,9 @@ material = ExtResource("7_3lbo0")
 size = Vector2(10.380006, 10.380006)
 orientation = 1
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ewg6b"]
-shading_mode = 0
-albedo_texture = ExtResource("6_rlpi5")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ewmbl"]
-shading_mode = 0
-albedo_texture = ExtResource("9_vcgox")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4y16h"]
-shading_mode = 0
-albedo_texture = ExtResource("10_euau4")
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qi2ty"]
 shading_mode = 0
 albedo_texture = ExtResource("11_u03oo")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0m503"]
-shading_mode = 0
-albedo_texture = ExtResource("12_qxgch")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iixjk"]
 shading_mode = 0
@@ -306,14 +290,6 @@ albedo_texture = ExtResource("13_r54xu")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5dt3m"]
 shading_mode = 0
 albedo_texture = ExtResource("17_ifpan")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kl5ay"]
-shading_mode = 0
-albedo_texture = ExtResource("18_bib7n")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3lbo0"]
-shading_mode = 0
-albedo_texture = ExtResource("19_hgslh")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tbq01"]
 shading_mode = 0
@@ -1164,7 +1140,7 @@ script = ExtResource("58_oa8v2")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.5, 0, 33.5)
 
 [node name="Gladiator" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=799548543 instance=ExtResource("44_1tes7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0.7647941, -13.393093)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0.7647941, -13.393093)
 game_label = "Gladiator of the
 Golden House"
 button_link = "https://tarnishedmoth.itch.io/gladiator-of-the-golden-house"
@@ -1295,7 +1271,7 @@ painting_texture = ExtResource("28_fof07")
 button_texture = ExtResource("28_fof07")
 
 [node name="Cargo Bay" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=782905730 instance=ExtResource("44_1tes7")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8.376526, 0.7647941, 11.524845)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 9.876526, 0.7647941, 11.524845)
 game_label = "Cargo Bay
 5N-AFU"
 button_link = "https://devpods.itch.io/cargo-bay-5n-afu"
@@ -1320,50 +1296,233 @@ Cargo fill zone functionality, cable decor: Catwingzz"
 painting_texture = ExtResource("29_1tes7")
 button_texture = ExtResource("29_1tes7")
 
-[node name="Artillery Rampage" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=1993258165]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25, 1.25, 11.25)
-use_collision = true
-size = Vector3(3.5, 2.5, 1)
-material = ExtResource("6_q1lu7")
-script = ExtResource("3_1bvp3")
-url = "https://gamesalutes.itch.io/artillery-rampage"
+[node name="Artillery Rampage2" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=136909466 instance=ExtResource("44_1tes7")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.8765259, 0.7647941, 11.524845)
+game_label = "Artillery
+Rampage"
+button_link = "https://gamesalutes.itch.io/artillery-rampage"
+credits = "[b]Artillery Rampage[/b] credits
+Developed Feb 16-Jul 13, 2025
 
-[node name="painting" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures/Artillery Rampage" unique_id=675816587]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
-cast_shadow = 0
-operation = 2
-size = Vector3(2.5, 1.5, 0.5)
-material = SubResource("StandardMaterial3D_ewg6b")
+Project lead, core gameplay, terrain (including procedural generation, destruction, fragmentation, randomization, smoothing), object damage and shattering, story mode systems, shop and upgrades with resources, shot mechanics including wind impact, tank gravity, spawning, difficulties, turn management, damage behaviors (wobble etc), AI opponents (including all major behavioral variations, names), water, save/load, gameplay timer, announcer one liners script and voiceover, bloom/nuke shaders, most edge modes (wrap, accelerate, sticky, none), round grading, game over detection, simultaneous fire mode improvements, additional weapon tuning, desert level, physics tuning, memory leak repairs, numerous bug fixes and contribution integration: Justin Montgomery
 
-[node name="Crash Em Up" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=2082509214]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.25, 1.25, 11.25)
-use_collision = true
-size = Vector3(3.5, 2.5, 1)
-material = ExtResource("6_q1lu7")
-script = ExtResource("3_1bvp3")
-url = "https://mdfewkes.itch.io/crash-em-up"
+Weapons Systems Lead (types, selection, explosions, nuke, flares, missiles, EMP, stats, upgrades), UI Lead (typing reveal, scrolling, ammo, tooltips, healthbars, options, key remap, pause logs, fine aiming, story map improvements, loading screen, upgrade screen additions), snowcaps level music, level design (snowy mountain, plateau, islands, divide, plains, factory), narrative randomization, theming and UI design (main menu, options, story sequence, tooltips, font), day/night, enemy units, pickup helicopter, sounds (turn change, most weapons, tank destroyed, rain), dust/smoke/rubble, wind and weather, simultaneous fire mode, action queue system, assorted audio integration, internal documentation, terrain depth tint, bouncing mode, bug fixes, terrain chunk fading, light balancing, various tuning: Michael Avrie
 
-[node name="painting" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures/Crash Em Up" unique_id=228317423]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
-cast_shadow = 0
-operation = 2
-size = Vector3(2.5, 1.5, 0.5)
-material = SubResource("StandardMaterial3D_ewmbl")
+House destructibility, laser visual and main functionality, weapon cycle key, laser variants, effect optimizations, laser wrap/elastic handling: Dan Dela Rosa
 
-[node name="Crazy Arena Chaos" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=376533062]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.75, 1.25, 11.25)
-use_collision = true
-size = Vector3(3.5, 2.5, 1)
-material = ExtResource("6_q1lu7")
-script = ExtResource("3_1bvp3")
-url = "https://christiangabbianelli.itch.io/crazy-arena-chaos"
+Trajectory dots, UI backgrounds, HUD icons, terrain textures and related support, scrolling sky, rock music for menu, announcer voices, explosion sprites, terrain outlines and crusts, artillery sprites, grass, ground burn, graphics fixes: Christer Kaitila
 
-[node name="painting" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures/Crazy Arena Chaos" unique_id=966413932]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
-cast_shadow = 0
-operation = 2
-size = Vector3(2.5, 1.5, 0.5)
-material = SubResource("StandardMaterial3D_4y16h")
+Elastic wall, sounds (small/medium explosions, laser, round win/loss, round start), additional sound integration: Vaan Hope Khani
+
+Parachute defense item (sprite and functionality), boat: Matt Ayme
+
+Environment sprites (missiles with variations, tree, rock with variations), game over and retry screens: Rodrigo Bonzerr S. Lopez
+
+Lightning system (first pass), burst ammo bug fix: George Carter
+
+Pause menu with Main Menu exit: Michael Tanner
+
+Lighthouse sprite: Owen \"Q-Bit\" Good
+
+Tree sprite variant: Chris DeLeon
+
+Playtesting: Meatball, kittykatmeowmeow"
+painting_texture = ExtResource("6_rlpi5")
+button_texture = ExtResource("6_rlpi5")
+
+[node name="Crash-Em-Up" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=2056044369 instance=ExtResource("44_1tes7")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -3.6234741, 0.7647941, 11.524845)
+game_label = "Crash-Em-Up"
+button_link = "https://mdfewkes.itch.io/crash-em-up"
+credits = "[b]Crash-Em-Up[/b] credits
+Developed Mar 1 - Jun 7, 2026
+
+Project lead, core gameplay, combat mechanics, enemy vehicle behavior, level wave authoring, impact knockback and spinout, wind effects, gameplay tuning, stun feature, assorted team asset integration and bug fixes: Michael Fewkes
+
+Player bounds, win/lose detection, tutorial, health UI, visual effects (explosion, sparks, damage smoke), main menu visual design, escape key support: Adeel Bashir
+
+Models with materials (garbage bin, electricity pole, mailboxes, bench, brownstone apartment), parking lots, main menu functionality, bounds fix: Santiago Morales
+
+Models (blue car, truck, sports car, player car, trees, fence), background scrolling and parallax, antenna wobble, building materials, engine pitch, grass, sky improvement, settings menu with save/load: Christer Kaitila
+
+Enemy spawner with level authoring support: Barış Köklü
+
+Gameplay song: Michael Avrie
+
+Boss vehicle design and related particles, tire smoke visual effect: Justin Chin
+
+Score counter (with timeout reset), end text, hit counter UI: Raymond Zegles
+
+Basic damage system: Dalton Charleston
+
+Crash sound effects: Connor Fitzpatrick"
+painting_texture = ExtResource("9_vcgox")
+button_texture = ExtResource("9_vcgox")
+
+[node name="Crazy Arena Chaos" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=226193816 instance=ExtResource("44_1tes7")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -10.623474, 0.7647941, 11.524845)
+game_label = "Crazy Arena
+Chaos"
+button_link = "https://christiangabbianelli.itch.io/crazy-arena-chaos"
+credits = "[b]Crazy Arena Chaos[/b] credits
+Developed Oct 5, 2025 - Mar 15, 2026
+
+Project lead, core gameplay, combat design, enemy AI (perception, states, director), player animations, hit reactions (incl. hit stop, flash, shake, knock back), level enemy group design/tuning, combos, weapon models (baton, swatter), brute enemy model and animations, attack traces, particle hit effects (sparks, chunks), weapon swapping, pickup system, game ending, level transitions, bolt currency/shop connections, enemy color/difficulty variations, ranged enemy projectile, hit recovery time, lava, spinning obstacle, optimizations to support lower system specs, gamepad support, bug fixing and team asset integration: Christian Gabbianelli
+
+Models (stadium, jumbotron, rocket thrower and projectiles, stadium light, saw blade, donut statue, crowd donuts, nuts and bolts), sounds (crowd, oofs, impacts, whoosh, swatter), decorative tech circles, pixelboard scrolling: Christer \"McFunkypants\" Kaitila
+
+Homing rocket, jumbotron integration, stadium night/day lightning, flamethrower damage, wall props, floor tiles, materials (holographic, rust, debris/decals), procedural crowd, sound integration (step, fire, bolt pickup): Cody McCarty
+
+Player character with texture, flamethrower model, flame vfx: Arnulfo Torres Valladares
+
+Landmine damage, bomb area of effect, enemy wave increase logic, exploding barrel, player defeat handling, enemy spawn fix, hazard damage multipliers, hazard active/inactive support: Dalton Charleston
+
+Shop interface, weapon inventory system, weapon size support, hammer weapon, shop button style, bolt pickups: BillR
+
+Enemy spawner, nav mesh setup, enemy rotation handling (tuning, movement/combat), blade spindown, swaying robot crowd: Justin Montgomery
+
+Projectile robot with animations, background models (box, building, crossing, decorative distant buildings), broken/dead robots: Dani Noble
+
+Main menu, wave/enemy counter, additional health styling, font selection, wallet UI, enemy idle animation fix: Ben Owens
+
+Battle music, laser sounds, flame sounds, crowd spatialization: Bex Rodriguez
+
+Exploding barrel (model, materials, implementation), mute support: Fahad Muntaz
+
+Player health system, health pickups, health pickup rotation and time out, health spawner, escape/P toggles pause: Sergey_UE
+
+Sounds (saw, explosion, health pickup, statomatic): Darius Bryson Gourdine
+
+Camera improvement, enemy collision fixes, look inversion support: TwstdTree
+
+Door and hatch functionality, test arena generator, rotating blade, landmine model: m0nkeybrain
+
+Health bar UI: Stephanie Urch
+
+Rocks models, menu restart and exit buttons: Arjuna Gonzales
+
+Drone sketch, outline shader: Andy King
+
+Hazard blade, early version of flamethrower and landmine: Pierre NOEL
+
+Shop blockout, caution door: Pepp Jeffcott
+
+Weapon flavor text and upgrade proposals: Noah Wizard
+
+Original backstory: rhys kim
+
+Spawn system and related interface: Simone | ZilpioGaming
+
+Playtesting: Alyson Dominguez, Kamil Towers, Matthew Landset, Chris Morrissey, Twmy, Eric Goldman, Timothy Sullivan, David MacNeil, Paul Ciccotto"
+painting_texture = ExtResource("10_euau4")
+button_texture = ExtResource("10_euau4")
+
+[node name="Planets Mobile" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=2144848996 instance=ExtResource("44_1tes7")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -15.429041, 0.7647941, 7.524845)
+game_label = "Planets
+Mobile"
+button_link = "https://numenorian.itch.io/planets-mobile"
+credits = "[b]Planets Mobile[/b] credits
+Developed June 15-Dec 7, 2025
+
+Project lead, core gameplay, computer players, gameplay UI and related indicators, tap controls, selection and orders, view scaling, main system for orbits and fleets, planet shadows, button styling, main menus, tuning, planet siege and capture, flag icon, optimizations, assorted bug fixing: Jonathan P
+
+Level design (Oculus, Tri-Lane, Radial Grid, Xiphosuran, Cosmic Bowtie, Hanaous, Black Hole, variants of Quadratic levels), music, level select paging and preview images, planet and fleet tweening, random song selection, level and orbit randomization, orbit offset support, populating asteroids, retrograde orbits, distant sounds (explosion, fleet merging), combat explosions, orbit bug fixes, siege resets if fleet leaves, ship count sprite contributions, post-release bugfixes: Michael Avrie
+
+Fleet splitting, star field, nebulae, mouse zoom, sun rendering with variants, fleet sprites, player icon, planet rings, sounds (menu, explosion, capture), ownership icons, planet effects, music variant, logo, performance improvements, scoreboard, turns UI, help screen coding, title screen decoration, volume settings, ship count sprite contributions, post-release bugfixes: Christer \"McFunkypants\" Kaitila
+
+Orbital fleet movement constrained, orbit adjacency connection changes, orbit change parameter, web audio integration for planet choice sound, pause button, button styling, pause menu layout fix, audio timing correction: Patrick McKeown
+
+Main menu options button, bug fixes (related to the the start of game turn, entity deselection, alert dialog, sound volume adjustment): Fahad Muntaz
+
+Playtest Feedback, help tutorial text, ship altered design and faction glow variations, ship count sprite contributions: Noah Wizard
+
+Camera size adjusts to screen size: Vince McKeown"
+painting_texture = ExtResource("19_hgslh")
+button_texture = ExtResource("19_hgslh")
+
+[node name="Orbs and Dash" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=1554197049 instance=ExtResource("44_1tes7")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -15.429041, 0.7647941, -8.975155)
+game_label = "Orbs and
+Dash"
+button_link = "https://iancher.itch.io/orbs-and-dash"
+credits = "[b]Orbs and Dash[/b] credits
+Developed Jun 22 - Dec 14, 2025
+
+Project lead, core gameplay, spline/orbs level format, level track design, main orbs and potions functionalities, player jump, shield effect, static & spinning wall art, recent damage safety blink, level selection, level 1-3 terrains, populated level 2 with forests and canyons, mystery spell visual, orb loss animation, potion explosions, story typewriter effect, sounds (explosion, shield, wall hit, acceleration), orb collection particles, progress reset, asset integration, assorted bug fixes: Ian Cherabier
+
+Game Design, Lava area + VFX, rolling enemy, menu design, potion bomb model, rare orb, wall model, crepuscular rays, input smoothing, acrylic tunnel, orb counter, tutorial, terrain smoothing, start/back/quit buttons and win/loss flow, shop bug fix, UI polish, round end summary, countdown code, intro plot setup, rare orb indicator in level selection menu: Adeel Bashir
+
+Pickups placement, checked flag and speed arrow art, forest + space level, schools of fish, finish line decoration, spin hazards, witch model and broom decorations, particles (orbs, oil drop, stars), player trail, sunrise skybox gradient, background rock/cloud mesh generator, audio integration: Christer Kaitila
+
+Potion bomb, orb collision detection improvements, pause menu, original script, speed scaling toggles: Justin Six
+
+Music (level tracks and menu): roy_kinson
+
+Player customization and shop menu, mystery spell, orb collection bug fix: egehanemre
+
+Sea stage skybox, end portal effects: Andy King
+
+Mystery spell visual and sound, acceleration platform, disappearing notifications, paralyze spell: Simone | ZilpioGaming
+
+Intro and endgame story with illustrations, 3-2-1-go sounds, space level track design, playtest: Noah Wizard
+
+Shield functionality and pickup: Justin Montgomery
+
+Orb collection sound: Rodrigo Bonzerr S. Lopez
+
+Main orb 3D asset: Luis Montaña
+
+UI timer script: Herleen
+
+M key to toggle mute: Dave Yoon
+
+Credits compilation, support: Chris DeLeon"
+painting_texture = ExtResource("18_bib7n")
+button_texture = ExtResource("18_bib7n")
+
+[node name="Everchange" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=369593650 instance=ExtResource("44_1tes7")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -6.929041, 0.7647941, -13.405556)
+game_label = "Everchange"
+button_link = "https://deep-rooted-games.itch.io/everchange"
+credits = "[b]Everchange[/b] credits
+Developed Sep 14-Feb 15, 2026
+
+Project lead, game design, environment art (statues, trees, buildings, floating platforms, roadways, dynamics obstacles, checkpoints, jump pad), in-game and menu UI with related art (including loading and credits), main story voice over, main narrative design, level and runner path layout (sky and ground areas): Iain \"Root\" Hurt
+
+Obstacle collision reload, checkpoint hookup and animated visual guide, input upgraded to the latest input system: Fahad Muntaz
+
+Tutorial tips and related trigger scripts with scene placement, menu button sound, footstep sounds, red artifact sound: Ian Cherabier
+
+Player free movement, menu music, racing rank detection, rubber banding, speed and trail lines, dust effects, intro flyby, sounds (glide, jump, grinding, wall run), speed fov, occlusion baking optimization, finish line, race stat tracking and related UI, pause menu: Christer \"McFunkypants\" Kaitila
+
+Green powerup, item script, player audio triggers and related error handling, pickup randomization support: Barış Köklü
+
+Enemy obstacle activation, gravity effect for computer runners, menu connections (play, options, sound, loading scene): Marvin Chong
+
+Tutorial tips and related trigger scripts with scene placement, menu button sound, footstep sounds, red artifact sound, character animation integration: Chris DeLeon
+
+Force jump waypoint, sky lighting effects, aurora sky box, support for song intro before loop: Clayton Anderson
+
+Player boost dash, red and blue activator areas with related functionality, UI boost meter, flight recharge, color correction, menu keyboard support, scene lighting improvements, reseting player position: Adeel Bashir
+
+Character (including model, texture, and animation authoring), font rendering fix: Liyi Zhang
+
+Gameplay music: Alan Zaring
+
+Menu Music: Aaron Sherman
+
+Glide limit on flight, mute toggle: Joshua Stuntzner
+
+Item pickup and spawning related particles, minor bug fixes: Justin Chin
+
+Pickup particle visuals, pickup particles connected for other items, item pickup sound incl. integration, credits/options hookups: Tim Ruswick
+
+Voice actress, additional narrative design: Ariane Perideaux
+
+Playtesting: Noah Wizardff"
+painting_texture = ExtResource("12_qxgch")
+button_texture = ExtResource("12_qxgch")
 
 [node name="Cyndrive Ships" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=1284891649]
 transform = Transform3D(-0.99925965, 0, 0.038473785, 0, 1, 0, -0.038473785, 0, -0.99925965, 50.922577, 1.25, -10.521889)
@@ -1379,21 +1538,6 @@ cast_shadow = 0
 operation = 2
 size = Vector3(2.5, 1.5, 0.5)
 material = SubResource("StandardMaterial3D_qi2ty")
-
-[node name="Everchange" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=2076412294]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5.783333, 1.25, -13.116669)
-use_collision = true
-size = Vector3(3.5, 2.5, 1)
-material = ExtResource("6_q1lu7")
-script = ExtResource("3_1bvp3")
-url = "https://deep-rooted-games.itch.io/everchange"
-
-[node name="painting" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures/Everchange" unique_id=564190632]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
-cast_shadow = 0
-operation = 2
-size = Vector3(2.5, 1.5, 0.5)
-material = SubResource("StandardMaterial3D_0m503")
 
 [node name="Forgotten Road" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=1563997844]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.216667, -8.25, -13.116669)
@@ -1424,36 +1568,6 @@ cast_shadow = 0
 operation = 2
 size = Vector3(2.5, 1.5, 0.5)
 material = SubResource("StandardMaterial3D_5dt3m")
-
-[node name="Orbs and Dash" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=1061899117]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -15.450001, 1.25, -7.549999)
-use_collision = true
-size = Vector3(3.5, 2.5, 1)
-material = ExtResource("6_q1lu7")
-script = ExtResource("3_1bvp3")
-url = "https://iancher.itch.io/orbs-and-dash"
-
-[node name="painting" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures/Orbs and Dash" unique_id=1746568817]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
-cast_shadow = 0
-operation = 2
-size = Vector3(2.5, 1.5, 0.5)
-material = SubResource("StandardMaterial3D_kl5ay")
-
-[node name="Planets Mobile" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=1953178221]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -15.450001, 1.25, 7.950001)
-use_collision = true
-size = Vector3(3.5, 2.5, 1)
-material = ExtResource("6_q1lu7")
-script = ExtResource("3_1bvp3")
-url = "https://numenorian.itch.io/planets-mobile"
-
-[node name="painting" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures/Planets Mobile" unique_id=1069114453]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
-cast_shadow = 0
-operation = 2
-size = Vector3(2.5, 1.5, 0.5)
-material = SubResource("StandardMaterial3D_3lbo0")
 
 [node name="Supply and Siege" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=1750601623]
 transform = Transform3D(-2.1855693e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855693e-07, 16.05, -8.25, -4.549999)
@@ -2260,206 +2374,6 @@ Raw pre-alpha version playtest, pre-release version playtest, typos in readme: J
 Dialog system UI base and structures: Travis Barnette
 
 Additional playtesting: ArtyT, Connor Fitzpatrick, Dragon, Zoli, Dorka "
-
-[node name="Artillery Rampage" parent="Modern Musem (Dev Pods era Games)/Foam Cards" unique_id=384147238 instance=ExtResource("11_fof07")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 31, 1.2070946, 45.093758)
-page_text = "[b]Artillery Rampage[/b] credits
-Developed Feb 16-Jul 13, 2025
-
-Project lead, core gameplay, terrain (including procedural generation, destruction, fragmentation, randomization, smoothing), object damage and shattering, story mode systems, shop and upgrades with resources, shot mechanics including wind impact, tank gravity, spawning, difficulties, turn management, damage behaviors (wobble etc), AI opponents (including all major behavioral variations, names), water, save/load, gameplay timer, announcer one liners script and voiceover, bloom/nuke shaders, most edge modes (wrap, accelerate, sticky, none), round grading, game over detection, simultaneous fire mode improvements, additional weapon tuning, desert level, physics tuning, memory leak repairs, numerous bug fixes and contribution integration: Justin Montgomery
-
-Weapons Systems Lead (types, selection, explosions, nuke, flares, missiles, EMP, stats, upgrades), UI Lead (typing reveal, scrolling, ammo, tooltips, healthbars, options, key remap, pause logs, fine aiming, story map improvements, loading screen, upgrade screen additions), snowcaps level music, level design (snowy mountain, plateau, islands, divide, plains, factory), narrative randomization, theming and UI design (main menu, options, story sequence, tooltips, font), day/night, enemy units, pickup helicopter, sounds (turn change, most weapons, tank destroyed, rain), dust/smoke/rubble, wind and weather, simultaneous fire mode, action queue system, assorted audio integration, internal documentation, terrain depth tint, bouncing mode, bug fixes, terrain chunk fading, light balancing, various tuning: Michael Avrie
-
-House destructibility, laser visual and main functionality, weapon cycle key, laser variants, effect optimizations, laser wrap/elastic handling: Dan Dela Rosa
-
-Trajectory dots, UI backgrounds, HUD icons, terrain textures and related support, scrolling sky, rock music for menu, announcer voices, explosion sprites, terrain outlines and crusts, artillery sprites, grass, ground burn, graphics fixes: Christer Kaitila
-
-Elastic wall, sounds (small/medium explosions, laser, round win/loss, round start), additional sound integration: Vaan Hope Khani
-
-Parachute defense item (sprite and functionality), boat: Matt Ayme
-
-Environment sprites (missiles with variations, tree, rock with variations), game over and retry screens: Rodrigo Bonzerr S. Lopez
-
-Lightning system (first pass), burst ammo bug fix: George Carter
-
-Pause menu with Main Menu exit: Michael Tanner
-
-Lighthouse sprite: Owen \"Q-Bit\" Good
-
-Tree sprite variant: Chris DeLeon
-
-Playtesting: Meatball, kittykatmeowmeow"
-
-[node name="Crash Em Up" parent="Modern Musem (Dev Pods era Games)/Foam Cards" unique_id=1318324822 instance=ExtResource("11_fof07")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 25.5, 1.2070946, 45.093758)
-page_text = "[b]Crash-Em-Up[/b] credits
-Developed Mar 1 - Jun 7, 2026
-
-Project lead, core gameplay, combat mechanics, enemy vehicle behavior, level wave authoring, impact knockback and spinout, wind effects, gameplay tuning, stun feature, assorted team asset integration and bug fixes: Michael Fewkes
-
-Player bounds, win/lose detection, tutorial, health UI, visual effects (explosion, sparks, damage smoke), main menu visual design, escape key support: Adeel Bashir
-
-Models with materials (garbage bin, electricity pole, mailboxes, bench, brownstone apartment), parking lots, main menu functionality, bounds fix: Santiago Morales
-
-Models (blue car, truck, sports car, player car, trees, fence), background scrolling and parallax, antenna wobble, building materials, engine pitch, grass, sky improvement, settings menu with save/load: Christer Kaitila
-
-Enemy spawner with level authoring support: Barış Köklü
-
-Gameplay song: Michael Avrie
-
-Boss vehicle design and related particles, tire smoke visual effect: Justin Chin
-
-Score counter (with timeout reset), end text, hit counter UI: Raymond Zegles
-
-Basic damage system: Dalton Charleston
-
-Crash sound effects: Connor Fitzpatrick"
-
-[node name="Crazy Arena" parent="Modern Musem (Dev Pods era Games)/Foam Cards" unique_id=191262580 instance=ExtResource("11_fof07")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 20, 1.2070946, 45.093758)
-page_text = "[b]Crazy Arena Chaos[/b] credits
-Developed Oct 5, 2025 - Mar 15, 2026
-
-Project lead, core gameplay, combat design, enemy AI (perception, states, director), player animations, hit reactions (incl. hit stop, flash, shake, knock back), level enemy group design/tuning, combos, weapon models (baton, swatter), brute enemy model and animations, attack traces, particle hit effects (sparks, chunks), weapon swapping, pickup system, game ending, level transitions, bolt currency/shop connections, enemy color/difficulty variations, ranged enemy projectile, hit recovery time, lava, spinning obstacle, optimizations to support lower system specs, gamepad support, bug fixing and team asset integration: Christian Gabbianelli
-
-Models (stadium, jumbotron, rocket thrower and projectiles, stadium light, saw blade, donut statue, crowd donuts, nuts and bolts), sounds (crowd, oofs, impacts, whoosh, swatter), decorative tech circles, pixelboard scrolling: Christer \"McFunkypants\" Kaitila
-
-Homing rocket, jumbotron integration, stadium night/day lightning, flamethrower damage, wall props, floor tiles, materials (holographic, rust, debris/decals), procedural crowd, sound integration (step, fire, bolt pickup): Cody McCarty
-
-Player character with texture, flamethrower model, flame vfx: Arnulfo Torres Valladares
-
-Landmine damage, bomb area of effect, enemy wave increase logic, exploding barrel, player defeat handling, enemy spawn fix, hazard damage multipliers, hazard active/inactive support: Dalton Charleston
-
-Shop interface, weapon inventory system, weapon size support, hammer weapon, shop button style, bolt pickups: BillR
-
-Enemy spawner, nav mesh setup, enemy rotation handling (tuning, movement/combat), blade spindown, swaying robot crowd: Justin Montgomery
-
-Projectile robot with animations, background models (box, building, crossing, decorative distant buildings), broken/dead robots: Dani Noble
-
-Main menu, wave/enemy counter, additional health styling, font selection, wallet UI, enemy idle animation fix: Ben Owens
-
-Battle music, laser sounds, flame sounds, crowd spatialization: Bex Rodriguez
-
-Exploding barrel (model, materials, implementation), mute support: Fahad Muntaz
-
-Player health system, health pickups, health pickup rotation and time out, health spawner, escape/P toggles pause: Sergey_UE
-
-Sounds (saw, explosion, health pickup, statomatic): Darius Bryson Gourdine
-
-Camera improvement, enemy collision fixes, look inversion support: TwstdTree
-
-Door and hatch functionality, test arena generator, rotating blade, landmine model: m0nkeybrain
-
-Health bar UI: Stephanie Urch
-
-Rocks models, menu restart and exit buttons: Arjuna Gonzales
-
-Drone sketch, outline shader: Andy King
-
-Hazard blade, early version of flamethrower and landmine: Pierre NOEL
-
-Shop blockout, caution door: Pepp Jeffcott
-
-Weapon flavor text and upgrade proposals: Noah Wizard
-
-Original backstory: rhys kim
-
-Spawn system and related interface: Simone | ZilpioGaming
-
-Playtesting: Alyson Dominguez, Kamil Towers, Matthew Landset, Chris Morrissey, Twmy, Eric Goldman, Timothy Sullivan, David MacNeil, Paul Ciccotto"
-
-[node name="Planets Mobile" parent="Modern Musem (Dev Pods era Games)/Foam Cards" unique_id=1372631991 instance=ExtResource("11_fof07")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 11, 1.2070946, 43.759155)
-page_text = "[b]Planets Mobile[/b] credits
-Developed June 15-Dec 7, 2025
-
-Project lead, core gameplay, computer players, gameplay UI and related indicators, tap controls, selection and orders, view scaling, main system for orbits and fleets, planet shadows, button styling, main menus, tuning, planet siege and capture, flag icon, optimizations, assorted bug fixing: Jonathan P
-
-Level design (Oculus, Tri-Lane, Radial Grid, Xiphosuran, Cosmic Bowtie, Hanaous, Black Hole, variants of Quadratic levels), music, level select paging and preview images, planet and fleet tweening, random song selection, level and orbit randomization, orbit offset support, populating asteroids, retrograde orbits, distant sounds (explosion, fleet merging), combat explosions, orbit bug fixes, siege resets if fleet leaves, ship count sprite contributions, post-release bugfixes: Michael Avrie
-
-Fleet splitting, star field, nebulae, mouse zoom, sun rendering with variants, fleet sprites, player icon, planet rings, sounds (menu, explosion, capture), ownership icons, planet effects, music variant, logo, performance improvements, scoreboard, turns UI, help screen coding, title screen decoration, volume settings, ship count sprite contributions, post-release bugfixes: Christer \"McFunkypants\" Kaitila
-
-Orbital fleet movement constrained, orbit adjacency connection changes, orbit change parameter, web audio integration for planet choice sound, pause button, button styling, pause menu layout fix, audio timing correction: Patrick McKeown
-
-Main menu options button, bug fixes (related to the the start of game turn, entity deselection, alert dialog, sound volume adjustment): Fahad Muntaz
-
-Playtest Feedback, help tutorial text, ship altered design and faction glow variations, ship count sprite contributions: Noah Wizard
-
-Camera size adjusts to screen size: Vince McKeown"
-
-[node name="Orbs and Dash" parent="Modern Musem (Dev Pods era Games)/Foam Cards" unique_id=1913211172 instance=ExtResource("11_fof07")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 11, 1.2070946, 28.259155)
-page_text = "[b]Orbs and Dash[/b] credits
-Developed Jun 22 - Dec 14, 2025
-
-Project lead, core gameplay, spline/orbs level format, level track design, main orbs and potions functionalities, player jump, shield effect, static & spinning wall art, recent damage safety blink, level selection, level 1-3 terrains, populated level 2 with forests and canyons, mystery spell visual, orb loss animation, potion explosions, story typewriter effect, sounds (explosion, shield, wall hit, acceleration), orb collection particles, progress reset, asset integration, assorted bug fixes: Ian Cherabier
-
-Game Design, Lava area + VFX, rolling enemy, menu design, potion bomb model, rare orb, wall model, crepuscular rays, input smoothing, acrylic tunnel, orb counter, tutorial, terrain smoothing, start/back/quit buttons and win/loss flow, shop bug fix, UI polish, round end summary, countdown code, intro plot setup, rare orb indicator in level selection menu: Adeel Bashir
-
-Pickups placement, checked flag and speed arrow art, forest + space level, schools of fish, finish line decoration, spin hazards, witch model and broom decorations, particles (orbs, oil drop, stars), player trail, sunrise skybox gradient, background rock/cloud mesh generator, audio integration: Christer Kaitila
-
-Potion bomb, orb collision detection improvements, pause menu, original script, speed scaling toggles: Justin Six
-
-Music (level tracks and menu): roy_kinson
-
-Player customization and shop menu, mystery spell, orb collection bug fix: egehanemre
-
-Sea stage skybox, end portal effects: Andy King
-
-Mystery spell visual and sound, acceleration platform, disappearing notifications, paralyze spell: Simone | ZilpioGaming
-
-Intro and endgame story with illustrations, 3-2-1-go sounds, space level track design, playtest: Noah Wizard
-
-Shield functionality and pickup: Justin Montgomery
-
-Orb collection sound: Rodrigo Bonzerr S. Lopez
-
-Main orb 3D asset: Luis Montaña
-
-UI timer script: Herleen
-
-M key to toggle mute: Dave Yoon
-
-Credits compilation, support: Chris DeLeon"
-
-[node name="Everchange" parent="Modern Musem (Dev Pods era Games)/Foam Cards" unique_id=1260819041 instance=ExtResource("11_fof07")]
-transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 18, 1.2070946, 20.021637)
-page_text = "[b]Everchange[/b] credits
-Developed Sep 14-Feb 15, 2026
-
-Project lead, game design, environment art (statues, trees, buildings, floating platforms, roadways, dynamics obstacles, checkpoints, jump pad), in-game and menu UI with related art (including loading and credits), main story voice over, main narrative design, level and runner path layout (sky and ground areas): Iain \"Root\" Hurt
-
-Obstacle collision reload, checkpoint hookup and animated visual guide, input upgraded to the latest input system: Fahad Muntaz
-
-Tutorial tips and related trigger scripts with scene placement, menu button sound, footstep sounds, red artifact sound: Ian Cherabier
-
-Player free movement, menu music, racing rank detection, rubber banding, speed and trail lines, dust effects, intro flyby, sounds (glide, jump, grinding, wall run), speed fov, occlusion baking optimization, finish line, race stat tracking and related UI, pause menu: Christer \"McFunkypants\" Kaitila
-
-Green powerup, item script, player audio triggers and related error handling, pickup randomization support: Barış Köklü
-
-Enemy obstacle activation, gravity effect for computer runners, menu connections (play, options, sound, loading scene): Marvin Chong
-
-Tutorial tips and related trigger scripts with scene placement, menu button sound, footstep sounds, red artifact sound, character animation integration: Chris DeLeon
-
-Force jump waypoint, sky lighting effects, aurora sky box, support for song intro before loop: Clayton Anderson
-
-Player boost dash, red and blue activator areas with related functionality, UI boost meter, flight recharge, color correction, menu keyboard support, scene lighting improvements, reseting player position: Adeel Bashir
-
-Character (including model, texture, and animation authoring), font rendering fix: Liyi Zhang
-
-Gameplay music: Alan Zaring
-
-Menu Music: Aaron Sherman
-
-Glide limit on flight, mute toggle: Joshua Stuntzner
-
-Item pickup and spawning related particles, minor bug fixes: Justin Chin
-
-Pickup particle visuals, pickup particles connected for other items, item pickup sound incl. integration, credits/options hookups: Tim Ruswick
-
-Voice actress, additional narrative design: Ariane Perideaux
-
-Playtesting: Noah Wizardff"
 
 [node name="Classical Musem (HomeTeam era Games)" type="Node3D" parent="." unique_id=1957518699]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -27)
