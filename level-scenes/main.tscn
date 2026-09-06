@@ -1188,7 +1188,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0.7647941, -13.393093)
 game_label = "Gladiator of the
 Golden House"
 button_link = "https://tarnishedmoth.itch.io/gladiator-of-the-golden-house"
-world_scene = "res://level-scenes/gladiator-of-the-golden-house/gotgh_portal.tscn"
+world_scene = "uid://bu5ybpneao340"
 credits = "[b]Gladiator of the Golden House[/b] credits
 Developed Feb 8 - Jun 28, 2026
 

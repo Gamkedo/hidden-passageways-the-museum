@@ -2,7 +2,7 @@ extends StaticBody3D
 
 @export_multiline var game_label: String = ""
 @export var button_link: String = ""
-@export var world_scene: String = ""
+@export_file("*.tscn") var world_scene: String = ""
 @export_multiline var credits: String = ""
 
 func _ready() -> void:
@@ -12,8 +12,13 @@ func _ready() -> void:
 	var click_link = get_node("Button Game") as ClickLink
 	click_link.url = button_link
 
-	var scene_change = get_node("CollisionFrame") as ClickSceneChange
-	scene_change.goto_scene = world_scene
-
 	var display = get_node("Foam Card") as DisplayText
 	display.page_text = credits
+
+func open_scene():
+	if world_scene.is_empty():
+		push_warning("Empty goto_scene property for open_scene. Configure in Inspector.")
+		return
+	
+	print("Changing scene (did file change?) to:", world_scene)
+	SceneManager.change_scene_to_file(world_scene)
