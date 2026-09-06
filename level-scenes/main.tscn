@@ -45,12 +45,14 @@
 [ext_resource type="Texture2D" uid="uid://c6rqykvgq5oni" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/supply-and-siege.png" id="20_lahx7"]
 [ext_resource type="Texture2D" uid="uid://r870n6ekjct4" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/talon.png" id="21_yqwtw"]
 [ext_resource type="PackedScene" uid="uid://o8idbyowpqvw" path="res://entities-scene_prefabs/railing.tscn" id="26_c6q64"]
+[ext_resource type="Texture2D" uid="uid://dlft5rt3mgqhu" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/gladiator-of-the-golden-house.png" id="26_v80x0"]
 [ext_resource type="PackedScene" uid="uid://bvln0oll5ttp0" path="res://entities-scene_prefabs/ionic_column.tscn" id="28_er4o0"]
 [ext_resource type="PackedScene" uid="uid://cqq8q3sgrg35b" path="res://ui/guidebook.tscn" id="30_nw8jh"]
 [ext_resource type="Texture2D" uid="uid://2432776vq113" path="res://textures/play-button-stand.png" id="31_nw8jh"]
 [ext_resource type="PackedScene" uid="uid://cxl7h3vtvfn66" path="res://models/guidebook.gltf" id="31_oa8v2"]
 [ext_resource type="ArrayMesh" uid="uid://cm2soemey2m52" path="res://models/play-button-stand.obj" id="32_oa8v2"]
 [ext_resource type="PackedScene" uid="uid://ccmjewtcqxp7" path="res://models/legend_of_shadowtails_ratrick_mesh.glb" id="33_hgslh"]
+[ext_resource type="Texture2D" uid="uid://cpakvdnl3rxxa" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/gladiator-framed-pic.png" id="36_u5gq0"]
 [ext_resource type="Script" uid="uid://cm6176wsxfdqx" path="res://entities-scene_prefabs/auto-tracklight.gd" id="43_0m503"]
 [ext_resource type="PackedScene" uid="uid://coqvyei5w8brk" path="res://game wall pictures/frame_button_credits.tscn" id="44_1tes7"]
 [ext_resource type="PackedScene" uid="uid://dbngi8xk7go57" path="res://models/tank_rampage_command_marine.tscn" id="53_gbu3n"]
@@ -304,9 +306,6 @@ albedo_texture = ExtResource("12_qxgch")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iixjk"]
 shading_mode = 0
 albedo_texture = ExtResource("13_r54xu")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yuneh"]
-albedo_texture = ExtResource("15_keiyw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5dt3m"]
 shading_mode = 0
@@ -1208,6 +1207,8 @@ Additional gameplay design: Dávid Tóth
 Skeleton character drafts, initial color palette suggestions: Jakob Harris
 
 Playtesting: Chris Anderson, Connor Fitzpatrick, TopHatCroat"
+painting_texture_big = ExtResource("36_u5gq0")
+button_texture = ExtResource("26_v80x0")
 
 [node name="Shadowtail" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=188421547 instance=ExtResource("44_1tes7")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 16.376526, 0.7647941, -9.393093)
@@ -1252,6 +1253,50 @@ Enemies refactored to reuse common base code: David Bates
 Play testing: Baguette	"
 painting_texture_big = ExtResource("16_rvyx8")
 button_texture = ExtResource("16_rvyx8")
+
+[node name="Shadowtail2" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=619818653 instance=ExtResource("44_1tes7")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 16.376526, 0.7647941, 7.606907)
+game_label = "King Arthur Tales
+of the Sword"
+button_link = "https://chaoticplay.itch.io/king-arthur-tales-of-the-sword"
+credits = "[b]King Arthur Tales of the Sword[/b] credits
+Developed May 18-Oct 5, 2025
+
+Project lead, core gameplay, turn based combat system, character models/animations/implementation (players, enemies, bosses), core level design and decorative models (church, windmill, haybale, inn), 4 cutscenes, spells and items, profile pictures & names, tutorial, objective display, city dialogs and character icons, party and overworld main UI, camera collision, game over screen iterations, particle systems, audio integration, damage notifications, bug fixes and gameplay tuning: Dani Noble
+
+Combat interaction improvements, party member data storage between levels, common UI widgets (battle HUD, item shop, start menu, victory screen, dialog), pause with system screens, chest model, bug fixes (consumables, combat mode, save system, input guides): m0nkeybrain
+
+Post processing cross hatch brushed effect, iteration on crit hit and dodge handling, water surface and underwater effect, battle cooldown timer, distance render optimization, lightning iterations, assorted bug fixes (save, battle target selection, defend and retreat, dangling references, dialog, sky box, HUD, chests, animation issue): Justin Montgomery
+
+Enemy chase and navigation, overworld to combat and combat to overworld transitions, enemy spawn zone and related save data, sword model, attack and shield particle vfx: Christian Gabbianelli
+
+13 talking cat NPCs, Models and textures (castle, guard tower, lamppost, gate, ivy, arches, stones, house, fences, stone paths), 8 plants (incl. bonsai, brambles, roots, shrubbery), environment (courtyard, edge hiding), ambient audio integration, title screen logo: Christer Kaitila
+
+Common combat data (items, magic) and connected to techniques (unused), unified battle/item/magic system, multi-targeting, attack commands and targeting, ranged attack sequence improvements, overworld map iteration, bug fixes around Gideon and healing: Jonartis
+
+Soundtracks (battle, defeat, victory, overworld, town, cat song), settings menu, quest display, objective checks, music zone adjustments, audio bug fix: Stephanie Urch
+
+Quest distance UI system, Music zone placement, castle room, level landscape adjustments, sky tint solved, music levels: Sergey_UE
+
+Sounds (sword clashing, taking damage, chest opening, attack debuff, magic spawning, wind, rain, waves): Darius Bryson Gourdine
+
+Game over screen functionality: Ian Rich
+
+Enemy health bar, battle save data: Luis Montaña
+
+Player character collision fix, Lady of the Lake animation bug fix: Pierre NOEL
+
+Coblynau enemy model (unused): Tyler Funk
+
+Fixed cobblestone collisions: Simone | ZilpioGaming
+
+Building position fix: Bradley OFarrell
+
+Inkpot plugin (unused): Gwynim
+
+Playtesting: Michael Avrie "
+painting_texture_big = ExtResource("15_keiyw")
+button_texture = ExtResource("15_keiyw")
 
 [node name="Artillery Rampage" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=1993258165]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25, 1.25, 11.25)
@@ -1357,21 +1402,6 @@ cast_shadow = 0
 operation = 2
 size = Vector3(2.5, 1.5, 0.5)
 material = SubResource("StandardMaterial3D_iixjk")
-
-[node name="King Arthur Tales of the Sword" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=101377219]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16.05, 1.25, 7.549999)
-use_collision = true
-size = Vector3(3.5, 2.5, 1)
-material = ExtResource("6_q1lu7")
-script = ExtResource("3_1bvp3")
-url = "https://chaoticplay.itch.io/king-arthur-tales-of-the-sword"
-
-[node name="painting" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures/King Arthur Tales of the Sword" unique_id=850616755]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25)
-cast_shadow = 0
-operation = 2
-size = Vector3(2.5, 1.5, 0.5)
-material = SubResource("StandardMaterial3D_yuneh")
 
 [node name="Naous" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=1990037658]
 transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, -6.450001, -8.25, -13.049999)
@@ -2223,45 +2253,6 @@ Raw pre-alpha version playtest, pre-release version playtest, typos in readme: J
 Dialog system UI base and structures: Travis Barnette
 
 Additional playtesting: ArtyT, Connor Fitzpatrick, Dragon, Zoli, Dorka "
-
-[node name="King Arthur Tales of the Sword" parent="Modern Musem (Dev Pods era Games)/Foam Cards" unique_id=1506090099 instance=ExtResource("11_fof07")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43, 1.2070946, 38.759155)
-page_text = "[b]King Arthur Tales of the Sword[/b] credits
-Developed May 18-Oct 5, 2025
-
-Project lead, core gameplay, turn based combat system, character models/animations/implementation (players, enemies, bosses), core level design and decorative models (church, windmill, haybale, inn), 4 cutscenes, spells and items, profile pictures & names, tutorial, objective display, city dialogs and character icons, party and overworld main UI, camera collision, game over screen iterations, particle systems, audio integration, damage notifications, bug fixes and gameplay tuning: Dani Noble
-
-Combat interaction improvements, party member data storage between levels, common UI widgets (battle HUD, item shop, start menu, victory screen, dialog), pause with system screens, chest model, bug fixes (consumables, combat mode, save system, input guides): m0nkeybrain
-
-Post processing cross hatch brushed effect, iteration on crit hit and dodge handling, water surface and underwater effect, battle cooldown timer, distance render optimization, lightning iterations, assorted bug fixes (save, battle target selection, defend and retreat, dangling references, dialog, sky box, HUD, chests, animation issue): Justin Montgomery
-
-Enemy chase and navigation, overworld to combat and combat to overworld transitions, enemy spawn zone and related save data, sword model, attack and shield particle vfx: Christian Gabbianelli
-
-13 talking cat NPCs, Models and textures (castle, guard tower, lamppost, gate, ivy, arches, stones, house, fences, stone paths), 8 plants (incl. bonsai, brambles, roots, shrubbery), environment (courtyard, edge hiding), ambient audio integration, title screen logo: Christer Kaitila
-
-Common combat data (items, magic) and connected to techniques (unused), unified battle/item/magic system, multi-targeting, attack commands and targeting, ranged attack sequence improvements, overworld map iteration, bug fixes around Gideon and healing: Jonartis
-
-Soundtracks (battle, defeat, victory, overworld, town, cat song), settings menu, quest display, objective checks, music zone adjustments, audio bug fix: Stephanie Urch
-
-Quest distance UI system, Music zone placement, castle room, level landscape adjustments, sky tint solved, music levels: Sergey_UE
-
-Sounds (sword clashing, taking damage, chest opening, attack debuff, magic spawning, wind, rain, waves): Darius Bryson Gourdine
-
-Game over screen functionality: Ian Rich
-
-Enemy health bar, battle save data: Luis Montaña
-
-Player character collision fix, Lady of the Lake animation bug fix: Pierre NOEL
-
-Coblynau enemy model (unused): Tyler Funk
-
-Fixed cobblestone collisions: Simone | ZilpioGaming
-
-Building position fix: Bradley OFarrell
-
-Inkpot plugin (unused): Gwynim
-
-Playtesting: Michael Avrie "
 
 [node name="Cargo Bay" parent="Modern Musem (Dev Pods era Games)/Foam Cards" unique_id=186264061 instance=ExtResource("11_fof07")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 37.5, 1.2070946, 45.093758)

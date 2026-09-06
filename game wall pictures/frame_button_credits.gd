@@ -9,9 +9,16 @@ extends StaticBody3D
 @export var button_texture: Texture2D
 
 func _ready() -> void:
-	$"BasicCurvyFrame Test/Painting Image".get_active_material(0).albedo_texture = painting_texture_big
-	$"Button Game/Button image".get_active_material(0).albedo_texture = button_texture
+	var painting_image := $"BasicCurvyFrame Test/Painting Image"
+	var material: StandardMaterial3D = painting_image.material_override.duplicate()
+	material.albedo_texture = painting_texture_big
+	painting_image.material_override = material
 
+	var button_image := $"Button Game/Button image"
+	material = button_image.material_override.duplicate()
+	material.albedo_texture = button_texture
+	button_image.material_override = material
+	
 	var button_label = get_node("Button Game/GameLabel") as Label3D
 	button_label.text = game_label
 
