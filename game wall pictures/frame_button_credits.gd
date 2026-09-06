@@ -1,3 +1,4 @@
+@tool
 extends StaticBody3D
 
 @export_multiline var game_label: String = ""
@@ -5,20 +6,37 @@ extends StaticBody3D
 @export_file("*.tscn") var world_scene: String = ""
 @export_multiline var credits: String = ""
 
-@export var painting_texture_big: Texture2D
+@export var painting_texture: Texture2D
 @export var button_texture: Texture2D
 
-func _ready() -> void:
+var was_painting_texture: Texture2D
+var was_button_texture: Texture2D
+
+func _process(_delta):
+	if painting_texture != was_painting_texture:
+		was_painting_texture = painting_texture
+		show_images_from_inspector()
+
+	if button_texture != was_button_texture:
+		was_button_texture = button_texture
+		show_images_from_inspector()
+
+func show_images_from_inspector():
 	var painting_image := $"BasicCurvyFrame Test/Painting Image"
-	var material: StandardMaterial3D = painting_image.material_override.duplicate()
-	material.albedo_texture = painting_texture_big
+	var material: StandardMaterial3D = StandardMaterial3D.new()
+	material.albedo_texture = painting_texture
+	material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
 	painting_image.material_override = material
 
 	var button_image := $"Button Game/Button image"
-	material = button_image.material_override.duplicate()
+	material = StandardMaterial3D.new()
 	material.albedo_texture = button_texture
+	material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
 	button_image.material_override = material
-	
+
+func _ready() -> void:
+	show_images_from_inspector()
+
 	var button_label = get_node("Button Game/GameLabel") as Label3D
 	button_label.text = game_label
 
