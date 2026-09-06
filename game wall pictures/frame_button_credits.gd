@@ -5,7 +5,13 @@ extends StaticBody3D
 @export_file("*.tscn") var world_scene: String = ""
 @export_multiline var credits: String = ""
 
+@export var painting_texture_big: Texture2D
+@export var button_texture: Texture2D
+
 func _ready() -> void:
+	$"BasicCurvyFrame Test/Painting Image".get_active_material(0).albedo_texture = painting_texture_big
+	$"Button Game/Button image".get_active_material(0).albedo_texture = button_texture
+
 	var button_label = get_node("Button Game/GameLabel") as Label3D
 	button_label.text = game_label
 
