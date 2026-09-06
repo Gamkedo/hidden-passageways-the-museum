@@ -297,13 +297,13 @@ func _handle_interact(is_pressed: bool) -> void:
 	interaction_check()
 	
 	## hook this back up when interactions are redone
-	#if is_pressed and not _is_interacting:
-		#_is_interacting = true
-		#interact_started.emit()
-	#else:
-		#if _is_interacting:
-			#interact_stopped.emit()
-		#_is_interacting = false
+	if is_pressed and not _is_interacting:
+		_is_interacting = true
+		interact_started.emit()
+	else:
+		if _is_interacting:
+			interact_stopped.emit()
+		_is_interacting = false
 
 ## adapted from old code
 func interaction_check():

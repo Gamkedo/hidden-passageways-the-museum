@@ -7,10 +7,17 @@
 [ext_resource type="Script" uid="uid://dsoaew313i5ei" path="res://scripts/fps_label.gd" id="1_ydgiv"]
 [ext_resource type="AudioStream" uid="uid://qfcqpxe6ua5w" path="res://audio/sound effects/LandingSound.wav" id="3_io1g6"]
 [ext_resource type="Script" uid="uid://doqquv1yr1ie7" path="res://scripts/player_audio_stream.gd" id="4_io1g6"]
+[ext_resource type="Script" uid="uid://it53133273b6" path="res://entities-scene_prefabs/interact_prompt_panel.gd" id="5_7gyvc"]
 [ext_resource type="Script" uid="uid://cq71t77ycqntx" path="res://scripts/stair_step_raycast.gd" id="6_ujqyo"]
+[ext_resource type="PackedScene" uid="uid://bdpdkco4xbv3s" path="res://entities-scene_prefabs/interaction/interaction_component.tscn" id="8_8vmao"]
+[ext_resource type="PackedScene" uid="uid://cgbexi4dcct87" path="res://entities-scene_prefabs/interaction/interaction_detector.tscn" id="10_7gyvc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_etush"]
 bg_color = Color(0.78352344, 0.78352344, 0.78352326, 1)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_3e5oy"]
+height = 3.0
+radius = 0.302
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jty3e"]
 margin = 0.07
@@ -28,6 +35,30 @@ floor_max_angle = 1.0471976
 [node name="UILayer" type="CanvasLayer" parent="." unique_id=1635546215]
 unique_name_in_owner = true
 
+[node name="InteractPromptPanel" type="PanelContainer" parent="UILayer" unique_id=2096313647 node_paths=PackedStringArray("interact_prompt_label", "interaction_component", "cursor_texture")]
+unique_name_in_owner = true
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 53.0
+offset_top = 334.0
+offset_right = 293.0
+offset_bottom = -320.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_7gyvc")
+interact_prompt_label = NodePath("InteractPromptText")
+interaction_component = NodePath("../../InteractionComponent")
+cursor_texture = NodePath("../CursorTexture")
+
+[node name="InteractPromptText" type="Label" parent="UILayer/InteractPromptPanel" unique_id=334901333]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 1
+text = "INTERACT PROMPT"
+vertical_alignment = 1
+
 [node name="Cursor (placeholder)" type="Label" parent="UILayer" unique_id=2025409343]
 anchors_preset = 8
 anchor_left = 0.5
@@ -43,6 +74,21 @@ grow_vertical = 2
 size_flags_horizontal = 4
 text = "+"
 horizontal_alignment = 1
+
+[node name="CursorTexture" type="TextureRect" parent="UILayer" unique_id=1036659128]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 5
 
 [node name="ControlsList" type="RichTextLabel" parent="UILayer" unique_id=1320377003]
 offset_right = 368.0
@@ -146,11 +192,15 @@ script = ExtResource("1_jty3e")
 page_text_panel = NodePath("../UILayer/PageTextPanel")
 target_node = NodePath("..")
 target_camera = NodePath("../BodyCam")
-stair_step_ray_cast = NodePath("../RayCast3D")
+stair_step_ray_cast = NodePath("../StairStepRaycast")
 interact_mask = 5
 metadata/_custom_type_script = "uid://bir504dnh2v0a"
 
-[node name="RayCast3D" type="RayCast3D" parent="." unique_id=2031723844 node_paths=PackedStringArray("input_controller")]
+[node name="InteractionComponent" parent="." unique_id=1669853540 node_paths=PackedStringArray("character_controller", "detector") instance=ExtResource("8_8vmao")]
+character_controller = NodePath("../CharacterController")
+detector = NodePath("../BodyCam/InteractionDetector")
+
+[node name="StairStepRaycast" type="RayCast3D" parent="." unique_id=2031723844 node_paths=PackedStringArray("input_controller")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1223687, -0.6091355)
 target_position = Vector3(0, -0.876, 0)
@@ -164,6 +214,14 @@ input_controller = NodePath("../CharacterController")
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9973092, 0)
 cull_mask = 1048573
+
+[node name="InteractionDetector" parent="BodyCam" unique_id=657966007 instance=ExtResource("10_7gyvc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.1830373)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BodyCam/InteractionDetector" unique_id=111845805]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, -0.42477357)
+shape = SubResource("CylinderShape3D_3e5oy")
+debug_color = Color(0.59906256, 0.32201234, 0.9554456, 0.41960785)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1548911228]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.021, 0)

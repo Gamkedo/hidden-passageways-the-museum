@@ -146,6 +146,7 @@ release_mouse={
 3d_physics/layer_1="Static"
 3d_physics/layer_2="Player"
 3d_physics/layer_3="Props"
+3d_physics/layer_4="Interaction"
 
 [physics]
 

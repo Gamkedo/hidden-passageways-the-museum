@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bdpdkco4xbv3s"]
+
+[ext_resource type="Script" uid="uid://38n2387fpmdh" path="res://entities-scene_prefabs/interaction/interaction_component.gd" id="1_dwss7"]
+
+[node name="InteractionComponent" type="Node" unique_id=1669853540]
+script = ExtResource("1_dwss7")

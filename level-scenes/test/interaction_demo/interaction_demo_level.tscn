@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://boomyylt7qwtj"]
+
+[ext_resource type="PackedScene" uid="uid://ce0uc3f7i1cxo" path="res://entities-scene_prefabs/player_with_ui.tscn" id="1_8drio"]
+[ext_resource type="PackedScene" uid="uid://dbsxcc7jt2qmd" path="res://entities-scene_prefabs/teleport_pad.tscn" id="2_ha7f6"]
+[ext_resource type="PackedScene" uid="uid://coqvyei5w8brk" path="res://game wall pictures/frame_button_credits.tscn" id="3_0ypw8"]
+[ext_resource type="PackedScene" uid="uid://c8tqx7x66ewpd" path="res://entities-scene_prefabs/credits_foam_card_viewable.tscn" id="4_pm4op"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ha7f6"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_taalm"]
+sky_material = SubResource("ProceduralSkyMaterial_ha7f6")
+
+[sub_resource type="Environment" id="Environment_0ypw8"]
+background_mode = 2
+sky = SubResource("Sky_taalm")
+
+[sub_resource type="GDScript" id="GDScript_3e5oy"]
+script/source = "extends InteractableObject
+
+
+func trigger_interaction() -> void:
+	print(\"This cube has been interacted with!\")
+"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3e5oy"]
+
+[sub_resource type="GDScript" id="GDScript_c8sum"]
+script/source = "extends InteractableObject
+
+
+func trigger_interaction() -> void:
+	print(\"The RPS label has been interacted with!\")
+"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c8sum"]
+size = Vector3(3.229004, 1.9598999, 1)
+
+[node name="InteractionDemoLevel" type="Node3D" unique_id=1306217087]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=588155612]
+environment = SubResource("Environment_0ypw8")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1239231944]
+transform = Transform3D(-0.9232102, -0.3328095, 0.19214763, 0, 0.49999997, 0.86602545, -0.38429528, 0.79952353, -0.46160507, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Node3D" type="Node3D" parent="." unique_id=1536558623]
+
+[node name="Floor" type="CSGBox3D" parent="Node3D" unique_id=393295167]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.066230774, -0.22314453, -0.8525133)
+autosmooth = true
+use_collision = true
+collision_mask = 3
+size = Vector3(39.2957, 0.55371094, 24.303368)
+
+[node name="WallBox" type="CSGBox3D" parent="Node3D/Floor" unique_id=1849193734]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.23, 0)
+size = Vector3(39.2957, 1.895874, 24.303368)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Node3D/Floor/WallBox" unique_id=17484472]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0504799, 0.32505322, 0.08493328)
+operation = 2
+size = Vector3(35.185074, 3.564209, 21.43715)
+
+[node name="Player with UI" parent="." unique_id=2066310668 instance=ExtResource("1_8drio")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.28520894, 0)
+
+[node name="Teleport Pad" parent="." unique_id=1306437297 node_paths=PackedStringArray("dest_telepad") instance=ExtResource("2_ha7f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.995077, 0.2502594, -4.992963)
+dest_telepad = NodePath("../Teleport Pad2")
+
+[node name="Teleport Pad2" parent="." unique_id=1474264974 node_paths=PackedStringArray("dest_telepad") instance=ExtResource("2_ha7f6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.995077, 0.2502594, 5.9397593)
+dest_telepad = NodePath("../Teleport Pad")
+
+[node name="Frame, Button, Credits" parent="." unique_id=799548543 instance=ExtResource("3_0ypw8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.57588, 1.3569059, -11.411035)
+
+[node name="Credits Foam Card Viewable" parent="." unique_id=390590116 instance=ExtResource("4_pm4op")]
+transform = Transform3D(7.1386037, 0, 8.849704, 0, 11.370001, 0, -8.849704, 0, 7.1386037, 15.906635, 2.070809, -10.293983)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=753385079]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.352912, 0.5856619, -10.736989)
+
+[node name="Area3D" type="Area3D" parent="CSGBox3D" unique_id=1299967279]
+collision_layer = 8
+collision_mask = 8
+input_ray_pickable = false
+script = SubResource("GDScript_3e5oy")
+interact_prompt = "Interact with Cube"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CSGBox3D/Area3D" unique_id=146348497]
+shape = SubResource("BoxShape3D_3e5oy")
+
+[node name="Label3D" type="Label3D" parent="." unique_id=299195125]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 18.044125, 1.2506509, 0.27974153)
+text = "Press to play Rock, Paper, Scissors!"
+
+[node name="Area3D" type="Area3D" parent="Label3D" unique_id=1902051391]
+collision_layer = 8
+collision_mask = 8
+input_ray_pickable = false
+script = SubResource("GDScript_c8sum")
+interact_prompt = "play Rock, Paper, Scissors"
+interaction_prompt_prefix = "Press to"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Label3D/Area3D" unique_id=1449774467]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.023682594, -0.08456421, 1.335144e-05)
+shape = SubResource("BoxShape3D_c8sum")
