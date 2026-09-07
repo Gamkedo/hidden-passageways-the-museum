@@ -30,6 +30,10 @@ window/size/viewport_height=720
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[global_group]
+
+Player=""
+
 [input]
 
 ui_accept={
@@ -146,7 +150,8 @@ release_mouse={
 3d_physics/layer_1="Static"
 3d_physics/layer_2="Player"
 3d_physics/layer_3="Props"
-3d_physics/layer_4="Interaction"
+3d_physics/layer_4="Interactable"
+3d_physics/layer_5="InteractablePosition"
 
 [physics]
 

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cgbexi4dcct87"]
 
-[ext_resource type="Script" uid="uid://cp3tay5ho6tcq" path="res://entities-scene_prefabs/interaction/interaction_detector.gd" id="1_artl6"]
+[ext_resource type="Script" uid="uid://cp3tay5ho6tcq" path="res://entities-scene_prefabs/interaction/detectors/interaction_detector.gd" id="1_artl6"]
 
 [node name="InteractionDetector" type="Area3D" unique_id=657966007]
 collision_layer = 8

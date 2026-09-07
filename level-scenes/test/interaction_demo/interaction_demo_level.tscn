@@ -3,7 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://ce0uc3f7i1cxo" path="res://entities-scene_prefabs/player_with_ui.tscn" id="1_8drio"]
 [ext_resource type="PackedScene" uid="uid://dbsxcc7jt2qmd" path="res://entities-scene_prefabs/teleport_pad.tscn" id="2_ha7f6"]
 [ext_resource type="PackedScene" uid="uid://coqvyei5w8brk" path="res://game wall pictures/frame_button_credits.tscn" id="3_0ypw8"]
+[ext_resource type="Texture2D" uid="uid://cyfidqioe344i" path="res://models/ratrick.png" id="4_4100s"]
 [ext_resource type="PackedScene" uid="uid://c8tqx7x66ewpd" path="res://entities-scene_prefabs/credits_foam_card_viewable.tscn" id="4_pm4op"]
+[ext_resource type="Texture2D" uid="uid://doim7pdujub31" path="res://icon.png" id="5_rdv17"]
+[ext_resource type="Script" uid="uid://bsmp4qaqn0uxw" path="res://entities-scene_prefabs/interaction/objects/interactable_area.gd" id="5_rq0w2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ha7f6"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -16,26 +19,185 @@ sky_material = SubResource("ProceduralSkyMaterial_ha7f6")
 background_mode = 2
 sky = SubResource("Sky_taalm")
 
-[sub_resource type="GDScript" id="GDScript_3e5oy"]
-script/source = "extends InteractableObject
+[sub_resource type="GDScript" id="GDScript_6fcnr"]
+script/source = "# Interactable Cube
+extends CSGBox3D
 
+# Very simple example
 
-func trigger_interaction() -> void:
-	print(\"This cube has been interacted with!\")
+@onready var cube_interactable: InteractableArea = %CubeInteractable
+
+func do_cube_thing() -> void:
+	print(\"Cube was interacted with!\")
+	var x_rotate := randf_range(0, 360)
+	var y_rotate := randf_range(0, 360)
+	var z_rotate := randf_range(0, 360)
+	rotation = Vector3(x_rotate, y_rotate, z_rotate)
+
+func _ready() -> void:
+	cube_interactable.interaction_complete.connect(do_cube_thing)
 "
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3e5oy"]
 
-[sub_resource type="GDScript" id="GDScript_c8sum"]
-script/source = "extends InteractableObject
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pm4op"]
+albedo_color = Color(0.17760001, 0.74, 0.32757333, 1)
+
+[sub_resource type="GDScript" id="GDScript_dwss7"]
+script/source = "# RockPaperScissors
+extends Label3D
+
+# Play Rock, Paper, Scissors!
+# Press to begin a timer and see if you can outwit the random number generator!
+
+enum RPS {ROCK, PAPER, SCISSORS}
+const BASE_TEXT: String = \"Press to play Rock, Paper, Scissors!\"
+const PLAYER_2_SLUG: String = \"I choose... \"
+
+@onready var rps_interactable: InteractableArea = %RPSInteractable
+@onready var rps_timer: Timer = %RPSTimer
+
+func play_rps() -> void:
+	print(\"Playing RPS!\")
+	
+	if rps_timer.time_left > 0:
+		rps_timer.stop()
+	
+	rps_timer.start()
+	rps_timer.paused = false
 
 
-func trigger_interaction() -> void:
-	print(\"The RPS label has been interacted with!\")
+func roll_and_display_option() -> void:
+	var random_selection := roll_random_option()
+	update_text_with_option(random_selection)
+
+func _process(_delta: float) -> void:
+	if not rps_timer.paused and rps_timer.time_left > 0:
+		var time_remaining: int = ceili(rps_timer.time_left)
+		var time_text: String = str(time_remaining)
+		append_text_with_base(time_text)
+
+
+func roll_random_option() -> int:
+	var random_selection := randi_range(0, RPS.values().size() - 1)
+	return random_selection
+
+
+func update_text_with_option(option: int) -> void:
+	var option_text = PLAYER_2_SLUG + get_text_for_option(option) + \"!\"
+	print(\"Updating label for option {\", option, \"} to: \", option_text)
+	append_text_with_base(option_text)
+
+
+func append_text_with_base(extra_text: String) -> void:
+	var new_text := BASE_TEXT
+	new_text += \"\\n\\n\\n\"
+	new_text += extra_text
+	text = new_text
+	
+
+func get_text_for_option(option: int) -> String:
+	var text_option: String
+	match option:
+		RPS.ROCK: text_option = \"Rock\"
+		RPS.PAPER: text_option = \"Paper\"
+		RPS.SCISSORS: text_option = \"Scissors\"
+	return text_option
+
+
+func clear_selection() -> void:
+	text = BASE_TEXT
+
+func _ready() -> void:
+	rps_interactable.interaction_complete.connect(play_rps)
+	rps_timer.timeout.connect(roll_and_display_option)
 "
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c8sum"]
 size = Vector3(3.229004, 1.9598999, 1)
+
+[sub_resource type="Shader" id="Shader_rdv17"]
+code = "shader_type spatial;
+
+uniform float fill_percent : hint_range(0.0, 1.0) = 0;
+uniform vec3 fill_color : source_color = vec3(1., 0., 0.);
+
+void vertex() {
+	// Called for every vertex the material is visible on.
+}
+
+void fragment() {
+	// Called for every pixel the material is visible on.
+	ALBEDO = step(UV.y, fill_percent) * fill_color;
+}
+
+//void light() {
+//	// Called for every pixel for every light affecting the material.
+//	// Uncomment to replace the default light processing function with this one.
+//}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4100s"]
+render_priority = 0
+shader = SubResource("Shader_rdv17")
+shader_parameter/fill_percent = 0.7710000366225
+shader_parameter/fill_color = Color(0.3764706, 0.48235294, 0.9019608, 1)
+
+[sub_resource type="GDScript" id="GDScript_04lax"]
+script/source = "# Cylinder Fill Up
+extends CSGCylinder3D
+
+# \"Fills\" the cylinder via a shader, linking it to the current interactable progress
+
+@export var fill_rate_scalar: float = 1.0
+
+@onready var liquid_fill_interactable: InteractableArea = %LiquidFillInteractable
+
+var is_filling: bool = false
+
+func fill_up_cylinder(delta: float) -> void:
+	var new_progress := liquid_fill_interactable.current_interaction_time + delta * fill_rate_scalar
+	liquid_fill_interactable.current_interaction_time = min(
+		new_progress,
+		liquid_fill_interactable.interaction_time
+	)
+	var current_progress := liquid_fill_interactable.get_current_interaction_progress()
+	set_shader_percent(current_progress)
+
+func drain_cylinder(delta: float) -> void:
+	var new_progress := liquid_fill_interactable.current_interaction_time - delta * fill_rate_scalar
+	liquid_fill_interactable.current_interaction_time = max(
+		new_progress,
+		0
+	)
+	var current_progress := liquid_fill_interactable.get_current_interaction_progress()
+	set_shader_percent(current_progress)
+
+func set_shader_percent(percent: float) -> void:
+	var shader_material: ShaderMaterial = material_overlay
+	if shader_material != null:
+		shader_material.set_shader_parameter(\"fill_percent\", percent)
+
+func _on_interact_started() -> void:
+	is_filling = true
+
+func _on_interact_stopped() -> void:
+	is_filling = false
+
+func _process(delta: float) -> void:
+	if is_filling:
+		fill_up_cylinder(delta)
+	else:
+		drain_cylinder(delta)
+
+func _ready() -> void:
+	liquid_fill_interactable.interaction_started.connect(_on_interact_started)
+	liquid_fill_interactable.interaction_stopped.connect(_on_interact_stopped)
+"
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_3e5oy"]
+height = 2.9372559
+radius = 0.94433594
 
 [node name="InteractionDemoLevel" type="Node3D" unique_id=1306217087]
 
@@ -46,20 +208,20 @@ environment = SubResource("Environment_0ypw8")
 transform = Transform3D(-0.9232102, -0.3328095, 0.19214763, 0, 0.49999997, 0.86602545, -0.38429528, 0.79952353, -0.46160507, 0, 0, 0)
 shadow_enabled = true
 
-[node name="Node3D" type="Node3D" parent="." unique_id=1536558623]
+[node name="WorldGeo" type="Node3D" parent="." unique_id=1536558623]
 
-[node name="Floor" type="CSGBox3D" parent="Node3D" unique_id=393295167]
+[node name="Floor" type="CSGBox3D" parent="WorldGeo" unique_id=393295167]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.066230774, -0.22314453, -0.8525133)
 autosmooth = true
 use_collision = true
 collision_mask = 3
 size = Vector3(39.2957, 0.55371094, 24.303368)
 
-[node name="WallBox" type="CSGBox3D" parent="Node3D/Floor" unique_id=1849193734]
+[node name="WallBox" type="CSGBox3D" parent="WorldGeo/Floor" unique_id=1849193734]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.23, 0)
 size = Vector3(39.2957, 1.895874, 24.303368)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="Node3D/Floor/WallBox" unique_id=17484472]
+[node name="CSGBox3D" type="CSGBox3D" parent="WorldGeo/Floor/WallBox" unique_id=17484472]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0504799, 0.32505322, 0.08493328)
 operation = 2
 size = Vector3(35.185074, 3.564209, 21.43715)
@@ -77,35 +239,89 @@ dest_telepad = NodePath("../Teleport Pad")
 
 [node name="Frame, Button, Credits" parent="." unique_id=799548543 instance=ExtResource("3_0ypw8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.57588, 1.3569059, -11.411035)
+game_label = "Interact Demo!"
+button_interact_text = "Click the button - I dare you"
+world_scene = "uid://boomyylt7qwtj"
+frame_interact_text = "Who is he..."
+credits = "- HE IS LEGEND -"
+painting_texture = ExtResource("4_4100s")
+button_texture = ExtResource("5_rdv17")
 
 [node name="Credits Foam Card Viewable" parent="." unique_id=390590116 instance=ExtResource("4_pm4op")]
 transform = Transform3D(7.1386037, 0, 8.849704, 0, 11.370001, 0, -8.849704, 0, 7.1386037, 15.906635, 2.070809, -10.293983)
+collision_layer = 0
+page_text = "Learn how to build your own interactable object in the \"Interact-README.md\" file!
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=753385079]
+Use the examples in this area for inspiration. You can even copy the node(s) and paste them into your own scene to give yourself a starting point!"
+
+[node name="InteractableCube" type="CSGBox3D" parent="." unique_id=753385079]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.352912, 0.5856619, -10.736989)
+script = SubResource("GDScript_6fcnr")
 
-[node name="Area3D" type="Area3D" parent="CSGBox3D" unique_id=1299967279]
+[node name="CubeInteractable" type="Area3D" parent="InteractableCube" unique_id=1723265568]
+unique_name_in_owner = true
 collision_layer = 8
 collision_mask = 8
 input_ray_pickable = false
-script = SubResource("GDScript_3e5oy")
-interact_prompt = "Interact with Cube"
+script = ExtResource("5_rq0w2")
+interact_prompt = "Interact with CUBE"
+metadata/_custom_type_script = "uid://bsmp4qaqn0uxw"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CSGBox3D/Area3D" unique_id=146348497]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractableCube/CubeInteractable" unique_id=146348497]
 shape = SubResource("BoxShape3D_3e5oy")
 
-[node name="Label3D" type="Label3D" parent="." unique_id=299195125]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 18.044125, 1.2506509, 0.27974153)
-text = "Press to play Rock, Paper, Scissors!"
+[node name="RPSPolygon" type="CSGPolygon3D" parent="." unique_id=1171339881]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 17.775997, 1.2545905, 0.27784348)
+material_override = SubResource("StandardMaterial3D_pm4op")
+polygon = PackedVector2Array(-2, -1, -2, 1, -1, 0.5, 0, 1.1, 1, 0.5, 2, 1, 2, -1)
+depth = 0.69
 
-[node name="Area3D" type="Area3D" parent="Label3D" unique_id=1902051391]
+[node name="RockPaperScissors" type="Label3D" parent="RPSPolygon" unique_id=299195125]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.017782211, 0.121442795)
+text = "Press to play Rock, Paper, Scissors!"
+line_spacing = 36.0
+script = SubResource("GDScript_dwss7")
+
+[node name="RPSTimer" type="Timer" parent="RPSPolygon/RockPaperScissors" unique_id=308672191]
+unique_name_in_owner = true
+wait_time = 3.0
+one_shot = true
+
+[node name="RPSInteractable" type="Area3D" parent="RPSPolygon/RockPaperScissors" unique_id=1304016590]
+unique_name_in_owner = true
 collision_layer = 8
 collision_mask = 8
 input_ray_pickable = false
-script = SubResource("GDScript_c8sum")
+script = ExtResource("5_rq0w2")
 interact_prompt = "play Rock, Paper, Scissors"
 interaction_prompt_prefix = "Press to"
+metadata/_custom_type_script = "uid://bsmp4qaqn0uxw"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Label3D/Area3D" unique_id=1449774467]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RPSPolygon/RockPaperScissors/RPSInteractable" unique_id=1449774467]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.023682594, -0.08456421, 1.335144e-05)
 shape = SubResource("BoxShape3D_c8sum")
+
+[node name="LiquidFill" type="CSGCylinder3D" parent="." unique_id=1916124075]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7296932, 8.886508)
+material_overlay = SubResource("ShaderMaterial_4100s")
+radius = 0.765625
+height = 2.871582
+script = SubResource("GDScript_04lax")
+fill_rate_scalar = 1.5
+
+[node name="LiquidFillInteractable" type="Area3D" parent="LiquidFill" unique_id=974197629]
+unique_name_in_owner = true
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("5_rq0w2")
+interact_prompt = "fill with mysterious liquid"
+interaction_prompt_prefix = "Hold to"
+interaction_time = 20.0
+reset_progress_on_interact_stopped = false
+metadata/_custom_type_script = "uid://bsmp4qaqn0uxw"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LiquidFill/LiquidFillInteractable" unique_id=1000772984]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00061035156, 0)
+shape = SubResource("CylinderShape3D_3e5oy")

@@ -24,6 +24,7 @@
 [ext_resource type="Material" uid="uid://b5j7a6q6jdkv5" path="res://materials/concrete.tres" id="9_4h42u"]
 [ext_resource type="Texture2D" uid="uid://b2oyvwk41k0kr" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/crash-em-up.png" id="9_vcgox"]
 [ext_resource type="Texture2D" uid="uid://8siqjr4kxuft" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/crazy-arena-chaos.png" id="10_euau4"]
+[ext_resource type="Script" uid="uid://bsmp4qaqn0uxw" path="res://entities-scene_prefabs/interaction/objects/interactable_area.gd" id="11_fof07"]
 [ext_resource type="Texture2D" uid="uid://c48m8oq1yaq3w" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/cyndrive-ships.png" id="11_u03oo"]
 [ext_resource type="Material" uid="uid://r6515yywtwib" path="res://materials/floor-materials/wood_floor.tres" id="11_v6iic"]
 [ext_resource type="Material" uid="uid://b8paggwklaeo3" path="res://materials/ceiling-materials/ceiling-light.tres" id="12_4y16h"]
@@ -69,9 +70,41 @@
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_xteo1"]
 
+[sub_resource type="GDScript" id="GDScript_1tes7"]
+script/source = "extends StaticBody3D
+
+@onready var click_link_test: ClickLink = %ClickLinkTest
+@onready var clickable_link_test_interactable: InteractableArea = %ClickableLinkTestInteractable
+
+func test_click_link() -> void:
+	click_link_test.open_link()
+
+func _ready() -> void:
+	clickable_link_test_interactable.interaction_complete.connect(test_click_link)
+"
+
 [sub_resource type="SphereShape3D" id="SphereShape3D_7tbbo"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_7tbbo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fof07"]
+size = Vector3(1.1191406, 1.0465088, 1.074646)
+
+[sub_resource type="GDScript" id="GDScript_3e5oy"]
+script/source = "extends StaticBody3D
+
+@onready var clickable_scene_change_test: ClickSceneChange = %ClickableSceneChangeTest
+@onready var clickable_scene_change_test_interactable: InteractableArea = %ClickableSceneChangeTestInteractable
+
+func test_scene_change() -> void:
+	clickable_scene_change_test.open_scene()
+
+func _ready() -> void:
+	clickable_scene_change_test_interactable.interaction_complete.connect(test_scene_change)
+"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3e5oy"]
+size = Vector3(1.1191406, 1.0465088, 1.074646)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_8jg5c"]
 radius = 1.0454303
@@ -391,29 +424,58 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -43.
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.93178, 0.50247455, -36.66358)
 
 [node name="Clickable 3d link test" type="StaticBody3D" parent="Outdoors with Portal Taxi" unique_id=1076222070]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -27.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12606049, 1.064765, -29.602764)
+script = SubResource("GDScript_1tes7")
+
+[node name="ClickLinkTest" type="Node" parent="Outdoors with Portal Taxi/Clickable 3d link test" unique_id=1051478881]
+unique_name_in_owner = true
 script = ExtResource("3_1bvp3")
+metadata/_custom_type_script = "uid://bud6xyvo80vl3"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Outdoors with Portal Taxi/Clickable 3d link test" unique_id=772968395]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2.5, -2.5)
 shape = SubResource("SphereShape3D_7tbbo")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Outdoors with Portal Taxi/Clickable 3d link test" unique_id=2110042834]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2.5, -2.5)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Outdoors with Portal Taxi/Clickable 3d link test/CollisionShape3D" unique_id=2110042834]
 mesh = SubResource("SphereMesh_7tbbo")
+
+[node name="ClickableLinkTestInteractable" type="Area3D" parent="Outdoors with Portal Taxi/Clickable 3d link test" unique_id=1571697592]
+unique_name_in_owner = true
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("11_fof07")
+interact_prompt = "Test Click Link"
+metadata/_custom_type_script = "uid://bsmp4qaqn0uxw"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Outdoors with Portal Taxi/Clickable 3d link test/ClickableLinkTestInteractable" unique_id=828002231]
+shape = SubResource("BoxShape3D_fof07")
 
 [node name="Clickable Scene Change" type="StaticBody3D" parent="Outdoors with Portal Taxi" unique_id=1285932327]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.126, 1.065, -27.358)
+script = SubResource("GDScript_3e5oy")
+
+[node name="ClickableSceneChangeTest" type="Node" parent="Outdoors with Portal Taxi/Clickable Scene Change" unique_id=1299862708]
+unique_name_in_owner = true
 script = ExtResource("3_7mycd")
 goto_scene = "uid://deyi3ygip7r4c"
+metadata/_custom_type_script = "uid://cl8kffkiyit6t"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Outdoors with Portal Taxi/Clickable Scene Change" unique_id=1753182507]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2.5, -2.5)
 shape = SubResource("SphereShape3D_7tbbo")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Outdoors with Portal Taxi/Clickable Scene Change" unique_id=1536834647]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2.5, -2.5)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Outdoors with Portal Taxi/Clickable Scene Change/CollisionShape3D" unique_id=1536834647]
 mesh = SubResource("SphereMesh_7tbbo")
+
+[node name="ClickableSceneChangeTestInteractable" type="Area3D" parent="Outdoors with Portal Taxi/Clickable Scene Change" unique_id=355122506]
+unique_name_in_owner = true
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("11_fof07")
+interact_prompt = "Test Scene Change"
+metadata/_custom_type_script = "uid://bsmp4qaqn0uxw"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Outdoors with Portal Taxi/Clickable Scene Change/ClickableSceneChangeTestInteractable" unique_id=183585318]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0029296875, 0.006164551, 0.0016174316)
+shape = SubResource("BoxShape3D_3e5oy")
 
 [node name="tree-small" parent="Outdoors with Portal Taxi" unique_id=2030102197 instance=ExtResource("16_iixjk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.971012, -1.0000002, -30.54922)
@@ -1125,6 +1187,7 @@ game_label = "Gladiator of the
 Golden House"
 button_link = "https://tarnishedmoth.itch.io/gladiator-of-the-golden-house"
 world_scene = "uid://bu5ybpneao340"
+frame_interact_text = "Become a Gladiator"
 credits = "[b]Gladiator of the Golden House[/b] credits
 Developed Feb 8 - Jun 28, 2026
 

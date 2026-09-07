@@ -3,6 +3,7 @@
 [ext_resource type="ArrayMesh" uid="uid://chk2yapw55ljh" path="res://models/basic-curvy-frame.obj" id="3_d37k8"]
 [ext_resource type="PackedScene" uid="uid://cowhc5ccs7xmv" path="res://models/naous_swords.gltf" id="4_jklea"]
 [ext_resource type="Script" uid="uid://bppvgubl41ghp" path="res://scripts/click_manipulate-mesh.gd" id="5_jf23v"]
+[ext_resource type="Script" uid="uid://bsmp4qaqn0uxw" path="res://entities-scene_prefabs/interaction/objects/interactable_area.gd" id="6_jf23v"]
 [ext_resource type="Texture2D" uid="uid://2432776vq113" path="res://textures/play-button-stand.png" id="6_xsi1w"]
 [ext_resource type="ArrayMesh" uid="uid://cm2soemey2m52" path="res://models/play-button-stand.obj" id="7_6hdpj"]
 [ext_resource type="Material" uid="uid://r6515yywtwib" path="res://materials/floor-materials/wood_floor.tres" id="8_6aalu"]
@@ -22,6 +23,9 @@ albedo_texture = ExtResource("6_xsi1w")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7tbbo"]
 size = Vector3(3.5, 3.5, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3e5oy"]
+size = Vector3(0.72265625, 1.0859375, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xteo1"]
 size = Vector3(8.271118, 1.1351929, 12.026886)
@@ -228,6 +232,18 @@ mesh = ExtResource("7_6hdpj")
 [node name="CollisionShapeStand" type="CollisionShape3D" parent="Button Stand" unique_id=995547809]
 transform = Transform3D(-8.742277e-09, 0, -0.19999999, 0, 0.19999999, 0, 0.19999999, 0, -8.742277e-09, -0.099998474, 0.45, -0.050001144)
 shape = SubResource("BoxShape3D_7tbbo")
+
+[node name="ButtonInteractableArea" type="Area3D" parent="Button Stand" unique_id=732524433]
+unique_name_in_owner = true
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("6_jf23v")
+interact_prompt = "Change Material"
+metadata/_custom_type_script = "uid://bsmp4qaqn0uxw"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Button Stand/ButtonInteractableArea" unique_id=1753578457]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06347656, 0.24121094, 0)
+shape = SubResource("BoxShape3D_3e5oy")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=905006128]
 transform = Transform3D(5.879908e-08, -0.9015282, 0.43272045, -7.410546e-08, 0.43272045, 0.9015282, -1, -8.5075975e-08, -4.136459e-08, 1.548687, 5.9042253, 0.25)

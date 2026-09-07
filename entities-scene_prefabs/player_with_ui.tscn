@@ -2,21 +2,30 @@
 
 [ext_resource type="Script" uid="uid://dragnfiluvlif" path="res://scripts/debug_details.gd" id="1_4v70m"]
 [ext_resource type="Script" uid="uid://4sa8jq0tlmnp" path="res://scripts/input/page_text_panel.gd" id="1_5b2aq"]
-[ext_resource type="Script" uid="uid://b5v2f557nsch4" path="res://entities-scene_prefabs/press_f_to_teleport.gd" id="1_bm1w4"]
+[ext_resource type="Script" uid="uid://cql5akcfaldih" path="res://entities-scene_prefabs/player.gd" id="1_6ysv4"]
 [ext_resource type="Script" uid="uid://bir504dnh2v0a" path="res://scripts/input/controller/character_controller.gd" id="1_jty3e"]
 [ext_resource type="Script" uid="uid://dsoaew313i5ei" path="res://scripts/fps_label.gd" id="1_ydgiv"]
+[ext_resource type="Script" uid="uid://due142ne6ld0i" path="res://entities-scene_prefabs/player_cursor.gd" id="3_dljwm"]
 [ext_resource type="AudioStream" uid="uid://qfcqpxe6ua5w" path="res://audio/sound effects/LandingSound.wav" id="3_io1g6"]
+[ext_resource type="Texture2D" uid="uid://bqu3ku7v8yoeu" path="res://entities-scene_prefabs/interaction/cursors/default_cursor.png" id="3_itsmy"]
 [ext_resource type="Script" uid="uid://doqquv1yr1ie7" path="res://scripts/player_audio_stream.gd" id="4_io1g6"]
-[ext_resource type="Script" uid="uid://it53133273b6" path="res://entities-scene_prefabs/interact_prompt_panel.gd" id="5_7gyvc"]
+[ext_resource type="Script" uid="uid://it53133273b6" path="res://ui/interact_prompt/interact_prompt_panel.gd" id="5_7gyvc"]
 [ext_resource type="Script" uid="uid://cq71t77ycqntx" path="res://scripts/stair_step_raycast.gd" id="6_ujqyo"]
 [ext_resource type="PackedScene" uid="uid://bdpdkco4xbv3s" path="res://entities-scene_prefabs/interaction/interaction_component.tscn" id="8_8vmao"]
-[ext_resource type="PackedScene" uid="uid://cgbexi4dcct87" path="res://entities-scene_prefabs/interaction/interaction_detector.tscn" id="10_7gyvc"]
+[ext_resource type="PackedScene" uid="uid://cgbexi4dcct87" path="res://entities-scene_prefabs/interaction/detectors/interaction_detector.tscn" id="10_7gyvc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hy870"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_04lax"]
+font_size = 18
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_etush"]
 bg_color = Color(0.78352344, 0.78352344, 0.78352326, 1)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_3e5oy"]
-height = 3.0
+height = 2.3457031
 radius = 0.302
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jty3e"]
@@ -27,55 +36,22 @@ height = 1.9316132
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_4v70m"]
 radial_segments = 16
 
-[node name="Player with UI" type="CharacterBody3D" unique_id=2066310668]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_c8sum"]
+height = 1.5351563
+radius = 0.048
+
+[node name="Player with UI" type="CharacterBody3D" unique_id=2066310668 groups=["Player"]]
 collision_layer = 2
 collision_mask = 5
 floor_max_angle = 1.0471976
+script = ExtResource("1_6ysv4")
 
 [node name="UILayer" type="CanvasLayer" parent="." unique_id=1635546215]
 unique_name_in_owner = true
 
-[node name="InteractPromptPanel" type="PanelContainer" parent="UILayer" unique_id=2096313647 node_paths=PackedStringArray("interact_prompt_label", "interaction_component", "cursor_texture")]
+[node name="PlayerCursor" type="Control" parent="UILayer" unique_id=1631098585]
 unique_name_in_owner = true
-anchors_preset = 13
-anchor_left = 0.5
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = 53.0
-offset_top = 334.0
-offset_right = 293.0
-offset_bottom = -320.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("5_7gyvc")
-interact_prompt_label = NodePath("InteractPromptText")
-interaction_component = NodePath("../../InteractionComponent")
-cursor_texture = NodePath("../CursorTexture")
-
-[node name="InteractPromptText" type="Label" parent="UILayer/InteractPromptPanel" unique_id=334901333]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_vertical = 1
-text = "INTERACT PROMPT"
-vertical_alignment = 1
-
-[node name="Cursor (placeholder)" type="Label" parent="UILayer" unique_id=2025409343]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-text = "+"
-horizontal_alignment = 1
-
-[node name="CursorTexture" type="TextureRect" parent="UILayer" unique_id=1036659128]
+layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -87,8 +63,77 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-expand_mode = 3
-stretch_mode = 5
+script = ExtResource("3_dljwm")
+
+[node name="CursorLabel" type="Label" parent="UILayer/PlayerCursor" unique_id=2025409343]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CursorProgressBar" type="TextureProgressBar" parent="UILayer/PlayerCursor" unique_id=921269813]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+step = 0.0
+value = 44.0
+fill_mode = 4
+texture_under = ExtResource("3_itsmy")
+texture_progress = ExtResource("3_itsmy")
+tint_progress = Color(0, 0, 0, 1)
+
+[node name="InteractPromptPanel" type="PanelContainer" parent="UILayer" unique_id=2096313647 node_paths=PackedStringArray("interact_prompt_label", "interaction_component", "player_cursor")]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 40.0
+offset_top = -25.0
+offset_right = 337.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_hy870")
+script = ExtResource("5_7gyvc")
+interact_prompt_label = NodePath("InteractPromptText")
+interaction_component = NodePath("../../InteractionComponent")
+player_cursor = NodePath("../PlayerCursor")
+
+[node name="InteractPromptText" type="Label" parent="UILayer/InteractPromptPanel" unique_id=334901333]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_vertical = 1
+text = "INTERACT PROMPT"
+label_settings = SubResource("LabelSettings_04lax")
+vertical_alignment = 1
+autowrap_mode = 2
+autowrap_trim_flags = 128
 
 [node name="ControlsList" type="RichTextLabel" parent="UILayer" unique_id=1320377003]
 offset_right = 368.0
@@ -109,6 +154,7 @@ fit_content = true
 scroll_active = false
 
 [node name="PageTextPanel" type="Control" parent="UILayer" unique_id=148988463]
+unique_name_in_owner = true
 visible = false
 layout_mode = 3
 anchors_preset = 0
@@ -141,19 +187,6 @@ offset_top = 541.0
 offset_right = 624.0
 offset_bottom = 595.0
 text = "Back"
-
-[node name="F to Teleport" type="RichTextLabel" parent="UILayer" unique_id=924718121]
-offset_left = 486.0
-offset_top = 390.0
-offset_right = 790.0
-offset_bottom = 430.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "Press F/Left Face Button to Teleport"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-script = ExtResource("1_bm1w4")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UILayer" unique_id=1817808499]
 anchors_preset = 1
@@ -196,9 +229,9 @@ stair_step_ray_cast = NodePath("../StairStepRaycast")
 interact_mask = 5
 metadata/_custom_type_script = "uid://bir504dnh2v0a"
 
-[node name="InteractionComponent" parent="." unique_id=1669853540 node_paths=PackedStringArray("character_controller", "detector") instance=ExtResource("8_8vmao")]
+[node name="InteractionComponent" parent="." unique_id=1669853540 node_paths=PackedStringArray("character_controller", "detectors") instance=ExtResource("8_8vmao")]
 character_controller = NodePath("../CharacterController")
-detector = NodePath("../BodyCam/InteractionDetector")
+detectors = [NodePath("../BodyCam/CameraLookDetector"), NodePath("../CollisionShape3D/PositionalDetector")]
 
 [node name="StairStepRaycast" type="RayCast3D" parent="." unique_id=2031723844 node_paths=PackedStringArray("input_controller")]
 unique_name_in_owner = true
@@ -215,11 +248,11 @@ unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9973092, 0)
 cull_mask = 1048573
 
-[node name="InteractionDetector" parent="BodyCam" unique_id=657966007 instance=ExtResource("10_7gyvc")]
+[node name="CameraLookDetector" parent="BodyCam" unique_id=657966007 instance=ExtResource("10_7gyvc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.1830373)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="BodyCam/InteractionDetector" unique_id=111845805]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, -0.42477357)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BodyCam/CameraLookDetector" unique_id=111845805]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, -0.09762514)
 shape = SubResource("CylinderShape3D_3e5oy")
 debug_color = Color(0.59906256, 0.32201234, 0.9554456, 0.41960785)
 
@@ -232,5 +265,15 @@ layers = 2
 cast_shadow = 0
 gi_mode = 2
 mesh = SubResource("CapsuleMesh_4v70m")
+
+[node name="PositionalDetector" parent="CollisionShape3D" unique_id=1996728814 instance=ExtResource("10_7gyvc")]
+unique_name_in_owner = true
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CollisionShape3D/PositionalDetector" unique_id=1546987991]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5263672, 0)
+shape = SubResource("CylinderShape3D_c8sum")
+debug_color = Color(0.25490198, 0.6117647, 0.36862746, 0.70980394)
 
 [connection signal="pressed" from="UILayer/PageTextPanel/Background/Close Button" to="UILayer/PageTextPanel" method="_on_close_button_pressed"]

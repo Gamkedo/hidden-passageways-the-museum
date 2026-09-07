@@ -8,6 +8,8 @@ enum Actions {
 @export var action_when_pressed: Actions
 @export var nodes: Array[Node3D]
 
+@onready var button_interactable_area: InteractableArea = %ButtonInteractableArea
+
 var _toggled_on: bool = false
 
 func manipulate_mesh() -> void:
@@ -25,3 +27,6 @@ func manipulate_mesh() -> void:
 
 func toggle() -> void:
 	_toggled_on = not _toggled_on
+
+func _ready() -> void:
+	button_interactable_area.interaction_complete.connect(manipulate_mesh)

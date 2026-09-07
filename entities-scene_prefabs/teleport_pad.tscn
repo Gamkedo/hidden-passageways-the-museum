@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dbsxcc7jt2qmd"]
 
 [ext_resource type="Script" uid="uid://bkor7ujax3vf1" path="res://entities-scene_prefabs/teleport_pad.gd" id="1_utihr"]
+[ext_resource type="Script" uid="uid://bsmp4qaqn0uxw" path="res://entities-scene_prefabs/interaction/objects/interactable_area.gd" id="2_04lax"]
 [ext_resource type="ArrayMesh" uid="uid://dr3gbpogsacs4" path="res://models/teleport_pad_ring.glb" id="2_i2k4u"]
 [ext_resource type="Material" uid="uid://bhww5o2p7xgfv" path="res://materials/teleport-glow-material.tres" id="3_dpapn"]
 
@@ -23,9 +24,14 @@ height = 1.0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=288295350]
 shape = SubResource("CylinderShape3D_pjjmk")
 
-[node name="Teleport Area" type="Area3D" parent="." unique_id=1240662298]
-collision_mask = 2
+[node name="Teleport Area" type="Area3D" parent="." unique_id=2082879572]
+unique_name_in_owner = true
+collision_layer = 16
+collision_mask = 18
 input_ray_pickable = false
+script = ExtResource("2_04lax")
+interact_prompt = "Press F/Left Face Button to Teleport"
+metadata/_custom_type_script = "uid://bsmp4qaqn0uxw"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Teleport Area" unique_id=1108285571]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2506926, 0)

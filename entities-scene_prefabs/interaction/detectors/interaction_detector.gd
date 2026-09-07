@@ -1,15 +1,15 @@
 class_name InteractionDetector
 extends Area3D
 
-signal detecting_interactable(interactable: InteractableObject)
-signal stopped_detecting_interactable(interactable: InteractableObject)
+signal detecting_interactable(interactable: InteractableArea)
+signal stopped_detecting_interactable(interactable: InteractableArea)
 
 func detecting_object(object: Node3D) -> void:
-	if object is InteractableObject:
+	if object is InteractableArea:
 		detecting_interactable.emit(object)
 
 func stopped_detecting_object(object: Node3D) -> void:
-	if object is InteractableObject:
+	if object is InteractableArea:
 		stopped_detecting_interactable.emit(object)
 
 func _ready() -> void:

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://chle43jlfqxrx" path="res://scripts/input/display_text.gd" id="1_506bs"]
 [ext_resource type="Texture2D" uid="uid://bfbr05hoa2f7w" path="res://textures/team-credits-texture.jpg" id="2_t2u88"]
+[ext_resource type="Script" uid="uid://bsmp4qaqn0uxw" path="res://entities-scene_prefabs/interaction/objects/interactable_area.gd" id="3_t2u88"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_7tbbo"]
 
@@ -15,6 +16,9 @@ emission_energy_multiplier = 0.5
 emission_texture = ExtResource("2_t2u88")
 uv1_scale = Vector3(2.235, 2.235, 2.235)
 uv1_offset = Vector3(0.02, -0.16, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3e5oy"]
+size = Vector3(0.09039307, 0.4935913, 0.5266113)
 
 [node name="Credits Foam Card Viewable" type="StaticBody3D" unique_id=390590116]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
@@ -64,3 +68,15 @@ shape = SubResource("SphereShape3D_7tbbo")
 transform = Transform3D(0.19999999, 0, 0, 0, 0.44, 0, 0, 0, 0.44, -0.025000572, 0.05, 0.05000019)
 mesh = SubResource("BoxMesh_1e3mb")
 surface_material_override/0 = SubResource("StandardMaterial3D_wehve")
+
+[node name="FormCardInteractable" type="Area3D" parent="." unique_id=1938788813]
+unique_name_in_owner = true
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("3_t2u88")
+interact_prompt = "See Credits"
+metadata/_custom_type_script = "uid://bsmp4qaqn0uxw"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FormCardInteractable" unique_id=2084279887]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0326233, 0.053863525, 0.049682617)
+shape = SubResource("BoxShape3D_3e5oy")

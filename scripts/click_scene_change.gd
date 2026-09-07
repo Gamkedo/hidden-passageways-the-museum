@@ -1,5 +1,5 @@
-extends Node3D
 class_name ClickSceneChange
+extends Node
 
 @export_file("*.tscn")
 var goto_scene: String = ""

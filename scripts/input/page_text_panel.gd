@@ -1,3 +1,4 @@
+class_name PageTextPanel
 extends Control
 
 @onready var text_on_panel = $Background/Text

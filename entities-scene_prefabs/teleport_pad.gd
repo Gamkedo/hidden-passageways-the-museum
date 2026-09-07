@@ -1,7 +1,10 @@
+class_name TeleportPad
 extends Node3D
 
 
-@export var dest_telepad: Node3D
+@export var dest_telepad: TeleportPad
+
+@onready var teleport_area: InteractableArea = %"Teleport Area"
 
 # var teleport_timer: Timer = Timer.new()
 var rings = []
@@ -16,6 +19,8 @@ const DELAY_AFTER_RINGS = 0.6
 # const RING_TWO_MAX_HEIGHT = RING_ONE_MAX_HEIGHT - 2
 # const RING_THREE_MAX_HEIGHT = RING_TWO_MAX_HEIGHT - 2
 var teleport_glow = null
+
+var detected_player: Player
 
 func _ready():
 	# print('telepad "', name, '" ready')
@@ -34,15 +39,9 @@ func _ready():
 	teleport_glow.get_child(0).material = new_teleport_material
 	teleport_glow.get_child(1).material = new_teleport_material
 	new_teleport_material.albedo_color = Color(1,0,1,0)
-	pass
 	
-func get_char_controller(player):
-	var char_controller = player.get_child(2)
-	if(char_controller is CharacterController):
-		return char_controller
-	else:
-		push_error("Cannot find character controller on player: ", player)
-		return null
+	teleport_area.interaction_complete.connect(attempt_teleport)
+
 
 func play_teleport_start_animation():
 	# print('playing teleport animation')
@@ -75,8 +74,8 @@ func play_teleport_start_animation():
 	#	DELAY_AFTER_RINGS
 	#)
 	await get_tree().create_timer(DELAY_AFTER_RINGS).timeout
-	pass
-	
+
+
 func play_teleport_end_animation():
 	create_tween().tween_property(
 		teleport_glow.material, 
@@ -103,14 +102,20 @@ func play_teleport_end_animation():
 		await get_tree().create_timer(DELAY_BETWEEN_RINGS).timeout
 	
 	rings.reverse() # put the rings back in proper order for next time
-	pass
 
-func teleport(player):
+func attempt_teleport() -> void:
+	if is_instance_valid(detected_player):
+		teleport(detected_player)
+
+func teleport(player: Player):
 	# print('Teleport player: ', player.name, ' to pad ', dest_telepad.name)
-	var char_controller = get_char_controller(player)
+	var char_controller = player.character_controller
 	char_controller.movement_enabled = false
 	# play a little cutscene...
 	dest_telepad.play_teleport_start_animation()
+	# Temporarily disable the both pad's interaction area
+	teleport_area.enabled = false
+	dest_telepad.teleport_area.enabled = false
 	await play_teleport_start_animation()
 	# end little cutscene...
 	
@@ -124,15 +129,16 @@ func teleport(player):
 	play_teleport_end_animation()
 	dest_telepad.play_teleport_end_animation()
 
+
 func _on_teleport_area_body_entered(body: Node3D) -> void:
-	if(body.name == "Player with UI"):
-		# print('player entered telepad area')
-		var char_controller = get_char_controller(body)
-		char_controller.entered_teleport_pad_area(self)
+	if(body is Player):
+		print('player entered telepad area')
+		detected_player = body
 
 
 func _on_teleport_area_body_exited(body: Node3D) -> void:
-	if(body.name == "Player with UI"):
+	if body is Player and body == detected_player:
 		print('player left telepad area')
-		var char_controller = get_char_controller(body)
-		char_controller.exited_teleport_pad_area()
+		detected_player = null
+		# Re-enable teleport area when the player leaves the pad
+		teleport_area.enabled = true

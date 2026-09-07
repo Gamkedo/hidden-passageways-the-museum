@@ -4,14 +4,14 @@
 [ext_resource type="Script" uid="uid://ehbbc0ik5w8" path="res://game wall pictures/frame_button_credits.gd" id="1_45jsa"]
 [ext_resource type="Script" uid="uid://bud6xyvo80vl3" path="res://scripts/click_link.gd" id="3_45jsa"]
 [ext_resource type="Texture2D" uid="uid://bk6mm66shyd3p" path="res://textures/CurvyFrame-basic-black.png" id="4_6fcnr"]
-[ext_resource type="Texture2D" uid="uid://dlft5rt3mgqhu" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/gladiator-of-the-golden-house.png" id="4_i26b7"]
 [ext_resource type="Texture2D" uid="uid://2432776vq113" path="res://textures/play-button-stand.png" id="5_7twhr"]
 [ext_resource type="ArrayMesh" uid="uid://chk2yapw55ljh" path="res://models/basic-curvy-frame.obj" id="5_i26b7"]
+[ext_resource type="Script" uid="uid://bsmp4qaqn0uxw" path="res://entities-scene_prefabs/interaction/objects/interactable_area.gd" id="6_6fcnr"]
 [ext_resource type="ArrayMesh" uid="uid://cm2soemey2m52" path="res://models/play-button-stand.obj" id="6_vbb3g"]
-[ext_resource type="Texture2D" uid="uid://87drxaweuioc" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/king-arthur.png" id="9_6fcnr"]
+[ext_resource type="PackedScene" uid="uid://bv570frvts0gr" path="res://entities-scene_prefabs/scene_changer.tscn" id="8_45jsa"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gbu3n"]
-albedo_texture = ExtResource("4_i26b7")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6fcnr"]
+shading_mode = 0
 
 [sub_resource type="QuadMesh" id="QuadMesh_etush"]
 
@@ -21,12 +21,18 @@ albedo_texture = ExtResource("5_7twhr")
 [sub_resource type="BoxShape3D" id="BoxShape3D_7tbbo"]
 size = Vector3(3.5, 3.5, 3)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_c8sum"]
+size = Vector3(0.7330017, 1.0125122, 0.58062744)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4fg2q"]
 albedo_texture = ExtResource("4_6fcnr")
 roughness = 0.4
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_3e5oy"]
+size = Vector3(1, 12.362305, 19.144867)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i26b7"]
-albedo_texture = ExtResource("9_6fcnr")
+shading_mode = 0
 
 [sub_resource type="QuadMesh" id="QuadMesh_i26b7"]
 
@@ -41,18 +47,23 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.5
 page_text = ""
 
 [node name="Button Game" type="StaticBody3D" parent="." unique_id=1440399840]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, -0.7291305, 0.8999996)
+
+[node name="ButtonClickLink" type="Node" parent="Button Game" unique_id=1955919968]
+unique_name_in_owner = true
 script = ExtResource("3_45jsa")
+metadata/_custom_type_script = "uid://bud6xyvo80vl3"
 
 [node name="Button image" type="MeshInstance3D" parent="Button Game" unique_id=1896630648]
 transform = Transform3D(0.44582403, 0, 0, 0, 0.27519998, 0, 1.1368682e-14, 0, 0.031999994, -0.06468767, 0.46111998, -0.3172)
-material_override = SubResource("StandardMaterial3D_gbu3n")
+material_override = SubResource("StandardMaterial3D_6fcnr")
 mesh = SubResource("QuadMesh_etush")
 
 [node name="GameLabel" type="Label3D" parent="Button Game" unique_id=1183973093]
+unique_name_in_owner = true
 transform = Transform3D(0.24000001, 0, 0, 0, 0.24000001, 0, 0, 0, 0.24000001, -0.07500076, 0.665, -0.31499863)
 modulate = Color(0, 0, 0, 1)
-text = "Empty"
 outline_size = 0
 
 [node name="PlayButtonStand" type="MeshInstance3D" parent="Button Game" unique_id=432524272]
@@ -64,10 +75,37 @@ mesh = ExtResource("6_vbb3g")
 transform = Transform3D(-8.742277e-09, 0, -0.19999999, 0, 0.19999999, 0, 0.19999999, 0, -8.742277e-09, -0.099998474, 0.45, -0.050001144)
 shape = SubResource("BoxShape3D_7tbbo")
 
+[node name="PlayStandInteractable" type="Area3D" parent="Button Game" unique_id=1297663138]
+unique_name_in_owner = true
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("6_6fcnr")
+interact_prompt = "View Game"
+metadata/_custom_type_script = "uid://bsmp4qaqn0uxw"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Button Game/PlayStandInteractable" unique_id=1637935757]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08506775, 0.20333862, -0.06362915)
+shape = SubResource("BoxShape3D_c8sum")
+
 [node name="BasicCurvyFrame Test" type="MeshInstance3D" parent="." unique_id=1119403653]
 transform = Transform3D(-8.742277e-09, 0, -0.19999999, 0, 0.19999999, 0, 0.19999999, 0, -8.742277e-09, 0, 0.5, 0)
 material_override = SubResource("StandardMaterial3D_4fg2q")
 mesh = ExtResource("5_i26b7")
+
+[node name="FrameInteractable" type="Area3D" parent="BasicCurvyFrame Test" unique_id=686208393]
+unique_name_in_owner = true
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("6_6fcnr")
+interact_prompt = "Explore World"
+metadata/_custom_type_script = "uid://bsmp4qaqn0uxw"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BasicCurvyFrame Test/FrameInteractable" unique_id=581571991]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.059042e-14, 0.073730946, -0.008590782)
+shape = SubResource("BoxShape3D_3e5oy")
+
+[node name="ClickSceneChange" parent="BasicCurvyFrame Test" unique_id=1496126097 instance=ExtResource("8_45jsa")]
+unique_name_in_owner = true
 
 [node name="Painting Image" type="MeshInstance3D" parent="BasicCurvyFrame Test" unique_id=784914795]
 transform = Transform3D(-7.033798e-07, 0, 1, 0, 9.407751, 0, -16.091467, 0, -4.371139e-08, -0.19434357, -0.026180267, 0)

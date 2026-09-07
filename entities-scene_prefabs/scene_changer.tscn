@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bv570frvts0gr"]
+
+[ext_resource type="Script" uid="uid://cl8kffkiyit6t" path="res://scripts/click_scene_change.gd" id="1_7veka"]
+
+[node name="Node" type="Node" unique_id=1496126097]
+script = ExtResource("1_7veka")

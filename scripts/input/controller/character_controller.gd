@@ -38,12 +38,9 @@ var current_available_air_jumps: int = 0
 var _onready_global_origin: Vector3
 var _last_movement_vector: Vector2 = Vector2.ZERO
 var _is_sprinting: bool = false
-var _is_interacting: bool = false
 var _flight_mode_active: bool = false
 var _coyote_frame_timer: int = 0
 
-var on_teleport_pad: StaticBody3D = null
-var recently_teleported: bool = false
 
 func _ready() -> void:
 	if target_node:
@@ -290,52 +287,10 @@ func _handle_interact(is_pressed: bool) -> void:
 	if not interact_enabled:
 		return
 	
-	# hack ?
-	if not is_pressed:
-		return
-	#print("interacted")
-	interaction_check()
-	
-	## hook this back up when interactions are redone
-	if is_pressed and not _is_interacting:
-		_is_interacting = true
+	if is_pressed:
 		interact_started.emit()
 	else:
-		if _is_interacting:
-			interact_stopped.emit()
-		_is_interacting = false
-
-## adapted from old code
-func interaction_check():
-	var space_state = target_node.get_world_3d().direct_space_state
-
-	var from = target_camera.global_transform.origin
-	var to = from + (-target_camera.global_transform.basis.z * interact_distance)
-
-	var query = PhysicsRayQueryParameters3D.create(from, to)
-	query.collide_with_areas = true
-	query.collide_with_bodies = true
-	query.collision_mask = interact_mask
-	
-	if on_teleport_pad:
-		on_teleport_pad.teleport(self.get_parent())
-		pass # skip the rest of the interaction checks
-
-	var result = space_state.intersect_ray(query)
-	print("interaction: ", result)
-	if result:
-		var hit = result.collider
-		if hit.has_method("text_to_display"):
-			page_text_panel.show_text(hit.text_to_display())
-		if hit.has_method("open_link"):
-			hit.open_link()
-		if hit.has_method("open_scene"):
-			hit.open_scene()
-		if hit.has_method("manipulate_mesh"):
-			hit.manipulate_mesh()
-		# if hit.has_method("teleport"):
-		# 	hit.teleport(self.get_parent()) # need "Player with UI" node here
-
+		interact_stopped.emit()
 #endregion Interact
 
 #region Flight
@@ -420,13 +375,3 @@ func reset_position(to: Vector3) -> void:
 		return
 	target_node.global_position = to
 	target_node.velocity = Vector3.ZERO
-	
-func entered_teleport_pad_area(teleport_pad):
-	# print('player is in teleport pad: ', teleport_pad.name)
-	if(!recently_teleported):
-		on_teleport_pad = teleport_pad
-	
-func exited_teleport_pad_area():
-	# print('player is no longer in a teleport pad area')
-	on_teleport_pad = null
-	recently_teleported = false
