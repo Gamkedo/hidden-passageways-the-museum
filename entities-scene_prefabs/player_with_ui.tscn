@@ -63,6 +63,7 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("3_dljwm")
 
 [node name="CursorLabel" type="Label" parent="UILayer/PlayerCursor" unique_id=2025409343]
@@ -98,6 +99,7 @@ offset_right = 25.0
 offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 step = 0.0
 value = 44.0
 fill_mode = 4
@@ -118,6 +120,7 @@ offset_right = 337.0
 offset_bottom = 24.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_hy870")
 script = ExtResource("5_7gyvc")
 interact_prompt_label = NodePath("InteractPromptText")
@@ -160,6 +163,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 2
 script = ExtResource("1_5b2aq")
 
 [node name="Background" type="Panel" parent="UILayer/PageTextPanel" unique_id=2048744356]
@@ -176,6 +180,7 @@ offset_left = 22.0
 offset_top = 19.0
 offset_right = 1160.0
 offset_bottom = 526.0
+mouse_filter = 2
 theme_override_colors/default_color = Color(0.103743516, 0.10374353, 0.103743516, 1)
 bbcode_enabled = true
 text = "placeholder text, shouldn't see this"
@@ -195,6 +200,7 @@ anchor_right = 1.0
 offset_left = -320.0
 offset_bottom = 40.0
 grow_horizontal = 0
+mouse_filter = 2
 
 [node name="FPSLabel" type="Label" parent="UILayer/VBoxContainer" unique_id=474987211]
 layout_mode = 2
