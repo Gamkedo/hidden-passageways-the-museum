@@ -121,7 +121,9 @@ func teleport(player: Player):
 	
 	# actually do the teleporting
 	# await get_tree().create_timer(1).timeout
-	player.global_position = (dest_telepad.global_position + Vector3(0, 0.5, 0))
+	var current_offset = player.global_position - global_position
+	var new_position = Vector3(current_offset.x, 0.5, current_offset.z)
+	player.global_position = (dest_telepad.global_position + new_position)
 	char_controller.movement_enabled = true
 	# teleport_glow.hide()
 	# dest_telepad.teleport_glow.hide()
