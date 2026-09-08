@@ -1,0 +1,2 @@
+class_name DynamicBillboard
+extends StaticBody3D
