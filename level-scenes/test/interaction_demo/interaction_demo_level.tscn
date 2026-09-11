@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c8tqx7x66ewpd" path="res://entities-scene_prefabs/credits_foam_card_viewable.tscn" id="4_pm4op"]
 [ext_resource type="Texture2D" uid="uid://doim7pdujub31" path="res://icon.png" id="5_rdv17"]
 [ext_resource type="Script" uid="uid://bsmp4qaqn0uxw" path="res://entities-scene_prefabs/interaction/objects/interactable_area.gd" id="5_rq0w2"]
+[ext_resource type="PackedScene" uid="uid://bp44rivm28fxu" path="res://entities-scene_prefabs/dynamic_billboard/dynamic_billboard.tscn" id="8_rdv17"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ha7f6"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -325,3 +326,6 @@ metadata/_custom_type_script = "uid://bsmp4qaqn0uxw"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LiquidFill/LiquidFillInteractable" unique_id=1000772984]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00061035156, 0)
 shape = SubResource("CylinderShape3D_3e5oy")
+
+[node name="DynamicBillboard2" parent="." unique_id=880058378 instance=ExtResource("8_rdv17")]
+transform = Transform3D(0.86978203, 0, 0.4934362, 0, 1, 0, -0.4934362, 0, 0.86978203, -6.1059184, 0.017408371, -9.291998)

@@ -1,7 +1,7 @@
 # MenuManager
 extends Node
 
-@export var pause_screen_enabled: bool = false:
+@export var pause_screen_enabled: bool = true:
 	set = set_pause_screen_enabled
 
 @onready var pause_screen_layer: CanvasLayer = %PauseScreenLayer

@@ -11,56 +11,142 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x78ms"]
 
+[sub_resource type="GDScript" id="GDScript_2skg7"]
+script/source = "extends ScrollContainer
+
+
+@export var auto_scroll: bool = true
+@export_range(1, 100) var scroll_speed: int = 1
+
+@export var billboard_contents: Control
+
+@onready var scroll_contents: VBoxContainer = %ScrollContents
+@onready var sub_viewport: SubViewport = %SubViewport
+@onready var scroll_separator: HSeparator = %ScrollSeparator
+
+var screen_one: Control
+var screen_two: Control
+
+
+func scroll_billboard() -> void:
+	if auto_scroll:
+		var max_scroll := _get_max_v_scroll()
+		var new_v_scroll := scroll_vertical
+		new_v_scroll += scroll_speed
+		new_v_scroll = min(new_v_scroll, max_scroll)
+		
+		update_vertical_scroll.call_deferred(new_v_scroll)
+
+func update_vertical_scroll(next_scroll: int) -> void:
+	scroll_vertical = next_scroll
+	move_top_child_to_bottom()
+
+
+func move_top_child_to_bottom() -> void:
+	var children := _get_scrolling_contents()
+	var top_child := children[0]
+	var child_height := top_child.size.y
+	var child_pos := top_child.global_position.y
+	var bottom_y := child_pos + child_height
+	# Small margin for the control to move fully off screen (avoid jitter near exact 0 scrolls)
+	if bottom_y < -10:
+		scroll_contents.move_child(top_child, scroll_contents.get_child_count() - 1)
+		var new_scroll := roundi(scroll_vertical - child_height)
+		scroll_vertical = new_scroll
+
+
+func _get_max_v_scroll() -> int:
+	var children := _get_scrolling_contents()
+	var total_height: int = 0
+	for child: Control in children:
+		total_height += roundi(child.size.y)
+	return total_height
+
+func _get_scrolling_contents() -> Array[Control]:
+	var scrolling_contents: Array[Control]
+	scrolling_contents.assign(scroll_contents.get_children())
+	return scrolling_contents
+
+
+func _process(_delta: float) -> void:
+	scroll_billboard()
+
+func _ready() -> void:
+	if is_instance_valid(billboard_contents):
+		screen_one = billboard_contents
+		screen_two = screen_one.duplicate()
+		scroll_contents.add_child(screen_two)
+		var extra_separator := scroll_separator.duplicate()
+		scroll_contents.add_child(extra_separator)
+"
+
+[sub_resource type="FontVariation" id="FontVariation_exeic"]
+variation_embolden = 1.1
+
 [sub_resource type="LabelSettings" id="LabelSettings_x78ms"]
-font_size = 20
+font = SubResource("FontVariation_exeic")
+font_size = 24
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2skg7"]
+albedo_color = Color(0.33599716, 0.3359972, 0.3359972, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_c8sum"]
-size = Vector3(1.2, 1.2, 0.2)
+material = SubResource("StandardMaterial3D_2skg7")
+size = Vector3(2.0616455, 2.7622375, 0.655)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_uaawx"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_fqhjp"]
 viewport_path = NodePath("SubViewportContainer/SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kvjy7"]
-albedo_color = Color(0.77536416, 0.7753642, 0.77536416, 1)
+transparency = 1
+albedo_color = Color(0, 0, 0, 0.88235295)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c8sum"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_exeic"]
 resource_local_to_scene = true
 next_pass = SubResource("StandardMaterial3D_kvjy7")
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_uaawx")
+albedo_texture = SubResource("ViewportTexture_fqhjp")
 albedo_texture_force_srgb = true
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_3e5oy"]
-material = SubResource("StandardMaterial3D_c8sum")
-size = Vector2(1, 1)
+size = Vector2(2.024, 2.693)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3e5oy"]
+size = Vector3(2.346344, 3.0125732, 1.0959167)
 
 [node name="DynamicBillboard" type="StaticBody3D" unique_id=880058378]
 script = ExtResource("1_x78ms")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=20948954]
+unique_name_in_owner = true
+visibility_layer = 8
 custom_minimum_size = Vector2(500, 500)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -774.0
-offset_bottom = -220.0
+offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
-stretch = true
+focus_mode = 0
+mouse_filter = 2
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1117127809]
-disable_3d = true
+unique_name_in_owner = true
 transparent_bg = true
-msaa_2d = 1
+handle_input_locally = false
 canvas_item_default_texture_filter = 3
 gui_disable_input = true
-size = Vector2i(506, 500)
+canvas_cull_mask = 4293918721
+size = Vector2i(685, 711)
+render_target_update_mode = 4
 
 [node name="BillboardDisplay" type="PanelContainer" parent="SubViewportContainer/SubViewport" unique_id=869878753]
 unique_name_in_owner = true
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = -1
+anchor_right = 1.8730001
 anchor_bottom = 1.0
+offset_right = -562.0051
+offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -68,110 +154,417 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_oo5qn")
 
 [node name="MarginContainer" type="MarginContainer" parent="SubViewportContainer/SubViewport/BillboardDisplay" unique_id=280433215]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/margin_left = 4
 theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
-[node name="ScrollContainer" type="ScrollContainer" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer" unique_id=2132736716]
+[node name="ScrollContainer" type="ScrollContainer" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer" unique_id=2132736716 node_paths=PackedStringArray("billboard_contents")]
 layout_mode = 2
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_npui3")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_x78ms")
 horizontal_scroll_mode = 3
 vertical_scroll_mode = 3
+script = SubResource("GDScript_2skg7")
+scroll_speed = 2
+billboard_contents = NodePath("ScrollContents/GridContainer")
 
-[node name="GridContainer" type="GridContainer" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer" unique_id=1792091472]
+[node name="ScrollContents" type="VBoxContainer" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer" unique_id=1036862562]
+unique_name_in_owner = true
 layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="GridContainer" type="GridContainer" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents" unique_id=1792091472]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
 theme_override_constants/h_separation = 12
 theme_override_constants/v_separation = 12
 columns = 2
 
-[node name="TextureRect" type="TextureRect" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/GridContainer" unique_id=1335465680]
+[node name="TextureRect" type="TextureRect" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1335465680]
+texture_filter = 4
 layout_mode = 2
+size_flags_horizontal = 0
 texture = ExtResource("2_2skg7")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/GridContainer" unique_id=1521766744]
+[node name="Label" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1521766744]
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
 text = "Who's this funny lil fella?"
 label_settings = SubResource("LabelSettings_x78ms")
 
-[node name="TextureRect2" type="TextureRect" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/GridContainer" unique_id=325453883]
+[node name="TextureRect2" type="TextureRect" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=325453883]
+texture_filter = 4
 layout_mode = 2
+size_flags_horizontal = 0
 texture = ExtResource("3_exeic")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="Label2" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/GridContainer" unique_id=1126279996]
+[node name="Label2" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1126279996]
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
 text = "Dare you question the mysteries of the world?"
 label_settings = SubResource("LabelSettings_x78ms")
 
-[node name="TextureRect3" type="TextureRect" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/GridContainer" unique_id=1715164856]
+[node name="TextureRect3" type="TextureRect" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1715164856]
+texture_filter = 4
 layout_mode = 2
+size_flags_horizontal = 0
 texture = ExtResource("4_rtl7h")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="Label3" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/GridContainer" unique_id=941953220]
+[node name="Label3" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=941953220]
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
 text = "Hi, can I take your order?"
 label_settings = SubResource("LabelSettings_x78ms")
 
+[node name="TextureRect4" type="TextureRect" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=61219086]
+texture_filter = 4
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("2_2skg7")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label4" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=173337102]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+text = "Who's this funny lil fella?"
+label_settings = SubResource("LabelSettings_x78ms")
+
+[node name="TextureRect5" type="TextureRect" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=512393216]
+texture_filter = 4
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("3_exeic")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label5" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1318691477]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+text = "Dare you question the mysteries of the world?"
+label_settings = SubResource("LabelSettings_x78ms")
+
+[node name="TextureRect6" type="TextureRect" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1307044394]
+texture_filter = 4
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("4_rtl7h")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label6" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1977083314]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+text = "Hi, can I take your order?"
+label_settings = SubResource("LabelSettings_x78ms")
+
+[node name="TextureRect7" type="TextureRect" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=198746720]
+texture_filter = 4
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("2_2skg7")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label7" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1651769846]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+text = "Who's this funny lil fella?"
+label_settings = SubResource("LabelSettings_x78ms")
+
+[node name="TextureRect8" type="TextureRect" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1772628257]
+texture_filter = 4
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("3_exeic")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label8" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=51963192]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+text = "Dare you question the mysteries of the world?"
+label_settings = SubResource("LabelSettings_x78ms")
+
+[node name="TextureRect9" type="TextureRect" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1463843483]
+texture_filter = 4
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("4_rtl7h")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label9" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1487060048]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+text = "Hi, can I take your order?"
+label_settings = SubResource("LabelSettings_x78ms")
+
+[node name="TextureRect10" type="TextureRect" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1234997540]
+texture_filter = 4
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("2_2skg7")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label10" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=659472568]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+text = "Who's this funny lil fella?"
+label_settings = SubResource("LabelSettings_x78ms")
+
+[node name="TextureRect11" type="TextureRect" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1541396474]
+texture_filter = 4
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("3_exeic")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label11" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1406883549]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+text = "Dare you question the mysteries of the world?"
+label_settings = SubResource("LabelSettings_x78ms")
+
+[node name="TextureRect12" type="TextureRect" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1712138688]
+texture_filter = 4
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("4_rtl7h")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label12" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=592193489]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+text = "Hi, can I take your order?"
+label_settings = SubResource("LabelSettings_x78ms")
+
+[node name="TextureRect13" type="TextureRect" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=641216983]
+texture_filter = 4
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("2_2skg7")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label13" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=968890900]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+text = "Who's this funny lil fella?"
+label_settings = SubResource("LabelSettings_x78ms")
+
+[node name="TextureRect14" type="TextureRect" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1995768806]
+texture_filter = 4
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("3_exeic")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label14" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1032345515]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+text = "Dare you question the mysteries of the world?"
+label_settings = SubResource("LabelSettings_x78ms")
+
+[node name="TextureRect15" type="TextureRect" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=2102091016]
+texture_filter = 4
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("4_rtl7h")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label15" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1860344097]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+text = "Hi, can I take your order?"
+label_settings = SubResource("LabelSettings_x78ms")
+
+[node name="TextureRect16" type="TextureRect" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1277465056]
+texture_filter = 4
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("2_2skg7")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label16" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=383101983]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+text = "Who's this funny lil fella?"
+label_settings = SubResource("LabelSettings_x78ms")
+
+[node name="TextureRect17" type="TextureRect" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=125156744]
+texture_filter = 4
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("3_exeic")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label17" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=952139827]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+text = "Dare you question the mysteries of the world?"
+label_settings = SubResource("LabelSettings_x78ms")
+
+[node name="TextureRect18" type="TextureRect" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1930038754]
+texture_filter = 4
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("4_rtl7h")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label18" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1074442422]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+text = "Hi, can I take your order?"
+label_settings = SubResource("LabelSettings_x78ms")
+
+[node name="TextureRect19" type="TextureRect" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=993690448]
+texture_filter = 4
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("2_2skg7")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label19" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1955926618]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+text = "Who's this funny lil fella?"
+label_settings = SubResource("LabelSettings_x78ms")
+
+[node name="TextureRect20" type="TextureRect" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=845421113]
+texture_filter = 4
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("3_exeic")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label20" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1033567816]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+text = "Dare you question the mysteries of the world?"
+label_settings = SubResource("LabelSettings_x78ms")
+
+[node name="TextureRect21" type="TextureRect" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=57498131]
+texture_filter = 4
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("4_rtl7h")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label21" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1165666724]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+text = "Hi, can I take your order?"
+label_settings = SubResource("LabelSettings_x78ms")
+
+[node name="ScrollSeparator" type="HSeparator" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents" unique_id=1694840300]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 200
+
 [node name="screenbacking" type="MeshInstance3D" parent="." unique_id=681587984]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006567359, 0.58690184, -0.048062403)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00667727, 1.5008271, -0.5940101)
 mesh = SubResource("BoxMesh_c8sum")
 
-[node name="plane" type="MeshInstance3D" parent="screenbacking" unique_id=697465555]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0.100393586)
+[node name="screenmesh" type="MeshInstance3D" parent="screenbacking" unique_id=697465555]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0.34950086)
+material_override = SubResource("StandardMaterial3D_exeic")
 mesh = SubResource("PlaneMesh_3e5oy")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1124600872]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0052490234, 0.57290405, -0.12771606)
-size = Vector3(1.3210449, 1.3452759, 0.35235596)
+[node name="BaseStructure" type="CSGBox3D" parent="." unique_id=1124600872]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0052490234, 1.486291, -0.46647388)
+size = Vector3(2.141, 2.876005, 1.0295156)
 
-[node name="Remover" type="CSGBox3D" parent="CSGBox3D" unique_id=2067533379]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.003967285, 0.0016937256, 0.19267082)
+[node name="Remover" type="CSGBox3D" parent="BaseStructure" unique_id=2067533379]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.051742554, -0.34539223, 0.53101826)
 operation = 2
-size = Vector3(1.3404541, 1.3542786, 0.23474503)
+size = Vector3(2.5126038, 3.8645668, 0.9114399)
 
-[node name="CylinderBottom" type="CSGCylinder3D" parent="CSGBox3D" unique_id=1275064131]
-transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, -4.371139e-08, 1.9106855e-15, 0.0034814477, -0.67459685, 0.15859126)
+[node name="CylinderBottom" type="CSGCylinder3D" parent="BaseStructure" unique_id=1275064131]
+transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, -4.371139e-08, 1.9106855e-15, 0.0034814477, -1.4417367, 0.15859127)
 radius = 0.099
-height = 1.3142606
+height = 2.157
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="CSGBox3D/CylinderBottom" unique_id=1620167487]
-transform = Transform3D(-4.371139e-08, 2.1175824e-22, 1, -1, -4.371139e-08, -4.371139e-08, 4.371139e-08, -1, 1.9106853e-15, -0.13899815, 0.04408623, 0.04985124)
+[node name="CSGBox3D2" type="CSGBox3D" parent="BaseStructure/CylinderBottom" unique_id=1620167487]
+transform = Transform3D(-4.371139e-08, 2.1175824e-22, 1, -1, -4.371139e-08, -4.371139e-08, 4.371139e-08, -1, 1.9106853e-15, -0.06514561, -0.018901996, 0.0958069)
 operation = 2
-size = Vector3(1.4379883, 0.104263306, 0.5913086)
+size = Vector3(2.524414, 0.19617462, 0.7390137)
 
-[node name="CylinderTop" type="CSGCylinder3D" parent="CSGBox3D" unique_id=592672103]
-transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, -4.371139e-08, 1.9106855e-15, -0.00032806396, 0.67035335, 0.1614896)
+[node name="CylinderTop" type="CSGCylinder3D" parent="BaseStructure" unique_id=592672103]
+transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, -4.371139e-08, 1.9106855e-15, -0.00032806396, 1.4351879, 0.1614896)
 radius = 0.099
-height = 1.3212128
+height = 2.14
 
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D/CylinderTop" unique_id=1255003492]
-transform = Transform3D(1, 0, 0, 0, 1, -8.351872e-23, 0, -8.351872e-23, 1, -0.07336426, 0.012817398, -0.055051804)
+[node name="CSGBox3D" type="CSGBox3D" parent="BaseStructure/CylinderTop" unique_id=1255003492]
+transform = Transform3D(1, 0, 0, 0, 1, -8.351872e-23, 0, -8.351872e-23, 1, -0.028320313, 0.026489312, -0.084347725)
 operation = 2
-size = Vector3(0.5148926, 1.3723145, 0.105472565)
+size = Vector3(0.60498047, 2.454834, 0.1640644)
 
-[node name="CylinderLeft" type="CSGCylinder3D" parent="CSGBox3D" unique_id=577204409]
-transform = Transform3D(1.9106857e-15, 8.742278e-08, 1, -4.371139e-08, -1, 8.742278e-08, 1, -4.371139e-08, 1.9106855e-15, -0.659559, -0.0005272627, 0.16176903)
+[node name="CylinderLeft" type="CSGCylinder3D" parent="BaseStructure" unique_id=577204409]
+transform = Transform3D(1.9106857e-15, 8.742278e-08, 1, -4.371139e-08, -1, 8.742278e-08, 1, -4.371139e-08, 1.9106855e-15, -1.0701187, -0.0005272627, 0.16176903)
 radius = 0.099
-height = 1.3440247
+height = 2.863
 
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D/CylinderLeft" unique_id=81120532]
-transform = Transform3D(1, 0, 0, 0, 1, -8.351872e-23, 0, -8.3518705e-23, 1, -0.083740234, -0.034309328, -0.09790748)
+[node name="CSGBox3D" type="CSGBox3D" parent="BaseStructure/CylinderLeft" unique_id=81120532]
+transform = Transform3D(1, 0, 0, 0, 1, -8.351872e-23, 0, -8.3518705e-23, 1, -0.049865752, 0.019720197, -0.12300825)
 operation = 2
-size = Vector3(0.51708984, 1.4781342, 0.19744873)
+size = Vector3(0.58483887, 3.1422386, 0.24765015)
 
-[node name="CylinderRight" type="CSGCylinder3D" parent="CSGBox3D" unique_id=2064017303]
-transform = Transform3D(1.9106857e-15, 8.742278e-08, 1, -4.371139e-08, -1, 8.742278e-08, 1, -4.371139e-08, 1.9106855e-15, 0.6601055, -0.00017631054, 0.16176903)
+[node name="CylinderRight" type="CSGCylinder3D" parent="BaseStructure" unique_id=2064017303]
+transform = Transform3D(1.9106857e-15, 8.742278e-08, 1, -4.371139e-08, -1, 8.742278e-08, 1, -4.371139e-08, 1.9106855e-15, 1.0689284, -0.00017631054, 0.16176903)
 radius = 0.099
-height = 1.3450928
+height = 2.875
 
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D/CylinderRight" unique_id=1221327124]
-transform = Transform3D(1, 0, 0, 0, 1, -8.351872e-23, 0, -8.3518705e-23, 1, -0.03549194, -0.009277344, 0.058013916)
+[node name="CSGBox3D" type="CSGBox3D" parent="BaseStructure/CylinderRight" unique_id=1221327124]
+transform = Transform3D(1, 0, 0, 0, 1, -8.351872e-23, 0, -8.3518705e-23, 1, -0.007827759, -0.007019043, 0.083969116)
 operation = 2
-size = Vector3(0.5726929, 1.3955078, 0.1149292)
+size = Vector3(0.62802124, 3.041626, 0.1668396)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1541798435]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01499939, 1.4862814, -0.5240714)
+shape = SubResource("BoxShape3D_3e5oy")
