@@ -2,6 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://bt18xpdddf4th" path="res://models/spy_boat/river-spy-boat.glb" id="1_glb"]
 
-[node name="RiverSpyBoat" type="Node3D" unique_id=1002160800]
+[node name="RiverSpyBoat2" type="Node3D" unique_id=1860752893]
 
-[node name="river-spy-boat" parent="." unique_id=1169481327 instance=ExtResource("1_glb")]
+[node name="river-spy-boat" parent="." unique_id=1191279894 instance=ExtResource("1_glb")]
