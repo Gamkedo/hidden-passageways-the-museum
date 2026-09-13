@@ -14,6 +14,9 @@ extends StaticBody3D
 @export_category("Credits")
 @export_multiline var credits: String = ""
 
+@export_category("OSTs")
+@export var osts: Array[AudioStream]
+
 @export_category("Textures")
 @export var painting_texture: Texture2D:
 	set = set_painting_texture
@@ -63,6 +66,8 @@ func _ready() -> void:
 	
 	var display = get_node("Foam Card") as DisplayText
 	display.page_text = credits
+
+	$Speaker.stream_list = osts
 
 	if not Engine.is_editor_hint():
 		play_stand_interactable.interaction_complete.connect(open_link)

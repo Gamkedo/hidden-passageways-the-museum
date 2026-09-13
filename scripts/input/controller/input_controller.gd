@@ -71,7 +71,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		var sprint_is_released := Input.is_action_just_released_by_event("sprint", event)
 		_handle_sprint(sprint_is_pressed, sprint_is_released)
 	if event.is_action("interact"):
-		var interact_is_pressed := Input.is_action_just_pressed_by_event("interact", event)
+		var interact_is_pressed := Input.is_action_just_pressed("interact")
 		_handle_interact(interact_is_pressed)
 	if event.is_action("toggle_flight"):
 		var toggle_flight_is_pressed := Input.is_action_just_pressed_by_event("toggle_flight", event)

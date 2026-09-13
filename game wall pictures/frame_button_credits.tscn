@@ -13,7 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://d1dd8dihc6bca" path="res://audio/placeholder/trapped.ogg" id="11_vbb3g"]
 [ext_resource type="AudioStream" uid="uid://cursnqm4e70s3" path="res://audio/placeholder/trippy.ogg" id="12_bsran"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s1wxa"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vbb3g"]
 shading_mode = 0
 
 [sub_resource type="QuadMesh" id="QuadMesh_etush"]
@@ -34,7 +34,7 @@ roughness = 0.4
 [sub_resource type="BoxShape3D" id="BoxShape3D_3e5oy"]
 size = Vector3(1, 12.362305, 19.144867)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d73dx"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bsran"]
 shading_mode = 0
 
 [sub_resource type="QuadMesh" id="QuadMesh_i26b7"]
@@ -44,6 +44,7 @@ size = Vector3(3.7, 2.3500001, 0.55)
 
 [node name="Frame, Button, Credits" type="StaticBody3D" unique_id=799548543]
 script = ExtResource("1_45jsa")
+osts = Array[AudioStream]([ExtResource("11_vbb3g"), ExtResource("12_bsran")])
 
 [node name="Foam Card" parent="." unique_id=390590116 instance=ExtResource("1_0edhe")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.5, 0, -0.10000038)
@@ -60,7 +61,7 @@ metadata/_custom_type_script = "uid://bud6xyvo80vl3"
 
 [node name="Button image" type="MeshInstance3D" parent="Button Game" unique_id=1896630648]
 transform = Transform3D(0.44582403, 0, 0, 0, 0.27519998, 0, 1.1368682e-14, 0, 0.031999994, -0.06468767, 0.46111998, -0.3172)
-material_override = SubResource("StandardMaterial3D_s1wxa")
+material_override = SubResource("StandardMaterial3D_vbb3g")
 mesh = SubResource("QuadMesh_etush")
 
 [node name="GameLabel" type="Label3D" parent="Button Game" unique_id=1183973093]
@@ -112,7 +113,7 @@ unique_name_in_owner = true
 
 [node name="Painting Image" type="MeshInstance3D" parent="BasicCurvyFrame Test" unique_id=784914795]
 transform = Transform3D(-7.033798e-07, 0, 1, 0, 9.407751, 0, -16.091467, 0, -4.371139e-08, -0.19434357, -0.026180267, 0)
-material_override = SubResource("StandardMaterial3D_d73dx")
+material_override = SubResource("StandardMaterial3D_bsran")
 cast_shadow = 0
 mesh = SubResource("QuadMesh_i26b7")
 
@@ -122,4 +123,3 @@ shape = SubResource("BoxShape3D_y5qfa")
 
 [node name="Speaker" parent="." unique_id=1668457512 instance=ExtResource("10_i26b7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4532528, 0.6008141, 0)
-stream_list = Array[AudioStream]([ExtResource("11_vbb3g"), ExtResource("12_bsran")])

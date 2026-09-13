@@ -30,6 +30,3 @@ metadata/_custom_type_script = "uid://bsmp4qaqn0uxw"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SpeakerInteractable" unique_id=1455994018]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010733843, 0.009840846, -0.009735107)
 shape = SubResource("BoxShape3D_c8sum")
-
-[connection signal="input_event" from="." to="." method="_on_input_event"]
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
