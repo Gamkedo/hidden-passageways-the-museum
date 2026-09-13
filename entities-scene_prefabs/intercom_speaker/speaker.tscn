@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cjje4wwgxoy1s"]
+
+[ext_resource type="Script" uid="uid://uuyoxulachnd" path="res://entities-scene_prefabs/intercom_speaker/speaker.gd" id="1_6edlb"]
+[ext_resource type="Script" uid="uid://bsmp4qaqn0uxw" path="res://entities-scene_prefabs/interaction/objects/interactable_area.gd" id="1_xcaxh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_34amj"]
+size = Vector3(0.33691406, 0.3310547, 0.2507019)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c8sum"]
+size = Vector3(0.38310242, 0.30490875, 0.22302246)
+
+[node name="Speaker" type="StaticBody3D" unique_id=1668457512]
+script = ExtResource("1_6edlb")
+
+[node name="PlaceholderBox" type="CSGBox3D" parent="." unique_id=194472496]
+size = Vector3(0.32702637, 0.27294922, 0.17871094)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1125967332]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0029449463, -0.0021209717)
+shape = SubResource("BoxShape3D_34amj")
+
+[node name="SpeakerInteractable" type="Area3D" parent="." unique_id=1470014313]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("1_xcaxh")
+interact_prompt = "Listen to OSTs"
+interaction_prompt_prefix = "Press to"
+metadata/_custom_type_script = "uid://bsmp4qaqn0uxw"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpeakerInteractable" unique_id=1455994018]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010733843, 0.009840846, -0.009735107)
+shape = SubResource("BoxShape3D_c8sum")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

@@ -9,8 +9,11 @@
 [ext_resource type="Script" uid="uid://bsmp4qaqn0uxw" path="res://entities-scene_prefabs/interaction/objects/interactable_area.gd" id="6_6fcnr"]
 [ext_resource type="ArrayMesh" uid="uid://cm2soemey2m52" path="res://models/play-button-stand.obj" id="6_vbb3g"]
 [ext_resource type="PackedScene" uid="uid://bv570frvts0gr" path="res://entities-scene_prefabs/scene_changer.tscn" id="8_45jsa"]
+[ext_resource type="PackedScene" uid="uid://cjje4wwgxoy1s" path="res://entities-scene_prefabs/intercom_speaker/speaker.tscn" id="10_i26b7"]
+[ext_resource type="AudioStream" uid="uid://d1dd8dihc6bca" path="res://audio/placeholder/trapped.ogg" id="11_vbb3g"]
+[ext_resource type="AudioStream" uid="uid://cursnqm4e70s3" path="res://audio/placeholder/trippy.ogg" id="12_bsran"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6fcnr"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s1wxa"]
 shading_mode = 0
 
 [sub_resource type="QuadMesh" id="QuadMesh_etush"]
@@ -31,16 +34,13 @@ roughness = 0.4
 [sub_resource type="BoxShape3D" id="BoxShape3D_3e5oy"]
 size = Vector3(1, 12.362305, 19.144867)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i26b7"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d73dx"]
 shading_mode = 0
 
 [sub_resource type="QuadMesh" id="QuadMesh_i26b7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y5qfa"]
 size = Vector3(3.7, 2.3500001, 0.55)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_34amj"]
-size = Vector3(0.33691406, 0.3310547, 0.2507019)
 
 [node name="Frame, Button, Credits" type="StaticBody3D" unique_id=799548543]
 script = ExtResource("1_45jsa")
@@ -60,7 +60,7 @@ metadata/_custom_type_script = "uid://bud6xyvo80vl3"
 
 [node name="Button image" type="MeshInstance3D" parent="Button Game" unique_id=1896630648]
 transform = Transform3D(0.44582403, 0, 0, 0, 0.27519998, 0, 1.1368682e-14, 0, 0.031999994, -0.06468767, 0.46111998, -0.3172)
-material_override = SubResource("StandardMaterial3D_6fcnr")
+material_override = SubResource("StandardMaterial3D_s1wxa")
 mesh = SubResource("QuadMesh_etush")
 
 [node name="GameLabel" type="Label3D" parent="Button Game" unique_id=1183973093]
@@ -112,7 +112,7 @@ unique_name_in_owner = true
 
 [node name="Painting Image" type="MeshInstance3D" parent="BasicCurvyFrame Test" unique_id=784914795]
 transform = Transform3D(-7.033798e-07, 0, 1, 0, 9.407751, 0, -16.091467, 0, -4.371139e-08, -0.19434357, -0.026180267, 0)
-material_override = SubResource("StandardMaterial3D_i26b7")
+material_override = SubResource("StandardMaterial3D_d73dx")
 cast_shadow = 0
 mesh = SubResource("QuadMesh_i26b7")
 
@@ -120,24 +120,6 @@ mesh = SubResource("QuadMesh_i26b7")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8146973e-06, 0.47500026, -0.125)
 shape = SubResource("BoxShape3D_y5qfa")
 
-[node name="Speaker" type="StaticBody3D" parent="." unique_id=1365678469]
+[node name="Speaker" parent="." unique_id=1668457512 instance=ExtResource("10_i26b7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4532528, 0.6008141, 0)
-
-[node name="PlaceholderBox" type="CSGBox3D" parent="Speaker" unique_id=2035522853]
-size = Vector3(0.32702637, 0.27294922, 0.17871094)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Speaker" unique_id=1737107101]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0029449463, -0.0021209717)
-shape = SubResource("BoxShape3D_34amj")
-
-[node name="SpeakerInteractable" type="Area3D" parent="Speaker" unique_id=1322640660]
-collision_layer = 8
-collision_mask = 8
-script = ExtResource("6_6fcnr")
-interact_prompt = "Listen to OSTs"
-interaction_prompt_prefix = "Press to"
-metadata/_custom_type_script = "uid://bsmp4qaqn0uxw"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Speaker/SpeakerInteractable" unique_id=1987858526]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010733843, 0.009840846, -0.009735107)
-shape = SubResource("BoxShape3D_c8sum")
+stream_list = Array[AudioStream]([ExtResource("11_vbb3g"), ExtResource("12_bsran")])
