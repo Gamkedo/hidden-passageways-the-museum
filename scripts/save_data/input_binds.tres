@@ -12,8 +12,8 @@ pressed = true
 
 [sub_resource type="InputEventKey" id="InputEventKey_yiw8e"]
 device = -1
-keycode = 67
-unicode = 99
+keycode = 86
+unicode = 118
 
 [sub_resource type="InputEventJoypadMotion" id="InputEventJoypadMotion_d4gxi"]
 axis = 5
