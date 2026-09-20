@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cyqgophlok1w5"]
+
+[ext_resource type="Texture2D" uid="uid://c487dufe5obna" path="res://entities-scene_prefabs/interaction/display_hint/display_hint.png" id="1_1548t"]
+[ext_resource type="Script" uid="uid://daxebdbvm2ypt" path="res://entities-scene_prefabs/interaction/display_hint/display_hint.gd" id="1_sg5nh"]
+
+[node name="DisplayHint" type="Sprite2D" unique_id=1673367312]
+texture = ExtResource("1_1548t")
+script = ExtResource("1_sg5nh")

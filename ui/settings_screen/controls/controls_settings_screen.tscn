@@ -153,6 +153,17 @@ layout_mode = 2
 size_flags_horizontal = 3
 icon_alignment = 1
 
+[node name="KDisplayHints" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=938059308]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Display Hints"
+
+[node name="KDisplayHintsInputChange" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=1465903341]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+icon_alignment = 1
+
 [node name="CaptureMouse" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/KeyboardInputs" unique_id=1921177462]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
@@ -306,6 +317,18 @@ layout_mode = 2
 text = "Map"
 
 [node name="CMapInputChange" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=1024729253]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/icon_max_width = 70
+icon_alignment = 1
+
+[node name="CDisplayHints" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=1111999602]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Map"
+
+[node name="CDisplayHintsInputChange" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=1949219450]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3

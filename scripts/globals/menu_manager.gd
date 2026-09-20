@@ -58,5 +58,6 @@ func quit_game() -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed_by_event("pause", event):
+	var pause_action := InputBinds.ACTION_STRINGS[InputBinds.ACTIONS.PAUSE]
+	if Input.is_action_just_pressed_by_event(pause_action, event):
 		attempt_toggle_pause_screen()

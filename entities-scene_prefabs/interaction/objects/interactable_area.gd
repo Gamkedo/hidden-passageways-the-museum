@@ -11,6 +11,9 @@ signal enabled_updated(is_enabled: bool)
 	set = set_interaction_text
 @export_enum(" ", "Hold to", "Press to") var interaction_prompt_prefix: String = ""
 
+@export_category("Display Hint")
+@export var display_hint: DisplayHint
+
 @export_category("Interaction Details")
 ## Time to complete the interaction. Set to 0 for instant interaction on button press
 @export_range(0, 120) var interaction_time: float
@@ -23,6 +26,9 @@ signal enabled_updated(is_enabled: bool)
 var enabled: bool = true:
 	set = set_enabled
 var current_interaction_time: float = 0
+var is_detected: bool = false:
+	set = set_is_detected
+var _display_hint_enabled: bool = false
 var _progressing_interaction: bool = false
 
 
@@ -83,6 +89,42 @@ func get_interaction_cursor() -> Texture2D:
 	return interaction_cursor
 #endregion Visual Indicators
 
+#region Display Hint
+func resolve_display_hint_state() -> void:
+	if _display_hint_enabled and not is_detected:
+		show_display_hint()
+	elif not _display_hint_enabled or is_detected:
+		hide_display_hint()
+
+func show_display_hint() -> void:
+	if is_instance_valid(display_hint):
+		display_hint.show_hint()
+
+func hide_display_hint() -> void:
+	if is_instance_valid(display_hint):
+		display_hint.hide_hint()
+#endregion Display Hint
+
+
+func set_is_detected(detected: bool) -> void:
+	is_detected = detected
 
 func _process(delta: float) -> void:
 	_handle_interaction_progress(delta)
+	resolve_display_hint_state()
+
+func _ready() -> void:
+	# If the display hint wasn't set explicitly, see if there's a child DisplayHint and use that
+	if not is_instance_valid(display_hint):
+		var display_hint_children := find_children("*", "DisplayHint")
+		if not display_hint_children.is_empty():
+			var first_display_hint := display_hint_children[0]
+			print("Assigning first DisplayHint child to interactable | Interactable=%s, DisplayHint=%s" % [name, first_display_hint.name])
+			display_hint = first_display_hint
+
+func _unhandled_input(event: InputEvent) -> void:
+	var display_hint_action := InputBinds.ACTION_STRINGS[InputBinds.ACTIONS.DISPLAY_HINTS]
+	if Input.is_action_just_pressed_by_event(display_hint_action, event):
+		_display_hint_enabled = true
+	elif Input.is_action_just_released_by_event(display_hint_action, event):
+		_display_hint_enabled = false

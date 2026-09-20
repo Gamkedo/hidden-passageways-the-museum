@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c8tqx7x66ewpd" path="res://entities-scene_prefabs/credits_foam_card_viewable.tscn" id="4_pm4op"]
 [ext_resource type="Texture2D" uid="uid://doim7pdujub31" path="res://icon.png" id="5_rdv17"]
 [ext_resource type="Script" uid="uid://bsmp4qaqn0uxw" path="res://entities-scene_prefabs/interaction/objects/interactable_area.gd" id="5_rq0w2"]
+[ext_resource type="PackedScene" uid="uid://cyqgophlok1w5" path="res://entities-scene_prefabs/interaction/display_hint/display_hint.tscn" id="8_mhj3v"]
 [ext_resource type="PackedScene" uid="uid://bp44rivm28fxu" path="res://entities-scene_prefabs/dynamic_billboard/dynamic_billboard.tscn" id="8_rdv17"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ha7f6"]
@@ -260,17 +261,24 @@ unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.352912, 0.5856619, -10.736989)
 script = SubResource("GDScript_6fcnr")
 
-[node name="CubeInteractable" type="Area3D" parent="InteractableCube" unique_id=1723265568]
+[node name="CubeInteractable" type="Area3D" parent="InteractableCube" unique_id=1723265568 node_paths=PackedStringArray("display_hint")]
 unique_name_in_owner = true
 collision_layer = 8
 collision_mask = 8
 input_ray_pickable = false
 script = ExtResource("5_rq0w2")
 interact_prompt = "Interact with CUBE"
+display_hint = NodePath("Marker3D/DisplayHint")
 metadata/_custom_type_script = "uid://bsmp4qaqn0uxw"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractableCube/CubeInteractable" unique_id=146348497]
 shape = SubResource("BoxShape3D_3e5oy")
+
+[node name="Marker3D" type="Marker3D" parent="InteractableCube/CubeInteractable" unique_id=239651133]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.037629724, 0.07029724)
+
+[node name="DisplayHint" parent="InteractableCube/CubeInteractable/Marker3D" unique_id=1673367312 node_paths=PackedStringArray("display_target") instance=ExtResource("8_mhj3v")]
+display_target = NodePath("..")
 
 [node name="RPSPolygon" type="CSGPolygon3D" parent="." unique_id=1171339881]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 17.775997, 1.2545905, 0.27784348)
@@ -290,7 +298,7 @@ unique_name_in_owner = true
 wait_time = 3.0
 one_shot = true
 
-[node name="RPSInteractable" type="Area3D" parent="RPSPolygon/RockPaperScissors" unique_id=1304016590]
+[node name="RPSInteractable" type="Area3D" parent="RPSPolygon/RockPaperScissors" unique_id=1304016590 node_paths=PackedStringArray("display_hint")]
 unique_name_in_owner = true
 collision_layer = 8
 collision_mask = 8
@@ -298,11 +306,18 @@ input_ray_pickable = false
 script = ExtResource("5_rq0w2")
 interact_prompt = "play Rock, Paper, Scissors"
 interaction_prompt_prefix = "Press to"
+display_hint = NodePath("Marker3D/DisplayHint")
 metadata/_custom_type_script = "uid://bsmp4qaqn0uxw"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RPSPolygon/RockPaperScissors/RPSInteractable" unique_id=1449774467]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.023682594, -0.08456421, 1.335144e-05)
 shape = SubResource("BoxShape3D_c8sum")
+
+[node name="Marker3D" type="Marker3D" parent="RPSPolygon/RockPaperScissors/RPSInteractable" unique_id=1950884879]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.33415174, 0)
+
+[node name="DisplayHint" parent="RPSPolygon/RockPaperScissors/RPSInteractable/Marker3D" unique_id=257819482 node_paths=PackedStringArray("display_target") instance=ExtResource("8_mhj3v")]
+display_target = NodePath("..")
 
 [node name="LiquidFill" type="CSGCylinder3D" parent="." unique_id=1916124075]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7296932, 8.886508)
@@ -312,13 +327,14 @@ height = 2.871582
 script = SubResource("GDScript_04lax")
 fill_rate_scalar = 1.5
 
-[node name="LiquidFillInteractable" type="Area3D" parent="LiquidFill" unique_id=974197629]
+[node name="LiquidFillInteractable" type="Area3D" parent="LiquidFill" unique_id=974197629 node_paths=PackedStringArray("display_hint")]
 unique_name_in_owner = true
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("5_rq0w2")
 interact_prompt = "fill with mysterious liquid"
 interaction_prompt_prefix = "Hold to"
+display_hint = NodePath("Marker3D/DisplayHint")
 interaction_time = 20.0
 reset_progress_on_interact_stopped = false
 metadata/_custom_type_script = "uid://bsmp4qaqn0uxw"
@@ -326,6 +342,12 @@ metadata/_custom_type_script = "uid://bsmp4qaqn0uxw"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LiquidFill/LiquidFillInteractable" unique_id=1000772984]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00061035156, 0)
 shape = SubResource("CylinderShape3D_3e5oy")
+
+[node name="Marker3D" type="Marker3D" parent="LiquidFill/LiquidFillInteractable" unique_id=91880153]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2784946, -0.30058002)
+
+[node name="DisplayHint" parent="LiquidFill/LiquidFillInteractable/Marker3D" unique_id=792206664 node_paths=PackedStringArray("display_target") instance=ExtResource("8_mhj3v")]
+display_target = NodePath("..")
 
 [node name="DynamicBillboard2" parent="." unique_id=880058378 instance=ExtResource("8_rdv17")]
 transform = Transform3D(0.86978203, 0, 0.4934362, 0, 1, 0, -0.4934362, 0, 0.86978203, -6.1059184, 0.017408371, -9.291998)

@@ -18,6 +18,7 @@ const MOUSE_AND_KEYBOARD_ICON_ACTION_MAP: MouseAndKeyboardIconActionMap = preloa
 @onready var k_toggle_flight_input_change: Button = %KToggleFlightInputChange
 @onready var k_pause_input_change: Button = %KPauseInputChange
 @onready var k_map_input_change: Button = %KMapInputChange
+@onready var k_display_hints_input_change: Button = %KDisplayHintsInputChange
 @onready var capture_mouse_input_change: Button = %CaptureMouseInputChange
 @onready var release_mouse_input_change: Button = %ReleaseMouseInputChange
 #endregion Mouse & Keyboard
@@ -33,6 +34,7 @@ const MOUSE_AND_KEYBOARD_ICON_ACTION_MAP: MouseAndKeyboardIconActionMap = preloa
 @onready var c_toggle_flight_input_change: Button = %CToggleFlightInputChange
 @onready var c_pause_input_change: Button = %CPauseInputChange
 @onready var c_map_input_change: Button = %CMapInputChange
+@onready var c_display_hints_input_change: Button = %CDisplayHintsInputChange
 #endregion Controller
 
 @onready var reset_binds_button: Button = %ResetBinds
@@ -54,6 +56,7 @@ const MOUSE_AND_KEYBOARD_ICON_ACTION_MAP: MouseAndKeyboardIconActionMap = preloa
 	k_toggle_flight_input_change: InputBinds.ACTIONS.TOGGLE_FLIGHT,
 	k_pause_input_change: InputBinds.ACTIONS.PAUSE,
 	k_map_input_change: InputBinds.ACTIONS.MAP,
+	k_display_hints_input_change: InputBinds.ACTIONS.DISPLAY_HINTS,
 	capture_mouse_input_change: InputBinds.ACTIONS.CAPTURE_MOUSE,
 	release_mouse_input_change: InputBinds.ACTIONS.RELEASE_MOUSE,
 }
@@ -69,6 +72,7 @@ const MOUSE_AND_KEYBOARD_ICON_ACTION_MAP: MouseAndKeyboardIconActionMap = preloa
 	c_toggle_flight_input_change: InputBinds.ACTIONS.TOGGLE_FLIGHT,
 	c_pause_input_change: InputBinds.ACTIONS.PAUSE,
 	c_map_input_change: InputBinds.ACTIONS.MAP,
+	c_display_hints_input_change: InputBinds.ACTIONS.DISPLAY_HINTS,
 }
 
 var target_input_change_button: Button

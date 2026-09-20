@@ -72,9 +72,12 @@ func reevaluate_current_interactable() -> void:
 		var next_interactable: InteractableArea = interactable_queue.back()
 		if next_interactable.enabled:
 			current_interactable = next_interactable
+			current_interactable.set_is_detected(true)
 	
 	# 'null' for no more interactables available
 	if last_interactable != current_interactable:
+		if is_instance_valid(last_interactable):
+			last_interactable.set_is_detected(false)
 		_disconnect_interactable_signals(last_interactable)
 		_connect_interactable_signals(current_interactable)
 		target_interactable_changed.emit(current_interactable)

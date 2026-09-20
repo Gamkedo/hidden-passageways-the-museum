@@ -10,6 +10,15 @@ global_position = Vector2(261, 108)
 button_index = 1
 pressed = true
 
+[sub_resource type="InputEventKey" id="InputEventKey_yiw8e"]
+device = -1
+keycode = 67
+unicode = 99
+
+[sub_resource type="InputEventJoypadMotion" id="InputEventJoypadMotion_d4gxi"]
+axis = 5
+axis_value = 1.0
+
 [sub_resource type="InputEventKey" id="InputEventKey_d4gxi"]
 device = -1
 keycode = 83
@@ -134,6 +143,7 @@ interact = Array[InputEvent]([SubResource("InputEventKey_upj76"), SubResource("I
 toggle_flight = Array[InputEvent]([SubResource("InputEventKey_8b4da"), SubResource("InputEventJoypadButton_cp3om")])
 pause = Array[InputEvent]([SubResource("InputEventKey_6vael"), SubResource("InputEventJoypadButton_djqks")])
 map = Array[InputEvent]([SubResource("InputEventKey_bfq3i"), SubResource("InputEventJoypadButton_8o5lu")])
+display_hints = Array[InputEvent]([SubResource("InputEventKey_yiw8e"), SubResource("InputEventJoypadMotion_d4gxi")])
 capture_mouse = Array[InputEvent]([SubResource("InputEventMouseButton_yiw8e")])
 release_mouse = Array[InputEvent]([SubResource("InputEventMouseButton_b1d2t")])
 metadata/_custom_type_script = "uid://7b2l37s7orp0"

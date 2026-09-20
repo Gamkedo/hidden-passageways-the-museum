@@ -10,10 +10,11 @@
 [ext_resource type="ArrayMesh" uid="uid://cm2soemey2m52" path="res://models/play-button-stand.obj" id="6_vbb3g"]
 [ext_resource type="PackedScene" uid="uid://bv570frvts0gr" path="res://entities-scene_prefabs/scene_changer.tscn" id="8_45jsa"]
 [ext_resource type="PackedScene" uid="uid://cjje4wwgxoy1s" path="res://entities-scene_prefabs/intercom_speaker/speaker.tscn" id="10_i26b7"]
+[ext_resource type="PackedScene" uid="uid://cyqgophlok1w5" path="res://entities-scene_prefabs/interaction/display_hint/display_hint.tscn" id="11_bsran"]
 [ext_resource type="AudioStream" uid="uid://d1dd8dihc6bca" path="res://audio/placeholder/trapped.ogg" id="11_vbb3g"]
 [ext_resource type="AudioStream" uid="uid://cursnqm4e70s3" path="res://audio/placeholder/trippy.ogg" id="12_bsran"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vbb3g"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bsran"]
 shading_mode = 0
 
 [sub_resource type="QuadMesh" id="QuadMesh_etush"]
@@ -34,7 +35,7 @@ roughness = 0.4
 [sub_resource type="BoxShape3D" id="BoxShape3D_3e5oy"]
 size = Vector3(1, 12.362305, 19.144867)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bsran"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s1wxa"]
 shading_mode = 0
 
 [sub_resource type="QuadMesh" id="QuadMesh_i26b7"]
@@ -61,7 +62,7 @@ metadata/_custom_type_script = "uid://bud6xyvo80vl3"
 
 [node name="Button image" type="MeshInstance3D" parent="Button Game" unique_id=1896630648]
 transform = Transform3D(0.44582403, 0, 0, 0, 0.27519998, 0, 1.1368682e-14, 0, 0.031999994, -0.06468767, 0.46111998, -0.3172)
-material_override = SubResource("StandardMaterial3D_vbb3g")
+material_override = SubResource("StandardMaterial3D_bsran")
 mesh = SubResource("QuadMesh_etush")
 
 [node name="GameLabel" type="Label3D" parent="Button Game" unique_id=1183973093]
@@ -79,41 +80,55 @@ mesh = ExtResource("6_vbb3g")
 transform = Transform3D(-8.742277e-09, 0, -0.19999999, 0, 0.19999999, 0, 0.19999999, 0, -8.742277e-09, -0.099998474, 0.45, -0.050001144)
 shape = SubResource("BoxShape3D_7tbbo")
 
-[node name="PlayStandInteractable" type="Area3D" parent="Button Game" unique_id=1297663138]
+[node name="PlayStandInteractable" type="Area3D" parent="Button Game" unique_id=1297663138 node_paths=PackedStringArray("display_hint")]
 unique_name_in_owner = true
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("6_6fcnr")
 interact_prompt = "View Game"
+display_hint = NodePath("Marker3D/DisplayHint")
 metadata/_custom_type_script = "uid://bsmp4qaqn0uxw"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Button Game/PlayStandInteractable" unique_id=1637935757]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08506775, 0.20333862, -0.06362915)
 shape = SubResource("BoxShape3D_c8sum")
 
+[node name="Marker3D" type="Marker3D" parent="Button Game/PlayStandInteractable" unique_id=526148055]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.42225024, -0.037976623)
+
+[node name="DisplayHint" parent="Button Game/PlayStandInteractable/Marker3D" unique_id=1673367312 node_paths=PackedStringArray("display_target") instance=ExtResource("11_bsran")]
+display_target = NodePath("..")
+
 [node name="BasicCurvyFrame Test" type="MeshInstance3D" parent="." unique_id=1119403653]
 transform = Transform3D(-8.742277e-09, 0, -0.19999999, 0, 0.19999999, 0, 0.19999999, 0, -8.742277e-09, 0, 0.5, 0)
 material_override = SubResource("StandardMaterial3D_4fg2q")
 mesh = ExtResource("5_i26b7")
 
-[node name="FrameInteractable" type="Area3D" parent="BasicCurvyFrame Test" unique_id=686208393]
+[node name="FrameInteractable" type="Area3D" parent="BasicCurvyFrame Test" unique_id=686208393 node_paths=PackedStringArray("display_hint")]
 unique_name_in_owner = true
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("6_6fcnr")
 interact_prompt = "Explore World"
+display_hint = NodePath("Marker3D/DisplayHint")
 metadata/_custom_type_script = "uid://bsmp4qaqn0uxw"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BasicCurvyFrame Test/FrameInteractable" unique_id=581571991]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.059042e-14, 0.073730946, -0.008590782)
 shape = SubResource("BoxShape3D_3e5oy")
 
+[node name="Marker3D" type="Marker3D" parent="BasicCurvyFrame Test/FrameInteractable" unique_id=407136749]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.41714025, 0)
+
+[node name="DisplayHint" parent="BasicCurvyFrame Test/FrameInteractable/Marker3D" unique_id=261908855 node_paths=PackedStringArray("display_target") instance=ExtResource("11_bsran")]
+display_target = NodePath("..")
+
 [node name="ClickSceneChange" parent="BasicCurvyFrame Test" unique_id=1496126097 instance=ExtResource("8_45jsa")]
 unique_name_in_owner = true
 
 [node name="Painting Image" type="MeshInstance3D" parent="BasicCurvyFrame Test" unique_id=784914795]
 transform = Transform3D(-7.033798e-07, 0, 1, 0, 9.407751, 0, -16.091467, 0, -4.371139e-08, -0.19434357, -0.026180267, 0)
-material_override = SubResource("StandardMaterial3D_bsran")
+material_override = SubResource("StandardMaterial3D_s1wxa")
 cast_shadow = 0
 mesh = SubResource("QuadMesh_i26b7")
 

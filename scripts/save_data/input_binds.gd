@@ -18,6 +18,7 @@ signal input_map_updated
 @export var toggle_flight: Array[InputEvent]
 @export var pause: Array[InputEvent]
 @export var map: Array[InputEvent]
+@export var display_hints: Array[InputEvent]
 @export var capture_mouse: Array[InputEvent]
 @export var release_mouse: Array[InputEvent]
 #endregion Input Events
@@ -27,7 +28,7 @@ enum ACTIONS {
 	LEFT, RIGHT, UP, DOWN,
 	LOOK_LEFT, LOOK_RIGHT, LOOK_UP, LOOK_DOWN,
 	JUMP, SPRINT, INTERACT, TOGGLE_FLIGHT,
-	PAUSE, MAP,
+	PAUSE, MAP, DISPLAY_HINTS,
 	CAPTURE_MOUSE, RELEASE_MOUSE
 }
 # !! WARNING !!
@@ -37,7 +38,7 @@ const ACTION_STRINGS: Dictionary[ACTIONS, String]= {
 	ACTIONS.LEFT: "left", ACTIONS.RIGHT: "right", ACTIONS.UP: "up", ACTIONS.DOWN: "down",
 	ACTIONS.LOOK_LEFT: "look_left", ACTIONS.LOOK_RIGHT: "look_right", ACTIONS.LOOK_UP: "look_up", ACTIONS.LOOK_DOWN: "look_down",
 	ACTIONS.JUMP: "jump", ACTIONS.SPRINT: "sprint", ACTIONS.INTERACT: "interact", ACTIONS.TOGGLE_FLIGHT: "toggle_flight",
-	ACTIONS.PAUSE: "pause", ACTIONS.MAP: "map",
+	ACTIONS.PAUSE: "pause", ACTIONS.MAP: "map", ACTIONS.DISPLAY_HINTS: "display_hints",
 	ACTIONS.CAPTURE_MOUSE: "capture_mouse", ACTIONS.RELEASE_MOUSE: "release_mouse"
 }
 
@@ -158,6 +159,8 @@ func set_event(action: StringName, events: Array[InputEvent]) -> void:
 			pause = events
 		ACTION_STRINGS[ACTIONS.MAP]:
 			map = events
+		ACTION_STRINGS[ACTIONS.DISPLAY_HINTS]:
+			display_hints = events
 		ACTION_STRINGS[ACTIONS.CAPTURE_MOUSE]:
 			capture_mouse = events
 		ACTION_STRINGS[ACTIONS.RELEASE_MOUSE]:
@@ -194,6 +197,8 @@ func get_events(action: StringName) -> Array[InputEvent]:
 			events = pause
 		ACTION_STRINGS[ACTIONS.MAP]: 
 			events = map
+		ACTION_STRINGS[ACTIONS.DISPLAY_HINTS]: 
+			events = display_hints
 		ACTION_STRINGS[ACTIONS.CAPTURE_MOUSE]: 
 			events = capture_mouse
 		ACTION_STRINGS[ACTIONS.RELEASE_MOUSE]: 
@@ -224,6 +229,7 @@ func serialize() -> ConfigFile:
 		ACTION_STRINGS[ACTIONS.TOGGLE_FLIGHT]: serialize_events(toggle_flight),
 		ACTION_STRINGS[ACTIONS.PAUSE]: serialize_events(pause),
 		ACTION_STRINGS[ACTIONS.MAP]: serialize_events(map),
+		ACTION_STRINGS[ACTIONS.DISPLAY_HINTS]: serialize_events(display_hints),
 		ACTION_STRINGS[ACTIONS.CAPTURE_MOUSE]: serialize_events(capture_mouse),
 		ACTION_STRINGS[ACTIONS.RELEASE_MOUSE]: serialize_events(release_mouse),
 	}
@@ -236,38 +242,33 @@ func serialize() -> ConfigFile:
 
 
 func load_from_serialized(config_file: ConfigFile) -> void:
-	var left_config: Array[Dictionary] = config_file.get_value(INPUT_BINDS_SECTION, ACTION_STRINGS[ACTIONS.LEFT])
-	left = deserialize(left_config)
-	var right_config: Array[Dictionary] = config_file.get_value(INPUT_BINDS_SECTION, ACTION_STRINGS[ACTIONS.RIGHT])
-	right = deserialize(right_config)
-	var up_config: Array[Dictionary] = config_file.get_value(INPUT_BINDS_SECTION, ACTION_STRINGS[ACTIONS.UP])
-	up = deserialize(up_config)
-	var down_config: Array[Dictionary] = config_file.get_value(INPUT_BINDS_SECTION, ACTION_STRINGS[ACTIONS.DOWN])
-	down = deserialize(down_config)
-	var look_left_config: Array[Dictionary] = config_file.get_value(INPUT_BINDS_SECTION, ACTION_STRINGS[ACTIONS.LOOK_LEFT])
-	look_left = deserialize(look_left_config)
-	var look_right_config: Array[Dictionary] = config_file.get_value(INPUT_BINDS_SECTION, ACTION_STRINGS[ACTIONS.LOOK_RIGHT])
-	look_right = deserialize(look_right_config)
-	var look_up_config: Array[Dictionary] = config_file.get_value(INPUT_BINDS_SECTION, ACTION_STRINGS[ACTIONS.LOOK_UP])
-	look_up = deserialize(look_up_config)
-	var look_down_config: Array[Dictionary] = config_file.get_value(INPUT_BINDS_SECTION, ACTION_STRINGS[ACTIONS.LOOK_DOWN])
-	look_down = deserialize(look_down_config)
-	var jump_config: Array[Dictionary] = config_file.get_value(INPUT_BINDS_SECTION, ACTION_STRINGS[ACTIONS.JUMP])
-	jump = deserialize(jump_config)
-	var sprint_config: Array[Dictionary] = config_file.get_value(INPUT_BINDS_SECTION, ACTION_STRINGS[ACTIONS.SPRINT])
-	sprint = deserialize(sprint_config)
-	var interact_config: Array[Dictionary] = config_file.get_value(INPUT_BINDS_SECTION, ACTION_STRINGS[ACTIONS.INTERACT])
-	interact = deserialize(interact_config)
-	var toggle_flight_config: Array[Dictionary] = config_file.get_value(INPUT_BINDS_SECTION, ACTION_STRINGS[ACTIONS.TOGGLE_FLIGHT])
-	toggle_flight = deserialize(toggle_flight_config)
-	var pause_config: Array[Dictionary] = config_file.get_value(INPUT_BINDS_SECTION, ACTION_STRINGS[ACTIONS.PAUSE])
-	pause = deserialize(pause_config)
-	var map_config: Array[Dictionary] = config_file.get_value(INPUT_BINDS_SECTION, ACTION_STRINGS[ACTIONS.MAP])
-	map = deserialize(map_config)
-	var capture_mouse_config: Array[Dictionary] = config_file.get_value(INPUT_BINDS_SECTION, ACTION_STRINGS[ACTIONS.CAPTURE_MOUSE])
-	capture_mouse = deserialize(capture_mouse_config)
-	var release_mouse_config: Array[Dictionary] = config_file.get_value(INPUT_BINDS_SECTION, ACTION_STRINGS[ACTIONS.RELEASE_MOUSE])
-	release_mouse = deserialize(release_mouse_config)
+	left = _get_events_from_config(config_file, ACTIONS.LEFT)
+	right = _get_events_from_config(config_file, ACTIONS.RIGHT)
+	up = _get_events_from_config(config_file, ACTIONS.UP)
+	down = _get_events_from_config(config_file, ACTIONS.DOWN)
+	look_left = _get_events_from_config(config_file, ACTIONS.LOOK_LEFT)
+	look_right = _get_events_from_config(config_file, ACTIONS.LOOK_RIGHT)
+	look_up = _get_events_from_config(config_file, ACTIONS.LOOK_UP)
+	look_down = _get_events_from_config(config_file, ACTIONS.LOOK_DOWN)
+	jump = _get_events_from_config(config_file, ACTIONS.JUMP)
+	sprint = _get_events_from_config(config_file, ACTIONS.SPRINT)
+	interact = _get_events_from_config(config_file, ACTIONS.INTERACT)
+	toggle_flight = _get_events_from_config(config_file, ACTIONS.TOGGLE_FLIGHT)
+	pause = _get_events_from_config(config_file, ACTIONS.PAUSE)
+	map = _get_events_from_config(config_file, ACTIONS.MAP)
+	display_hints = _get_events_from_config(config_file, ACTIONS.DISPLAY_HINTS)
+	capture_mouse = _get_events_from_config(config_file, ACTIONS.CAPTURE_MOUSE)
+	release_mouse = _get_events_from_config(config_file, ACTIONS.RELEASE_MOUSE)
+
+func _get_events_from_config(config_file: ConfigFile, key: ACTIONS) -> Array[InputEvent]:
+	var input_events: Array[InputEvent] = get_events(ACTION_STRINGS[key])
+	# Default to the events in the ProjectSettings if nothing is found in the file
+	var file_events: Variant = config_file.get_value(INPUT_BINDS_SECTION, ACTION_STRINGS[key], input_events)
+	if file_events != input_events:
+		var deserialized_events := deserialize(file_events)
+		input_events.assign(deserialized_events)
+	return input_events
+	
 #endregion File Management
 
 #region InputEvent Serialization
