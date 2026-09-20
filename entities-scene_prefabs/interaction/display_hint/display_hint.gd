@@ -19,6 +19,8 @@ extends Sprite2D
 ## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ##
 @export_category("Grow & Shrink Rules")
+## Beyond this distance, the hint will be fully hidden
+@export var max_visible_distance: float = 10.0
 ## When the hint is further from the player than this distance, it will not shrink further
 @export var max_shrink_distance: float = 7.0
 ## Min scale the hint shrinks to when further than [max_shrink_distance]
@@ -39,6 +41,7 @@ func hide_hint() -> void:
 ## Project position onto the 2D viewport based on position to the camera
 func set_position_for_camera(current_camera: Camera3D) -> void:
 	var parent_3d := _get_parent_3d()
+	# Hide the hint if it's behind the camera
 	visible = not current_camera.is_position_behind(parent_3d.global_transform.origin)
 	var updated_position := get_target_position_from_camera(current_camera, parent_3d)
 	position = updated_position
@@ -50,16 +53,24 @@ func get_target_position_from_camera(camera: Camera3D, target_node: Node3D) -> V
 
 ## Scale the sprite based on distance to the camera
 func set_scale_for_camera(current_camera: Camera3D) -> void:
-	var parent_3d := _get_parent_3d()
-	var curr_distance := current_camera.global_position.distance_to(parent_3d.global_position)
-	var curr_distance_curve := (max_shrink_distance - curr_distance - max_grow_distance) / (max_shrink_distance - max_grow_distance)
+	var curr_distance := _get_distance_to_camera(current_camera)
+	var grow_shrink_range := max_shrink_distance - max_grow_distance
+	var curr_distance_curve := (grow_shrink_range - curr_distance) / grow_shrink_range
 	curr_distance_curve = clampf(curr_distance_curve, min_scale, max_scale)
 	scale = Vector2.ONE * curr_distance_curve
 
 ## Fade in/out the sprite based on target display state
-func set_opacity_for_state(display_state: bool, delta: float) -> void:
-	var updated_opacity := _get_adjusted_display_opacity(delta, display_state)
+func set_opacity_for_state(current_camera: Camera3D, display_state: bool, delta: float) -> void:
+	var curr_distance := _get_distance_to_camera(current_camera)
+	var within_max_display_distance := curr_distance < max_visible_distance
+	var should_display := display_state and within_max_display_distance
+	var updated_opacity := _get_adjusted_display_opacity(delta, should_display)
 	self_modulate.a = updated_opacity
+
+func _get_distance_to_camera(camera: Camera3D) -> float:
+	var parent_3d := _get_parent_3d()
+	var curr_distance := camera.global_position.distance_to(parent_3d.global_position)
+	return curr_distance
 
 func _get_adjusted_display_opacity(delta: float, display: bool) -> float:
 	var new_opacity := self_modulate.a
@@ -81,7 +92,7 @@ func _process(delta: float) -> void:
 	
 	set_position_for_camera(viewport_camera)
 	set_scale_for_camera(viewport_camera)
-	set_opacity_for_state(displaying, delta)
+	set_opacity_for_state(viewport_camera, displaying, delta)
 
 func _get_parent_3d() -> Node3D:
 	var parent_3d: Node3D = get_parent()
