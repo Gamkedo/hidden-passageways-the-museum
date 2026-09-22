@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ctt4853bgq7l8"]
+
+[ext_resource type="Script" uid="uid://bsbrii043gl58" path="res://level-scenes/precompiler.gd" id="1_l6va4"]
+
+[sub_resource type="Environment" id="Environment_xteo1"]
+background_mode = 1
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+
+[node name="Precompiler" type="Node3D" unique_id=152907443]
+script = ExtResource("1_l6va4")
+scene_folders = Array[String](["res://entities-scene_prefabs", "res://models", ""])
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1883957593]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2123066993]
+environment = SubResource("Environment_xteo1")
+
+[node name="Spawner" type="Node3D" parent="." unique_id=729785895]
