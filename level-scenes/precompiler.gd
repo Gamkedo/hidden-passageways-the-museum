@@ -1,6 +1,12 @@
 ## Avoid hitches and skips by previewing game entities before loading the game.
 
+## NOTE
+## The cache is comprised of orphaned nodes, stored in an array [member cache].
+## The orphan nodes number in the Monitors view reflects this, if you're concerned about that.
+
 class_name Precompiler extends Node3D
+
+const SKIP_PRECOMPILER: bool = false
 
 signal progress_changed(progress:float)
 signal entity_count_changed(count:int)
@@ -27,6 +33,10 @@ var remainder:int # The number of scenes left to spawn.
 @onready var spawner: Node3D = $Spawner
 
 func _ready() -> void:
+	if SKIP_PRECOMPILER:
+		finished.emit()
+		return
+	
 	await run()
 	finished.emit()
 

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://g1u5kq5aa3l2"]
+
+[ext_resource type="Material" uid="uid://cxick4fh6p4he" path="res://materials/clay.tres" id="1_v47wk"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_xteo1"]
+
+[node name="Clayfab" type="MeshInstance3D" unique_id=10374341]
+mesh = SubResource("BoxMesh_xteo1")
+surface_material_override/0 = ExtResource("1_v47wk")

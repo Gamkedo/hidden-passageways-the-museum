@@ -47,6 +47,9 @@ _data = {
 &"spinny": SubResource("Animation_mjsoi")
 }
 
+[sub_resource type="LabelSettings" id="LabelSettings_xteo1"]
+font_size = 48
+
 [node name="Preload" type="Node" unique_id=1234837520]
 script = ExtResource("1_ogugk")
 
@@ -69,10 +72,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -36.0
-offset_top = 26.0
-offset_right = 28.0
-offset_bottom = 90.0
+offset_left = -46.0
+offset_top = 201.0
+offset_right = 18.0
+offset_bottom = 265.0
 grow_horizontal = 2
 grow_vertical = 2
 offset_transform_enabled = true
@@ -84,17 +87,17 @@ autoplay = &"spinny"
 
 [node name="Label" type="Label" parent="UI/Control" unique_id=287922590]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
+anchor_bottom = 1.0
 offset_left = -39.5
-offset_top = -11.5
+offset_top = -23.0
 offset_right = 39.5
-offset_bottom = 11.5
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 text = "Loading ..."
+label_settings = SubResource("LabelSettings_xteo1")
 
 [connection signal="finished" from="PrecompilationMain" to="." method="_on_precompilation_main_finished"]
