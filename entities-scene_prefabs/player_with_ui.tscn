@@ -24,6 +24,13 @@ outline_color = Color(0, 0, 0, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_etush"]
 bg_color = Color(0.78352344, 0.78352344, 0.78352326, 1)
 
+[sub_resource type="InputEventKey" id="InputEventKey_dljwm"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_a3wqa"]
+events = [SubResource("InputEventKey_dljwm")]
+
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_3e5oy"]
 height = 2.3457031
 radius = 0.169
@@ -192,6 +199,7 @@ offset_left = 490.0
 offset_top = 541.0
 offset_right = 624.0
 offset_bottom = 595.0
+shortcut = SubResource("Shortcut_a3wqa")
 text = "Back"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UILayer" unique_id=1817808499]
