@@ -28,8 +28,12 @@ bg_color = Color(0.78352344, 0.78352344, 0.78352326, 1)
 device = -1
 keycode = 4194305
 
+[sub_resource type="InputEventKey" id="InputEventKey_itsmy"]
+device = -1
+keycode = 4194308
+
 [sub_resource type="Shortcut" id="Shortcut_a3wqa"]
-events = [SubResource("InputEventKey_dljwm")]
+events = [SubResource("InputEventKey_dljwm"), SubResource("InputEventKey_itsmy")]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_3e5oy"]
 height = 2.3457031
