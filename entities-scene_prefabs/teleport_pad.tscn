@@ -5,6 +5,7 @@
 [ext_resource type="ArrayMesh" uid="uid://dr3gbpogsacs4" path="res://models/teleport_pad_ring.glb" id="2_i2k4u"]
 [ext_resource type="PackedScene" uid="uid://cyqgophlok1w5" path="res://entities-scene_prefabs/interaction/display_hint/display_hint.tscn" id="3_bjkmr"]
 [ext_resource type="Material" uid="uid://bhww5o2p7xgfv" path="res://materials/teleport-glow-material.tres" id="3_dpapn"]
+[ext_resource type="PackedScene" uid="uid://c4w567vgpbfol" path="res://models/teleport_pad_ring-v2.glb" id="5_xor3c"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_pjjmk"]
 height = 1.074
@@ -45,14 +46,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4653772, 0)
 [node name="DisplayHint" parent="Teleport Area/DisplayHintPosition" unique_id=1673367312 node_paths=PackedStringArray("display_target") instance=ExtResource("3_bjkmr")]
 display_target = NodePath("..")
 
-[node name="TeleportPadRing1" type="MeshInstance3D" parent="." unique_id=549972313]
-mesh = ExtResource("2_i2k4u")
+[node name="teleport_pad_ring-v2" parent="." unique_id=1457598138 instance=ExtResource("5_xor3c")]
 
-[node name="TeleportPadRing2" type="MeshInstance3D" parent="." unique_id=1200957507]
-mesh = ExtResource("2_i2k4u")
+[node name="teleport_pad_ring-v3" parent="." unique_id=1955468829 instance=ExtResource("5_xor3c")]
 
-[node name="TeleportPadRing3" type="MeshInstance3D" parent="." unique_id=147218183]
-mesh = ExtResource("2_i2k4u")
+[node name="teleport_pad_ring-v4" parent="." unique_id=408224273 instance=ExtResource("5_xor3c")]
 
 [node name="TeleportGlowWalls" type="CSGTorus3D" parent="." unique_id=1109061946]
 transform = Transform3D(1, 0, 0, 0, 33.775, 0, 0, 0, 1, 0, 1.7477512, 0)
@@ -80,6 +78,18 @@ material = ExtResource("3_dpapn")
 
 [node name="TeleportGlow" type="Node3D" parent="." unique_id=836039141]
 visible = false
+
+[node name="TeleportPadRing1" type="MeshInstance3D" parent="." unique_id=549972313]
+visible = false
+mesh = ExtResource("2_i2k4u")
+
+[node name="TeleportPadRing2" type="MeshInstance3D" parent="." unique_id=1200957507]
+visible = false
+mesh = ExtResource("2_i2k4u")
+
+[node name="TeleportPadRing3" type="MeshInstance3D" parent="." unique_id=147218183]
+visible = false
+mesh = ExtResource("2_i2k4u")
 
 [connection signal="body_entered" from="Teleport Area" to="." method="_on_teleport_area_body_entered"]
 [connection signal="body_exited" from="Teleport Area" to="." method="_on_teleport_area_body_exited"]
