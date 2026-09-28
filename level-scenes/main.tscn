@@ -85,6 +85,10 @@
 [ext_resource type="PackedScene" uid="uid://chqeb335cf70u" path="res://entities-scene_prefabs/handrail.tscn" id="65_v80x0"]
 [ext_resource type="ArrayMesh" uid="uid://jg527adis7cp" path="res://models/taxi.vox.obj" id="66_fof07"]
 [ext_resource type="Material" uid="uid://ueafojuqehx8" path="res://materials/under_construction_stripes_3d.tres" id="66_v80x0"]
+[ext_resource type="PackedScene" uid="uid://b4lenin8uv1jc" path="res://models/tank_rampage/tank_rampage_hero_tank.tscn" id="84_fplvf"]
+[ext_resource type="PackedScene" uid="uid://byown3kkcxwo5" path="res://models/tank_rampage/hero_tank.glb" id="85_4sa00"]
+[ext_resource type="PackedScene" uid="uid://52ka55orxurd" path="res://models/spy_boat/river-spy-boat.tscn" id="86_6v162"]
+[ext_resource type="PackedScene" uid="uid://bm2wbkt7ruwa8" path="res://models/talon_solitaire/suit-symbols.tscn" id="87_a8cb6"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_xteo1"]
 
@@ -330,36 +334,36 @@ material = ExtResource("7_3lbo0")
 size = Vector2(10.380006, 10.380006)
 orientation = 1
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_6ejvu"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_6v162"]
 viewport_path = NodePath("../SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_obved"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a8cb6"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_6ejvu")
+albedo_texture = SubResource("ViewportTexture_6v162")
 roughness = 0.8
 texture_filter = 5
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_e6afr"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_ypkhb"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6j6dm"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_012j5"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_e6afr")
+albedo_texture = SubResource("ViewportTexture_ypkhb")
 roughness = 0.8
 texture_filter = 5
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_a1frx"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_g614b"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0rmgc"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jk60t"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_a1frx")
+albedo_texture = SubResource("ViewportTexture_g614b")
 roughness = 0.8
 texture_filter = 5
 
@@ -508,6 +512,12 @@ use_collision = true
 size = Vector3(9, 3, 1)
 
 [node name="Modern Musem (Dev Pods era Games)" type="Node3D" parent="." unique_id=966479255]
+
+[node name="Under Construction Dev Pods Model Room" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)" unique_id=1342584207]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 0.5, 46.5)
+material_override = ExtResource("66_v80x0")
+use_collision = true
+size = Vector3(9, 3, 1)
 
 [node name="Credits DynamicBillboard" parent="Modern Musem (Dev Pods era Games)" unique_id=880058378 instance=ExtResource("60_14tmg")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.5, -1, 17)
@@ -1929,7 +1939,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_obved")
+surface_material_override/0 = SubResource("StandardMaterial3D_a8cb6")
 
 [node name="Guidebook3d2" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1034692829]
 transform = Transform3D(0.99572617, -6.976736e-08, 0.092355326, 0.07370379, 0.60259724, -0.79463464, -0.05565301, 0.7980456, 0.60002184, 0.33789635, 0.5955966, 0.11873436)
@@ -1943,7 +1953,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_6j6dm")
+surface_material_override/0 = SubResource("StandardMaterial3D_012j5")
 
 [node name="Guidebook3d3" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1679212863]
 transform = Transform3D(-0.9742656, -0.12668496, -0.18643428, 0.14209789, -0.98725104, -0.07172081, -0.1749714, -0.0963671, 0.979846, -0.58836937, 0.5955966, 0.11873436)
@@ -1957,7 +1967,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_0rmgc")
+surface_material_override/0 = SubResource("StandardMaterial3D_jk60t")
 
 [node name="Label3D" type="Label3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1183973093]
 transform = Transform3D(0.24000001, 0, 0, 0, 0.24000001, 0, 0, 0, 0.24000001, -0.07500076, 0.61191887, -0.31499863)
@@ -2427,6 +2437,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.599998, -6, 38.9)
 
 [node name="handrail5" parent="Modern Musem (Dev Pods era Games)/Decorations" unique_id=574958099 instance=ExtResource("65_v80x0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.599998, -6, 38.9)
+
+[node name="hero_tank" parent="Modern Musem (Dev Pods era Games)" unique_id=1017196529 instance=ExtResource("84_fplvf")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5.5, -1, 40)
+
+[node name="hero_tank2" parent="Modern Musem (Dev Pods era Games)" unique_id=729841537 instance=ExtResource("85_4sa00")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.5, -1, 40)
+
+[node name="RiverSpyBoat" parent="Modern Musem (Dev Pods era Games)" unique_id=960182017 instance=ExtResource("86_6v162")]
+transform = Transform3D(3.8, 0, 0, 0, 3.8, 0, 0, 0, 3.8, -13.5, -1, 32.5)
+
+[node name="SuitSymbols" parent="Modern Musem (Dev Pods era Games)" unique_id=215537584 instance=ExtResource("87_a8cb6")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.5, -0.5, 28)
 
 [node name="Classical Musem (HomeTeam era Games)" type="Node3D" parent="." unique_id=1957518699]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -27)
