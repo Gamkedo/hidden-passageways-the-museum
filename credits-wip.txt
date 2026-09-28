@@ -10,8 +10,8 @@ Christer Kaitila: Textures (concrete, ceiling, bark), tree models, museum rope b
 Justin Montgomery: Museum wall texture, tank model from Tank Rampage Command, initial main menu
 J Patrick McKeown: Fire extinguisher model, riverboat game model, Talon card decorations, listening horns with tech box and pillar
 Milicen: Main area music (2 songs), song clip speaker system
-Tyler Funk: Wood floor, marble floor
 Vaan Hope Khani: Story
+Tyler Funk: Wood floor, marble floor
 Azzy Steel: Exit from notes input
 Liyi Zhang: Target resolution, custom icon
 Barış Köklü: Voxel import fix
