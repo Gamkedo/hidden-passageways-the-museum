@@ -198,142 +198,182 @@ text = "WIP! Credits will be more detailed down to the task"
 label_settings = SubResource("LabelSettings_x78ms")
 
 [node name="Label2" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1126279996]
+custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "Chris DeLeon"
+text = "Chris DeLeon: Project lead, core gameplay, main building architecture, game/logo screenshots, interaction button platform, basement area, art info cards, (Unity-side, coming soon) sci-fi skyscraper zone, classic Hidden Passages 1 Gamkedo office, Hotel exterior, Godot-Unity portal taxi"
 label_settings = SubResource("LabelSettings_x78ms")
+autowrap_mode = 2
 
 [node name="Label3" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=941953220]
+custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "Michael Avrie"
+text = "Michael Avrie: Gladiator arena zone, dynamic tracklights system, light baking, guidebook, bricks material, antigravity elevator, Naous weapons exhibit, various improvements (environment design, texture filtering, optimizations, shader precompilation)"
 label_settings = SubResource("LabelSettings_x78ms")
+autowrap_mode = 2
 
 [node name="Label4" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=173337102]
+custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "Jesse Rupe"
+text = "Jesse Rupe: Godot character controller, Godot interaction and hint system, settings saves, controller UI icons, dynamic billboard (credits panel), pause menu"
 label_settings = SubResource("LabelSettings_x78ms")
+autowrap_mode = 2
 
 [node name="Label5" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1318691477]
+custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "Jonathan P"
+text = "Adeel Bashir: Unity character controller, Unity interaction and hint system, (Unity-side, coming soon) side areas - parkour, red maze, liminal structure, switch puzzle, 2 balloon minigames, key puzzle, landing sound"
 label_settings = SubResource("LabelSettings_x78ms")
+autowrap_mode = 2
 
 [node name="Label6" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1977083314]
+custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "Adeel Bashir"
+text = "Jonathan P: Teleport side world and related functionality/effects"
 label_settings = SubResource("LabelSettings_x78ms")
+autowrap_mode = 2
 
 [node name="Label7" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1651769846]
+custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "Dávid Tóth"
+text = "Dávid Tóth: Jump sound, Ratrick Plushie toy, Cyndrive exhibit area, map navigation movement"
 label_settings = SubResource("LabelSettings_x78ms")
+autowrap_mode = 2
 
 [node name="Label8" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=51963192]
+custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "Justin Montgomery"
+text = "Christer Kaitila: Textures (concrete, ceiling, bark), tree models, museum rope barrier, stair railing, ticket logo, ionic column, (Unity-side, coming soon)Castle area, skybox, gamepad UI, voxel models, assorted fixes"
 label_settings = SubResource("LabelSettings_x78ms")
+autowrap_mode = 2
 
 [node name="Label9" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1487060048]
+custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "Milicen"
+text = "Justin Montgomery: Museum wall texture, tank model from Tank Rampage Command, initial main menu"
 label_settings = SubResource("LabelSettings_x78ms")
+autowrap_mode = 2
 
 [node name="Label10" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=659472568]
+custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "Christer Kaitila"
+text = "J Patrick McKeown: Fire extinguisher model, riverboat game model, Talon card decorations, listening horns with tech box and pillar"
 label_settings = SubResource("LabelSettings_x78ms")
+autowrap_mode = 2
 
 [node name="Label11" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1406883549]
+custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "Liyi Zhang"
+text = "Milicen: Main area music (2 songs), song clip speaker system"
 label_settings = SubResource("LabelSettings_x78ms")
+autowrap_mode = 2
 
 [node name="Label12" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=592193489]
+custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "Tyler Funk"
+text = "Vaan Hope Khani: Story"
 label_settings = SubResource("LabelSettings_x78ms")
+autowrap_mode = 2
 
 [node name="Label13" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=968890900]
+custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "Vaan Hope Khani"
+text = "Tyler Funk: Wood floor, marble floor"
 label_settings = SubResource("LabelSettings_x78ms")
+autowrap_mode = 2
 
 [node name="Label14" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1032345515]
+custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "J Patrick McKeown"
+text = "Azzy Steel: Exit from notes input"
 label_settings = SubResource("LabelSettings_x78ms")
+autowrap_mode = 2
 
 [node name="Label15" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1860344097]
+custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "Azzy Steel"
+text = "Liyi Zhang: Target resolution, custom icon"
 label_settings = SubResource("LabelSettings_x78ms")
+autowrap_mode = 2
 
 [node name="Label16" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=383101983]
+custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "Barış Köklü"
+text = "Barış Köklü: Voxel import fix"
 label_settings = SubResource("LabelSettings_x78ms")
+autowrap_mode = 2
 
 [node name="Label17" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=952139827]
+custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
 text = "YOUR NAME HERE?"
 label_settings = SubResource("LabelSettings_x78ms")
+autowrap_mode = 2
 
 [node name="Label18" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1074442422]
+custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
 label_settings = SubResource("LabelSettings_x78ms")
+autowrap_mode = 2
 
 [node name="Label19" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1955926618]
+custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
 text = "Details coming soon"
 label_settings = SubResource("LabelSettings_x78ms")
+autowrap_mode = 2
 
 [node name="Label20" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1033567816]
+custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
 text = "The list will now repeat"
 label_settings = SubResource("LabelSettings_x78ms")
+autowrap_mode = 2
 
 [node name="Label21" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1165666724]
+custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
 label_settings = SubResource("LabelSettings_x78ms")
+autowrap_mode = 2
 
 [node name="ScrollSeparator" type="HSeparator" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents" unique_id=1694840300]
 unique_name_in_owner = true

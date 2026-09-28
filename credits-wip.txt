@@ -1,0 +1,17 @@
+Note: this file is not read by the game and is not / should not be kept up to date regularly. The project lead Chris is using it to accumulate github changes between updates to the credits board for itch test builds
+
+Chris DeLeon: Project lead, core gameplay, main building architecture, game/logo screenshots, interaction button platform, basement area, art info cards, (Unity-side, coming soon) sci-fi skyscraper zone, classic Hidden Passages 1 Gamkedo office, Hotel exterior, Godot-Unity portal taxi
+Michael Avrie: Gladiator arena zone, dynamic tracklights system, light baking, guidebook, bricks material, antigravity elevator, Naous weapons exhibit, various improvements (environment design, texture filtering, optimizations, shader precompilation)
+Jesse Rupe: Godot character controller, Godot interaction and hint system, settings saves, controller UI icons, dynamic billboard (credits panel), pause menu
+Adeel Bashir: Unity character controller, Unity interaction and hint system, (Unity-side, coming soon) side areas - parkour, red maze, liminal structure, switch puzzle, 2 balloon minigames, key puzzle, landing sound
+Jonathan P: Teleport side world and related functionality/effects
+Dávid Tóth: Jump sound, Ratrick Plushie toy, Cyndrive exhibit area, map navigation movement
+Christer Kaitila: Textures (concrete, ceiling, bark), tree models, museum rope barrier, stair railing, ticket logo, ionic column, (Unity-side, coming soon)Castle area, skybox, gamepad UI, voxel models, assorted fixes
+Justin Montgomery: Museum wall texture, tank model from Tank Rampage Command, initial main menu
+J Patrick McKeown: Fire extinguisher model, riverboat game model, Talon card decorations, listening horns with tech box and pillar
+Milicen: Main area music (2 songs), song clip speaker system
+Tyler Funk: Wood floor, marble floor
+Vaan Hope Khani: Story
+Azzy Steel: Exit from notes input
+Liyi Zhang: Target resolution, custom icon
+Barış Köklü: Voxel import fix
