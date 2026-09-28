@@ -17,67 +17,68 @@
 [ext_resource type="Material" uid="uid://di6u3hjsvhh8i" path="res://materials/modern-museum/museum-floor-wood.tres" id="5_qxgch"]
 [ext_resource type="Material" uid="uid://i2mujh133810" path="res://materials/modern-museum/museum-modern-exterior-dark.tres" id="5_r54xu"]
 [ext_resource type="Material" uid="uid://bj8ho62a7oj07" path="res://materials/spotlight-decal.tres" id="6_kl5ay"]
-[ext_resource type="Texture2D" uid="uid://evopvlxedmk7" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/artillery-rampage.png" id="6_rlpi5"]
 [ext_resource type="Material" uid="uid://biecmslvyaivk" path="res://materials/spotlight-decal_crossfade.tres" id="7_3lbo0"]
 [ext_resource type="Texture2D" uid="uid://vnri2xppsmm0" path="res://models/legend_of_shadowtails_ratrick_ratrick.png" id="7_hgslh"]
 [ext_resource type="Material" uid="uid://cf52fvd2ucb8h" path="res://materials/light-shaft.tres" id="8_tbq01"]
 [ext_resource type="Material" uid="uid://b5j7a6q6jdkv5" path="res://materials/concrete.tres" id="9_4h42u"]
-[ext_resource type="Texture2D" uid="uid://b2oyvwk41k0kr" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/crash-em-up.png" id="9_vcgox"]
-[ext_resource type="Texture2D" uid="uid://8siqjr4kxuft" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/crazy-arena-chaos.png" id="10_euau4"]
 [ext_resource type="Script" uid="uid://bsmp4qaqn0uxw" path="res://entities-scene_prefabs/interaction/objects/interactable_area.gd" id="11_fof07"]
-[ext_resource type="Texture2D" uid="uid://c48m8oq1yaq3w" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/cyndrive-ships.png" id="11_u03oo"]
 [ext_resource type="Material" uid="uid://r6515yywtwib" path="res://materials/floor-materials/wood_floor.tres" id="11_v6iic"]
 [ext_resource type="Material" uid="uid://b8paggwklaeo3" path="res://materials/ceiling-materials/ceiling-light.tres" id="12_4y16h"]
 [ext_resource type="Material" uid="uid://duojbedij8awq" path="res://materials/walls_museum/wall_material_white.tres" id="12_qi2ty"]
-[ext_resource type="Texture2D" uid="uid://cp3eu5k3e546n" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/everchange.png" id="12_qxgch"]
 [ext_resource type="Material" uid="uid://dajoyj6fev1j7" path="res://materials/floor-materials/marble_tile_floor.tres" id="13_v6iic"]
 [ext_resource type="PackedScene" uid="uid://d0hl0sude541s" path="res://level-scenes/basement_art_(misc_not_in_released_games).tscn" id="16_4y16h"]
 [ext_resource type="PackedScene" uid="uid://bs0x6kcocwrn8" path="res://entities-scene_prefabs/tree_small.tscn" id="16_iixjk"]
 [ext_resource type="PackedScene" uid="uid://cocic8dfy1sa6" path="res://entities-scene_prefabs/tree_big.tscn" id="17_4fg2q"]
-[ext_resource type="Texture2D" uid="uid://damvm32o7j3ie" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/orbs-and-dash.png" id="18_bib7n"]
-[ext_resource type="Texture2D" uid="uid://c6rqykvgq5oni" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/supply-and-siege.png" id="20_lahx7"]
-[ext_resource type="Texture2D" uid="uid://r870n6ekjct4" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/talon.png" id="21_yqwtw"]
 [ext_resource type="PackedScene" uid="uid://o8idbyowpqvw" path="res://entities-scene_prefabs/railing.tscn" id="26_c6q64"]
 [ext_resource type="Texture2D" uid="uid://dlft5rt3mgqhu" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/gladiator-of-the-golden-house.png" id="26_v80x0"]
-[ext_resource type="Texture2D" uid="uid://baj6x4ux7gvyt" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/legend-of-shadowtail.png" id="27_v80x0"]
 [ext_resource type="Texture2D" uid="uid://c7fd2ik3j7hr5" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/legend-of-shadowtail.jpg" id="28_3tvjp"]
 [ext_resource type="PackedScene" uid="uid://bvln0oll5ttp0" path="res://entities-scene_prefabs/ionic_column.tscn" id="28_er4o0"]
-[ext_resource type="Texture2D" uid="uid://87drxaweuioc" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/king-arthur.png" id="28_fof07"]
-[ext_resource type="Texture2D" uid="uid://bto3jcto20bmf" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/cargo-bay.png" id="29_1tes7"]
+[ext_resource type="Texture2D" uid="uid://cwc2oqi14kgm2" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/legend-of-shadowtail-logo.png" id="29_xh8e5"]
 [ext_resource type="Texture2D" uid="uid://cq0kjracafggb" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/king-arthur.jpg" id="30_e37vr"]
 [ext_resource type="PackedScene" uid="uid://cqq8q3sgrg35b" path="res://ui/guidebook.tscn" id="30_nw8jh"]
+[ext_resource type="Texture2D" uid="uid://rroay42y61vb" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/king-arthur-logo.png" id="31_6mvr8"]
 [ext_resource type="Texture2D" uid="uid://2432776vq113" path="res://textures/play-button-stand.png" id="31_nw8jh"]
 [ext_resource type="PackedScene" uid="uid://cxl7h3vtvfn66" path="res://models/guidebook.gltf" id="31_oa8v2"]
 [ext_resource type="Texture2D" uid="uid://bmvx1q1vihola" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/cargo-bay.jpg" id="32_6oq67"]
 [ext_resource type="ArrayMesh" uid="uid://cm2soemey2m52" path="res://models/play-button-stand.obj" id="32_oa8v2"]
+[ext_resource type="Texture2D" uid="uid://cpqx7ayc50uyf" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/cargo-bay-logo.png" id="33_fplvf"]
 [ext_resource type="PackedScene" uid="uid://ccmjewtcqxp7" path="res://models/legend_of_shadowtails_ratrick_mesh.glb" id="33_hgslh"]
 [ext_resource type="Texture2D" uid="uid://bioro578cfmun" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/artillery-rampage.jpg" id="34_anu3i"]
+[ext_resource type="Texture2D" uid="uid://barv2ixgl1het" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/artillery-rampage-logo.png" id="35_4sa00"]
 [ext_resource type="Texture2D" uid="uid://ctnimjcimfyxh" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/crash-em-up.jpg" id="36_14tmg"]
 [ext_resource type="Texture2D" uid="uid://cpakvdnl3rxxa" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/gladiator-framed-pic.png" id="36_u5gq0"]
-[ext_resource type="Texture2D" uid="uid://cdi8kioh6i1g3" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/bert-and-wheel.png" id="37_c6q64"]
-[ext_resource type="Texture2D" uid="uid://t4wtx3t1fua1" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/tank-rampage-command.png" id="38_fof07"]
+[ext_resource type="Texture2D" uid="uid://bulyjthbproa8" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/crash-em-up-logo.png" id="37_6v162"]
 [ext_resource type="Texture2D" uid="uid://obmg5lc58s2p" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/crazy-arena-chaos.jpg" id="38_xh8e5"]
 [ext_resource type="Texture2D" uid="uid://cvryfj8lmkalp" path="res://textures/under-construction.png" id="39_1tes7"]
+[ext_resource type="Texture2D" uid="uid://c8fyjd7ayh1ev" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/crazy-arena-chaos-logo.png" id="39_a8cb6"]
 [ext_resource type="Texture2D" uid="uid://dwwuk4176sunh" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/planets-mobile.jpg" id="40_6mvr8"]
 [ext_resource type="Texture2D" uid="uid://e327qx4qygko" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/planets-mobile-logo.jpg" id="41_fplvf"]
 [ext_resource type="Texture2D" uid="uid://dqhu04rwu5fdg" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/orbs-and-dash.jpg" id="42_4sa00"]
 [ext_resource type="Script" uid="uid://cm6176wsxfdqx" path="res://entities-scene_prefabs/auto-tracklight.gd" id="43_0m503"]
+[ext_resource type="Texture2D" uid="uid://dy7l45om1gq10" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/orbs-and-dash-logo.png" id="43_ypkhb"]
 [ext_resource type="PackedScene" uid="uid://coqvyei5w8brk" path="res://game wall pictures/frame_button_credits.tscn" id="44_1tes7"]
 [ext_resource type="Texture2D" uid="uid://b1m2453jobbf4" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/everchange.jpg" id="44_6v162"]
+[ext_resource type="Texture2D" uid="uid://cpuhv0o76rgxq" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/everchange-logo.png" id="45_012j5"]
 [ext_resource type="Texture2D" uid="uid://jyvytmpf5ca" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/forgotten-road.jpg" id="46_a8cb6"]
 [ext_resource type="Texture2D" uid="uid://d2ukddaby0rut" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/forgotten-road-logo.png" id="47_ypkhb"]
 [ext_resource type="Texture2D" uid="uid://b5o3g7kjuemj5" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/bert-and-wheel.jpg" id="48_012j5"]
+[ext_resource type="Texture2D" uid="uid://cb5mmm0c7k2xt" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/bert-and-wheel-logo.png" id="49_g614b"]
 [ext_resource type="Texture2D" uid="uid://dva0hc06b7n7h" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/tank-rampage-commander.jpg" id="50_g614b"]
+[ext_resource type="Texture2D" uid="uid://b7s1xractov5f" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/tank-rampage-command-logo.png" id="51_jk60t"]
 [ext_resource type="Texture2D" uid="uid://hwjvmhp746ef" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/supply-and-siege.jpg" id="52_jk60t"]
 [ext_resource type="PackedScene" uid="uid://dbngi8xk7go57" path="res://models/tank_rampage_command_marine.tscn" id="53_gbu3n"]
 [ext_resource type="PackedScene" uid="uid://dgahdbu6k5v7a" path="res://entities-scene_prefabs/fire_extinguisher.tscn" id="53_mj7h6"]
+[ext_resource type="Texture2D" uid="uid://byq8juxdt0ic8" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/supply-and-siege-logos.png" id="53_sgcu3"]
 [ext_resource type="Texture2D" uid="uid://dl4nsrnik0fvo" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/talon.jpg" id="54_6oq67"]
+[ext_resource type="Texture2D" uid="uid://lbjxlnouyqxn" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/talon-logo.png" id="55_ik1rw"]
 [ext_resource type="Texture2D" uid="uid://bo7vj36g55lwr" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/terminus-2k28.jpg" id="56_anu3i"]
+[ext_resource type="Texture2D" uid="uid://1b527eqk7abw" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/terminus-2k28-logo.png" id="57_3hhar"]
 [ext_resource type="Texture2D" uid="uid://cje4f1y0cfi1y" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/cyndrive.jpg" id="58_anu3i"]
 [ext_resource type="Script" uid="uid://78d2xtti3yje" path="res://level-scenes/tween-off-on-screen.gd" id="58_oa8v2"]
 [ext_resource type="PackedScene" uid="uid://b6vhbs03grq4q" path="res://entities-scene_prefabs/barrier.tscn" id="59_27nw5"]
 [ext_resource type="PackedScene" uid="uid://cpdw8d15t73f1" path="res://entities-scene_prefabs/dynamic_billboard/credits_billboard.tscn" id="60_14tmg"]
 [ext_resource type="PackedScene" uid="uid://csx07hxskuxjn" path="res://entities-scene_prefabs/barrier_single.tscn" id="60_b2w3e"]
+[ext_resource type="Texture2D" uid="uid://dstjwenv8yej8" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/cyndrive-ships-logo.png" id="60_xh8e5"]
 [ext_resource type="PackedScene" uid="uid://coah6xph85mbj" path="res://models/egg.tscn" id="61_xub5d"]
 [ext_resource type="PackedScene" uid="uid://c4vtkvb04er8b" path="res://level-scenes/egg_challenge.tscn" id="62_x4vg3"]
 [ext_resource type="PackedScene" uid="uid://b7l0g2p16ot2u" path="res://entities-scene_prefabs/clouds.tscn" id="63_iit47"]
@@ -329,36 +330,36 @@ material = ExtResource("7_3lbo0")
 size = Vector2(10.380006, 10.380006)
 orientation = 1
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_xh8e5"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_6ejvu"]
 viewport_path = NodePath("../SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6mvr8"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_obved"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_xh8e5")
+albedo_texture = SubResource("ViewportTexture_6ejvu")
 roughness = 0.8
 texture_filter = 5
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_fplvf"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_e6afr"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4sa00"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6j6dm"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_fplvf")
+albedo_texture = SubResource("ViewportTexture_e6afr")
 roughness = 0.8
 texture_filter = 5
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_6v162"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_a1frx"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a8cb6"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0rmgc"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_6v162")
+albedo_texture = SubResource("ViewportTexture_a1frx")
 roughness = 0.8
 texture_filter = 5
 
@@ -507,6 +508,9 @@ use_collision = true
 size = Vector3(9, 3, 1)
 
 [node name="Modern Musem (Dev Pods era Games)" type="Node3D" parent="." unique_id=966479255]
+
+[node name="Credits DynamicBillboard" parent="Modern Musem (Dev Pods era Games)" unique_id=880058378 instance=ExtResource("60_14tmg")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.5, -1, 17)
 
 [node name="Ratrick Hamster Ball (Interactive)" type="RigidBody3D" parent="Modern Musem (Dev Pods era Games)" unique_id=1039440741]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.968307, 0.42840683, 27.523893)
@@ -1284,7 +1288,7 @@ Enemies refactored to reuse common base code: David Bates
 
 Play testing: Baguette	"
 painting_texture = ExtResource("28_3tvjp")
-button_texture = ExtResource("27_v80x0")
+button_texture = ExtResource("29_xh8e5")
 
 [node name="King Arthur" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=619818653 instance=ExtResource("44_1tes7")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 16.377, -9.235, -9.393)
@@ -1328,7 +1332,7 @@ Inkpot plugin (unused): Gwynim
 
 Playtesting: Michael Avrie "
 painting_texture = ExtResource("30_e37vr")
-button_texture = ExtResource("28_fof07")
+button_texture = ExtResource("31_6mvr8")
 
 [node name="Cargo Bay" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=782905730 instance=ExtResource("44_1tes7")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 16.377, -9.235, 7.607)
@@ -1354,7 +1358,7 @@ Sounds (UI, assorted physical sounds): Connor Fitzpatrick
 
 Cargo fill zone functionality, cable decor: Catwingzz"
 painting_texture = ExtResource("32_6oq67")
-button_texture = ExtResource("29_1tes7")
+button_texture = ExtResource("33_fplvf")
 
 [node name="Artillery Rampage" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=136909466 instance=ExtResource("44_1tes7")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 9.376526, 0.7647941, 11.524845)
@@ -1388,7 +1392,7 @@ Tree sprite variant: Chris DeLeon
 
 Playtesting: Meatball, kittykatmeowmeow"
 painting_texture = ExtResource("34_anu3i")
-button_texture = ExtResource("6_rlpi5")
+button_texture = ExtResource("35_4sa00")
 
 [node name="Crash-Em-Up" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=2056044369 instance=ExtResource("44_1tes7")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -3.6234741, 0.7647941, 11.524845)
@@ -1417,7 +1421,7 @@ Basic damage system: Dalton Charleston
 
 Crash sound effects: Connor Fitzpatrick"
 painting_texture = ExtResource("36_14tmg")
-button_texture = ExtResource("9_vcgox")
+button_texture = ExtResource("37_6v162")
 
 [node name="Crazy Arena Chaos" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=226193816 instance=ExtResource("44_1tes7")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -10.623474, 0.7647941, 11.524845)
@@ -1475,7 +1479,7 @@ Spawn system and related interface: Simone | ZilpioGaming
 
 Playtesting: Alyson Dominguez, Kamil Towers, Matthew Landset, Chris Morrissey, Twmy, Eric Goldman, Timothy Sullivan, David MacNeil, Paul Ciccotto"
 painting_texture = ExtResource("38_xh8e5")
-button_texture = ExtResource("10_euau4")
+button_texture = ExtResource("39_a8cb6")
 
 [node name="Planets Mobile" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=2144848996 instance=ExtResource("44_1tes7")]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -15.429041, 0.7647941, 7.524845)
@@ -1539,7 +1543,7 @@ M key to toggle mute: Dave Yoon
 
 Credits compilation, support: Chris DeLeon"
 painting_texture = ExtResource("42_4sa00")
-button_texture = ExtResource("18_bib7n")
+button_texture = ExtResource("43_ypkhb")
 
 [node name="Everchange" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=369593650 instance=ExtResource("44_1tes7")]
 transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -6.929041, 0.7647941, -13.405556)
@@ -1582,7 +1586,7 @@ Voice actress, additional narrative design: Ariane Perideaux
 
 Playtesting: Noah Wizardff"
 painting_texture = ExtResource("44_6v162")
-button_texture = ExtResource("12_qxgch")
+button_texture = ExtResource("45_012j5")
 
 [node name="Forgotten Road" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=776055158 instance=ExtResource("44_1tes7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -9.235206, -13.393093)
@@ -1660,7 +1664,7 @@ Itch page logo and design advice: Tim Ruswick
 
 Playtesting: Hunter Jones, Dávid Tóth (davids91), TopHatCroat, Tim Ruswick, Baguette"
 painting_texture = ExtResource("48_012j5")
-button_texture = ExtResource("37_c6q64")
+button_texture = ExtResource("49_g614b")
 
 [node name="Tank Rampage Command" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=998667426 instance=ExtResource("44_1tes7")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 16.377, 0.765, 7.607)
@@ -1690,7 +1694,7 @@ Artillery explosion particle effect Chris DeLeon
 
 Playtesters: fizzybuzzybeezy, Mo Shah, Meatball"
 painting_texture = ExtResource("50_g614b")
-button_texture = ExtResource("38_fof07")
+button_texture = ExtResource("51_jk60t")
 
 [node name="Supple and Siege" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=1117424678 instance=ExtResource("44_1tes7")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.8765259, -9.235206, 11.524845)
@@ -1728,7 +1732,7 @@ Pause screen: Marshall Sandoval-Clark
 
 Minimap prototype (unused), debug tool: Jshaun Hookumchand"
 painting_texture = ExtResource("52_jk60t")
-button_texture = ExtResource("20_lahx7")
+button_texture = ExtResource("53_sgcu3")
 
 [node name="Talon Solitaire" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=1594765620 instance=ExtResource("44_1tes7")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -3.6234741, -9.235206, 11.524845)
@@ -1758,7 +1762,7 @@ QA playtesters: Philippe Vaillancourt (snowfrogdev), Michael Avrie, Tim Sargent,
 
 itch.io dimensions workaround: Chris DeLeon"
 painting_texture = ExtResource("54_6oq67")
-button_texture = ExtResource("21_yqwtw")
+button_texture = ExtResource("55_ik1rw")
 
 [node name="Terminus 2k28" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=804734989 instance=ExtResource("44_1tes7")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 9.876526, -9.235206, 11.524845)
@@ -1821,9 +1825,9 @@ Music export bug fix: Michael Avrie
 
 Playtesting: Barış Köklü, Juan Luiz R and two anonymous testers"
 painting_texture = ExtResource("56_anu3i")
-button_texture = ExtResource("39_1tes7")
+button_texture = ExtResource("57_3hhar")
 
-[node name="SOON-TBD" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=1940920562 instance=ExtResource("44_1tes7")]
+[node name="SOON-OrcBurp" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=1940920562 instance=ExtResource("44_1tes7")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -10.623474, -9.235206, 11.524845)
 game_label = "COMING SOON"
 credits = "COMING SOON"
@@ -1844,7 +1848,7 @@ credits = "COMING SOON"
 painting_texture = ExtResource("39_1tes7")
 button_texture = ExtResource("39_1tes7")
 
-[node name="SOON-MUSEUM" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=535871088 instance=ExtResource("44_1tes7")]
+[node name="SOON-TBA" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=535871088 instance=ExtResource("44_1tes7")]
 transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -6.929041, -9.235206, -13.405556)
 game_label = "COMING SOON"
 credits = "COMING SOON"
@@ -1895,10 +1899,7 @@ Dialog system UI base and structures: Travis Barnette
 
 Additional playtesting: ArtyT, Connor Fitzpatrick, Dragon, Zoli, Dorka "
 painting_texture = ExtResource("58_anu3i")
-button_texture = ExtResource("11_u03oo")
-
-[node name="DynamicBillboard" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=880058378 instance=ExtResource("60_14tmg")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -3, -1, -16.5)
+button_texture = ExtResource("60_xh8e5")
 
 [node name="Guidebook Stand" type="StaticBody3D" parent="Modern Musem (Dev Pods era Games)" unique_id=651460049]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 26.382, 0.003, 25.855)
@@ -1928,7 +1929,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_6mvr8")
+surface_material_override/0 = SubResource("StandardMaterial3D_obved")
 
 [node name="Guidebook3d2" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1034692829]
 transform = Transform3D(0.99572617, -6.976736e-08, 0.092355326, 0.07370379, 0.60259724, -0.79463464, -0.05565301, 0.7980456, 0.60002184, 0.33789635, 0.5955966, 0.11873436)
@@ -1942,7 +1943,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_4sa00")
+surface_material_override/0 = SubResource("StandardMaterial3D_6j6dm")
 
 [node name="Guidebook3d3" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1679212863]
 transform = Transform3D(-0.9742656, -0.12668496, -0.18643428, 0.14209789, -0.98725104, -0.07172081, -0.1749714, -0.0963671, 0.979846, -0.58836937, 0.5955966, 0.11873436)
@@ -1956,7 +1957,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_a8cb6")
+surface_material_override/0 = SubResource("StandardMaterial3D_0rmgc")
 
 [node name="Label3D" type="Label3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1183973093]
 transform = Transform3D(0.24000001, 0, 0, 0, 0.24000001, 0, 0, 0, 0.24000001, -0.07500076, 0.61191887, -0.31499863)
