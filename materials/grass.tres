@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cq45bho5ef1kn"]
+
+[ext_resource type="Texture2D" uid="uid://brp3qkp7syp3" path="res://materials/tarnishedmoth_grass_albedo.jpg" id="1_u61pb"]
+[ext_resource type="Texture2D" uid="uid://ntc48yuc5i3d" path="res://materials/tarnishedmoth_grass_normal.jpg" id="2_ofhsj"]
+[ext_resource type="Texture2D" uid="uid://c7awrbrccl72f" path="res://materials/tarnishedmoth_grass_orm.jpg" id="3_5ghoc"]
+
+[resource]
+albedo_texture = ExtResource("1_u61pb")
+metallic_specular = 0.15
+roughness_texture = ExtResource("3_5ghoc")
+normal_enabled = true
+normal_scale = 2.0
+normal_texture = ExtResource("2_ofhsj")
+uv1_scale = Vector3(0.25, 0.25, 0.25)
+uv1_triplanar = true
