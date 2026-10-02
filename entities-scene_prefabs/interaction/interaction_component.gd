@@ -92,8 +92,9 @@ func _ready() -> void:
 		return
 		
 	for detector in detectors:
-		detector.detecting_interactable.connect(_on_detecting_interactable)
-		detector.stopped_detecting_interactable.connect(_on_stopped_detecting_interactable)
+		if detector != null:
+			detector.detecting_interactable.connect(_on_detecting_interactable)
+			detector.stopped_detecting_interactable.connect(_on_stopped_detecting_interactable)
 	
 	character_controller.interact_started.connect(_on_player_interact_started)
 	character_controller.interact_stopped.connect(_on_player_interact_stopped)

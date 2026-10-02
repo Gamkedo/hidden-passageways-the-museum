@@ -26,6 +26,8 @@ func hide_prompt() -> void:
 
 
 func _process(_delta: float) -> void:
+	if not is_instance_valid(interaction_component):
+		return
 	var current_interactable := interaction_component.current_interactable
 	if is_instance_valid(current_interactable):
 		var current_interact_time := current_interactable.current_interaction_time
@@ -33,5 +35,6 @@ func _process(_delta: float) -> void:
 		player_cursor.set_cursor_progress(current_interact_time, max_interact_time)
 
 func _ready() -> void:
-	interaction_component.target_interactable_changed.connect(handle_interactable_changed)
+	if is_instance_valid(interaction_component):
+		interaction_component.target_interactable_changed.connect(handle_interactable_changed)
 	hide_prompt()

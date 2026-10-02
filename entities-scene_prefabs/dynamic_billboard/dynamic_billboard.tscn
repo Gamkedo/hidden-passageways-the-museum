@@ -88,22 +88,17 @@ font = SubResource("FontVariation_exeic")
 font_size = 24
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2skg7"]
-albedo_color = Color(0.33599716, 0.3359972, 0.3359972, 1)
+albedo_color = Color(0.0046554036, 0.0046554036, 0.0046554008, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_c8sum"]
 material = SubResource("StandardMaterial3D_2skg7")
-size = Vector3(2.0616455, 2.7622375, 0.655)
+size = Vector3(2.0616455, 2.7622375, 0.6813928)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_fqhjp"]
 viewport_path = NodePath("SubViewportContainer/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kvjy7"]
-transparency = 1
-albedo_color = Color(0, 0, 0, 0.88235295)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_exeic"]
 resource_local_to_scene = true
-next_pass = SubResource("StandardMaterial3D_kvjy7")
 transparency = 1
 albedo_texture = SubResource("ViewportTexture_fqhjp")
 albedo_texture_force_srgb = true
@@ -508,7 +503,7 @@ mouse_filter = 2
 theme_override_constants/separation = 200
 
 [node name="screenbacking" type="MeshInstance3D" parent="." unique_id=681587984]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00667727, 1.5008271, -0.5940101)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00667727, 1.5008271, -0.58081377)
 mesh = SubResource("BoxMesh_c8sum")
 
 [node name="screenmesh" type="MeshInstance3D" parent="screenbacking" unique_id=697465555]
