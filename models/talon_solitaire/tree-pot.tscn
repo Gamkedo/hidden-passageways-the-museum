@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bx215fb66lerr"]
+
+[ext_resource type="PackedScene" uid="uid://ci352k7sskm8q" path="res://models/talon_solitaire/plant-pot.glb" id="1_glb"]
+[ext_resource type="Material" path="res://models/talon_solitaire/pot-green.tres" id="2_pot"]
+[ext_resource type="Material" path="res://models/talon_solitaire/soil-brown.tres" id="3_soil"]
+
+[node name="SuitTree" type="Node3D" unique_id=136303305]
+
+[node name="suit-tree" parent="." unique_id=1397277136 instance=ExtResource("1_glb")]
+
+[node name="suit_tree" parent="suit-tree" index="0" unique_id=647168896]
+surface_material_override/0 = ExtResource("2_pot")
+surface_material_override/1 = ExtResource("3_soil")
+
+[editable path="suit-tree"]
