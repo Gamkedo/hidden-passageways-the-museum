@@ -1,5 +1,5 @@
 class_name InputBindsScreen
-extends PanelContainer
+extends SettingsTabContainer
 
 signal reset_binds
 
@@ -38,6 +38,7 @@ const MOUSE_AND_KEYBOARD_ICON_ACTION_MAP: MouseAndKeyboardIconActionMap = preloa
 #endregion Controller
 
 @onready var reset_binds_button: Button = %ResetBinds
+@onready var scroll_container: ScrollContainer = %ScrollContainer
 
 #region Input Change Prompt
 @onready var input_record_overlay: PanelContainer = %InputRecordOverlay
@@ -103,6 +104,11 @@ func _on_new_input_confirmed(event: InputEvent) -> void:
 	save_input_to_settings(target_action_name, event)
 	_update_display_for_button(target_input_change_button)
 	
+	_resolve_input_change()
+
+func _resolve_input_change() -> void:
+	if is_instance_valid(target_input_change_button):
+		target_input_change_button.grab_focus()
 	target_input_change_button = null
 	target_input_method = InputBinds.INPUT_METHOD.NONE
 	hide_input_change_prompt()
@@ -177,7 +183,7 @@ func _on_reset_binds_pressed() -> void:
 	reset_binds.emit()
 
 func _on_input_record_canceled() -> void:
-	hide_input_change_prompt()
+	_resolve_input_change()
 #endregion Signal Connections
 
 func connect_input_change_button_signals() -> void:
@@ -187,7 +193,12 @@ func connect_input_change_button_signals() -> void:
 	for controller_button in CONTROLLER_ACTION_MAP:
 		controller_button.pressed.connect(_on_input_change_button_pressed.bind(controller_button, InputBinds.INPUT_METHOD.CONTROLLER))
 
+func focus_first_input() -> void:
+	super.focus_first_input()
+	scroll_container.scroll_vertical = 0
+
 func _ready() -> void:
+	super._ready()
 	connect_input_change_button_signals()
 	
 	input_record.input_confirmed.connect(_on_new_input_confirmed)

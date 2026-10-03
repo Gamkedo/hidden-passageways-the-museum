@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://biqqthvuxm28m" path="res://ui/settings_screen/input_settings/input_settings_screen.tscn" id="2_t0aaf"]
 [ext_resource type="PackedScene" uid="uid://c706g67wmabya" path="res://ui/settings_screen/controls/controls_settings_screen.tscn" id="3_ktpoh"]
 
+[sub_resource type="Theme" id="Theme_t0aaf"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g5gtg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3e5oy"]
@@ -17,6 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_t0aaf")
 theme_override_styles/panel = SubResource("StyleBoxEmpty_g5gtg")
 script = ExtResource("1_1rens")
 
@@ -37,6 +40,7 @@ label_settings = SubResource("LabelSettings_3e5oy")
 horizontal_alignment = 1
 
 [node name="TabContainer" type="TabContainer" parent="MarginContainer/VBoxContainer" unique_id=1714287027]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/tab_separation = 10

@@ -1,9 +1,14 @@
 [gd_resource type="Theme" format=3 uid="uid://bcyk3d4r2kn1t"]
 
-[ext_resource type="StyleBox" uid="uid://co8sn8015vlua" path="res://ui/pause_screen/themes/styleboxes/pause_screen_button_focus.tres" id="1_3vthu"]
-[ext_resource type="StyleBox" uid="uid://b3af5r0ssm2g3" path="res://ui/pause_screen/themes/styleboxes/pause_screen_button_normal.tres" id="1_p7rlm"]
-[ext_resource type="StyleBox" uid="uid://c6japk5q2n411" path="res://ui/pause_screen/themes/styleboxes/pause_screen_button_hover_pressed.tres" id="2_t4rv2"]
-[ext_resource type="StyleBox" uid="uid://cxe5sbt7wdov0" path="res://ui/pause_screen/themes/styleboxes/pause_screen_button_pressed.tres" id="3_6k0d1"]
+[ext_resource type="StyleBox" uid="uid://co8sn8015vlua" path="res://ui/pause_screen/themes/styleboxes/pause_screen_button/pause_screen_button_focus.tres" id="1_6fsol"]
+[ext_resource type="StyleBox" uid="uid://c6japk5q2n411" path="res://ui/pause_screen/themes/styleboxes/pause_screen_button/pause_screen_button_hover_pressed.tres" id="2_y6ojd"]
+[ext_resource type="StyleBox" uid="uid://b3af5r0ssm2g3" path="res://ui/pause_screen/themes/styleboxes/pause_screen_button/pause_screen_button_normal.tres" id="3_70opf"]
+[ext_resource type="StyleBox" uid="uid://cxe5sbt7wdov0" path="res://ui/pause_screen/themes/styleboxes/pause_screen_button/pause_screen_button_pressed.tres" id="4_kd400"]
+[ext_resource type="StyleBox" uid="uid://mn8mqbf058ak" path="res://ui/pause_screen/themes/styleboxes/checkbox/checkbox_focus.tres" id="5_xsk5v"]
+[ext_resource type="StyleBox" uid="uid://b2is02hofrhjh" path="res://ui/pause_screen/themes/styleboxes/checkbox/checkbox_hover.tres" id="6_w6kdp"]
+[ext_resource type="StyleBox" uid="uid://ba1diacl0poe3" path="res://ui/pause_screen/themes/styleboxes/checkbox/checkbox_normal.tres" id="7_boa6e"]
+[ext_resource type="StyleBox" uid="uid://dpjprw7tuup5o" path="res://ui/pause_screen/themes/styleboxes/checkbox/checkbox_hover_pressed.tres" id="7_y6ojd"]
+[ext_resource type="StyleBox" uid="uid://cy4hliv6fheu3" path="res://ui/pause_screen/themes/styleboxes/checkbox/checkbox_pressed.tres" id="8_ydhyr"]
 
 [sub_resource type="FontVariation" id="FontVariation_ct17i"]
 
@@ -20,9 +25,14 @@ texture = SubResource("GradientTexture1D_hsda3")
 [resource]
 Button/font_sizes/font_size = 18
 Button/fonts/font = SubResource("FontVariation_ct17i")
-Button/styles/focus = ExtResource("1_3vthu")
-Button/styles/hover = ExtResource("1_3vthu")
-Button/styles/hover_pressed = ExtResource("2_t4rv2")
-Button/styles/normal = ExtResource("1_p7rlm")
-Button/styles/pressed = ExtResource("3_6k0d1")
+Button/styles/focus = ExtResource("1_6fsol")
+Button/styles/hover = ExtResource("1_6fsol")
+Button/styles/hover_pressed = ExtResource("2_y6ojd")
+Button/styles/normal = ExtResource("3_70opf")
+Button/styles/pressed = ExtResource("4_kd400")
+CheckBox/styles/focus = ExtResource("5_xsk5v")
+CheckBox/styles/hover = ExtResource("6_w6kdp")
+CheckBox/styles/hover_pressed = ExtResource("7_y6ojd")
+CheckBox/styles/normal = ExtResource("7_boa6e")
+CheckBox/styles/pressed = ExtResource("8_ydhyr")
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_yfpbd")

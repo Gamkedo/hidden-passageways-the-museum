@@ -23,6 +23,7 @@ func process_input_change_event(event: InputEvent) -> void:
 	if input_display_hint.has_focus() and not confirm_new_input_button.has_focus():
 		confirm_new_input_button.grab_focus.call_deferred()
 	input_recorded.emit(event)
+	accept_event()
 
 func display_prompt(action_name: StringName, method: InputBinds.INPUT_METHOD) -> void:
 	var action_events := InputMap.action_get_events(action_name)
@@ -56,18 +57,63 @@ func set_display_hint_for_event(event: InputEvent) -> void:
 		input_display_hint.icon = null
 #endregion Input Change Prompt
 
-
-func _on_confirm_button_pressed() -> void:
+func _confirm_changed_input() -> void:
 	accept_event()
 	input_confirmed.emit(recorded_change_input)
+	recorded_change_input = null
 
-func _on_cancel_button_pressed() -> void:
+func _cancel_changed_input() -> void:
 	accept_event()
 	canceled.emit()
+	recorded_change_input = null
+	
+
+func _on_confirm_button_pressed() -> void:
+	_confirm_changed_input()
+
+func _on_cancel_button_pressed() -> void:
+	_cancel_changed_input()
 
 func _input(event: InputEvent) -> void:
+	var is_ui_action := _event_is_ui_action(event)
+	if is_ui_action:
+		var processed_ui_action := _process_ui_action_event(event)
+		if processed_ui_action:
+			accept_event()
+			return
+	
 	if _should_record_event(event):
 		process_input_change_event(event)
+
+func _process_ui_action_event(event: InputEvent) -> bool:
+	var processed_event := false
+	
+	if not input_display_hint.has_focus():
+		var is_accept := Input.is_action_just_pressed_by_event("ui_accept", event)
+		var is_cancel := Input.is_action_just_pressed_by_event("ui_cancel", event)
+		if confirm_new_input_button.has_focus() and is_accept:
+			_confirm_changed_input()
+		elif is_cancel:
+			_cancel_changed_input()
+	
+	return processed_event
+
+func _event_is_ui_action(event: InputEvent) -> bool:
+	var is_ui_action := false
+	# Don't record when trying to confirm the input change
+	var ui_actions := [
+		"ui_accept", "ui_cancel",
+		"ui_up", "ui_down", "ui_left", "ui_right",
+		"ui_focus_next", "ui_focus_prev"
+	]
+	var event_is_ui_action := ui_actions.any(func(action_name: String):
+		return event.is_action(action_name)
+	)
+	
+	if event_is_ui_action and not input_display_hint.has_focus():
+		is_ui_action = true
+	
+	return is_ui_action
 
 func _should_record_event(event: InputEvent) -> bool:
 	# Ignore "on release" events
@@ -82,23 +128,15 @@ func _should_record_event(event: InputEvent) -> bool:
 	if input_display_hint.has_focus():
 		return true
 	
-	# Don't record when trying to confirm the input change
-	var ui_actions := [
-		"ui_accept",
-		"ui_up", "ui_down", "ui_left", "ui_right",
-		"ui_focus_next", "ui_focus_prev"
-	]
-	var is_ui_action := ui_actions.any(func(action_name: String):
-		return event.is_action(action_name)
-	)
+	var event_is_ui_action := _event_is_ui_action(event)
 	# For joystick navigation, require a minimum threshold to record an actual input
 	if event is InputEventJoypadMotion:
 		var joystick_strength := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-		if is_ui_action and joystick_strength.length() < 0.8:
+		if event_is_ui_action and joystick_strength.length() < 0.8:
 			return false
-	if is_ui_action and not input_display_hint.has_focus():
-		return false
 	
+	if event_is_ui_action and not input_display_hint.has_focus():
+		return false
 	
 	# Ignore mouse clicks on buttons that match the button masks (bitwise)
 	var ignore_buttons: Array[Button] = [confirm_new_input_button, cancel_button]

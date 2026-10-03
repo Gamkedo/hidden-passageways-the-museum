@@ -22,7 +22,9 @@ theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 4
 
 [node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer" unique_id=1717987997]
+unique_name_in_owner = true
 layout_mode = 2
+follow_focus = true
 horizontal_scroll_mode = 0
 scroll_hint_mode = 1
 
@@ -326,7 +328,7 @@ icon_alignment = 1
 [node name="CDisplayHints" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=1111999602]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-text = "Map"
+text = "Display Hints"
 
 [node name="CDisplayHintsInputChange" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/ControllerInputs" unique_id=1949219450]
 unique_name_in_owner = true

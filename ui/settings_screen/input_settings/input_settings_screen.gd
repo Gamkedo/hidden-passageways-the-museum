@@ -1,19 +1,22 @@
 class_name InputSettingsScreen
-extends PanelContainer
+extends SettingsTabContainer
 
 signal input_settings_ui_changed
 
 var INPUT_SETTINGS: InputSettings = preload("uid://b0g4cokh6wa10")
 
+@onready var scroll_container: ScrollContainer = %ScrollContainer
+@onready var setting_inputs_container: VBoxContainer = %SettingInputsContainer
+@onready var toggle_sprint_checkbox: CheckBox = %ToggleSprintCheckbox
 @onready var m_horizontal_slider: HSlider = %MHorizontalSlider
 @onready var m_vertical_slider: HSlider = %MVerticalSlider
 @onready var m_invert_y_look_checkbox: CheckBox = %MInvertYLookCheckbox
 @onready var c_horizontal_slider: HSlider = %CHorizontalSlider
 @onready var c_vertical_slider: HSlider = %CVerticalSlider
 @onready var c_invert_y_look_check_box: CheckBox = %CInvertYLookCheckBox
-@onready var toggle_sprint_checkbox: CheckBox = %ToggleSprintCheckbox
 
 
+#region Settings Helpers
 func load_settings_to_ui() -> void:
 	print("[InputSettingsScreen] Loading settings to ui")
 	m_horizontal_slider.value = INPUT_SETTINGS.mouse_horizontal_sensitivity
@@ -52,6 +55,9 @@ func sync_toggle_sprint_to_settings(toggled: bool) -> void:
 	INPUT_SETTINGS.toggle_sprint = toggled
 	input_settings_ui_changed.emit()
 
+func _on_input_settings_updated() -> void:
+	load_settings_to_ui()
+#endregion Settings Helpers
 
 func _connect_signals() -> void:
 	m_horizontal_slider.value_changed.connect(sync_m_horizontal_sens_to_settings)
@@ -62,10 +68,13 @@ func _connect_signals() -> void:
 	c_invert_y_look_check_box.toggled.connect(sync_c_invert_y_to_settings)
 	toggle_sprint_checkbox.toggled.connect(sync_toggle_sprint_to_settings)
 
-func _on_input_settings_updated() -> void:
-	load_settings_to_ui()
+func focus_first_input() -> void:
+	super.focus_first_input()
+	scroll_container.scroll_vertical = 0
+
 
 func _ready() -> void:
+	super._ready()
 	load_settings_to_ui()
 	
 	# Intentionally connecting signal after loading setting state

@@ -6,6 +6,7 @@ signal go_to_main_menu
 signal quit_game
 
 # Buttons
+@onready var button_container: VBoxContainer = %ButtonContainer
 @onready var resume_button: Button = %ResumeButton
 @onready var settings_button: Button = %SettingsButton
 @onready var main_menu_button: Button = %MainMenuButton
@@ -34,6 +35,7 @@ func display_pause_menu() -> void:
 
 func display_settings() -> void:
 	_set_displayed_screen(settings_screen)
+	settings_screen.focus_first_input()
 
 func _set_displayed_screen(screen: Control) -> void:
 	var screen_index := screen.get_index()
@@ -67,6 +69,10 @@ func _connect_button_signals() -> void:
 func _ready() -> void:
 	_connect_button_signals()
 	
+	var button_list := button_container.find_children("*", "Button", false)
+	var first_button := button_list[0]
+	last_focused = first_button # Default to the first button
+	
 	back_button.hide()
 
 
@@ -76,8 +82,15 @@ func _on_mouse_exited_button() -> void:
 # This lets a menu input re-focus to the last focused UI node
 # eg. Mouse hover over a button -> menu input on a controller
 func _input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed_by_event("ui_cancel", event):
+			if back_button.visible:
+				display_pause_menu()
+				return
+	
 	var menu_inputs := ["ui_up", "ui_down", "ui_left", "ui_right"]
-	var menu_input_pressed := menu_inputs.any(func(input): return Input.is_action_just_pressed_by_event(input, event))
+	var menu_input_pressed := menu_inputs.any(func(input):
+		return Input.is_action_just_pressed_by_event(input, event)
+	)
 	var current_focus := get_viewport().gui_get_focus_owner()
 	if menu_input_pressed and current_focus == null and last_focused != null:
 		last_focused.grab_focus()
