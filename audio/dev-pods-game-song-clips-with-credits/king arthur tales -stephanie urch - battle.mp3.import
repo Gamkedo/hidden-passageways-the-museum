@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bqgtatfhbag4h"
+path="res://.godot/imported/king arthur tales -stephanie urch - battle.mp3-a8ef9d8125a651806a1d96cea206580c.mp3str"
+
+[deps]
+
+source_file="res://audio/dev-pods-game-song-clips-with-credits/king arthur tales -stephanie urch - battle.mp3"
+dest_files=["res://.godot/imported/king arthur tales -stephanie urch - battle.mp3-a8ef9d8125a651806a1d96cea206580c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
