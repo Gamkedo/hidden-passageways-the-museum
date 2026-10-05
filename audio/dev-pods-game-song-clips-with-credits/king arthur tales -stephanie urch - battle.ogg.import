@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c2b81yqtcl8ub"
+path="res://.godot/imported/king arthur tales -stephanie urch - battle.ogg-d41552fdce045a23a6df31bf03374dc7.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/dev-pods-game-song-clips-with-credits/king arthur tales -stephanie urch - battle.ogg"
+dest_files=["res://.godot/imported/king arthur tales -stephanie urch - battle.ogg-d41552fdce045a23a6df31bf03374dc7.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
