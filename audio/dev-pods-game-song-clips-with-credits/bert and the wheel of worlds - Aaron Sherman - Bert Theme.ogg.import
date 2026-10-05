@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c2c2vt5cxengp"
+path="res://.godot/imported/bert and the wheel of worlds - Aaron Sherman - Bert Theme.ogg-194814385c4a2dfbb58cae9f409e3fa7.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/dev-pods-game-song-clips-with-credits/bert and the wheel of worlds - Aaron Sherman - Bert Theme.ogg"
+dest_files=["res://.godot/imported/bert and the wheel of worlds - Aaron Sherman - Bert Theme.ogg-194814385c4a2dfbb58cae9f409e3fa7.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

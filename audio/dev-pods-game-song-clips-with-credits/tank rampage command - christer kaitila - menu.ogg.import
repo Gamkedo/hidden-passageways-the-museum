@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://g2kexalko4vr"
+path="res://.godot/imported/tank rampage command - christer kaitila - menu.ogg-daf35775ba2a0c73396cebcb321ef3fe.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/dev-pods-game-song-clips-with-credits/tank rampage command - christer kaitila - menu.ogg"
+dest_files=["res://.godot/imported/tank rampage command - christer kaitila - menu.ogg-daf35775ba2a0c73396cebcb321ef3fe.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ct8od5avs1b33"
+path="res://.godot/imported/Artillery Rampage - Michael Avrie - SoundtrackWhitecaps.ogg-c28bacbfb7b8bb477ee5dfaf78af0eb1.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/dev-pods-game-song-clips-with-credits/Artillery Rampage - Michael Avrie - SoundtrackWhitecaps.ogg"
+dest_files=["res://.godot/imported/Artillery Rampage - Michael Avrie - SoundtrackWhitecaps.ogg-c28bacbfb7b8bb477ee5dfaf78af0eb1.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

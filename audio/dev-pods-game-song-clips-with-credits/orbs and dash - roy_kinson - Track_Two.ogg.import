@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dxh7plstwdd5b"
+path="res://.godot/imported/orbs and dash - roy_kinson - Track_Two.ogg-e817cbe20d3e89de224ed344f8293764.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/dev-pods-game-song-clips-with-credits/orbs and dash - roy_kinson - Track_Two.ogg"
+dest_files=["res://.godot/imported/orbs and dash - roy_kinson - Track_Two.ogg-e817cbe20d3e89de224ed344f8293764.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

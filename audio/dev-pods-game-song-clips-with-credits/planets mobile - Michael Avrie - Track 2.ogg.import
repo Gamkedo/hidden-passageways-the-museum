@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bgo005k6svi6a"
+path="res://.godot/imported/planets mobile - Michael Avrie - Track 2.ogg-a0a3e9f1fa91cda136aab79d6defa8ab.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/dev-pods-game-song-clips-with-credits/planets mobile - Michael Avrie - Track 2.ogg"
+dest_files=["res://.godot/imported/planets mobile - Michael Avrie - Track 2.ogg-a0a3e9f1fa91cda136aab79d6defa8ab.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

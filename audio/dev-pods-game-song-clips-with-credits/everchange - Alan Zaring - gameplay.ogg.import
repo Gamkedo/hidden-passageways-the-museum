@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://1ajw7wunsygr"
+path="res://.godot/imported/everchange - Alan Zaring - gameplay.ogg-9f191653f5c588a1b4ac93644f06bfba.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/dev-pods-game-song-clips-with-credits/everchange - Alan Zaring - gameplay.ogg"
+dest_files=["res://.godot/imported/everchange - Alan Zaring - gameplay.ogg-9f191653f5c588a1b4ac93644f06bfba.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
