@@ -90,6 +90,7 @@
 [ext_resource type="PackedScene" uid="uid://byown3kkcxwo5" path="res://models/tank_rampage/hero_tank.glb" id="85_4sa00"]
 [ext_resource type="PackedScene" uid="uid://52ka55orxurd" path="res://models/spy_boat/river-spy-boat.tscn" id="86_6v162"]
 [ext_resource type="PackedScene" uid="uid://bm2wbkt7ruwa8" path="res://models/talon_solitaire/suit-symbols.tscn" id="87_a8cb6"]
+[ext_resource type="Shape3D" uid="uid://rlithvvr27jx" path="res://models/boundary_collider_shape_3d.tres" id="91_ypkhb"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_xteo1"]
 
@@ -335,36 +336,36 @@ material = ExtResource("7_3lbo0")
 size = Vector2(10.380006, 10.380006)
 orientation = 1
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_ypkhb"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_012j5"]
 viewport_path = NodePath("../SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_012j5"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g614b"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_ypkhb")
+albedo_texture = SubResource("ViewportTexture_012j5")
 roughness = 0.8
 texture_filter = 5
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_g614b"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_jk60t"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jk60t"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sgcu3"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_g614b")
+albedo_texture = SubResource("ViewportTexture_jk60t")
 roughness = 0.8
 texture_filter = 5
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_sgcu3"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_ik1rw"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ik1rw"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3hhar"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_sgcu3")
+albedo_texture = SubResource("ViewportTexture_ik1rw")
 roughness = 0.8
 texture_filter = 5
 
@@ -2013,7 +2014,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook" index="1" unique_id=2132904720]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_012j5")
+surface_material_override/0 = SubResource("StandardMaterial3D_g614b")
 
 [node name="Guidebook3d2" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1034692829]
 transform = Transform3D(0.99572617, -6.976736e-08, 0.092355326, 0.07370379, 0.60259724, -0.79463464, -0.05565301, 0.7980456, 0.60002184, 0.33789635, 0.5955966, 0.11873436)
@@ -2027,7 +2028,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook" index="1" unique_id=2132904720]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_jk60t")
+surface_material_override/0 = SubResource("StandardMaterial3D_sgcu3")
 
 [node name="Guidebook3d3" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1679212863]
 transform = Transform3D(-0.9742656, -0.12668496, -0.18643428, 0.14209789, -0.98725104, -0.07172081, -0.1749714, -0.0963671, 0.979846, -0.58836937, 0.5955966, 0.11873436)
@@ -2041,7 +2042,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3/guidebook" index="1" unique_id=2132904720]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_ik1rw")
+surface_material_override/0 = SubResource("StandardMaterial3D_3hhar")
 
 [node name="Label3D" type="Label3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1183973093]
 transform = Transform3D(0.24000001, 0, 0, 0, 0.24000001, 0, 0, 0, 0.24000001, -0.07500076, 0.61191887, -0.31499863)
@@ -2593,6 +2594,38 @@ sky_mode = 1
 [node name="Taxi_vox" type="MeshInstance3D" parent="." unique_id=1145635676]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, -1, -10.5)
 mesh = ExtResource("66_fof07")
+
+[node name="World Boundaries" type="Node3D" parent="." unique_id=1033588794]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="World Boundaries" unique_id=1067343403]
+transform = Transform3D(0.94149655, 0, -0.33702263, 0, 1, 0, 0.33702263, 0, 0.94149655, 1.946352, 0, 76.31478)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World Boundaries/StaticBody3D" unique_id=1739608497]
+shape = ExtResource("91_ypkhb")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="World Boundaries" unique_id=1879706775]
+transform = Transform3D(0.5051321, 0, 0.86304206, 0, 1, 0, -0.86304206, 0, 0.5051321, 130.74771, 15.508987, 50.214165)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World Boundaries/StaticBody3D2" unique_id=130993889]
+shape = ExtResource("91_ypkhb")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="World Boundaries" unique_id=834243497]
+transform = Transform3D(-0.5211524, 0, 0.85346365, 0, 1, 0, -0.85346365, 0, -0.5211524, 91.52335, -7.6293945e-06, -35.389565)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World Boundaries/StaticBody3D3" unique_id=1165546484]
+shape = ExtResource("91_ypkhb")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="World Boundaries" unique_id=1625770626]
+transform = Transform3D(-0.8885095, 0, -0.45885828, 0, 1, 0, 0.45885828, 0, -0.8885095, -5.761917, 0, -92.719345)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World Boundaries/StaticBody3D4" unique_id=2039031215]
+shape = ExtResource("91_ypkhb")
+
+[node name="StaticBody3D5" type="StaticBody3D" parent="World Boundaries" unique_id=1059915597]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -92.1149, 7.6293945e-06, 7.1251717)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World Boundaries/StaticBody3D5" unique_id=83876510]
+shape = ExtResource("91_ypkhb")
 
 [editable path="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook"]
 [editable path="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook"]
