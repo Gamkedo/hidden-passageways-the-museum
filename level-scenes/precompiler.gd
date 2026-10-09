@@ -7,6 +7,7 @@
 class_name Precompiler extends Node3D
 
 const SKIP_PRECOMPILER: bool = false
+const debug_precompile_timing := false
 
 signal progress_changed(progress:float)
 signal entity_count_changed(count:int)
@@ -125,6 +126,11 @@ func spawn_batch(container:Node, scenes: Array[PackedScene]) -> void:
 
 
 func spawn_and_fire(container:Node, scene: PackedScene) -> void:
+
+	if debug_precompile_timing: # helps narrow down issues in preloaded parts
+		print("(precompile debug) step timing in ms: ", Time.get_ticks_msec())
+		print("(precompile debug) caching: ", scene.resource_path)
+
 	var instance = scene.instantiate()
 	cache.push_back(instance)
 	
