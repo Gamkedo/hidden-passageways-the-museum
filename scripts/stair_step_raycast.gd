@@ -6,6 +6,7 @@ extends RayCast3D
 
 var _initial_distance_to_target: float
 
+const debug_print := false
 
 func _physics_process(_delta: float) -> void:
 	if not is_instance_valid(input_controller):
@@ -27,7 +28,8 @@ func _physics_process(_delta: float) -> void:
 func _ready() -> void:
 	if not is_instance_valid(target_node):
 		target_node = get_parent_node_3d()
-		print("[StairStep] No target node assigned, assuming parent is target. Name: ", target_node.name)
+		if debug_print:
+			print("[StairStep] No target node assigned, assuming parent is target. Name: ", target_node.name)
 	
 	# Ignore y-axis for distance calculation - going for horizontal plane only
 	var flattened_position_vector := global_position * Vector3(1, 0, 1)
