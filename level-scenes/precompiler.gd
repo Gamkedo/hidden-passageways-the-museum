@@ -7,7 +7,7 @@
 class_name Precompiler extends Node3D
 
 const SKIP_PRECOMPILER: bool = false
-const debug_precompile_timing := false
+const debug_show_precompile_steps := false
 
 signal progress_changed(progress:float)
 signal entity_count_changed(count:int)
@@ -56,7 +56,8 @@ func run() -> void:
 ## The main method
 func precompile_all_configured_scenes() -> void:
 	const print_colors:String = "[bgcolor=grey][color=black]"
-	print_rich(print_colors, "Precompiler starting...")
+	if debug_show_precompile_steps:
+		print_rich(print_colors, "Precompiler starting...")
 	
 	var scene_paths: Array[String]
 	if use_folder_recursion:
@@ -80,7 +81,8 @@ func precompile_all_configured_scenes() -> void:
 	for path in scene_paths:
 		# Get the scene
 		var scene = ResourceLoader.load(path,"PackedScene")
-		print_rich(print_colors,"Loaded ", path)
+		if debug_show_precompile_steps:
+			print_rich(print_colors,"Loaded ", path)
 		_batch.append(scene)
 		if index % batch_size == 0:
 			# Copy this batch off and start over
@@ -88,7 +90,9 @@ func precompile_all_configured_scenes() -> void:
 			_batch.clear()
 		index += 1
 	if not _batch.is_empty(): batches.append(_batch) # Add final unfilled batch
-	print_rich(print_colors,"Loaded ", total_scenes, " scenes.")
+	
+	if debug_show_precompile_steps:
+		print_rich(print_colors,"Loaded ", total_scenes, " scenes.")
 	
 	await get_tree().process_frame
 	## Instancing
@@ -98,7 +102,9 @@ func precompile_all_configured_scenes() -> void:
 		
 		## Finished this batch
 		remainder -= batch.size()
-		print_rich(print_colors, remainder, " scenes remaining.")
+		
+		if debug_show_precompile_steps:
+			print_rich(print_colors, remainder, " scenes remaining.")
 		#var _progress:float = 100.0-(float(remainder)/float(total_scenes) * 100)
 		var _progress:float = 1.0-(float(remainder)/float(total_scenes))
 		progress = _progress
@@ -127,7 +133,7 @@ func spawn_batch(container:Node, scenes: Array[PackedScene]) -> void:
 
 func spawn_and_fire(container:Node, scene: PackedScene) -> void:
 
-	if debug_precompile_timing: # helps narrow down issues in preloaded parts
+	if debug_show_precompile_steps: # helps narrow down issues in preloaded parts
 		print("(precompile debug) step timing in ms: ", Time.get_ticks_msec())
 		print("(precompile debug) caching: ", scene.resource_path)
 
