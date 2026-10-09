@@ -67,7 +67,9 @@ func _ready() -> void:
 	var display = get_node("Foam Card") as DisplayText
 	display.page_text = credits
 
-	if get_node_or_null("Speaker"): $Speaker.stream_list = osts
+	var speaker = get_node_or_null("Speaker")
+	if speaker and "stream_list" in speaker:
+			$Speaker.stream_list = osts
 
 	if not Engine.is_editor_hint():
 		play_stand_interactable.interaction_complete.connect(open_link)
