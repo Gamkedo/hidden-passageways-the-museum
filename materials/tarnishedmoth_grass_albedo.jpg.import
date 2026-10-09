@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://brp3qkp7syp3"
-path.bptc="res://.godot/imported/tarnishedmoth_grass_albedo.jpg-79719218569be1262a81521b7cdb6011.bptc.ctex"
+path="res://.godot/imported/tarnishedmoth_grass_albedo.jpg-79719218569be1262a81521b7cdb6011.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://materials/tarnishedmoth_grass_albedo.jpg"
-dest_files=["res://.godot/imported/tarnishedmoth_grass_albedo.jpg-79719218569be1262a81521b7cdb6011.bptc.ctex"]
+dest_files=["res://.godot/imported/tarnishedmoth_grass_albedo.jpg-79719218569be1262a81521b7cdb6011.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=true
 compress/lossy_quality=0.7
 compress/uastc_level=0
