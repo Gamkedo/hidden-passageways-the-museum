@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cjje4wwgxoy1s" path="res://entities-scene_prefabs/intercom_speaker/speaker.tscn" id="10_i26b7"]
 [ext_resource type="PackedScene" uid="uid://cyqgophlok1w5" path="res://entities-scene_prefabs/interaction/display_hint/display_hint.tscn" id="11_bsran"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bsran"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7twhr"]
 shading_mode = 0
 
 [sub_resource type="QuadMesh" id="QuadMesh_etush"]
@@ -33,7 +33,7 @@ roughness = 0.4
 [sub_resource type="BoxShape3D" id="BoxShape3D_3e5oy"]
 size = Vector3(1, 12.362305, 19.144867)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s1wxa"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vbb3g"]
 shading_mode = 0
 
 [sub_resource type="QuadMesh" id="QuadMesh_i26b7"]
@@ -59,7 +59,7 @@ metadata/_custom_type_script = "uid://bud6xyvo80vl3"
 
 [node name="Button image" type="MeshInstance3D" parent="Button Game" unique_id=1896630648]
 transform = Transform3D(0.222912, 0, -0.027712809, 0, 0.27519995, 0, 0.3860949, 0, 0.015999993, 0.085302114, 0.46111998, -0.23146969)
-material_override = SubResource("StandardMaterial3D_bsran")
+material_override = SubResource("StandardMaterial3D_7twhr")
 mesh = SubResource("QuadMesh_etush")
 
 [node name="GameLabel" type="Label3D" parent="Button Game" unique_id=1183973093]
@@ -107,7 +107,6 @@ unique_name_in_owner = true
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("6_6fcnr")
-interact_prompt = "Explore World"
 display_hint = NodePath("Marker3D/DisplayHint")
 metadata/_custom_type_script = "uid://bsmp4qaqn0uxw"
 
@@ -126,7 +125,7 @@ unique_name_in_owner = true
 
 [node name="Painting Image" type="MeshInstance3D" parent="BasicCurvyFrame Test" unique_id=784914795]
 transform = Transform3D(-7.033798e-07, 0, 1, 0, 9.407751, 0, -16.091467, 0, -4.371139e-08, -0.19434357, -0.026180267, 0)
-material_override = SubResource("StandardMaterial3D_s1wxa")
+material_override = SubResource("StandardMaterial3D_vbb3g")
 cast_shadow = 0
 mesh = SubResource("QuadMesh_i26b7")
 

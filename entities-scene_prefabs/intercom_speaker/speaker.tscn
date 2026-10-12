@@ -10,6 +10,8 @@ size = Vector3(0.33691406, 0.3310547, 0.2507019)
 [sub_resource type="BoxShape3D" id="BoxShape3D_c8sum"]
 size = Vector3(0.38310242, 0.30490875, 0.22302246)
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_6edlb"]
+
 [node name="Speaker" type="StaticBody3D" unique_id=1668457512]
 script = ExtResource("1_6edlb")
 
@@ -24,7 +26,7 @@ shape = SubResource("BoxShape3D_34amj")
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("1_xcaxh")
-interact_prompt = "Listen to OSTs"
+interact_prompt = "Restart Song"
 interaction_prompt_prefix = "Press to"
 display_hint = NodePath("Marker3D/DisplayHint")
 metadata/_custom_type_script = "uid://bsmp4qaqn0uxw"
@@ -37,3 +39,11 @@ shape = SubResource("BoxShape3D_c8sum")
 
 [node name="DisplayHint" parent="SpeakerInteractable/Marker3D" unique_id=1673367312 node_paths=PackedStringArray("display_target") instance=ExtResource("3_6edlb")]
 display_target = NodePath("..")
+
+[node name="MusicAutoplayBox" type="Area3D" parent="." unique_id=1449569011]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4573493, 0.50928545, 1.4586926)
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MusicAutoplayBox" unique_id=1449732374]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0.58340263)
+shape = SubResource("CylinderShape3D_6edlb")
