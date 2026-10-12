@@ -1,15 +1,13 @@
 extends StaticBody3D
 
-var stream_list: Array[AudioStream] = []
-var current_stream_index = -1
+var stream_nearby: AudioStream = null
 @onready var speaker_interactable = $SpeakerInteractable
 
 func _ready() -> void:
 	speaker_interactable.interaction_complete.connect(_on_speaker_interact)
 
 func _on_speaker_interact():
-	current_stream_index = (current_stream_index + 1) % stream_list.size()
-	IntercomAudioManager.play_game_ost(stream_list[current_stream_index])
+	IntercomAudioManager.play_game_ost(stream_nearby)
 
 #func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
 	#if event is InputEventMouseButton and event.is_pressed():

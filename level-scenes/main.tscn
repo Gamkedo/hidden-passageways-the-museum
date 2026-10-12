@@ -34,10 +34,12 @@
 [ext_resource type="Texture2D" uid="uid://dlft5rt3mgqhu" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/gladiator-of-the-golden-house.png" id="26_v80x0"]
 [ext_resource type="Texture2D" uid="uid://c7fd2ik3j7hr5" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/legend-of-shadowtail.jpg" id="28_3tvjp"]
 [ext_resource type="PackedScene" uid="uid://bvln0oll5ttp0" path="res://entities-scene_prefabs/ionic_column.tscn" id="28_er4o0"]
+[ext_resource type="AudioStream" uid="uid://udd16tjp78tl" path="res://audio/dev-pods-game-song-clips-with-credits/gladiator of the golden house - Aaron Sherman - gladiator battle marc.ogg" id="28_g614b"]
 [ext_resource type="Texture2D" uid="uid://cwc2oqi14kgm2" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/legend-of-shadowtail-logo.png" id="29_xh8e5"]
 [ext_resource type="Texture2D" uid="uid://cq0kjracafggb" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/king-arthur.jpg" id="30_e37vr"]
 [ext_resource type="PackedScene" uid="uid://cqq8q3sgrg35b" path="res://ui/guidebook.tscn" id="30_nw8jh"]
 [ext_resource type="Texture2D" uid="uid://rroay42y61vb" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/king-arthur-logo.png" id="31_6mvr8"]
+[ext_resource type="AudioStream" uid="uid://bcadx5lqnxj16" path="res://audio/dev-pods-game-song-clips-with-credits/Legend of Shadowtail - Aaron Sherman - Main Theme.ogg" id="31_dmq1t"]
 [ext_resource type="Texture2D" uid="uid://2432776vq113" path="res://textures/play-button-stand.png" id="31_nw8jh"]
 [ext_resource type="PackedScene" uid="uid://cxl7h3vtvfn66" path="res://models/guidebook.gltf" id="31_oa8v2"]
 [ext_resource type="Texture2D" uid="uid://bmvx1q1vihola" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/cargo-bay.jpg" id="32_6oq67"]
@@ -45,10 +47,13 @@
 [ext_resource type="Texture2D" uid="uid://cpqx7ayc50uyf" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/cargo-bay-logo.png" id="33_fplvf"]
 [ext_resource type="PackedScene" uid="uid://ccmjewtcqxp7" path="res://models/legend_of_shadowtails_ratrick_mesh.glb" id="33_hgslh"]
 [ext_resource type="Texture2D" uid="uid://bioro578cfmun" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/artillery-rampage.jpg" id="34_anu3i"]
+[ext_resource type="AudioStream" uid="uid://c2b81yqtcl8ub" path="res://audio/dev-pods-game-song-clips-with-credits/king arthur tales -stephanie urch - battle.ogg" id="34_tatev"]
 [ext_resource type="Texture2D" uid="uid://barv2ixgl1het" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/artillery-rampage-logo.png" id="35_4sa00"]
+[ext_resource type="AudioStream" uid="uid://ct8od5avs1b33" path="res://audio/dev-pods-game-song-clips-with-credits/Artillery Rampage - Michael Avrie - SoundtrackWhitecaps.ogg" id="36_012j5"]
 [ext_resource type="Texture2D" uid="uid://ctnimjcimfyxh" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/crash-em-up.jpg" id="36_14tmg"]
 [ext_resource type="Texture2D" uid="uid://cpakvdnl3rxxa" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/gladiator-framed-pic.png" id="36_u5gq0"]
 [ext_resource type="Texture2D" uid="uid://bulyjthbproa8" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/crash-em-up-logo.png" id="37_6v162"]
+[ext_resource type="AudioStream" uid="uid://1joa5jtgvlrt" path="res://audio/dev-pods-game-song-clips-with-credits/cargo bay 5n-afu - Philippe Vaillancourt - psytrance.ogg" id="37_bbunl"]
 [ext_resource type="Texture2D" uid="uid://obmg5lc58s2p" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/crazy-arena-chaos.jpg" id="38_xh8e5"]
 [ext_resource type="Texture2D" uid="uid://cvryfj8lmkalp" path="res://textures/under-construction.png" id="39_1tes7"]
 [ext_resource type="Texture2D" uid="uid://c8fyjd7ayh1ev" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/crazy-arena-chaos-logo.png" id="39_a8cb6"]
@@ -56,36 +61,48 @@
 [ext_resource type="Texture2D" uid="uid://e327qx4qygko" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/planets-mobile-logo.jpg" id="41_fplvf"]
 [ext_resource type="Texture2D" uid="uid://dqhu04rwu5fdg" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/orbs-and-dash.jpg" id="42_4sa00"]
 [ext_resource type="Script" uid="uid://cm6176wsxfdqx" path="res://entities-scene_prefabs/auto-tracklight.gd" id="43_0m503"]
+[ext_resource type="AudioStream" uid="uid://dbwmu2gsso7ja" path="res://audio/dev-pods-game-song-clips-with-credits/crash em up - Michael Avrie - beepbox.ogg" id="43_d8p2r"]
 [ext_resource type="Texture2D" uid="uid://dy7l45om1gq10" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/orbs-and-dash-logo.png" id="43_ypkhb"]
 [ext_resource type="PackedScene" uid="uid://coqvyei5w8brk" path="res://game wall pictures/frame_button_credits.tscn" id="44_1tes7"]
 [ext_resource type="Texture2D" uid="uid://b1m2453jobbf4" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/everchange.jpg" id="44_6v162"]
 [ext_resource type="Texture2D" uid="uid://cpuhv0o76rgxq" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/everchange-logo.png" id="45_012j5"]
+[ext_resource type="AudioStream" uid="uid://ocxjig23e24y" path="res://audio/dev-pods-game-song-clips-with-credits/Crazy Arena Chaos - Bex Rodriguez - Menu.ogg" id="46_10aen"]
 [ext_resource type="Texture2D" uid="uid://jyvytmpf5ca" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/forgotten-road.jpg" id="46_a8cb6"]
 [ext_resource type="Texture2D" uid="uid://d2ukddaby0rut" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/forgotten-road-logo.png" id="47_ypkhb"]
 [ext_resource type="Texture2D" uid="uid://b5o3g7kjuemj5" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/bert-and-wheel.jpg" id="48_012j5"]
+[ext_resource type="AudioStream" uid="uid://bgo005k6svi6a" path="res://audio/dev-pods-game-song-clips-with-credits/planets mobile - Michael Avrie - Track 2.ogg" id="49_25n75"]
 [ext_resource type="Texture2D" uid="uid://cb5mmm0c7k2xt" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/bert-and-wheel-logo.png" id="49_g614b"]
 [ext_resource type="Texture2D" uid="uid://dva0hc06b7n7h" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/tank-rampage-commander.jpg" id="50_g614b"]
 [ext_resource type="Texture2D" uid="uid://b7s1xractov5f" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/tank-rampage-command-logo.png" id="51_jk60t"]
+[ext_resource type="AudioStream" uid="uid://dxh7plstwdd5b" path="res://audio/dev-pods-game-song-clips-with-credits/orbs and dash - roy_kinson - Track_Two.ogg" id="52_4h6t8"]
 [ext_resource type="Texture2D" uid="uid://hwjvmhp746ef" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/supply-and-siege.jpg" id="52_jk60t"]
 [ext_resource type="PackedScene" uid="uid://dbngi8xk7go57" path="res://models/tank_rampage_command_marine.tscn" id="53_gbu3n"]
 [ext_resource type="PackedScene" uid="uid://dgahdbu6k5v7a" path="res://entities-scene_prefabs/fire_extinguisher.tscn" id="53_mj7h6"]
 [ext_resource type="Texture2D" uid="uid://byq8juxdt0ic8" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/supply-and-siege-logos.png" id="53_sgcu3"]
 [ext_resource type="Texture2D" uid="uid://dl4nsrnik0fvo" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/talon.jpg" id="54_6oq67"]
+[ext_resource type="AudioStream" uid="uid://1ajw7wunsygr" path="res://audio/dev-pods-game-song-clips-with-credits/everchange - Alan Zaring - gameplay.ogg" id="55_gdv2j"]
 [ext_resource type="Texture2D" uid="uid://lbjxlnouyqxn" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/talon-logo.png" id="55_ik1rw"]
 [ext_resource type="Texture2D" uid="uid://bo7vj36g55lwr" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/terminus-2k28.jpg" id="56_anu3i"]
 [ext_resource type="Texture2D" uid="uid://1b527eqk7abw" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/terminus-2k28-logo.png" id="57_3hhar"]
 [ext_resource type="Texture2D" uid="uid://cje4f1y0cfi1y" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/cyndrive.jpg" id="58_anu3i"]
 [ext_resource type="Script" uid="uid://78d2xtti3yje" path="res://level-scenes/tween-off-on-screen.gd" id="58_oa8v2"]
+[ext_resource type="AudioStream" uid="uid://cxbue64jgkwh0" path="res://audio/dev-pods-game-song-clips-with-credits/Forgotten Road - christer kaitila - four chords.ogg" id="58_s4gn4"]
 [ext_resource type="PackedScene" uid="uid://b6vhbs03grq4q" path="res://entities-scene_prefabs/barrier.tscn" id="59_27nw5"]
 [ext_resource type="PackedScene" uid="uid://cpdw8d15t73f1" path="res://entities-scene_prefabs/dynamic_billboard/credits_billboard.tscn" id="60_14tmg"]
 [ext_resource type="PackedScene" uid="uid://csx07hxskuxjn" path="res://entities-scene_prefabs/barrier_single.tscn" id="60_b2w3e"]
 [ext_resource type="Texture2D" uid="uid://dstjwenv8yej8" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/cyndrive-ships-logo.png" id="60_xh8e5"]
+[ext_resource type="AudioStream" uid="uid://c2c2vt5cxengp" path="res://audio/dev-pods-game-song-clips-with-credits/bert and the wheel of worlds - Aaron Sherman - Bert Theme.ogg" id="61_35lg4"]
 [ext_resource type="PackedScene" uid="uid://coah6xph85mbj" path="res://models/egg.tscn" id="61_xub5d"]
 [ext_resource type="PackedScene" uid="uid://c4vtkvb04er8b" path="res://level-scenes/egg_challenge.tscn" id="62_x4vg3"]
 [ext_resource type="PackedScene" uid="uid://b7l0g2p16ot2u" path="res://entities-scene_prefabs/clouds.tscn" id="63_iit47"]
+[ext_resource type="AudioStream" uid="uid://g2kexalko4vr" path="res://audio/dev-pods-game-song-clips-with-credits/tank rampage command - christer kaitila - menu.ogg" id="64_7y3h6"]
 [ext_resource type="PackedScene" uid="uid://chqeb335cf70u" path="res://entities-scene_prefabs/handrail.tscn" id="65_v80x0"]
 [ext_resource type="ArrayMesh" uid="uid://jg527adis7cp" path="res://models/taxi.vox.obj" id="66_fof07"]
 [ext_resource type="Material" uid="uid://ueafojuqehx8" path="res://materials/under_construction_stripes_3d.tres" id="66_v80x0"]
+[ext_resource type="AudioStream" uid="uid://dmecca328kwsu" path="res://audio/dev-pods-game-song-clips-with-credits/supply and siege - Bex Rodriguez - gameplay.ogg" id="67_l8pru"]
+[ext_resource type="AudioStream" uid="uid://cml3pu6350wap" path="res://audio/dev-pods-game-song-clips-with-credits/talon solitaire - noah wizard - music.ogg" id="70_g8gvm"]
+[ext_resource type="AudioStream" uid="uid://bv6jsyr657hdv" path="res://audio/dev-pods-game-song-clips-with-credits/terminus 2k28 - christer kaitila - ambience_a.ogg" id="73_onsk2"]
+[ext_resource type="AudioStream" uid="uid://28ktijv6o2ht" path="res://audio/dev-pods-game-song-clips-with-credits/cyndrive ships - Philippe Vaillancourt - big beat.ogg" id="77_ojj62"]
 [ext_resource type="PackedScene" uid="uid://b4lenin8uv1jc" path="res://models/tank_rampage/tank_rampage_hero_tank.tscn" id="84_fplvf"]
 [ext_resource type="PackedScene" uid="uid://byown3kkcxwo5" path="res://models/tank_rampage/hero_tank.glb" id="85_4sa00"]
 [ext_resource type="PackedScene" uid="uid://52ka55orxurd" path="res://models/spy_boat/river-spy-boat.tscn" id="86_6v162"]
@@ -336,19 +353,8 @@ material = ExtResource("7_3lbo0")
 size = Vector2(10.380006, 10.380006)
 orientation = 1
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_ypkhb"]
-viewport_path = NodePath("../SubViewport")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_012j5"]
-resource_local_to_scene = true
-resource_name = "Pages"
-transparency = 1
-albedo_texture = SubResource("ViewportTexture_ypkhb")
-roughness = 0.8
-texture_filter = 5
-
 [sub_resource type="ViewportTexture" id="ViewportTexture_g614b"]
-viewport_path = NodePath("../../Guidebook3d/SubViewport")
+viewport_path = NodePath("../SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jk60t"]
 resource_local_to_scene = true
@@ -366,6 +372,17 @@ resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
 albedo_texture = SubResource("ViewportTexture_sgcu3")
+roughness = 0.8
+texture_filter = 5
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_3hhar"]
+viewport_path = NodePath("../../Guidebook3d/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6ejvu"]
+resource_local_to_scene = true
+resource_name = "Pages"
+transparency = 1
+albedo_texture = SubResource("ViewportTexture_3hhar")
 roughness = 0.8
 texture_filter = 5
 
@@ -1328,6 +1345,7 @@ Additional gameplay design: Dávid Tóth
 Skeleton character drafts, initial color palette suggestions: Jakob Harris
 
 Playtesting: Chris Anderson, Connor Fitzpatrick, TopHatCroat"
+ost = ExtResource("28_g614b")
 painting_texture = ExtResource("36_u5gq0")
 button_texture = ExtResource("26_v80x0")
 
@@ -1372,6 +1390,7 @@ Reddish orange tail whip particles: Owen Peery
 Enemies refactored to reuse common base code: David Bates
 
 Play testing: Baguette	"
+ost = ExtResource("31_dmq1t")
 painting_texture = ExtResource("28_3tvjp")
 button_texture = ExtResource("29_xh8e5")
 
@@ -1416,6 +1435,7 @@ Building position fix: Bradley OFarrell
 Inkpot plugin (unused): Gwynim
 
 Playtesting: Michael Avrie "
+ost = ExtResource("34_tatev")
 painting_texture = ExtResource("30_e37vr")
 button_texture = ExtResource("31_6mvr8")
 
@@ -1442,6 +1462,7 @@ Cargo collision sound, cargo UI tweaks, lighting adjustment, additional level de
 Sounds (UI, assorted physical sounds): Connor Fitzpatrick
 
 Cargo fill zone functionality, cable decor: Catwingzz"
+ost = ExtResource("37_bbunl")
 painting_texture = ExtResource("32_6oq67")
 button_texture = ExtResource("33_fplvf")
 
@@ -1476,6 +1497,7 @@ Lighthouse sprite: Owen \"Q-Bit\" Good
 Tree sprite variant: Chris DeLeon
 
 Playtesting: Meatball, kittykatmeowmeow"
+ost = ExtResource("36_012j5")
 painting_texture = ExtResource("34_anu3i")
 button_texture = ExtResource("35_4sa00")
 
@@ -1505,6 +1527,7 @@ Score counter (with timeout reset), end text, hit counter UI: Raymond Zegles
 Basic damage system: Dalton Charleston
 
 Crash sound effects: Connor Fitzpatrick"
+ost = ExtResource("43_d8p2r")
 painting_texture = ExtResource("36_14tmg")
 button_texture = ExtResource("37_6v162")
 
@@ -1563,6 +1586,7 @@ Original backstory: rhys kim
 Spawn system and related interface: Simone | ZilpioGaming
 
 Playtesting: Alyson Dominguez, Kamil Towers, Matthew Landset, Chris Morrissey, Twmy, Eric Goldman, Timothy Sullivan, David MacNeil, Paul Ciccotto"
+ost = ExtResource("46_10aen")
 painting_texture = ExtResource("38_xh8e5")
 button_texture = ExtResource("39_a8cb6")
 
@@ -1587,6 +1611,7 @@ Main menu options button, bug fixes (related to the the start of game turn, enti
 Playtest Feedback, help tutorial text, ship altered design and faction glow variations, ship count sprite contributions: Noah Wizard
 
 Camera size adjusts to screen size: Vince McKeown"
+ost = ExtResource("49_25n75")
 painting_texture = ExtResource("40_6mvr8")
 button_texture = ExtResource("41_fplvf")
 
@@ -1627,6 +1652,7 @@ UI timer script: Herleen
 M key to toggle mute: Dave Yoon
 
 Credits compilation, support: Chris DeLeon"
+ost = ExtResource("52_4h6t8")
 painting_texture = ExtResource("42_4sa00")
 button_texture = ExtResource("43_ypkhb")
 
@@ -1670,6 +1696,7 @@ Pickup particle visuals, pickup particles connected for other items, item pickup
 Voice actress, additional narrative design: Ariane Perideaux
 
 Playtesting: Noah Wizardff"
+ost = ExtResource("55_gdv2j")
 painting_texture = ExtResource("44_6v162")
 button_texture = ExtResource("45_012j5")
 
@@ -1710,6 +1737,7 @@ Ghoul front facing art, potion sprites: Luis Montaña
 Two doctor NPCs and related quest beginnings: Michael Avrie
 
 Mute toggle: Ian Cherabier "
+ost = ExtResource("58_s4gn4")
 painting_texture = ExtResource("46_a8cb6")
 button_texture = ExtResource("47_ypkhb")
 
@@ -1748,6 +1776,7 @@ Night nature recordings: Chris DeLeon
 Itch page logo and design advice: Tim Ruswick
 
 Playtesting: Hunter Jones, Dávid Tóth (davids91), TopHatCroat, Tim Ruswick, Baguette"
+ost = ExtResource("61_35lg4")
 painting_texture = ExtResource("48_012j5")
 button_texture = ExtResource("49_g614b")
 
@@ -1778,10 +1807,11 @@ Tank sounds: Connor Fitzpatrick
 Artillery explosion particle effect Chris DeLeon
 
 Playtesters: fizzybuzzybeezy, Mo Shah, Meatball"
+ost = ExtResource("64_7y3h6")
 painting_texture = ExtResource("50_g614b")
 button_texture = ExtResource("51_jk60t")
 
-[node name="Supple and Siege" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=1117424678 instance=ExtResource("44_1tes7")]
+[node name="Supply and Siege" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=1117424678 instance=ExtResource("44_1tes7")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.8765259, -9.235206, 11.524845)
 game_label = "Supple &
 Siege"
@@ -1816,6 +1846,7 @@ Health and damage functionality prototype (unused): Arty
 Pause screen: Marshall Sandoval-Clark
 
 Minimap prototype (unused), debug tool: Jshaun Hookumchand"
+ost = ExtResource("67_l8pru")
 painting_texture = ExtResource("52_jk60t")
 button_texture = ExtResource("53_sgcu3")
 
@@ -1846,6 +1877,7 @@ Edit and typo fixes in Readme: Mike DiGiovanni
 QA playtesters: Philippe Vaillancourt (snowfrogdev), Michael Avrie, Tim Sargent, Noah Wizard, Simone | ZilpioGaming, Jason Timms, Mike DiGiovanni, Dominic Beacham
 
 itch.io dimensions workaround: Chris DeLeon"
+ost = ExtResource("70_g8gvm")
 painting_texture = ExtResource("54_6oq67")
 button_texture = ExtResource("55_ik1rw")
 
@@ -1909,6 +1941,7 @@ Pause menu scene: Jordan
 Music export bug fix: Michael Avrie
 
 Playtesting: Barış Köklü, Juan Luiz R and two anonymous testers"
+ost = ExtResource("73_onsk2")
 painting_texture = ExtResource("56_anu3i")
 button_texture = ExtResource("57_3hhar")
 
@@ -1983,6 +2016,7 @@ Raw pre-alpha version playtest, pre-release version playtest, typos in readme: J
 Dialog system UI base and structures: Travis Barnette
 
 Additional playtesting: ArtyT, Connor Fitzpatrick, Dragon, Zoli, Dorka "
+ost = ExtResource("77_ojj62")
 painting_texture = ExtResource("58_anu3i")
 button_texture = ExtResource("60_xh8e5")
 
@@ -2014,7 +2048,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_012j5")
+surface_material_override/0 = SubResource("StandardMaterial3D_jk60t")
 
 [node name="Guidebook3d2" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1034692829]
 transform = Transform3D(0.99572617, -6.976736e-08, 0.092355326, 0.07370379, 0.60259724, -0.79463464, -0.05565301, 0.7980456, 0.60002184, 0.33789635, 0.5955966, 0.11873436)
@@ -2028,7 +2062,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_jk60t")
+surface_material_override/0 = SubResource("StandardMaterial3D_ik1rw")
 
 [node name="Guidebook3d3" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1679212863]
 transform = Transform3D(-0.9742656, -0.12668496, -0.18643428, 0.14209789, -0.98725104, -0.07172081, -0.1749714, -0.0963671, 0.979846, -0.58836937, 0.5955966, 0.11873436)
@@ -2042,7 +2076,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_ik1rw")
+surface_material_override/0 = SubResource("StandardMaterial3D_6ejvu")
 
 [node name="Label3D" type="Label3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1183973093]
 transform = Transform3D(0.24000001, 0, 0, 0, 0.24000001, 0, 0, 0, 0.24000001, -0.07500076, 0.61191887, -0.31499863)

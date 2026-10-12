@@ -11,8 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://bv570frvts0gr" path="res://entities-scene_prefabs/scene_changer.tscn" id="8_45jsa"]
 [ext_resource type="PackedScene" uid="uid://cjje4wwgxoy1s" path="res://entities-scene_prefabs/intercom_speaker/speaker.tscn" id="10_i26b7"]
 [ext_resource type="PackedScene" uid="uid://cyqgophlok1w5" path="res://entities-scene_prefabs/interaction/display_hint/display_hint.tscn" id="11_bsran"]
-[ext_resource type="AudioStream" uid="uid://d1dd8dihc6bca" path="res://audio/placeholder/trapped.ogg" id="11_vbb3g"]
-[ext_resource type="AudioStream" uid="uid://cursnqm4e70s3" path="res://audio/placeholder/trippy.ogg" id="12_bsran"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bsran"]
 shading_mode = 0
@@ -45,7 +43,6 @@ size = Vector3(3.7, 2.3500001, 0.55)
 
 [node name="Frame, Button, Credits" type="StaticBody3D" unique_id=799548543]
 script = ExtResource("1_45jsa")
-osts = Array[AudioStream]([ExtResource("11_vbb3g"), ExtResource("12_bsran")])
 
 [node name="Foam Card" parent="." unique_id=390590116 instance=ExtResource("1_0edhe")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.5, 0, -0.10000038)
@@ -61,27 +58,28 @@ script = ExtResource("3_45jsa")
 metadata/_custom_type_script = "uid://bud6xyvo80vl3"
 
 [node name="Button image" type="MeshInstance3D" parent="Button Game" unique_id=1896630648]
-transform = Transform3D(0.44582403, 0, 0, 0, 0.27519998, 0, 1.1368682e-14, 0, 0.031999994, -0.06468767, 0.46111998, -0.3172)
+transform = Transform3D(0.222912, 0, -0.027712809, 0, 0.27519995, 0, 0.3860949, 0, 0.015999993, 0.085302114, 0.46111998, -0.23146969)
 material_override = SubResource("StandardMaterial3D_bsran")
 mesh = SubResource("QuadMesh_etush")
 
 [node name="GameLabel" type="Label3D" parent="Button Game" unique_id=1183973093]
 unique_name_in_owner = true
-transform = Transform3D(0.24000001, 0, 0, 0, 0.24000001, 0, 0, 0, 0.24000001, -0.07500076, 0.665, -0.31499863)
+transform = Transform3D(0.12, 0, -0.20784612, 0, 0.24000001, 0, 0.20784612, 0, 0.12, 0.0782392, 0.665, -0.23930037)
 modulate = Color(0, 0, 0, 1)
 outline_size = 0
 
 [node name="PlayButtonStand" type="MeshInstance3D" parent="Button Game" unique_id=432524272]
-transform = Transform3D(-6.29444e-09, 0, 0.14400001, 0, 0.14400001, 0, -0.14400001, 0, -6.29444e-09, -0.08000028, -1, -0.039999425)
+transform = Transform3D(0.12470767, 0, 0.072000004, 0, 0.14400001, 0, -0.072000004, 0, 0.12470767, -0.16241693, -1, -0.1061306)
 material_override = SubResource("StandardMaterial3D_880y8")
 mesh = ExtResource("6_vbb3g")
 
 [node name="CollisionShapeStand" type="CollisionShape3D" parent="Button Game" unique_id=1668333291]
-transform = Transform3D(-8.742277e-09, 0, -0.19999999, 0, 0.19999999, 0, 0.19999999, 0, -8.742277e-09, -0.099998474, 0.45, -0.050001144)
+transform = Transform3D(-0.17320508, 0, -0.09999998, 0, 0.19999999, 0, 0.09999998, 0, -0.17320508, -0.16375422, 0.45, -0.12845027)
 shape = SubResource("BoxShape3D_7tbbo")
 
 [node name="PlayStandInteractable" type="Area3D" parent="Button Game" unique_id=1297663138 node_paths=PackedStringArray("display_hint")]
 unique_name_in_owner = true
+transform = Transform3D(0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.49999997, -0.15705729, 0, -0.016848445)
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("6_6fcnr")
