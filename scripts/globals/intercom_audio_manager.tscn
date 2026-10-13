@@ -8,8 +8,6 @@ script = ExtResource("1_xcswm")
 global_stream_source = ExtResource("2_b4evb")
 
 [node name="GlobalStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=515227000]
-volume_db = -10.11
 autoplay = true
 
 [node name="GameStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1901838658]
-volume_db = -10.0

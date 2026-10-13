@@ -20,8 +20,11 @@ func start_playing_song(source):
 			global_stream_player.stream_paused = true
 		)
 	game_stream_player.stop()
+	game_stream_player.volume_db = -80.0
 	game_stream_player.stream = source
 	game_stream_player.play()
+	
+	create_tween().tween_property(game_stream_player, "volume_db", 0.0, 1.0)
 
 func play_temporary_ost(source):
 	if source == null:
@@ -38,20 +41,15 @@ func restore_previous_ost():
 	if not temporary_ost_active:
 		return
 
-	game_stream_player.stop()
+	create_tween().tween_property(game_stream_player, "volume_db", -80.0, 1.0)
 
 	global_stream_player.stream_paused = false
 	global_stream_player.play(global_stream_position)
 
 	var tween = create_tween()
-	tween.tween_property(
-        global_stream_player, "volume_db", -10.0, 2.0
-    ).set_ease(Tween.EASE_OUT)
-
+	tween.tween_property(global_stream_player, "volume_db", 0.0, 1.0).set_ease(Tween.EASE_OUT)
 	temporary_ost_active = false
 
+
 func stop_game_ost():
-	global_stream_player.stream_paused = false
-	var tween = create_tween()
-	tween.tween_property(global_stream_player, "volume_db", -10.0, 2.0).set_ease(Tween.EASE_OUT)
-	game_stream_player.stop()
+	restore_previous_ost()
