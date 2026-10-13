@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bcadx5lqnxj16"
+path="res://.godot/imported/Aaron Sherman - Main Theme (Legend of Shadowtail).ogg-65ccda957f806bf9a6067e597c134951.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/dev-pods-game-song-clips-with-credits/Aaron Sherman - Main Theme (Legend of Shadowtail).ogg"
+dest_files=["res://.godot/imported/Aaron Sherman - Main Theme (Legend of Shadowtail).ogg-65ccda957f806bf9a6067e597c134951.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

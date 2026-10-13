@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c2b81yqtcl8ub"
+path="res://.godot/imported/Stephanie Urch - Battle (King Arthur Tales).ogg-e49fff12c91d6a4d8ab304c97436669c.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/dev-pods-game-song-clips-with-credits/Stephanie Urch - Battle (King Arthur Tales).ogg"
+dest_files=["res://.godot/imported/Stephanie Urch - Battle (King Arthur Tales).ogg-e49fff12c91d6a4d8ab304c97436669c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

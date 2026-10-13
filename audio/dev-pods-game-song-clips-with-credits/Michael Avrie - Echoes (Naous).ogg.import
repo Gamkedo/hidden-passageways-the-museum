@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://sces0d3i8w8y"
+path="res://.godot/imported/Michael Avrie - Echoes (Naous).ogg-de8be10314977740cf17e9cb5c9ff70c.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/dev-pods-game-song-clips-with-credits/Michael Avrie - Echoes (Naous).ogg"
+dest_files=["res://.godot/imported/Michael Avrie - Echoes (Naous).ogg-de8be10314977740cf17e9cb5c9ff70c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

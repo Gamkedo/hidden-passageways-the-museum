@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://udd16tjp78tl"
+path="res://.godot/imported/Aaron Sherman - Gladiator Battle March (Gladiator of the Golden House).ogg-425ae2d59ef816fefe224722e21ccab7.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/dev-pods-game-song-clips-with-credits/Aaron Sherman - Gladiator Battle March (Gladiator of the Golden House).ogg"
+dest_files=["res://.godot/imported/Aaron Sherman - Gladiator Battle March (Gladiator of the Golden House).ogg-425ae2d59ef816fefe224722e21ccab7.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

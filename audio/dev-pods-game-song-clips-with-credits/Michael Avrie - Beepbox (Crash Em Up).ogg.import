@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dbwmu2gsso7ja"
+path="res://.godot/imported/Michael Avrie - Beepbox (Crash Em Up).ogg-240dc64de2f54621f8a80a07ad1381d7.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/dev-pods-game-song-clips-with-credits/Michael Avrie - Beepbox (Crash Em Up).ogg"
+dest_files=["res://.godot/imported/Michael Avrie - Beepbox (Crash Em Up).ogg-240dc64de2f54621f8a80a07ad1381d7.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

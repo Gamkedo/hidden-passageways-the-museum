@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cum6ofobn0g0m"
+path="res://.godot/imported/Jalent - Depression (Escape to Marty).ogg-954511c92e46fc47ee0c289045feb03e.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/dev-pods-game-song-clips-with-credits/Jalent - Depression (Escape to Marty).ogg"
+dest_files=["res://.godot/imported/Jalent - Depression (Escape to Marty).ogg-954511c92e46fc47ee0c289045feb03e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

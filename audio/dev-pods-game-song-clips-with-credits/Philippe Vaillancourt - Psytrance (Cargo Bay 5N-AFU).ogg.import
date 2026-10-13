@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://1joa5jtgvlrt"
+path="res://.godot/imported/Philippe Vaillancourt - Psytrance (Cargo Bay 5N-AFU).ogg-4557ac05dffbc8503e4f4bae238e667f.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/dev-pods-game-song-clips-with-credits/Philippe Vaillancourt - Psytrance (Cargo Bay 5N-AFU).ogg"
+dest_files=["res://.godot/imported/Philippe Vaillancourt - Psytrance (Cargo Bay 5N-AFU).ogg-4557ac05dffbc8503e4f4bae238e667f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

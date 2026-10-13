@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ct8od5avs1b33"
+path="res://.godot/imported/Michael Avrie - Whitecaps (Artillery Rampage).ogg-fb2a23e5620a3fa29e4d7420d1376aeb.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/dev-pods-game-song-clips-with-credits/Michael Avrie - Whitecaps (Artillery Rampage).ogg"
+dest_files=["res://.godot/imported/Michael Avrie - Whitecaps (Artillery Rampage).ogg-fb2a23e5620a3fa29e4d7420d1376aeb.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

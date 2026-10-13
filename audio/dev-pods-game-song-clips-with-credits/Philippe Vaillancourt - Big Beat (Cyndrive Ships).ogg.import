@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://28ktijv6o2ht"
+path="res://.godot/imported/Philippe Vaillancourt - Big Beat (Cyndrive Ships).ogg-0b1d138d468df775840d073226f45ce5.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/dev-pods-game-song-clips-with-credits/Philippe Vaillancourt - Big Beat (Cyndrive Ships).ogg"
+dest_files=["res://.godot/imported/Philippe Vaillancourt - Big Beat (Cyndrive Ships).ogg-0b1d138d468df775840d073226f45ce5.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

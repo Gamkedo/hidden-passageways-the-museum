@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dmecca328kwsu"
+path="res://.godot/imported/Bex Rodriguez - Gameplay (Supply and Siege).ogg-f776da34584db7c5a5904f4dfed99661.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/dev-pods-game-song-clips-with-credits/Bex Rodriguez - Gameplay (Supply and Siege).ogg"
+dest_files=["res://.godot/imported/Bex Rodriguez - Gameplay (Supply and Siege).ogg-f776da34584db7c5a5904f4dfed99661.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

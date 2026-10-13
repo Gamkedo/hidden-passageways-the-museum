@@ -68,8 +68,10 @@ func _ready() -> void:
 	display.page_text = credits
 
 	var speaker = get_node_or_null("Speaker")
-	if speaker and "stream_nearby" in speaker:
+	if speaker and "stream_nearby" in speaker and ost:
 			$Speaker.stream_nearby = ost
+			$Speaker.speaker_interactable.interaction_prompt_prefix = "Song:"
+			$Speaker.speaker_interactable.interact_prompt = ost.resource_path.get_basename().get_file()
 
 	if not Engine.is_editor_hint():
 		play_stand_interactable.interaction_complete.connect(open_link)

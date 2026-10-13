@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cml3pu6350wap"
+path="res://.godot/imported/Noah Wizard - Music (Talon Solitaire).ogg-41595fc08c5e7276c11ff09f3382b9f4.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/dev-pods-game-song-clips-with-credits/Noah Wizard - Music (Talon Solitaire).ogg"
+dest_files=["res://.godot/imported/Noah Wizard - Music (Talon Solitaire).ogg-41595fc08c5e7276c11ff09f3382b9f4.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

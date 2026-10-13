@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ocxjig23e24y"
+path="res://.godot/imported/Bex Rodriguez - Menu (Crazy Arena Chaos).ogg-8f89aed0fd4e278be52a1994305f3a7f.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/dev-pods-game-song-clips-with-credits/Bex Rodriguez - Menu (Crazy Arena Chaos).ogg"
+dest_files=["res://.godot/imported/Bex Rodriguez - Menu (Crazy Arena Chaos).ogg-8f89aed0fd4e278be52a1994305f3a7f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
