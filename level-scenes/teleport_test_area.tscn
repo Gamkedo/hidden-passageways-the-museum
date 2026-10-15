@@ -84,12 +84,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2868652, 5.714901, -0.3423
 size = Vector3(13.57373, 1, 20.67833)
 
 [node name="Tunnel under start" type="CSGBox3D" parent="CSG Blockout" unique_id=526968187]
-transform = Transform3D(0.99969584, 0.008560163, -0.023128403, -0.007353061, 0.99863136, 0.05178139, 0.023540007, -0.051595572, 0.99839056, 7.6631994, 2.4565487, 0.43208027)
+transform = Transform3D(0.99971825, 0.0069794627, -0.022687333, -0.00698126, 0.99997556, 0, 0.022686781, 0.00015838617, 0.99974257, 7.6631994, 1.4526587, 0.43208027)
 size = Vector3(14.559082, 14.485352, 13.231432)
 material = ExtResource("3_y037o")
 
 [node name="TeleportPad2" parent="CSG Blockout/Tunnel under start" unique_id=191200893 node_paths=PackedStringArray("dest_telepad") instance=ExtResource("4_dtqeb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1615658, -2.4925113, -0.21702576)
+visible = false
 dest_telepad = NodePath("../../Starting room/Start Room Pad")
 
 [node name="negative tunnel" type="CSGBox3D" parent="CSG Blockout/Tunnel under start" unique_id=1303172700]
@@ -124,7 +125,7 @@ polygon = PackedVector2Array(-13.083655, 26.086325, -5.927184, 30.145844, 31.054
 material = ExtResource("4_0ce8g")
 
 [node name="Building A" type="CSGBox3D" parent="CSG Blockout" unique_id=890521203]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -109.746864, 6.173883, -38.77662)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.09704, 5.2315764, -38.77662)
 size = Vector3(19.468376, 12.216, 18.726997)
 
 [node name="Teleport Pad A" parent="CSG Blockout/Building A" unique_id=496489470 node_paths=PackedStringArray("dest_telepad") instance=ExtResource("4_dtqeb")]
@@ -149,7 +150,7 @@ polygon = PackedVector2Array(-13.548447, -1.0430665, -0.5649719, 5.9106507, 12.2
 depth = 25.05
 
 [node name="Mesa" type="CSGCylinder3D" parent="CSG Blockout" unique_id=1964990228]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -254.68712, -51.41824, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -238.6265, -51.41824, 0)
 radius = 200.0
 height = 100.0
 sides = 21
@@ -169,26 +170,25 @@ radius = 201.0
 sides = 21
 material = ExtResource("4_0ce8g")
 
-[node name="straight center path" type="Path3D" parent="CSG Blockout/Mesa" unique_id=1120820042]
+[node name="round circle path" type="Path3D" parent="CSG Blockout/Mesa" unique_id=1120820042]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.85516, 0.45871353, 0)
 curve = SubResource("Curve3D_rokle")
 
-[node name="CSGPolygon3D" type="CSGPolygon3D" parent="CSG Blockout/Mesa/straight center path" unique_id=887370655]
-polygon = PackedVector2Array(-0.37298584, 0.053596497, -0.37353516, 0.2731743, 0.980011, 0.20816803, 1, 0)
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="CSG Blockout/Mesa/round circle path" unique_id=887370655]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.038101196, -0.28902435, 0.119701385)
+polygon = PackedVector2Array(-1, -1, -1, 0, 3, 0, 3, -1)
 mode = 2
 path_node = NodePath("..")
 path_interval_type = 0
 path_interval = 1.0
 path_simplify_angle = 0.0
-path_rotation = 2
+path_rotation = 1
 path_rotation_accurate = false
-path_local = false
+path_local = true
 path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
 material = ExtResource("3_llgem")
-
-[node name="curved circle path" type="Path3D" parent="CSG Blockout/Mesa" unique_id=1692649371]
-curve = SubResource("Curve3D_rokle")
 
 [node name="Outer Rim Wall" type="CSGTorus3D" parent="CSG Blockout" unique_id=1716167106]
 transform = Transform3D(1.1544396, 0, 0, 0, 2.9830637, 0, 0, 0, 1, -294.16022, -54.196434, 0)
@@ -206,4 +206,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 10.992748, -2.4999998)
 shape = SubResource("SphereShape3D_7tbbo")
 
 [node name="Player with UI" parent="." unique_id=1354449472 instance=ExtResource("3_7mwwm")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 164.87317, 29.255266, 0.5)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.6961384, -0.026286125, 1.3912745)

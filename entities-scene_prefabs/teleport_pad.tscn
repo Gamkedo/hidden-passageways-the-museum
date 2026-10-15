@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bkor7ujax3vf1" path="res://entities-scene_prefabs/teleport_pad.gd" id="1_utihr"]
 [ext_resource type="Script" uid="uid://bsmp4qaqn0uxw" path="res://entities-scene_prefabs/interaction/objects/interactable_area.gd" id="2_04lax"]
+[ext_resource type="Material" uid="uid://b5j7a6q6jdkv5" path="res://materials/concrete.tres" id="2_7ggmu"]
 [ext_resource type="ArrayMesh" uid="uid://dr3gbpogsacs4" path="res://models/teleport_pad_ring.glb" id="2_i2k4u"]
 [ext_resource type="PackedScene" uid="uid://cyqgophlok1w5" path="res://entities-scene_prefabs/interaction/display_hint/display_hint.tscn" id="3_bjkmr"]
 [ext_resource type="Material" uid="uid://bhww5o2p7xgfv" path="res://materials/teleport-glow-material.tres" id="3_dpapn"]
@@ -22,6 +23,7 @@ script = ExtResource("1_utihr")
 transform = Transform3D(1, 0, 0, 0, 0.45321715, 0, 0, 0, 1, 0, 0, 0)
 radius = 2.0
 height = 1.0
+material = ExtResource("2_7ggmu")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=288295350]
 shape = SubResource("CylinderShape3D_pjjmk")
