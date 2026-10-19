@@ -90,7 +90,8 @@ func _apply_aim_rotation(aim_vector: Vector2) -> void:
 	)
 
 func _handle_capture_mouse(_is_pressed: bool) -> void:
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	if page_text_panel.displaying_now == false:
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _handle_release_mouse(_is_pressed: bool) -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
