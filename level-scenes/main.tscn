@@ -112,6 +112,7 @@
 [ext_resource type="PackedScene" uid="uid://52ka55orxurd" path="res://models/spy_boat/river-spy-boat.tscn" id="86_6v162"]
 [ext_resource type="PackedScene" uid="uid://bm2wbkt7ruwa8" path="res://models/talon_solitaire/suit-symbols.tscn" id="87_a8cb6"]
 [ext_resource type="Shape3D" uid="uid://rlithvvr27jx" path="res://models/boundary_collider_shape_3d.tres" id="91_ypkhb"]
+[ext_resource type="PackedScene" uid="uid://ca7psvp35dvx7" path="res://entities-scene_prefabs/grass_clump.tscn" id="113_25n75"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_xteo1"]
 
@@ -363,36 +364,36 @@ material = ExtResource("7_3lbo0")
 size = Vector2(10.380006, 10.380006)
 orientation = 1
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_25n75"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_4h6t8"]
 viewport_path = NodePath("../SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4h6t8"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gdv2j"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_25n75")
+albedo_texture = SubResource("ViewportTexture_4h6t8")
 roughness = 0.8
 texture_filter = 5
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_gdv2j"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_s4gn4"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s4gn4"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_35lg4"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_gdv2j")
+albedo_texture = SubResource("ViewportTexture_s4gn4")
 roughness = 0.8
 texture_filter = 5
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_35lg4"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_7y3h6"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7y3h6"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l8pru"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_35lg4")
+albedo_texture = SubResource("ViewportTexture_7y3h6")
 roughness = 0.8
 texture_filter = 5
 
@@ -431,6 +432,71 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.5, 0, 32)
 
 [node name="grassy-terrain" type="CSGCombiner3D" parent="Outdoors with Portal Taxi" unique_id=138628487]
 
+[node name="box-hill" type="CSGBox3D" parent="Outdoors with Portal Taxi/grassy-terrain" unique_id=286392609]
+transform = Transform3D(0.84888273, -0.5163601, 0.11300733, 0.32795292, 0.6821716, 0.6535206, -0.41454214, -0.5177009, 0.7484253, 63.06263, -22.9203, -183.88535)
+size = Vector3(64, 64, 64)
+material = ExtResource("3_a8cb6")
+
+[node name="box-hill2" type="CSGBox3D" parent="Outdoors with Portal Taxi/grassy-terrain" unique_id=1664689602]
+transform = Transform3D(0.878462, -0.45270258, 0.15285759, 0.23834725, 0.6924412, 0.6809672, -0.4141202, -0.56177014, 0.7161834, 138.47351, -17.717777, -183.0325)
+size = Vector3(64, 64, 64)
+material = ExtResource("3_a8cb6")
+
+[node name="box-hill3" type="CSGBox3D" parent="Outdoors with Portal Taxi/grassy-terrain" unique_id=942702381]
+transform = Transform3D(0.84888273, -0.5163601, 0.11300733, 0.32795292, 0.6821716, 0.6535206, -0.41454214, -0.5177009, 0.7484253, 118.39761, -32.048782, -125.64113)
+size = Vector3(64, 64, 64)
+material = ExtResource("3_a8cb6")
+
+[node name="box-hill4" type="CSGBox3D" parent="Outdoors with Portal Taxi/grassy-terrain" unique_id=817952445]
+transform = Transform3D(0.84888273, -0.5163601, 0.11300733, 0.32795292, 0.6821716, 0.6535206, -0.41454214, -0.5177009, 0.7484253, 208.15306, -18.354939, -73.06528)
+size = Vector3(64, 64, 64)
+material = ExtResource("3_a8cb6")
+
+[node name="box-hill5" type="CSGBox3D" parent="Outdoors with Portal Taxi/grassy-terrain" unique_id=988056836]
+transform = Transform3D(0.5964816, 0.38691753, -0.70321, 0.32795295, 0.6821716, 0.6535206, 0.7325685, -0.62043285, 0.280012, 193.5023, -18.354939, -15.66481)
+size = Vector3(64, 64, 64)
+material = ExtResource("3_a8cb6")
+
+[node name="box-hill6" type="CSGBox3D" parent="Outdoors with Portal Taxi/grassy-terrain" unique_id=1631629129]
+transform = Transform3D(0.84814227, 0.092054546, -0.52170944, 0.32795295, 0.6821716, 0.6535206, 0.4160551, -0.72537434, 0.5483888, 128.40982, -18.354939, 94.785934)
+size = Vector3(64, 64, 64)
+material = ExtResource("3_a8cb6")
+
+[node name="box-hill7" type="CSGBox3D" parent="Outdoors with Portal Taxi/grassy-terrain" unique_id=452623569]
+transform = Transform3D(-0.91796285, 0.06671637, 0.3910157, 0.32795298, 0.6821716, 0.6535206, -0.22313952, 0.72814214, -0.64808786, -227.20009, -24.48475, 48.222046)
+size = Vector3(64, 64, 64)
+material = ExtResource("3_a8cb6")
+
+[node name="box-hill8" type="CSGBox3D" parent="Outdoors with Portal Taxi/grassy-terrain" unique_id=1987390962]
+transform = Transform3D(-0.9404547, -0.010412961, 0.33975974, 0.23834729, 0.6924413, 0.6809673, -0.24235466, 0.7213993, -0.64872766, -284.68445, -17.240273, -0.59474564)
+size = Vector3(64, 64, 64)
+material = ExtResource("3_a8cb6")
+
+[node name="box-hill9" type="CSGBox3D" parent="Outdoors with Portal Taxi/grassy-terrain" unique_id=2041304465]
+transform = Transform3D(-0.91796285, 0.06671637, 0.3910157, 0.32795298, 0.6821716, 0.6535206, -0.22313952, 0.72814214, -0.64808786, -232.58345, -38.178593, -31.936363)
+size = Vector3(64, 64, 64)
+material = ExtResource("3_a8cb6")
+
+[node name="box-hill10" type="CSGBox3D" parent="Outdoors with Portal Taxi/grassy-terrain" unique_id=936208861]
+transform = Transform3D(-0.91796285, 0.06671637, 0.3910157, 0.32795298, 0.6821716, 0.6535206, -0.22313952, 0.72814214, -0.64808786, -268.07355, -24.484749, -129.71526)
+size = Vector3(64, 64, 64)
+material = ExtResource("3_a8cb6")
+
+[node name="box-hill13" type="CSGBox3D" parent="Outdoors with Portal Taxi/grassy-terrain" unique_id=366213878]
+transform = Transform3D(-0.94601065, -0.0014089952, 0.32413214, 0.3090307, 0.2977846, 0.9032301, -0.09779454, 0.95463204, -0.28127185, -268.07355, -32.190613, -72.21656)
+size = Vector3(64, 64, 64)
+material = ExtResource("3_a8cb6")
+
+[node name="box-hill11" type="CSGBox3D" parent="Outdoors with Portal Taxi/grassy-terrain" unique_id=327591213]
+transform = Transform3D(0.008853108, -0.6939689, 0.71995056, 0.32795295, 0.6821715, 0.6535205, -0.94465256, 0.2303244, 0.2336285, -220.14143, -24.484749, -164.5286)
+size = Vector3(64, 64, 64)
+material = ExtResource("3_a8cb6")
+
+[node name="box-hill12" type="CSGBox3D" parent="Outdoors with Portal Taxi/grassy-terrain" unique_id=818011906]
+transform = Transform3D(-0.38693932, -0.5340903, 0.7516815, 0.32795292, 0.6821715, 0.6535205, -0.86181504, 0.499389, -0.08880249, -99.51407, -24.484749, -207.95018)
+size = Vector3(64, 64, 64)
+material = ExtResource("3_a8cb6")
+
 [node name="grass-floor" type="CSGBox3D" parent="Outdoors with Portal Taxi/grassy-terrain" unique_id=183744157]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 3.8919983)
 size = Vector3(512, 1, 512)
@@ -452,6 +518,27 @@ material = ExtResource("3_a8cb6")
 
 [node name="grass-hill3" type="CSGSphere3D" parent="Outdoors with Portal Taxi/grassy-terrain" unique_id=1825774483]
 transform = Transform3D(1, 0, 0, 0, 0.25, 0, 0, 0, 1, -97.60318, -10.784424, -64.19466)
+radius = 64.0
+radial_segments = 32
+rings = 16
+material = ExtResource("3_a8cb6")
+
+[node name="grass-hill9" type="CSGSphere3D" parent="Outdoors with Portal Taxi/grassy-terrain" unique_id=1595855092]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, -101.57037, -18.750942, -139.21367)
+radius = 64.0
+radial_segments = 32
+rings = 16
+material = ExtResource("3_a8cb6")
+
+[node name="grass-hill10" type="CSGSphere3D" parent="Outdoors with Portal Taxi/grassy-terrain" unique_id=1023184841]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 160.71745, -18.750942, -139.21367)
+radius = 64.0
+radial_segments = 32
+rings = 16
+material = ExtResource("3_a8cb6")
+
+[node name="grass-hill11" type="CSGSphere3D" parent="Outdoors with Portal Taxi/grassy-terrain" unique_id=4283439]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 138.94707, -24.561302, -64.48953)
 radius = 64.0
 radial_segments = 32
 rings = 16
@@ -602,10 +689,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0029296875, 0.006164551, 0.
 shape = SubResource("BoxShape3D_3e5oy")
 
 [node name="tree-small" parent="Outdoors with Portal Taxi" unique_id=2030102197 instance=ExtResource("16_iixjk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.971012, -1.0000002, -30.54922)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.3545, -3.191966, -42.729813)
+
+[node name="tree-small2" parent="Outdoors with Portal Taxi" unique_id=946810702 instance=ExtResource("16_iixjk")]
+transform = Transform3D(0.3902278, 0, -0.9207184, 0, 1, 0, 0.9207184, 0, 0.3902278, 30.07125, 1.1247222, -83.45731)
 
 [node name="tree-big" parent="Outdoors with Portal Taxi" unique_id=1613927015 instance=ExtResource("17_4fg2q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.9307365, -1.0000005, -25.473526)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.276974, -3.020609, -36.710236)
+
+[node name="tree-big2" parent="Outdoors with Portal Taxi" unique_id=1590690988 instance=ExtResource("17_4fg2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.250051, -2.6165633, -59.12545)
+
+[node name="tree-big3" parent="Outdoors with Portal Taxi" unique_id=1646115823 instance=ExtResource("17_4fg2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.8348, 1.8044343, -80.88854)
 
 [node name="Under Construction Taxi Wall" type="CSGBox3D" parent="Outdoors with Portal Taxi" unique_id=811038154]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39, 0.25, -35)
@@ -2079,42 +2175,42 @@ size_2d_override = Vector2i(512, 512)
 
 [node name="guidebook" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d" unique_id=1630787135 instance=ExtResource("31_oa8v2")]
 
-[node name="Book" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook" index="0" unique_id=1404423609]
+[node name="Book" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook" index="0" unique_id=2009432074]
 layers = 6
 cast_shadow = 0
 
-[node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook" index="1" unique_id=691886567]
+[node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook" index="1" unique_id=2132904720]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_4h6t8")
+surface_material_override/0 = SubResource("StandardMaterial3D_gdv2j")
 
 [node name="Guidebook3d2" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1034692829]
 transform = Transform3D(0.99572617, -6.976736e-08, 0.092355326, 0.07370379, 0.60259724, -0.79463464, -0.05565301, 0.7980456, 0.60002184, 0.33789635, 0.5955966, 0.11873436)
 
 [node name="guidebook" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2" unique_id=914161945 instance=ExtResource("31_oa8v2")]
 
-[node name="Book" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook" index="0" unique_id=1404423609]
+[node name="Book" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook" index="0" unique_id=2009432074]
 layers = 6
 cast_shadow = 0
 
-[node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook" index="1" unique_id=691886567]
+[node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook" index="1" unique_id=2132904720]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_s4gn4")
+surface_material_override/0 = SubResource("StandardMaterial3D_35lg4")
 
 [node name="Guidebook3d3" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1679212863]
 transform = Transform3D(-0.9742656, -0.12668496, -0.18643428, 0.14209789, -0.98725104, -0.07172081, -0.1749714, -0.0963671, 0.979846, -0.58836937, 0.5955966, 0.11873436)
 
 [node name="guidebook" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3" unique_id=962682289 instance=ExtResource("31_oa8v2")]
 
-[node name="Book" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3/guidebook" index="0" unique_id=1404423609]
+[node name="Book" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3/guidebook" index="0" unique_id=2009432074]
 layers = 6
 cast_shadow = 0
 
-[node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3/guidebook" index="1" unique_id=691886567]
+[node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3/guidebook" index="1" unique_id=2132904720]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_7y3h6")
+surface_material_override/0 = SubResource("StandardMaterial3D_l8pru")
 
 [node name="Label3D" type="Label3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1183973093]
 transform = Transform3D(0.24000001, 0, 0, 0, 0.24000001, 0, 0, 0, 0.24000001, -0.07500076, 0.61191887, -0.31499863)
@@ -2698,6 +2794,29 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -92.
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="World Boundaries/StaticBody3D5" unique_id=83876510]
 shape = ExtResource("91_ypkhb")
+
+[node name="all_grass_clumps" type="Node3D" parent="." unique_id=155277028]
+
+[node name="grass_clump" parent="all_grass_clumps" unique_id=1368989933 instance=ExtResource("113_25n75")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5815315, -1.8034055, -1.2131639)
+
+[node name="grass_clump2" parent="all_grass_clumps" unique_id=749959044 instance=ExtResource("113_25n75")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.793741, -2.329447, -27.243483)
+
+[node name="grass_clump3" parent="all_grass_clumps" unique_id=848771981 instance=ExtResource("113_25n75")]
+transform = Transform3D(0.52129817, 0, 0.8533746, 0, 1, 0, -0.8533746, 0, 0.52129817, 47.218475, -2.4276457, 19.589254)
+
+[node name="grass_clump4" parent="all_grass_clumps" unique_id=1908894736 instance=ExtResource("113_25n75")]
+transform = Transform3D(-0.87012106, 0, 0.49283808, 0, 1, 0, -0.49283808, 0, -0.87012106, 48.264435, -2.30406, -9.158666)
+
+[node name="grass_clump5" parent="all_grass_clumps" unique_id=475784583 instance=ExtResource("113_25n75")]
+transform = Transform3D(0.9822898, 0, 0.18736815, 0, 1, 0, -0.18736815, 0, 0.9822898, 42.743862, -2.6776428, -11.262802)
+
+[node name="grass_clump6" parent="all_grass_clumps" unique_id=929242707 instance=ExtResource("113_25n75")]
+transform = Transform3D(0.9822898, 0, 0.18736815, 0, 1, 0, -0.18736815, 0, 0.9822898, 5.1257668, -2.6265752, 17.618202)
+
+[node name="grass_clump7" parent="all_grass_clumps" unique_id=79529425 instance=ExtResource("113_25n75")]
+transform = Transform3D(-0.36687073, 0, 0.930272, 0, 1, 0, -0.930272, 0, -0.36687073, -24.793222, -2.6265752, 17.273556)
 
 [editable path="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook"]
 [editable path="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook"]
