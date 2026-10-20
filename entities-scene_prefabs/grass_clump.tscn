@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ca7psvp35dvx7"]
+
+[ext_resource type="PackedScene" uid="uid://cnslu0hbiassf" path="res://models/lowpoly_grass_clump.fbx" id="1_0q6g6"]
+
+[node name="grass_clump" type="Node3D" unique_id=1368989933]
+
+[node name="lowpoly_grass_clump" parent="." unique_id=2024729851 instance=ExtResource("1_0q6g6")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
