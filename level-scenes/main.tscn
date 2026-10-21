@@ -435,6 +435,7 @@ platform_floor_layers = 4294967291
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.5, 0, 32)
 
 [node name="grassy-terrain" type="CSGCombiner3D" parent="Outdoors with Portal Taxi" unique_id=138628487]
+use_collision = true
 
 [node name="box-hill" type="CSGBox3D" parent="Outdoors with Portal Taxi/grassy-terrain" unique_id=286392609]
 transform = Transform3D(0.84888273, -0.5163601, 0.11300733, 0.32795292, 0.6821716, 0.6535206, -0.41454214, -0.5177009, 0.7484253, 63.06263, -22.9203, -183.88535)
@@ -503,6 +504,7 @@ material = ExtResource("3_a8cb6")
 
 [node name="grass-floor" type="CSGBox3D" parent="Outdoors with Portal Taxi/grassy-terrain" unique_id=183744157]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 3.8919983)
+cast_shadow = 0
 size = Vector3(512, 1, 512)
 material = ExtResource("3_a8cb6")
 
@@ -2791,6 +2793,7 @@ mesh = ExtResource("66_fof07")
 [node name="sidewalk" type="CSGBox3D" parent="road" unique_id=1536285406]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, -3, -26.077)
 material_override = ExtResource("114_s4gn4")
+use_collision = true
 size = Vector3(128, 2, 4)
 material = ExtResource("9_4h42u")
 
@@ -2863,6 +2866,7 @@ material = ExtResource("9_4h42u")
 [node name="sidewalk2" type="CSGBox3D" parent="road" unique_id=456408051]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43, -3, -6.0769997)
 material_override = ExtResource("114_s4gn4")
+use_collision = true
 size = Vector3(106, 2, 4)
 material = ExtResource("115_gdv2j")
 
@@ -2870,6 +2874,7 @@ material = ExtResource("115_gdv2j")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, -3.5, -16.077)
 material_override = ExtResource("114_4h6t8")
 cast_shadow = 0
+use_collision = true
 size = Vector3(128, 1, 16)
 material = ExtResource("114_4h6t8")
 
