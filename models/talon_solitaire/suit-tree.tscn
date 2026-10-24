@@ -4,14 +4,16 @@
 [ext_resource type="Material" path="res://models/talon_solitaire/pot-green.tres" id="2_pot"]
 [ext_resource type="Material" path="res://models/talon_solitaire/soil-brown.tres" id="3_soil"]
 [ext_resource type="Material" path="res://models/talon_solitaire/suit-black.tres" id="4_black"]
+[ext_resource type="Material" path="res://models/talon_solitaire/suit-red.tres" id="5_red"]
 
 [node name="SuitTree" type="Node3D" unique_id=1666604679]
 
 [node name="suit-tree" parent="." unique_id=872397788 instance=ExtResource("1_glb")]
 
-[node name="suit_tree" parent="suit-tree" index="0" unique_id=1122713678]
+[node name="suit_tree" parent="suit-tree" index="0" unique_id=1236008963]
 surface_material_override/0 = ExtResource("2_pot")
 surface_material_override/1 = ExtResource("3_soil")
 surface_material_override/2 = ExtResource("4_black")
+surface_material_override/3 = ExtResource("5_red")
 
 [editable path="suit-tree"]
