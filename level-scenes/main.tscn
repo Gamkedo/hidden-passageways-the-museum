@@ -33,6 +33,7 @@
 [ext_resource type="PackedScene" uid="uid://bs0x6kcocwrn8" path="res://entities-scene_prefabs/tree_small.tscn" id="16_iixjk"]
 [ext_resource type="PackedScene" uid="uid://cocic8dfy1sa6" path="res://entities-scene_prefabs/tree_big.tscn" id="17_4fg2q"]
 [ext_resource type="Texture2D" uid="uid://cdwd15kcvxucw" path="res://textures/signage/coming-soon-banner_hometeam-gamedev.png" id="17_10aen"]
+[ext_resource type="Texture2D" uid="uid://dnmay4t3srwn8" path="res://textures/signage/dev-pods-games.png" id="18_7y3h6"]
 [ext_resource type="PackedScene" uid="uid://o8idbyowpqvw" path="res://entities-scene_prefabs/railing.tscn" id="26_c6q64"]
 [ext_resource type="Texture2D" uid="uid://dlft5rt3mgqhu" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/gladiator-of-the-golden-house.png" id="26_v80x0"]
 [ext_resource type="Texture2D" uid="uid://c7fd2ik3j7hr5" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/legend-of-shadowtail.jpg" id="28_3tvjp"]
@@ -161,6 +162,9 @@ albedo_texture = ExtResource("16_d8p2r")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_25n75"]
 albedo_texture = ExtResource("17_10aen")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l8pru"]
+albedo_texture = ExtResource("18_7y3h6")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_8jg5c"]
 radius = 1.0454303
@@ -703,13 +707,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.250051, -3.3021178, -61.4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.8348, 1.8044343, -80.88854)
 
 [node name="Under Construction Taxi Wall" type="CSGBox3D" parent="Outdoors with Portal Taxi" unique_id=811038154]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39, 0.25, -35)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, -1.75, -47.5)
 material_override = ExtResource("66_v80x0")
 use_collision = true
 size = Vector3(9, 2.5, 1)
 
 [node name="Under Construction Unity Museums" type="CSGBox3D" parent="Outdoors with Portal Taxi" unique_id=1061018112]
-transform = Transform3D(-0.95, 0, 0, 0, -0.95, 0, 0, 0, -0.95, -39.25, 0.25, -34.95)
+transform = Transform3D(-0.95, 0, 0, 0, -0.95, 0, 0, 0, -0.95, -28.25, -1.75, -47.45)
 material_override = SubResource("StandardMaterial3D_10aen")
 use_collision = true
 size = Vector3(7.5, 2.5, 1)
@@ -719,6 +723,12 @@ transform = Transform3D(-0.95, 0, 0, 0, -0.95, 0, 0, 0, -0.95, -4.25, 0.25, -50.
 material_override = SubResource("StandardMaterial3D_25n75")
 use_collision = true
 size = Vector3(7.5, 2.5, 1)
+
+[node name="Under Construction HomeTeam Museum2" type="CSGBox3D" parent="Outdoors with Portal Taxi" unique_id=181760943]
+transform = Transform3D(0.95, 0, -8.305164e-08, 0, 0.95, 0, -8.305164e-08, 0, -0.95, -4.5, 4.25, -12.972502)
+material_override = SubResource("StandardMaterial3D_l8pru")
+use_collision = true
+size = Vector3(7.5, 2.5, 0.1)
 
 [node name="all_grass_clumps" type="Node3D" parent="Outdoors with Portal Taxi" unique_id=155277028]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.5, 0, -32)
@@ -2198,11 +2208,11 @@ size_2d_override = Vector2i(512, 512)
 
 [node name="guidebook" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d" unique_id=1630787135 instance=ExtResource("31_oa8v2")]
 
-[node name="Book" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook" index="0" unique_id=2009432074]
+[node name="Book" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook" index="0" unique_id=1404423609]
 layers = 6
 cast_shadow = 0
 
-[node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook" index="1" unique_id=2132904720]
+[node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
 surface_material_override/0 = SubResource("StandardMaterial3D_7y3h6")
@@ -2212,11 +2222,11 @@ transform = Transform3D(0.99572617, -6.976736e-08, 0.092355326, 0.07370379, 0.60
 
 [node name="guidebook" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2" unique_id=914161945 instance=ExtResource("31_oa8v2")]
 
-[node name="Book" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook" index="0" unique_id=2009432074]
+[node name="Book" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook" index="0" unique_id=1404423609]
 layers = 6
 cast_shadow = 0
 
-[node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook" index="1" unique_id=2132904720]
+[node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
 surface_material_override/0 = SubResource("StandardMaterial3D_g8gvm")
@@ -2226,11 +2236,11 @@ transform = Transform3D(-0.9742656, -0.12668496, -0.18643428, 0.14209789, -0.987
 
 [node name="guidebook" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3" unique_id=962682289 instance=ExtResource("31_oa8v2")]
 
-[node name="Book" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3/guidebook" index="0" unique_id=2009432074]
+[node name="Book" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3/guidebook" index="0" unique_id=1404423609]
 layers = 6
 cast_shadow = 0
 
-[node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3/guidebook" index="1" unique_id=2132904720]
+[node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
 surface_material_override/0 = SubResource("StandardMaterial3D_ojj62")
