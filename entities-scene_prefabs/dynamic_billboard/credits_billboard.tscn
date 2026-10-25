@@ -189,7 +189,7 @@ theme_override_constants/v_separation = 12
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "WIP! Credits will be more detailed down to the task"
+text = "WIP! This game isn't finished, credits will be updated with each test version"
 label_settings = SubResource("LabelSettings_x78ms")
 
 [node name="Label2" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1126279996]
@@ -197,7 +197,7 @@ custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "Chris DeLeon: Project lead, core gameplay, main building architecture, game/logo screenshots, interaction button platform, basement area, art info cards, (Unity-side, coming soon) sci-fi skyscraper zone, classic Hidden Passages 1 Gamkedo office, Hotel exterior, Godot-Unity portal taxi"
+text = "Chris DeLeon: Project lead, core gameplay, main building architecture, game/logo screenshots, interaction button platform, basement area, art info cards, (Unity-side, coming soon) sci-fi skyscraper zone, classic Hidden Passages 1 Gamkedo office, Hotel exterior, Godot-Unity portal taxi, curating clips from Dev Pods game soundtracks, speakers autoplay when near"
 label_settings = SubResource("LabelSettings_x78ms")
 autowrap_mode = 2
 
@@ -251,7 +251,7 @@ custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "Christer Kaitila: Textures (concrete, ceiling, bark), tree models, museum rope barrier, stair railing, ticket logo, ionic column, (Unity-side, coming soon)Castle area, skybox, gamepad UI, voxel models, assorted fixes"
+text = "Christer Kaitila: Reflecive windows, textures (concrete, ceiling, bark, grass), outdoor hilly ground mesh, tree models, museum rope barrier, stair railing, ticket logo, ionic column, (Unity-side, coming soon), Castle area, skybox, gamepad UI, voxel models, assorted fixes, road and sidewalk"
 label_settings = SubResource("LabelSettings_x78ms")
 autowrap_mode = 2
 
@@ -269,7 +269,7 @@ custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "J Patrick McKeown: Fire extinguisher model, riverboat game model, Talon card decorations, listening horns with tech box and pillar"
+text = "J Patrick McKeown: Fire extinguisher model, potted tree made of card game suits, spy boat game model, Talon card decorations, listening horns with tech box and pillar"
 label_settings = SubResource("LabelSettings_x78ms")
 autowrap_mode = 2
 
@@ -278,7 +278,7 @@ custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "Milicen: Main area music (2 songs), song clip speaker system"
+text = "Milicen: Main area music (2 songs), song clip speaker system and related art"
 label_settings = SubResource("LabelSettings_x78ms")
 autowrap_mode = 2
 
@@ -287,7 +287,7 @@ custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "Vaan Hope Khani: Story"
+text = "Vaan Hope Khani: Story writing (not yet surfaced in current test version)"
 label_settings = SubResource("LabelSettings_x78ms")
 autowrap_mode = 2
 
@@ -332,7 +332,7 @@ custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "YOUR NAME HERE?"
+text = "Tim Ruswick: Dev Pods sign logo"
 label_settings = SubResource("LabelSettings_x78ms")
 autowrap_mode = 2
 
@@ -341,6 +341,7 @@ custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
+text = "YOUR NAME HERE? Join us! DevPods.gg"
 label_settings = SubResource("LabelSettings_x78ms")
 autowrap_mode = 2
 
@@ -349,7 +350,6 @@ custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "Details coming soon"
 label_settings = SubResource("LabelSettings_x78ms")
 autowrap_mode = 2
 
