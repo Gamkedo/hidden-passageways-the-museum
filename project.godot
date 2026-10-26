@@ -17,6 +17,10 @@ run/main_scene="uid://cicgrtmyynvor"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.png"
 
+[audio]
+
+general/default_playback_type.web=0
+
 [autoload]
 
 MenuManager="*uid://dk2cm322a07g5"
