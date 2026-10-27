@@ -373,14 +373,14 @@ material = ExtResource("7_3lbo0")
 size = Vector2(10.380006, 10.380006)
 orientation = 1
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_7y3h6"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_l8pru"]
 viewport_path = NodePath("../SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g8gvm"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_7y3h6")
+albedo_texture = SubResource("ViewportTexture_l8pru")
 roughness = 0.8
 texture_filter = 5
 
@@ -2724,6 +2724,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -3, 0)
 size = Vector3(1, 2, 4)
 material = ExtResource("5_qxgch")
 
+[node name="stairs bottom CUT" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)/StairsLeft" unique_id=246011966]
+transform = Transform3D(0.70710677, -0.70710677, 0, 0.70710677, 0.70710677, 0, 0, 0, 1, -1.0606613, -2.9393406, 0)
+operation = 2
+size = Vector3(7, 2, 5)
+material = ExtResource("9_4h42u")
+
 [node name="StairsRight" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)" unique_id=181493356]
 transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, -9.500008, -1.5, 4.499695)
 size = Vector3(1, 2, 4)
@@ -2743,6 +2749,12 @@ material = ExtResource("5_qxgch")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -3, 0)
 size = Vector3(1, 2, 4)
 material = ExtResource("5_qxgch")
+
+[node name="stairs bottom CUT2" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)/StairsRight" unique_id=1799139583]
+transform = Transform3D(0.7071067, -0.7071067, 0, 0.7071067, 0.7071067, 0, 0, 0, 1, -0.9393387, -2.9393406, -3.8146973e-06)
+operation = 2
+size = Vector3(7, 2, 5)
+material = ExtResource("9_4h42u")
 
 [node name="StairsCenter" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)" unique_id=1307207188]
 transform = Transform3D(1.3311836e-07, 0, -1, 0, 1, 0, 1, 0, 1.3311836e-07, -0.5000076, -5.5, 1.9996948)
@@ -2768,6 +2780,12 @@ material = ExtResource("5_qxgch")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -3.5, 0)
 size = Vector3(1, 1, 9)
 material = ExtResource("5_qxgch")
+
+[node name="stairs bottom CUT2" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)/StairsCenter" unique_id=3261784]
+transform = Transform3D(0.70710677, -0.70710677, 0, 0.70710677, 0.70710677, 0, 0, 0, 1, -0.6, -2.5, 0)
+operation = 2
+size = Vector3(7, 2, 11)
+material = ExtResource("9_4h42u")
 
 [node name="StairsCenterPlatform" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)" unique_id=689054239]
 transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, -0.5000076, -5, 4.499695)
