@@ -1,4 +1,14 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://di6u3hjsvhh8i"]
 
+[ext_resource type="Texture2D" uid="uid://daan27u7lkql6" path="res://materials/floor-materials/wood_floor_albedo.png" id="1_3ei8u"]
+[ext_resource type="Texture2D" uid="uid://cevrp2dexqng2" path="res://materials/floor-materials/wood_floor_normal.png" id="2_3mjge"]
+
 [resource]
-albedo_color = Color(0.9943748, 0.7824051, 0.67763567, 1)
+albedo_texture = ExtResource("1_3ei8u")
+metallic = 0.5
+metallic_specular = 0.15
+roughness_texture = ExtResource("2_3mjge")
+normal_enabled = true
+normal_texture = ExtResource("2_3mjge")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true

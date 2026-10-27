@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://byvch2anlj7s4" path="res://materials/floor-materials/marble_tile_floor_heightmap.png" id="4"]
 
 [resource]
+albedo_color = Color(0.56496173, 0.5649616, 0.56496185, 1)
 albedo_texture = ExtResource("1")
 normal_enabled = true
 normal_texture = ExtResource("3")
