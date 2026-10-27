@@ -45,7 +45,7 @@ shadow_mesh = SubResource("ArrayMesh_6ag13")
 [node name="clouds" type="Node3D" unique_id=797589118]
 
 [node name="clouds_mesh" type="MeshInstance3D" parent="." unique_id=927528496]
-transform = Transform3D(20000, 0, 0, 0, 20000, -0.0008742278, 0, 0.0008742278, 20000, 0, 0, 0)
+transform = Transform3D(256, 0, 0, 0, 256, -1.1190115e-05, 0, 1.1190115e-05, 256, 0, 0, 0)
 gi_mode = 0
 mesh = SubResource("ArrayMesh_86eds")
 surface_material_override/0 = ExtResource("1_fk0hv")
