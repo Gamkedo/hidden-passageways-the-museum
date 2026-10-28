@@ -1,11 +1,13 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://b5j7a6q6jdkv5"]
 
-[ext_resource type="Texture2D" uid="uid://bce0j3olvssfh" path="res://textures/concrete.png" id="1_ek8mu"]
-[ext_resource type="Texture2D" uid="uid://c2wjqqxsww4s8" path="res://textures/concrete-normal.png" id="2_5atok"]
+[ext_resource type="Texture2D" uid="uid://bgevo06dnsqpr" path="res://textures/grand-rapids-concrete.jpg" id="1_ek8mu"]
+[ext_resource type="Texture2D" uid="uid://cjceonk0dpowd" path="res://textures/grand-rapids-concrete-normal.jpg" id="2_5atok"]
 
 [resource]
 albedo_texture = ExtResource("1_ek8mu")
 normal_enabled = true
+normal_scale = 0.25
 normal_texture = ExtResource("2_5atok")
+uv1_scale = Vector3(0.125, 0.125, 0.125)
 uv1_triplanar = true
 texture_filter = 5

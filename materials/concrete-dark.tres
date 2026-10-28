@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dfcjs6h611xnr"]
+
+[ext_resource type="Texture2D" uid="uid://bgevo06dnsqpr" path="res://textures/grand-rapids-concrete.jpg" id="1_onab3"]
+[ext_resource type="Texture2D" uid="uid://cjceonk0dpowd" path="res://textures/grand-rapids-concrete-normal.jpg" id="2_1nj55"]
+
+[resource]
+albedo_color = Color(0.21230483, 0.21230483, 0.21230483, 1)
+albedo_texture = ExtResource("1_onab3")
+normal_enabled = true
+normal_scale = 0.25
+normal_texture = ExtResource("2_1nj55")
+uv1_scale = Vector3(0.125, 0.125, 0.125)
+uv1_triplanar = true
+texture_filter = 5

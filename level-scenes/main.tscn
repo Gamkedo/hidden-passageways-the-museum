@@ -113,12 +113,13 @@
 [ext_resource type="PackedScene" uid="uid://52ka55orxurd" path="res://models/spy_boat/river-spy-boat.tscn" id="86_6v162"]
 [ext_resource type="PackedScene" uid="uid://bm2wbkt7ruwa8" path="res://models/talon_solitaire/suit-symbols.tscn" id="87_a8cb6"]
 [ext_resource type="Shape3D" uid="uid://rlithvvr27jx" path="res://models/boundary_collider_shape_3d.tres" id="91_ypkhb"]
+[ext_resource type="Material" uid="uid://dhxo20n8worr6" path="res://materials/concrete-lights.tres" id="104_g8gvm"]
+[ext_resource type="Material" uid="uid://dfcjs6h611xnr" path="res://materials/concrete-dark.tres" id="105_l8pru"]
 [ext_resource type="PackedScene" uid="uid://ca7psvp35dvx7" path="res://entities-scene_prefabs/grass_clump.tscn" id="113_25n75"]
 [ext_resource type="Material" uid="uid://36365xk5xoy8" path="res://materials/asphalt.tres" id="114_4h6t8"]
 [ext_resource type="Material" uid="uid://bvv2qnftn2yuh" path="res://materials/sidewalk.tres" id="114_s4gn4"]
 [ext_resource type="Material" uid="uid://d1s5sk6yfh2x2" path="res://materials/road-lines.tres" id="115_35lg4"]
 [ext_resource type="Material" uid="uid://pbcfbq1j1kga" path="res://materials/concrete-tiles.tres" id="115_gdv2j"]
-[ext_resource type="Material" uid="uid://dukv1r4leba6p" path="res://materials/colosseumbricks.tres" id="119_l8pru"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_xteo1"]
 
@@ -373,36 +374,36 @@ material = ExtResource("7_3lbo0")
 size = Vector2(10.380006, 10.380006)
 orientation = 1
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_l8pru"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_g8gvm"]
 viewport_path = NodePath("../SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g8gvm"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_onsk2"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_l8pru")
+albedo_texture = SubResource("ViewportTexture_g8gvm")
 roughness = 0.8
 texture_filter = 5
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_onsk2"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_ojj62"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ojj62"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n7nlf"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_onsk2")
+albedo_texture = SubResource("ViewportTexture_ojj62")
 roughness = 0.8
 texture_filter = 5
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_n7nlf"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_xsvti"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xsvti"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uuxwg"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_n7nlf")
+albedo_texture = SubResource("ViewportTexture_xsvti")
 roughness = 0.8
 texture_filter = 5
 
@@ -1571,7 +1572,7 @@ transform = Transform3D(0.4, 0, -1.9841906e-09, 0, 1, 0, 7.9367624e-10, 0, 1, 0,
 mesh = SubResource("CylinderMesh_xteo1")
 
 [node name="LongBarLight3" type="CSGCombiner3D" parent="Modern Musem (Dev Pods era Games)/Light Fixtures" unique_id=1001086186]
-transform = Transform3D(-4.569558e-08, 0, 1, 0, 1, 0, -1, 0, -4.569558e-08, 33.502, 6, 15)
+transform = Transform3D(-4.569558e-08, 0, 1, 0, 1, 0, -1, 0, -4.569558e-08, 33.502, 6, 17)
 script = ExtResource("43_0m503")
 track_length = 14.0
 lights_rectangularity = 10.0
@@ -2505,7 +2506,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook" index="1" unique_id=2132904720]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_g8gvm")
+surface_material_override/0 = SubResource("StandardMaterial3D_onsk2")
 
 [node name="Guidebook3d2" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1034692829]
 transform = Transform3D(0.99572617, -6.976736e-08, 0.092355326, 0.07370379, 0.60259724, -0.79463464, -0.05565301, 0.7980456, 0.60002184, 0.33789635, 0.5955966, 0.11873436)
@@ -2519,7 +2520,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook" index="1" unique_id=2132904720]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_ojj62")
+surface_material_override/0 = SubResource("StandardMaterial3D_n7nlf")
 
 [node name="Guidebook3d3" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1679212863]
 transform = Transform3D(-0.9742656, -0.12668496, -0.18643428, 0.14209789, -0.98725104, -0.07172081, -0.1749714, -0.0963671, 0.979846, -0.58836937, 0.5955966, 0.11873436)
@@ -2533,7 +2534,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3/guidebook" index="1" unique_id=2132904720]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_xsvti")
+surface_material_override/0 = SubResource("StandardMaterial3D_uuxwg")
 
 [node name="Label3D" type="Label3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1183973093]
 transform = Transform3D(0.24000001, 0, 0, 0, 0.24000001, 0, 0, 0, 0.24000001, -0.07500076, 0.61191887, -0.31499863)
@@ -2615,25 +2616,31 @@ use_collision = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.002178, -1.497253, 32.49996)
 material_override = SubResource("StandardMaterial3D_lahx7")
 size = Vector3(34, 21, 27)
-material = ExtResource("115_gdv2j")
-
-[node name="Overhang" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)" unique_id=694304834]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.75, -17.250305)
-material_override = ExtResource("9_4h42u")
-size = Vector3(34, 1.5, 7.5)
 material = ExtResource("9_4h42u")
 
+[node name="Overhang" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)" unique_id=694304834]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 18, -20.000305)
+material_override = ExtResource("9_4h42u")
+size = Vector3(32, 1, 25)
+material = ExtResource("9_4h42u")
+
+[node name="Lighting" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)/Overhang" unique_id=840328989]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+material_override = ExtResource("9_4h42u")
+size = Vector3(32, 0.1, 25)
+material = ExtResource("104_g8gvm")
+
 [node name="OverhangSupport" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)/Overhang" unique_id=1871187180]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -5, -0.25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, -9.25, -4.75)
 material_override = ExtResource("3_euau4")
-size = Vector3(2, 8.5, 2)
-material = ExtResource("5_r54xu")
+size = Vector3(1, 17, 1)
+material = ExtResource("105_l8pru")
 
 [node name="OverhangSupport2" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)/Overhang" unique_id=1585124714]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, -5, -0.25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, -9.25, -4.75)
 material_override = ExtResource("3_euau4")
-size = Vector3(2, 8.5, 2)
-material = ExtResource("5_r54xu")
+size = Vector3(1, 17, 1)
+material = ExtResource("105_l8pru")
 
 [node name="NegativeCube" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)" unique_id=2047117778]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006872177, -0.06893873, 0.060886383)
@@ -2862,7 +2869,7 @@ transform = Transform3D(-0.42261833, 0, 0.90630776, 0, 1, 0, 0.90630776, 0, 0.42
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -6.997822, 8.502747, 33.49996)
 material_override = SubResource("StandardMaterial3D_lahx7")
 size = Vector3(34, 21, 27)
-material = ExtResource("12_qi2ty")
+material = ExtResource("9_4h42u")
 
 [node name="NegativeCube" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=1259124328]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006872177, -0.06893873, 0.060886383)
@@ -3034,10 +3041,25 @@ transform = Transform3D(3.8, 0, 0, 0, 3.8, 0, 0, 0, 3.8, -13.5, -1, 32.5)
 [node name="SuitSymbols" parent="Modern Musem (Dev Pods era Games)" unique_id=215537584 instance=ExtResource("87_a8cb6")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.5, -0.5, 28)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)" unique_id=458554610]
+[node name="concrete-block" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)" unique_id=458554610]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.097511, 24.86969, 32.687714)
 size = Vector3(54, 32, 16)
-material = ExtResource("119_l8pru")
+material = ExtResource("9_4h42u")
+
+[node name="concrete-block2" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)" unique_id=767762721]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 2, 11.5)
+size = Vector3(14, 14, 25)
+material = ExtResource("9_4h42u")
+
+[node name="concrete-block3" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)" unique_id=1673552905]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 21, 22.5)
+size = Vector3(14, 24, 47)
+material = ExtResource("9_4h42u")
+
+[node name="concrete-block4" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)" unique_id=132046478]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 13, 30.5)
+size = Vector3(32, 8, 31)
+material = ExtResource("9_4h42u")
 
 [editable path="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook"]
 [editable path="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook"]
