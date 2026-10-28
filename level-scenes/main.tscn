@@ -456,36 +456,36 @@ transform = Transform3D(256, 0, 0, 0, 256, 0, 0, 0, 256, 0, 52, 0)
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Environment" unique_id=1183794555]
 environment = ExtResource("2_gbu3n")
 
-[node name="World Boundaries" type="Node3D" parent="." unique_id=1033588794]
+[node name="World Boundaries" type="Node3D" parent="Environment" unique_id=1033588794]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="World Boundaries" unique_id=1067343403]
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/World Boundaries" unique_id=1067343403]
 transform = Transform3D(0.94149655, 0, -0.33702263, 0, 1, 0, 0.33702263, 0, 0.94149655, 1.946352, 0, 76.31478)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="World Boundaries/StaticBody3D" unique_id=1739608497]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/World Boundaries/StaticBody3D" unique_id=1739608497]
 shape = ExtResource("91_ypkhb")
 
-[node name="StaticBody3D2" type="StaticBody3D" parent="World Boundaries" unique_id=1879706775]
+[node name="StaticBody3D2" type="StaticBody3D" parent="Environment/World Boundaries" unique_id=1879706775]
 transform = Transform3D(0.5051321, 0, 0.86304206, 0, 1, 0, -0.86304206, 0, 0.5051321, 130.74771, 15.508987, 50.214165)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="World Boundaries/StaticBody3D2" unique_id=130993889]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/World Boundaries/StaticBody3D2" unique_id=130993889]
 shape = ExtResource("91_ypkhb")
 
-[node name="StaticBody3D3" type="StaticBody3D" parent="World Boundaries" unique_id=834243497]
+[node name="StaticBody3D3" type="StaticBody3D" parent="Environment/World Boundaries" unique_id=834243497]
 transform = Transform3D(-0.5211524, 0, 0.85346365, 0, 1, 0, -0.85346365, 0, -0.5211524, 91.52335, -7.6293945e-06, -35.389565)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="World Boundaries/StaticBody3D3" unique_id=1165546484]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/World Boundaries/StaticBody3D3" unique_id=1165546484]
 shape = ExtResource("91_ypkhb")
 
-[node name="StaticBody3D4" type="StaticBody3D" parent="World Boundaries" unique_id=1625770626]
+[node name="StaticBody3D4" type="StaticBody3D" parent="Environment/World Boundaries" unique_id=1625770626]
 transform = Transform3D(-0.8885095, 0, -0.45885828, 0, 1, 0, 0.45885828, 0, -0.8885095, -5.761917, 0, -92.719345)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="World Boundaries/StaticBody3D4" unique_id=2039031215]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/World Boundaries/StaticBody3D4" unique_id=2039031215]
 shape = ExtResource("91_ypkhb")
 
-[node name="StaticBody3D5" type="StaticBody3D" parent="World Boundaries" unique_id=1059915597]
+[node name="StaticBody3D5" type="StaticBody3D" parent="Environment/World Boundaries" unique_id=1059915597]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -92.1149, 7.6293945e-06, 7.1251717)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="World Boundaries/StaticBody3D5" unique_id=83876510]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/World Boundaries/StaticBody3D5" unique_id=83876510]
 shape = ExtResource("91_ypkhb")
 
 [node name="Outdoors with Portal Taxi" type="Node3D" parent="." unique_id=1149423350]
@@ -1572,7 +1572,7 @@ transform = Transform3D(0.4, 0, -1.9841906e-09, 0, 1, 0, 7.9367624e-10, 0, 1, 0,
 mesh = SubResource("CylinderMesh_xteo1")
 
 [node name="LongBarLight3" type="CSGCombiner3D" parent="Modern Musem (Dev Pods era Games)/Light Fixtures" unique_id=1001086186]
-transform = Transform3D(-4.569558e-08, 0, 1, 0, 1, 0, -1, 0, -4.569558e-08, 33.502, 6, 17)
+transform = Transform3D(-4.569558e-08, 0, 1, 0, 1, 0, -1, 0, -4.569558e-08, 33.502, 6, 16)
 script = ExtResource("43_0m503")
 track_length = 14.0
 lights_rectangularity = 10.0
@@ -1588,7 +1588,7 @@ metadata/_custom_type_script = "uid://cm6176wsxfdqx"
 [node name="_CSGPolygon3D_46372" type="CSGPolygon3D" parent="Modern Musem (Dev Pods era Games)/Light Fixtures/LongBarLight3" unique_id=621315870]
 polygon = PackedVector2Array(-0.15, 0, -0.15, 0.3, -0.06, 0.5, 0.06, 0.5, 0.15, 0.3, 0.15, 0)
 depth = 14.0
-material = ExtResource("3_5dt3m")
+material = ExtResource("105_l8pru")
 
 [node name="_MeshInstance3D_46373" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)/Light Fixtures/LongBarLight3" unique_id=1839524874]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2474988, -0.5)
@@ -2619,7 +2619,7 @@ size = Vector3(34, 21, 27)
 material = ExtResource("9_4h42u")
 
 [node name="Overhang" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)" unique_id=694304834]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 18, -20.000305)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 17, -20.000305)
 material_override = ExtResource("9_4h42u")
 size = Vector3(32, 1, 25)
 material = ExtResource("9_4h42u")
@@ -2629,6 +2629,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, -4.5)
 material_override = ExtResource("9_4h42u")
 size = Vector3(16, 0.1, 8)
 material = ExtResource("104_g8gvm")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)/Overhang/Lighting" unique_id=1787091647]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 0)
+omni_range = 16.0
 
 [node name="OverhangSupport" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)/Overhang" unique_id=1871187180]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, -9.25, -4.75)
@@ -2988,6 +2992,46 @@ polygon = PackedVector2Array(-3, 0, -3, 4, -2, 5, 1, 5, 2, 4, 2, 0)
 depth = 1.1
 material = ExtResource("5_r54xu")
 
+[node name="concrete-block" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=458554610]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.097511, 24.86969, 32.687714)
+size = Vector3(54, 32, 16)
+material = ExtResource("9_4h42u")
+
+[node name="concrete-block2" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=767762721]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 3, 11.5)
+size = Vector3(14, 16, 25)
+material = ExtResource("9_4h42u")
+
+[node name="building foundations" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=1211459562]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, -4, 34)
+size = Vector3(35, 4, 30)
+material = ExtResource("9_4h42u")
+
+[node name="concrete-block3" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=1673552905]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 21, 22.5)
+size = Vector3(14, 20, 47)
+material = ExtResource("9_4h42u")
+
+[node name="concrete-block5" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=934266326]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 52, 31)
+size = Vector3(54, 22, 19)
+material = ExtResource("9_4h42u")
+
+[node name="concrete-block6" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=1128867525]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 39, 53)
+size = Vector3(14, 40, 41)
+material = ExtResource("9_4h42u")
+
+[node name="concrete-block7" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=187868341]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 43, 36.5)
+size = Vector3(16, 24, 54)
+material = ExtResource("9_4h42u")
+
+[node name="concrete-block4" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=132046478]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 11, 17.5)
+size = Vector3(32, 8, 5)
+material = ExtResource("9_4h42u")
+
 [node name="Decorations" type="Node3D" parent="Modern Musem (Dev Pods era Games)" unique_id=777535549]
 
 [node name="Extinguisher" parent="Modern Musem (Dev Pods era Games)/Decorations" unique_id=786241607 instance=ExtResource("53_mj7h6")]
@@ -3029,52 +3073,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.599998, -6, 38.9)
 [node name="handrail5" parent="Modern Musem (Dev Pods era Games)/Decorations" unique_id=574958099 instance=ExtResource("65_v80x0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.599998, -6, 38.9)
 
-[node name="hero_tank" parent="Modern Musem (Dev Pods era Games)" unique_id=1017196529 instance=ExtResource("84_fplvf")]
+[node name="hero_tank" parent="Modern Musem (Dev Pods era Games)/Decorations" unique_id=1017196529 instance=ExtResource("84_fplvf")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5.5, -1, 40)
 
-[node name="hero_tank2" parent="Modern Musem (Dev Pods era Games)" unique_id=729841537 instance=ExtResource("85_4sa00")]
+[node name="hero_tank2" parent="Modern Musem (Dev Pods era Games)/Decorations" unique_id=729841537 instance=ExtResource("85_4sa00")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.5, -1, 40)
 
-[node name="RiverSpyBoat" parent="Modern Musem (Dev Pods era Games)" unique_id=960182017 instance=ExtResource("86_6v162")]
+[node name="RiverSpyBoat" parent="Modern Musem (Dev Pods era Games)/Decorations" unique_id=960182017 instance=ExtResource("86_6v162")]
 transform = Transform3D(3.8, 0, 0, 0, 3.8, 0, 0, 0, 3.8, -13.5, -1, 32.5)
 
-[node name="SuitSymbols" parent="Modern Musem (Dev Pods era Games)" unique_id=215537584 instance=ExtResource("87_a8cb6")]
+[node name="SuitSymbols" parent="Modern Musem (Dev Pods era Games)/Decorations" unique_id=215537584 instance=ExtResource("87_a8cb6")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.5, -0.5, 28)
-
-[node name="concrete-block" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)" unique_id=458554610]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.097511, 24.86969, 32.687714)
-size = Vector3(54, 32, 16)
-material = ExtResource("9_4h42u")
-
-[node name="concrete-block2" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)" unique_id=767762721]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 2, 11.5)
-size = Vector3(14, 14, 25)
-material = ExtResource("9_4h42u")
-
-[node name="concrete-block3" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)" unique_id=1673552905]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 21, 22.5)
-size = Vector3(14, 24, 47)
-material = ExtResource("9_4h42u")
-
-[node name="concrete-block5" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)" unique_id=934266326]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 53, 31)
-size = Vector3(54, 24, 19)
-material = ExtResource("9_4h42u")
-
-[node name="concrete-block6" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)" unique_id=1128867525]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 39, 53)
-size = Vector3(14, 40, 41)
-material = ExtResource("9_4h42u")
-
-[node name="concrete-block7" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)" unique_id=187868341]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 45.5, 36.5)
-size = Vector3(16, 25, 54)
-material = ExtResource("9_4h42u")
-
-[node name="concrete-block4" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)" unique_id=132046478]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 13, 30.5)
-size = Vector3(32, 8, 31)
-material = ExtResource("9_4h42u")
 
 [editable path="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook"]
 [editable path="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook"]
