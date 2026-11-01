@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cwisnv1hbjfln"]
+
+[ext_resource type="Texture2D" uid="uid://xknfitqt20dy" path="res://textures/particle_fire.png" id="1_41d6x"]
+
+[resource]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0.14901961)
+albedo_texture = ExtResource("1_41d6x")
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false

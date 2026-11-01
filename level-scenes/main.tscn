@@ -34,6 +34,7 @@
 [ext_resource type="PackedScene" uid="uid://cocic8dfy1sa6" path="res://entities-scene_prefabs/tree_big.tscn" id="17_4fg2q"]
 [ext_resource type="Texture2D" uid="uid://cdwd15kcvxucw" path="res://textures/signage/coming-soon-banner_hometeam-gamedev.png" id="17_10aen"]
 [ext_resource type="Texture2D" uid="uid://dnmay4t3srwn8" path="res://textures/signage/dev-pods-games.png" id="18_7y3h6"]
+[ext_resource type="Material" uid="uid://cwisnv1hbjfln" path="res://materials/smoke_particle.tres" id="22_xsvti"]
 [ext_resource type="PackedScene" uid="uid://o8idbyowpqvw" path="res://entities-scene_prefabs/railing.tscn" id="26_c6q64"]
 [ext_resource type="Texture2D" uid="uid://dlft5rt3mgqhu" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/gladiator-of-the-golden-house.png" id="26_v80x0"]
 [ext_resource type="Texture2D" uid="uid://c7fd2ik3j7hr5" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/legend-of-shadowtail.jpg" id="28_3tvjp"]
@@ -170,6 +171,16 @@ albedo_texture = ExtResource("17_10aen")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l8pru"]
 albedo_texture = ExtResource("18_7y3h6")
+
+[sub_resource type="QuadMesh" id="QuadMesh_7tbbo"]
+material = ExtResource("22_xsvti")
+
+[sub_resource type="Curve" id="Curve_41d6x"]
+_data = [Vector2(0, 0.12682927), 0.0, 0.0, 0, 0, Vector2(0.12096773, 0.99512196), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y5qfa"]
+size = Vector3(12, 4, 4.5)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_8jg5c"]
 radius = 1.0454303
@@ -807,11 +818,31 @@ transform = Transform3D(0.9822898, 0, 0.18736815, 0, 1, 0, -0.18736815, 0, 0.982
 transform = Transform3D(-0.36687073, 0, 0.930272, 0, 1, 0, -0.930272, 0, -0.36687073, -24.793222, -2.6265752, 17.273556)
 
 [node name="Taxi_vox" type="MeshInstance3D" parent="Outdoors with Portal Taxi" unique_id=1145635676]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.59498, -2.981409, -51.54486)
+transform = Transform3D(0.69299996, 0, 0, 0, 0.69299996, 0, 0, 0, 0.69299996, -35.09498, -2.981409, -51.54486)
 mesh = ExtResource("66_fof07")
 
-[node name="CPUParticles3D" type="CPUParticles3D" parent="Outdoors with Portal Taxi/Taxi_vox" unique_id=201120635]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 2, 0)
+[node name="EngineSmoke" type="CPUParticles3D" parent="Outdoors with Portal Taxi/Taxi_vox" unique_id=201120635]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -4, 2.5, 0)
+amount = 60
+lifetime = 1.96
+lifetime_randomness = 0.36
+mesh = SubResource("QuadMesh_7tbbo")
+spread = 18.68
+gravity = Vector3(0, 0.2, 0)
+initial_velocity_min = 1.0
+initial_velocity_max = 3.0
+angular_velocity_min = -93.97
+angular_velocity_max = -0.01
+angle_min = -648.5
+angle_max = 505.6
+scale_amount_max = 2.5
+scale_amount_curve = SubResource("Curve_41d6x")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Outdoors with Portal Taxi/Taxi_vox" unique_id=236142287]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Outdoors with Portal Taxi/Taxi_vox/StaticBody3D" unique_id=70472711]
+transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999998, 0, 1.4999988, -0.2499981)
+shape = SubResource("BoxShape3D_y5qfa")
 
 [node name="road" type="Node3D" parent="Outdoors with Portal Taxi" unique_id=537745292]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.5, 0, -32)
