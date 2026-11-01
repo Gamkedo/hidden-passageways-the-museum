@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b8h4gkdqnmeyq"]
+
+[ext_resource type="PackedScene" uid="uid://cayltjom1tyfm" path="res://models/cmu-buildings/campus.gltf" id="1_tkvr5"]
+
+[node name="campus" unique_id=1764210323 instance=ExtResource("1_tkvr5")]
+
+[node name="Plane" parent="." index="2" unique_id=750089423]
+transform = Transform3D(-172.51317, 0, 0, 0, 1, 0, 0, 0, -172.51317, 0, -19.407553, 0)
+
+[node name="ChamferCyl" parent="." index="14" unique_id=532538882]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.681431, -94.92467, -0.3407188)
