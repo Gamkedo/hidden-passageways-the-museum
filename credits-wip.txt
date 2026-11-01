@@ -9,7 +9,7 @@ Dávid Tóth: Jump sound, Ratrick Plushie toy, Cyndrive exhibit area, map naviga
 Christer Kaitila: Reflecive windows, textures (concrete, ceiling, bark, grass), outdoor hilly ground mesh, tree models, museum rope barrier, stair railing, ticket logo, ionic column, (Unity-side, coming soon), Castle area, skybox, gamepad UI, voxel models, assorted fixes, road and sidewalk
 Justin Montgomery: Museum wall texture, tank model from Tank Rampage Command, initial main menu
 J Patrick McKeown: Fire extinguisher model, potted tree made of card game suits, spy boat game model, Talon card decorations, listening horns with tech box and pillar
-Milicen: Main area music (2 songs), song clip speaker system
+Milicen: Main area music (2 songs), song clip speaker system and related art
 Vaan Hope Khani: Story writing (not yet surfaced in current test version)
 Tyler Funk: Wood floor, marble floor
 Azzy Steel: Exit from notes input
