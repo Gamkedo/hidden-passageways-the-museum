@@ -26,6 +26,9 @@ func start_playing_song(source):
 	
 	create_tween().tween_property(game_stream_player, "volume_db", 0.0, 1.0)
 
+func global_pause_music(): # added for clicking button to open new game tab
+	global_stream_player.stream_paused = false
+
 func play_temporary_ost(source):
 	if source == null:
 		print("play_game_ost bailed on null source")

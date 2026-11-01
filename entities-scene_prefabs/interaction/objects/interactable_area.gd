@@ -22,6 +22,7 @@ signal enabled_updated(is_enabled: bool)
 ## Set to 'true' to disable the interactable entirely after interaction is complete
 @export var disable_after_interaction: bool = false
 @export var reset_progress_on_interact_stopped: bool = true
+@export var interacting_pauses_music: bool = false
 
 var enabled: bool = true:
 	set = set_enabled
@@ -33,6 +34,8 @@ var _progressing_interaction: bool = false
 
 
 func trigger_interaction() -> void:
+	if interacting_pauses_music:
+		IntercomAudioManager.global_pause_music()
 	if enabled:
 		interaction_complete.emit()
 		if disable_after_interaction:
