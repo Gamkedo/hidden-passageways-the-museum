@@ -73,6 +73,12 @@ _data = {
 &"ChamferCylAction": SubResource("Animation_jgv6e")
 }
 
+[sub_resource type="BoxMesh" id="BoxMesh_7tbbo"]
+size = Vector3(2.2202148, 4.2702637, 17.494568)
+
+[sub_resource type="BoxMesh" id="BoxMesh_y5qfa"]
+size = Vector3(1, 2.5725403, 7.017128)
+
 [node name="Basement Art (Misc not in released games)" type="CSGCombiner3D" unique_id=1453491612]
 use_collision = true
 
@@ -187,6 +193,19 @@ Models and skybox by Chris DeLeon
 
 Collection of building models created for a 3-day public arcade game kiosk at Spring Carnival 2007. This was played inside of a booth students made in celebration of Nintendo games.
 
+The area mapped is overlaps one edge of Carnegie Mellon's campus, including adjacents buildings, with Flagstaff Hill of Schenley Park at the center. These models were part of a C++/OpenGL simulation of the traditional homecoming buggy relay race. In the real race small college students fit inside and steer tube-shaped vehicles. Larger college students pushed those buggies for uphill portions. The simulation had a custom input interface built to steer with the same mechanism as a real buggy, and a sliding bar players pushed for uphill segments.
+
+Building textures and the skybox were made from photos taken that week. The tall building in the skybox across the bridge is the Cathedral of Learning at the University of Pittsburgh. It's the tallest educational building in the western hemisphere. The shorter cement building to its right in the skybox, Wean Hall, is where the first meetings were held for Game Creation Society in 2004, a college gamedev club Chris cofounded which ten years  laterserved as a model for the community now known as Dev Pods. Two buildings here, Scaife Hall (\"potato chip\" roof) and Skibo Gymnasium (near the brown tower) have since been demolished and replaced by newer buildings. Posner Hall (maze on part of the roof) opened only a few years earlier.
+
+Mister Rogers once lived a 15-minute walk from the tall brown tower on the right. He filmed 900+ episodes of Misters Rogers Neighborhood at WQED near the other side of campus. He passed away a few years prior, but people still shared stories of him walking across campus being kind, such as checking to ensure a student resting in the grass felt ok."
+
+[node name="Foam Card" parent="Frame, Button, Credits" unique_id=390590116 instance=ExtResource("13_ye0tm")]
+transform = Transform3D(0, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, 0, 1.6941547, 0, 0.64038754)
+page_text = "Buggy Game
+Models and skybox by Chris DeLeon
+
+Collection of building models created for a 3-day public arcade game kiosk at Spring Carnival 2007. This was played inside of a booth students made in celebration of Nintendo games.
+
 The area mapped is at one edge of Carnegie Mellon's campus, including adjacents buildings, with Flagstaff Hill in Schenley Park at the center. Along with a terrain heightmap, hand-placed trees, and a week of C++/OpenGL code, these models were used to create a simulation of the traditional homecoming buggy relay race.
 
 In the real race small college students fit inside and steer little tube-shaped vehicles. Larger college students pushed the buggies from behind for uphill portions. The simulation had a custom controller interface built to steer using the same mechanism as real buggies, and a sliding mechanical bar players physically pushed for uphill segments.
@@ -194,10 +213,6 @@ In the real race small college students fit inside and steer little tube-shaped 
 Building textures and the skybox were made from digital photos taken that week. The tall building in the skybox across the bridge is the Cathedral of Learning at the University of Pittsburgh. At 42-stories, it's the tallest educational building in the western hemisphere. Two buildings modeled here, Scaife Hall (\"potato chip\" roof) and Skibo Gymnasium (near the brown condos) have since been demolished and replaced by newer buildings. Posner Hall (look for a maze on part of the roof) was a new building at the time, opened only a few years earlier.
 
 Mister Rogers once lived a 15-minute walk from the tall brown building on the right. He filmed most 900+ episodes of Misters Rogers Neighborhood at WQED near the other end of campus. He passed away a few years prior, but people still shared stories of him walking through campus being kind, such as checking to ensure a student resting in the grass felt ok."
-
-[node name="Foam Card" parent="Frame, Button, Credits" unique_id=390590116 instance=ExtResource("13_ye0tm")]
-transform = Transform3D(0, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, 0, 1.6941547, 0, 0.64038754)
-page_text = "edit the parent instead"
 
 [node name="Speaker" parent="Frame, Button, Credits" unique_id=1668457512 instance=ExtResource("17_lb8qs")]
 transform = Transform3D(1.0000008, 0, 0, 0, 1, 0, 0, 0, 1.0000008, 3.267889, -2.4513874, -8.476528)
@@ -219,3 +234,11 @@ mesh = SubResource("ArrayMesh_nqfb0")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBody3D/cmu-campus-collider" unique_id=878394967]
 libraries/ = SubResource("AnimationLibrary_4adqt")
+
+[node name="VGDev Exhibit Placeholder" type="MeshInstance3D" parent="StaticBody3D" unique_id=1648458977]
+transform = Transform3D(10.320509, 0, 20.267296, 0, 22.743711, 0, -20.267296, 0, 10.320509, -60.458954, 41.248657, 443.7052)
+mesh = SubResource("BoxMesh_7tbbo")
+
+[node name="VGDev_GCS connection to Dev Pods" type="MeshInstance3D" parent="StaticBody3D" unique_id=1155530917]
+transform = Transform3D(-7.0364037, 0, 21.627869, 0, 22.74371, 0, -21.627869, 0, -7.0364037, -133.54034, 23.030975, 259.24384)
+mesh = SubResource("BoxMesh_y5qfa")
