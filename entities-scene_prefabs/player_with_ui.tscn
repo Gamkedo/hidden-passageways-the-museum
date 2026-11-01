@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://it53133273b6" path="res://ui/interact_prompt/interact_prompt_panel.gd" id="5_7gyvc"]
 [ext_resource type="Script" uid="uid://cq71t77ycqntx" path="res://scripts/stair_step_raycast.gd" id="6_ujqyo"]
 [ext_resource type="PackedScene" uid="uid://bdpdkco4xbv3s" path="res://entities-scene_prefabs/interaction/interaction_component.tscn" id="8_8vmao"]
+[ext_resource type="Script" uid="uid://camvtmaarh1qa" path="res://scripts/final_loading_step_concealer.gd" id="8_itsmy"]
 [ext_resource type="PackedScene" uid="uid://cgbexi4dcct87" path="res://entities-scene_prefabs/interaction/detectors/interaction_detector.tscn" id="10_7gyvc"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hy870"]
@@ -153,17 +154,11 @@ autowrap_trim_flags = 128
 offset_right = 368.0
 offset_bottom = 40.0
 bbcode_enabled = true
-text = "
-
-[u]Controls (Keyboard / Gamepad)[/u]
-Move:  WASD / Joystick
+text = "Move:  WASD / Joystick
 Jump:  Spacebar / Bottom Face Button
 Interact:  F / Left Face Button
 Sprint:  LShift / LT
-Flight:  LCtrl / Dpad Up
-Display Hints: V / RT
-
-Capture mouse: Left click
+Interaction Hints: V / RT
 Release mouse: Right click"
 fit_content = true
 scroll_active = false
@@ -231,6 +226,24 @@ bbcode_enabled = true
 fit_content = true
 scroll_active = false
 script = ExtResource("1_4v70m")
+
+[node name="LoadingConcealer" type="Node2D" parent="UILayer" unique_id=380872932]
+script = ExtResource("8_itsmy")
+
+[node name="Scene hider" type="ColorRect" parent="UILayer/LoadingConcealer" unique_id=1717091462]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(31.999998, 19.443201)
+color = Color(0.20152658, 0.20152658, 0.20152658, 1)
+
+[node name="Last step loading message" type="Label" parent="UILayer/LoadingConcealer" unique_id=1488916945]
+offset_left = 368.0
+offset_top = 340.0
+offset_right = 914.0
+offset_bottom = 363.0
+text = "Getting the last few exhibits ready, the musem doors will open shortly!"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="LandingAudioStream" type="AudioStreamPlayer" parent="." unique_id=486965921 node_paths=PackedStringArray("target_body")]
 unique_name_in_owner = true
