@@ -8,7 +8,7 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_7tbbo"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_1e3mb"]
-size = Vector3(0.05, 1, 1)
+size = Vector3(0.05, 1, 0.86950684)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wehve"]
 albedo_texture = ExtResource("2_t2u88")
