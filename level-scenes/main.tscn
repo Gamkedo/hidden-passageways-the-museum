@@ -126,6 +126,7 @@
 [ext_resource type="Material" uid="uid://bvv2qnftn2yuh" path="res://materials/sidewalk.tres" id="114_s4gn4"]
 [ext_resource type="Material" uid="uid://d1s5sk6yfh2x2" path="res://materials/road-lines.tres" id="115_35lg4"]
 [ext_resource type="Material" uid="uid://pbcfbq1j1kga" path="res://materials/concrete-tiles.tres" id="115_gdv2j"]
+[ext_resource type="Material" uid="uid://gi1au7e50ftu" path="res://materials/modern-museum/picture-frame-placeholder-generic-wood.tres" id="116_kh8wp"]
 [ext_resource type="PackedScene" uid="uid://t570i75mlu23" path="res://entities-scene_prefabs/dynamic_billboard/explainer_beta_billboard_static.tscn" id="125_uuxwg"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_xteo1"]
@@ -2779,19 +2780,19 @@ material = ExtResource("11_v6iic")
 [node name="UpperFloorRailing" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)" unique_id=1402482642]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 2.1330957, 0.54100037)
 size = Vector3(21, 0.25, 13.5)
-material = ExtResource("3_5dt3m")
+material = ExtResource("116_kh8wp")
 
 [node name="UpperFloorRailing2" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)/UpperFloorRailing" unique_id=667959337]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.032348633, 0, 0)
 operation = 2
 size = Vector3(20.5, 0.5, 13)
-material = ExtResource("3_5dt3m")
+material = ExtResource("116_kh8wp")
 
 [node name="UpperFloorRailing3" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)/UpperFloorRailing" unique_id=3077501]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21765137, 0, 4.25)
 operation = 2
 size = Vector3(22, 0.5, 4.5)
-material = ExtResource("3_5dt3m")
+material = ExtResource("116_kh8wp")
 
 [node name="Upper Floor" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)" unique_id=291562752]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.00030517578)
