@@ -112,6 +112,7 @@ metadata/_custom_type_script = "uid://b6e3846js4fip"
 
 [node name="MainMenuButton" type="Button" parent="BackgroundContainer/VBoxContainer/ScreenTabContainer/MainPauseScreen/ControlsContainer/ButtonContainer" unique_id=139093755]
 unique_name_in_owner = true
+visible = false
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -124,6 +125,7 @@ metadata/_custom_type_script = "uid://b6e3846js4fip"
 
 [node name="QuitButton" type="Button" parent="BackgroundContainer/VBoxContainer/ScreenTabContainer/MainPauseScreen/ControlsContainer/ButtonContainer" unique_id=995385002]
 unique_name_in_owner = true
+visible = false
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 4
