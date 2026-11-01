@@ -448,7 +448,7 @@ albedo_texture = ExtResource("7_hgslh")
 script = ExtResource("1_qi2ty")
 
 [node name="Player with UI" parent="." unique_id=1354449472 instance=ExtResource("3_lquwl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -0.8355012, 5.5)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 26, -0.8355012, -9)
 platform_floor_layers = 4294967291
 
 [node name="Environment" type="Node3D" parent="." unique_id=218995970]
@@ -698,10 +698,10 @@ debug_color = Color(0.9843728, 0, 0.34865567, 0.41960785)
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -43.559467, -1.6067085, -21.009506)
 
 [node name="egg" parent="Outdoors with Portal Taxi" unique_id=641449275 instance=ExtResource("61_xub5d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.93178, 0.50247455, -36.66358)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.93178, 0.50247455, -26.663582)
 
 [node name="Clickable 3d link test" type="StaticBody3D" parent="Outdoors with Portal Taxi" unique_id=1076222070]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12606049, 1.064765, -29.602764)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12606049, -4.435235, -29.602764)
 script = SubResource("GDScript_1tes7")
 
 [node name="ClickLinkTest" type="Node" parent="Outdoors with Portal Taxi/Clickable 3d link test" unique_id=1051478881]
@@ -727,7 +727,7 @@ metadata/_custom_type_script = "uid://bsmp4qaqn0uxw"
 shape = SubResource("BoxShape3D_fof07")
 
 [node name="Clickable Scene Change" type="StaticBody3D" parent="Outdoors with Portal Taxi" unique_id=1285932327]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.126, 1.065, -27.358)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12599945, -4.435, -27.358)
 script = SubResource("GDScript_3e5oy")
 
 [node name="ClickableSceneChangeTest" type="Node" parent="Outdoors with Portal Taxi/Clickable Scene Change" unique_id=1299862708]
@@ -1027,7 +1027,7 @@ use_collision = true
 size = Vector3(9, 3, 1)
 
 [node name="Credits DynamicBillboard" parent="Modern Musem (Dev Pods era Games)" unique_id=880058378 instance=ExtResource("60_14tmg")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 14.5, -1, 4.5)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 22, -1, -1)
 
 [node name="Ratrick Hamster Ball (Interactive)" type="RigidBody3D" parent="Modern Musem (Dev Pods era Games)" unique_id=1039440741]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.968307, 0.42840683, 27.523893)
