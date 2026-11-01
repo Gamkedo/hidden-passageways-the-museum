@@ -107,4 +107,22 @@ grow_vertical = 0
 text = "Loading ..."
 label_settings = SubResource("LabelSettings_xteo1")
 
+[node name="Label2" type="Label" parent="UI/Control" unique_id=1254914707]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -379.0
+offset_top = -52.0
+offset_right = 1271.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.46044305, 0.46901536)
+theme_override_font_sizes/font_size = 15
+text = "May take a minute or two, especially in Firefox. Starts faster in Chrome."
+label_settings = SubResource("LabelSettings_xteo1")
+
 [connection signal="finished" from="PrecompilationMain" to="." method="_on_precompilation_main_finished"]

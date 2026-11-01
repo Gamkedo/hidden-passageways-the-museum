@@ -44,6 +44,8 @@ custom_minimum_size = Vector2(500, 500)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 5.0
+offset_right = 5.0
 offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -106,15 +108,23 @@ theme_override_constants/v_separation = 12
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "This panel will say some setup information about the game."
+text = "You've found this project before it's finished!"
 label_settings = SubResource("LabelSettings_x78ms")
+
+[node name="Label9" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1274623863]
+custom_minimum_size = Vector2(650, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+label_settings = SubResource("LabelSettings_x78ms")
+autowrap_mode = 2
 
 [node name="Label2" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1126279996]
 custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "It's currently placeholder."
+text = "The lore we're working on doesn't yet have the areas and parts we'll need for the way it's supposed to be experienced in the final version."
 label_settings = SubResource("LabelSettings_x78ms")
 autowrap_mode = 2
 
@@ -123,11 +133,19 @@ custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "Text will be written as another commit."
 label_settings = SubResource("LabelSettings_x78ms")
 autowrap_mode = 2
 
 [node name="Label4" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=173337102]
+custom_minimum_size = Vector2(650, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+text = "The main thing you'll see so far is a museum about the games our community, DevPods.gg, developed since Summer 2025. Each wall image is from a real, free game you can use the red button to play."
+label_settings = SubResource("LabelSettings_x78ms")
+autowrap_mode = 2
+
+[node name="Label10" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=426159768]
 custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -140,7 +158,7 @@ custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "The above should skip a line."
+text = "Behind you, and later on by using the taxi, there will be other buildings about games we made 2015-2025."
 label_settings = SubResource("LabelSettings_x78ms")
 autowrap_mode = 2
 
@@ -149,7 +167,6 @@ custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "This one intentionally does not scroll."
 label_settings = SubResource("LabelSettings_x78ms")
 autowrap_mode = 2
 
@@ -158,7 +175,7 @@ custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "If this box has to scroll that's a sign I wrote too much."
+text = "Part of the concept is that there will be strange side worlds to find and explore."
 label_settings = SubResource("LabelSettings_x78ms")
 autowrap_mode = 2
 
@@ -167,7 +184,7 @@ custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "Last line of the text is here"
+text = "There are not many side worlds yet in this early beta."
 label_settings = SubResource("LabelSettings_x78ms")
 autowrap_mode = 2
 
@@ -182,7 +199,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00667727, 1.5008271, -0.579
 mesh = SubResource("BoxMesh_c8sum")
 
 [node name="screenmesh" type="MeshInstance3D" parent="screenbacking" unique_id=697465555]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0.34950086)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.05, 0, 0.34950086)
 material_override = SubResource("StandardMaterial3D_exeic")
 mesh = SubResource("PlaneMesh_3e5oy")
 
