@@ -114,3 +114,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, -22, -4.5)
 
 [node name="campus" parent="." unique_id=1248770502 instance=ExtResource("12_p4vvg")]
 transform = Transform3D(-0.017857615, 0, 0.040315058, 0, 0.04409307, 0, -0.040315058, 0, -0.017857615, 21.119598, -22.060553, 6.6535444)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="campus" unique_id=373069073]
+transform = Transform3D(22.679306, 0, 0, 0, 22.679302, 0, 0, 0, 22.679306, -88.37964, 129.37054, 0.7272644)
+light_specular = 0.0
+light_bake_mode = 1
+shadow_enabled = true
+omni_range = 20.8783
