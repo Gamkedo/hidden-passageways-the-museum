@@ -112,7 +112,9 @@
 [ext_resource type="PackedScene" uid="uid://byown3kkcxwo5" path="res://models/tank_rampage/hero_tank.glb" id="85_4sa00"]
 [ext_resource type="PackedScene" uid="uid://52ka55orxurd" path="res://models/spy_boat/river-spy-boat.tscn" id="86_6v162"]
 [ext_resource type="PackedScene" uid="uid://bm2wbkt7ruwa8" path="res://models/talon_solitaire/suit-symbols.tscn" id="87_a8cb6"]
+[ext_resource type="Texture2D" uid="uid://617n524ayda3" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/shin.png" id="91_ojj62"]
 [ext_resource type="Shape3D" uid="uid://rlithvvr27jx" path="res://models/boundary_collider_shape_3d.tres" id="91_ypkhb"]
+[ext_resource type="Texture2D" uid="uid://ctshxydcc7r8d" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/shin-logo.png" id="92_n7nlf"]
 [ext_resource type="Material" uid="uid://dhxo20n8worr6" path="res://materials/concrete-lights.tres" id="104_g8gvm"]
 [ext_resource type="Material" uid="uid://dfcjs6h611xnr" path="res://materials/concrete-dark.tres" id="105_l8pru"]
 [ext_resource type="PackedScene" uid="uid://ca7psvp35dvx7" path="res://entities-scene_prefabs/grass_clump.tscn" id="113_25n75"]
@@ -1009,10 +1011,12 @@ transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, -0.9377037, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)/Light Fixtures/TestTracklights" unique_id=1488054082]
 transform = Transform3D(-1, 0, 1.1920929e-07, 0, 1, 0, -1.1920929e-07, 0, -1, 36.508755, -9.204277, 33.09507)
+visible = false
 mesh = SubResource("SphereMesh_xteo1")
 
 [node name="Label3D" type="Label3D" parent="Modern Musem (Dev Pods era Games)/Light Fixtures/TestTracklights/MeshInstance3D" unique_id=1420183524]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.721653, 1.8818955, 0)
+visible = false
 pixel_size = 0.008
 text = "This track light combines realtime dynamic lights,
 and transparent quad mesh \"projected\" lights.
@@ -2409,7 +2413,7 @@ credits = "COMING SOON"
 painting_texture = ExtResource("39_1tes7")
 button_texture = ExtResource("39_1tes7")
 
-[node name="SOON-Shin and the Guardians of the Spirits" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=718369502 instance=ExtResource("44_1tes7")]
+[node name="SOON-TBA" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=718369502 instance=ExtResource("44_1tes7")]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -15.429041, -9.235206, 7.524845)
 game_label = "COMING SOON"
 credits = "COMING SOON"
@@ -2423,12 +2427,43 @@ credits = "COMING SOON"
 painting_texture = ExtResource("39_1tes7")
 button_texture = ExtResource("39_1tes7")
 
-[node name="SOON-TBA" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=535871088 instance=ExtResource("44_1tes7")]
+[node name="Shin and the Guardians of the Spirits" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=535871088 instance=ExtResource("44_1tes7")]
 transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -6.929041, -9.235206, -13.405556)
-game_label = "COMING SOON"
-credits = "COMING SOON"
-painting_texture = ExtResource("39_1tes7")
-button_texture = ExtResource("39_1tes7")
+game_label = "Shin and the
+Guardians of Spirits"
+button_link = "https://christiangabbianelli.itch.io/shin-and-the-guardians-of-spirits"
+credits = "[b]Shin and the Guardians of Spirits[/b] credits
+Developed April 19 - Oct 25, 2026
+
+Christian Gabbianelli: Project co-lead, core gameplay, player character animation and attack features (incl. juggling / aerial combos), Ice and Lava boss behaviors (design and implementation), Ice and Lava boss animations (incl. telegraphic, hit reactions, phase transitions, death), rigging for all boss models, attack trails, lava boss inverse kinematics, volcano eruption, villager spirits and effigies, auto healing, pushback and hitstop, ice shield mechanics, tuning, juice/polish, map fixes, assorted effects (hand or weapon trails, flames, additional forest boss vfx
+
+Ben Owens: Project co-lead, level design (village and forest), Forest Protector animations and related integration, Forest Protector behavior state tree and related attack authoring, polish for main menu, pause screen improvements (incl. boss carousel), table-based dialogue system, camera lock on targeting, initial health and magic bars (player and enemy), scene transitions, boss weaknesses made targetable, music integration, menu/dialigue cinematic bars, assorted fixes 
+
+aarx0: Boss attacks (lava bomb, pillar field, sliding wall, totem, homing attack, radiating ice), player defense (block, deflect, dodge, interrupt, guard from stagger, wall shatter), knockback, heal ability, forward projectile strike, magic on melee, functionality for HUD and common options screen and menu menu, volume sliders implementation, gamepad menu support, AoE telegraphing, smoke trail, volcano behavior, improved combat debugging features, menu navigation, combat test area, assorted clean up and bug fixes 
+
+Arnulfo Torres Valladares: Models and textures for Lava Golem and Forest Protector (both with retopology passes) 
+
+Mel Fitzgerald: Shin model with texture, volcano and ice models and materials (including rocks, terrain), level design for ice arena and fire level 
+
+Iain Hurt: UI design and related art (player, boss, monster icons, death screen, credits and pause menus), logo, font integration
+
+Bex Rodriguez: Dynamic music (all bosses - Lava Guardian, Ice Boss, Jungle Guardian - with phase transitions, village hub world with variations, menu), music transitions, sounds (sword slash, grunt, footsteps improvements) 
+
+Elagon: FMOD audio integration (footprints change by terrain, movement sounds, portal transitions), sounds (Ice Warden shield slam and dash, Lava Golem attack / hurt / breathing, Forest Protector wind attack, Torii gate portal, lock on, healing and low mana), menu volume mixers connected, reverb zone, volume balancing 
+
+Christer Kaitila: Environment models with texture (traditional house, bamboo trees with variations, forest ground material, stone bridge, stone lantern, coniferous tree, additional ice variant), effects (lava waterfall, portal wormholes, leaves particles, for effect, AoE impact), environmental sounds (cloud puffs, ice steps, tree creaks, bush and brush hit sounds, tornado) 
+
+David Bates: Health event update, mute command, pause toggle, early audio code 
+
+Michael Fewkes: Motion warp to ttack montage, Mac editor fix 
+
+Arjuna Gonzales: Icicle material and meshes 
+
+Connor Fitzpatrick: Sounds for Lava Guardian and impacts 
+
+Dalton Charleston: Added magic attribute"
+painting_texture = ExtResource("91_ojj62")
+button_texture = ExtResource("92_n7nlf")
 
 [node name="Cyndrive Ships" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=757105588 instance=ExtResource("44_1tes7")]
 transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 51.07096, 0.7647941, -9.905556)
