@@ -4,6 +4,7 @@
 
 [node name="SceneManager" type="Node" unique_id=2134491783]
 script = ExtResource("1_ok1n6")
+show_scene_label = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1016609709]
 process_mode = 3

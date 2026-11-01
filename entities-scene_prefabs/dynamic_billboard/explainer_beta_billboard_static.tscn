@@ -1,0 +1,240 @@
+[gd_scene format=3 uid="uid://t570i75mlu23"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oo5qn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_npui3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x78ms"]
+
+[sub_resource type="FontVariation" id="FontVariation_exeic"]
+variation_embolden = 1.1
+
+[sub_resource type="LabelSettings" id="LabelSettings_x78ms"]
+font = SubResource("FontVariation_exeic")
+font_size = 24
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2skg7"]
+albedo_color = Color(0.0046554036, 0.0046554036, 0.0046554008, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_c8sum"]
+material = SubResource("StandardMaterial3D_2skg7")
+size = Vector3(2.0616455, 2.7622375, 0.6833459)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_fqhjp"]
+viewport_path = NodePath("SubViewportContainer/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_exeic"]
+resource_local_to_scene = true
+transparency = 1
+albedo_texture = SubResource("ViewportTexture_fqhjp")
+albedo_texture_force_srgb = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_3e5oy"]
+size = Vector2(2.024, 2.693)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3e5oy"]
+size = Vector3(2.346344, 3.0125732, 1.0959167)
+
+[node name="BetaExplainerBillboard" type="StaticBody3D" unique_id=880058378]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=20948954]
+unique_name_in_owner = true
+visibility_layer = 8
+custom_minimum_size = Vector2(500, 500)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+mouse_filter = 2
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1117127809]
+unique_name_in_owner = true
+transparent_bg = true
+handle_input_locally = false
+canvas_item_default_texture_filter = 3
+gui_disable_input = true
+canvas_cull_mask = 4293918721
+size = Vector2i(685, 711)
+render_target_update_mode = 4
+
+[node name="BillboardDisplay" type="PanelContainer" parent="SubViewportContainer/SubViewport" unique_id=869878753]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_right = 1.8730001
+anchor_bottom = 1.0
+offset_right = -562.0051
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_oo5qn")
+
+[node name="MarginContainer" type="MarginContainer" parent="SubViewportContainer/SubViewport/BillboardDisplay" unique_id=280433215]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer" unique_id=2132736716]
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_npui3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_x78ms")
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="ScrollContents" type="VBoxContainer" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer" unique_id=1036862562]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="GridContainer" type="GridContainer" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents" unique_id=1792091472]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_constants/h_separation = 12
+theme_override_constants/v_separation = 12
+
+[node name="Label" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1521766744]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+text = "This panel will say some setup information about the game."
+label_settings = SubResource("LabelSettings_x78ms")
+
+[node name="Label2" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1126279996]
+custom_minimum_size = Vector2(650, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+text = "It's currently placeholder."
+label_settings = SubResource("LabelSettings_x78ms")
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=941953220]
+custom_minimum_size = Vector2(650, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+text = "Text will be written as another commit."
+label_settings = SubResource("LabelSettings_x78ms")
+autowrap_mode = 2
+
+[node name="Label4" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=173337102]
+custom_minimum_size = Vector2(650, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+label_settings = SubResource("LabelSettings_x78ms")
+autowrap_mode = 2
+
+[node name="Label5" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1318691477]
+custom_minimum_size = Vector2(650, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+text = "The above should skip a line."
+label_settings = SubResource("LabelSettings_x78ms")
+autowrap_mode = 2
+
+[node name="Label6" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1977083314]
+custom_minimum_size = Vector2(650, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+text = "This one intentionally does not scroll."
+label_settings = SubResource("LabelSettings_x78ms")
+autowrap_mode = 2
+
+[node name="Label7" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1651769846]
+custom_minimum_size = Vector2(650, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+text = "If this box has to scroll that's a sign I wrote too much."
+label_settings = SubResource("LabelSettings_x78ms")
+autowrap_mode = 2
+
+[node name="Label8" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=51963192]
+custom_minimum_size = Vector2(650, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+text = "Last line of the text is here"
+label_settings = SubResource("LabelSettings_x78ms")
+autowrap_mode = 2
+
+[node name="ScrollSeparator" type="HSeparator" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents" unique_id=1694840300]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 200
+
+[node name="screenbacking" type="MeshInstance3D" parent="." unique_id=681587984]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00667727, 1.5008271, -0.5798372)
+mesh = SubResource("BoxMesh_c8sum")
+
+[node name="screenmesh" type="MeshInstance3D" parent="screenbacking" unique_id=697465555]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0.34950086)
+material_override = SubResource("StandardMaterial3D_exeic")
+mesh = SubResource("PlaneMesh_3e5oy")
+
+[node name="BaseStructure" type="CSGBox3D" parent="." unique_id=1124600872]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0052490234, 1.486291, -0.46647388)
+size = Vector3(2.141, 2.876005, 1.0295156)
+
+[node name="Remover" type="CSGBox3D" parent="BaseStructure" unique_id=2067533379]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.051742554, -0.34539223, 0.53101826)
+operation = 2
+size = Vector3(2.5126038, 3.8645668, 0.9114399)
+
+[node name="CylinderBottom" type="CSGCylinder3D" parent="BaseStructure" unique_id=1275064131]
+transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, -4.371139e-08, 1.9106855e-15, 0.0034814477, -1.4417367, 0.15859127)
+radius = 0.099
+height = 2.157
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="BaseStructure/CylinderBottom" unique_id=1620167487]
+transform = Transform3D(-4.371139e-08, 2.1175824e-22, 1, -1, -4.371139e-08, -4.371139e-08, 4.371139e-08, -1, 1.9106853e-15, -0.06514561, -0.018901996, 0.0958069)
+operation = 2
+size = Vector3(2.524414, 0.19617462, 0.7390137)
+
+[node name="CylinderTop" type="CSGCylinder3D" parent="BaseStructure" unique_id=592672103]
+transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, -4.371139e-08, 1.9106855e-15, -0.00032806396, 1.4351879, 0.1614896)
+radius = 0.099
+height = 2.14
+
+[node name="CSGBox3D" type="CSGBox3D" parent="BaseStructure/CylinderTop" unique_id=1255003492]
+transform = Transform3D(1, 0, 0, 0, 1, -8.351872e-23, 0, -8.351872e-23, 1, -0.028320313, 0.026489312, -0.084347725)
+operation = 2
+size = Vector3(0.60498047, 2.454834, 0.1640644)
+
+[node name="CylinderLeft" type="CSGCylinder3D" parent="BaseStructure" unique_id=577204409]
+transform = Transform3D(1.9106857e-15, 8.742278e-08, 1, -4.371139e-08, -1, 8.742278e-08, 1, -4.371139e-08, 1.9106855e-15, -1.0701187, -0.0005272627, 0.16176903)
+radius = 0.099
+height = 2.863
+
+[node name="CSGBox3D" type="CSGBox3D" parent="BaseStructure/CylinderLeft" unique_id=81120532]
+transform = Transform3D(1, 0, 0, 0, 1, -8.351872e-23, 0, -8.3518705e-23, 1, -0.049865752, 0.019720197, -0.12300825)
+operation = 2
+size = Vector3(0.58483887, 3.1422386, 0.24765015)
+
+[node name="CylinderRight" type="CSGCylinder3D" parent="BaseStructure" unique_id=2064017303]
+transform = Transform3D(1.9106857e-15, 8.742278e-08, 1, -4.371139e-08, -1, 8.742278e-08, 1, -4.371139e-08, 1.9106855e-15, 1.0689284, -0.00017631054, 0.16176903)
+radius = 0.099
+height = 2.875
+
+[node name="CSGBox3D" type="CSGBox3D" parent="BaseStructure/CylinderRight" unique_id=1221327124]
+transform = Transform3D(1, 0, 0, 0, 1, -8.351872e-23, 0, -8.3518705e-23, 1, -0.007827759, -0.007019043, 0.083969116)
+operation = 2
+size = Vector3(0.62802124, 3.041626, 0.1668396)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1541798435]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01499939, 1.4862814, -0.5240714)
+shape = SubResource("BoxShape3D_3e5oy")
