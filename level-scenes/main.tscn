@@ -112,6 +112,7 @@
 [ext_resource type="PackedScene" uid="uid://byown3kkcxwo5" path="res://models/tank_rampage/hero_tank.glb" id="85_4sa00"]
 [ext_resource type="PackedScene" uid="uid://52ka55orxurd" path="res://models/spy_boat/river-spy-boat.tscn" id="86_6v162"]
 [ext_resource type="PackedScene" uid="uid://bm2wbkt7ruwa8" path="res://models/talon_solitaire/suit-symbols.tscn" id="87_a8cb6"]
+[ext_resource type="AudioStream" uid="uid://ck68qlw513bd8" path="res://audio/dev-pods-game-song-clips-with-credits/Bex Rodriguez- Lava Guardian (Shin and the Guardians).ogg" id="91_n7nlf"]
 [ext_resource type="Texture2D" uid="uid://617n524ayda3" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/shin.png" id="91_ojj62"]
 [ext_resource type="Shape3D" uid="uid://rlithvvr27jx" path="res://models/boundary_collider_shape_3d.tres" id="91_ypkhb"]
 [ext_resource type="Texture2D" uid="uid://ctshxydcc7r8d" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/shin-logo.png" id="92_n7nlf"]
@@ -808,6 +809,9 @@ transform = Transform3D(-0.36687073, 0, 0.930272, 0, 1, 0, -0.930272, 0, -0.3668
 [node name="Taxi_vox" type="MeshInstance3D" parent="Outdoors with Portal Taxi" unique_id=1145635676]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.59498, -2.981409, -51.54486)
 mesh = ExtResource("66_fof07")
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="Outdoors with Portal Taxi/Taxi_vox" unique_id=201120635]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 2, 0)
 
 [node name="road" type="Node3D" parent="Outdoors with Portal Taxi" unique_id=537745292]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.5, 0, -32)
@@ -2462,6 +2466,7 @@ Arjuna Gonzales: Icicle material and meshes
 Connor Fitzpatrick: Sounds for Lava Guardian and impacts 
 
 Dalton Charleston: Added magic attribute"
+ost = ExtResource("91_n7nlf")
 painting_texture = ExtResource("91_ojj62")
 button_texture = ExtResource("92_n7nlf")
 

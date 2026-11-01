@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ck68qlw513bd8"
+path="res://.godot/imported/Bex Rodriguez- Lava Guardian (Shin and the Guardians).ogg-c360052940d84f9f812b5a00f12cf9fd.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/dev-pods-game-song-clips-with-credits/Bex Rodriguez- Lava Guardian (Shin and the Guardians).ogg"
+dest_files=["res://.godot/imported/Bex Rodriguez- Lava Guardian (Shin and the Guardians).ogg-c360052940d84f9f812b5a00f12cf9fd.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
