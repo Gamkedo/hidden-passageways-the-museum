@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://dcc61tpq1fj78"]
+
+[ext_resource type="Material" uid="uid://jewsytoaigtp" path="res://materials/modern-museum/baseboard-trim.tres" id="1_yw013"]
+
+[node name="baseboard-trim-upstairs" type="CSGBox3D" unique_id=1543233206]
+material_override = ExtResource("1_yw013")
+size = Vector3(32, 0.25, 0.125)
+
+[node name="baseboard-trim2" type="CSGBox3D" parent="." unique_id=1421871054]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15.913708, 0, -4.244568)
+material_override = ExtResource("1_yw013")
+size = Vector3(8.5, 0.25, 0.125)
+
+[node name="baseboard-trim6" type="CSGBox3D" parent="." unique_id=1203770073]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -15.945858, 0, -4.294567)
+material_override = ExtResource("1_yw013")
+size = Vector3(8.46, 0.25, 0.125)
+
+[node name="baseboard-trim7" type="CSGBox3D" parent="." unique_id=1956691621]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -15.945858, 0, -20.20065)
+material_override = ExtResource("1_yw013")
+size = Vector3(9.32, 0.25, 0.125)
+
+[node name="baseboard-trim11" type="CSGBox3D" parent="." unique_id=1778834550]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -49.937645, 0, -11.520649)
+material_override = ExtResource("1_yw013")
+size = Vector3(24.939999, 0.25, 0.125)
+
+[node name="baseboard-trim8" type="CSGBox3D" parent="." unique_id=801478159]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -18.075857, 0, -20.20065)
+material_override = ExtResource("1_yw013")
+size = Vector3(9.32, 0.25, 0.125)
+
+[node name="baseboard-trim9" type="CSGBox3D" parent="." unique_id=618123561]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -18.075857, 0, -3.7906494)
+material_override = ExtResource("1_yw013")
+size = Vector3(9.48, 0.25, 0.125)
+
+[node name="baseboard-trim3" type="CSGBox3D" parent="." unique_id=1444919234]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15.913708, 0, -20.244568)
+material_override = ExtResource("1_yw013")
+size = Vector3(9.5, 0.25, 0.125)
+
+[node name="baseboard-trim4" type="CSGBox3D" parent="." unique_id=1939874187]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.67371, 0, -24.919567)
+material_override = ExtResource("1_yw013")
+size = Vector3(14.36, 0.25, 0.125)
+
+[node name="baseboard-trim5" type="CSGBox3D" parent="." unique_id=2013377209]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -8.758291, 0, -24.919567)
+material_override = ExtResource("1_yw013")
+size = Vector3(14.49, 0.25, 0.125)
+
+[node name="baseboard-trim10" type="CSGBox3D" parent="." unique_id=527429788]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -34.06857, 0, -24.05893)
+material_override = ExtResource("1_yw013")
+size = Vector3(31.849998, 0.25, 0.125)
+
+[node name="baseboard-trim12" type="CSGBox3D" parent="." unique_id=76036203]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -25.07357, 0, 0.8874016)
+material_override = ExtResource("1_yw013")
+size = Vector3(13.86, 0.25, 0.125)
+
+[node name="baseboard-trim13" type="CSGBox3D" parent="." unique_id=75772864]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -43.443573, 0, 0.8874016)
+material_override = ExtResource("1_yw013")
+size = Vector3(12.86, 0.25, 0.125)

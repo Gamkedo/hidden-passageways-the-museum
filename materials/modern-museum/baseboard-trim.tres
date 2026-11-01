@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://jewsytoaigtp"]
+
+[ext_resource type="Texture2D" uid="uid://cjceonk0dpowd" path="res://textures/grand-rapids-concrete-normal.jpg" id="1_jixtu"]
+
+[resource]
+albedo_color = Color(0.88664484, 0.7689142, 0.71342856, 1)
+normal_enabled = true
+normal_scale = 0.5
+normal_texture = ExtResource("1_jixtu")
+uv1_offset = Vector3(0, 1.235, -0.09)
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv2_world_triplanar = true
