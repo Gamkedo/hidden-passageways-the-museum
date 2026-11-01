@@ -40,8 +40,10 @@
 [ext_resource type="Texture2D" uid="uid://c7fd2ik3j7hr5" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/legend-of-shadowtail.jpg" id="28_3tvjp"]
 [ext_resource type="PackedScene" uid="uid://bvln0oll5ttp0" path="res://entities-scene_prefabs/ionic_column.tscn" id="28_er4o0"]
 [ext_resource type="AudioStream" uid="uid://udd16tjp78tl" path="res://audio/dev-pods-game-song-clips-with-credits/Aaron Sherman - Gladiator Battle March (Gladiator of the Golden House).ogg" id="28_g614b"]
+[ext_resource type="PackedScene" uid="uid://dcc61tpq1fj78" path="res://environment-csg/baseboard_trim_upstairs.tscn" id="29_jkqo2"]
 [ext_resource type="Texture2D" uid="uid://cwc2oqi14kgm2" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/legend-of-shadowtail-logo.png" id="29_xh8e5"]
 [ext_resource type="Texture2D" uid="uid://cq0kjracafggb" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/king-arthur.jpg" id="30_e37vr"]
+[ext_resource type="PackedScene" uid="uid://bbixyhvt4oexm" path="res://environment-csg/baseboard_trim_downstairs.tscn" id="30_kh8wp"]
 [ext_resource type="PackedScene" uid="uid://cqq8q3sgrg35b" path="res://ui/guidebook.tscn" id="30_nw8jh"]
 [ext_resource type="Texture2D" uid="uid://rroay42y61vb" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/king-arthur-logo.png" id="31_6mvr8"]
 [ext_resource type="AudioStream" uid="uid://bcadx5lqnxj16" path="res://audio/dev-pods-game-song-clips-with-credits/Aaron Sherman - Main Theme (Legend of Shadowtail).ogg" id="31_dmq1t"]
@@ -389,36 +391,36 @@ material = ExtResource("7_3lbo0")
 size = Vector2(10.380006, 10.380006)
 orientation = 1
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_uuxwg"]
-viewport_path = NodePath("../SubViewport")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g3mf8"]
-resource_local_to_scene = true
-resource_name = "Pages"
-transparency = 1
-albedo_texture = SubResource("ViewportTexture_uuxwg")
-roughness = 0.8
-texture_filter = 5
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_jkqo2"]
-viewport_path = NodePath("../../Guidebook3d/SubViewport")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kh8wp"]
-resource_local_to_scene = true
-resource_name = "Pages"
-transparency = 1
-albedo_texture = SubResource("ViewportTexture_jkqo2")
-roughness = 0.8
-texture_filter = 5
-
 [sub_resource type="ViewportTexture" id="ViewportTexture_m4x27"]
-viewport_path = NodePath("../../Guidebook3d/SubViewport")
+viewport_path = NodePath("../SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vq06m"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
 albedo_texture = SubResource("ViewportTexture_m4x27")
+roughness = 0.8
+texture_filter = 5
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_tdylj"]
+viewport_path = NodePath("../../Guidebook3d/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3djdl"]
+resource_local_to_scene = true
+resource_name = "Pages"
+transparency = 1
+albedo_texture = SubResource("ViewportTexture_tdylj")
+roughness = 0.8
+texture_filter = 5
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ae2tv"]
+viewport_path = NodePath("../../Guidebook3d/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ym0uh"]
+resource_local_to_scene = true
+resource_name = "Pages"
+transparency = 1
+albedo_texture = SubResource("ViewportTexture_ae2tv")
 roughness = 0.8
 texture_filter = 5
 
@@ -992,6 +994,12 @@ use_collision = true
 size = Vector3(24, 2.5, 1)
 
 [node name="Modern Musem (Dev Pods era Games)" type="Node3D" parent="." unique_id=966479255]
+
+[node name="baseboard-trim-upstairs" parent="Modern Musem (Dev Pods era Games)" unique_id=1543233206 instance=ExtResource("29_jkqo2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.01, -0.85, 45.03)
+
+[node name="baseboard-trim-downstairs" parent="Modern Musem (Dev Pods era Games)" unique_id=778377758 instance=ExtResource("30_kh8wp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.01, -10.8, 45.03)
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="Modern Musem (Dev Pods era Games)" unique_id=325514509]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 15)
@@ -2573,42 +2581,42 @@ size_2d_override = Vector2i(512, 512)
 
 [node name="guidebook" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d" unique_id=1630787135 instance=ExtResource("31_oa8v2")]
 
-[node name="Book" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook" index="0" unique_id=1404423609]
+[node name="Book" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook" index="0" unique_id=2009432074]
 layers = 6
 cast_shadow = 0
 
-[node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook" index="1" unique_id=691886567]
+[node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook" index="1" unique_id=2132904720]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_g3mf8")
+surface_material_override/0 = SubResource("StandardMaterial3D_vq06m")
 
 [node name="Guidebook3d2" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1034692829]
 transform = Transform3D(0.99572617, -6.976736e-08, 0.092355326, 0.07370379, 0.60259724, -0.79463464, -0.05565301, 0.7980456, 0.60002184, 0.33789635, 0.5955966, 0.11873436)
 
 [node name="guidebook" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2" unique_id=914161945 instance=ExtResource("31_oa8v2")]
 
-[node name="Book" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook" index="0" unique_id=1404423609]
+[node name="Book" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook" index="0" unique_id=2009432074]
 layers = 6
 cast_shadow = 0
 
-[node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook" index="1" unique_id=691886567]
+[node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook" index="1" unique_id=2132904720]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_kh8wp")
+surface_material_override/0 = SubResource("StandardMaterial3D_3djdl")
 
 [node name="Guidebook3d3" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1679212863]
 transform = Transform3D(-0.9742656, -0.12668496, -0.18643428, 0.14209789, -0.98725104, -0.07172081, -0.1749714, -0.0963671, 0.979846, -0.58836937, 0.5955966, 0.11873436)
 
 [node name="guidebook" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3" unique_id=962682289 instance=ExtResource("31_oa8v2")]
 
-[node name="Book" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3/guidebook" index="0" unique_id=1404423609]
+[node name="Book" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3/guidebook" index="0" unique_id=2009432074]
 layers = 6
 cast_shadow = 0
 
-[node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3/guidebook" index="1" unique_id=691886567]
+[node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3/guidebook" index="1" unique_id=2132904720]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_vq06m")
+surface_material_override/0 = SubResource("StandardMaterial3D_ym0uh")
 
 [node name="Label3D" type="Label3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1183973093]
 transform = Transform3D(0.24000001, 0, 0, 0, 0.24000001, 0, 0, 0, 0.24000001, -0.07500076, 0.61191887, -0.31499863)
