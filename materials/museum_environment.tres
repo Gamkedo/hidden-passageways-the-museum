@@ -4,7 +4,7 @@
 background_mode = 1
 background_color = Color(0.9371089, 0.6484833, 0.71507955, 1)
 ambient_light_source = 2
-ambient_light_color = Color(0.39308554, 0.39308548, 0.39308557, 1)
+ambient_light_color = Color(0.32544068, 0.32544097, 0.32544082, 1)
 ambient_light_sky_contribution = 0.0
 reflected_light_source = 1
 tonemap_mode = 3

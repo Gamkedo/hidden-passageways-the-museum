@@ -1003,6 +1003,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 8, 20)
 [node name="reflective-window3" parent="Modern Musem (Dev Pods era Games)" unique_id=784202083 instance=ExtResource("16_bbunl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 8, 20)
 
+[node name="reflective-window9" parent="Modern Musem (Dev Pods era Games)" unique_id=467278091 instance=ExtResource("16_bbunl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 112, 19.25, -1)
+
+[node name="reflective-window10" parent="Modern Musem (Dev Pods era Games)" unique_id=1749860418 instance=ExtResource("16_bbunl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 102, 19.25, -1)
+
+[node name="reflective-window11" parent="Modern Musem (Dev Pods era Games)" unique_id=1932778104 instance=ExtResource("16_bbunl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 92, 19.25, -1)
+
 [node name="reflective-window4" parent="Modern Musem (Dev Pods era Games)" unique_id=814285382 instance=ExtResource("16_bbunl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 30, 24)
 
@@ -2665,6 +2674,12 @@ material = SubResource("StandardMaterial3D_ifpan")
 [node name="cyndrive_ships_silo" parent="Modern Musem (Dev Pods era Games)/Cyndrive Ships/CyndriveShipsProps/CSGSphere3D" unique_id=2090904946 instance=ExtResource("2_pw8xm")]
 transform = Transform3D(-0.33161744, -0.943414, 0, 0.943414, -0.33161744, 0, 0, 0, 1, 6.9265213, 2.024488, -0.41749775)
 
+[node name="SpotLight3D" type="SpotLight3D" parent="Modern Musem (Dev Pods era Games)/Cyndrive Ships/CyndriveShipsProps/CSGSphere3D" unique_id=1517274787]
+transform = Transform3D(-0.008518517, -0.25000006, 0.9682084, 0.06698731, 0.9659259, 0.25000006, -0.99771756, 0.066987306, 0.008518575, -3.75, -1, 0)
+light_color = Color(0.99999994, 0.84133786, 0.45285916, 1)
+light_energy = 10.663
+spot_range = 25.0
+
 [node name="cyndrive_ships_silo_door" parent="Modern Musem (Dev Pods era Games)/Cyndrive Ships/CyndriveShipsProps" unique_id=275706413 instance=ExtResource("3_ufbb7")]
 transform = Transform3D(-0.33161744, -0.943414, 0, 0.943414, -0.33161744, 0, 0, 0, 1, -10.071716, 5.724245, 1.7644169)
 
@@ -2675,7 +2690,7 @@ transform = Transform3D(0.19570023, -0.5234592, 0.82927185, 0.7060881, 0.6620440
 transform = Transform3D(-0.5831673, -0.26127842, 0.7691874, 0.17798519, 0.88276315, 0.43479955, -0.7926141, 0.39046472, -0.46829504, -54.779503, 3.3158083, 6.336237)
 
 [node name="cyndrive_ships_ship3" parent="Modern Musem (Dev Pods era Games)/Cyndrive Ships/CyndriveShipsProps" unique_id=1835317036 instance=ExtResource("2_5t06w")]
-transform = Transform3D(-0.1531148, 0.14279057, 0.9778378, -0.40671447, 0.89270943, -0.19404496, -0.90063244, -0.42741174, -0.07861219, -51.033752, 9.490594, 1.3237553)
+transform = Transform3D(-0.1531148, 0.14279057, 0.9778378, -0.40671447, 0.89270943, -0.19404496, -0.90063244, -0.42741174, -0.07861219, -51.033752, 8.740594, 1.3237553)
 
 [node name="cyndrive_ships_carrier" parent="Modern Musem (Dev Pods era Games)/Cyndrive Ships/CyndriveShipsProps" unique_id=1723915703 instance=ExtResource("3_rlpi5")]
 transform = Transform3D(-1.965, 0, 2.9670676e-07, 0, 1.965, 0, -2.9670676e-07, 0, -1.965, -34.257263, -8.899204, 7.0070744)
@@ -2702,7 +2717,8 @@ size = Vector3(16, 0.1, 8)
 material = ExtResource("104_g8gvm")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)/Overhang/Lighting" unique_id=1787091647]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.25, 0)
+light_energy = 6.0
 omni_range = 16.0
 
 [node name="OverhangSupport" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)/Overhang" unique_id=1871187180]
@@ -3075,8 +3091,33 @@ size = Vector3(54, 32, 16)
 material = ExtResource("9_4h42u")
 
 [node name="concrete-block2" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=767762721]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 3, 11.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 3, 12.125)
+size = Vector3(14, 16, 26.25)
+material = ExtResource("9_4h42u")
+
+[node name="concrete-block12" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=1079275554]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 9, 30.625)
+size = Vector3(14, 4, 26.25)
+material = ExtResource("9_4h42u")
+
+[node name="concrete-block10" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=1714731774]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 3, 55)
 size = Vector3(14, 16, 25)
+material = ExtResource("9_4h42u")
+
+[node name="concrete-block8" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=964161978]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88.95, 3, 9)
+size = Vector3(64, 16, 20)
+material = ExtResource("9_4h42u")
+
+[node name="concrete-block11" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=1815166633]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 109.95, 3, 37.031845)
+size = Vector3(22, 16, 36)
+material = ExtResource("9_4h42u")
+
+[node name="concrete-block9" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=1601809808]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72.95, 3, 65)
+size = Vector3(96, 16, 20)
 material = ExtResource("9_4h42u")
 
 [node name="building foundations" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=1211459562]
@@ -3085,8 +3126,8 @@ size = Vector3(35, 4, 30)
 material = ExtResource("9_4h42u")
 
 [node name="concrete-block3" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=1673552905]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 21, 22.5)
-size = Vector3(14, 20, 47)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82, 21, 37)
+size = Vector3(78, 20, 76)
 material = ExtResource("9_4h42u")
 
 [node name="concrete-block5" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=934266326]
