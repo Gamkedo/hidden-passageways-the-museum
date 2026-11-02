@@ -393,36 +393,36 @@ material = ExtResource("7_3lbo0")
 size = Vector2(10.380006, 10.380006)
 orientation = 1
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_vq06m"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_m4x27"]
 viewport_path = NodePath("../SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tdylj"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vq06m"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_vq06m")
+albedo_texture = SubResource("ViewportTexture_m4x27")
 roughness = 0.8
 texture_filter = 5
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_3djdl"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_tdylj"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ae2tv"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3djdl"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_3djdl")
+albedo_texture = SubResource("ViewportTexture_tdylj")
 roughness = 0.8
 texture_filter = 5
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_ym0uh"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_ae2tv"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jr1oq"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ym0uh"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_ym0uh")
+albedo_texture = SubResource("ViewportTexture_ae2tv")
 roughness = 0.8
 texture_filter = 5
 
@@ -472,7 +472,7 @@ directional_shadow_split_1 = 0.2
 directional_shadow_max_distance = 80.0
 
 [node name="clouds" parent="Environment" unique_id=797589118 instance=ExtResource("63_iit47")]
-transform = Transform3D(256, 0, 0, 0, 256, 0, 0, 0, 256, 0, 52, 0)
+transform = Transform3D(256, 0, 0, 0, 256, 0, 0, 0, 256, 0, 156.715, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Environment" unique_id=1183794555]
 environment = ExtResource("2_gbu3n")
@@ -2612,7 +2612,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook" index="1" unique_id=2132904720]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_tdylj")
+surface_material_override/0 = SubResource("StandardMaterial3D_vq06m")
 
 [node name="Guidebook3d2" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1034692829]
 transform = Transform3D(0.99572617, -6.976736e-08, 0.092355326, 0.07370379, 0.60259724, -0.79463464, -0.05565301, 0.7980456, 0.60002184, 0.33789635, 0.5955966, 0.11873436)
@@ -2626,7 +2626,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook" index="1" unique_id=2132904720]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_ae2tv")
+surface_material_override/0 = SubResource("StandardMaterial3D_3djdl")
 
 [node name="Guidebook3d3" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1679212863]
 transform = Transform3D(-0.9742656, -0.12668496, -0.18643428, 0.14209789, -0.98725104, -0.07172081, -0.1749714, -0.0963671, 0.979846, -0.58836937, 0.5955966, 0.11873436)
@@ -2640,7 +2640,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3/guidebook" index="1" unique_id=2132904720]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_jr1oq")
+surface_material_override/0 = SubResource("StandardMaterial3D_ym0uh")
 
 [node name="Label3D" type="Label3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1183973093]
 transform = Transform3D(0.24000001, 0, 0, 0, 0.24000001, 0, 0, 0, 0.24000001, -0.07500076, 0.61191887, -0.31499863)
@@ -3170,6 +3170,41 @@ material = ExtResource("9_4h42u")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 43, 36.5)
 size = Vector3(16, 24, 54)
 material = ExtResource("9_4h42u")
+
+[node name="trim" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=1644281976]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81.857765, 31, -1)
+size = Vector3(78.25, 0.5, 0.5)
+material = ExtResource("105_l8pru")
+
+[node name="trim2" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=371632308]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.982765, 63, 21.5)
+size = Vector3(54, 0.5, 0.5)
+material = ExtResource("105_l8pru")
+
+[node name="trim3" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=1674996995]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.857765, 55, 9.5)
+size = Vector3(16.25, 0.5, 0.5)
+material = ExtResource("105_l8pru")
+
+[node name="trim4" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=605850176]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.357765, 16, 0)
+size = Vector3(31.25, 0.5, 0.5)
+material = ExtResource("105_l8pru")
+
+[node name="trim5" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=566054537]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.982765, 16, 12.5)
+size = Vector3(24.5, 0.5, 0.5)
+material = ExtResource("105_l8pru")
+
+[node name="trim6" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=1412269007]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 42.982765, 31, 4.5)
+size = Vector3(10.5, 0.5, 0.5)
+material = ExtResource("105_l8pru")
+
+[node name="trim7" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=582240906]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 39.982765, 55, 15.5)
+size = Vector3(11.5, 0.5, 0.5)
+material = ExtResource("105_l8pru")
 
 [node name="concrete-block4" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=132046478]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 11, 17.5)

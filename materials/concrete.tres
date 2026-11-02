@@ -5,6 +5,7 @@
 
 [resource]
 albedo_texture = ExtResource("1_ek8mu")
+metallic_specular = 0.06
 normal_enabled = true
 normal_scale = 0.25
 normal_texture = ExtResource("2_5atok")

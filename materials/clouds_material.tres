@@ -6,6 +6,9 @@
 transparency = 1
 depth_draw_mode = 2
 shading_mode = 0
-albedo_color = Color(1, 1, 1, 0.1882353)
+disable_ambient_light = true
+disable_specular_occlusion = true
+albedo_color = Color(1, 1, 1, 0.3137255)
 albedo_texture = ExtResource("1_qpddx")
 uv1_scale = Vector3(4, 1, 1)
+disable_receive_shadows = true
