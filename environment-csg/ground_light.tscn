@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cv1jka2xois77"]
+
+[ext_resource type="Material" uid="uid://dfcjs6h611xnr" path="res://materials/concrete-dark.tres" id="1_1fm3t"]
+[ext_resource type="Material" uid="uid://gatwpkkuaqht" path="res://materials/emissive_white.tres" id="2_ikase"]
+[ext_resource type="Texture2D" uid="uid://bn2kdxt3mxoqc" path="res://textures/fake-spotlight-cone.png" id="3_gsj2c"]
+
+[node name="ground-light" type="CSGCombiner3D" unique_id=1073622775]
+
+[node name="light-box" type="CSGBox3D" parent="." unique_id=1110978998]
+size = Vector3(2, 1, 1)
+material = ExtResource("1_1fm3t")
+
+[node name="light-lens" type="CSGBox3D" parent="." unique_id=1582731285]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, -0.70710677, 0, 0.70710677, 0.70710677, 0, 0.375, 0.375)
+operation = 2
+size = Vector3(1.5, 0.75, 1.25)
+material = ExtResource("2_ikase")
+
+[node name="light-glow" type="Sprite3D" parent="." unique_id=2098394119]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 10.5, 0.5)
+modulate = Color(1, 1, 1, 0.5019608)
+texture = ExtResource("3_gsj2c")
