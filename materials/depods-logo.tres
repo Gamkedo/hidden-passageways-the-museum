@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bhwvi7orkued"]
+
+[ext_resource type="Texture2D" uid="uid://bg6kk712dgv8i" path="res://textures/devpods-logo-512px.png" id="1_2arbd"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("1_2arbd")
