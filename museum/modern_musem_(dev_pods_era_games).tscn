@@ -1,0 +1,2649 @@
+[gd_scene format=3 uid="uid://5vc6vwlbr7f4"]
+
+[ext_resource type="PackedScene" uid="uid://dcc61tpq1fj78" path="res://environment-csg/baseboard_trim_upstairs.tscn" id="1_mx7q1"]
+[ext_resource type="PackedScene" uid="uid://bbixyhvt4oexm" path="res://environment-csg/baseboard_trim_downstairs.tscn" id="2_gld58"]
+[ext_resource type="PackedScene" uid="uid://iwllc1880c7i" path="res://entities-scene_prefabs/reflective_window.tscn" id="3_2mcrd"]
+[ext_resource type="Material" uid="uid://ueafojuqehx8" path="res://materials/under_construction_stripes_3d.tres" id="4_merh8"]
+[ext_resource type="PackedScene" uid="uid://cpdw8d15t73f1" path="res://entities-scene_prefabs/dynamic_billboard/credits_billboard.tscn" id="5_4llkp"]
+[ext_resource type="PackedScene" uid="uid://ccmjewtcqxp7" path="res://models/legend_of_shadowtails_ratrick_mesh.glb" id="6_7jbu7"]
+[ext_resource type="Script" uid="uid://cm6176wsxfdqx" path="res://entities-scene_prefabs/auto-tracklight.gd" id="7_a6nsd"]
+[ext_resource type="Material" uid="uid://31x6objnfjff" path="res://materials/modern-museum/museum-modern-exterior-gray.tres" id="8_f6sx0"]
+[ext_resource type="Material" uid="uid://2cfu7bky27vv" path="res://models/tank_rampage/barrel_material.tres" id="9_b1j77"]
+[ext_resource type="Material" uid="uid://gatwpkkuaqht" path="res://materials/emissive_white.tres" id="10_7srx2"]
+[ext_resource type="Material" uid="uid://biecmslvyaivk" path="res://materials/spotlight-decal_crossfade.tres" id="11_q6te8"]
+[ext_resource type="Material" uid="uid://bj8ho62a7oj07" path="res://materials/spotlight-decal.tres" id="12_72cuj"]
+[ext_resource type="Material" uid="uid://cf52fvd2ucb8h" path="res://materials/light-shaft.tres" id="13_wblb2"]
+[ext_resource type="Material" uid="uid://dfcjs6h611xnr" path="res://materials/concrete-dark.tres" id="14_3s7go"]
+[ext_resource type="PackedScene" uid="uid://dbngi8xk7go57" path="res://models/tank_rampage_command_marine.tscn" id="15_1rync"]
+[ext_resource type="Script" uid="uid://78d2xtti3yje" path="res://level-scenes/tween-off-on-screen.gd" id="16_276hy"]
+[ext_resource type="PackedScene" uid="uid://coqvyei5w8brk" path="res://game wall pictures/frame_button_credits.tscn" id="17_x11aa"]
+[ext_resource type="AudioStream" uid="uid://udd16tjp78tl" path="res://audio/dev-pods-game-song-clips-with-credits/Aaron Sherman - Gladiator Battle March (Gladiator of the Golden House).ogg" id="18_a6053"]
+[ext_resource type="Texture2D" uid="uid://cpakvdnl3rxxa" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/gladiator-framed-pic.png" id="19_s820s"]
+[ext_resource type="Texture2D" uid="uid://dlft5rt3mgqhu" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/gladiator-of-the-golden-house.png" id="20_jp4dl"]
+[ext_resource type="AudioStream" uid="uid://bcadx5lqnxj16" path="res://audio/dev-pods-game-song-clips-with-credits/Aaron Sherman - Main Theme (Legend of Shadowtail).ogg" id="21_hkh56"]
+[ext_resource type="Texture2D" uid="uid://c7fd2ik3j7hr5" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/legend-of-shadowtail.jpg" id="22_u2eft"]
+[ext_resource type="Texture2D" uid="uid://cwc2oqi14kgm2" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/legend-of-shadowtail-logo.png" id="23_mdhim"]
+[ext_resource type="AudioStream" uid="uid://c2b81yqtcl8ub" path="res://audio/dev-pods-game-song-clips-with-credits/Stephanie Urch - Battle (King Arthur Tales).ogg" id="24_tjh8j"]
+[ext_resource type="Texture2D" uid="uid://cq0kjracafggb" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/king-arthur.jpg" id="25_p4xyd"]
+[ext_resource type="Texture2D" uid="uid://rroay42y61vb" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/king-arthur-logo.png" id="26_rkafv"]
+[ext_resource type="AudioStream" uid="uid://1joa5jtgvlrt" path="res://audio/dev-pods-game-song-clips-with-credits/Philippe Vaillancourt - Psytrance (Cargo Bay 5N-AFU).ogg" id="27_amldi"]
+[ext_resource type="Texture2D" uid="uid://bmvx1q1vihola" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/cargo-bay.jpg" id="28_2us44"]
+[ext_resource type="Texture2D" uid="uid://cpqx7ayc50uyf" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/cargo-bay-logo.png" id="29_a06kk"]
+[ext_resource type="AudioStream" uid="uid://ct8od5avs1b33" path="res://audio/dev-pods-game-song-clips-with-credits/Michael Avrie - Whitecaps (Artillery Rampage).ogg" id="30_khn05"]
+[ext_resource type="Texture2D" uid="uid://bioro578cfmun" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/artillery-rampage.jpg" id="31_b66a0"]
+[ext_resource type="Texture2D" uid="uid://barv2ixgl1het" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/artillery-rampage-logo.png" id="32_w3s66"]
+[ext_resource type="AudioStream" uid="uid://dbwmu2gsso7ja" path="res://audio/dev-pods-game-song-clips-with-credits/Michael Avrie - Beepbox (Crash Em Up).ogg" id="33_vu1fe"]
+[ext_resource type="Texture2D" uid="uid://ctnimjcimfyxh" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/crash-em-up.jpg" id="34_7igj8"]
+[ext_resource type="Texture2D" uid="uid://bulyjthbproa8" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/crash-em-up-logo.png" id="35_ytct4"]
+[ext_resource type="AudioStream" uid="uid://ocxjig23e24y" path="res://audio/dev-pods-game-song-clips-with-credits/Bex Rodriguez - Menu (Crazy Arena Chaos).ogg" id="36_krjpe"]
+[ext_resource type="Texture2D" uid="uid://obmg5lc58s2p" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/crazy-arena-chaos.jpg" id="37_uwrvk"]
+[ext_resource type="Texture2D" uid="uid://c8fyjd7ayh1ev" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/crazy-arena-chaos-logo.png" id="38_2kobw"]
+[ext_resource type="AudioStream" uid="uid://bgo005k6svi6a" path="res://audio/dev-pods-game-song-clips-with-credits/Michael Avrie - Track 2 (Planets Mobile).ogg" id="39_qm64g"]
+[ext_resource type="Texture2D" uid="uid://dwwuk4176sunh" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/planets-mobile.jpg" id="40_4flnh"]
+[ext_resource type="Texture2D" uid="uid://e327qx4qygko" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/planets-mobile-logo.jpg" id="41_26c6d"]
+[ext_resource type="AudioStream" uid="uid://dxh7plstwdd5b" path="res://audio/dev-pods-game-song-clips-with-credits/roy_kinson - Track Two (Orbs and Dash).ogg" id="42_5yda5"]
+[ext_resource type="Texture2D" uid="uid://dqhu04rwu5fdg" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/orbs-and-dash.jpg" id="43_h8ix8"]
+[ext_resource type="Texture2D" uid="uid://dy7l45om1gq10" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/orbs-and-dash-logo.png" id="44_i0lgh"]
+[ext_resource type="AudioStream" uid="uid://1ajw7wunsygr" path="res://audio/dev-pods-game-song-clips-with-credits/Alan Zaring - Gameplay (Everchange).ogg" id="45_040qt"]
+[ext_resource type="Texture2D" uid="uid://b1m2453jobbf4" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/everchange.jpg" id="46_1j4k2"]
+[ext_resource type="Texture2D" uid="uid://cpuhv0o76rgxq" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/everchange-logo.png" id="47_oohrr"]
+[ext_resource type="AudioStream" uid="uid://cxbue64jgkwh0" path="res://audio/dev-pods-game-song-clips-with-credits/Christer Kaitila - Four Chords (Forgotten Road).ogg" id="48_r1oql"]
+[ext_resource type="Texture2D" uid="uid://jyvytmpf5ca" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/forgotten-road.jpg" id="49_vb2wh"]
+[ext_resource type="Texture2D" uid="uid://d2ukddaby0rut" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/forgotten-road-logo.png" id="50_2181a"]
+[ext_resource type="AudioStream" uid="uid://c2c2vt5cxengp" path="res://audio/dev-pods-game-song-clips-with-credits/Aaron Sherman - Bert Theme (Bert and the Wheel of Worlds).ogg" id="51_8o8bn"]
+[ext_resource type="Texture2D" uid="uid://b5o3g7kjuemj5" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/bert-and-wheel.jpg" id="52_pufyl"]
+[ext_resource type="Texture2D" uid="uid://cb5mmm0c7k2xt" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/bert-and-wheel-logo.png" id="53_gmrue"]
+[ext_resource type="AudioStream" uid="uid://g2kexalko4vr" path="res://audio/dev-pods-game-song-clips-with-credits/Christer Kaitila - Menu (Tank Rampage Command).ogg" id="54_pp8hb"]
+[ext_resource type="Texture2D" uid="uid://dva0hc06b7n7h" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/tank-rampage-commander.jpg" id="55_312t8"]
+[ext_resource type="Texture2D" uid="uid://b7s1xractov5f" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/tank-rampage-command-logo.png" id="56_7n21r"]
+[ext_resource type="AudioStream" uid="uid://dmecca328kwsu" path="res://audio/dev-pods-game-song-clips-with-credits/Bex Rodriguez - Gameplay (Supply and Siege).ogg" id="57_t5hd1"]
+[ext_resource type="Texture2D" uid="uid://hwjvmhp746ef" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/supply-and-siege.jpg" id="58_u63pl"]
+[ext_resource type="Texture2D" uid="uid://byq8juxdt0ic8" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/supply-and-siege-logos.png" id="59_qqwu2"]
+[ext_resource type="AudioStream" uid="uid://cml3pu6350wap" path="res://audio/dev-pods-game-song-clips-with-credits/Noah Wizard - Music (Talon Solitaire).ogg" id="60_6x7hh"]
+[ext_resource type="Texture2D" uid="uid://dl4nsrnik0fvo" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/talon.jpg" id="61_41pjn"]
+[ext_resource type="Texture2D" uid="uid://lbjxlnouyqxn" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/talon-logo.png" id="62_ddcsr"]
+[ext_resource type="AudioStream" uid="uid://bv6jsyr657hdv" path="res://audio/dev-pods-game-song-clips-with-credits/Christer Kaitila - Ambience A (Terminus 2k28).ogg" id="63_bf8a0"]
+[ext_resource type="Texture2D" uid="uid://bo7vj36g55lwr" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/terminus-2k28.jpg" id="64_4g4y1"]
+[ext_resource type="Texture2D" uid="uid://1b527eqk7abw" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/terminus-2k28-logo.png" id="65_5covn"]
+[ext_resource type="Texture2D" uid="uid://cvryfj8lmkalp" path="res://textures/under-construction.png" id="66_8a5gj"]
+[ext_resource type="AudioStream" uid="uid://ck68qlw513bd8" path="res://audio/dev-pods-game-song-clips-with-credits/Bex Rodriguez- Lava Guardian (Shin and the Guardians).ogg" id="67_jxhaq"]
+[ext_resource type="Texture2D" uid="uid://617n524ayda3" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/shin.png" id="68_s7xux"]
+[ext_resource type="Texture2D" uid="uid://ctshxydcc7r8d" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/shin-logo.png" id="69_pqqwr"]
+[ext_resource type="AudioStream" uid="uid://28ktijv6o2ht" path="res://audio/dev-pods-game-song-clips-with-credits/Philippe Vaillancourt - Big Beat (Cyndrive Ships).ogg" id="70_u1dlp"]
+[ext_resource type="Texture2D" uid="uid://cje4f1y0cfi1y" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/cyndrive.jpg" id="71_r6t1t"]
+[ext_resource type="Texture2D" uid="uid://dstjwenv8yej8" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/cyndrive-ships-logo.png" id="72_2wa24"]
+[ext_resource type="PackedScene" uid="uid://cd8pdqv5i631j" path="res://models/talon_solitaire/suit-tree.tscn" id="73_en2bh"]
+[ext_resource type="PackedScene" uid="uid://cqq8q3sgrg35b" path="res://ui/guidebook.tscn" id="74_a38tq"]
+[ext_resource type="PackedScene" uid="uid://cxl7h3vtvfn66" path="res://models/guidebook.gltf" id="75_2eec6"]
+[ext_resource type="Texture2D" uid="uid://2432776vq113" path="res://textures/play-button-stand.png" id="76_mhrks"]
+[ext_resource type="ArrayMesh" uid="uid://cm2soemey2m52" path="res://models/play-button-stand.obj" id="77_lldod"]
+[ext_resource type="PackedScene" uid="uid://d0hl0sude541s" path="res://level-scenes/basement_art_(misc_not_in_released_games).tscn" id="78_pjprh"]
+[ext_resource type="Material" uid="uid://b5j7a6q6jdkv5" path="res://materials/concrete.tres" id="79_no514"]
+[ext_resource type="PackedScene" uid="uid://bad4bwomkabyu" path="res://models/cyndrive_ships_silo.fbx" id="80_kqne6"]
+[ext_resource type="PackedScene" uid="uid://duy2brb5d32nn" path="res://models/cyndrive_ships_silo_door.fbx" id="81_ehrnj"]
+[ext_resource type="PackedScene" uid="uid://c0ug0wogf56tg" path="res://models/cyndrive_ships_ship.fbx" id="82_oqdhv"]
+[ext_resource type="PackedScene" uid="uid://5oee2wihjes7" path="res://models/cyndrive_ships_carrier.fbx" id="83_iiuao"]
+[ext_resource type="Texture2D" uid="uid://vnri2xppsmm0" path="res://models/legend_of_shadowtails_ratrick_ratrick.png" id="84_053f6"]
+[ext_resource type="Material" uid="uid://dhxo20n8worr6" path="res://materials/concrete-lights.tres" id="85_b51fp"]
+[ext_resource type="Material" uid="uid://bgutakhbvq0mc" path="res://materials/modern-museum/museum-wall-white.tres" id="86_k14ch"]
+[ext_resource type="Material" uid="uid://duojbedij8awq" path="res://materials/walls_museum/wall_material_white.tres" id="87_rtr6f"]
+[ext_resource type="Material" uid="uid://b8paggwklaeo3" path="res://materials/ceiling-materials/ceiling-light.tres" id="88_e4ebv"]
+[ext_resource type="Material" uid="uid://r6515yywtwib" path="res://materials/floor-materials/wood_floor.tres" id="89_uyxgy"]
+[ext_resource type="Material" uid="uid://gi1au7e50ftu" path="res://materials/modern-museum/picture-frame-placeholder-generic-wood.tres" id="90_ndh8n"]
+[ext_resource type="Material" uid="uid://di6u3hjsvhh8i" path="res://materials/modern-museum/museum-floor-wood.tres" id="91_2qqlf"]
+[ext_resource type="Material" uid="uid://i2mujh133810" path="res://materials/modern-museum/museum-modern-exterior-dark.tres" id="92_cwl35"]
+[ext_resource type="PackedScene" uid="uid://o8idbyowpqvw" path="res://entities-scene_prefabs/railing.tscn" id="93_r1aqx"]
+[ext_resource type="PackedScene" uid="uid://dgahdbu6k5v7a" path="res://entities-scene_prefabs/fire_extinguisher.tscn" id="94_xj3v8"]
+[ext_resource type="PackedScene" uid="uid://b6vhbs03grq4q" path="res://entities-scene_prefabs/barrier.tscn" id="95_thwgm"]
+[ext_resource type="PackedScene" uid="uid://csx07hxskuxjn" path="res://entities-scene_prefabs/barrier_single.tscn" id="96_8g4va"]
+[ext_resource type="PackedScene" uid="uid://chqeb335cf70u" path="res://entities-scene_prefabs/handrail.tscn" id="97_x80m5"]
+[ext_resource type="PackedScene" uid="uid://b4lenin8uv1jc" path="res://models/tank_rampage/tank_rampage_hero_tank.tscn" id="98_itj5w"]
+[ext_resource type="PackedScene" uid="uid://byown3kkcxwo5" path="res://models/tank_rampage/hero_tank.glb" id="99_10vpw"]
+[ext_resource type="PackedScene" uid="uid://52ka55orxurd" path="res://models/spy_boat/river-spy-boat.tscn" id="100_rfrxp"]
+[ext_resource type="PackedScene" uid="uid://bm2wbkt7ruwa8" path="res://models/talon_solitaire/suit-symbols.tscn" id="101_58gic"]
+[ext_resource type="PackedScene" uid="uid://t570i75mlu23" path="res://entities-scene_prefabs/dynamic_billboard/explainer_beta_billboard_static.tscn" id="102_4wrrs"]
+[ext_resource type="PackedScene" uid="uid://cv1jka2xois77" path="res://environment-csg/ground_light.tscn" id="103_rnvhu"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_8jg5c"]
+radius = 1.0454303
+
+[sub_resource type="SphereMesh" id="SphereMesh_xteo1"]
+radius = 2.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_3lbo0"]
+material = ExtResource("9_b1j77")
+size = Vector3(0.04, 3.8027525, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_x4vg3"]
+material = ExtResource("9_b1j77")
+size = Vector3(0.04, 3.8027525, 0.04)
+
+[sub_resource type="QuadMesh" id="QuadMesh_rr0nd"]
+material = ExtResource("11_q6te8")
+size = Vector2(7.3389645, 7.3389645)
+orientation = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_c6q64"]
+material = ExtResource("11_q6te8")
+size = Vector2(7.3389645, 7.3389645)
+orientation = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_v80x0"]
+material = ExtResource("11_q6te8")
+size = Vector2(7.3389645, 7.3389645)
+orientation = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_gbu3n"]
+material = ExtResource("9_b1j77")
+size = Vector3(0.02, 2.8449974, 0.02)
+
+[sub_resource type="BoxMesh" id="BoxMesh_880y8"]
+material = ExtResource("9_b1j77")
+size = Vector3(0.02, 2.8449974, 0.02)
+
+[sub_resource type="QuadMesh" id="QuadMesh_nw8jh"]
+material = ExtResource("12_72cuj")
+size = Vector2(5.3280034, 5.3280034)
+orientation = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_oa8v2"]
+material = ExtResource("12_72cuj")
+size = Vector2(5.3280034, 5.3280034)
+orientation = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_xub5d"]
+material = ExtResource("9_b1j77")
+size = Vector3(0.02, 2.8449974, 0.02)
+
+[sub_resource type="BoxMesh" id="BoxMesh_iit47"]
+material = ExtResource("9_b1j77")
+size = Vector3(0.02, 2.8449974, 0.02)
+
+[sub_resource type="QuadMesh" id="QuadMesh_fof07"]
+material = ExtResource("12_72cuj")
+size = Vector2(5.3280044, 5.3280044)
+orientation = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_1tes7"]
+material = ExtResource("12_72cuj")
+size = Vector2(5.328004, 5.328004)
+orientation = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_8lwxr"]
+material = ExtResource("9_b1j77")
+size = Vector3(0.02, 2.8449974, 0.02)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ktaoq"]
+material = ExtResource("9_b1j77")
+size = Vector3(0.02, 2.8449974, 0.02)
+
+[sub_resource type="QuadMesh" id="QuadMesh_ub3ge"]
+material = ExtResource("12_72cuj")
+size = Vector2(5.3280034, 5.3280034)
+orientation = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_42c7c"]
+material = ExtResource("12_72cuj")
+size = Vector2(5.3280034, 5.3280034)
+orientation = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_uq4bu"]
+material = ExtResource("9_b1j77")
+size = Vector3(0.02, 2.8449974, 0.02)
+
+[sub_resource type="BoxMesh" id="BoxMesh_clxtu"]
+material = ExtResource("9_b1j77")
+size = Vector3(0.02, 2.8449974, 0.02)
+
+[sub_resource type="QuadMesh" id="QuadMesh_jyhy3"]
+material = ExtResource("12_72cuj")
+size = Vector2(8.880007, 8.880007)
+orientation = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_u2fsq"]
+material = ExtResource("12_72cuj")
+size = Vector2(8.880007, 8.880007)
+orientation = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_cph74"]
+material = ExtResource("9_b1j77")
+size = Vector3(0.02, 2.8500051, 0.02)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wadld"]
+material = ExtResource("9_b1j77")
+size = Vector3(0.02, 2.8500051, 0.02)
+
+[sub_resource type="QuadMesh" id="QuadMesh_ovxnu"]
+material = ExtResource("12_72cuj")
+size = Vector2(8.843085, 8.843085)
+orientation = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_3tvjp"]
+material = ExtResource("12_72cuj")
+size = Vector2(8.843085, 8.843085)
+orientation = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_e37vr"]
+material = ExtResource("9_b1j77")
+size = Vector3(0.02, 2.8500051, 0.02)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6oq67"]
+material = ExtResource("9_b1j77")
+size = Vector3(0.02, 2.8500051, 0.02)
+
+[sub_resource type="QuadMesh" id="QuadMesh_anu3i"]
+material = ExtResource("12_72cuj")
+size = Vector2(5.89539, 5.89539)
+orientation = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_14tmg"]
+material = ExtResource("12_72cuj")
+size = Vector2(5.89539, 5.89539)
+orientation = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_tbq01"]
+material = ExtResource("9_b1j77")
+size = Vector3(0.02, 6.9949975, 0.02)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mj7h6"]
+material = ExtResource("9_b1j77")
+size = Vector3(0.02, 6.9949975, 0.02)
+
+[sub_resource type="QuadMesh" id="QuadMesh_880y8"]
+material = ExtResource("12_72cuj")
+size = Vector2(11.843085, 11.843085)
+orientation = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_ogkr3"]
+material = ExtResource("12_72cuj")
+size = Vector2(11.843085, 11.843085)
+orientation = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_27nw5"]
+material = ExtResource("9_b1j77")
+size = Vector3(0.02, 6.994997, 0.02)
+
+[sub_resource type="BoxMesh" id="BoxMesh_b2w3e"]
+material = ExtResource("9_b1j77")
+size = Vector3(0.02, 6.994997, 0.02)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ogkr3"]
+material = ExtResource("9_b1j77")
+size = Vector3(0.04, 1.4949975, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nw8jh"]
+material = ExtResource("9_b1j77")
+size = Vector3(0.04, 1.4949975, 0.04)
+
+[sub_resource type="QuadMesh" id="QuadMesh_27nw5"]
+material = ExtResource("11_q6te8")
+size = Vector2(10.380006, 10.380006)
+orientation = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_b2w3e"]
+material = ExtResource("11_q6te8")
+size = Vector2(10.380006, 10.380006)
+orientation = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_xteo1"]
+material = ExtResource("13_wblb2")
+bottom_radius = 3.338
+height = 6.91
+radial_segments = 4
+rings = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_rr0nd"]
+material = ExtResource("9_b1j77")
+size = Vector3(0.04, 1.4949975, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_c6q64"]
+material = ExtResource("9_b1j77")
+size = Vector3(0.04, 1.4949975, 0.04)
+
+[sub_resource type="QuadMesh" id="QuadMesh_8lwxr"]
+material = ExtResource("11_q6te8")
+size = Vector2(10.380006, 10.380006)
+orientation = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_ktaoq"]
+material = ExtResource("11_q6te8")
+size = Vector2(10.380006, 10.380006)
+orientation = 1
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_m4x27"]
+viewport_path = NodePath("../SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vq06m"]
+resource_local_to_scene = true
+resource_name = "Pages"
+transparency = 1
+albedo_texture = SubResource("ViewportTexture_m4x27")
+roughness = 0.8
+texture_filter = 5
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_tdylj"]
+viewport_path = NodePath("../../Guidebook3d/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3djdl"]
+resource_local_to_scene = true
+resource_name = "Pages"
+transparency = 1
+albedo_texture = SubResource("ViewportTexture_tdylj")
+roughness = 0.8
+texture_filter = 5
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ae2tv"]
+viewport_path = NodePath("../../Guidebook3d/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ym0uh"]
+resource_local_to_scene = true
+resource_name = "Pages"
+transparency = 1
+albedo_texture = SubResource("ViewportTexture_ae2tv")
+roughness = 0.8
+texture_filter = 5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_880y8"]
+albedo_texture = ExtResource("76_mhrks")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7tbbo"]
+size = Vector3(3.5, 3.5, 3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rvyx8"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv2_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ifpan"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv2_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lahx7"]
+albedo_texture = ExtResource("84_053f6")
+
+[node name="Modern Musem (Dev Pods era Games)" type="Node3D" unique_id=1273244126]
+
+[node name="baseboard-trim-upstairs" parent="." unique_id=1543233206 instance=ExtResource("1_mx7q1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.01, -0.85, 45.03)
+
+[node name="baseboard-trim-downstairs" parent="." unique_id=778377758 instance=ExtResource("2_gld58")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.01, -10.8, 45.03)
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="." unique_id=1338920835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 15)
+size = Vector3(1000, 1000, 1000)
+
+[node name="reflective-window" parent="." unique_id=1743732869 instance=ExtResource("3_2mcrd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 8, 20)
+
+[node name="reflective-window2" parent="." unique_id=854754501 instance=ExtResource("3_2mcrd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 8, 20)
+
+[node name="reflective-window3" parent="." unique_id=687411036 instance=ExtResource("3_2mcrd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 8, 20)
+
+[node name="reflective-window9" parent="." unique_id=620049752 instance=ExtResource("3_2mcrd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 112, 19.25, -1.25)
+
+[node name="reflective-window10" parent="." unique_id=1287607229 instance=ExtResource("3_2mcrd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 102, 19.25, -1.25)
+
+[node name="reflective-window11" parent="." unique_id=797185004 instance=ExtResource("3_2mcrd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 92, 19.25, -1.25)
+
+[node name="reflective-window4" parent="." unique_id=933614648 instance=ExtResource("3_2mcrd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 30, 24)
+
+[node name="reflective-window5" parent="." unique_id=1937208784 instance=ExtResource("3_2mcrd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 30, 24)
+
+[node name="reflective-window6" parent="." unique_id=1011792470 instance=ExtResource("3_2mcrd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 30, 24)
+
+[node name="reflective-window7" parent="." unique_id=911118599 instance=ExtResource("3_2mcrd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 30, 24)
+
+[node name="reflective-window8" parent="." unique_id=1656750940 instance=ExtResource("3_2mcrd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 30, 24)
+
+[node name="Under Construction Dev Pods Model Room" type="CSGBox3D" parent="." unique_id=1926227602]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 0.5, 46.5)
+material_override = ExtResource("4_merh8")
+use_collision = true
+size = Vector3(9, 3, 1)
+
+[node name="Credits DynamicBillboard" parent="." unique_id=880058378 instance=ExtResource("5_4llkp")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 22, -1, -1)
+
+[node name="Ratrick Hamster Ball (Interactive)" type="RigidBody3D" parent="." unique_id=1249528176]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.968307, 0.42840683, 27.523893)
+collision_layer = 4
+collision_mask = 7
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ratrick Hamster Ball (Interactive)" unique_id=292033673]
+shape = SubResource("SphereShape3D_8jg5c")
+
+[node name="legend_of_shadowtails_ratrick_mesh" parent="Ratrick Hamster Ball (Interactive)" unique_id=349200886 instance=ExtResource("6_7jbu7")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, -0.9377037, 0)
+
+[node name="Light Fixtures" type="Node3D" parent="." unique_id=419420488]
+
+[node name="TestTracklights" type="Node3D" parent="Light Fixtures" unique_id=1628610406]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Light Fixtures/TestTracklights" unique_id=149387436]
+transform = Transform3D(-1, 0, 1.1920929e-07, 0, 1, 0, -1.1920929e-07, 0, -1, 36.508755, -9.204277, 33.09507)
+visible = false
+mesh = SubResource("SphereMesh_xteo1")
+
+[node name="Label3D" type="Label3D" parent="Light Fixtures/TestTracklights/MeshInstance3D" unique_id=1630385210]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.721653, 1.8818955, 0)
+visible = false
+pixel_size = 0.008
+text = "This track light combines realtime dynamic lights,
+and transparent quad mesh \"projected\" lights.
+They smoothly crossfade to optimize scenes with many lights."
+vertical_alignment = 2
+line_spacing = 8.0
+
+[node name="Autotracklight" type="CSGCombiner3D" parent="Light Fixtures/TestTracklights" unique_id=1890593753]
+transform = Transform3D(-1, 0, 1.1920929e-07, 0, 1, 0, -1.1920929e-07, 0, -1, 36.508755, -6, 27.02396)
+script = ExtResource("7_a6nsd")
+track_length = 12.0
+track_height = 0.2
+track_width = 0.5
+lights_quantity = 3
+lights_range = 10.0
+lights_spot_angle = 30.0
+projected_lights_generate_quads = true
+projected_lights_scale = 1.5
+mount_raycast_mask = 1
+mount_length = 10.0
+mount_track_padding = 1.0
+mats_track = ExtResource("8_f6sx0")
+mats_cable = ExtResource("9_b1j77")
+metadata/_custom_type_script = "uid://cm6176wsxfdqx"
+
+[node name="_CSGPolygon3D_96935" type="CSGPolygon3D" parent="Light Fixtures/TestTracklights/Autotracklight" unique_id=414481685]
+polygon = PackedVector2Array(-0.25, 0, -0.25, 0.12, -0.1, 0.2, 0.1, 0.2, 0.25, 0.12, 0.25, 0)
+depth = 12.0
+material = ExtResource("8_f6sx0")
+
+[node name="_MeshInstance3D_96936" type="MeshInstance3D" parent="Light Fixtures/TestTracklights/Autotracklight" unique_id=1813960888]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1013763, -1)
+mesh = SubResource("BoxMesh_3lbo0")
+
+[node name="_MeshInstance3D_96937" type="MeshInstance3D" parent="Light Fixtures/TestTracklights/Autotracklight" unique_id=563969957]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1013763, -11)
+mesh = SubResource("BoxMesh_x4vg3")
+
+[node name="_CSGBox3D_96940" type="CSGBox3D" parent="Light Fixtures/TestTracklights/Autotracklight" unique_id=923561337]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -2)
+operation = 2
+size = Vector3(0.2, 0.25, 0.2)
+material = ExtResource("10_7srx2")
+
+[node name="_SpotLight3D_96938" type="SpotLight3D" parent="Light Fixtures/TestTracklights/Autotracklight/_CSGBox3D_96940" unique_id=559534472]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_energy = 2.0
+light_size = 0.05
+light_bake_mode = 1
+shadow_reverse_cull_face = true
+distance_fade_enabled = true
+distance_fade_begin = 10.0
+distance_fade_length = 5.0
+spot_range = 10.0
+spot_angle = 30.0
+
+[node name="_MeshInstance3D_96939" type="MeshInstance3D" parent="Light Fixtures/TestTracklights/Autotracklight/_CSGBox3D_96940" unique_id=1475717928]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.8826427, 0)
+mesh = SubResource("QuadMesh_rr0nd")
+
+[node name="_CSGBox3D_96943" type="CSGBox3D" parent="Light Fixtures/TestTracklights/Autotracklight" unique_id=1967535963]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -6)
+operation = 2
+size = Vector3(0.2, 0.25, 0.2)
+material = ExtResource("10_7srx2")
+
+[node name="_SpotLight3D_96941" type="SpotLight3D" parent="Light Fixtures/TestTracklights/Autotracklight/_CSGBox3D_96943" unique_id=1125731202]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_energy = 2.0
+light_size = 0.05
+light_bake_mode = 1
+shadow_reverse_cull_face = true
+distance_fade_enabled = true
+distance_fade_begin = 10.0
+distance_fade_length = 5.0
+spot_range = 10.0
+spot_angle = 30.0
+
+[node name="_MeshInstance3D_96942" type="MeshInstance3D" parent="Light Fixtures/TestTracklights/Autotracklight/_CSGBox3D_96943" unique_id=1403310428]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.8826427, 0)
+mesh = SubResource("QuadMesh_c6q64")
+
+[node name="_CSGBox3D_96946" type="CSGBox3D" parent="Light Fixtures/TestTracklights/Autotracklight" unique_id=1956525792]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -10)
+operation = 2
+size = Vector3(0.2, 0.25, 0.2)
+material = ExtResource("10_7srx2")
+
+[node name="_SpotLight3D_96944" type="SpotLight3D" parent="Light Fixtures/TestTracklights/Autotracklight/_CSGBox3D_96946" unique_id=391654271]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_energy = 2.0
+light_size = 0.05
+light_bake_mode = 1
+shadow_reverse_cull_face = true
+distance_fade_enabled = true
+distance_fade_begin = 10.0
+distance_fade_length = 5.0
+spot_range = 10.0
+spot_angle = 30.0
+
+[node name="_MeshInstance3D_96945" type="MeshInstance3D" parent="Light Fixtures/TestTracklights/Autotracklight/_CSGBox3D_96946" unique_id=1190621440]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.8826427, 0)
+mesh = SubResource("QuadMesh_v80x0")
+
+[node name="SkinnyLight" type="CSGCombiner3D" parent="Light Fixtures" unique_id=417334658]
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 39.50217, 5.002747, 39.499657)
+script = ExtResource("7_a6nsd")
+track_height = 0.15
+track_shoulder_ratio = 0.8
+lights_generate_spotlights = false
+lights_range = 10.0
+lights_energy = 1.5
+projected_lights_generate_quads = true
+mount_raycast_mask = 1
+mount_thickness = 0.02
+mats_track = ExtResource("9_b1j77")
+mats_cable = ExtResource("9_b1j77")
+metadata/_custom_type_script = "uid://cm6176wsxfdqx"
+
+[node name="_CSGPolygon3D_99237" type="CSGPolygon3D" parent="Light Fixtures/SkinnyLight" unique_id=1581445383]
+polygon = PackedVector2Array(-0.15, 0, -0.15, 0.12, -0.06, 0.15, 0.06, 0.15, 0.15, 0.12, 0.15, 0)
+depth = 3.0
+material = ExtResource("9_b1j77")
+
+[node name="_MeshInstance3D_99238" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight" unique_id=1671878951]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5724987, -0.5)
+mesh = SubResource("BoxMesh_gbu3n")
+
+[node name="_MeshInstance3D_99239" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight" unique_id=818591792]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5724987, -2.5)
+mesh = SubResource("BoxMesh_880y8")
+
+[node name="_CSGBox3D_99241" type="CSGBox3D" parent="Light Fixtures/SkinnyLight" unique_id=1079888025]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -0.75)
+operation = 2
+size = Vector3(0.12, 0.25, 0.12)
+material = ExtResource("10_7srx2")
+
+[node name="_MeshInstance3D_99240" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight/_CSGBox3D_99241" unique_id=1583197082]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.9100037, 0)
+mesh = SubResource("QuadMesh_nw8jh")
+
+[node name="_CSGBox3D_99243" type="CSGBox3D" parent="Light Fixtures/SkinnyLight" unique_id=1458375481]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -2.25)
+operation = 2
+size = Vector3(0.12, 0.25, 0.12)
+material = ExtResource("10_7srx2")
+
+[node name="_MeshInstance3D_99242" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight/_CSGBox3D_99243" unique_id=284150033]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.9100037, 0)
+mesh = SubResource("QuadMesh_oa8v2")
+
+[node name="SkinnyLight2" type="CSGCombiner3D" parent="Light Fixtures" unique_id=2059015197]
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 39.50217, 5.002747, 22.499657)
+script = ExtResource("7_a6nsd")
+track_height = 0.15
+track_shoulder_ratio = 0.8
+lights_generate_spotlights = false
+lights_range = 10.0
+lights_energy = 1.5
+projected_lights_generate_quads = true
+mount_raycast_mask = 1
+mount_thickness = 0.02
+mats_track = ExtResource("9_b1j77")
+mats_cable = ExtResource("9_b1j77")
+metadata/_custom_type_script = "uid://cm6176wsxfdqx"
+
+[node name="_CSGPolygon3D_98636" type="CSGPolygon3D" parent="Light Fixtures/SkinnyLight2" unique_id=1653091662]
+polygon = PackedVector2Array(-0.15, 0, -0.15, 0.12, -0.06, 0.15, 0.06, 0.15, 0.15, 0.12, 0.15, 0)
+depth = 3.0
+material = ExtResource("9_b1j77")
+
+[node name="_MeshInstance3D_98637" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight2" unique_id=428660122]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5724987, -0.5)
+mesh = SubResource("BoxMesh_xub5d")
+
+[node name="_MeshInstance3D_98638" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight2" unique_id=977094468]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5724987, -2.5)
+mesh = SubResource("BoxMesh_iit47")
+
+[node name="_CSGBox3D_98640" type="CSGBox3D" parent="Light Fixtures/SkinnyLight2" unique_id=461136618]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -0.75)
+operation = 2
+size = Vector3(0.12, 0.25, 0.12)
+material = ExtResource("10_7srx2")
+
+[node name="_MeshInstance3D_98639" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight2/_CSGBox3D_98640" unique_id=1446073171]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.9100046, 0)
+mesh = SubResource("QuadMesh_fof07")
+
+[node name="_CSGBox3D_98642" type="CSGBox3D" parent="Light Fixtures/SkinnyLight2" unique_id=64649600]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -2.25)
+operation = 2
+size = Vector3(0.12, 0.25, 0.12)
+material = ExtResource("10_7srx2")
+
+[node name="_MeshInstance3D_98641" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight2/_CSGBox3D_98642" unique_id=1610605108]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.910004, 0)
+mesh = SubResource("QuadMesh_1tes7")
+
+[node name="SkinnyLight3" type="CSGCombiner3D" parent="Light Fixtures" unique_id=593118022]
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 13.502171, 5.002747, 39.499657)
+script = ExtResource("7_a6nsd")
+track_height = 0.15
+track_shoulder_ratio = 0.8
+lights_generate_spotlights = false
+lights_range = 10.0
+lights_energy = 1.5
+projected_lights_generate_quads = true
+mount_raycast_mask = 1
+mount_thickness = 0.02
+mats_track = ExtResource("9_b1j77")
+mats_cable = ExtResource("9_b1j77")
+metadata/_custom_type_script = "uid://cm6176wsxfdqx"
+
+[node name="_CSGPolygon3D_100432" type="CSGPolygon3D" parent="Light Fixtures/SkinnyLight3" unique_id=882986160]
+polygon = PackedVector2Array(-0.15, 0, -0.15, 0.12, -0.06, 0.15, 0.06, 0.15, 0.15, 0.12, 0.15, 0)
+depth = 3.0
+material = ExtResource("9_b1j77")
+
+[node name="_MeshInstance3D_100433" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight3" unique_id=405900736]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5724987, -0.5)
+mesh = SubResource("BoxMesh_8lwxr")
+
+[node name="_MeshInstance3D_100434" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight3" unique_id=2090780003]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5724987, -2.5)
+mesh = SubResource("BoxMesh_ktaoq")
+
+[node name="_CSGBox3D_100436" type="CSGBox3D" parent="Light Fixtures/SkinnyLight3" unique_id=994783850]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -0.75)
+operation = 2
+size = Vector3(0.12, 0.25, 0.12)
+material = ExtResource("10_7srx2")
+
+[node name="_MeshInstance3D_100435" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight3/_CSGBox3D_100436" unique_id=1573984623]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.9100037, 0)
+mesh = SubResource("QuadMesh_ub3ge")
+
+[node name="_CSGBox3D_100438" type="CSGBox3D" parent="Light Fixtures/SkinnyLight3" unique_id=140680295]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -2.25)
+operation = 2
+size = Vector3(0.12, 0.25, 0.12)
+material = ExtResource("10_7srx2")
+
+[node name="_MeshInstance3D_100437" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight3/_CSGBox3D_100438" unique_id=257169178]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.9100037, 0)
+mesh = SubResource("QuadMesh_42c7c")
+
+[node name="SkinnyLight4" type="CSGCombiner3D" parent="Light Fixtures" unique_id=965650649]
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 13.502171, 5.002747, 22.499657)
+script = ExtResource("7_a6nsd")
+track_height = 0.15
+track_shoulder_ratio = 0.8
+lights_generate_spotlights = false
+lights_range = 10.0
+lights_energy = 1.5
+projected_lights_generate_quads = true
+projected_lights_scale = 1.5
+mount_raycast_mask = 1
+mount_thickness = 0.02
+mats_track = ExtResource("9_b1j77")
+mats_cable = ExtResource("9_b1j77")
+metadata/_custom_type_script = "uid://cm6176wsxfdqx"
+
+[node name="_CSGPolygon3D_101036" type="CSGPolygon3D" parent="Light Fixtures/SkinnyLight4" unique_id=622166419]
+polygon = PackedVector2Array(-0.15, 0, -0.15, 0.12, -0.06, 0.15, 0.06, 0.15, 0.15, 0.12, 0.15, 0)
+depth = 3.0
+material = ExtResource("9_b1j77")
+
+[node name="_MeshInstance3D_101037" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight4" unique_id=1671339599]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5724987, -0.5)
+mesh = SubResource("BoxMesh_uq4bu")
+
+[node name="_MeshInstance3D_101038" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight4" unique_id=451102761]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5724987, -2.5)
+mesh = SubResource("BoxMesh_clxtu")
+
+[node name="_CSGBox3D_101040" type="CSGBox3D" parent="Light Fixtures/SkinnyLight4" unique_id=185826836]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -0.75)
+operation = 2
+size = Vector3(0.12, 0.25, 0.12)
+material = ExtResource("10_7srx2")
+
+[node name="_MeshInstance3D_101039" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight4/_CSGBox3D_101040" unique_id=444941113]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.9100046, 0)
+mesh = SubResource("QuadMesh_jyhy3")
+
+[node name="_CSGBox3D_101042" type="CSGBox3D" parent="Light Fixtures/SkinnyLight4" unique_id=31200456]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -2.25)
+operation = 2
+size = Vector3(0.12, 0.25, 0.12)
+material = ExtResource("10_7srx2")
+
+[node name="_MeshInstance3D_101041" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight4/_CSGBox3D_101042" unique_id=512952879]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.9100046, 0)
+mesh = SubResource("QuadMesh_u2fsq")
+
+[node name="SkinnyLight5" type="CSGCombiner3D" parent="Light Fixtures" unique_id=588888372]
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 13.589249, -4.997253, 28.981344)
+script = ExtResource("7_a6nsd")
+track_height = 0.15
+track_shoulder_ratio = 0.8
+lights_generate_spotlights = false
+lights_range = 10.0
+lights_energy = 1.5
+projected_lights_generate_quads = true
+projected_lights_scale = 1.5
+mount_raycast_mask = 1
+mount_thickness = 0.02
+mats_track = ExtResource("9_b1j77")
+mats_cable = ExtResource("9_b1j77")
+metadata/_custom_type_script = "uid://cm6176wsxfdqx"
+
+[node name="_CSGPolygon3D_102846" type="CSGPolygon3D" parent="Light Fixtures/SkinnyLight5" unique_id=1359653366]
+polygon = PackedVector2Array(-0.15, 0, -0.15, 0.12, -0.06, 0.15, 0.06, 0.15, 0.15, 0.12, 0.15, 0)
+depth = 3.0
+material = ExtResource("9_b1j77")
+
+[node name="_MeshInstance3D_102847" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight5" unique_id=221236127]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5750026, -0.5)
+mesh = SubResource("BoxMesh_cph74")
+
+[node name="_MeshInstance3D_102848" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight5" unique_id=279055825]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5750026, -2.5)
+mesh = SubResource("BoxMesh_wadld")
+
+[node name="_CSGBox3D_102850" type="CSGBox3D" parent="Light Fixtures/SkinnyLight5" unique_id=1868173668]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -0.75)
+operation = 2
+size = Vector3(0.12, 0.25, 0.12)
+material = ExtResource("10_7srx2")
+
+[node name="_MeshInstance3D_102849" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight5/_CSGBox3D_102850" unique_id=215349411]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.88539, 0)
+mesh = SubResource("QuadMesh_ovxnu")
+
+[node name="_CSGBox3D_102852" type="CSGBox3D" parent="Light Fixtures/SkinnyLight5" unique_id=358276350]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -2.25)
+operation = 2
+size = Vector3(0.12, 0.25, 0.12)
+material = ExtResource("10_7srx2")
+
+[node name="_MeshInstance3D_102851" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight5/_CSGBox3D_102852" unique_id=617557081]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.88539, 0)
+mesh = SubResource("QuadMesh_3tvjp")
+
+[node name="SkinnyLight6" type="CSGCombiner3D" parent="Light Fixtures" unique_id=2060753535]
+transform = Transform3D(-4.569558e-08, 0, 1, 0, 1, 0, -1, 0, -4.569558e-08, 21.589249, -4.997253, 21.981344)
+script = ExtResource("7_a6nsd")
+track_height = 0.15
+track_shoulder_ratio = 0.8
+lights_generate_spotlights = false
+lights_range = 10.0
+lights_energy = 1.5
+projected_lights_generate_quads = true
+projected_lights_scale = 1.0
+mount_raycast_mask = 1
+mount_thickness = 0.02
+mats_track = ExtResource("9_b1j77")
+mats_cable = ExtResource("9_b1j77")
+metadata/_custom_type_script = "uid://cm6176wsxfdqx"
+
+[node name="_CSGPolygon3D_102231" type="CSGPolygon3D" parent="Light Fixtures/SkinnyLight6" unique_id=746182374]
+polygon = PackedVector2Array(-0.15, 0, -0.15, 0.12, -0.06, 0.15, 0.06, 0.15, 0.15, 0.12, 0.15, 0)
+depth = 3.0
+material = ExtResource("9_b1j77")
+
+[node name="_MeshInstance3D_102232" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight6" unique_id=772505078]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5750026, -0.5)
+mesh = SubResource("BoxMesh_e37vr")
+
+[node name="_MeshInstance3D_102233" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight6" unique_id=1810433335]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5750026, -2.5)
+mesh = SubResource("BoxMesh_6oq67")
+
+[node name="_CSGBox3D_102235" type="CSGBox3D" parent="Light Fixtures/SkinnyLight6" unique_id=484992503]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -0.75)
+operation = 2
+size = Vector3(0.12, 0.25, 0.12)
+material = ExtResource("10_7srx2")
+
+[node name="_MeshInstance3D_102234" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight6/_CSGBox3D_102235" unique_id=1619820180]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9073486e-06, -5.88539, 0)
+mesh = SubResource("QuadMesh_anu3i")
+
+[node name="_CSGBox3D_102237" type="CSGBox3D" parent="Light Fixtures/SkinnyLight6" unique_id=1474999593]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -2.25)
+operation = 2
+size = Vector3(0.12, 0.25, 0.12)
+material = ExtResource("10_7srx2")
+
+[node name="_MeshInstance3D_102236" type="MeshInstance3D" parent="Light Fixtures/SkinnyLight6/_CSGBox3D_102237" unique_id=1012022331]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9073486e-06, -5.88539, 0)
+mesh = SubResource("QuadMesh_14tmg")
+
+[node name="FeatureLight" type="CSGCombiner3D" parent="Light Fixtures" unique_id=872743095]
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 18.589254, -2.997253, 28.981339)
+script = ExtResource("7_a6nsd")
+track_length = 2.5
+track_height = 4.0
+track_width = 0.75
+track_shoulder_ratio = 0.1
+track_shoulder_width = 0.25
+lights_rectangularity = 0.5
+lights_generate_spotlights = false
+lights_range = 10.0
+lights_energy = 5.0
+projected_lights_generate_quads = true
+projected_lights_scale = 1.5
+mount_raycast_mask = 1
+mount_thickness = 0.02
+mats_track = ExtResource("8_f6sx0")
+mats_cable = ExtResource("9_b1j77")
+metadata/_custom_type_script = "uid://cm6176wsxfdqx"
+
+[node name="_CSGPolygon3D_93389" type="CSGPolygon3D" parent="Light Fixtures/FeatureLight" unique_id=1883596202]
+polygon = PackedVector2Array(-0.375, 0, -0.375, 0.4, -0.09375, 4, 0.09375, 4, 0.375, 0.4, 0.375, 0)
+depth = 2.5
+material = ExtResource("8_f6sx0")
+
+[node name="_MeshInstance3D_93390" type="MeshInstance3D" parent="Light Fixtures/FeatureLight" unique_id=1780294547]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.4974985, -0.5)
+mesh = SubResource("BoxMesh_tbq01")
+
+[node name="_MeshInstance3D_93391" type="MeshInstance3D" parent="Light Fixtures/FeatureLight" unique_id=1673331577]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.4974985, -2)
+mesh = SubResource("BoxMesh_mj7h6")
+
+[node name="_CSGBox3D_93393" type="CSGBox3D" parent="Light Fixtures/FeatureLight" unique_id=416581618]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -0.625)
+operation = 2
+size = Vector3(0.3, 0.25, 0.15)
+material = ExtResource("10_7srx2")
+
+[node name="_MeshInstance3D_93392" type="MeshInstance3D" parent="Light Fixtures/FeatureLight/_CSGBox3D_93393" unique_id=626442007]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.88539, 0)
+mesh = SubResource("QuadMesh_880y8")
+
+[node name="_CSGBox3D_93395" type="CSGBox3D" parent="Light Fixtures/FeatureLight" unique_id=455028920]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -1.875)
+operation = 2
+size = Vector3(0.3, 0.25, 0.15)
+material = ExtResource("10_7srx2")
+
+[node name="_MeshInstance3D_93394" type="MeshInstance3D" parent="Light Fixtures/FeatureLight/_CSGBox3D_93395" unique_id=140519147]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.88539, 0)
+mesh = SubResource("QuadMesh_ogkr3")
+
+[node name="FeatureLight2" type="CSGCombiner3D" parent="Light Fixtures" unique_id=1426161975]
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 34.589256, -2.997253, 28.981339)
+script = ExtResource("7_a6nsd")
+track_length = 2.5
+track_height = 4.0
+track_width = 0.75
+track_shoulder_ratio = 0.1
+track_shoulder_width = 0.25
+lights_quantity = 0
+lights_rectangularity = 0.5
+lights_generate_spotlights = false
+lights_range = 10.0
+lights_energy = 5.0
+projected_lights_scale = 1.5
+mount_raycast_mask = 1
+mount_thickness = 0.02
+mats_track = ExtResource("8_f6sx0")
+mats_cable = ExtResource("9_b1j77")
+metadata/_custom_type_script = "uid://cm6176wsxfdqx"
+
+[node name="_CSGPolygon3D_94064" type="CSGPolygon3D" parent="Light Fixtures/FeatureLight2" unique_id=1597540658]
+polygon = PackedVector2Array(-0.375, 0, -0.375, 0.4, -0.09375, 4, 0.09375, 4, 0.375, 0.4, 0.375, 0)
+depth = 2.5
+material = ExtResource("8_f6sx0")
+
+[node name="_MeshInstance3D_94065" type="MeshInstance3D" parent="Light Fixtures/FeatureLight2" unique_id=384348914]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.4974985, -0.5)
+mesh = SubResource("BoxMesh_27nw5")
+
+[node name="_MeshInstance3D_94066" type="MeshInstance3D" parent="Light Fixtures/FeatureLight2" unique_id=204139082]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.4974985, -2)
+mesh = SubResource("BoxMesh_b2w3e")
+
+[node name="LongBarLight" type="CSGCombiner3D" parent="Light Fixtures" unique_id=669621512]
+transform = Transform3D(-4.569558e-08, 0, 1, 0, 1, 0, -1, 0, -4.569558e-08, 33.50217, 6.002747, 39.499657)
+script = ExtResource("7_a6nsd")
+track_length = 14.0
+lights_rectangularity = 10.0
+lights_range = 12.0
+lights_spot_angle = 35.0
+projected_lights_generate_quads = true
+projected_lights_scale = 1.5
+mount_raycast_mask = 1
+mats_track = ExtResource("8_f6sx0")
+mats_cable = ExtResource("9_b1j77")
+metadata/_custom_type_script = "uid://cm6176wsxfdqx"
+
+[node name="_CSGPolygon3D_46372" type="CSGPolygon3D" parent="Light Fixtures/LongBarLight" unique_id=1755924161]
+polygon = PackedVector2Array(-0.15, 0, -0.15, 0.3, -0.06, 0.5, 0.06, 0.5, 0.15, 0.3, 0.15, 0)
+depth = 14.0
+material = ExtResource("8_f6sx0")
+
+[node name="_MeshInstance3D_46373" type="MeshInstance3D" parent="Light Fixtures/LongBarLight" unique_id=741427150]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2474988, -0.5)
+mesh = SubResource("BoxMesh_ogkr3")
+
+[node name="_MeshInstance3D_46374" type="MeshInstance3D" parent="Light Fixtures/LongBarLight" unique_id=346833977]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2474988, -13.5)
+mesh = SubResource("BoxMesh_nw8jh")
+
+[node name="_CSGBox3D_46377" type="CSGBox3D" parent="Light Fixtures/LongBarLight" unique_id=1227797219]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -3.5)
+operation = 2
+size = Vector3(0.12, 0.25, 1.2)
+material = ExtResource("10_7srx2")
+
+[node name="_SpotLight3D_46375" type="SpotLight3D" parent="Light Fixtures/LongBarLight/_CSGBox3D_46377" unique_id=1780664937]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_energy = 2.0
+light_size = 0.05
+light_bake_mode = 1
+shadow_reverse_cull_face = true
+distance_fade_enabled = true
+distance_fade_begin = 10.0
+distance_fade_length = 5.0
+spot_range = 12.0
+spot_angle = 35.0
+
+[node name="_MeshInstance3D_46376" type="MeshInstance3D" parent="Light Fixtures/LongBarLight/_CSGBox3D_46377" unique_id=772414998]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.9100037, -1.9073486e-06)
+mesh = SubResource("QuadMesh_27nw5")
+
+[node name="_CSGBox3D_46380" type="CSGBox3D" parent="Light Fixtures/LongBarLight" unique_id=1525329322]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -10.5)
+operation = 2
+size = Vector3(0.12, 0.25, 1.2)
+material = ExtResource("10_7srx2")
+
+[node name="_SpotLight3D_46378" type="SpotLight3D" parent="Light Fixtures/LongBarLight/_CSGBox3D_46380" unique_id=360009755]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_energy = 2.0
+light_size = 0.05
+light_bake_mode = 1
+shadow_reverse_cull_face = true
+distance_fade_enabled = true
+distance_fade_begin = 10.0
+distance_fade_length = 5.0
+spot_range = 12.0
+spot_angle = 35.0
+
+[node name="_MeshInstance3D_46379" type="MeshInstance3D" parent="Light Fixtures/LongBarLight/_CSGBox3D_46380" unique_id=568076985]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.9100037, -1.9073486e-06)
+mesh = SubResource("QuadMesh_b2w3e")
+
+[node name="Lightshaft" type="MeshInstance3D" parent="Light Fixtures/LongBarLight" unique_id=1183517718]
+transform = Transform3D(0.4, 0, -1.9841906e-09, 0, 1, 0, 7.9367624e-10, 0, 1, 0, -3.4827302, -3.5000038)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Lightshaft2" type="MeshInstance3D" parent="Light Fixtures/LongBarLight" unique_id=727869456]
+transform = Transform3D(0.4, 0, -1.9841906e-09, 0, 1, 0, 7.9367624e-10, 0, 1, 0, -3.4827302, -10.500004)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="LongBarLight3" type="CSGCombiner3D" parent="Light Fixtures" unique_id=412045489]
+transform = Transform3D(-4.569558e-08, 0, 1, 0, 1, 0, -1, 0, -4.569558e-08, 33.502, 6, 16)
+script = ExtResource("7_a6nsd")
+track_length = 14.0
+lights_rectangularity = 10.0
+lights_range = 12.0
+lights_spot_angle = 35.0
+projected_lights_generate_quads = true
+projected_lights_scale = 1.5
+mount_raycast_mask = 1
+mats_track = ExtResource("8_f6sx0")
+mats_cable = ExtResource("9_b1j77")
+metadata/_custom_type_script = "uid://cm6176wsxfdqx"
+
+[node name="_CSGPolygon3D_46372" type="CSGPolygon3D" parent="Light Fixtures/LongBarLight3" unique_id=1525155792]
+polygon = PackedVector2Array(-0.15, 0, -0.15, 0.3, -0.06, 0.5, 0.06, 0.5, 0.15, 0.3, 0.15, 0)
+depth = 14.0
+material = ExtResource("14_3s7go")
+
+[node name="_MeshInstance3D_46373" type="MeshInstance3D" parent="Light Fixtures/LongBarLight3" unique_id=1043839731]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2474988, -0.5)
+mesh = SubResource("BoxMesh_ogkr3")
+
+[node name="_MeshInstance3D_46374" type="MeshInstance3D" parent="Light Fixtures/LongBarLight3" unique_id=2013498988]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2474988, -13.5)
+mesh = SubResource("BoxMesh_nw8jh")
+
+[node name="_CSGBox3D_46377" type="CSGBox3D" parent="Light Fixtures/LongBarLight3" unique_id=1981167383]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -3.5)
+operation = 2
+size = Vector3(0.12, 0.25, 1.2)
+material = ExtResource("10_7srx2")
+
+[node name="_SpotLight3D_46375" type="SpotLight3D" parent="Light Fixtures/LongBarLight3/_CSGBox3D_46377" unique_id=2047444362]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_energy = 2.0
+light_size = 0.05
+light_bake_mode = 1
+shadow_reverse_cull_face = true
+distance_fade_enabled = true
+distance_fade_begin = 10.0
+distance_fade_length = 5.0
+spot_range = 12.0
+spot_angle = 35.0
+
+[node name="_MeshInstance3D_46376" type="MeshInstance3D" parent="Light Fixtures/LongBarLight3/_CSGBox3D_46377" unique_id=1736123489]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.9100037, -1.9073486e-06)
+mesh = SubResource("QuadMesh_27nw5")
+
+[node name="_CSGBox3D_46380" type="CSGBox3D" parent="Light Fixtures/LongBarLight3" unique_id=985607498]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -10.5)
+operation = 2
+size = Vector3(0.12, 0.25, 1.2)
+material = ExtResource("10_7srx2")
+
+[node name="_SpotLight3D_46378" type="SpotLight3D" parent="Light Fixtures/LongBarLight3/_CSGBox3D_46380" unique_id=160060553]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_energy = 2.0
+light_size = 0.05
+light_bake_mode = 1
+shadow_reverse_cull_face = true
+distance_fade_enabled = true
+distance_fade_begin = 10.0
+distance_fade_length = 5.0
+spot_range = 12.0
+spot_angle = 35.0
+
+[node name="_MeshInstance3D_46379" type="MeshInstance3D" parent="Light Fixtures/LongBarLight3/_CSGBox3D_46380" unique_id=1818541533]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.9100037, -1.9073486e-06)
+mesh = SubResource("QuadMesh_b2w3e")
+
+[node name="Lightshaft" type="MeshInstance3D" parent="Light Fixtures/LongBarLight3" unique_id=753756861]
+transform = Transform3D(0.4, 0, -1.9841906e-09, 0, 1, 0, 7.9367624e-10, 0, 1, 0, -3.4827302, -3.5000038)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="Lightshaft2" type="MeshInstance3D" parent="Light Fixtures/LongBarLight3" unique_id=1350149870]
+transform = Transform3D(0.4, 0, -1.9841906e-09, 0, 1, 0, 7.9367624e-10, 0, 1, 0, -3.4827302, -10.500004)
+mesh = SubResource("CylinderMesh_xteo1")
+
+[node name="LongBarLight2" type="CSGCombiner3D" parent="Light Fixtures" unique_id=778257291]
+transform = Transform3D(-4.569558e-08, 0, 1, 0, 1, 0, -1, 0, -4.569558e-08, 33.50217, 6.002747, 25.499657)
+script = ExtResource("7_a6nsd")
+track_length = 14.0
+lights_rectangularity = 35.0
+lights_range = 12.0
+lights_spot_angle = 35.0
+lights_energy = 3.0
+projected_lights_generate_quads = true
+projected_lights_scale = 1.5
+mount_raycast_mask = 1
+mats_track = ExtResource("8_f6sx0")
+mats_cable = ExtResource("9_b1j77")
+metadata/_custom_type_script = "uid://cm6176wsxfdqx"
+
+[node name="_CSGPolygon3D_115111" type="CSGPolygon3D" parent="Light Fixtures/LongBarLight2" unique_id=228838117]
+polygon = PackedVector2Array(-0.15, 0, -0.15, 0.3, -0.06, 0.5, 0.06, 0.5, 0.15, 0.3, 0.15, 0)
+depth = 14.0
+material = ExtResource("8_f6sx0")
+
+[node name="_MeshInstance3D_115112" type="MeshInstance3D" parent="Light Fixtures/LongBarLight2" unique_id=821310379]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2474988, -0.5)
+mesh = SubResource("BoxMesh_rr0nd")
+
+[node name="_MeshInstance3D_115113" type="MeshInstance3D" parent="Light Fixtures/LongBarLight2" unique_id=844567354]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2474988, -13.5)
+mesh = SubResource("BoxMesh_c6q64")
+
+[node name="_CSGBox3D_115116" type="CSGBox3D" parent="Light Fixtures/LongBarLight2" unique_id=1120856614]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -3.5)
+operation = 2
+size = Vector3(0.12, 0.25, 4.2)
+material = ExtResource("10_7srx2")
+
+[node name="_SpotLight3D_115114" type="SpotLight3D" parent="Light Fixtures/LongBarLight2/_CSGBox3D_115116" unique_id=433375163]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_energy = 3.0
+light_size = 0.05
+light_bake_mode = 1
+shadow_reverse_cull_face = true
+distance_fade_enabled = true
+distance_fade_begin = 10.0
+distance_fade_length = 5.0
+spot_range = 12.0
+spot_angle = 35.0
+
+[node name="_MeshInstance3D_115115" type="MeshInstance3D" parent="Light Fixtures/LongBarLight2/_CSGBox3D_115116" unique_id=1772126515]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.9100037, -1.9073486e-06)
+mesh = SubResource("QuadMesh_8lwxr")
+
+[node name="_CSGBox3D_115119" type="CSGBox3D" parent="Light Fixtures/LongBarLight2" unique_id=1123018311]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, -10.5)
+operation = 2
+size = Vector3(0.12, 0.25, 4.2)
+material = ExtResource("10_7srx2")
+
+[node name="_SpotLight3D_115117" type="SpotLight3D" parent="Light Fixtures/LongBarLight2/_CSGBox3D_115119" unique_id=1754203470]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_energy = 3.0
+light_size = 0.05
+light_bake_mode = 1
+shadow_reverse_cull_face = true
+distance_fade_enabled = true
+distance_fade_begin = 10.0
+distance_fade_length = 5.0
+spot_range = 12.0
+spot_angle = 35.0
+
+[node name="_MeshInstance3D_115118" type="MeshInstance3D" parent="Light Fixtures/LongBarLight2/_CSGBox3D_115119" unique_id=2121162420]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.9100037, -1.9073486e-06)
+mesh = SubResource("QuadMesh_ktaoq")
+
+[node name="tank-rampage-command_marine" parent="." unique_id=2103342501 instance=ExtResource("15_1rync")]
+transform = Transform3D(-0.807381, 0, -0.5900306, 0, 1, 0, 0.5900306, 0, -0.807381, 40.40065, -0.997, 43.999187)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="tank-rampage-command_marine" unique_id=1988941383]
+transform = Transform3D(0.90630776, 0.32136145, -0.2744686, 0, 0.64944804, 0.76040596, 0.42261827, -0.68916184, 0.5885998, -0.44, 2.69, 0.848)
+layers = 4
+light_energy = 2.0
+light_bake_mode = 0
+light_cull_mask = 4293918724
+distance_fade_enabled = true
+distance_fade_begin = 10.0
+spot_range = 4.535
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="tank-rampage-command_marine" unique_id=2042163362]
+transform = Transform3D(-0.8289249, -0.01399643, 0.5591846, 0.30139002, 0.8309863, 0.46757466, -0.47121915, 0.5561169, -0.68460673, 0.76000214, 2.022767, -1.2033386)
+layers = 4
+light_color = Color(0.66611975, 0.8609713, 0.9478937, 1)
+light_bake_mode = 0
+light_cull_mask = 4293918724
+distance_fade_enabled = true
+distance_fade_begin = 10.0
+spot_range = 4.535
+
+[node name="Label3D" type="Label3D" parent="tank-rampage-command_marine" unique_id=267640610]
+transform = Transform3D(0.9788673, 0, -0.20449601, 0, 1, 0, 0.20449601, 0, 0.9788673, 0, 1.8, 0.445)
+pixel_size = 0.002
+text = "I'm from the prequel, Tank Rampage Command!"
+font_size = 16
+outline_size = 4
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="tank-rampage-command_marine" unique_id=670600067]
+layers = 4
+script = ExtResource("16_276hy")
+
+[node name="Dev Pods Game Pictures" type="Node3D" parent="." unique_id=1358103049]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.5, 0, 33.5)
+
+[node name="Gladiator" parent="Dev Pods Game Pictures" unique_id=799548543 instance=ExtResource("17_x11aa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0.7647941, -13.393093)
+game_label = "Gladiator of the
+Golden House"
+button_link = "https://tarnishedmoth.itch.io/gladiator-of-the-golden-house"
+world_scene = "uid://bu5ybpneao340"
+frame_interact_text = "Become a Gladiator"
+credits = "[b]Gladiator of the Golden House[/b] credits
+Developed Feb 8 - Jun 28, 2026
+
+Project lead, initial game prototype & schedule, core gameplay, core systems (levels, directors, actors, actions, status effects), turn logic, action previews, level & combat design, UI/UX design, player classes, writing (action/status titles & descriptions, cutscenes), actor actions system & related UI, cutscenes, user options & save/load, action cost functionality, enemy behavior systems, unique level logic, sprites (roman army armor accessories, enemy designs & implementation (except Chariots), hex grid tile vfx, jar item, icons, shield, weapons, earth pile boulders), sounds (incl. pickup, swooshes, hit, block, guard broken, hemorrhage, grunts, monsters, eldritch, buffs, menu sounds) and integration, projectiles, status & explosion vfx & sfx, difficulty balancing, boss health bar, reactive crowd speech/sfx triggers, camera movement, character shadows, clouds, player avatar selection, randomized crowd art optimization, font selection, polish & bug fixes: Michael Avrie
+
+Energy system, action types for both enemies and players, status effect support (incl. defense, stun), speech bubbles, openers, health and damage feature, consumable pickups, action card hover tool tip details, enemy action preview, win/loss detection and retry or continue menu, assorted bug fixes: Dalton Charleston
+
+Music (main menu and boss fight), peristent card stash system, Grunt enemy behavior, enemy collision avoidance, animated text HUD popups, actor at coordinate lookup, save/load persistence serialization and round-trip test, snap to hex, damage system improvements, code repository EOL configuration: Philippe Vaillancourt
+
+Colosseum & sky scene art (incl. horror variation), animated banners & flags, gauntlet cursor, health bars, crowd sounds, polish effects (attack slash vfx, weapon sprite bobbing), one liner writing, avatar sprite facing flip, hex grid styling, tile hover highlight designs: Christer \"McFunkypants\" Kaitila
+
+Roman combatant art, crowd art including outfit randomization feature, primary color palette, Squid Emperor art, blue tentacle art: Amanda Stanley
+
+Core hex-grid maths & targeting system including facing / range, area of effect, pickups, enemy drops, tile highlight, facing selector sprite & animation: Jalent (Jason W)
+
+3 player avatars (shirtless with beard, blue hair, green tunic with bow): TheDemonMaster
+
+Early level initial designs, facing graphic, hex grid guide, early lore writing, project icon, additional level design and mechanics concepts: Noah Wizard
+
+Healing pickups and status effects: Mark Guinn
+
+Battle music, battle music win/loss stings, creepy ambient music: Aaron Sherman
+
+Chariot (art and code): Chris Anderson
+
+Move behavior setting for enemies (target/random with distance sorting): Marshy
+
+Compiler error fix: Dan Dela Rosa
+
+Additional gameplay design: Dávid Tóth
+
+Skeleton character drafts, initial color palette suggestions: Jakob Harris
+
+Playtesting: Chris Anderson, Connor Fitzpatrick, TopHatCroat"
+ost = ExtResource("18_a6053")
+painting_texture = ExtResource("19_s820s")
+button_texture = ExtResource("20_jp4dl")
+
+[node name="Shadowtail" parent="Dev Pods Game Pictures" unique_id=803360044 instance=ExtResource("17_x11aa")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 16.376526, 0.7647941, -9.393093)
+game_label = "Legend of
+Shadowtail"
+button_link = "https://mdfewkes.itch.io/legend-of-shadowtail"
+credits = "[b]Legend of Shadowtail[/b] credits
+Developed Nov 16 - Feb 8, 2026
+
+Project lead, core gameplay, hopping enemy, dungeon west wing level design, camera system, healthbar, putting out lights, player states, attack cooldowns, hitbox system and related tuning, knockback, audio manager, skill check gating, light flickering, various team asset integration, light tweening: Michael Fewkes
+
+Traps (all types), tail hook shot, key/door/items, sneaking area, boss intro, final chase, decoration tiles, screenshake, checkpoint, alert effect, projectile deflection, death animations, room persistence, breakable walls and bridges, cloaking, idle tail motion, water with shader, credits screen, bonfire placement, additional level design polish, assorted fixes: Mark Guinn
+
+Lore and related opening scroll, dungeon layout / level design (mainly east wing), entrance room with dialog, ghost NPCs, dialog authoring, quest item art / placement / merchant / related gating behavior, slime enemy sprite, quest givers show item picture, environment decoration placement, map color variants, boss arrival message: Noah Wizard
+
+Dialog system including conditionals and game action support, dartmonk behaviors (including target leading, LOS, states) and related animation code, enemy movement smoothed, enemy navigation baking, mute toggle, feature flag support (internal use), invulnerability testing mode, internal feature examples: Philippe Vaillancourt
+
+Music (dungeon, sneak, boss approach, boss chase, menu and credits music), sounds (star throw, squirrel steps, star hits, sword slash, sword hit, grab, rock trap, dart trap, trap dart firing, blow dart, bat enemy, menu click), cutscene music timing: Aaron Sherman
+
+Player animations (idle, 4-way run and attack), sewer wall tileset, boss badger sprite, environment decoration art (lamp, bush, bonfire, trashcan, sewer grate, pipes), dartmonk animations, raccoon patrol behavior and art, bonfire dynamic flame effects, game logo, bat art, keys, acorn item and related UI, bush particles: Jakob Harris
+
+Cutscene support with animation and text scroll including action commands, reset on death, cutscene map triggers, instructions screen, lore screen improvements, initial player death animation: Dan Dela Rosa
+
+Ghost implementation (raccoon and dartmonk), ninja star, decorations (crate, barrell, rope, cracks), additional ninja squirrel sounds, tail segment sprites, player shadow, footprints effect, gamepad fixes toggle, bug fixes (bat health, player damage): Christer Kaitila
+
+Initial lore (part of core story, tea pot, animal family clan names, basis for dartmunk backstory), voice sounds (hurt, item consumption, weak/med/strong effort): Amanda Stanley
+
+Procedural player tail, initial player art draft, Ratrick the Plush decoration: Dávid Tóth
+
+Wall banners with 3 variations, bed roll, 6 decorative clutter piles, broken ladder, green praying statue, fancy water bowl, 3 door types (fancy, pointy, wood), 3 door lock sprites: Mel Fitzgerald
+
+Patrolling behavior and initial bat sprite: William Goddard
+
+Dynamic light shadows, pause menu with key: Durondal
+
+Sounds (switch trap, goblin smokey defeat, flame attack, flight, splash with variations): JohnasaurusArt
+
+Reddish orange tail whip particles: Owen Peery
+
+Enemies refactored to reuse common base code: David Bates
+
+Play testing: Baguette	"
+ost = ExtResource("21_hkh56")
+painting_texture = ExtResource("22_u2eft")
+button_texture = ExtResource("23_mdhim")
+
+[node name="King Arthur" parent="Dev Pods Game Pictures" unique_id=2085464876 instance=ExtResource("17_x11aa")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 16.377, -9.235, -9.393)
+game_label = "King Arthur Tales
+of the Sword"
+button_link = "https://chaoticplay.itch.io/king-arthur-tales-of-the-sword"
+credits = "[b]King Arthur Tales of the Sword[/b] credits
+Developed May 18-Oct 5, 2025
+
+Project lead, core gameplay, turn based combat system, character models/animations/implementation (players, enemies, bosses), core level design and decorative models (church, windmill, haybale, inn), 4 cutscenes, spells and items, profile pictures & names, tutorial, objective display, city dialogs and character icons, party and overworld main UI, camera collision, game over screen iterations, particle systems, audio integration, damage notifications, bug fixes and gameplay tuning: Dani Noble
+
+Combat interaction improvements, party member data storage between levels, common UI widgets (battle HUD, item shop, start menu, victory screen, dialog), pause with system screens, chest model, bug fixes (consumables, combat mode, save system, input guides): m0nkeybrain
+
+Post processing cross hatch brushed effect, iteration on crit hit and dodge handling, water surface and underwater effect, battle cooldown timer, distance render optimization, lightning iterations, assorted bug fixes (save, battle target selection, defend and retreat, dangling references, dialog, sky box, HUD, chests, animation issue): Justin Montgomery
+
+Enemy chase and navigation, overworld to combat and combat to overworld transitions, enemy spawn zone and related save data, sword model, attack and shield particle vfx: Christian Gabbianelli
+
+13 talking cat NPCs, Models and textures (castle, guard tower, lamppost, gate, ivy, arches, stones, house, fences, stone paths), 8 plants (incl. bonsai, brambles, roots, shrubbery), environment (courtyard, edge hiding), ambient audio integration, title screen logo: Christer Kaitila
+
+Common combat data (items, magic) and connected to techniques (unused), unified battle/item/magic system, multi-targeting, attack commands and targeting, ranged attack sequence improvements, overworld map iteration, bug fixes around Gideon and healing: Jonartis
+
+Soundtracks (battle, defeat, victory, overworld, town, cat song), settings menu, quest display, objective checks, music zone adjustments, audio bug fix: Stephanie Urch
+
+Quest distance UI system, Music zone placement, castle room, level landscape adjustments, sky tint solved, music levels: Sergey_UE
+
+Sounds (sword clashing, taking damage, chest opening, attack debuff, magic spawning, wind, rain, waves): Darius Bryson Gourdine
+
+Game over screen functionality: Ian Rich
+
+Enemy health bar, battle save data: Luis Montaña
+
+Player character collision fix, Lady of the Lake animation bug fix: Pierre NOEL
+
+Coblynau enemy model (unused): Tyler Funk
+
+Fixed cobblestone collisions: Simone | ZilpioGaming
+
+Building position fix: Bradley OFarrell
+
+Inkpot plugin (unused): Gwynim
+
+Playtesting: Michael Avrie "
+ost = ExtResource("24_tjh8j")
+painting_texture = ExtResource("25_p4xyd")
+button_texture = ExtResource("26_rkafv")
+
+[node name="Cargo Bay" parent="Dev Pods Game Pictures" unique_id=557852751 instance=ExtResource("17_x11aa")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 16.377, -9.235, 7.607)
+game_label = "Cargo Bay
+5N-AFU"
+button_link = "https://devpods.itch.io/cargo-bay-5n-afu"
+credits = "[b]Cargo Bay 5N-AFU[/b] credits
+Developed Mar 1-July 5, 2026
+
+Project lead, core gameplay, cargo tanker models, level and hanger design, charge pad, gate operation, scoring, damage functionality, player drone (incl. model), obstructed object display, decals, shader work (RSUV), filling station with animations: deepbluezen
+
+Background music: Philippe Vaillancourt
+
+Background cargo, gantry crane, slide/head-on collision test, scrape sound, head-on collision particle effect, menu: Chris DeLeon
+
+Head-on collision sound, scraping particle effect: Justin Chin
+
+Power source model and integration: Ian Cherabier
+
+Cargo collision sound, cargo UI tweaks, lighting adjustment, additional level design: Adeel Bashir
+
+Sounds (UI, assorted physical sounds): Connor Fitzpatrick
+
+Cargo fill zone functionality, cable decor: Catwingzz"
+ost = ExtResource("27_amldi")
+painting_texture = ExtResource("28_2us44")
+button_texture = ExtResource("29_a06kk")
+
+[node name="Artillery Rampage" parent="Dev Pods Game Pictures" unique_id=363162442 instance=ExtResource("17_x11aa")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 9.376526, 0.7647941, 11.524845)
+game_label = "Artillery
+Rampage"
+button_link = "https://gamesalutes.itch.io/artillery-rampage"
+credits = "[b]Artillery Rampage[/b] credits
+Developed Feb 16-Jul 13, 2025
+
+Project lead, core gameplay, terrain (including procedural generation, destruction, fragmentation, randomization, smoothing), object damage and shattering, story mode systems, shop and upgrades with resources, shot mechanics including wind impact, tank gravity, spawning, difficulties, turn management, damage behaviors (wobble etc), AI opponents (including all major behavioral variations, names), water, save/load, gameplay timer, announcer one liners script and voiceover, bloom/nuke shaders, most edge modes (wrap, accelerate, sticky, none), round grading, game over detection, simultaneous fire mode improvements, additional weapon tuning, desert level, physics tuning, memory leak repairs, numerous bug fixes and contribution integration: Justin Montgomery
+
+Weapons Systems Lead (types, selection, explosions, nuke, flares, missiles, EMP, stats, upgrades), UI Lead (typing reveal, scrolling, ammo, tooltips, healthbars, options, key remap, pause logs, fine aiming, story map improvements, loading screen, upgrade screen additions), snowcaps level music, level design (snowy mountain, plateau, islands, divide, plains, factory), narrative randomization, theming and UI design (main menu, options, story sequence, tooltips, font), day/night, enemy units, pickup helicopter, sounds (turn change, most weapons, tank destroyed, rain), dust/smoke/rubble, wind and weather, simultaneous fire mode, action queue system, assorted audio integration, internal documentation, terrain depth tint, bouncing mode, bug fixes, terrain chunk fading, light balancing, various tuning: Michael Avrie
+
+House destructibility, laser visual and main functionality, weapon cycle key, laser variants, effect optimizations, laser wrap/elastic handling: Dan Dela Rosa
+
+Trajectory dots, UI backgrounds, HUD icons, terrain textures and related support, scrolling sky, rock music for menu, announcer voices, explosion sprites, terrain outlines and crusts, artillery sprites, grass, ground burn, graphics fixes: Christer Kaitila
+
+Elastic wall, sounds (small/medium explosions, laser, round win/loss, round start), additional sound integration: Vaan Hope Khani
+
+Parachute defense item (sprite and functionality), boat: Matt Ayme
+
+Environment sprites (missiles with variations, tree, rock with variations), game over and retry screens: Rodrigo Bonzerr S. Lopez
+
+Lightning system (first pass), burst ammo bug fix: George Carter
+
+Pause menu with Main Menu exit: Michael Tanner
+
+Lighthouse sprite: Owen \"Q-Bit\" Good
+
+Tree sprite variant: Chris DeLeon
+
+Playtesting: Meatball, kittykatmeowmeow"
+ost = ExtResource("30_khn05")
+painting_texture = ExtResource("31_b66a0")
+button_texture = ExtResource("32_w3s66")
+
+[node name="Crash-Em-Up" parent="Dev Pods Game Pictures" unique_id=259273734 instance=ExtResource("17_x11aa")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -3.6234741, 0.7647941, 11.524845)
+game_label = "Crash-Em-Up"
+button_link = "https://mdfewkes.itch.io/crash-em-up"
+credits = "[b]Crash-Em-Up[/b] credits
+Developed Mar 1 - Jun 7, 2026
+
+Project lead, core gameplay, combat mechanics, enemy vehicle behavior, level wave authoring, impact knockback and spinout, wind effects, gameplay tuning, stun feature, assorted team asset integration and bug fixes: Michael Fewkes
+
+Player bounds, win/lose detection, tutorial, health UI, visual effects (explosion, sparks, damage smoke), main menu visual design, escape key support: Adeel Bashir
+
+Models with materials (garbage bin, electricity pole, mailboxes, bench, brownstone apartment), parking lots, main menu functionality, bounds fix: Santiago Morales
+
+Models (blue car, truck, sports car, player car, trees, fence), background scrolling and parallax, antenna wobble, building materials, engine pitch, grass, sky improvement, settings menu with save/load: Christer Kaitila
+
+Enemy spawner with level authoring support: Barış Köklü
+
+Gameplay song: Michael Avrie
+
+Boss vehicle design and related particles, tire smoke visual effect: Justin Chin
+
+Score counter (with timeout reset), end text, hit counter UI: Raymond Zegles
+
+Basic damage system: Dalton Charleston
+
+Crash sound effects: Connor Fitzpatrick"
+ost = ExtResource("33_vu1fe")
+painting_texture = ExtResource("34_7igj8")
+button_texture = ExtResource("35_ytct4")
+
+[node name="Crazy Arena Chaos" parent="Dev Pods Game Pictures" unique_id=1259599820 instance=ExtResource("17_x11aa")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -10.623474, 0.7647941, 11.524845)
+game_label = "Crazy Arena
+Chaos"
+button_link = "https://christiangabbianelli.itch.io/crazy-arena-chaos"
+credits = "[b]Crazy Arena Chaos[/b] credits
+Developed Oct 5, 2025 - Mar 15, 2026
+
+Project lead, core gameplay, combat design, enemy AI (perception, states, director), player animations, hit reactions (incl. hit stop, flash, shake, knock back), level enemy group design/tuning, combos, weapon models (baton, swatter), brute enemy model and animations, attack traces, particle hit effects (sparks, chunks), weapon swapping, pickup system, game ending, level transitions, bolt currency/shop connections, enemy color/difficulty variations, ranged enemy projectile, hit recovery time, lava, spinning obstacle, optimizations to support lower system specs, gamepad support, bug fixing and team asset integration: Christian Gabbianelli
+
+Models (stadium, jumbotron, rocket thrower and projectiles, stadium light, saw blade, donut statue, crowd donuts, nuts and bolts), sounds (crowd, oofs, impacts, whoosh, swatter), decorative tech circles, pixelboard scrolling: Christer \"McFunkypants\" Kaitila
+
+Homing rocket, jumbotron integration, stadium night/day lightning, flamethrower damage, wall props, floor tiles, materials (holographic, rust, debris/decals), procedural crowd, sound integration (step, fire, bolt pickup): Cody McCarty
+
+Player character with texture, flamethrower model, flame vfx: Arnulfo Torres Valladares
+
+Landmine damage, bomb area of effect, enemy wave increase logic, exploding barrel, player defeat handling, enemy spawn fix, hazard damage multipliers, hazard active/inactive support: Dalton Charleston
+
+Shop interface, weapon inventory system, weapon size support, hammer weapon, shop button style, bolt pickups: BillR
+
+Enemy spawner, nav mesh setup, enemy rotation handling (tuning, movement/combat), blade spindown, swaying robot crowd: Justin Montgomery
+
+Projectile robot with animations, background models (box, building, crossing, decorative distant buildings), broken/dead robots: Dani Noble
+
+Main menu, wave/enemy counter, additional health styling, font selection, wallet UI, enemy idle animation fix: Ben Owens
+
+Battle music, laser sounds, flame sounds, crowd spatialization: Bex Rodriguez
+
+Exploding barrel (model, materials, implementation), mute support: Fahad Muntaz
+
+Player health system, health pickups, health pickup rotation and time out, health spawner, escape/P toggles pause: Sergey_UE
+
+Sounds (saw, explosion, health pickup, statomatic): Darius Bryson Gourdine
+
+Camera improvement, enemy collision fixes, look inversion support: TwstdTree
+
+Door and hatch functionality, test arena generator, rotating blade, landmine model: m0nkeybrain
+
+Health bar UI: Stephanie Urch
+
+Rocks models, menu restart and exit buttons: Arjuna Gonzales
+
+Drone sketch, outline shader: Andy King
+
+Hazard blade, early version of flamethrower and landmine: Pierre NOEL
+
+Shop blockout, caution door: Pepp Jeffcott
+
+Weapon flavor text and upgrade proposals: Noah Wizard
+
+Original backstory: rhys kim
+
+Spawn system and related interface: Simone | ZilpioGaming
+
+Playtesting: Alyson Dominguez, Kamil Towers, Matthew Landset, Chris Morrissey, Twmy, Eric Goldman, Timothy Sullivan, David MacNeil, Paul Ciccotto"
+ost = ExtResource("36_krjpe")
+painting_texture = ExtResource("37_uwrvk")
+button_texture = ExtResource("38_2kobw")
+
+[node name="Planets Mobile" parent="Dev Pods Game Pictures" unique_id=259715983 instance=ExtResource("17_x11aa")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -15.429041, 0.7647941, 7.524845)
+game_label = "Planets
+Mobile"
+button_link = "https://numenorian.itch.io/planets-mobile"
+credits = "[b]Planets Mobile[/b] credits
+Developed June 15-Dec 7, 2025
+
+Project lead, core gameplay, computer players, gameplay UI and related indicators, tap controls, selection and orders, view scaling, main system for orbits and fleets, planet shadows, button styling, main menus, tuning, planet siege and capture, flag icon, optimizations, assorted bug fixing: Jonathan P
+
+Level design (Oculus, Tri-Lane, Radial Grid, Xiphosuran, Cosmic Bowtie, Hanaous, Black Hole, variants of Quadratic levels), music, level select paging and preview images, planet and fleet tweening, random song selection, level and orbit randomization, orbit offset support, populating asteroids, retrograde orbits, distant sounds (explosion, fleet merging), combat explosions, orbit bug fixes, siege resets if fleet leaves, ship count sprite contributions, post-release bugfixes: Michael Avrie
+
+Fleet splitting, star field, nebulae, mouse zoom, sun rendering with variants, fleet sprites, player icon, planet rings, sounds (menu, explosion, capture), ownership icons, planet effects, music variant, logo, performance improvements, scoreboard, turns UI, help screen coding, title screen decoration, volume settings, ship count sprite contributions, post-release bugfixes: Christer \"McFunkypants\" Kaitila
+
+Orbital fleet movement constrained, orbit adjacency connection changes, orbit change parameter, web audio integration for planet choice sound, pause button, button styling, pause menu layout fix, audio timing correction: Patrick McKeown
+
+Main menu options button, bug fixes (related to the the start of game turn, entity deselection, alert dialog, sound volume adjustment): Fahad Muntaz
+
+Playtest Feedback, help tutorial text, ship altered design and faction glow variations, ship count sprite contributions: Noah Wizard
+
+Camera size adjusts to screen size: Vince McKeown"
+ost = ExtResource("39_qm64g")
+painting_texture = ExtResource("40_4flnh")
+button_texture = ExtResource("41_26c6d")
+
+[node name="Orbs and Dash" parent="Dev Pods Game Pictures" unique_id=1760003619 instance=ExtResource("17_x11aa")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -15.429041, 0.7647941, -8.975155)
+game_label = "Orbs and
+Dash"
+button_link = "https://iancher.itch.io/orbs-and-dash"
+credits = "[b]Orbs and Dash[/b] credits
+Developed Jun 22 - Dec 14, 2025
+
+Project lead, core gameplay, spline/orbs level format, level track design, main orbs and potions functionalities, player jump, shield effect, static & spinning wall art, recent damage safety blink, level selection, level 1-3 terrains, populated level 2 with forests and canyons, mystery spell visual, orb loss animation, potion explosions, story typewriter effect, sounds (explosion, shield, wall hit, acceleration), orb collection particles, progress reset, asset integration, assorted bug fixes: Ian Cherabier
+
+Game Design, Lava area + VFX, rolling enemy, menu design, potion bomb model, rare orb, wall model, crepuscular rays, input smoothing, acrylic tunnel, orb counter, tutorial, terrain smoothing, start/back/quit buttons and win/loss flow, shop bug fix, UI polish, round end summary, countdown code, intro plot setup, rare orb indicator in level selection menu: Adeel Bashir
+
+Pickups placement, checked flag and speed arrow art, forest + space level, schools of fish, finish line decoration, spin hazards, witch model and broom decorations, particles (orbs, oil drop, stars), player trail, sunrise skybox gradient, background rock/cloud mesh generator, audio integration: Christer Kaitila
+
+Potion bomb, orb collision detection improvements, pause menu, original script, speed scaling toggles: Justin Six
+
+Music (level tracks and menu): roy_kinson
+
+Player customization and shop menu, mystery spell, orb collection bug fix: egehanemre
+
+Sea stage skybox, end portal effects: Andy King
+
+Mystery spell visual and sound, acceleration platform, disappearing notifications, paralyze spell: Simone | ZilpioGaming
+
+Intro and endgame story with illustrations, 3-2-1-go sounds, space level track design, playtest: Noah Wizard
+
+Shield functionality and pickup: Justin Montgomery
+
+Orb collection sound: Rodrigo Bonzerr S. Lopez
+
+Main orb 3D asset: Luis Montaña
+
+UI timer script: Herleen
+
+M key to toggle mute: Dave Yoon
+
+Credits compilation, support: Chris DeLeon"
+ost = ExtResource("42_5yda5")
+painting_texture = ExtResource("43_h8ix8")
+button_texture = ExtResource("44_i0lgh")
+
+[node name="Everchange" parent="Dev Pods Game Pictures" unique_id=1311631947 instance=ExtResource("17_x11aa")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -6.929041, 0.7647941, -13.405556)
+game_label = "Everchange"
+button_link = "https://deep-rooted-games.itch.io/everchange"
+credits = "[b]Everchange[/b] credits
+Developed Sep 14-Feb 15, 2026
+
+Project lead, game design, environment art (statues, trees, buildings, floating platforms, roadways, dynamics obstacles, checkpoints, jump pad), in-game and menu UI with related art (including loading and credits), main story voice over, main narrative design, level and runner path layout (sky and ground areas): Iain \"Root\" Hurt
+
+Obstacle collision reload, checkpoint hookup and animated visual guide, input upgraded to the latest input system: Fahad Muntaz
+
+Tutorial tips and related trigger scripts with scene placement, menu button sound, footstep sounds, red artifact sound: Ian Cherabier
+
+Player free movement, menu music, racing rank detection, rubber banding, speed and trail lines, dust effects, intro flyby, sounds (glide, jump, grinding, wall run), speed fov, occlusion baking optimization, finish line, race stat tracking and related UI, pause menu: Christer \"McFunkypants\" Kaitila
+
+Green powerup, item script, player audio triggers and related error handling, pickup randomization support: Barış Köklü
+
+Enemy obstacle activation, gravity effect for computer runners, menu connections (play, options, sound, loading scene): Marvin Chong
+
+Tutorial tips and related trigger scripts with scene placement, menu button sound, footstep sounds, red artifact sound, character animation integration: Chris DeLeon
+
+Force jump waypoint, sky lighting effects, aurora sky box, support for song intro before loop: Clayton Anderson
+
+Player boost dash, red and blue activator areas with related functionality, UI boost meter, flight recharge, color correction, menu keyboard support, scene lighting improvements, reseting player position: Adeel Bashir
+
+Character (including model, texture, and animation authoring), font rendering fix: Liyi Zhang
+
+Gameplay music: Alan Zaring
+
+Menu Music: Aaron Sherman
+
+Glide limit on flight, mute toggle: Joshua Stuntzner
+
+Item pickup and spawning related particles, minor bug fixes: Justin Chin
+
+Pickup particle visuals, pickup particles connected for other items, item pickup sound incl. integration, credits/options hookups: Tim Ruswick
+
+Voice actress, additional narrative design: Ariane Perideaux
+
+Playtesting: Noah Wizardff"
+ost = ExtResource("45_040qt")
+painting_texture = ExtResource("46_1j4k2")
+button_texture = ExtResource("47_oohrr")
+
+[node name="Forgotten Road" parent="Dev Pods Game Pictures" unique_id=1730001406 instance=ExtResource("17_x11aa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -9.235206, -13.393093)
+game_label = "The Forgotten
+Road"
+button_link = "https://devpods.itch.io/forgotten-road"
+credits = "[b]Forgotten Road[/b] credits
+Developed Mar 9-Sep 7, 2025
+
+Project lead, core gameplay, character art, quest system, level design, pressure plate, enemies (art, code, behavior for standard types and boss), main pathfinding, quest authoring, transitions, shops, projectiles, time of day, trees, item drops, screen shake, most outside tiles, NPCs (old man, chuck, farmer, red), moveable crate, additional weather features: Vince McKeown
+
+Chef Gormondo NPC, gamepad support, UI polish, chickens, slash sprite, enemy spritesheet integration, foliage, street lamp, pathfinding error repair, intro narrative voiceover, background music, intro story text, particles, shadows, sounds (boss, chest, coins, steps), destructibles, buildings, logo, doors, main menu and credits screen: Christer \"McFunkypants\" Kaitila
+
+Sprite facing hookup, button/UI core code, animation glitch repair, heart health sprites, damage indicator tuning, pause toggle: Michael Monty
+
+Enemy spawn testing, various UI/text readability additions, weather refactor, shop implementation, additional pathfinding code, staff attack: Patrick McKeown
+
+Pathfinding debugging, addressed graphics culling issue, confirmation dialog, bug fixes for input and pause screen, linux compability: Randy \"oneseedfruit\" Tan Shaoxian
+
+Weapon durability system, UI layout tweaks, stamina, additional snow code, weather UI, assorted fixes: solfish
+
+Attack hitbox improvements, NPC interaction tip, stamina potion sprite, step sounds: Vaan Hope Khani
+
+Health potion (sprite, healing effect, drop table integration), linux compatibility fix: Gwyn Henry
+
+Merchant NPC: Jason Timms
+
+Building collision improvements, sprint key, map key: Ryan Closs
+
+Bush art with variations: Rodrigo Bonzerr Lopez
+
+Game save and load system: Ryan Gaillard
+
+Ghoul front facing art, potion sprites: Luis Montaña
+
+Two doctor NPCs and related quest beginnings: Michael Avrie
+
+Mute toggle: Ian Cherabier "
+ost = ExtResource("48_r1oql")
+painting_texture = ExtResource("49_vb2wh")
+button_texture = ExtResource("50_2181a")
+
+[node name="Bert and Wheel of Worlds" parent="Dev Pods Game Pictures" unique_id=1026373839 instance=ExtResource("17_x11aa")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.877, 0.765, 11.525)
+game_label = "Bert and the
+Wheel of Worlds"
+button_link = "https://markguinn.itch.io/bert"
+credits = "[b]Bert and the Wheel of Worlds[/b] credits
+Developed Mar 1-Jul 12, 2026
+
+Project lead, core gameplay, Bert art, main level design (wheel, forest, waterfall, fish cavern), fish and bird gameplay, item mechanics (plank, lift, etc), painted effect shaders, UI, sounds (orb, wheel, Bert): Mark Guinn
+
+All music, portal drone, bird and fish sounds, environment sounds: Aaron Sherman
+
+Forest environment art: Amanda Stanley
+
+Shadow monster idea, art, gameplay, and sounds, shader fixes: Dávid Tóth
+
+Environment shaders, lantern, level design (sisyphus, ascent, missing plink), debris, blinking eyes, stone sounds: Christer Kaitila
+
+Fish and lift art, story development and writing, additional concept art: APV
+
+Bird art, title screen logo text: Mike Lawrence
+
+Woodpecker and chipmunk creatures, giant prototype, bug fixes, environment sounds: Keith Smyth
+
+Ragdoll dizzy stars, birds level: Michael Avrie
+
+Options menu with sliders: Quame Bailey
+
+Pause menu: Jakob Harris
+
+Night nature recordings: Chris DeLeon
+
+Itch page logo and design advice: Tim Ruswick
+
+Playtesting: Hunter Jones, Dávid Tóth (davids91), TopHatCroat, Tim Ruswick, Baguette"
+ost = ExtResource("51_8o8bn")
+painting_texture = ExtResource("52_pufyl")
+button_texture = ExtResource("53_gmrue")
+
+[node name="Tank Rampage Command" parent="Dev Pods Game Pictures" unique_id=1876285755 instance=ExtResource("17_x11aa")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 16.377, 0.765, 7.607)
+game_label = "Tank Rampage
+Command"
+button_link = "https://gamesalutes.itch.io/tank-rampage-command"
+credits = "[b]Tank Rampage Command[/b] credits
+Developed Feb 22-July 26, 2026
+
+Project lead, core gameplay, weapons and damage systems, unit selection and commands, computer player behavior (combat and construction), structures feature, fog of war, audio architecture (pool manager with concurrency and bus dispatch, pitch/volume randomization, trigger system), urban levels, scrap field, new unit production (incl. queue), terrain textures and shaping, pathing and targeting, tuning, explosion vfx, prototype tank model (tutorial area), collision and graphic optimizations, resource system, selection outline, internal debugging and utility features, asset integration, assorted bug fixing: Justin Montgomery
+
+Models (barracks, tree), level design (stage 1, tutorial), building panel (including hover effects, commands, cancellation), additional marine animations (run and shoot), assorted gameplay UI (incl. inventory, messaging, occupants), camera movement, visual effects (shooting variations, hit effects), icon standardizations, options menu, menu styling, level select, tooltips, scrap randomization and related shader, shadow settings: Antonio Martinović
+
+Music (city, desert, menu), artillery model, command center, city models, minimap, brick ruins, treadmarks, factory textures, barbed wire, logo, shadow, unit barks, terrain textures, sounds (gunshot, marine damage, explosion), street signs: Christer Kaitila
+
+Marine (with animations), marine transport (model and construction support), tree, sandbags, large tank spikes, land mine, cloth netting spike, grass: Michael Avrie
+
+Contextual UI improvements (non-attacking, transport unit display, unit counts, timers), minimap enhancements, story and dialog writing, dialog system incl. UI (background, speaker icons, skip button), credits scene: Jesse Rupe
+
+Bunker model with texture, human and enemy tank art and related implementation: Liyi Zhang
+
+Menu button sounds, audio loader: fizzybuzzybeezy
+
+Tank sounds: Connor Fitzpatrick
+
+Artillery explosion particle effect Chris DeLeon
+
+Playtesters: fizzybuzzybeezy, Mo Shah, Meatball"
+ost = ExtResource("54_pp8hb")
+painting_texture = ExtResource("55_312t8")
+button_texture = ExtResource("56_7n21r")
+
+[node name="Supply and Siege" parent="Dev Pods Game Pictures" unique_id=691955667 instance=ExtResource("17_x11aa")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.8765259, -9.235206, 11.524845)
+game_label = "Supple &
+Siege"
+button_link = "https://null-mt.itch.io/supply-and-siege"
+credits = "[b]Supply And Siege[/b] credits
+Developed Feb 8-June 28, 2026
+
+Project lead, core gameplay, player/unit controls, building placement and interactions, resource, stockpile, and inventory systems, gatherer/depot harvesting and drop-off systems, drag selection, item descriptions, PCG system, general UI coding and implementation, logistics system, including villager work assignment and prioritization, combat system prototype, woman character model and rigging, lumber camp modeling, Caelium refinery modeling, Trebuchet Modeling, rigging, and animating (unused), assorted asset integration and bug fixes, main menu, showcase level and UI: Alex M.
+
+Gatherer hut with mill rotation setup, stone deposit modeling and texturing, voice integration prototype (unused), metal resource node modeling and texturing, crystal models, textures, and animations, arrow and bow variant: Tyrone Harmon
+
+Style guide creation, UI art and layout, including top bar, menu items, resource icons, context menu, and building placement visuals, related UI images, trees modeling and texturing, male character modeling, rigging, and texturing, voice line options for all unit types (unused), font selection and integration: Mel Fitzgerald
+
+Handcart modeling and texturing, sword modeling and texturing, Storage Depot texturing: Jaqueline Aldana
+
+Menu music, voice sounds, ambience, mixing setup, sound variation support: Bex Rodriguez
+
+Gameplay music: Aaron Sherman
+
+Mining camp modeling and texturing, rock meshes (unused), berry bush modeling and texturing, grass modeling and texturing, bow and arrow variant modeling and texturing, sound effects, including GUI, coins, wood chop, and anvil strike, logo and icon mockup: Christer Kaitila
+
+Initial opponent AI prototype (unused), unit movement formations, wood icon improvements, unit selection fix: Cody McCarty
+
+Depleted resource removal, floating island component prototype (unused), unit health component prototype (unused): Ryan Gaillard
+
+Greyboxed map for player and enemy islands, base lore writing (shown in the main menu): lunaquarius
+
+Storage Depot modeling: Tyler Funk
+
+Health and damage functionality prototype (unused): Arty
+
+Pause screen: Marshall Sandoval-Clark
+
+Minimap prototype (unused), debug tool: Jshaun Hookumchand"
+ost = ExtResource("57_t5hd1")
+painting_texture = ExtResource("58_u63pl")
+button_texture = ExtResource("59_qqwu2")
+
+[node name="Talon Solitaire" parent="Dev Pods Game Pictures" unique_id=1812921250 instance=ExtResource("17_x11aa")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -3.6234741, -9.235206, 11.524845)
+game_label = "Talon
+Solitaire"
+button_link = "https://patrickmck.itch.io/talon"
+credits = "[b]Talon Solitaire[/b] credits
+Developed Sep 14 - Dec 14, 2025
+
+Project lead, deck spritesheet, owl art, red-kite art, feather card-back, animated tutorial on Title scene, UI navigation, dynamic resize dropzones, scaling for sharper card font, card border and experimental shadow, deal & rewind animations, allow same-colour easy-moves and show remaining, sound system & UI volume settings, quack easy-move sound, scoring snd high-score storage, Peek reveal hidden cards while keydown, test if 4 Kings tableau offer quick-win, tableau card reveal by flip on central axis, random X shift cards, long tableau handling & dodge for menu-button, stop card-click triggering abandoned & placing sounds, scrolling Credits, text for Help, utilities for test, bugfixing: Patrick McKeown
+
+Animated particle fx for good card placement on tableau and foundation, victory animation card-splosion!! on win, eagle art, crow art, card-back art (birds & waves), cloth background art, sound fx files for shuffle, card-pickup, card-placement, foundation-add, complete-foundation, game-win, button-press, eagle cry (invalid-move), owl hoot (rewind), and integrating sounds in game: Christer Kaitila (McFunkypants)
+
+When card(s) move invalid they animate back to where they started, and bugfix, Menu button on game, with navigation, Escape key to title, nvmrc file: Dan Dela Rosa
+
+Music wav, two versions of medallion to count easymoves: Noah Wizard
+
+Talons card-back design, and integration on spritesheet: Elizabeth McMahill (McMahem)
+
+Video and audio feedback from multiple game playthroughs: Philippe Vaillancourt (snowfrogdev)
+
+Soundfx for Peek, and integration in-game: Jason Timms (fizzybuzzybeezy)
+
+Edit and typo fixes in Readme: Mike DiGiovanni
+
+QA playtesters: Philippe Vaillancourt (snowfrogdev), Michael Avrie, Tim Sargent, Noah Wizard, Simone | ZilpioGaming, Jason Timms, Mike DiGiovanni, Dominic Beacham
+
+itch.io dimensions workaround: Chris DeLeon"
+ost = ExtResource("60_6x7hh")
+painting_texture = ExtResource("61_41pjn")
+button_texture = ExtResource("62_ddcsr")
+
+[node name="Terminus 2k28" parent="Dev Pods Game Pictures" unique_id=342205885 instance=ExtResource("17_x11aa")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 9.876526, -9.235206, 11.524845)
+game_label = "Terminus 2k28"
+button_link = "https://devpods.itch.io/terminus-2k28"
+credits = "[b]Terminus 2k28[/b] credits
+Developed Aug 30-Sep 20, 2026
+
+3-Week Challenge Note: This is the only game in this collection not on a 3-6 month schedule, and with people not in Dev Pods (more than half the team was involved only for this challenge)
+
+Project lead, base gameplay, general game structure, initial billboard and 3d enemy types, immersive obstacles, win conditions, survivors rescue sequence, weapon power level, precaching, immersive mode fog/layout, additional particle explosions, assorted bug fixes and optimizations: Chris DeLeon
+
+Robodog, obelisk spawner, turret enemy, orbit shield bots, randomized environment placement, beam weapon, destructible truck, survivor mode enemy edge spawner/looping, quadcopter enemy, explosive barrels, sprite flipping: Michael Buslik
+
+Environment art (fence, tree, hydrant, rock, bush, wheel), explosion animation, song2k28, projectiles, effects (explosion, smoke, wind/leafs), prop tuning: Juan Luiz R
+
+Movement and aim input fixes, gamepad support (including menus), loading screens, collision improvements, assorted bug fixes and optimizations: wolscott
+
+Lead Sound Designer, voiceover designer, audio integration, dialogue writer, sound effects (UI audio, explosions, electric attacks, weapons, robot voice modulation, pickups, new wave, rescue plane), pitch system fix: Tanner Gallella
+
+Survivor mode autotargeting and autofire, weapon pickups/icons/UI (art and code), health bar with effects, screenshake and flashes, player death sequence: Mark Guinn
+
+Level boundaries, rescue aircraft model, robotank model, volume slider, escape menu with settings, visual effects slider, auto targeting fix: Shane B.
+
+Level manager, wave managers, wave authoring, round stat tracking, dynamic sound pitch: azzysteel
+
+Lightning bolts weapon (incl. optimizations), player model, \"roombye\" robot, song selector: Dávid Tóth
+
+Nuclear power plant, game over menu, GUI wave counter, credits panel toggle: Raymond Zegles
+
+Audio manager with stream queue limits, weapon switching, weapon stacking, spread shot, damage support: Lenny Morayniss
+
+Ambience song, title logo, CRT effect, muzzle flashes, weapon switch, GUI font selection, score/combo GUI: Christer Kaitila
+
+Player concept art, terminus1 song: Jalent (Jason W)
+
+Robot voice acting: Amanda Stanley
+
+Pickup system (incl. health boost, enemy drops): Belén Albeza
+
+Enemy perception, nav mesh, seek and wander, advanced optimizations: Justin Montgomery
+
+Game story: APV
+
+Sergeant V. Wakefield player sprite: Pretty Parsable
+
+Game over sound (and implementation), pause key toggle: L
+
+Arcade ground texture: VikingMalmstrom
+
+Player health support, debugging logger: Tim Lorgeree
+
+Menu button hover & select audio code (level select and pause menus), menu focus fix: fizzybuzzybeezy
+
+Game over handling, mute key toggle: Ryan Gaillard
+
+Pause menu scene: Jordan
+
+Music export bug fix: Michael Avrie
+
+Playtesting: Barış Köklü, Juan Luiz R and two anonymous testers"
+ost = ExtResource("63_bf8a0")
+painting_texture = ExtResource("64_4g4y1")
+button_texture = ExtResource("65_5covn")
+
+[node name="SOON-OrcBurp" parent="Dev Pods Game Pictures" unique_id=1757776654 instance=ExtResource("17_x11aa")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -10.623474, -9.235206, 11.524845)
+game_label = "COMING SOON"
+credits = "COMING SOON"
+painting_texture = ExtResource("66_8a5gj")
+button_texture = ExtResource("66_8a5gj")
+
+[node name="SOON-TBA" parent="Dev Pods Game Pictures" unique_id=2047542358 instance=ExtResource("17_x11aa")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -15.429041, -9.235206, 7.524845)
+game_label = "COMING SOON"
+credits = "COMING SOON"
+painting_texture = ExtResource("66_8a5gj")
+button_texture = ExtResource("66_8a5gj")
+
+[node name="SOON-SteamRolla" parent="Dev Pods Game Pictures" unique_id=1176490103 instance=ExtResource("17_x11aa")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -15.429041, -9.235206, -8.975155)
+game_label = "COMING SOON"
+credits = "COMING SOON"
+painting_texture = ExtResource("66_8a5gj")
+button_texture = ExtResource("66_8a5gj")
+
+[node name="Shin and the Guardians of the Spirits" parent="Dev Pods Game Pictures" unique_id=1795474258 instance=ExtResource("17_x11aa")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -6.929041, -9.235206, -13.405556)
+game_label = "Shin and the
+Guardians of Spirits"
+button_link = "https://christiangabbianelli.itch.io/shin-and-the-guardians-of-spirits"
+credits = "[b]Shin and the Guardians of Spirits[/b] credits
+Developed April 19 - Oct 25, 2026
+
+Christian Gabbianelli: Project co-lead, core gameplay, player character animation and attack features (incl. juggling / aerial combos), Ice and Lava boss behaviors (design and implementation), Ice and Lava boss animations (incl. telegraphic, hit reactions, phase transitions, death), rigging for all boss models, attack trails, lava boss inverse kinematics, volcano eruption, villager spirits and effigies, auto healing, pushback and hitstop, ice shield mechanics, tuning, juice/polish, map fixes, assorted effects (hand or weapon trails, flames, additional forest boss vfx
+
+Ben Owens: Project co-lead, level design (village and forest), Forest Protector animations and related integration, Forest Protector behavior state tree and related attack authoring, polish for main menu, pause screen improvements (incl. boss carousel), table-based dialogue system, camera lock on targeting, initial health and magic bars (player and enemy), scene transitions, boss weaknesses made targetable, music integration, menu/dialigue cinematic bars, assorted fixes 
+
+aarx0: Boss attacks (lava bomb, pillar field, sliding wall, totem, homing attack, radiating ice), player defense (block, deflect, dodge, interrupt, guard from stagger, wall shatter), knockback, heal ability, forward projectile strike, magic on melee, functionality for HUD and common options screen and menu menu, volume sliders implementation, gamepad menu support, AoE telegraphing, smoke trail, volcano behavior, improved combat debugging features, menu navigation, combat test area, assorted clean up and bug fixes 
+
+Arnulfo Torres Valladares: Models and textures for Lava Golem and Forest Protector (both with retopology passes) 
+
+Mel Fitzgerald: Shin model with texture, volcano and ice models and materials (including rocks, terrain), level design for ice arena and fire level 
+
+Iain Hurt: UI design and related art (player, boss, monster icons, death screen, credits and pause menus), logo, font integration
+
+Bex Rodriguez: Dynamic music (all bosses - Lava Guardian, Ice Boss, Jungle Guardian - with phase transitions, village hub world with variations, menu), music transitions, sounds (sword slash, grunt, footsteps improvements) 
+
+Elagon: FMOD audio integration (footprints change by terrain, movement sounds, portal transitions), sounds (Ice Warden shield slam and dash, Lava Golem attack / hurt / breathing, Forest Protector wind attack, Torii gate portal, lock on, healing and low mana), menu volume mixers connected, reverb zone, volume balancing 
+
+Christer Kaitila: Environment models with texture (traditional house, bamboo trees with variations, forest ground material, stone bridge, stone lantern, coniferous tree, additional ice variant), effects (lava waterfall, portal wormholes, leaves particles, for effect, AoE impact), environmental sounds (cloud puffs, ice steps, tree creaks, bush and brush hit sounds, tornado) 
+
+David Bates: Health event update, mute command, pause toggle, early audio code 
+
+Michael Fewkes: Motion warp to ttack montage, Mac editor fix 
+
+Arjuna Gonzales: Icicle material and meshes 
+
+Connor Fitzpatrick: Sounds for Lava Guardian and impacts 
+
+Dalton Charleston: Added magic attribute"
+ost = ExtResource("67_jxhaq")
+painting_texture = ExtResource("68_s7xux")
+button_texture = ExtResource("69_pqqwr")
+
+[node name="Cyndrive Ships" parent="Dev Pods Game Pictures" unique_id=2048733138 instance=ExtResource("17_x11aa")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 51.07096, 0.7647941, -9.905556)
+game_label = "Cyndrive
+Ships"
+button_link = "https://davids91.itch.io/cyndrive-ships"
+credits = "[b]Cyndrive Ships[/b] credits
+Developed Nov 23-Apr 19, 2026
+
+Project lead, core gameplay, time travel system, ship physics, controls, main enemy/boss AI behaviors, main story and dialog, weapons systems, black hole, minimap, main menu (galaxy and buttons), in-game UI, scenario design, lasers, tutorial and guide, sounds (lasers, thrusters, explosions, UI sounds), assorted bug fixes, optimizations: Dávid Tóth
+
+Rewindable explosions with particles, dubstep style music track, star nebulae background elements in starfield, main menu particle effects, missile (implementation, art), dialog system iteration with scrolling text, ship thruster particle effects, Orange Queen boss, bugfixes, optimizations: Christer Kaitila
+
+Feature system, 90s Big Beat Music inspired background track, chain lightning with bouncing electric attack, focused detailed and thorough pre-release playtesting with recorded videos, raw pre-alpha version playtest with recorded videos, god mode cheat, bugfixes: Philippe Vaillancourt
+
+Lore and story, character art, game icon, time slower, difficulty concept, initial character dialouge, 3d model of player carrier ship, Mr Mustle radar cone: Noah Wizard
+
+Explosive mine (implementation and visuals, recall support, laser/lightning interaction), time travel improvement, pause menu, raw pre-alpha version playtest, assorted fixes: Jalent (Jason W)
+
+Enemy droid skin and voxel model, ship booster effect and sound, sonar radar blips and radar system refactor, weapon energy system, bugfixes: Drew Finstrom
+
+Mr Mustle ship art, Dr Speedo Ship art, Orange Queen Ship art, Ancient Time traveling race color palette: Leooftheblack
+
+Gorgeous volume settings in pause menu, raw pre-alpha version playtest: Michael Avrie
+
+Acid style music track, pre-release version playtest: Attila Bányai@Black Cathedral(UK)
+
+Dynamic starfield shader for space background: Ryan Malm
+
+Itch page design, title logo: Tim Ruswick
+
+Asteroid models, pre-release version playtest: Grestyák Dominik
+
+Level 1 dialog, tutorial dialog extension with time slowing mechanic explanations: lunaquarius
+
+Detailed pre-release playtesting, lots of guidance and support: Chris Deleon
+
+Infinite ammo cheat, infinite boost cheats: Len Winkler
+
+Raw pre-alpha version playtest, pre-release version playtest, typos in readme: J Patrick McKeown
+
+Dialog system UI base and structures: Travis Barnette
+
+Additional playtesting: ArtyT, Connor Fitzpatrick, Dragon, Zoli, Dorka "
+ost = ExtResource("70_u1dlp")
+painting_texture = ExtResource("71_r6t1t")
+button_texture = ExtResource("72_2wa24")
+
+[node name="SuitTree" parent="Dev Pods Game Pictures" unique_id=1666604679 instance=ExtResource("73_en2bh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, -1, -5.5)
+
+[node name="Guidebook Stand" type="StaticBody3D" parent="." unique_id=1055153947]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 26.382, 0.003, 25.855)
+
+[node name="Guidebook3d" type="Node3D" parent="Guidebook Stand" unique_id=931597897]
+transform = Transform3D(0.8660254, 0, 0.49999997, 0, 1, 0, -0.49999997, 0, 0.8660254, -0.06468773, 0.3186257, -0.028995514)
+
+[node name="SubViewport" type="SubViewport" parent="Guidebook Stand/Guidebook3d" unique_id=1014948791]
+disable_3d = true
+transparent_bg = true
+handle_input_locally = false
+snap_2d_transforms_to_pixel = true
+positional_shadow_atlas_quad_0 = 0
+positional_shadow_atlas_quad_1 = 0
+positional_shadow_atlas_quad_2 = 0
+positional_shadow_atlas_quad_3 = 0
+size_2d_override = Vector2i(512, 512)
+
+[node name="CanvasLayer" parent="Guidebook Stand/Guidebook3d/SubViewport" unique_id=1238244302 instance=ExtResource("74_a38tq")]
+
+[node name="guidebook" parent="Guidebook Stand/Guidebook3d" unique_id=8630000 instance=ExtResource("75_2eec6")]
+
+[node name="Book" parent="Guidebook Stand/Guidebook3d/guidebook" index="0" unique_id=2009432074]
+layers = 6
+cast_shadow = 0
+
+[node name="Pages" parent="Guidebook Stand/Guidebook3d/guidebook" index="1" unique_id=2132904720]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
+layers = 6
+surface_material_override/0 = SubResource("StandardMaterial3D_vq06m")
+
+[node name="Guidebook3d2" type="Node3D" parent="Guidebook Stand" unique_id=987629102]
+transform = Transform3D(0.99572617, -6.976736e-08, 0.092355326, 0.07370379, 0.60259724, -0.79463464, -0.05565301, 0.7980456, 0.60002184, 0.33789635, 0.5955966, 0.11873436)
+
+[node name="guidebook" parent="Guidebook Stand/Guidebook3d2" unique_id=696652650 instance=ExtResource("75_2eec6")]
+
+[node name="Book" parent="Guidebook Stand/Guidebook3d2/guidebook" index="0" unique_id=2009432074]
+layers = 6
+cast_shadow = 0
+
+[node name="Pages" parent="Guidebook Stand/Guidebook3d2/guidebook" index="1" unique_id=2132904720]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
+layers = 6
+surface_material_override/0 = SubResource("StandardMaterial3D_3djdl")
+
+[node name="Guidebook3d3" type="Node3D" parent="Guidebook Stand" unique_id=1147084550]
+transform = Transform3D(-0.9742656, -0.12668496, -0.18643428, 0.14209789, -0.98725104, -0.07172081, -0.1749714, -0.0963671, 0.979846, -0.58836937, 0.5955966, 0.11873436)
+
+[node name="guidebook" parent="Guidebook Stand/Guidebook3d3" unique_id=53326943 instance=ExtResource("75_2eec6")]
+
+[node name="Book" parent="Guidebook Stand/Guidebook3d3/guidebook" index="0" unique_id=2009432074]
+layers = 6
+cast_shadow = 0
+
+[node name="Pages" parent="Guidebook Stand/Guidebook3d3/guidebook" index="1" unique_id=2132904720]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
+layers = 6
+surface_material_override/0 = SubResource("StandardMaterial3D_ym0uh")
+
+[node name="Label3D" type="Label3D" parent="Guidebook Stand" unique_id=1831322265]
+transform = Transform3D(0.24000001, 0, 0, 0, 0.24000001, 0, 0, 0, 0.24000001, -0.07500076, 0.61191887, -0.31499863)
+pixel_size = 0.007
+modulate = Color(0, 0, 0, 1)
+text = "Museum
+Guidebook"
+outline_size = 0
+
+[node name="PlayButtonStand" type="MeshInstance3D" parent="Guidebook Stand" unique_id=1347721153]
+transform = Transform3D(-6.29444e-09, 0, 0.14400001, 0, 0.14400001, 0, -0.14400001, 0, -6.29444e-09, -0.08000028, -1, -0.039999425)
+material_override = SubResource("StandardMaterial3D_880y8")
+mesh = ExtResource("77_lldod")
+
+[node name="CollisionShapeStand" type="CollisionShape3D" parent="Guidebook Stand" unique_id=2075250944]
+transform = Transform3D(-8.742277e-09, 0, -0.19999999, 0, 0.19999999, 0, 0.19999999, 0, -8.742277e-09, -0.099998474, 0.45, -0.050001144)
+shape = SubResource("BoxShape3D_7tbbo")
+
+[node name="Basement Art (Misc not in released games)" parent="." unique_id=1453491612 instance=ExtResource("78_pjprh")]
+
+[node name="Cyndrive Ships" type="CSGBox3D" parent="." unique_id=9692898]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 57.649727, -6.4135675, 33.940575)
+use_collision = true
+size = Vector3(17.097565, 11.175171, 27)
+material = ExtResource("79_no514")
+
+[node name="CyndriveShipsInvisibleBridge" type="CSGBox3D" parent="Cyndrive Ships" unique_id=2114186877]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.094616, 8.776946, -21.01416)
+size = Vector3(32.198265, 13.552887, 47.645844)
+material = SubResource("StandardMaterial3D_rvyx8")
+
+[node name="EngineOutline" type="CSGBox3D" parent="Cyndrive Ships/CyndriveShipsInvisibleBridge" unique_id=1081888516]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.30743408, -0.48849654, 13.434654)
+size = Vector3(19.921268, 9.030518, 50.841515)
+material = SubResource("StandardMaterial3D_rvyx8")
+
+[node name="CSGPolygon3D2" type="CSGPolygon3D" parent="Cyndrive Ships/CyndriveShipsInvisibleBridge" unique_id=723276487]
+transform = Transform3D(-4.371139e-08, 0, 11.525, 0, 1, 0, -1, 0, -5.037737e-07, 3.486, -0.8430338, -3.104)
+operation = 2
+polygon = PackedVector2Array(-12.480685, 1.7731762, -5.1643248, 5.192993, 4.3064184, 4.8794007, 14.34516, 0.9077308, 15.168796, -2.0890944, -14.173218, -1.8835232)
+material = SubResource("StandardMaterial3D_rvyx8")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Cyndrive Ships/CyndriveShipsInvisibleBridge" unique_id=370010350]
+transform = Transform3D(1.69, 0, 0, 0, 1.69, 0, 0, 0, 16.495, 0, 0, 3.3164616)
+operation = 2
+polygon = PackedVector2Array(-12.662315, 0.5377817, -2.4959602, 1.6462355, 4.059906, 1.796078, 16.159622, 0.1341188, 16.617012, -1.7789986, -14.173218, -1.8835232)
+material = SubResource("StandardMaterial3D_rvyx8")
+
+[node name="CyndriveShipsProps" type="Node3D" parent="Cyndrive Ships" unique_id=929337151]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.142765, 6.569107, -55.045036)
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Cyndrive Ships/CyndriveShipsProps" unique_id=759858105]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.054642, 3.7242918, 2.1917918)
+radius = 3.42
+material = SubResource("StandardMaterial3D_ifpan")
+
+[node name="cyndrive_ships_silo" parent="Cyndrive Ships/CyndriveShipsProps/CSGSphere3D" unique_id=1992968748 instance=ExtResource("80_kqne6")]
+transform = Transform3D(-0.33161744, -0.943414, 0, 0.943414, -0.33161744, 0, 0, 0, 1, 6.9265213, 2.024488, -0.41749775)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Cyndrive Ships/CyndriveShipsProps/CSGSphere3D" unique_id=1810190265]
+transform = Transform3D(-0.008518517, -0.25000006, 0.9682084, 0.06698731, 0.9659259, 0.25000006, -0.99771756, 0.066987306, 0.008518575, -3.75, -1, 0)
+light_color = Color(0.99999994, 0.84133786, 0.45285916, 1)
+light_energy = 10.663
+spot_range = 25.0
+
+[node name="cyndrive_ships_silo_door" parent="Cyndrive Ships/CyndriveShipsProps" unique_id=88482316 instance=ExtResource("81_ehrnj")]
+transform = Transform3D(-0.33161744, -0.943414, 0, 0.943414, -0.33161744, 0, 0, 0, 1, -10.071716, 5.724245, 1.7644169)
+
+[node name="cyndrive_ships_ship" parent="Cyndrive Ships/CyndriveShipsProps" unique_id=914631784 instance=ExtResource("82_oqdhv")]
+transform = Transform3D(0.19570023, -0.5234592, 0.82927185, 0.7060881, 0.66204405, 0.25127035, -0.6805445, 0.53636557, 0.49917048, -55.076828, 3.8273602, -2.104969)
+
+[node name="cyndrive_ships_ship2" parent="Cyndrive Ships/CyndriveShipsProps" unique_id=1980471060 instance=ExtResource("82_oqdhv")]
+transform = Transform3D(-0.5831673, -0.26127842, 0.7691874, 0.17798519, 0.88276315, 0.43479955, -0.7926141, 0.39046472, -0.46829504, -54.779503, 3.3158083, 6.336237)
+
+[node name="cyndrive_ships_ship3" parent="Cyndrive Ships/CyndriveShipsProps" unique_id=1100349468 instance=ExtResource("82_oqdhv")]
+transform = Transform3D(-0.1531148, 0.14279057, 0.9778378, -0.40671447, 0.89270943, -0.19404496, -0.90063244, -0.42741174, -0.07861219, -51.033752, 8.740594, 1.3237553)
+
+[node name="cyndrive_ships_carrier" parent="Cyndrive Ships/CyndriveShipsProps" unique_id=1944815721 instance=ExtResource("83_iiuao")]
+transform = Transform3D(-1.965, 0, 2.9670676e-07, 0, 1.965, 0, -2.9670676e-07, 0, -1.965, -34.257263, -8.899204, 7.0070744)
+
+[node name="CSG Blockout" type="CSGCombiner3D" parent="." unique_id=1443703714]
+use_collision = true
+
+[node name="Museum Modern (past year)" type="CSGBox3D" parent="CSG Blockout" unique_id=81101017]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.002178, -1.497253, 32.49996)
+material_override = SubResource("StandardMaterial3D_lahx7")
+size = Vector3(34, 21, 27)
+material = ExtResource("79_no514")
+
+[node name="Overhang" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=1643118629]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 17, -20.000305)
+material_override = ExtResource("79_no514")
+size = Vector3(32, 1, 25)
+material = ExtResource("79_no514")
+
+[node name="Lighting" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)/Overhang" unique_id=862232876]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, -4.5)
+material_override = ExtResource("79_no514")
+size = Vector3(16, 0.1, 8)
+material = ExtResource("85_b51fp")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSG Blockout/Museum Modern (past year)/Overhang/Lighting" unique_id=470199696]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.25, 0)
+light_energy = 6.0
+omni_range = 16.0
+
+[node name="OverhangSupport" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)/Overhang" unique_id=1735144471]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, -9.25, -4.75)
+material_override = ExtResource("86_k14ch")
+size = Vector3(1, 17, 1)
+material = ExtResource("14_3s7go")
+
+[node name="OverhangSupport2" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)/Overhang" unique_id=187068489]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, -9.25, -4.75)
+material_override = ExtResource("86_k14ch")
+size = Vector3(1, 17, 1)
+material = ExtResource("14_3s7go")
+
+[node name="NegativeCube" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=1344645570]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006872177, -0.06893873, 0.060886383)
+material_override = ExtResource("86_k14ch")
+operation = 2
+size = Vector3(32, 19, 25.091)
+material = ExtResource("87_rtr6f")
+
+[node name="NegativeCubeCeiling" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=843373634]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02, 9.46, 0.06)
+material_override = ExtResource("86_k14ch")
+operation = 2
+size = Vector3(32, 0.07, 25.091)
+material = ExtResource("88_e4ebv")
+
+[node name="Front High Windows" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=1478144008]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 7.75, -12.750305)
+material_override = ExtResource("86_k14ch")
+operation = 2
+size = Vector3(6, 1.5, 1.5)
+material = ExtResource("86_k14ch")
+
+[node name="Front High Windows2" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=215773936]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 7.75, -12.750305)
+material_override = ExtResource("86_k14ch")
+operation = 2
+size = Vector3(6, 1.5, 1.5)
+material = ExtResource("86_k14ch")
+
+[node name="Front High Windows3" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=1655423960]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 7.75, -12.750305)
+material_override = ExtResource("86_k14ch")
+operation = 2
+size = Vector3(6, 1.5, 1.5)
+material = ExtResource("86_k14ch")
+
+[node name="Front High Windows4" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=490711015]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 7.75, -12.750305)
+material_override = ExtResource("86_k14ch")
+operation = 2
+size = Vector3(6, 1.5, 1.5)
+material = ExtResource("86_k14ch")
+
+[node name="BasementCarpet" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=1921259376]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012775421, -9.725386, 0.037239075)
+material_override = ExtResource("86_k14ch")
+size = Vector3(32, 0.5, 25.090912)
+material = ExtResource("89_uyxgy")
+
+[node name="UpperFloorRailing" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=464187141]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 2.1330957, 0.54100037)
+size = Vector3(21, 0.25, 13.5)
+material = ExtResource("90_ndh8n")
+
+[node name="UpperFloorRailing2" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)/UpperFloorRailing" unique_id=1551896430]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.032348633, 0, 0)
+operation = 2
+size = Vector3(20.5, 0.5, 13)
+material = ExtResource("90_ndh8n")
+
+[node name="UpperFloorRailing3" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)/UpperFloorRailing" unique_id=696200383]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21765137, 0, 4.25)
+operation = 2
+size = Vector3(22, 0.5, 4.5)
+material = ExtResource("90_ndh8n")
+
+[node name="Upper Floor" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=997593043]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.00030517578)
+size = Vector3(32, 1, 25)
+material = ExtResource("91_2qqlf")
+
+[node name="Upper Floor Hole" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=1939340318]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -0.25, 0.49969482)
+operation = 2
+size = Vector3(19, 1.5, 12)
+material = ExtResource("91_2qqlf")
+
+[node name="StairsLeft" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=43369800]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.499992, -1.5, 4.499695)
+size = Vector3(1, 2, 4)
+material = ExtResource("91_2qqlf")
+
+[node name="StairsLeft2" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)/StairsLeft" unique_id=1932985007]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1, 0)
+size = Vector3(1, 2, 4)
+material = ExtResource("91_2qqlf")
+
+[node name="StairsLeft3" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)/StairsLeft" unique_id=1347595344]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -2, 0)
+size = Vector3(1, 2, 4)
+material = ExtResource("91_2qqlf")
+
+[node name="StairsLeft4" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)/StairsLeft" unique_id=682292125]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -3, 0)
+size = Vector3(1, 2, 4)
+material = ExtResource("91_2qqlf")
+
+[node name="stairs bottom CUT" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)/StairsLeft" unique_id=1105424901]
+transform = Transform3D(0.70710677, -0.70710677, 0, 0.70710677, 0.70710677, 0, 0, 0, 1, -1.0606613, -2.9393406, 0)
+operation = 2
+size = Vector3(7, 2, 5)
+material = ExtResource("79_no514")
+
+[node name="StairsRight" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=608160855]
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, -9.500008, -1.5, 4.499695)
+size = Vector3(1, 2, 4)
+material = ExtResource("91_2qqlf")
+
+[node name="Stairs2" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)/StairsRight" unique_id=1748184968]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1, 0)
+size = Vector3(1, 2, 4)
+material = ExtResource("91_2qqlf")
+
+[node name="Stairs3" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)/StairsRight" unique_id=1058897845]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -2, 0)
+size = Vector3(1, 2, 4)
+material = ExtResource("91_2qqlf")
+
+[node name="Stairs4" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)/StairsRight" unique_id=2124363529]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -3, 0)
+size = Vector3(1, 2, 4)
+material = ExtResource("91_2qqlf")
+
+[node name="stairs bottom CUT2" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)/StairsRight" unique_id=1886159779]
+transform = Transform3D(0.7071067, -0.7071067, 0, 0.7071067, 0.7071067, 0, 0, 0, 1, -0.9393387, -2.9393406, -3.8146973e-06)
+operation = 2
+size = Vector3(7, 2, 5)
+material = ExtResource("79_no514")
+
+[node name="StairsCenter" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=485653337]
+transform = Transform3D(1.3311836e-07, 0, -1, 0, 1, 0, 1, 0, 1.3311836e-07, -0.5000076, -5.5, 1.9996948)
+size = Vector3(1, 2, 5)
+material = ExtResource("91_2qqlf")
+
+[node name="Stairs2" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)/StairsCenter" unique_id=1101020732]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1, 0)
+size = Vector3(1, 2, 6)
+material = ExtResource("91_2qqlf")
+
+[node name="Stairs3" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)/StairsCenter" unique_id=997135980]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -2, 0)
+size = Vector3(1, 2, 7)
+material = ExtResource("91_2qqlf")
+
+[node name="Stairs4" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)/StairsCenter" unique_id=942780155]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -3, 0)
+size = Vector3(1, 2, 8)
+material = ExtResource("91_2qqlf")
+
+[node name="Stairs5" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)/StairsCenter" unique_id=1212171746]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -3.5, 0)
+size = Vector3(1, 1, 9)
+material = ExtResource("91_2qqlf")
+
+[node name="stairs bottom CUT2" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)/StairsCenter" unique_id=672148882]
+transform = Transform3D(0.70710677, -0.70710677, 0, 0.70710677, 0.70710677, 0, 0, 0, 1, -0.6, -2.5, 0)
+operation = 2
+size = Vector3(7, 2, 11)
+material = ExtResource("79_no514")
+
+[node name="StairsCenterPlatform" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=2053181964]
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, -0.5000076, -5, 4.499695)
+size = Vector3(11, 1, 4)
+material = ExtResource("91_2qqlf")
+
+[node name="ColumnBackLeft" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=70434087]
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 9.499992, 0.25, 6.999695)
+size = Vector3(1, 19.5, 1)
+material = ExtResource("79_no514")
+
+[node name="ColumnBackRight" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=1164800849]
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, -10.500008, 0.25, 6.999695)
+size = Vector3(1, 19.5, 1)
+material = ExtResource("79_no514")
+
+[node name="ColumnFrontLeft2" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=725025997]
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 9.499992, 0.25, -6.000305)
+size = Vector3(1, 19.5, 1)
+material = ExtResource("79_no514")
+
+[node name="ColumnFrontRight2" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=1527201074]
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, -10.500008, 0.25, -6.000305)
+size = Vector3(1, 19.5, 1)
+material = ExtResource("79_no514")
+
+[node name="Front Entrance Hole" type="CSGPolygon3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=1997540614]
+transform = Transform3D(-1, 0, 1.509958e-07, 0, 1, 0, -1.509958e-07, 0, -1, -3.8146973e-06, 0.5, -13.500004)
+operation = 2
+polygon = PackedVector2Array(-1.5, 0, -1.5, 2.5, -1, 3.5, 0, 4, 1, 3.5, 1.5, 2.5, 1.5, 0)
+depth = 2.0
+material = ExtResource("92_cwl35")
+
+[node name="Interior Wide OpeningNorthX" type="CSGPolygon3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=1615551544]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 15.499996, 0.5, 0.4999962)
+operation = 2
+polygon = PackedVector2Array(-3.5, 0, -3.5, 2.5, -2, 4, 0, 4.5, 2, 4, 3.5, 2.5, 3.5, 0)
+depth = 2.0
+material = ExtResource("92_cwl35")
+
+[node name="Interior Wide OpeningSouthX" type="CSGPolygon3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=1227625236]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -17.000004, 0.5, 0.4999962)
+operation = 2
+polygon = PackedVector2Array(-3.5, 0, -3.5, 2.5, -2, 4, 0, 4.5, 2, 4, 3.5, 2.5, 3.5, 0)
+depth = 2.0
+material = ExtResource("92_cwl35")
+
+[node name="Interior Wide Opening Basement" type="CSGPolygon3D" parent="CSG Blockout/Museum Modern (past year)" unique_id=495133764]
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, -3.8146973e-06, -9.5, -13.55275)
+operation = 2
+polygon = PackedVector2Array(-3, 0, -3, 4, -2, 5, 1, 5, 2, 4, 2, 0)
+depth = 1.1
+material = ExtResource("92_cwl35")
+
+[node name="railing" parent="CSG Blockout/Museum Modern (past year)" unique_id=179172242 instance=ExtResource("93_r1aqx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.099995, 0.49999994, 6.5)
+
+[node name="railing2" parent="CSG Blockout/Museum Modern (past year)" unique_id=1767137467 instance=ExtResource("93_r1aqx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, -1, 10.099995, 0.49999994, 2.5)
+
+[node name="railing3" parent="CSG Blockout/Museum Modern (past year)" unique_id=1850807767 instance=ExtResource("93_r1aqx")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -11.100004, 0.49999994, 2.5)
+
+[node name="railing4" parent="CSG Blockout/Museum Modern (past year)" unique_id=1941982468 instance=ExtResource("93_r1aqx")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, -8.742278e-08, 0, 1, -11.100004, 0.49999994, 6.5)
+
+[node name="railing5" parent="CSG Blockout/Museum Modern (past year)" unique_id=1907941717 instance=ExtResource("93_r1aqx")]
+transform = Transform3D(0.42261824, 0, -0.90630776, 0, 1, 0, 0.90630776, 0, 0.42261824, -2.6000042, -4.4, 2.2000008)
+
+[node name="railing6" parent="CSG Blockout/Museum Modern (past year)" unique_id=1573725529 instance=ExtResource("93_r1aqx")]
+transform = Transform3D(-0.42261833, 0, 0.90630776, 0, 1, 0, 0.90630776, 0, 0.42261833, 1.5999966, -4.4, 2.2000008)
+
+[node name="Museum Modern (past year)2" type="CSGBox3D" parent="CSG Blockout" unique_id=1146692511]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -6.997822, 8.502747, 33.49996)
+material_override = SubResource("StandardMaterial3D_lahx7")
+size = Vector3(34, 21, 27)
+material = ExtResource("79_no514")
+
+[node name="NegativeCube" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)2" unique_id=837695370]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006872177, -0.06893873, 0.060886383)
+material_override = ExtResource("86_k14ch")
+operation = 2
+size = Vector3(32, 19, 25.091)
+material = ExtResource("87_rtr6f")
+
+[node name="NegativeCubeCeiling" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)2" unique_id=1158060604]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02, 9.46, 0.06)
+material_override = ExtResource("86_k14ch")
+operation = 2
+size = Vector3(32, 0.07, 25.091)
+material = ExtResource("88_e4ebv")
+
+[node name="Front High Windows" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)2" unique_id=549263527]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 7.75, -12.750305)
+material_override = ExtResource("86_k14ch")
+operation = 2
+size = Vector3(6, 1.5, 1.5)
+material = ExtResource("86_k14ch")
+
+[node name="Front High Windows2" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)2" unique_id=914697432]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 7.75, -12.750305)
+material_override = ExtResource("86_k14ch")
+operation = 2
+size = Vector3(6, 1.5, 1.5)
+material = ExtResource("86_k14ch")
+
+[node name="Front High Windows3" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)2" unique_id=996550675]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 7.75, -12.750305)
+material_override = ExtResource("86_k14ch")
+operation = 2
+size = Vector3(6, 1.5, 1.5)
+material = ExtResource("86_k14ch")
+
+[node name="Front High Windows4" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)2" unique_id=1372212307]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 7.75, -12.750305)
+material_override = ExtResource("86_k14ch")
+operation = 2
+size = Vector3(6, 1.5, 1.5)
+material = ExtResource("86_k14ch")
+
+[node name="BasementCarpet" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)2" unique_id=290541652]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012775421, -9.725386, 0.037239075)
+material_override = ExtResource("86_k14ch")
+size = Vector3(32, 0.5, 25.090912)
+material = ExtResource("89_uyxgy")
+
+[node name="UpperFloorRailing" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)2" unique_id=49784663]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1.6330957, 0.54100037)
+size = Vector3(20, 0.25, 13.5)
+material = ExtResource("8_f6sx0")
+
+[node name="UpperFloorRailing2" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)2/UpperFloorRailing" unique_id=439301643]
+operation = 2
+size = Vector3(20.5, 0.5, 13)
+material = ExtResource("8_f6sx0")
+
+[node name="Upper Floor" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)2" unique_id=1991235208]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.00030517578)
+size = Vector3(32, 1, 25)
+material = ExtResource("91_2qqlf")
+
+[node name="Upper Floor Hole" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)2" unique_id=482241395]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -0.25, 0.49969482)
+operation = 2
+size = Vector3(19, 1.5, 12)
+material = ExtResource("91_2qqlf")
+
+[node name="ColumnBackLeft" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)2" unique_id=1226763472]
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 9.499992, 0.5, 6.999695)
+size = Vector3(1, 20, 1)
+material = ExtResource("79_no514")
+
+[node name="ColumnBackRight" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)2" unique_id=702033091]
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, -10.500008, 0.5, 6.999695)
+size = Vector3(1, 20, 1)
+material = ExtResource("79_no514")
+
+[node name="ColumnFrontLeft2" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)2" unique_id=1722633409]
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 9.499993, 0.25, -6.000305)
+size = Vector3(1, 19.5, 1)
+material = ExtResource("79_no514")
+
+[node name="ColumnFrontRight2" type="CSGBox3D" parent="CSG Blockout/Museum Modern (past year)2" unique_id=1498129433]
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, -10.500008, 0.25, -6.000305)
+size = Vector3(1, 19.5, 1)
+material = ExtResource("79_no514")
+
+[node name="Front Entrance Hole" type="CSGPolygon3D" parent="CSG Blockout/Museum Modern (past year)2" unique_id=1050071259]
+transform = Transform3D(-1, 0, 1.509958e-07, 0, 1, 0, -1.509958e-07, 0, -1, -3.8146973e-06, 0.5, -13.500004)
+operation = 2
+polygon = PackedVector2Array(-1.5, 0, -1.5, 2.5, -1, 3.5, 0, 4, 1, 3.5, 1.5, 2.5, 1.5, 0)
+depth = 2.0
+material = ExtResource("92_cwl35")
+
+[node name="Interior Wide OpeningNorthX" type="CSGPolygon3D" parent="CSG Blockout/Museum Modern (past year)2" unique_id=267345130]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 15.499996, 0.5, 0.4999962)
+operation = 2
+polygon = PackedVector2Array(-3.5, 0, -3.5, 2.5, -2, 4, 0, 4.5, 2, 4, 3.5, 2.5, 3.5, 0)
+depth = 2.0
+material = ExtResource("92_cwl35")
+
+[node name="Interior Wide OpeningSouthX" type="CSGPolygon3D" parent="CSG Blockout/Museum Modern (past year)2" unique_id=607026276]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -17.000004, -9.5, 0.4999962)
+operation = 2
+polygon = PackedVector2Array(-3.5, 0, -3.5, 2.5, -2, 4, 0, 4.5, 2, 4, 3.5, 2.5, 3.5, 0)
+material = ExtResource("92_cwl35")
+
+[node name="Interior Wide Opening Basement" type="CSGPolygon3D" parent="CSG Blockout/Museum Modern (past year)2" unique_id=1409608376]
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, -3.8146973e-06, -9.5, -13.55275)
+operation = 2
+polygon = PackedVector2Array(-3, 0, -3, 4, -2, 5, 1, 5, 2, 4, 2, 0)
+depth = 1.1
+material = ExtResource("92_cwl35")
+
+[node name="concrete-block" type="CSGBox3D" parent="CSG Blockout" unique_id=2101551948]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.097511, 24.86969, 32.687714)
+size = Vector3(54, 32, 16)
+material = ExtResource("79_no514")
+
+[node name="concrete-block2" type="CSGBox3D" parent="CSG Blockout" unique_id=1207020195]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 3, 12.125)
+size = Vector3(14, 16, 26.25)
+material = ExtResource("79_no514")
+
+[node name="concrete-block12" type="CSGBox3D" parent="CSG Blockout" unique_id=1085236747]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 9, 30.625)
+size = Vector3(14, 4, 26.25)
+material = ExtResource("79_no514")
+
+[node name="concrete-block10" type="CSGBox3D" parent="CSG Blockout" unique_id=1037173004]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 3, 55)
+size = Vector3(14, 16, 25)
+material = ExtResource("79_no514")
+
+[node name="concrete-block8" type="CSGBox3D" parent="CSG Blockout" unique_id=1957900247]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88.95, 3, 9)
+size = Vector3(64, 16, 20)
+material = ExtResource("79_no514")
+
+[node name="concrete-block11" type="CSGBox3D" parent="CSG Blockout" unique_id=2091961921]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 109.95, 3, 37.031845)
+size = Vector3(22, 16, 36)
+material = ExtResource("79_no514")
+
+[node name="concrete-block9" type="CSGBox3D" parent="CSG Blockout" unique_id=1132771773]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72.95, 3, 65)
+size = Vector3(96, 16, 20)
+material = ExtResource("79_no514")
+
+[node name="building foundations" type="CSGBox3D" parent="CSG Blockout" unique_id=1917208682]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, -4, 34)
+size = Vector3(35, 4, 30)
+material = ExtResource("79_no514")
+
+[node name="concrete-block3" type="CSGBox3D" parent="CSG Blockout" unique_id=960510968]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82, 21, 37)
+size = Vector3(78, 20, 76)
+material = ExtResource("79_no514")
+
+[node name="concrete-block5" type="CSGBox3D" parent="CSG Blockout" unique_id=596506563]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 52, 31)
+size = Vector3(54, 22, 19)
+material = ExtResource("79_no514")
+
+[node name="concrete-block6" type="CSGBox3D" parent="CSG Blockout" unique_id=2013043339]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 39, 53)
+size = Vector3(14, 40, 41)
+material = ExtResource("79_no514")
+
+[node name="concrete-block7" type="CSGBox3D" parent="CSG Blockout" unique_id=2067345771]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 43, 36.5)
+size = Vector3(16, 24, 54)
+material = ExtResource("79_no514")
+
+[node name="trim" type="CSGBox3D" parent="CSG Blockout" unique_id=1336865254]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81.857765, 31, -1)
+size = Vector3(78.25, 0.5, 0.5)
+material = ExtResource("14_3s7go")
+
+[node name="trim2" type="CSGBox3D" parent="CSG Blockout" unique_id=1565976733]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.982765, 63, 21.5)
+size = Vector3(54, 0.5, 0.5)
+material = ExtResource("14_3s7go")
+
+[node name="trim3" type="CSGBox3D" parent="CSG Blockout" unique_id=728746772]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.857765, 55, 9.5)
+size = Vector3(16.25, 0.5, 0.5)
+material = ExtResource("14_3s7go")
+
+[node name="trim4" type="CSGBox3D" parent="CSG Blockout" unique_id=606395863]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.357765, 16, 0)
+size = Vector3(31.25, 0.5, 0.5)
+material = ExtResource("14_3s7go")
+
+[node name="trim5" type="CSGBox3D" parent="CSG Blockout" unique_id=1105327067]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.982765, 16, 12.5)
+size = Vector3(24.5, 0.5, 0.5)
+material = ExtResource("14_3s7go")
+
+[node name="trim6" type="CSGBox3D" parent="CSG Blockout" unique_id=274775051]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 42.982765, 31, 4.5)
+size = Vector3(10.5, 0.5, 0.5)
+material = ExtResource("14_3s7go")
+
+[node name="trim7" type="CSGBox3D" parent="CSG Blockout" unique_id=1294494850]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 39.982765, 55, 15.5)
+size = Vector3(11.5, 0.5, 0.5)
+material = ExtResource("14_3s7go")
+
+[node name="concrete-block4" type="CSGBox3D" parent="CSG Blockout" unique_id=1715410114]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 11, 17.5)
+size = Vector3(32, 8, 5)
+material = ExtResource("79_no514")
+
+[node name="Decorations" type="Node3D" parent="." unique_id=1022076211]
+
+[node name="Extinguisher" parent="Decorations" unique_id=786241607 instance=ExtResource("94_xj3v8")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 24.011044, 0.9385146, 20.2431)
+
+[node name="Extinguisher2" parent="Decorations" unique_id=1458467351 instance=ExtResource("94_xj3v8")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 24.011044, -9.463224, 20.2431)
+
+[node name="barrier" parent="Decorations" unique_id=1825617782 instance=ExtResource("95_thwgm")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 29, -1, 18)
+
+[node name="barrier-single" parent="Decorations" unique_id=776348516 instance=ExtResource("96_8g4va")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 31, -1, 10)
+
+[node name="handrail" parent="Decorations" unique_id=205998 instance=ExtResource("97_x80m5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.599998, -6, 38.9)
+
+[node name="handrail6" parent="Decorations" unique_id=2109224379 instance=ExtResource("97_x80m5")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 22.999996, -6.05, 34.950005)
+
+[node name="handrail7" parent="Decorations" unique_id=848611655 instance=ExtResource("97_x80m5")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 24.499996, -6.05, 34.950005)
+
+[node name="handrail8" parent="Decorations" unique_id=982036253 instance=ExtResource("97_x80m5")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 30.399996, -6.05, 34.950005)
+
+[node name="handrail9" parent="Decorations" unique_id=1457392612 instance=ExtResource("97_x80m5")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 31.899996, -6.05, 34.950005)
+
+[node name="handrail2" parent="Decorations" unique_id=2038269771 instance=ExtResource("97_x80m5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.599998, -6, 38.9)
+
+[node name="handrail3" parent="Decorations" unique_id=1267260596 instance=ExtResource("97_x80m5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.599998, -6, 38.9)
+
+[node name="handrail4" parent="Decorations" unique_id=1883545612 instance=ExtResource("97_x80m5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.599998, -6, 38.9)
+
+[node name="handrail5" parent="Decorations" unique_id=2044393956 instance=ExtResource("97_x80m5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.599998, -6, 38.9)
+
+[node name="hero_tank" parent="Decorations" unique_id=1017196529 instance=ExtResource("98_itj5w")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5.5, -1, 40)
+
+[node name="hero_tank2" parent="Decorations" unique_id=237260414 instance=ExtResource("99_10vpw")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.5, -1, 40)
+
+[node name="RiverSpyBoat" parent="Decorations" unique_id=960182017 instance=ExtResource("100_rfrxp")]
+transform = Transform3D(3.8, 0, 0, 0, 3.8, 0, 0, 0, 3.8, -13.5, -1, 32.5)
+
+[node name="SuitSymbols" parent="Decorations" unique_id=215537584 instance=ExtResource("101_58gic")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.5, -0.5, 28)
+
+[node name="BetaExplainerBillboard" parent="." unique_id=280330601 instance=ExtResource("102_4wrrs")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 30.5, -1, -2)
+
+[node name="ground-light" parent="." unique_id=1073622775 instance=ExtResource("103_rnvhu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.5, -1.5, -2)
+
+[node name="ground-light2" parent="." unique_id=2101570293 instance=ExtResource("103_rnvhu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81.5, -1.5, -2)
+
+[node name="ground-light3" parent="." unique_id=177364141 instance=ExtResource("103_rnvhu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 106.5, -1.5, -2)
+
+[node name="ground-light4" parent="." unique_id=2078327330 instance=ExtResource("103_rnvhu")]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 37.75, 61.000004, 20.75)
+
+[node name="ground-light5" parent="." unique_id=1705804945 instance=ExtResource("103_rnvhu")]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 12.75, 61, 20.75)
+
+[node name="ground-light6" parent="." unique_id=1733230337 instance=ExtResource("103_rnvhu")]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, -12.25, 60.999996, 20.75)
+
+[editable path="Guidebook Stand/Guidebook3d/guidebook"]
+[editable path="Guidebook Stand/Guidebook3d2/guidebook"]
+[editable path="Guidebook Stand/Guidebook3d3/guidebook"]
+[editable path="Cyndrive Ships/CyndriveShipsProps/cyndrive_ships_carrier"]

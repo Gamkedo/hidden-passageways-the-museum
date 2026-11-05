@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://06oqdlx84nge"]
+
+[ext_resource type="Material" uid="uid://b5j7a6q6jdkv5" path="res://materials/concrete.tres" id="1_snxgq"]
+[ext_resource type="PackedScene" uid="uid://bvln0oll5ttp0" path="res://entities-scene_prefabs/ionic_column.tscn" id="2_lpmrh"]
+[ext_resource type="Material" uid="uid://dajoyj6fev1j7" path="res://materials/floor-materials/marble_tile_floor.tres" id="3_gdldj"]
+[ext_resource type="Material" uid="uid://ueafojuqehx8" path="res://materials/under_construction_stripes_3d.tres" id="4_aqxev"]
+
+[node name="Classical Musem (HomeTeam era Games)" type="Node3D" unique_id=1964976488]
+
+[node name="Museum Classical (Oct 2019-mid 2025)" type="CSGBox3D" parent="." unique_id=565265368]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 12, -29.5)
+use_collision = true
+size = Vector3(24, 16, 27)
+material = ExtResource("1_snxgq")
+
+[node name="negative tunnel" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=228839097]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0.5, 0.045150757)
+operation = 2
+size = Vector3(22.5, 15, 25.090912)
+material = ExtResource("1_snxgq")
+
+[node name="Door Hole" type="CSGPolygon3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1858013915]
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, -3.8146973e-06, -7, 12.499996)
+operation = 2
+polygon = PackedVector2Array(-1.5, 0, -1.5, 2.5, -1, 3.5, 0, 4, 1, 3.5, 1.5, 2.5, 1.5, 0)
+depth = 2.0
+material = ExtResource("1_snxgq")
+
+[node name="Ionic_Column" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1313702386 instance=ExtResource("2_lpmrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -7, 16.5)
+
+[node name="Ionic_Column2" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1591978914 instance=ExtResource("2_lpmrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -7, 16.5)
+
+[node name="Ionic_Column3" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1768964140 instance=ExtResource("2_lpmrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -7, 16.5)
+
+[node name="Ionic_Column4" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=414820446 instance=ExtResource("2_lpmrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, -7, 16.5)
+
+[node name="Entry Ramp Stairs" type="CSGPolygon3D" parent="." unique_id=1890160388]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 39, 1, -10.500001)
+use_collision = true
+polygon = PackedVector2Array(5.5, -2, -29.5, -2, -29.5, -1, -5, -1, -2.5, 1, -0.5, 1, 1.5, 3, 3.5, 3, 4.5, 4, 5.5, 4)
+depth = 24.0
+material = ExtResource("3_gdldj")
+
+[node name="Node3D" type="Node3D" parent="Entry Ramp Stairs" unique_id=187783445]
+
+[node name="Under Construction Wall" type="CSGBox3D" parent="." unique_id=1164894070]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 1.25, -2)
+material_override = ExtResource("4_aqxev")
+use_collision = true
+size = Vector3(24, 2.5, 1)

@@ -38,7 +38,6 @@
 [ext_resource type="PackedScene" uid="uid://o8idbyowpqvw" path="res://entities-scene_prefabs/railing.tscn" id="26_c6q64"]
 [ext_resource type="Texture2D" uid="uid://dlft5rt3mgqhu" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/gladiator-of-the-golden-house.png" id="26_v80x0"]
 [ext_resource type="Texture2D" uid="uid://c7fd2ik3j7hr5" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/legend-of-shadowtail.jpg" id="28_3tvjp"]
-[ext_resource type="PackedScene" uid="uid://bvln0oll5ttp0" path="res://entities-scene_prefabs/ionic_column.tscn" id="28_er4o0"]
 [ext_resource type="AudioStream" uid="uid://udd16tjp78tl" path="res://audio/dev-pods-game-song-clips-with-credits/Aaron Sherman - Gladiator Battle March (Gladiator of the Golden House).ogg" id="28_g614b"]
 [ext_resource type="PackedScene" uid="uid://cv1jka2xois77" path="res://environment-csg/ground_light.tscn" id="28_m4x27"]
 [ext_resource type="PackedScene" uid="uid://dcc61tpq1fj78" path="res://environment-csg/baseboard_trim_upstairs.tscn" id="29_jkqo2"]
@@ -129,6 +128,7 @@
 [ext_resource type="Material" uid="uid://pbcfbq1j1kga" path="res://materials/concrete-tiles.tres" id="115_gdv2j"]
 [ext_resource type="Material" uid="uid://gi1au7e50ftu" path="res://materials/modern-museum/picture-frame-placeholder-generic-wood.tres" id="116_kh8wp"]
 [ext_resource type="PackedScene" uid="uid://t570i75mlu23" path="res://entities-scene_prefabs/dynamic_billboard/explainer_beta_billboard_static.tscn" id="125_uuxwg"]
+[ext_resource type="PackedScene" uid="uid://06oqdlx84nge" path="res://museum/classical_musem_(home_team_era_games).tscn" id="129_m4x27"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_xteo1"]
 
@@ -453,14 +453,14 @@ albedo_texture = ExtResource("7_hgslh")
 script = ExtResource("1_qi2ty")
 
 [node name="Player with UI" parent="." unique_id=1354449472 instance=ExtResource("3_lquwl")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 26, -0.8355012, -9)
+transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, -1, -0.5855012, -7.25)
 platform_floor_layers = 4294967291
 
-[node name="Environment" type="Node3D" parent="." unique_id=218995970]
+[node name="Sun and Sky" type="Node3D" parent="." unique_id=218995970]
 
-[node name="Sun" type="DirectionalLight3D" parent="Environment" unique_id=1462107]
+[node name="Sun" type="DirectionalLight3D" parent="Sun and Sky" unique_id=1462107]
 transform = Transform3D(-0.13398623, -0.340561, 0.93062663, 0, 0.9390943, 0.3436597, -0.9909832, 0.04604567, -0.1258257, 2.505684, 2.197227, 0)
-light_energy = 0.1
+light_energy = 0.4
 light_angular_distance = 0.5
 light_specular = 0.0
 light_bake_mode = 1
@@ -471,46 +471,47 @@ directional_shadow_mode = 1
 directional_shadow_split_1 = 0.2
 directional_shadow_max_distance = 80.0
 
-[node name="clouds" parent="Environment" unique_id=797589118 instance=ExtResource("63_iit47")]
+[node name="clouds" parent="Sun and Sky" unique_id=797589118 instance=ExtResource("63_iit47")]
 transform = Transform3D(256, 0, 0, 0, 256, 0, 0, 0, 256, 0, 156.715, 0)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="Environment" unique_id=1183794555]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Sun and Sky" unique_id=1183794555]
 environment = ExtResource("2_gbu3n")
-
-[node name="World Boundaries" type="Node3D" parent="Environment" unique_id=1033588794]
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Environment/World Boundaries" unique_id=1067343403]
-transform = Transform3D(0.94149655, 0, -0.33702263, 0, 1, 0, 0.33702263, 0, 0.94149655, 1.946352, 0, 76.31478)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/World Boundaries/StaticBody3D" unique_id=1739608497]
-shape = ExtResource("91_ypkhb")
-
-[node name="StaticBody3D2" type="StaticBody3D" parent="Environment/World Boundaries" unique_id=1879706775]
-transform = Transform3D(0.5051321, 0, 0.86304206, 0, 1, 0, -0.86304206, 0, 0.5051321, 130.74771, 15.508987, 50.214165)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/World Boundaries/StaticBody3D2" unique_id=130993889]
-shape = ExtResource("91_ypkhb")
-
-[node name="StaticBody3D3" type="StaticBody3D" parent="Environment/World Boundaries" unique_id=834243497]
-transform = Transform3D(-0.5211524, 0, 0.85346365, 0, 1, 0, -0.85346365, 0, -0.5211524, 91.52335, -7.6293945e-06, -35.389565)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/World Boundaries/StaticBody3D3" unique_id=1165546484]
-shape = ExtResource("91_ypkhb")
-
-[node name="StaticBody3D4" type="StaticBody3D" parent="Environment/World Boundaries" unique_id=1625770626]
-transform = Transform3D(-0.8885095, 0, -0.45885828, 0, 1, 0, 0.45885828, 0, -0.8885095, -5.761917, 0, -92.719345)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/World Boundaries/StaticBody3D4" unique_id=2039031215]
-shape = ExtResource("91_ypkhb")
-
-[node name="StaticBody3D5" type="StaticBody3D" parent="Environment/World Boundaries" unique_id=1059915597]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -92.1149, 7.6293945e-06, 7.1251717)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/World Boundaries/StaticBody3D5" unique_id=83876510]
-shape = ExtResource("91_ypkhb")
 
 [node name="Outdoors with Portal Taxi" type="Node3D" parent="." unique_id=1149423350]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.5, 0, 32)
+
+[node name="[World Boundaries]" type="Node3D" parent="Outdoors with Portal Taxi" unique_id=1033588794]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.5, 0, -32)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Outdoors with Portal Taxi/[World Boundaries]" unique_id=1067343403]
+transform = Transform3D(0.94149655, 0, -0.33702263, 0, 1, 0, 0.33702263, 0, 0.94149655, 1.946352, 0, 76.31478)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Outdoors with Portal Taxi/[World Boundaries]/StaticBody3D" unique_id=1739608497]
+shape = ExtResource("91_ypkhb")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Outdoors with Portal Taxi/[World Boundaries]" unique_id=1879706775]
+transform = Transform3D(0.5051321, 0, 0.86304206, 0, 1, 0, -0.86304206, 0, 0.5051321, 130.74771, 15.508987, 50.214165)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Outdoors with Portal Taxi/[World Boundaries]/StaticBody3D2" unique_id=130993889]
+shape = ExtResource("91_ypkhb")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="Outdoors with Portal Taxi/[World Boundaries]" unique_id=834243497]
+transform = Transform3D(-0.5211524, 0, 0.85346365, 0, 1, 0, -0.85346365, 0, -0.5211524, 91.52335, -7.6293945e-06, -35.389565)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Outdoors with Portal Taxi/[World Boundaries]/StaticBody3D3" unique_id=1165546484]
+shape = ExtResource("91_ypkhb")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="Outdoors with Portal Taxi/[World Boundaries]" unique_id=1625770626]
+transform = Transform3D(-0.8885095, 0, -0.45885828, 0, 1, 0, 0.45885828, 0, -0.8885095, -5.761917, 0, -92.719345)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Outdoors with Portal Taxi/[World Boundaries]/StaticBody3D4" unique_id=2039031215]
+shape = ExtResource("91_ypkhb")
+
+[node name="StaticBody3D5" type="StaticBody3D" parent="Outdoors with Portal Taxi/[World Boundaries]" unique_id=1059915597]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -92.1149, 7.6293945e-06, 7.1251717)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Outdoors with Portal Taxi/[World Boundaries]/StaticBody3D5" unique_id=83876510]
+shape = ExtResource("91_ypkhb")
 
 [node name="grassy-terrain" type="CSGCombiner3D" parent="Outdoors with Portal Taxi" unique_id=138628487]
 use_collision = true
@@ -636,7 +637,7 @@ rings = 16
 material = ExtResource("3_a8cb6")
 
 [node name="grass-hill5" type="CSGSphere3D" parent="Outdoors with Portal Taxi/grassy-terrain" unique_id=544253986]
-transform = Transform3D(1, 0, 0, 0, 0.25, 0, 0, 0, 1, -1.8317146, -8.52389, -122.60453)
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, -1.8317146, -28.338451, -99.94113)
 radius = 64.0
 radial_segments = 32
 rings = 16
@@ -941,73 +942,6 @@ material_override = ExtResource("114_4h6t8")
 size = Vector3(128, 1, 16)
 material = ExtResource("9_4h42u")
 
-[node name="ground-light" parent="Outdoors with Portal Taxi" unique_id=1073622775 instance=ExtResource("28_m4x27")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, -1.5, -34)
-
-[node name="ground-light2" parent="Outdoors with Portal Taxi" unique_id=1367526407 instance=ExtResource("28_m4x27")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, -1.5, -34)
-
-[node name="ground-light3" parent="Outdoors with Portal Taxi" unique_id=1156760435 instance=ExtResource("28_m4x27")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75, -1.5, -34)
-
-[node name="ground-light4" parent="Outdoors with Portal Taxi" unique_id=1191899175 instance=ExtResource("28_m4x27")]
-transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 6.25, 61.000004, -11.25)
-
-[node name="ground-light5" parent="Outdoors with Portal Taxi" unique_id=1862387286 instance=ExtResource("28_m4x27")]
-transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, -18.75, 61, -11.25)
-
-[node name="ground-light6" parent="Outdoors with Portal Taxi" unique_id=650553570 instance=ExtResource("28_m4x27")]
-transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, -43.75, 60.999996, -11.25)
-
-[node name="Classical Musem (HomeTeam era Games)" type="Node3D" parent="." unique_id=1957518699]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -27)
-
-[node name="Museum Classical (Oct 2019-mid 2025)" type="CSGBox3D" parent="Classical Musem (HomeTeam era Games)" unique_id=691043333]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 12, -29.5)
-use_collision = true
-size = Vector3(24, 16, 27)
-material = ExtResource("9_4h42u")
-
-[node name="negative tunnel" type="CSGBox3D" parent="Classical Musem (HomeTeam era Games)/Museum Classical (Oct 2019-mid 2025)" unique_id=570993560]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0.5, 0.045150757)
-operation = 2
-size = Vector3(22.5, 15, 25.090912)
-material = ExtResource("9_4h42u")
-
-[node name="Door Hole" type="CSGPolygon3D" parent="Classical Musem (HomeTeam era Games)/Museum Classical (Oct 2019-mid 2025)" unique_id=988759863]
-transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, -3.8146973e-06, -7, 12.499996)
-operation = 2
-polygon = PackedVector2Array(-1.5, 0, -1.5, 2.5, -1, 3.5, 0, 4, 1, 3.5, 1.5, 2.5, 1.5, 0)
-depth = 2.0
-material = ExtResource("9_4h42u")
-
-[node name="Ionic_Column" parent="Classical Musem (HomeTeam era Games)/Museum Classical (Oct 2019-mid 2025)" unique_id=1313702386 instance=ExtResource("28_er4o0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -7, 16.5)
-
-[node name="Ionic_Column2" parent="Classical Musem (HomeTeam era Games)/Museum Classical (Oct 2019-mid 2025)" unique_id=478444603 instance=ExtResource("28_er4o0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -7, 16.5)
-
-[node name="Ionic_Column3" parent="Classical Musem (HomeTeam era Games)/Museum Classical (Oct 2019-mid 2025)" unique_id=393240046 instance=ExtResource("28_er4o0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -7, 16.5)
-
-[node name="Ionic_Column4" parent="Classical Musem (HomeTeam era Games)/Museum Classical (Oct 2019-mid 2025)" unique_id=1104881799 instance=ExtResource("28_er4o0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, -7, 16.5)
-
-[node name="Entry Ramp Stairs" type="CSGPolygon3D" parent="Classical Musem (HomeTeam era Games)" unique_id=1308910135]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 39, 1, -10.500001)
-use_collision = true
-polygon = PackedVector2Array(5.5, -2, -29.5, -2, -29.5, -1, -5, -1, -2.5, 1, -0.5, 1, 1.5, 3, 3.5, 3, 4.5, 4, 5.5, 4)
-depth = 24.0
-material = ExtResource("13_v6iic")
-
-[node name="Node3D" type="Node3D" parent="Classical Musem (HomeTeam era Games)/Entry Ramp Stairs" unique_id=1235152001]
-
-[node name="Under Construction Wall" type="CSGBox3D" parent="Classical Musem (HomeTeam era Games)" unique_id=66298413]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 1.25, -2)
-material_override = ExtResource("66_v80x0")
-use_collision = true
-size = Vector3(24, 2.5, 1)
-
 [node name="Modern Musem (Dev Pods era Games)" type="Node3D" parent="." unique_id=966479255]
 
 [node name="baseboard-trim-upstairs" parent="Modern Musem (Dev Pods era Games)" unique_id=1543233206 instance=ExtResource("29_jkqo2")]
@@ -1017,8 +951,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.01, -0.85, 45.03)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.01, -10.8, 45.03)
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="Modern Musem (Dev Pods era Games)" unique_id=325514509]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 15)
-size = Vector3(1000, 1000, 1000)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, 5.25)
+size = Vector3(2000, 2000, 2000)
+enable_shadows = true
+cull_mask = 1047553
+reflection_mask = 1047553
 
 [node name="reflective-window" parent="Modern Musem (Dev Pods era Games)" unique_id=1743732869 instance=ExtResource("16_bbunl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 8, 20)
@@ -3222,8 +3159,29 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 24.011044, -9.463224, 20.2431
 [node name="barrier" parent="Modern Musem (Dev Pods era Games)/Decorations" unique_id=1825617782 instance=ExtResource("59_27nw5")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 29, -1, 18)
 
+[node name="barrier2" parent="Modern Musem (Dev Pods era Games)/Decorations" unique_id=1230855207 instance=ExtResource("59_27nw5")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.5, -1, 4)
+
+[node name="barrier3" parent="Modern Musem (Dev Pods era Games)/Decorations" unique_id=1940414956 instance=ExtResource("59_27nw5")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.5, -1, 12)
+
+[node name="barrier4" parent="Modern Musem (Dev Pods era Games)/Decorations" unique_id=64833436 instance=ExtResource("59_27nw5")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.5, -1, 20)
+
+[node name="barrier5" parent="Modern Musem (Dev Pods era Games)/Decorations" unique_id=910800970 instance=ExtResource("59_27nw5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -1, 2)
+
+[node name="barrier6" parent="Modern Musem (Dev Pods era Games)/Decorations" unique_id=2022410322 instance=ExtResource("59_27nw5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -1, 6)
+
+[node name="barrier7" parent="Modern Musem (Dev Pods era Games)/Decorations" unique_id=748050643 instance=ExtResource("59_27nw5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -1, 10)
+
 [node name="barrier-single" parent="Modern Musem (Dev Pods era Games)/Decorations" unique_id=776348516 instance=ExtResource("60_b2w3e")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 31, -1, 10)
+
+[node name="barrier-single2" parent="Modern Musem (Dev Pods era Games)/Decorations" unique_id=329081464 instance=ExtResource("60_b2w3e")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.5, -1, -4)
 
 [node name="handrail" parent="Modern Musem (Dev Pods era Games)/Decorations" unique_id=857131082 instance=ExtResource("65_v80x0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.599998, -6, 38.9)
@@ -3266,6 +3224,28 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.5
 
 [node name="BetaExplainerBillboard" parent="Modern Musem (Dev Pods era Games)" unique_id=558943410 instance=ExtResource("125_uuxwg")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 30.5, -1, -2)
+
+[node name="ground-light" parent="Modern Musem (Dev Pods era Games)" unique_id=1073622775 instance=ExtResource("28_m4x27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.5, -1.5, -2)
+
+[node name="ground-light2" parent="Modern Musem (Dev Pods era Games)" unique_id=1367526407 instance=ExtResource("28_m4x27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81.5, -1.5, -2)
+
+[node name="ground-light3" parent="Modern Musem (Dev Pods era Games)" unique_id=1156760435 instance=ExtResource("28_m4x27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 106.5, -1.5, -2)
+
+[node name="ground-light4" parent="Modern Musem (Dev Pods era Games)" unique_id=1191899175 instance=ExtResource("28_m4x27")]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 37.75, 61.000004, 20.75)
+
+[node name="ground-light5" parent="Modern Musem (Dev Pods era Games)" unique_id=1862387286 instance=ExtResource("28_m4x27")]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 12.75, 61, 20.75)
+
+[node name="ground-light6" parent="Modern Musem (Dev Pods era Games)" unique_id=650553570 instance=ExtResource("28_m4x27")]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, -12.25, 60.999996, 20.75)
+
+[node name="Classical Musem (HomeTeam era Games)" parent="." unique_id=1964976488 instance=ExtResource("129_m4x27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -27)
+visible = false
 
 [editable path="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook"]
 [editable path="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook"]

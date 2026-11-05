@@ -2,9 +2,9 @@
 
 [resource]
 background_mode = 1
-background_color = Color(0.9371089, 0.6484833, 0.71507955, 1)
+background_color = Color(0.65494907, 0.48579803, 0.5218466, 1)
 ambient_light_source = 2
-ambient_light_color = Color(0.32544068, 0.32544097, 0.32544082, 1)
+ambient_light_color = Color(0.31431612, 0.31431612, 0.3143161, 1)
 ambient_light_sky_contribution = 0.0
 reflected_light_source = 2
 tonemap_mode = 3
