@@ -4,8 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://c2wjqqxsww4s8" path="res://textures/concrete-normal.png" id="2_bjs8r"]
 
 [resource]
-albedo_color = Color(0.20152658, 0.20152658, 0.20152658, 1)
+albedo_color = Color(0.50928617, 0.5092862, 0.509286, 1)
 albedo_texture = ExtResource("1_7yml8")
+metallic_specular = 0.16
+roughness = 0.5
 normal_enabled = true
 normal_texture = ExtResource("2_bjs8r")
 uv1_triplanar = true

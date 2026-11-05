@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://06oqdlx84nge"]
 
+[ext_resource type="Material" uid="uid://b32q20mv22cqc" path="res://materials/classical-museum/granite-blocks-material.tres" id="1_lpmrh"]
 [ext_resource type="Material" uid="uid://b5j7a6q6jdkv5" path="res://materials/concrete.tres" id="1_snxgq"]
 [ext_resource type="PackedScene" uid="uid://bvln0oll5ttp0" path="res://entities-scene_prefabs/ionic_column.tscn" id="2_lpmrh"]
 [ext_resource type="Material" uid="uid://dajoyj6fev1j7" path="res://materials/floor-materials/marble_tile_floor.tres" id="3_gdldj"]
@@ -9,6 +10,7 @@
 
 [node name="Museum Classical (Oct 2019-mid 2025)" type="CSGBox3D" parent="." unique_id=565265368]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 12, -29.5)
+material_override = ExtResource("1_lpmrh")
 use_collision = true
 size = Vector3(24, 16, 27)
 material = ExtResource("1_snxgq")
@@ -49,6 +51,7 @@ material = ExtResource("3_gdldj")
 
 [node name="Under Construction Wall" type="CSGBox3D" parent="." unique_id=1164894070]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 1.25, -2)
+visible = false
 material_override = ExtResource("4_aqxev")
 use_collision = true
 size = Vector3(24, 2.5, 1)
