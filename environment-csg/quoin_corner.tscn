@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://bplmg13i3qwjm"]
+
+[ext_resource type="Material" uid="uid://bui7sdyicwjws" path="res://materials/classical-museum/quoin-material.tres" id="1_gtdvd"]
+
+[node name="quoin-corner" type="CSGCombiner3D" unique_id=1685001849]
+
+[node name="quoin" type="CSGBox3D" parent="." unique_id=728591592]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 1, -1.75)
+size = Vector3(2, 1.9, 4)
+material = ExtResource("1_gtdvd")
+
+[node name="quoin2" type="CSGBox3D" parent="." unique_id=1931481394]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.75, 3, -0.8125)
+size = Vector3(2.125, 1.9, 4)
+material = ExtResource("1_gtdvd")
+
+[node name="quoin3" type="CSGBox3D" parent="." unique_id=980837044]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 5, -1.75)
+size = Vector3(2, 1.9, 4)
+material = ExtResource("1_gtdvd")
+
+[node name="quoin4" type="CSGBox3D" parent="." unique_id=114501474]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.75, 7, -0.8125)
+size = Vector3(2.125, 1.9, 4)
+material = ExtResource("1_gtdvd")
+
+[node name="quoin5" type="CSGBox3D" parent="." unique_id=1706934669]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 9, -1.75)
+size = Vector3(2, 1.9, 4)
+material = ExtResource("1_gtdvd")
+
+[node name="quoin6" type="CSGBox3D" parent="." unique_id=1647654434]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.75, 11, -0.8125)
+size = Vector3(2.125, 1.9, 4)
+material = ExtResource("1_gtdvd")
+
+[node name="quoin7" type="CSGBox3D" parent="." unique_id=817423150]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 13, -1.75)
+size = Vector3(2, 1.9, 4)
+material = ExtResource("1_gtdvd")
+
+[node name="quoin8" type="CSGBox3D" parent="." unique_id=1469284968]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.75, 15, -0.8125)
+size = Vector3(2.125, 1.9, 4)
+material = ExtResource("1_gtdvd")
+
+[node name="quoin9" type="CSGBox3D" parent="." unique_id=931500132]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 17, -1.75)
+size = Vector3(2, 1.9, 4)
+material = ExtResource("1_gtdvd")
