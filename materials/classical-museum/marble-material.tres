@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d2mbvhh00vddy"]
+
+[ext_resource type="Texture2D" uid="uid://0g37d0n78d27" path="res://textures/marble.jpg" id="1_dgoge"]
+[ext_resource type="Texture2D" uid="uid://bgct1komhsuaw" path="res://textures/marble-inverted.jpg" id="2_e2lly"]
+
+[resource]
+albedo_texture = ExtResource("1_dgoge")
+roughness = 0.0
+roughness_texture = ExtResource("2_e2lly")
+uv1_scale = Vector3(0.25, 0.25, 0.25)
+uv1_triplanar = true
+uv1_world_triplanar = true

@@ -3,56 +3,32 @@
 [ext_resource type="Material" uid="uid://b32q20mv22cqc" path="res://materials/classical-museum/granite-blocks-material.tres" id="1_lpmrh"]
 [ext_resource type="Material" uid="uid://b5j7a6q6jdkv5" path="res://materials/concrete.tres" id="1_snxgq"]
 [ext_resource type="PackedScene" uid="uid://bvln0oll5ttp0" path="res://entities-scene_prefabs/ionic_column.tscn" id="2_lpmrh"]
-[ext_resource type="Material" uid="uid://dajoyj6fev1j7" path="res://materials/floor-materials/marble_tile_floor.tres" id="3_gdldj"]
-[ext_resource type="Material" uid="uid://ueafojuqehx8" path="res://materials/under_construction_stripes_3d.tres" id="4_aqxev"]
+[ext_resource type="Material" uid="uid://d2mbvhh00vddy" path="res://materials/classical-museum/marble-material.tres" id="3_lpmrh"]
+[ext_resource type="Material" uid="uid://blxopw884707r" path="res://materials/classical-museum/white-paint-material.tres" id="4_gdldj"]
+[ext_resource type="PackedScene" uid="uid://dy4418qx7kelu" path="res://environment-csg/wall_trimwork.tscn" id="5_aqxev"]
 [ext_resource type="PackedScene" uid="uid://bplmg13i3qwjm" path="res://environment-csg/quoin_corner.tscn" id="6_gdldj"]
 
 [node name="Classical Musem (HomeTeam era Games)" type="Node3D" unique_id=1964976488]
 
-[node name="old Entry Ramp Stairs" type="CSGPolygon3D" parent="." unique_id=1890160388]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 39, 1, -10.500001)
-visible = false
-use_collision = true
-polygon = PackedVector2Array(5.5, -2, -29.5, -2, -29.5, -1, -5, -1, -2.5, 1, -0.5, 1, 1.5, 3, 3.5, 3, 4.5, 4, 5.5, 4)
-depth = 24.0
-material = ExtResource("3_gdldj")
+[node name="ReflectionProbe" type="ReflectionProbe" parent="." unique_id=1291498217]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 5.875, -25.25)
+size = Vector3(100, 100, 100)
+box_projection = true
+interior = true
+cull_mask = 1048573
+reflection_mask = 1048573
 
-[node name="Node3D" type="Node3D" parent="old Entry Ramp Stairs" unique_id=187783445]
-
-[node name="old Under Construction Wall" type="CSGBox3D" parent="." unique_id=1164894070]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 1.25, -2)
-visible = false
-material_override = ExtResource("4_aqxev")
-use_collision = true
-size = Vector3(24, 2.5, 1)
-
-[node name="Ground" type="CSGBox3D" parent="." unique_id=1241245505]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, -2, 1.5)
-size = Vector3(24, 4, 35)
-material = ExtResource("1_lpmrh")
-
-[node name="Museum Classical (Oct 2019-mid 2025)" type="CSGBox3D" parent="." unique_id=565265368]
+[node name="Museum Classical (Oct 2019-mid 2025)" type="CSGCombiner3D" parent="." unique_id=1423941537]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 12, -29.5)
-material_override = ExtResource("1_lpmrh")
-use_collision = true
-size = Vector3(24, 18, 27)
-material = ExtResource("1_snxgq")
-
-[node name="negative tunnel" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=228839097]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0.5, 0.045150757)
-operation = 2
-size = Vector3(22.5, 15, 25.090912)
-material = ExtResource("1_snxgq")
-
-[node name="Door Hole" type="CSGPolygon3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1858013915]
-transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, -3.8146973e-06, -7, 12.499996)
-operation = 2
-polygon = PackedVector2Array(-1.5, 0, -1.5, 2.5, -1, 3.5, 0, 4, 1, 3.5, 1.5, 2.5, 1.5, 0)
-depth = 2.0
-material = ExtResource("1_snxgq")
 
 [node name="Ionic_Column" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1313702386 instance=ExtResource("2_lpmrh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -6, 15.25)
+
+[node name="Ionic_Column5" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=124762555 instance=ExtResource("2_lpmrh")]
+transform = Transform3D(-4.0651592e-08, 0, 0.93, 0, 0.93, 0, -0.93, 0, -4.0651592e-08, -11.375, -6, 10.25)
+
+[node name="Ionic_Column6" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1978036281 instance=ExtResource("2_lpmrh")]
+transform = Transform3D(-4.0651592e-08, 0, 0.93, 0, 0.93, 0, -0.93, 0, -4.0651592e-08, 11, -6, 10.25)
 
 [node name="Ionic_Column2" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1591978914 instance=ExtResource("2_lpmrh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -6, 15.25)
@@ -63,6 +39,114 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, -6, 15.25)
 [node name="Ionic_Column4" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=414820446 instance=ExtResource("2_lpmrh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, -6, 15.25)
 
+[node name="Museum Entrance" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=565265368]
+material_override = ExtResource("1_lpmrh")
+use_collision = true
+size = Vector3(24, 18, 27)
+material = ExtResource("1_lpmrh")
+
+[node name="CUT - inside walls" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=228839097]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0.5, 0.045150757)
+operation = 2
+size = Vector3(22.5, 15, 25.090912)
+material = ExtResource("3_lpmrh")
+
+[node name="ceiling-trimwork" type="CSGCombiner3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=658529707]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 0)
+
+[node name="ceiling" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/ceiling-trimwork" unique_id=1141674302]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, -0.25, 0.125)
+size = Vector3(22, 0.5, 25)
+material = ExtResource("4_gdldj")
+
+[node name="ceiling-cut" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/ceiling-trimwork" unique_id=1378715225]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, -0.5, -6)
+operation = 2
+size = Vector3(3, 0.5, 9)
+material = ExtResource("4_gdldj")
+
+[node name="ceiling-cut2" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/ceiling-trimwork" unique_id=612896662]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, -0.5, -6)
+operation = 2
+size = Vector3(3, 0.5, 9)
+material = ExtResource("4_gdldj")
+
+[node name="ceiling-cut3" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/ceiling-trimwork" unique_id=1282463063]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -0.5, -6)
+operation = 2
+size = Vector3(3, 0.5, 9)
+material = ExtResource("4_gdldj")
+
+[node name="ceiling-cut4" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/ceiling-trimwork" unique_id=670703360]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, -0.5, -6)
+operation = 2
+size = Vector3(3, 0.5, 9)
+material = ExtResource("4_gdldj")
+
+[node name="ceiling-cut5" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/ceiling-trimwork" unique_id=756689771]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -0.5, -6)
+operation = 2
+size = Vector3(3, 0.5, 9)
+material = ExtResource("4_gdldj")
+
+[node name="ceiling-cut6" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/ceiling-trimwork" unique_id=112681855]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, -0.5, -6)
+operation = 2
+size = Vector3(3, 0.5, 9)
+material = ExtResource("4_gdldj")
+
+[node name="ceiling-cut7" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/ceiling-trimwork" unique_id=1179217777]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, -0.5, 3.5)
+operation = 2
+size = Vector3(3, 0.5, 9)
+material = ExtResource("4_gdldj")
+
+[node name="ceiling-cut8" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/ceiling-trimwork" unique_id=377822779]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, -0.5, 3.5)
+operation = 2
+size = Vector3(3, 0.5, 9)
+material = ExtResource("4_gdldj")
+
+[node name="ceiling-cut9" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/ceiling-trimwork" unique_id=2030514000]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -0.5, 3.5)
+operation = 2
+size = Vector3(3, 0.5, 9)
+material = ExtResource("4_gdldj")
+
+[node name="ceiling-cut10" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/ceiling-trimwork" unique_id=496763838]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, -0.5, 3.5)
+operation = 2
+size = Vector3(3, 0.5, 9)
+material = ExtResource("4_gdldj")
+
+[node name="ceiling-cut11" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/ceiling-trimwork" unique_id=1539153394]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -0.5, 3.5)
+operation = 2
+size = Vector3(3, 0.5, 9)
+material = ExtResource("4_gdldj")
+
+[node name="ceiling-cut12" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/ceiling-trimwork" unique_id=1503140668]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, -0.5, 3.5)
+operation = 2
+size = Vector3(3, 0.5, 9)
+material = ExtResource("4_gdldj")
+
+[node name="wall-trimwork" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=40805460 instance=ExtResource("5_aqxev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5, -7, -12.5)
+
+[node name="wall-trimwork2" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1691515519 instance=ExtResource("5_aqxev")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11.5, -7, 10.125)
+
+[node name="wall-trimwork3" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=691354339 instance=ExtResource("5_aqxev")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 11, -7, -12.375)
+
+[node name="Door Hole" type="CSGPolygon3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1858013915]
+transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, -3.8146973e-06, -7, 12.499996)
+operation = 2
+polygon = PackedVector2Array(-1.5, 0, -1.5, 2.5, -1, 3.5, 0, 4, 1, 3.5, 1.5, 2.5, 1.5, 0)
+depth = 2.0
+material = ExtResource("1_snxgq")
+
 [node name="foundations" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=909500363]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -12, -0.038711548)
 size = Vector3(78, 8, 29)
@@ -71,6 +155,11 @@ material = ExtResource("1_lpmrh")
 [node name="roof" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=2126455004]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13, 1.4612885)
 size = Vector3(78, 8, 32)
+material = ExtResource("1_lpmrh")
+
+[node name="Ground" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1241245505]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -14, 31)
+size = Vector3(24, 4, 35)
 material = ExtResource("1_lpmrh")
 
 [node name="west wing" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1092514273]
@@ -83,358 +172,358 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 0.5, -0.53871155)
 size = Vector3(26, 17, 28)
 material = ExtResource("1_lpmrh")
 
-[node name="quoin-corner" parent="." unique_id=1685001849 instance=ExtResource("6_gdldj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 4, -16)
+[node name="quoin-corner" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1685001849 instance=ExtResource("6_gdldj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, -8, 13.5)
 
-[node name="quoin-corner2" parent="." unique_id=1963464858 instance=ExtResource("6_gdldj")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 65, 4, -16)
+[node name="quoin-corner2" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1963464858 instance=ExtResource("6_gdldj")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 38, -8, 13.5)
 
-[node name="grand stairway" type="CSGCombiner3D" parent="." unique_id=160274679]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -5.5)
+[node name="grand stairway" type="CSGCombiner3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=160274679]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -12, 24)
 
-[node name="stair" type="CSGBox3D" parent="grand stairway" unique_id=820083241]
+[node name="stair" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway" unique_id=820083241]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0.125, 9.5)
 size = Vector3(24, 0.25, 1)
 material = ExtResource("1_lpmrh")
 
-[node name="stair2" type="CSGBox3D" parent="grand stairway" unique_id=1505279082]
+[node name="stair2" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway" unique_id=1505279082]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0.375, 9)
 size = Vector3(24, 0.25, 1)
 material = ExtResource("1_lpmrh")
 
-[node name="stair3" type="CSGBox3D" parent="grand stairway" unique_id=1570803515]
+[node name="stair3" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway" unique_id=1570803515]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0.625, 8.5)
 size = Vector3(24, 0.25, 1)
 material = ExtResource("1_lpmrh")
 
-[node name="stair4" type="CSGBox3D" parent="grand stairway" unique_id=724482850]
+[node name="stair4" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway" unique_id=724482850]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0.875, 8)
 size = Vector3(24, 0.25, 1)
 material = ExtResource("1_lpmrh")
 
-[node name="stair5" type="CSGBox3D" parent="grand stairway" unique_id=1362049833]
+[node name="stair5" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway" unique_id=1362049833]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1.125, 6)
 size = Vector3(24, 0.25, 4)
 material = ExtResource("1_lpmrh")
 
-[node name="stair6" type="CSGBox3D" parent="grand stairway" unique_id=1715441606]
+[node name="stair6" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway" unique_id=1715441606]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1.375, 4.5)
 size = Vector3(24, 0.25, 1)
 material = ExtResource("1_lpmrh")
 
-[node name="stair7" type="CSGBox3D" parent="grand stairway" unique_id=1463385643]
+[node name="stair7" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway" unique_id=1463385643]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1.625, 4)
 size = Vector3(24, 0.25, 1)
 material = ExtResource("1_lpmrh")
 
-[node name="stair8" type="CSGBox3D" parent="grand stairway" unique_id=701106596]
+[node name="stair8" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway" unique_id=701106596]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1.875, 3.5)
 size = Vector3(24, 0.25, 1)
 material = ExtResource("1_lpmrh")
 
-[node name="stair9" type="CSGBox3D" parent="grand stairway" unique_id=2102828442]
+[node name="stair9" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway" unique_id=2102828442]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 2.125, 3)
 size = Vector3(24, 0.25, 1)
 material = ExtResource("1_lpmrh")
 
-[node name="stair10" type="CSGBox3D" parent="grand stairway" unique_id=162039329]
+[node name="stair10" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway" unique_id=162039329]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 2.375, 1)
 size = Vector3(24, 0.25, 4)
 material = ExtResource("1_lpmrh")
 
-[node name="stair11" type="CSGBox3D" parent="grand stairway" unique_id=454085461]
+[node name="stair11" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway" unique_id=454085461]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 2.625, -0.5)
 size = Vector3(24, 0.25, 1)
 material = ExtResource("1_lpmrh")
 
-[node name="stair12" type="CSGBox3D" parent="grand stairway" unique_id=1445645483]
+[node name="stair12" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway" unique_id=1445645483]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 2.875, -1)
 size = Vector3(24, 0.25, 1)
 material = ExtResource("1_lpmrh")
 
-[node name="stair13" type="CSGBox3D" parent="grand stairway" unique_id=656915689]
+[node name="stair13" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway" unique_id=656915689]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 3.125, -1.5)
 size = Vector3(24, 0.25, 1)
 material = ExtResource("1_lpmrh")
 
-[node name="stair14" type="CSGBox3D" parent="grand stairway" unique_id=990362786]
+[node name="stair14" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway" unique_id=990362786]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 3.375, -2)
 size = Vector3(24, 0.25, 1)
 material = ExtResource("1_lpmrh")
 
-[node name="stair15" type="CSGBox3D" parent="grand stairway" unique_id=821746516]
+[node name="stair15" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway" unique_id=821746516]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 3.625, -4)
 size = Vector3(24, 0.25, 4)
 material = ExtResource("1_lpmrh")
 
-[node name="stair16" type="CSGBox3D" parent="grand stairway" unique_id=1767696205]
+[node name="stair16" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway" unique_id=1767696205]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 3.875, -5.5)
 size = Vector3(24, 0.25, 1)
 material = ExtResource("1_lpmrh")
 
-[node name="stair17" type="CSGBox3D" parent="grand stairway" unique_id=644440724]
+[node name="stair17" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway" unique_id=644440724]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 4.125, -6)
 size = Vector3(24, 0.25, 1)
 material = ExtResource("1_lpmrh")
 
-[node name="stair18" type="CSGBox3D" parent="grand stairway" unique_id=332704165]
+[node name="stair18" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway" unique_id=332704165]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 4.375, -6.5)
 size = Vector3(24, 0.25, 1)
 material = ExtResource("1_lpmrh")
 
-[node name="stair19" type="CSGBox3D" parent="grand stairway" unique_id=944938547]
+[node name="stair19" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway" unique_id=944938547]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 4.625, -7)
 size = Vector3(24, 0.25, 1)
 material = ExtResource("1_lpmrh")
 
-[node name="stair20" type="CSGBox3D" parent="grand stairway" unique_id=1395339994]
+[node name="stair20" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway" unique_id=1395339994]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 4.875, -8.75)
 size = Vector3(24, 0.25, 3.5)
 material = ExtResource("1_lpmrh")
 
-[node name="side-railing" type="CSGBox3D" parent="grand stairway" unique_id=276622080]
+[node name="side-railing" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway" unique_id=276622080]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, 0)
 size = Vector3(1, 10, 21)
 material = ExtResource("1_lpmrh")
 
-[node name="cut" type="CSGBox3D" parent="grand stairway/side-railing" unique_id=1572007541]
+[node name="cut" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/side-railing" unique_id=1572007541]
 transform = Transform3D(1, 0, 0, 0, 0.9238793, -0.3826834, 0, 0.3826834, 0.9238793, 0, 4.75, 12.5)
 operation = 2
 size = Vector3(2, 10.3, 5)
 material = ExtResource("1_lpmrh")
 
-[node name="cut2" type="CSGBox3D" parent="grand stairway/side-railing" unique_id=2099446101]
+[node name="cut2" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/side-railing" unique_id=2099446101]
 transform = Transform3D(1, 0, 0, 0, 0.9238793, -0.3826834, 0, 0.3826834, 0.9238793, 0, 7, 4.75)
 operation = 2
 size = Vector3(2, 10.3, 5)
 material = ExtResource("1_lpmrh")
 
-[node name="cut3" type="CSGBox3D" parent="grand stairway/side-railing" unique_id=1149195039]
+[node name="cut3" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/side-railing" unique_id=1149195039]
 transform = Transform3D(1, 0, 0, 0, 0.9238793, -0.3826834, 0, 0.3826834, 0.9238793, 0, 8.5, -0.25)
 operation = 2
 size = Vector3(2, 10.3, 5)
 material = ExtResource("1_lpmrh")
 
-[node name="cut4" type="CSGBox3D" parent="grand stairway/side-railing" unique_id=1426761513]
+[node name="cut4" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/side-railing" unique_id=1426761513]
 transform = Transform3D(1, 0, 0, 0, 0.9238793, -0.3826834, 0, 0.3826834, 0.9238793, 0, 10, -5.25)
 operation = 2
 size = Vector3(2, 10.3, 5)
 material = ExtResource("1_lpmrh")
 
-[node name="straight cut" type="CSGBox3D" parent="grand stairway/side-railing" unique_id=1614305275]
+[node name="straight cut" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/side-railing" unique_id=1614305275]
 transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 3.3500004, 7.75)
 operation = 2
 size = Vector3(2, 5, 5.5)
 material = ExtResource("1_lpmrh")
 
-[node name="straight cut2" type="CSGBox3D" parent="grand stairway/side-railing" unique_id=409401219]
+[node name="straight cut2" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/side-railing" unique_id=409401219]
 transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 4.8500004, 2.75)
 operation = 2
 size = Vector3(2, 5, 5.5)
 material = ExtResource("1_lpmrh")
 
-[node name="straight cut3" type="CSGBox3D" parent="grand stairway/side-railing" unique_id=899243503]
+[node name="straight cut3" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/side-railing" unique_id=899243503]
 transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 6.3500004, -2.25)
 operation = 2
 size = Vector3(2, 5, 5.5)
 material = ExtResource("1_lpmrh")
 
-[node name="side-railing2" type="CSGBox3D" parent="grand stairway" unique_id=1573730899]
+[node name="side-railing2" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway" unique_id=1573730899]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.5, 1, 0)
 size = Vector3(1, 10, 21)
 material = ExtResource("1_lpmrh")
 
-[node name="cut" type="CSGBox3D" parent="grand stairway/side-railing2" unique_id=494357858]
+[node name="cut" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/side-railing2" unique_id=494357858]
 transform = Transform3D(1, 0, 0, 0, 0.9238793, -0.3826834, 0, 0.3826834, 0.9238793, 0, 4.75, 12.5)
 operation = 2
 size = Vector3(2, 10.3, 5)
 material = ExtResource("1_lpmrh")
 
-[node name="cut2" type="CSGBox3D" parent="grand stairway/side-railing2" unique_id=191016951]
+[node name="cut2" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/side-railing2" unique_id=191016951]
 transform = Transform3D(1, 0, 0, 0, 0.9238793, -0.3826834, 0, 0.3826834, 0.9238793, 0, 7, 4.75)
 operation = 2
 size = Vector3(2, 10.3, 5)
 material = ExtResource("1_lpmrh")
 
-[node name="cut3" type="CSGBox3D" parent="grand stairway/side-railing2" unique_id=172191365]
+[node name="cut3" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/side-railing2" unique_id=172191365]
 transform = Transform3D(1, 0, 0, 0, 0.9238793, -0.3826834, 0, 0.3826834, 0.9238793, 0, 8.5, -0.25)
 operation = 2
 size = Vector3(2, 10.3, 5)
 material = ExtResource("1_lpmrh")
 
-[node name="cut4" type="CSGBox3D" parent="grand stairway/side-railing2" unique_id=820640642]
+[node name="cut4" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/side-railing2" unique_id=820640642]
 transform = Transform3D(1, 0, 0, 0, 0.9238793, -0.3826834, 0, 0.3826834, 0.9238793, 0, 10, -5.25)
 operation = 2
 size = Vector3(2, 10.3, 5)
 material = ExtResource("1_lpmrh")
 
-[node name="straight cut" type="CSGBox3D" parent="grand stairway/side-railing2" unique_id=1084844851]
+[node name="straight cut" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/side-railing2" unique_id=1084844851]
 transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 3.3500004, 7.75)
 operation = 2
 size = Vector3(2, 5, 5.5)
 material = ExtResource("1_lpmrh")
 
-[node name="straight cut2" type="CSGBox3D" parent="grand stairway/side-railing2" unique_id=699238937]
+[node name="straight cut2" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/side-railing2" unique_id=699238937]
 transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 4.8500004, 2.75)
 operation = 2
 size = Vector3(2, 5, 5.5)
 material = ExtResource("1_lpmrh")
 
-[node name="straight cut3" type="CSGBox3D" parent="grand stairway/side-railing2" unique_id=756946977]
+[node name="straight cut3" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/side-railing2" unique_id=756946977]
 transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 6.3500004, -2.25)
 operation = 2
 size = Vector3(2, 5, 5.5)
 material = ExtResource("1_lpmrh")
 
-[node name="inner-railing" type="CSGBox3D" parent="grand stairway" unique_id=491409219]
+[node name="inner-railing" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway" unique_id=491409219]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 1, 0)
 size = Vector3(1, 10, 21)
 material = ExtResource("1_lpmrh")
 
-[node name="cut" type="CSGBox3D" parent="grand stairway/inner-railing" unique_id=1331541002]
+[node name="cut" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/inner-railing" unique_id=1331541002]
 transform = Transform3D(1, 0, 0, 0, 0.9238793, -0.3826834, 0, 0.3826834, 0.9238793, 0, 4.75, 12.5)
 operation = 2
 size = Vector3(2, 10.3, 5)
 material = ExtResource("1_lpmrh")
 
-[node name="cut2" type="CSGBox3D" parent="grand stairway/inner-railing" unique_id=1974186942]
+[node name="cut2" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/inner-railing" unique_id=1974186942]
 transform = Transform3D(1, 0, 0, 0, 0.9238793, -0.3826834, 0, 0.3826834, 0.9238793, 0, 7, 4.75)
 operation = 2
 size = Vector3(2, 10.3, 5)
 material = ExtResource("1_lpmrh")
 
-[node name="cut3" type="CSGBox3D" parent="grand stairway/inner-railing" unique_id=479984530]
+[node name="cut3" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/inner-railing" unique_id=479984530]
 transform = Transform3D(1, 0, 0, 0, 0.9238793, -0.3826834, 0, 0.3826834, 0.9238793, 0, 8.5, -0.25)
 operation = 2
 size = Vector3(2, 10.3, 5)
 material = ExtResource("1_lpmrh")
 
-[node name="cut4" type="CSGBox3D" parent="grand stairway/inner-railing" unique_id=1302354066]
+[node name="cut4" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/inner-railing" unique_id=1302354066]
 transform = Transform3D(1, 0, 0, 0, 0.9238793, -0.3826834, 0, 0.3826834, 0.9238793, 0, 10, -5.25)
 operation = 2
 size = Vector3(2, 10.3, 5)
 material = ExtResource("1_lpmrh")
 
-[node name="straight cut" type="CSGBox3D" parent="grand stairway/inner-railing" unique_id=2049987749]
+[node name="straight cut" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/inner-railing" unique_id=2049987749]
 transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 2.8500004, 6.5)
 operation = 2
 size = Vector3(2, 6, 3)
 material = ExtResource("1_lpmrh")
 
-[node name="straight cut5" type="CSGBox3D" parent="grand stairway/inner-railing" unique_id=895662038]
+[node name="straight cut5" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/inner-railing" unique_id=895662038]
 transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 3.8500004, 8.75)
 operation = 2
 size = Vector3(2, 6, 3)
 material = ExtResource("1_lpmrh")
 
-[node name="straight cut6" type="CSGBox3D" parent="grand stairway/inner-railing" unique_id=1859998362]
+[node name="straight cut6" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/inner-railing" unique_id=1859998362]
 transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 5.8500004, 3.75)
 operation = 2
 size = Vector3(2, 8, 3)
 material = ExtResource("1_lpmrh")
 
-[node name="straight cut7" type="CSGBox3D" parent="grand stairway/inner-railing" unique_id=2123344719]
+[node name="straight cut7" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/inner-railing" unique_id=2123344719]
 transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 7.3500004, -2)
 operation = 2
 size = Vector3(2, 8, 3)
 material = ExtResource("1_lpmrh")
 
-[node name="straight cut8" type="CSGBox3D" parent="grand stairway/inner-railing" unique_id=1640021618]
+[node name="straight cut8" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/inner-railing" unique_id=1640021618]
 transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 8.85, -6.75)
 operation = 2
 size = Vector3(2, 8, 3)
 material = ExtResource("1_lpmrh")
 
-[node name="straight cut2" type="CSGBox3D" parent="grand stairway/inner-railing" unique_id=1617559466]
+[node name="straight cut2" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/inner-railing" unique_id=1617559466]
 transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 2.8500004, 1.5)
 operation = 2
 size = Vector3(2, 6, 3)
 material = ExtResource("1_lpmrh")
 
-[node name="straight cut3" type="CSGBox3D" parent="grand stairway/inner-railing" unique_id=83605918]
+[node name="straight cut3" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/inner-railing" unique_id=83605918]
 transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 2.8500004, -3.5)
 operation = 2
 size = Vector3(2, 6, 3)
 material = ExtResource("1_lpmrh")
 
-[node name="straight cut4" type="CSGBox3D" parent="grand stairway/inner-railing" unique_id=1485165023]
+[node name="straight cut4" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/inner-railing" unique_id=1485165023]
 transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 2.8500004, -8.75)
 operation = 2
 size = Vector3(2, 6, 3.5)
 material = ExtResource("1_lpmrh")
 
-[node name="inner-railing2" type="CSGBox3D" parent="grand stairway" unique_id=1651809276]
+[node name="inner-railing2" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway" unique_id=1651809276]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, 0)
 size = Vector3(1, 10, 21)
 material = ExtResource("1_lpmrh")
 
-[node name="cut" type="CSGBox3D" parent="grand stairway/inner-railing2" unique_id=38866336]
+[node name="cut" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/inner-railing2" unique_id=38866336]
 transform = Transform3D(1, 0, 0, 0, 0.9238793, -0.3826834, 0, 0.3826834, 0.9238793, 0, 4.75, 12.5)
 operation = 2
 size = Vector3(2, 10.3, 5)
 material = ExtResource("1_lpmrh")
 
-[node name="cut2" type="CSGBox3D" parent="grand stairway/inner-railing2" unique_id=1802483815]
+[node name="cut2" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/inner-railing2" unique_id=1802483815]
 transform = Transform3D(1, 0, 0, 0, 0.9238793, -0.3826834, 0, 0.3826834, 0.9238793, 0, 7, 4.75)
 operation = 2
 size = Vector3(2, 10.3, 5)
 material = ExtResource("1_lpmrh")
 
-[node name="cut3" type="CSGBox3D" parent="grand stairway/inner-railing2" unique_id=1675671841]
+[node name="cut3" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/inner-railing2" unique_id=1675671841]
 transform = Transform3D(1, 0, 0, 0, 0.9238793, -0.3826834, 0, 0.3826834, 0.9238793, 0, 8.5, -0.25)
 operation = 2
 size = Vector3(2, 10.3, 5)
 material = ExtResource("1_lpmrh")
 
-[node name="cut4" type="CSGBox3D" parent="grand stairway/inner-railing2" unique_id=417478849]
+[node name="cut4" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/inner-railing2" unique_id=417478849]
 transform = Transform3D(1, 0, 0, 0, 0.9238793, -0.3826834, 0, 0.3826834, 0.9238793, 0, 10, -5.25)
 operation = 2
 size = Vector3(2, 10.3, 5)
 material = ExtResource("1_lpmrh")
 
-[node name="straight cut" type="CSGBox3D" parent="grand stairway/inner-railing2" unique_id=1570366670]
+[node name="straight cut" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/inner-railing2" unique_id=1570366670]
 transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 2.8500004, 6.5)
 operation = 2
 size = Vector3(2, 6, 3)
 material = ExtResource("1_lpmrh")
 
-[node name="straight cut5" type="CSGBox3D" parent="grand stairway/inner-railing2" unique_id=1945013754]
+[node name="straight cut5" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/inner-railing2" unique_id=1945013754]
 transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 3.8500004, 8.75)
 operation = 2
 size = Vector3(2, 6, 3)
 material = ExtResource("1_lpmrh")
 
-[node name="straight cut6" type="CSGBox3D" parent="grand stairway/inner-railing2" unique_id=496392456]
+[node name="straight cut6" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/inner-railing2" unique_id=496392456]
 transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 5.8500004, 3.75)
 operation = 2
 size = Vector3(2, 8, 3)
 material = ExtResource("1_lpmrh")
 
-[node name="straight cut7" type="CSGBox3D" parent="grand stairway/inner-railing2" unique_id=78123662]
+[node name="straight cut7" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/inner-railing2" unique_id=78123662]
 transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 7.3500004, -2)
 operation = 2
 size = Vector3(2, 8, 3)
 material = ExtResource("1_lpmrh")
 
-[node name="straight cut8" type="CSGBox3D" parent="grand stairway/inner-railing2" unique_id=2005131337]
+[node name="straight cut8" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/inner-railing2" unique_id=2005131337]
 transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 8.85, -6.75)
 operation = 2
 size = Vector3(2, 8, 3)
 material = ExtResource("1_lpmrh")
 
-[node name="straight cut2" type="CSGBox3D" parent="grand stairway/inner-railing2" unique_id=1011104275]
+[node name="straight cut2" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/inner-railing2" unique_id=1011104275]
 transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 2.8500004, 1.5)
 operation = 2
 size = Vector3(2, 6, 3)
 material = ExtResource("1_lpmrh")
 
-[node name="straight cut3" type="CSGBox3D" parent="grand stairway/inner-railing2" unique_id=721044084]
+[node name="straight cut3" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/inner-railing2" unique_id=721044084]
 transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 2.8500004, -3.5)
 operation = 2
 size = Vector3(2, 6, 3)
 material = ExtResource("1_lpmrh")
 
-[node name="straight cut4" type="CSGBox3D" parent="grand stairway/inner-railing2" unique_id=278098202]
+[node name="straight cut4" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)/grand stairway/inner-railing2" unique_id=278098202]
 transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 2.8500004, -8.75)
 operation = 2
 size = Vector3(2, 6, 3.5)

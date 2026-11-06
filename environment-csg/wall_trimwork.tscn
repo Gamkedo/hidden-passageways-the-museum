@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://dy4418qx7kelu"]
+
+[ext_resource type="Material" uid="uid://blxopw884707r" path="res://materials/classical-museum/white-paint-material.tres" id="1_luxq4"]
+
+[node name="wall-trimwork" type="CSGCombiner3D" unique_id=40805460]
+
+[node name="white trim" type="CSGBox3D" parent="." unique_id=1359333423]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.25, 6.5, 0.045150757)
+size = Vector3(0.5, 9, 0.125)
+material = ExtResource("1_luxq4")
+
+[node name="white trim2" type="CSGBox3D" parent="." unique_id=1529898078]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.25, 6.5, 0.045150757)
+size = Vector3(0.5, 9, 0.125)
+material = ExtResource("1_luxq4")
+
+[node name="white trim3" type="CSGBox3D" parent="." unique_id=1065754515]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.75, 6.5, 0.045150757)
+size = Vector3(0.5, 9, 0.125)
+material = ExtResource("1_luxq4")
+
+[node name="white trim4" type="CSGBox3D" parent="." unique_id=1149078087]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 6.5, 0.045150757)
+size = Vector3(0.5, 9, 0.125)
+material = ExtResource("1_luxq4")
+
+[node name="white trim5" type="CSGBox3D" parent="." unique_id=593238777]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 13.5, 0.29515076)
+size = Vector3(0.5, 3, 0.125)
+material = ExtResource("1_luxq4")
+
+[node name="white trim6" type="CSGBox3D" parent="." unique_id=30600239]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.75, 13.5, 0.29515076)
+size = Vector3(0.5, 3, 0.125)
+material = ExtResource("1_luxq4")
+
+[node name="white trim7" type="CSGBox3D" parent="." unique_id=1497033119]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.25, 13.5, 0.29515076)
+size = Vector3(0.5, 3, 0.125)
+material = ExtResource("1_luxq4")
+
+[node name="white trim8" type="CSGBox3D" parent="." unique_id=776829230]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.25, 13.5, 0.29515076)
+size = Vector3(0.5, 3, 0.125)
+material = ExtResource("1_luxq4")
+
+[node name="white trim9" type="CSGBox3D" parent="." unique_id=2078912778]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.25, 14.75, 0.29515076)
+size = Vector3(21.5, 0.5, 0.125)
+material = ExtResource("1_luxq4")
+
+[node name="white trim10" type="CSGBox3D" parent="." unique_id=89991853]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.25, 0.25, 0.17015076)
+size = Vector3(22.5, 0.5, 0.125)
+material = ExtResource("1_luxq4")
+
+[node name="white baseboard" type="CSGBox3D" parent="." unique_id=8883035]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.25, 1, 0.045150757)
+size = Vector3(22.5, 2, 0.125)
+material = ExtResource("1_luxq4")
+
+[node name="white crown moulding" type="CSGBox3D" parent="." unique_id=1404888185]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.25, 13, 0.10765076)
+size = Vector3(22.5, 4, 0.25)
+material = ExtResource("1_luxq4")
+
+[node name="white crown moulding2" type="CSGBox3D" parent="." unique_id=1001722705]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.25, 11.5, 0.23265076)
+size = Vector3(22.5, 0.5, 0.25)
+material = ExtResource("1_luxq4")
+
+[node name="white crown moulding3" type="CSGBox3D" parent="." unique_id=477595395]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.25, 11.6875, 0.35765076)
+size = Vector3(22.5, 0.625, 0.5)
+material = ExtResource("1_luxq4")
+
+[node name="white crown moulding4" type="CSGBox3D" parent="white crown moulding3" unique_id=628826985]
+transform = Transform3D(1, 0, 0, 0, 0.49999994, 0.8660254, 0, -0.8660254, 0.49999994, 0, -0.073223114, 0.4267769)
+operation = 2
+size = Vector3(22.5, 0.625, 1)
+material = ExtResource("1_luxq4")
