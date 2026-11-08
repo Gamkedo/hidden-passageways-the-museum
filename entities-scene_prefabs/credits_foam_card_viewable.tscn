@@ -75,7 +75,7 @@ unique_name_in_owner = true
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("3_t2u88")
-interact_prompt = "See Credits"
+interact_prompt = "View Card"
 display_hint = NodePath("Marker3D/DisplayHint")
 metadata/_custom_type_script = "uid://bsmp4qaqn0uxw"
 
