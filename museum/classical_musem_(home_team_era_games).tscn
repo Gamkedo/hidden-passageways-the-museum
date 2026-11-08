@@ -20,6 +20,7 @@ reflection_mask = 1048573
 
 [node name="Museum Classical (Oct 2019-mid 2025)" type="CSGCombiner3D" parent="." unique_id=1423941537]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 12, -29.5)
+use_collision = true
 
 [node name="Ionic_Column" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1313702386 instance=ExtResource("2_lpmrh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -6, 15.25)
