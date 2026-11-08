@@ -26,7 +26,7 @@
 [ext_resource type="Material" uid="uid://b8paggwklaeo3" path="res://materials/ceiling-materials/ceiling-light.tres" id="12_4y16h"]
 [ext_resource type="Material" uid="uid://duojbedij8awq" path="res://materials/walls_museum/wall_material_white.tres" id="12_qi2ty"]
 [ext_resource type="Material" uid="uid://dajoyj6fev1j7" path="res://materials/floor-materials/marble_tile_floor.tres" id="13_v6iic"]
-[ext_resource type="PackedScene" uid="uid://d0hl0sude541s" path="res://level-scenes/basement_art_(misc_not_in_released_games).tscn" id="16_4y16h"]
+[ext_resource type="PackedScene" uid="uid://d0hl0sude541s" path="res://level-scenes/basement_lower_level_history_clubs.tscn" id="16_4y16h"]
 [ext_resource type="PackedScene" uid="uid://iwllc1880c7i" path="res://entities-scene_prefabs/reflective_window.tscn" id="16_bbunl"]
 [ext_resource type="Texture2D" uid="uid://p4t8xnmjwqpa" path="res://textures/signage/coming-soon-banner_lagamedevs-gamkedo-club.png" id="16_d8p2r"]
 [ext_resource type="PackedScene" uid="uid://bs0x6kcocwrn8" path="res://entities-scene_prefabs/tree_small.tscn" id="16_iixjk"]
@@ -2543,11 +2543,11 @@ size_2d_override = Vector2i(512, 512)
 
 [node name="guidebook" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d" unique_id=1630787135 instance=ExtResource("31_oa8v2")]
 
-[node name="Book" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook" index="0" unique_id=2009432074]
+[node name="Book" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook" index="0" unique_id=1404423609]
 layers = 6
 cast_shadow = 0
 
-[node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook" index="1" unique_id=2132904720]
+[node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
 surface_material_override/0 = SubResource("StandardMaterial3D_vq06m")
@@ -2557,11 +2557,11 @@ transform = Transform3D(0.99572617, -6.976736e-08, 0.092355326, 0.07370379, 0.60
 
 [node name="guidebook" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2" unique_id=914161945 instance=ExtResource("31_oa8v2")]
 
-[node name="Book" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook" index="0" unique_id=2009432074]
+[node name="Book" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook" index="0" unique_id=1404423609]
 layers = 6
 cast_shadow = 0
 
-[node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook" index="1" unique_id=2132904720]
+[node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
 surface_material_override/0 = SubResource("StandardMaterial3D_3djdl")
@@ -2571,11 +2571,11 @@ transform = Transform3D(-0.9742656, -0.12668496, -0.18643428, 0.14209789, -0.987
 
 [node name="guidebook" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3" unique_id=962682289 instance=ExtResource("31_oa8v2")]
 
-[node name="Book" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3/guidebook" index="0" unique_id=2009432074]
+[node name="Book" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3/guidebook" index="0" unique_id=1404423609]
 layers = 6
 cast_shadow = 0
 
-[node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3/guidebook" index="1" unique_id=2132904720]
+[node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
 surface_material_override/0 = SubResource("StandardMaterial3D_ym0uh")

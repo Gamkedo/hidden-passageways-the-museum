@@ -1,28 +1,28 @@
 [gd_scene format=4 uid="uid://d0hl0sude541s"]
 
-[ext_resource type="Texture2D" uid="uid://vnri2xppsmm0" path="res://models/legend_of_shadowtails_ratrick_ratrick.png" id="1_vujxr"]
-[ext_resource type="Material" uid="uid://duojbedij8awq" path="res://materials/walls_museum/wall_material_white.tres" id="2_xaifo"]
-[ext_resource type="Material" uid="uid://bgutakhbvq0mc" path="res://materials/modern-museum/museum-wall-white.tres" id="3_lvdt1"]
-[ext_resource type="Material" uid="uid://i2mujh133810" path="res://materials/modern-museum/museum-modern-exterior-dark.tres" id="4_m0kxd"]
-[ext_resource type="Material" uid="uid://dajoyj6fev1j7" path="res://materials/floor-materials/marble_tile_floor.tres" id="5_u45lx"]
-[ext_resource type="Material" uid="uid://r6515yywtwib" path="res://materials/floor-materials/wood_floor.tres" id="5_xaifo"]
-[ext_resource type="PackedScene" uid="uid://sa8s0p3pnpp0" path="res://level-scenes/helper-chunks/editor_quick_test_group.tscn" id="7_lvdt1"]
-[ext_resource type="PackedScene" uid="uid://b6fbyq5ixmjt4" path="res://level-scenes/tarnishedmoth_basement.tscn" id="8_m0kxd"]
-[ext_resource type="Script" uid="uid://bcbsmve6pf08c" path="res://entities-scene_prefabs/auto-stairs.gd" id="8_xljnw"]
-[ext_resource type="Material" uid="uid://cb0ohmlylauik" path="res://materials/modern-museum/museum-floor-dark-carpet.tres" id="9_43mwv"]
-[ext_resource type="PackedScene" uid="uid://dnet2j3i5v35v" path="res://environment-csg/zero_gravity_elevator.tscn" id="11_xap7t"]
-[ext_resource type="Script" uid="uid://ehbbc0ik5w8" path="res://game wall pictures/frame_button_credits.gd" id="13_43mwv"]
-[ext_resource type="PackedScene" uid="uid://c8tqx7x66ewpd" path="res://entities-scene_prefabs/credits_foam_card_viewable.tscn" id="13_ye0tm"]
-[ext_resource type="PackedScene" uid="uid://b8h4gkdqnmeyq" path="res://models/cmu-buildings/campus-tables-offset.tscn" id="15_xljnw"]
-[ext_resource type="Material" uid="uid://b5j7a6q6jdkv5" path="res://materials/concrete.tres" id="16_43mwv"]
-[ext_resource type="Texture2D" uid="uid://c58epwk4p5k28" path="res://models/cmu-buildings/cmu-campus-collider_skybox.jpg" id="17_43mwv"]
-[ext_resource type="PackedScene" uid="uid://cjje4wwgxoy1s" path="res://entities-scene_prefabs/intercom_speaker/speaker.tscn" id="17_lb8qs"]
+[ext_resource type="Texture2D" uid="uid://vnri2xppsmm0" path="res://models/legend_of_shadowtails_ratrick_ratrick.png" id="1_epc4h"]
+[ext_resource type="Material" uid="uid://duojbedij8awq" path="res://materials/walls_museum/wall_material_white.tres" id="2_d2etl"]
+[ext_resource type="Material" uid="uid://bgutakhbvq0mc" path="res://materials/modern-museum/museum-wall-white.tres" id="3_j7eo6"]
+[ext_resource type="Material" uid="uid://i2mujh133810" path="res://materials/modern-museum/museum-modern-exterior-dark.tres" id="4_yfhom"]
+[ext_resource type="Material" uid="uid://r6515yywtwib" path="res://materials/floor-materials/wood_floor.tres" id="5_kuxxd"]
+[ext_resource type="Material" uid="uid://dajoyj6fev1j7" path="res://materials/floor-materials/marble_tile_floor.tres" id="6_yrrim"]
+[ext_resource type="PackedScene" uid="uid://sa8s0p3pnpp0" path="res://level-scenes/helper-chunks/editor_quick_test_group.tscn" id="7_e50qk"]
+[ext_resource type="PackedScene" uid="uid://b6fbyq5ixmjt4" path="res://level-scenes/tarnishedmoth_basement.tscn" id="8_j2d2y"]
+[ext_resource type="Script" uid="uid://bcbsmve6pf08c" path="res://entities-scene_prefabs/auto-stairs.gd" id="9_4kvr3"]
+[ext_resource type="Material" uid="uid://cb0ohmlylauik" path="res://materials/modern-museum/museum-floor-dark-carpet.tres" id="10_q8evd"]
+[ext_resource type="PackedScene" uid="uid://dnet2j3i5v35v" path="res://environment-csg/zero_gravity_elevator.tscn" id="11_nu1pi"]
+[ext_resource type="Script" uid="uid://ehbbc0ik5w8" path="res://game wall pictures/frame_button_credits.gd" id="12_sqahl"]
+[ext_resource type="PackedScene" uid="uid://c8tqx7x66ewpd" path="res://entities-scene_prefabs/credits_foam_card_viewable.tscn" id="13_4ove8"]
+[ext_resource type="PackedScene" uid="uid://cjje4wwgxoy1s" path="res://entities-scene_prefabs/intercom_speaker/speaker.tscn" id="14_87nig"]
+[ext_resource type="PackedScene" uid="uid://b8h4gkdqnmeyq" path="res://models/cmu-buildings/campus-tables-offset.tscn" id="15_p1rwe"]
+[ext_resource type="Material" uid="uid://b5j7a6q6jdkv5" path="res://materials/concrete.tres" id="16_2ubd8"]
+[ext_resource type="Texture2D" uid="uid://c58epwk4p5k28" path="res://models/cmu-buildings/cmu-campus-collider_skybox.jpg" id="17_4aylb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lahx7"]
-albedo_texture = ExtResource("1_vujxr")
+albedo_texture = ExtResource("1_epc4h")
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_7tbbo"]
-material = ExtResource("16_43mwv")
+material = ExtResource("16_2ubd8")
 top_radius = 10.274414
 bottom_radius = 10.274414
 height = 1.2421875
@@ -30,7 +30,7 @@ height = 1.2421875
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vwke8"]
 resource_name = "Default"
 cull_mode = 2
-albedo_texture = ExtResource("17_43mwv")
+albedo_texture = ExtResource("17_4aylb")
 roughness = 0.5
 metadata/_gltf_primary_texture_coord = 0
 
@@ -93,51 +93,51 @@ use_collision = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.002178, -12.497253, 5.499962)
 material_override = SubResource("StandardMaterial3D_lahx7")
 size = Vector3(34, 21, 27)
-material = ExtResource("2_xaifo")
+material = ExtResource("2_d2etl")
 
 [node name="NegativeCube" type="CSGBox3D" parent="Museum Modern (past year)" unique_id=513936689]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006872177, 0.9310608, 0.060886383)
-material_override = ExtResource("3_lvdt1")
+material_override = ExtResource("3_j7eo6")
 operation = 2
 size = Vector3(32, 21, 25.091)
-material = ExtResource("2_xaifo")
+material = ExtResource("2_d2etl")
 
 [node name="Interior Wide Opening Basement" type="CSGPolygon3D" parent="Museum Modern (past year)" unique_id=597447482]
 transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, -3.8146973e-06, 1.5, 12.44725)
 operation = 2
 polygon = PackedVector2Array(-3, 0, -3, 4, -2, 5, 1, 5, 2, 4, 2, 0)
 depth = 1.1
-material = ExtResource("4_m0kxd")
+material = ExtResource("4_yfhom")
 
 [node name="Entrance Floor" type="CSGBox3D" parent="." unique_id=509362862]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.502178, -11.497253, 5.499962)
 material_override = SubResource("StandardMaterial3D_lahx7")
 size = Vector3(5, 1, 25)
-material = ExtResource("5_xaifo")
+material = ExtResource("5_kuxxd")
 
 [node name="Littlewalkway" type="CSGBox3D" parent="Entrance Floor" unique_id=1391612538]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 7)
 size = Vector3(5, 1, 4)
-material = ExtResource("5_xaifo")
+material = ExtResource("5_kuxxd")
 
 [node name="sidewalk above ground, hard top" type="CSGBox3D" parent="." unique_id=820135251]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, -2.5, 5.5)
-material_override = ExtResource("5_u45lx")
+material_override = ExtResource("6_yrrim")
 size = Vector3(32, 1, 25)
-material = ExtResource("5_u45lx")
+material = ExtResource("6_yrrim")
 
-[node name="EditorQuickTestGroup" parent="." unique_id=259214251 instance=ExtResource("7_lvdt1")]
+[node name="EditorQuickTestGroup" parent="." unique_id=259214251 instance=ExtResource("7_e50qk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.650959, -10.997258, 16.423002)
 visible = false
 
-[node name="tarnishedmoth" parent="." unique_id=216412751 instance=ExtResource("8_m0kxd")]
+[node name="tarnishedmoth" parent="." unique_id=216412751 instance=ExtResource("8_j2d2y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.75278, -10.137384, 12.146261)
 
 [node name="AutoStairs" type="CSGCombiner3D" parent="tarnishedmoth" unique_id=488584196]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 0.51060104, 0.36259365)
 use_collision = true
-script = ExtResource("8_xljnw")
-step_material = ExtResource("9_43mwv")
+script = ExtResource("9_4kvr3")
+step_material = ExtResource("10_q8evd")
 step_count = 7
 width = 4.0
 rise_degrees = -32.44470325921144
@@ -147,46 +147,46 @@ metadata/_custom_type_script = "uid://bcbsmve6pf08c"
 [node name="_CSGBox3D_54827" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=299516883]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.178, 0.14)
 size = Vector3(4, 0.08, 0.238)
-material = ExtResource("9_43mwv")
+material = ExtResource("10_q8evd")
 
 [node name="_CSGBox3D_54828" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=313892217]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.356, 0.42000002)
 size = Vector3(4, 0.08, 0.238)
-material = ExtResource("9_43mwv")
+material = ExtResource("10_q8evd")
 
 [node name="_CSGBox3D_54829" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=203219972]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.53400004, 0.70000005)
 size = Vector3(4, 0.08, 0.238)
-material = ExtResource("9_43mwv")
+material = ExtResource("10_q8evd")
 
 [node name="_CSGBox3D_54830" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=521965979]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.712, 0.98)
 size = Vector3(4, 0.08, 0.238)
-material = ExtResource("9_43mwv")
+material = ExtResource("10_q8evd")
 
 [node name="_CSGBox3D_54831" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=363735598]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.89, 1.26)
 size = Vector3(4, 0.08, 0.238)
-material = ExtResource("9_43mwv")
+material = ExtResource("10_q8evd")
 
 [node name="_CSGBox3D_54832" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=465023549]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0680001, 1.5400001)
 size = Vector3(4, 0.08, 0.238)
-material = ExtResource("9_43mwv")
+material = ExtResource("10_q8evd")
 
 [node name="_CSGBox3D_54833" type="CSGBox3D" parent="tarnishedmoth/AutoStairs" unique_id=1920709385]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.246, 1.82)
 size = Vector3(4, 0.08, 0.238)
-material = ExtResource("9_43mwv")
+material = ExtResource("10_q8evd")
 
-[node name="ZeroGravityElevator" parent="." unique_id=65243958 instance=ExtResource("11_xap7t")]
+[node name="ZeroGravityElevator" parent="." unique_id=65243958 instance=ExtResource("11_nu1pi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, -22, -4.5)
 
 [node name="College Clubs Exhibit" type="Node3D" parent="." unique_id=1784501219]
 
 [node name="Frame, Button, Credits" type="StaticBody3D" parent="College Clubs Exhibit" unique_id=799548543]
 transform = Transform3D(-0.87836736, 0, 0.47798613, 0, 1, 0, -0.47798613, 0, -0.87836736, 29.452688, -20.33706, 1.2645011)
-script = ExtResource("13_43mwv")
+script = ExtResource("12_sqahl")
 credits = "Buggy Game
 Models and skybox by Chris DeLeon
 
@@ -198,22 +198,20 @@ Building textures and the skybox were made from photos taken that week. The tall
 
 Mister Rogers once lived a 15-minute walk from the tall brown tower on the right. He filmed 900+ episodes of Misters Rogers Neighborhood at WQED near the other side of campus. He passed away a few years prior, but people still shared stories of him walking across campus being kind, such as checking to ensure a student resting in the grass felt ok."
 
-[node name="Foam Card" parent="College Clubs Exhibit/Frame, Button, Credits" unique_id=390590116 instance=ExtResource("13_ye0tm")]
+[node name="Foam Card" parent="College Clubs Exhibit/Frame, Button, Credits" unique_id=390590116 instance=ExtResource("13_4ove8")]
 transform = Transform3D(0, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, 0, 1.6941547, 0, 0.64038754)
 page_text = "Buggy Game
 Models and skybox by Chris DeLeon
 
 Collection of building models created for a 3-day public arcade game kiosk at Spring Carnival 2007. This was played inside of a booth students made in celebration of Nintendo games.
 
-The area mapped is at one edge of Carnegie Mellon's campus, including adjacents buildings, with Flagstaff Hill in Schenley Park at the center. Along with a terrain heightmap, hand-placed trees, and a week of C++/OpenGL code, these models were used to create a simulation of the traditional homecoming buggy relay race.
+The area mapped is overlaps one edge of Carnegie Mellon's campus, including adjacents buildings, with Flagstaff Hill of Schenley Park at the center. These models were part of a C++/OpenGL simulation of the traditional homecoming buggy relay race. In the real race small college students fit inside and steer tube-shaped vehicles. Larger college students pushed those buggies for uphill portions. The simulation had a custom input interface built to steer with the same mechanism as a real buggy, and a sliding bar players pushed for uphill segments.
 
-In the real race small college students fit inside and steer little tube-shaped vehicles. Larger college students pushed the buggies from behind for uphill portions. The simulation had a custom controller interface built to steer using the same mechanism as real buggies, and a sliding mechanical bar players physically pushed for uphill segments.
+Building textures and the skybox were made from photos taken that week. The tall building in the skybox across the bridge is the Cathedral of Learning at the University of Pittsburgh. It's the tallest educational building in the western hemisphere. The shorter cement building to its right in the skybox, Wean Hall, is where the first meetings were held for Game Creation Society in 2004, a college gamedev club Chris cofounded which ten years  laterserved as a model for the community now known as Dev Pods. Two buildings here, Scaife Hall (\"potato chip\" roof) and Skibo Gymnasium (near the brown tower) have since been demolished and replaced by newer buildings. Posner Hall (maze on part of the roof) opened only a few years earlier.
 
-Building textures and the skybox were made from digital photos taken that week. The tall building in the skybox across the bridge is the Cathedral of Learning at the University of Pittsburgh. At 42-stories, it's the tallest educational building in the western hemisphere. Two buildings modeled here, Scaife Hall (\"potato chip\" roof) and Skibo Gymnasium (near the brown condos) have since been demolished and replaced by newer buildings. Posner Hall (look for a maze on part of the roof) was a new building at the time, opened only a few years earlier.
+Mister Rogers once lived a 15-minute walk from the tall brown tower on the right. He filmed 900+ episodes of Misters Rogers Neighborhood at WQED near the other side of campus. He passed away a few years prior, but people still shared stories of him walking across campus being kind, such as checking to ensure a student resting in the grass felt ok."
 
-Mister Rogers once lived a 15-minute walk from the tall brown building on the right. He filmed most 900+ episodes of Misters Rogers Neighborhood at WQED near the other end of campus. He passed away a few years prior, but people still shared stories of him walking through campus being kind, such as checking to ensure a student resting in the grass felt ok."
-
-[node name="Speaker" parent="College Clubs Exhibit/Frame, Button, Credits" unique_id=1668457512 instance=ExtResource("17_lb8qs")]
+[node name="Speaker" parent="College Clubs Exhibit/Frame, Button, Credits" unique_id=1668457512 instance=ExtResource("14_87nig")]
 transform = Transform3D(1.0000008, 0, 0, 0, 1, 0, 0, 0, 1.0000008, 3.267889, -2.4513874, -8.476528)
 visible = false
 
@@ -224,7 +222,7 @@ light_bake_mode = 1
 shadow_enabled = true
 omni_range = 20.8783
 
-[node name="campus2" parent="College Clubs Exhibit" unique_id=1764210323 instance=ExtResource("15_xljnw")]
+[node name="campus2" parent="College Clubs Exhibit" unique_id=1764210323 instance=ExtResource("15_p1rwe")]
 transform = Transform3D(-0.017857617, 0, 0.040315058, 0, 0.04409307, 0, -0.040315058, 0, -0.017857617, 21.12013, -21.185873, 6.6533217)
 
 [node name="FloorCover" type="MeshInstance3D" parent="College Clubs Exhibit" unique_id=1040209168]
@@ -238,122 +236,122 @@ use_collision = true
 [node name="Tabletop" type="CSGBox3D" parent="College Clubs Exhibit/Models Tables" unique_id=722218945]
 transform = Transform3D(0.99547, 0.00022147855, 0.09507728, -4.4527267e-05, 0.9999984, -0.0018632268, -0.095077515, 0.001850552, 0.995468, -0.3205719, -0.6148071, -4.530344)
 size = Vector3(1.4777222, 0.16043472, 8.475784)
-material = ExtResource("5_xaifo")
+material = ExtResource("5_kuxxd")
 
 [node name="Tableleg" type="CSGBox3D" parent="College Clubs Exhibit/Models Tables/Tabletop" unique_id=291572383]
 transform = Transform3D(1, 1.4551915e-11, 7.450581e-09, 0, 0.99999994, 0, -7.450581e-09, 0, 1, 0.6487818, -0.45417404, 4.1662474)
 size = Vector3(0.17782593, 0.8433304, 0.14328766)
-material = ExtResource("5_xaifo")
+material = ExtResource("5_kuxxd")
 
 [node name="Tableleg2" type="CSGBox3D" parent="College Clubs Exhibit/Models Tables/Tabletop" unique_id=1048730829]
 transform = Transform3D(1, 1.4551915e-11, 7.450581e-09, 0, 0.99999994, 0, -7.450581e-09, 0, 1, -0.6499422, -0.45417404, 4.1662474)
 size = Vector3(0.17782593, 0.8433304, 0.14328766)
-material = ExtResource("5_xaifo")
+material = ExtResource("5_kuxxd")
 
 [node name="Tableleg3" type="CSGBox3D" parent="College Clubs Exhibit/Models Tables/Tabletop" unique_id=954502006]
 transform = Transform3D(1, 1.4551915e-11, 7.450581e-09, 0, 0.99999994, 0, -7.450581e-09, 0, 1, 0.64878166, -0.45417404, -4.1654973)
 size = Vector3(0.17782593, 0.8433304, 0.14328766)
-material = ExtResource("5_xaifo")
+material = ExtResource("5_kuxxd")
 
 [node name="Tableleg4" type="CSGBox3D" parent="College Clubs Exhibit/Models Tables/Tabletop" unique_id=784566204]
 transform = Transform3D(1, 1.4551915e-11, 7.450581e-09, 0, 0.99999994, 0, -7.450581e-09, 0, 1, -0.64994234, -0.45417404, -4.1654973)
 size = Vector3(0.17782593, 0.8433304, 0.14328766)
-material = ExtResource("5_xaifo")
+material = ExtResource("5_kuxxd")
 
 [node name="Tabletop5" type="CSGBox3D" parent="College Clubs Exhibit/Models Tables" unique_id=1076859218]
 transform = Transform3D(0.99547, 0.00022147855, 0.09507728, -4.4527267e-05, 0.9999984, -0.0018632268, -0.095077515, 0.001850552, 0.995468, 4.787405, -1.0350132, -3.1168556)
 size = Vector3(0.48179626, 0.88552856, 0.5076661)
-material = ExtResource("5_xaifo")
+material = ExtResource("5_kuxxd")
 
 [node name="Tabletop7" type="CSGBox3D" parent="College Clubs Exhibit/Models Tables" unique_id=1441728101]
 transform = Transform3D(0.909641, -0.0007334701, -0.41539466, -4.4527238e-05, 0.99999833, -0.0018632268, 0.41539544, 0.0017133643, 0.90963924, 8.993496, -0.6443293, -4.5583725)
 size = Vector3(1.7013474, 0.14285278, 5.0598664)
-material = ExtResource("5_xaifo")
+material = ExtResource("5_kuxxd")
 
 [node name="Tableleg5" type="CSGBox3D" parent="College Clubs Exhibit/Models Tables/Tabletop7" unique_id=892752451]
 transform = Transform3D(0.99999845, 0.001745328, 0, -0.0017453283, 0.9999983, 0, 0, 0, 0.9999998, -0.7576624, -0.45444432, 2.4567928)
 size = Vector3(0.17782593, 0.8433304, 0.14328766)
-material = ExtResource("5_xaifo")
+material = ExtResource("5_kuxxd")
 
 [node name="Tableleg6" type="CSGBox3D" parent="College Clubs Exhibit/Models Tables/Tabletop7" unique_id=175881680]
 transform = Transform3D(0.99999845, 0.001745328, 0, -0.0017453283, 0.9999983, 0, 0, 0, 0.9999998, 0.753626, -0.457082, 2.4567928)
 size = Vector3(0.17782593, 0.8433304, 0.14328766)
-material = ExtResource("5_xaifo")
+material = ExtResource("5_kuxxd")
 
 [node name="Tableleg7" type="CSGBox3D" parent="College Clubs Exhibit/Models Tables/Tabletop7" unique_id=1105588883]
 transform = Transform3D(0.99999845, 0.001745328, 0, -0.0017453283, 0.9999983, 0, 0, 0, 0.9999998, -0.7576628, -0.45444432, -2.4555573)
 size = Vector3(0.17782593, 0.8433304, 0.14328766)
-material = ExtResource("5_xaifo")
+material = ExtResource("5_kuxxd")
 
 [node name="Tableleg8" type="CSGBox3D" parent="College Clubs Exhibit/Models Tables/Tabletop7" unique_id=538934111]
 transform = Transform3D(0.99999845, 0.001745328, 0, -0.0017453283, 0.9999983, 0, 0, 0, 0.9999998, 0.75362563, -0.457082, -2.4555573)
 size = Vector3(0.17782593, 0.8433304, 0.14328766)
-material = ExtResource("5_xaifo")
+material = ExtResource("5_kuxxd")
 
 [node name="Tabletop6" type="CSGBox3D" parent="College Clubs Exhibit/Models Tables" unique_id=420885792]
 transform = Transform3D(0.99547, 0.00022147855, 0.09507728, -4.4527267e-05, 0.9999984, -0.0018632268, -0.095077515, 0.001850552, 0.995468, 3.1681538, -1.0271664, -1.2582836)
 size = Vector3(0.2595935, 0.86990356, 0.27018434)
-material = ExtResource("5_xaifo")
+material = ExtResource("5_kuxxd")
 
 [node name="Tabletop2" type="CSGBox3D" parent="College Clubs Exhibit/Models Tables" unique_id=1500507609]
 transform = Transform3D(0.09507748, -0.0018505522, -0.995468, -4.4527238e-05, 0.99999833, -0.0018632268, 0.99547, 0.00022147835, 0.09507725, -1.8678608, -0.6087208, -9.9167595)
 size = Vector3(1.6088104, 0.150177, 3.6544313)
-material = ExtResource("5_xaifo")
+material = ExtResource("5_kuxxd")
 
 [node name="Tableleg5" type="CSGBox3D" parent="College Clubs Exhibit/Models Tables/Tabletop2" unique_id=2118529766]
 transform = Transform3D(-7.450581e-09, 0.0018186971, 0.99999815, -0.0019077542, 0.99999654, -0.0018186964, -0.99999845, -0.001907753, 3.3900142e-06, 0.73028845, -0.46280313, -1.7373468)
 size = Vector3(0.17782593, 0.8433304, 0.14328766)
-material = ExtResource("5_xaifo")
+material = ExtResource("5_kuxxd")
 
 [node name="Tableleg6" type="CSGBox3D" parent="College Clubs Exhibit/Models Tables/Tabletop2" unique_id=444140662]
 transform = Transform3D(-7.450581e-09, 0.0018186971, 0.99999815, -0.0019077542, 0.99999654, -0.0018186964, -0.99999845, -0.001907753, 3.3900142e-06, 0.73029035, -0.4561758, 1.735715)
 size = Vector3(0.17782593, 0.8433304, 0.14328766)
-material = ExtResource("5_xaifo")
+material = ExtResource("5_kuxxd")
 
 [node name="Tableleg7" type="CSGBox3D" parent="College Clubs Exhibit/Models Tables/Tabletop2" unique_id=593471475]
 transform = Transform3D(-7.450581e-09, 0.0018186971, 0.99999815, -0.0019077542, 0.99999654, -0.0018186964, -0.99999845, -0.001907753, 3.3900142e-06, -0.7285072, -0.46014905, -1.737352)
 size = Vector3(0.17782593, 0.8433304, 0.14328766)
-material = ExtResource("5_xaifo")
+material = ExtResource("5_kuxxd")
 
 [node name="Tableleg8" type="CSGBox3D" parent="College Clubs Exhibit/Models Tables/Tabletop2" unique_id=520085732]
 transform = Transform3D(-7.450581e-09, 0.0018186971, 0.99999815, -0.0019077542, 0.99999654, -0.0018186964, -0.99999845, -0.001907753, 3.3900142e-06, -0.72850674, -0.45352364, 1.7357124)
 size = Vector3(0.17782593, 0.8433304, 0.14328766)
-material = ExtResource("5_xaifo")
+material = ExtResource("5_kuxxd")
 
 [node name="Tabletop3" type="CSGBox3D" parent="College Clubs Exhibit/Models Tables" unique_id=294388996]
 transform = Transform3D(0.09507748, -0.0018505522, -0.995468, -4.4527238e-05, 0.99999833, -0.0018632268, 0.99547, 0.00022147835, 0.09507725, -1.9021091, -0.61180687, -11.639555)
 size = Vector3(0.88563156, 0.15603638, 3.5069032)
-material = ExtResource("5_xaifo")
+material = ExtResource("5_kuxxd")
 
 [node name="Tableleg9" type="CSGBox3D" parent="College Clubs Exhibit/Models Tables/Tabletop3" unique_id=592037834]
 transform = Transform3D(-1.4901161e-08, 0.0018186971, 0.99999815, -0.0019077542, 0.9999966, -0.0018186964, -0.99999845, -0.001907753, 3.3900142e-06, 0.3684131, -0.4586467, -1.6590428)
 size = Vector3(0.17782593, 0.8433304, 0.14328766)
-material = ExtResource("5_xaifo")
+material = ExtResource("5_kuxxd")
 
 [node name="Tableleg10" type="CSGBox3D" parent="College Clubs Exhibit/Models Tables/Tabletop3" unique_id=1755051750]
 transform = Transform3D(-1.4901161e-08, 0.0018186971, 0.99999815, -0.0019077542, 0.9999966, -0.0018186964, -0.99999845, -0.001907753, 3.3900142e-06, 0.36841547, -0.45192063, 1.8654076)
 size = Vector3(0.17782593, 0.8433304, 0.14328766)
-material = ExtResource("5_xaifo")
+material = ExtResource("5_kuxxd")
 
 [node name="Tableleg11" type="CSGBox3D" parent="College Clubs Exhibit/Models Tables/Tabletop3" unique_id=2111530980]
 transform = Transform3D(-1.4901161e-08, 0.0018186971, 0.99999815, -0.0019077542, 0.9999966, -0.0018186964, -0.99999845, -0.001907753, 3.3900142e-06, -1.9762719, -0.4543805, -1.6590496)
 size = Vector3(0.17782593, 0.8433304, 0.14328766)
-material = ExtResource("5_xaifo")
+material = ExtResource("5_kuxxd")
 
 [node name="Tableleg12" type="CSGBox3D" parent="College Clubs Exhibit/Models Tables/Tabletop3" unique_id=420115000]
 transform = Transform3D(-1.4901161e-08, 0.0018186971, 0.99999815, -0.0019077542, 0.9999966, -0.0018186964, -0.99999845, -0.001907753, 3.3900142e-06, -1.9712763, -0.4529794, -0.9204192)
 size = Vector3(0.17782593, 0.8433304, 0.14328766)
-material = ExtResource("5_xaifo")
+material = ExtResource("5_kuxxd")
 
 [node name="Tabletop4" type="CSGBox3D" parent="College Clubs Exhibit/Models Tables" unique_id=822581965]
 transform = Transform3D(0.09507748, -0.0018505522, -0.995468, -4.4527238e-05, 0.99999833, -0.0018632268, 0.99547, 0.00022147835, 0.09507725, -0.73625183, -0.6093559, -13.001377)
 size = Vector3(1.6090206, 0.15605354, 0.9267914)
-material = ExtResource("5_xaifo")
+material = ExtResource("5_kuxxd")
 
 [node name="Condo Booster Block" type="CSGBox3D" parent="College Clubs Exhibit/Models Tables" unique_id=1920023645]
 transform = Transform3D(0.09507748, -0.0018505522, -0.995468, -4.4527238e-05, 0.99999833, -0.0018632268, 0.99547, 0.00022147835, 0.09507725, -0.9252243, -0.46906853, -13.254534)
 size = Vector3(0.63849175, 0.11476135, 1.2644737)
-material = ExtResource("5_xaifo")
+material = ExtResource("5_kuxxd")
 
 [node name="cmu-campus-collider" type="Node3D" parent="College Clubs Exhibit" unique_id=984753718]
 transform = Transform3D(-0.015486196, 0, 0.041150697, 0, 0.043968193, 0, -0.041150697, 0, -0.015486196, 20.83803, -21.779285, 6.62989)

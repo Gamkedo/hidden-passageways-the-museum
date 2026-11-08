@@ -77,7 +77,7 @@
 [ext_resource type="PackedScene" uid="uid://cxl7h3vtvfn66" path="res://models/guidebook.gltf" id="75_2eec6"]
 [ext_resource type="Texture2D" uid="uid://2432776vq113" path="res://textures/play-button-stand.png" id="76_mhrks"]
 [ext_resource type="ArrayMesh" uid="uid://cm2soemey2m52" path="res://models/play-button-stand.obj" id="77_lldod"]
-[ext_resource type="PackedScene" uid="uid://d0hl0sude541s" path="res://level-scenes/basement_art_(misc_not_in_released_games).tscn" id="78_pjprh"]
+[ext_resource type="PackedScene" uid="uid://d0hl0sude541s" path="res://level-scenes/basement_lower_level_history_clubs.tscn" id="78_pjprh"]
 [ext_resource type="Material" uid="uid://b5j7a6q6jdkv5" path="res://materials/concrete.tres" id="79_no514"]
 [ext_resource type="PackedScene" uid="uid://bad4bwomkabyu" path="res://models/cyndrive_ships_silo.fbx" id="80_kqne6"]
 [ext_resource type="PackedScene" uid="uid://duy2brb5d32nn" path="res://models/cyndrive_ships_silo_door.fbx" id="81_ehrnj"]
