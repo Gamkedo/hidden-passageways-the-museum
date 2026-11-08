@@ -34,6 +34,8 @@
 [ext_resource type="Texture2D" uid="uid://cdwd15kcvxucw" path="res://textures/signage/coming-soon-banner_hometeam-gamedev.png" id="17_10aen"]
 [ext_resource type="Texture2D" uid="uid://dnmay4t3srwn8" path="res://textures/signage/dev-pods-games.png" id="18_7y3h6"]
 [ext_resource type="Material" uid="uid://bhwvi7orkued" path="res://materials/depods-logo.tres" id="19_kh8wp"]
+[ext_resource type="Texture2D" uid="uid://c6rwhafmieawq" path="res://textures/elevator-closed.png" id="19_tdylj"]
+[ext_resource type="Texture2D" uid="uid://bkda52i8n0s4f" path="res://textures/elevator-employees.png" id="19_vq06m"]
 [ext_resource type="Material" uid="uid://cwisnv1hbjfln" path="res://materials/smoke_particle.tres" id="22_xsvti"]
 [ext_resource type="PackedScene" uid="uid://o8idbyowpqvw" path="res://entities-scene_prefabs/railing.tscn" id="26_c6q64"]
 [ext_resource type="Texture2D" uid="uid://dlft5rt3mgqhu" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/gladiator-of-the-golden-house.png" id="26_v80x0"]
@@ -177,6 +179,12 @@ albedo_texture = ExtResource("17_10aen")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l8pru"]
 albedo_texture = ExtResource("18_7y3h6")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3djdl"]
+albedo_texture = ExtResource("19_tdylj")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tdylj"]
+albedo_texture = ExtResource("19_vq06m")
 
 [sub_resource type="QuadMesh" id="QuadMesh_7tbbo"]
 material = ExtResource("22_xsvti")
@@ -394,36 +402,36 @@ material = ExtResource("7_3lbo0")
 size = Vector2(10.380006, 10.380006)
 orientation = 1
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_m4x27"]
-viewport_path = NodePath("../SubViewport")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vq06m"]
-resource_local_to_scene = true
-resource_name = "Pages"
-transparency = 1
-albedo_texture = SubResource("ViewportTexture_m4x27")
-roughness = 0.8
-texture_filter = 5
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_tdylj"]
-viewport_path = NodePath("../../Guidebook3d/SubViewport")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3djdl"]
-resource_local_to_scene = true
-resource_name = "Pages"
-transparency = 1
-albedo_texture = SubResource("ViewportTexture_tdylj")
-roughness = 0.8
-texture_filter = 5
-
 [sub_resource type="ViewportTexture" id="ViewportTexture_ae2tv"]
-viewport_path = NodePath("../../Guidebook3d/SubViewport")
+viewport_path = NodePath("../SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ym0uh"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
 albedo_texture = SubResource("ViewportTexture_ae2tv")
+roughness = 0.8
+texture_filter = 5
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_jr1oq"]
+viewport_path = NodePath("../../Guidebook3d/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_svij2"]
+resource_local_to_scene = true
+resource_name = "Pages"
+transparency = 1
+albedo_texture = SubResource("ViewportTexture_jr1oq")
+roughness = 0.8
+texture_filter = 5
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_21smi"]
+viewport_path = NodePath("../../Guidebook3d/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_87qi0"]
+resource_local_to_scene = true
+resource_name = "Pages"
+transparency = 1
+albedo_texture = SubResource("ViewportTexture_21smi")
 roughness = 0.8
 texture_filter = 5
 
@@ -449,6 +457,9 @@ uv2_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lahx7"]
 albedo_texture = ExtResource("7_hgslh")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3e303"]
+albedo_texture = ExtResource("19_tdylj")
 
 [node name="Main" type="Node3D" unique_id=1018901499]
 script = ExtResource("1_qi2ty")
@@ -783,11 +794,23 @@ material_override = SubResource("StandardMaterial3D_25n75")
 use_collision = true
 size = Vector3(7.5, 2.5, 1)
 
-[node name="Under Construction HomeTeam Museum2" type="CSGBox3D" parent="Outdoors with Portal Taxi" unique_id=181760943]
+[node name="Dev Pods Sign" type="CSGBox3D" parent="Outdoors with Portal Taxi" unique_id=181760943]
 transform = Transform3D(0.95, 0, -8.305164e-08, 0, 0.95, 0, -8.305164e-08, 0, -0.95, -4.5, 4.25, -12.972502)
 material_override = SubResource("StandardMaterial3D_l8pru")
 use_collision = true
 size = Vector3(7.5, 2.5, 0.1)
+
+[node name="Elevator Sign Closed" type="CSGBox3D" parent="Outdoors with Portal Taxi" unique_id=1838942728]
+transform = Transform3D(0.91762954, 0.24587809, -8.0221724e-08, -0.24587809, 0.91762954, 2.1495346e-08, -8.305164e-08, 0, -0.95, -39, 1.25, 14.551247)
+material_override = SubResource("StandardMaterial3D_3djdl")
+use_collision = true
+size = Vector3(1, 0.5, 0.05)
+
+[node name="Elevator Sign Employee Only" type="CSGBox3D" parent="Outdoors with Portal Taxi" unique_id=1967106323]
+transform = Transform3D(0.95, 0, -8.305164e-08, 0, 0.95, 0, -8.305164e-08, 0, -0.95, -39, 4, 14.027496)
+material_override = SubResource("StandardMaterial3D_tdylj")
+use_collision = true
+size = Vector3(2, 1, 0.1)
 
 [node name="BIG LOGO" type="CSGBox3D" parent="Outdoors with Portal Taxi" unique_id=1509771860]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, -8, 22.25, 19, -32.972504)
@@ -990,12 +1013,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 30, 24)
 
 [node name="reflective-window8" parent="Modern Musem (Dev Pods era Games)" unique_id=1464355335 instance=ExtResource("16_bbunl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 30, 24)
-
-[node name="Under Construction Dev Pods Model Room" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)" unique_id=1342584207]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 0.5, 46.5)
-material_override = ExtResource("66_v80x0")
-use_collision = true
-size = Vector3(9, 3, 1)
 
 [node name="Credits DynamicBillboard" parent="Modern Musem (Dev Pods era Games)" unique_id=880058378 instance=ExtResource("60_14tmg")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 22, -1, -1)
@@ -2550,7 +2567,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_vq06m")
+surface_material_override/0 = SubResource("StandardMaterial3D_ym0uh")
 
 [node name="Guidebook3d2" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1034692829]
 transform = Transform3D(0.99572617, -6.976736e-08, 0.092355326, 0.07370379, 0.60259724, -0.79463464, -0.05565301, 0.7980456, 0.60002184, 0.33789635, 0.5955966, 0.11873436)
@@ -2564,7 +2581,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_3djdl")
+surface_material_override/0 = SubResource("StandardMaterial3D_svij2")
 
 [node name="Guidebook3d3" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1679212863]
 transform = Transform3D(-0.9742656, -0.12668496, -0.18643428, 0.14209789, -0.98725104, -0.07172081, -0.1749714, -0.0963671, 0.979846, -0.58836937, 0.5955966, 0.11873436)
@@ -2578,7 +2595,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_ym0uh")
+surface_material_override/0 = SubResource("StandardMaterial3D_87qi0")
 
 [node name="Label3D" type="Label3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1183973093]
 transform = Transform3D(0.24000001, 0, 0, 0, 0.24000001, 0, 0, 0, 0.24000001, -0.07500076, 0.61191887, -0.31499863)
@@ -3022,13 +3039,6 @@ transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, -10.
 size = Vector3(1, 19.5, 1)
 material = ExtResource("9_4h42u")
 
-[node name="Front Entrance Hole" type="CSGPolygon3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=2036305727]
-transform = Transform3D(-1, 0, 1.509958e-07, 0, 1, 0, -1.509958e-07, 0, -1, -3.8146973e-06, 0.5, -13.500004)
-operation = 2
-polygon = PackedVector2Array(-1.5, 0, -1.5, 2.5, -1, 3.5, 0, 4, 1, 3.5, 1.5, 2.5, 1.5, 0)
-depth = 2.0
-material = ExtResource("5_r54xu")
-
 [node name="Interior Wide OpeningNorthX" type="CSGPolygon3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=579601255]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 15.499996, 0.5, 0.4999962)
 operation = 2
@@ -3042,16 +3052,52 @@ operation = 2
 polygon = PackedVector2Array(-3.5, 0, -3.5, 2.5, -2, 4, 0, 4.5, 2, 4, 3.5, 2.5, 3.5, 0)
 material = ExtResource("5_r54xu")
 
-[node name="Interior Wide Opening Basement" type="CSGPolygon3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=1695969613]
-transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, -3.8146973e-06, -9.5, -13.55275)
+[node name="Elevator Hole" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=1511201247]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.50001144, -7.35, -13)
+material_override = SubResource("StandardMaterial3D_3e303")
 operation = 2
-polygon = PackedVector2Array(-3, 0, -3, 4, -2, 5, 1, 5, 2, 4, 2, 0)
-depth = 1.1
-material = ExtResource("5_r54xu")
+size = Vector3(5, 4.3, 1.1)
+
+[node name="Elevator Door" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=1604573899]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7592869, -7.35, -13.299999)
+size = Vector3(2.4814453, 4.3, 0.5)
+
+[node name="Elevator Door2" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=613927801]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7668357, -7.35, -13.299999)
+size = Vector3(2.4663086, 4.3, 0.5)
+
+[node name="Elevator Hole2" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=1108242362]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5000124, 2.6499996, -13)
+operation = 2
+size = Vector3(5, 4.3, 1.1)
+
+[node name="Elevator Door3" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=551387229]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7592869, 2.6499996, -13.299999)
+size = Vector3(2.4814453, 4.3, 0.5)
+
+[node name="Elevator Door4" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=1057879072]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7668357, 2.6499996, -13.299999)
+size = Vector3(2.4663086, 4.3, 0.5)
+
+[node name="Elevator Shaft" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=352095722]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.50000143, -2.25, -16.25)
+size = Vector3(6, 15.5, 5.5)
+material = ExtResource("9_4h42u")
+
+[node name="Elevator Shaft2" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=1446900416]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.50000143, -2.25, -16)
+operation = 2
+size = Vector3(5, 14.5, 5)
+material = ExtResource("9_4h42u")
 
 [node name="concrete-block" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=458554610]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.097511, 24.86969, 32.687714)
-size = Vector3(54, 32, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.097511, 29.61969, 28.687714)
+size = Vector3(54, 22.5, 8)
+material = ExtResource("9_4h42u")
+
+[node name="concrete-block13" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=305096909]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.07251, 16.66969, 26.412712)
+size = Vector3(30.050001, 4.6, 12.55)
 material = ExtResource("9_4h42u")
 
 [node name="concrete-block2" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=767762721]
