@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dmdy3gabfpwh0"]
+
+[ext_resource type="PackedScene" uid="uid://7i05rkhh6cgq" path="res://models/talon_solitaire/suit-symbols.glb" id="1_pc65n"]
+[ext_resource type="Material" uid="uid://brds0aq1al2qc" path="res://materials/floor-materials/carpet.tres" id="2_86yd2"]
+
+[node name="suit-symbols" unique_id=1342008089 instance=ExtResource("1_pc65n")]
+
+[node name="suit_symbols" parent="." index="0" unique_id=138704307]
+material_override = ExtResource("2_86yd2")
