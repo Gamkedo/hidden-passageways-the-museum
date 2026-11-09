@@ -132,6 +132,7 @@
 [ext_resource type="PackedScene" uid="uid://t570i75mlu23" path="res://entities-scene_prefabs/dynamic_billboard/explainer_beta_billboard_static.tscn" id="125_uuxwg"]
 [ext_resource type="PackedScene" uid="uid://dmdy3gabfpwh0" path="res://entities-scene_prefabs/suit_symbols.tscn" id="129_3djdl"]
 [ext_resource type="PackedScene" uid="uid://06oqdlx84nge" path="res://museum/classical_musem_(home_team_era_games).tscn" id="129_m4x27"]
+[ext_resource type="Material" uid="uid://05mwkoucxt2x" path="res://materials/walls_museum/crown-molding.tres" id="132_ae2tv"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_xteo1"]
 
@@ -403,36 +404,36 @@ material = ExtResource("7_3lbo0")
 size = Vector2(10.380006, 10.380006)
 orientation = 1
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_ae2tv"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_3djdl"]
 viewport_path = NodePath("../SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ym0uh"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ae2tv"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_ae2tv")
+albedo_texture = SubResource("ViewportTexture_3djdl")
 roughness = 0.8
 texture_filter = 5
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_jr1oq"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_ym0uh"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_svij2"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jr1oq"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_jr1oq")
+albedo_texture = SubResource("ViewportTexture_ym0uh")
 roughness = 0.8
 texture_filter = 5
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_21smi"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_svij2"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_87qi0"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_21smi"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_21smi")
+albedo_texture = SubResource("ViewportTexture_svij2")
 roughness = 0.8
 texture_filter = 5
 
@@ -461,6 +462,8 @@ albedo_texture = ExtResource("7_hgslh")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3e303"]
 albedo_texture = ExtResource("19_tdylj")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_kdu0b"]
 
 [node name="Main" type="Node3D" unique_id=1018901499]
 script = ExtResource("1_qi2ty")
@@ -2747,7 +2750,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook" index="1" unique_id=2132904720]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_ym0uh")
+surface_material_override/0 = SubResource("StandardMaterial3D_ae2tv")
 
 [node name="Guidebook3d2" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1034692829]
 transform = Transform3D(0.99572617, -6.976736e-08, 0.092355326, 0.07370379, 0.60259724, -0.79463464, -0.05565301, 0.7980456, 0.60002184, 0.33789635, 0.5955966, 0.11873436)
@@ -2761,7 +2764,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook" index="1" unique_id=2132904720]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_svij2")
+surface_material_override/0 = SubResource("StandardMaterial3D_jr1oq")
 
 [node name="Guidebook3d3" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1679212863]
 transform = Transform3D(-0.9742656, -0.12668496, -0.18643428, 0.14209789, -0.98725104, -0.07172081, -0.1749714, -0.0963671, 0.979846, -0.58836937, 0.5955966, 0.11873436)
@@ -2775,7 +2778,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3/guidebook" index="1" unique_id=2132904720]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_87qi0")
+surface_material_override/0 = SubResource("StandardMaterial3D_21smi")
 
 [node name="Label3D" type="Label3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1183973093]
 transform = Transform3D(0.24000001, 0, 0, 0, 0.24000001, 0, 0, 0, 0.24000001, -0.07500076, 0.61191887, -0.31499863)
@@ -3470,6 +3473,66 @@ transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 12.7
 
 [node name="ground-light6" parent="Modern Musem (Dev Pods era Games)" unique_id=650553570 instance=ExtResource("28_m4x27")]
 transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, -12.25, 60.999996, 20.75)
+
+[node name="crown-molding" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)" unique_id=1204937353]
+transform = Transform3D(16, 0, 0, 0, -0.32139382, 0.38302222, 0, -0.38302222, -0.32139382, -7, 7.6, 45.7)
+material_override = ExtResource("132_ae2tv")
+mesh = SubResource("PlaneMesh_kdu0b")
+
+[node name="crown-molding4" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)" unique_id=1852783294]
+transform = Transform3D(-16, -3.3484866e-08, -2.809714e-08, 0, -0.32139382, 0.38302222, -1.3987644e-06, 0.38302222, 0.32139382, -7, 7.6, 21.2)
+material_override = ExtResource("132_ae2tv")
+mesh = SubResource("PlaneMesh_kdu0b")
+
+[node name="crown-molding5" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)" unique_id=561690148]
+transform = Transform3D(5.222307e-07, 0.38302222, 0.32139382, -1.261757e-06, -0.32139382, 0.38302222, 13, -4.6580528e-08, 2.4264558e-08, -22.67, 7.6, 33.5)
+material_override = ExtResource("132_ae2tv")
+mesh = SubResource("PlaneMesh_kdu0b")
+
+[node name="crown-molding6" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)" unique_id=266223487]
+transform = Transform3D(5.222307e-07, 0.38302222, 0.32139382, -1.261757e-06, -0.32139382, 0.38302222, 13, -4.6580528e-08, 2.4264558e-08, 11.325, 7.6, 33)
+material_override = ExtResource("132_ae2tv")
+mesh = SubResource("PlaneMesh_kdu0b")
+
+[node name="crown-molding7" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)" unique_id=1412737038]
+transform = Transform3D(6.142654e-07, -0.3830222, -0.32139385, -1.261757e-06, -0.32139385, 0.3830222, -12.999999, 1.30956614e-08, -5.2361685e-08, 42.66, 7.6, 33)
+material_override = ExtResource("132_ae2tv")
+mesh = SubResource("PlaneMesh_kdu0b")
+
+[node name="crown-molding8" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)" unique_id=1197632868]
+transform = Transform3D(6.142654e-07, -0.3830222, -0.32139385, -1.261757e-06, -0.32139385, 0.3830222, -12.999999, 1.30956614e-08, -5.2361685e-08, 8.66, 7.6, 33)
+material_override = ExtResource("132_ae2tv")
+mesh = SubResource("PlaneMesh_kdu0b")
+
+[node name="crown-molding2" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)" unique_id=664478464]
+transform = Transform3D(16, 0, 0, 0, -0.32139382, 0.38302222, 0, -0.38302222, -0.32139382, 27, 7.6, 44.8)
+material_override = ExtResource("132_ae2tv")
+mesh = SubResource("PlaneMesh_kdu0b")
+
+[node name="crown-molding3" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)" unique_id=11243262]
+transform = Transform3D(-16, 3.3484866e-08, 2.809714e-08, 0, -0.32139382, 0.38302222, 1.3987644e-06, 0.38302222, 0.32139382, 27, 7.6, 20.33)
+material_override = ExtResource("132_ae2tv")
+mesh = SubResource("PlaneMesh_kdu0b")
+
+[node name="crown-molding9" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)" unique_id=999013738]
+transform = Transform3D(5.222307e-07, 0.38302222, 0.32139382, -1.261757e-06, -0.32139382, 0.38302222, 13, -4.6580528e-08, 2.4264558e-08, 11.325, -2.4, 33)
+material_override = ExtResource("132_ae2tv")
+mesh = SubResource("PlaneMesh_kdu0b")
+
+[node name="crown-molding10" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)" unique_id=1634625782]
+transform = Transform3D(6.142654e-07, -0.3830222, -0.32139385, -1.261757e-06, -0.32139385, 0.3830222, -12.999999, 1.30956614e-08, -5.2361685e-08, 42.66, -2.4, 33)
+material_override = ExtResource("132_ae2tv")
+mesh = SubResource("PlaneMesh_kdu0b")
+
+[node name="crown-molding11" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)" unique_id=1436455669]
+transform = Transform3D(16, 0, 0, 0, -0.32139382, 0.38302222, 0, -0.38302222, -0.32139382, 27, -2.4, 44.8)
+material_override = ExtResource("132_ae2tv")
+mesh = SubResource("PlaneMesh_kdu0b")
+
+[node name="crown-molding12" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)" unique_id=1041279488]
+transform = Transform3D(-16, 3.3484866e-08, 2.809714e-08, 0, -0.32139382, 0.38302222, 1.3987644e-06, 0.38302222, 0.32139382, 27, -2.4, 20.33)
+material_override = ExtResource("132_ae2tv")
+mesh = SubResource("PlaneMesh_kdu0b")
 
 [node name="Classical Musem (HomeTeam era Games)" parent="." unique_id=1964976488 instance=ExtResource("129_m4x27")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -27)

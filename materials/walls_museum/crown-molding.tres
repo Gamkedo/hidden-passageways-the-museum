@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://05mwkoucxt2x"]
+
+[ext_resource type="Texture2D" uid="uid://tls6l1i315q7" path="res://textures/crown-molding.png" id="1_poakc"]
+
+[resource]
+shading_mode = 0
+albedo_color = Color(0.69135666, 0.6913569, 0.6913567, 1)
+albedo_texture = ExtResource("1_poakc")
