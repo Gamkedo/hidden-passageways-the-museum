@@ -129,6 +129,8 @@
 [ext_resource type="Material" uid="uid://pbcfbq1j1kga" path="res://materials/concrete-tiles.tres" id="115_gdv2j"]
 [ext_resource type="Material" uid="uid://gi1au7e50ftu" path="res://materials/modern-museum/picture-frame-placeholder-generic-wood.tres" id="116_kh8wp"]
 [ext_resource type="Material" uid="uid://brds0aq1al2qc" path="res://materials/floor-materials/carpet.tres" id="121_3djdl"]
+[ext_resource type="Material" uid="uid://crvmhrfwj0wk1" path="res://materials/ducts.tres" id="122_ym0uh"]
+[ext_resource type="PackedScene" uid="uid://bv6vsh1mpn87k" path="res://entities-scene_prefabs/duct_light.tscn" id="123_jr1oq"]
 [ext_resource type="PackedScene" uid="uid://t570i75mlu23" path="res://entities-scene_prefabs/dynamic_billboard/explainer_beta_billboard_static.tscn" id="125_uuxwg"]
 [ext_resource type="PackedScene" uid="uid://dmdy3gabfpwh0" path="res://entities-scene_prefabs/suit_symbols.tscn" id="129_3djdl"]
 [ext_resource type="PackedScene" uid="uid://06oqdlx84nge" path="res://museum/classical_musem_(home_team_era_games).tscn" id="129_m4x27"]
@@ -404,36 +406,36 @@ material = ExtResource("7_3lbo0")
 size = Vector2(10.380006, 10.380006)
 orientation = 1
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_3djdl"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_ae2tv"]
 viewport_path = NodePath("../SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ae2tv"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ym0uh"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_3djdl")
+albedo_texture = SubResource("ViewportTexture_ae2tv")
 roughness = 0.8
 texture_filter = 5
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_ym0uh"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_jr1oq"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jr1oq"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_svij2"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_ym0uh")
+albedo_texture = SubResource("ViewportTexture_jr1oq")
 roughness = 0.8
 texture_filter = 5
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_svij2"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_21smi"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_21smi"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_87qi0"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_svij2")
+albedo_texture = SubResource("ViewportTexture_21smi")
 roughness = 0.8
 texture_filter = 5
 
@@ -806,6 +808,12 @@ size = Vector3(7.5, 2.5, 0.1)
 
 [node name="Elevator Sign Closed" type="CSGBox3D" parent="Outdoors with Portal Taxi" unique_id=1838942728]
 transform = Transform3D(0.91762954, 0.24587809, -8.0221724e-08, -0.24587809, 0.91762954, 2.1495346e-08, -8.305164e-08, 0, -0.95, -39, 1.25, 14.551247)
+material_override = SubResource("StandardMaterial3D_3djdl")
+use_collision = true
+size = Vector3(1, 0.5, 0.05)
+
+[node name="Elevator Sign Closed2" type="CSGBox3D" parent="Outdoors with Portal Taxi" unique_id=467107617]
+transform = Transform3D(-4.152582e-08, 3.6303023e-15, 0.95, 8.305164e-08, 0.95, 0, 0.95, -8.305164e-08, 4.152582e-08, -45.45, 1.5, 12.75)
 material_override = SubResource("StandardMaterial3D_3djdl")
 use_collision = true
 size = Vector3(1, 0.5, 0.05)
@@ -2750,7 +2758,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook" index="1" unique_id=2132904720]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_ae2tv")
+surface_material_override/0 = SubResource("StandardMaterial3D_ym0uh")
 
 [node name="Guidebook3d2" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1034692829]
 transform = Transform3D(0.99572617, -6.976736e-08, 0.092355326, 0.07370379, 0.60259724, -0.79463464, -0.05565301, 0.7980456, 0.60002184, 0.33789635, 0.5955966, 0.11873436)
@@ -2764,7 +2772,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook" index="1" unique_id=2132904720]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_jr1oq")
+surface_material_override/0 = SubResource("StandardMaterial3D_svij2")
 
 [node name="Guidebook3d3" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1679212863]
 transform = Transform3D(-0.9742656, -0.12668496, -0.18643428, 0.14209789, -0.98725104, -0.07172081, -0.1749714, -0.0963671, 0.979846, -0.58836937, 0.5955966, 0.11873436)
@@ -2778,7 +2786,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3/guidebook" index="1" unique_id=2132904720]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_21smi")
+surface_material_override/0 = SubResource("StandardMaterial3D_87qi0")
 
 [node name="Label3D" type="Label3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1183973093]
 transform = Transform3D(0.24000001, 0, 0, 0, 0.24000001, 0, 0, 0, 0.24000001, -0.07500076, 0.61191887, -0.31499863)
@@ -3272,6 +3280,112 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.50000143, -2.25, -16)
 operation = 2
 size = Vector3(5, 14.5, 5)
 material = ExtResource("9_4h42u")
+
+[node name="duct-entrance-hole" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=827843585]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -7.5, -14)
+material_override = SubResource("StandardMaterial3D_3e303")
+operation = 2
+size = Vector3(2, 2, 8)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-exit-hole" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=1420576441]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 14.999999, 2.5, -9.499989)
+material_override = SubResource("StandardMaterial3D_3e303")
+operation = 2
+size = Vector3(2, 2, 8)
+material = ExtResource("122_ym0uh")
+
+[node name="ducts" type="CSGCombiner3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=478167114]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, -9, -11)
+
+[node name="duct-entrance" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts" unique_id=1024956456]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.5, -0.5)
+size = Vector3(2.1, 2.1, 2)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-cut" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts/duct-entrance" unique_id=1947588015]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+operation = 2
+size = Vector3(1.9, 1.9, 8)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-exit" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts" unique_id=599030612]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.500001, 11.5, 1.5000229)
+size = Vector3(2.1, 2.1, 2)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-cut" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts/duct-exit" unique_id=61228514]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+operation = 2
+size = Vector3(1.9, 1.9, 8)
+material = ExtResource("122_ym0uh")
+
+[node name="ductwork" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts" unique_id=1524311896]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.500001, 7.45, -5.5)
+size = Vector3(12.1, 14, 8)
+material = ExtResource("122_ym0uh")
+
+[node name="ductwork2" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts" unique_id=1533124257]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.524999, 7.45, 4.9591064e-05)
+size = Vector3(2.1000001, 14, 5)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-cut" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts" unique_id=1510825612]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.50000286, 1.5, -4.5)
+operation = 2
+size = Vector3(1.9, 1.9, 6)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-cut2" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts" unique_id=268593350]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.550004, 1.5, -6.5)
+operation = 2
+size = Vector3(4, 1.9, 2)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-cut6" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts" unique_id=710800072]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.450006, 7.4000006, -6.499981)
+operation = 2
+size = Vector3(4, 1.9, 2)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-cut7" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts" unique_id=568476241]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.500005, 7.4000006, -6.4999237)
+operation = 2
+size = Vector3(1.9, 1.9, 2)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-cut8" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts" unique_id=1895856142]
+transform = Transform3D(1, 1.8105847e-08, 1.3893107e-08, -2.262668e-08, 0.7071066, 0.70710665, 2.978858e-09, -0.70710665, 0.7071066, 10.55, 9.404887, -4.41037)
+operation = 2
+size = Vector3(1.8000001, 2.6000001, 5.7000003)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-cut4" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts" unique_id=23062810]
+transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, 10.550004, 11.5, -1.4999466)
+operation = 2
+size = Vector3(6.5, 1.9, 1.9)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-cut5" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts" unique_id=1966770423]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.150004, 11.5, 1.5000992)
+operation = 2
+size = Vector3(2.7, 1.9, 1.9)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-cut3" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts" unique_id=1544742230]
+transform = Transform3D(0.70710677, -0.70710677, -2.5605537e-08, 0.70710677, 0.70710677, 6.181724e-08, -2.5605537e-08, -6.181724e-08, 1, 5.575, 4.499, -6.5)
+operation = 2
+size = Vector3(8.5, 2.7052002, 2)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-light" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts" unique_id=129826065 instance=ExtResource("123_jr1oq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 12.425, 1.5)
+
+[node name="duct-light3" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts" unique_id=1841526953 instance=ExtResource("123_jr1oq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.500001, 8.325, -6.4999657)
+
+[node name="duct-light4" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts" unique_id=1500757944 instance=ExtResource("123_jr1oq")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5000019, 2.4249997, -6.499958)
 
 [node name="concrete-block" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=458554610]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.097511, 29.61969, 28.687714)
