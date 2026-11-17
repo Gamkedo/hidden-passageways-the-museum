@@ -224,7 +224,7 @@ custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "Adeel Bashir: Unity character controller, Unity interaction and hint system, (Unity-side, coming soon) side areas - parkour, red maze, liminal structure, switch puzzle, 2 balloon minigames, key puzzle, landing sound"
+text = "Adeel Bashir: Unity character controller, Unity interaction and hint system, (Unity-side, coming soon) side areas - parkour, red maze, liminal structure, switch puzzle, balloon minigames (magnet/coins), key puzzle, landing sound"
 label_settings = SubResource("LabelSettings_x78ms")
 autowrap_mode = 2
 
@@ -251,7 +251,7 @@ custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "Christer Kaitila: Reflecive windows, textures (concrete, ceiling, bark, grass), outdoor hilly ground mesh, tree models, museum rope barrier, stair railing, ticket logo, ionic column, (Unity-side, coming soon), Castle area, skybox, gamepad UI, voxel models, assorted fixes, road and sidewalk"
+text = "Christer Kaitila: Reflecive windows, textures (concrete, ceiling, bark, grass), classical museum building & textures, outdoor hills model, exterior lights, tree models, museum rope barrier, stair railing, ticket logo, ionic column, skybox, gamepad UI, voxel models, assorted fixes, road and sidewalk, quoins, texture/lighting optimizations, baseboards, (Unity-side, coming soon) castle area"
 label_settings = SubResource("LabelSettings_x78ms")
 autowrap_mode = 2
 
