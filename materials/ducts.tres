@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://crvmhrfwj0wk1"]
+
+[ext_resource type="Texture2D" uid="uid://rkc4ox8modm0" path="res://textures/ducts.png" id="1_vxjjc"]
+[ext_resource type="Texture2D" uid="uid://b5idgctrqflt2" path="res://textures/ducts-normal.png" id="2_r7f5l"]
+
+[resource]
+albedo_texture = ExtResource("1_vxjjc")
+metallic = 0.2
+roughness = 0.5
+normal_enabled = true
+normal_texture = ExtResource("2_r7f5l")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 5
