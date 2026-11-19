@@ -131,6 +131,7 @@
 [ext_resource type="Material" uid="uid://brds0aq1al2qc" path="res://materials/floor-materials/carpet.tres" id="121_3djdl"]
 [ext_resource type="Material" uid="uid://crvmhrfwj0wk1" path="res://materials/ducts.tres" id="122_ym0uh"]
 [ext_resource type="PackedScene" uid="uid://bv6vsh1mpn87k" path="res://entities-scene_prefabs/duct_light.tscn" id="123_jr1oq"]
+[ext_resource type="PackedScene" uid="uid://ipyfi3uguwie" path="res://environment-csg/duct_vent.tscn" id="124_svij2"]
 [ext_resource type="PackedScene" uid="uid://t570i75mlu23" path="res://entities-scene_prefabs/dynamic_billboard/explainer_beta_billboard_static.tscn" id="125_uuxwg"]
 [ext_resource type="PackedScene" uid="uid://dmdy3gabfpwh0" path="res://entities-scene_prefabs/suit_symbols.tscn" id="129_3djdl"]
 [ext_resource type="PackedScene" uid="uid://06oqdlx84nge" path="res://museum/classical_musem_(home_team_era_games).tscn" id="129_m4x27"]
@@ -3389,6 +3390,12 @@ material_override = SubResource("StandardMaterial3D_3e303")
 operation = 2
 size = Vector3(2, 2, 8)
 material = ExtResource("122_ym0uh")
+
+[node name="duct-vent" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=1833814056 instance=ExtResource("124_svij2")]
+transform = Transform3D(0.49999997, 0.22414389, -0.8365163, -2.262668e-08, 0.96592593, 0.25881907, 0.86602557, -0.1294095, 0.4829629, 6.323476, -8.4, -10.950001)
+
+[node name="duct-vent2" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=1638010555 instance=ExtResource("124_svij2")]
+transform = Transform3D(-8.7422784e-08, 0.25881904, -0.9659258, -3.6529652e-08, 0.96592593, 0.25881907, 1.0000001, 4.497842e-08, 4.9630486e-09, 15.673575, 1.5, -7.349983)
 
 [node name="duct-entrance-hole2" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=238583597]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.999999, -8.5, -15.200001)

@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://ipyfi3uguwie"]
+
+[ext_resource type="Texture2D" uid="uid://c6rwhafmieawq" path="res://textures/elevator-closed.png" id="1_vauwa"]
+[ext_resource type="Material" uid="uid://crvmhrfwj0wk1" path="res://materials/ducts.tres" id="2_agmog"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3e303"]
+albedo_texture = ExtResource("1_vauwa")
+
+[node name="duct-vent" type="CSGBox3D" unique_id=1833814056]
+material_override = SubResource("StandardMaterial3D_3e303")
+size = Vector3(2, 2, 0.1)
+material = ExtResource("2_agmog")
+
+[node name="cut" type="CSGBox3D" parent="." unique_id=65899729]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, -0.70710677, 0, 0.70710677, 0.70710677, 0, 0.8499999, 0)
+operation = 2
+size = Vector3(1.8000001, 0.1, 0.5)
+material = ExtResource("2_agmog")
+
+[node name="cut2" type="CSGBox3D" parent="." unique_id=667283434]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, -0.70710677, 0, 0.70710677, 0.70710677, 0, 0.64999986, 0)
+operation = 2
+size = Vector3(1.8000001, 0.1, 0.5)
+material = ExtResource("2_agmog")
+
+[node name="cut3" type="CSGBox3D" parent="." unique_id=1077703894]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, -0.70710677, 0, 0.70710677, 0.70710677, 0, 0.4499998, 0)
+operation = 2
+size = Vector3(1.8000001, 0.1, 0.5)
+material = ExtResource("2_agmog")
+
+[node name="cut4" type="CSGBox3D" parent="." unique_id=700875998]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, -0.70710677, 0, 0.70710677, 0.70710677, 0, 0.24999976, 0)
+operation = 2
+size = Vector3(1.8000001, 0.1, 0.5)
+material = ExtResource("2_agmog")
+
+[node name="cut5" type="CSGBox3D" parent="." unique_id=2130409983]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, -0.70710677, 0, 0.70710677, 0.70710677, 0, 0.049999714, 0)
+operation = 2
+size = Vector3(1.8000001, 0.1, 0.5)
+material = ExtResource("2_agmog")
+
+[node name="cut6" type="CSGBox3D" parent="." unique_id=492954515]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, -0.70710677, 0, 0.70710677, 0.70710677, 0, -0.15000027, 0)
+operation = 2
+size = Vector3(1.8000001, 0.1, 0.5)
+material = ExtResource("2_agmog")
+
+[node name="cut7" type="CSGBox3D" parent="." unique_id=1955520628]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, -0.70710677, 0, 0.70710677, 0.70710677, 0, -0.35000026, 0)
+operation = 2
+size = Vector3(1.8000001, 0.1, 0.5)
+material = ExtResource("2_agmog")
+
+[node name="cut8" type="CSGBox3D" parent="." unique_id=1382976468]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, -0.70710677, 0, 0.70710677, 0.70710677, 0, -0.55000025, 0)
+operation = 2
+size = Vector3(1.8000001, 0.1, 0.5)
+material = ExtResource("2_agmog")
+
+[node name="cut9" type="CSGBox3D" parent="." unique_id=720070091]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, -0.70710677, 0, 0.70710677, 0.70710677, 0, -0.75000024, 0)
+operation = 2
+size = Vector3(1.8000001, 0.1, 0.5)
+material = ExtResource("2_agmog")
