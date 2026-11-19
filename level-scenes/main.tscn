@@ -406,19 +406,8 @@ material = ExtResource("7_3lbo0")
 size = Vector2(10.380006, 10.380006)
 orientation = 1
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_ae2tv"]
-viewport_path = NodePath("../SubViewport")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ym0uh"]
-resource_local_to_scene = true
-resource_name = "Pages"
-transparency = 1
-albedo_texture = SubResource("ViewportTexture_ae2tv")
-roughness = 0.8
-texture_filter = 5
-
 [sub_resource type="ViewportTexture" id="ViewportTexture_jr1oq"]
-viewport_path = NodePath("../../Guidebook3d/SubViewport")
+viewport_path = NodePath("../SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_svij2"]
 resource_local_to_scene = true
@@ -436,6 +425,17 @@ resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
 albedo_texture = SubResource("ViewportTexture_21smi")
+roughness = 0.8
+texture_filter = 5
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_3e303"]
+viewport_path = NodePath("../../Guidebook3d/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_isv17"]
+resource_local_to_scene = true
+resource_name = "Pages"
+transparency = 1
+albedo_texture = SubResource("ViewportTexture_3e303")
 roughness = 0.8
 texture_filter = 5
 
@@ -471,7 +471,7 @@ albedo_texture = ExtResource("19_tdylj")
 script = ExtResource("1_qi2ty")
 
 [node name="Player with UI" parent="." unique_id=1354449472 instance=ExtResource("3_lquwl")]
-transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, -1, -0.5855012, -7.25)
+transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, -1, 0, -7)
 platform_floor_layers = 4294967291
 
 [node name="Sun and Sky" type="Node3D" parent="." unique_id=218995970]
@@ -977,6 +977,108 @@ transform = Transform3D(2.9802322e-08, 0, 1, 0, 1, 0, -1, 0, 2.9802322e-08, -104
 material_override = ExtResource("114_4h6t8")
 size = Vector3(128, 1, 16)
 material = ExtResource("9_4h42u")
+
+[node name="ducts (no collision)" type="CSGCombiner3D" parent="." unique_id=478167114]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -14.497821, -0.49725342, 44.49996)
+
+[node name="duct-entrance" type="CSGBox3D" parent="ducts (no collision)" unique_id=1024956456]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.5, -0.5)
+size = Vector3(2.1, 2.1, 2)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-cut" type="CSGBox3D" parent="ducts (no collision)/duct-entrance" unique_id=1947588015]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+operation = 2
+size = Vector3(1.9, 1.9, 8)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-exit" type="CSGBox3D" parent="ducts (no collision)" unique_id=599030612]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.950002, 11.5, 1.5000305)
+size = Vector3(2.1, 2.1, 1.1)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-cut" type="CSGBox3D" parent="ducts (no collision)/duct-exit" unique_id=61228514]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+operation = 2
+size = Vector3(1.9, 1.9, 8)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-exit-fake-wall-no-collider" type="CSGBox3D" parent="ducts (no collision)" unique_id=1532206740]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.000001, 10, 1.5000153)
+size = Vector3(2.1, 1, 1)
+material = ExtResource("12_qi2ty")
+
+[node name="duct-exit-fake-wall-no-collider2" type="CSGBox3D" parent="ducts (no collision)" unique_id=613168753]
+transform = Transform3D(1, 0, -7.1054274e-15, 0, 1, 0, 7.1054274e-15, 0, 1, 0.48190308, -0.030192971, -1.9999771)
+size = Vector3(2.1, 1, 1)
+material = ExtResource("12_qi2ty")
+
+[node name="ductwork" type="CSGBox3D" parent="ducts (no collision)" unique_id=1524311896]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.500001, 7.45, -5.5)
+size = Vector3(12.1, 14, 8)
+material = ExtResource("122_ym0uh")
+
+[node name="ductwork2" type="CSGBox3D" parent="ducts (no collision)" unique_id=1533124257]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.524999, 7.45, 4.9591064e-05)
+size = Vector3(2.1000001, 14, 5)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-cut" type="CSGBox3D" parent="ducts (no collision)" unique_id=1510825612]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.50000286, 1.5, -4.5)
+operation = 2
+size = Vector3(1.9, 1.9, 6)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-cut2" type="CSGBox3D" parent="ducts (no collision)" unique_id=268593350]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.550004, 1.5, -6.5)
+operation = 2
+size = Vector3(4, 1.9, 2)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-cut6" type="CSGBox3D" parent="ducts (no collision)" unique_id=710800072]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.450006, 7.4000006, -6.499981)
+operation = 2
+size = Vector3(4, 1.9, 2)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-cut7" type="CSGBox3D" parent="ducts (no collision)" unique_id=568476241]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.500005, 7.4000006, -6.4999237)
+operation = 2
+size = Vector3(1.9, 1.9, 2)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-cut8" type="CSGBox3D" parent="ducts (no collision)" unique_id=1895856142]
+transform = Transform3D(1, 1.8105847e-08, 1.3893107e-08, -2.262668e-08, 0.7071066, 0.70710665, 2.978858e-09, -0.70710665, 0.7071066, 10.55, 9.404887, -4.41037)
+operation = 2
+size = Vector3(1.8000001, 2.6000001, 5.7000003)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-cut4" type="CSGBox3D" parent="ducts (no collision)" unique_id=23062810]
+transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, 10.550004, 11.5, -1.4999466)
+operation = 2
+size = Vector3(6.5, 1.9, 1.9)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-cut5" type="CSGBox3D" parent="ducts (no collision)" unique_id=1966770423]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.150004, 11.5, 1.5000992)
+operation = 2
+size = Vector3(2.7, 1.9, 1.9)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-cut3" type="CSGBox3D" parent="ducts (no collision)" unique_id=1544742230]
+transform = Transform3D(0.70710677, -0.70710677, -2.5605537e-08, 0.70710677, 0.70710677, 6.181724e-08, -2.5605537e-08, -6.181724e-08, 1, 5.575, 4.499, -6.5)
+operation = 2
+size = Vector3(8.5, 2.7052002, 2)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-light" parent="ducts (no collision)" unique_id=129826065 instance=ExtResource("123_jr1oq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 12.425, 1.5)
+
+[node name="duct-light3" parent="ducts (no collision)" unique_id=1841526953 instance=ExtResource("123_jr1oq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.500001, 8.325, -6.4999657)
+
+[node name="duct-light4" parent="ducts (no collision)" unique_id=1500757944 instance=ExtResource("123_jr1oq")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5000019, 2.4249997, -6.499958)
 
 [node name="Modern Musem (Dev Pods era Games)" type="Node3D" parent="." unique_id=966479255]
 
@@ -2758,7 +2860,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook" index="1" unique_id=2132904720]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_ym0uh")
+surface_material_override/0 = SubResource("StandardMaterial3D_svij2")
 
 [node name="Guidebook3d2" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1034692829]
 transform = Transform3D(0.99572617, -6.976736e-08, 0.092355326, 0.07370379, 0.60259724, -0.79463464, -0.05565301, 0.7980456, 0.60002184, 0.33789635, 0.5955966, 0.11873436)
@@ -2772,7 +2874,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook" index="1" unique_id=2132904720]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_svij2")
+surface_material_override/0 = SubResource("StandardMaterial3D_87qi0")
 
 [node name="Guidebook3d3" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1679212863]
 transform = Transform3D(-0.9742656, -0.12668496, -0.18643428, 0.14209789, -0.98725104, -0.07172081, -0.1749714, -0.0963671, 0.979846, -0.58836937, 0.5955966, 0.11873436)
@@ -2786,7 +2888,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3/guidebook" index="1" unique_id=2132904720]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_87qi0")
+surface_material_override/0 = SubResource("StandardMaterial3D_isv17")
 
 [node name="Label3D" type="Label3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1183973093]
 transform = Transform3D(0.24000001, 0, 0, 0, 0.24000001, 0, 0, 0, 0.24000001, -0.07500076, 0.61191887, -0.31499863)
@@ -3288,6 +3390,73 @@ operation = 2
 size = Vector3(2, 2, 8)
 material = ExtResource("122_ym0uh")
 
+[node name="duct-entrance-hole2" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=238583597]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.999999, -8.5, -15.200001)
+material_override = SubResource("StandardMaterial3D_3e303")
+operation = 2
+size = Vector3(2, 2, 5.6)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-hidden-floor" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=1191478933]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.999999, -10.5, -14.299999)
+material_override = SubResource("StandardMaterial3D_3e303")
+size = Vector3(10, 2, 8.6)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-hidden-wall" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=1199369983]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.999999, -7, -15.299999)
+material_override = SubResource("StandardMaterial3D_3e303")
+size = Vector3(2, 5, 5.4)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-hidden-wall2" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=1007455062]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.099999, -5, -14.899986)
+material_override = SubResource("StandardMaterial3D_3e303")
+size = Vector3(8, 9, 3)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-hidden-wall3" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=2143511920]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.949998, -2.7999997, -19.5)
+material_override = SubResource("StandardMaterial3D_3e303")
+size = Vector3(12.1, 13.400001, 1.8000001)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-hidden-wall4" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=1121796700]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.549995, 1.4000006, -14.499996)
+material_override = SubResource("StandardMaterial3D_3e303")
+size = Vector3(0.90000004, 7.8, 11.8)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-hidden-wall5" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=1936018425]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.049995, 1.4000006, -8.349995)
+material_override = SubResource("StandardMaterial3D_3e303")
+size = Vector3(3.9, 7.8, 0.3)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-hidden-floor2" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=1441686079]
+transform = Transform3D(-5.303079e-09, -0.70710677, 0.70710677, -9.2725855e-08, 0.70710677, 0.70710677, -1, -6.181724e-08, -6.931692e-08, 14.697373, -7.2847013, -17.25)
+material_override = SubResource("StandardMaterial3D_3e303")
+size = Vector3(2.5, 2, 8.408009)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-hidden-floor4" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=1967404305]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 17.999992, -4.6, -17.699993)
+material_override = SubResource("StandardMaterial3D_3e303")
+size = Vector3(2.1000001, 2, 5.5)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-hidden-floor5" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=995816835]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 17.550003, -0.5, -10.315716)
+material_override = SubResource("StandardMaterial3D_3e303")
+size = Vector3(3, 2, 3.7)
+material = ExtResource("122_ym0uh")
+
+[node name="duct-hidden-floor3" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=565681251]
+transform = Transform3D(1, 9.2725855e-08, 3.8408295e-08, -9.2725855e-08, 0.70710677, 0.70710677, 3.840831e-08, -0.70710677, 0.70710677, 17.949993, -2.7257633, -13.964275)
+material_override = SubResource("StandardMaterial3D_3e303")
+size = Vector3(2.2, 2, 7.1031494)
+material = ExtResource("122_ym0uh")
+
 [node name="duct-exit-hole" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=1420576441]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 14.999999, 2.5, -9.499989)
 material_override = SubResource("StandardMaterial3D_3e303")
@@ -3295,97 +3464,12 @@ operation = 2
 size = Vector3(2, 2, 8)
 material = ExtResource("122_ym0uh")
 
-[node name="ducts" type="CSGCombiner3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=478167114]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, -9, -11)
-
-[node name="duct-entrance" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts" unique_id=1024956456]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.5, -0.5)
-size = Vector3(2.1, 2.1, 2)
-material = ExtResource("122_ym0uh")
-
-[node name="duct-cut" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts/duct-entrance" unique_id=1947588015]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+[node name="duct-exit-hole2" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2" unique_id=1615300289]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 16.849998, 1.5, -9.499981)
+material_override = SubResource("StandardMaterial3D_3e303")
 operation = 2
-size = Vector3(1.9, 1.9, 8)
+size = Vector3(2, 2, 4.3)
 material = ExtResource("122_ym0uh")
-
-[node name="duct-exit" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts" unique_id=599030612]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.500001, 11.5, 1.5000229)
-size = Vector3(2.1, 2.1, 2)
-material = ExtResource("122_ym0uh")
-
-[node name="duct-cut" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts/duct-exit" unique_id=61228514]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
-operation = 2
-size = Vector3(1.9, 1.9, 8)
-material = ExtResource("122_ym0uh")
-
-[node name="ductwork" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts" unique_id=1524311896]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.500001, 7.45, -5.5)
-size = Vector3(12.1, 14, 8)
-material = ExtResource("122_ym0uh")
-
-[node name="ductwork2" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts" unique_id=1533124257]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.524999, 7.45, 4.9591064e-05)
-size = Vector3(2.1000001, 14, 5)
-material = ExtResource("122_ym0uh")
-
-[node name="duct-cut" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts" unique_id=1510825612]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.50000286, 1.5, -4.5)
-operation = 2
-size = Vector3(1.9, 1.9, 6)
-material = ExtResource("122_ym0uh")
-
-[node name="duct-cut2" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts" unique_id=268593350]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.550004, 1.5, -6.5)
-operation = 2
-size = Vector3(4, 1.9, 2)
-material = ExtResource("122_ym0uh")
-
-[node name="duct-cut6" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts" unique_id=710800072]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.450006, 7.4000006, -6.499981)
-operation = 2
-size = Vector3(4, 1.9, 2)
-material = ExtResource("122_ym0uh")
-
-[node name="duct-cut7" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts" unique_id=568476241]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.500005, 7.4000006, -6.4999237)
-operation = 2
-size = Vector3(1.9, 1.9, 2)
-material = ExtResource("122_ym0uh")
-
-[node name="duct-cut8" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts" unique_id=1895856142]
-transform = Transform3D(1, 1.8105847e-08, 1.3893107e-08, -2.262668e-08, 0.7071066, 0.70710665, 2.978858e-09, -0.70710665, 0.7071066, 10.55, 9.404887, -4.41037)
-operation = 2
-size = Vector3(1.8000001, 2.6000001, 5.7000003)
-material = ExtResource("122_ym0uh")
-
-[node name="duct-cut4" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts" unique_id=23062810]
-transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, 10.550004, 11.5, -1.4999466)
-operation = 2
-size = Vector3(6.5, 1.9, 1.9)
-material = ExtResource("122_ym0uh")
-
-[node name="duct-cut5" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts" unique_id=1966770423]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.150004, 11.5, 1.5000992)
-operation = 2
-size = Vector3(2.7, 1.9, 1.9)
-material = ExtResource("122_ym0uh")
-
-[node name="duct-cut3" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts" unique_id=1544742230]
-transform = Transform3D(0.70710677, -0.70710677, -2.5605537e-08, 0.70710677, 0.70710677, 6.181724e-08, -2.5605537e-08, -6.181724e-08, 1, 5.575, 4.499, -6.5)
-operation = 2
-size = Vector3(8.5, 2.7052002, 2)
-material = ExtResource("122_ym0uh")
-
-[node name="duct-light" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts" unique_id=129826065 instance=ExtResource("123_jr1oq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 12.425, 1.5)
-
-[node name="duct-light3" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts" unique_id=1841526953 instance=ExtResource("123_jr1oq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.500001, 8.325, -6.4999657)
-
-[node name="duct-light4" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/Museum Modern (past year)2/ducts" unique_id=1500757944 instance=ExtResource("123_jr1oq")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5000019, 2.4249997, -6.499958)
 
 [node name="concrete-block" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=458554610]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.097511, 29.61969, 28.687714)
@@ -3492,6 +3576,86 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 11, 17.5)
 size = Vector3(32, 8, 5)
 material = ExtResource("9_4h42u")
 
+[node name="crown-molding" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=1204937353]
+transform = Transform3D(16, 0, 0, 0, -0.32139382, 0.38302222, 0, -0.38302222, -0.32139382, -7, 7.6, 45.7)
+material_override = ExtResource("132_ae2tv")
+mesh = SubResource("PlaneMesh_kdu0b")
+
+[node name="crown-molding4" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=1852783294]
+transform = Transform3D(-16, -3.3484866e-08, -2.809714e-08, 0, -0.32139382, 0.38302222, -1.3987644e-06, 0.38302222, 0.32139382, -7, 7.6, 21.2)
+material_override = ExtResource("132_ae2tv")
+mesh = SubResource("PlaneMesh_kdu0b")
+
+[node name="crown-molding5" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=561690148]
+transform = Transform3D(5.222307e-07, 0.38302222, 0.32139382, -1.261757e-06, -0.32139382, 0.38302222, 13, -4.6580528e-08, 2.4264558e-08, -22.67, 7.6, 33.5)
+material_override = ExtResource("132_ae2tv")
+mesh = SubResource("PlaneMesh_kdu0b")
+
+[node name="crown-molding6" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=266223487]
+transform = Transform3D(5.222307e-07, 0.38302222, 0.32139382, -1.261757e-06, -0.32139382, 0.38302222, 13, -4.6580528e-08, 2.4264558e-08, 11.325, 7.6, 33)
+material_override = ExtResource("132_ae2tv")
+mesh = SubResource("PlaneMesh_kdu0b")
+
+[node name="crown-molding7" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=1412737038]
+transform = Transform3D(6.142654e-07, -0.3830222, -0.32139385, -1.261757e-06, -0.32139385, 0.3830222, -12.999999, 1.30956614e-08, -5.2361685e-08, 42.66, 7.6, 33)
+material_override = ExtResource("132_ae2tv")
+mesh = SubResource("PlaneMesh_kdu0b")
+
+[node name="crown-molding8" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=1197632868]
+transform = Transform3D(6.142654e-07, -0.3830222, -0.32139385, -1.261757e-06, -0.32139385, 0.3830222, -12.999999, 1.30956614e-08, -5.2361685e-08, 8.66, 7.6, 33)
+material_override = ExtResource("132_ae2tv")
+mesh = SubResource("PlaneMesh_kdu0b")
+
+[node name="crown-molding13" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=1011961358]
+transform = Transform3D(16, 0, 0, 0, -0.32139382, 0.38302222, 0, -0.38302222, -0.32139382, -7, 17.6, 45.7)
+material_override = ExtResource("132_ae2tv")
+mesh = SubResource("PlaneMesh_kdu0b")
+
+[node name="crown-molding14" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=544581094]
+transform = Transform3D(-16, -3.3484866e-08, -2.809714e-08, 0, -0.32139382, 0.38302222, -1.3987644e-06, 0.38302222, 0.32139382, -7, 17.6, 21.2)
+material_override = ExtResource("132_ae2tv")
+mesh = SubResource("PlaneMesh_kdu0b")
+
+[node name="crown-molding15" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=1699831437]
+transform = Transform3D(5.222307e-07, 0.38302222, 0.32139382, -1.261757e-06, -0.32139382, 0.38302222, 13, -4.6580528e-08, 2.4264558e-08, -22.67, 17.6, 33.5)
+material_override = ExtResource("132_ae2tv")
+mesh = SubResource("PlaneMesh_kdu0b")
+
+[node name="crown-molding16" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=1165166665]
+transform = Transform3D(6.142654e-07, -0.3830222, -0.32139385, -1.261757e-06, -0.32139385, 0.3830222, -12.999999, 1.30956614e-08, -5.2361685e-08, 8.66, 17.6, 33)
+material_override = ExtResource("132_ae2tv")
+mesh = SubResource("PlaneMesh_kdu0b")
+
+[node name="crown-molding2" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=664478464]
+transform = Transform3D(16, 0, 0, 0, -0.32139382, 0.38302222, 0, -0.38302222, -0.32139382, 27, 7.6, 44.8)
+material_override = ExtResource("132_ae2tv")
+mesh = SubResource("PlaneMesh_kdu0b")
+
+[node name="crown-molding3" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=11243262]
+transform = Transform3D(-16, 3.3484866e-08, 2.809714e-08, 0, -0.32139382, 0.38302222, 1.3987644e-06, 0.38302222, 0.32139382, 27, 7.6, 20.33)
+material_override = ExtResource("132_ae2tv")
+mesh = SubResource("PlaneMesh_kdu0b")
+
+[node name="crown-molding9" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=999013738]
+transform = Transform3D(5.222307e-07, 0.38302222, 0.32139382, -1.261757e-06, -0.32139382, 0.38302222, 13, -4.6580528e-08, 2.4264558e-08, 11.325, -2.4, 33)
+material_override = ExtResource("132_ae2tv")
+mesh = SubResource("PlaneMesh_kdu0b")
+
+[node name="crown-molding10" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=1634625782]
+transform = Transform3D(6.142654e-07, -0.3830222, -0.32139385, -1.261757e-06, -0.32139385, 0.3830222, -12.999999, 1.30956614e-08, -5.2361685e-08, 42.66, -2.4, 33)
+material_override = ExtResource("132_ae2tv")
+mesh = SubResource("PlaneMesh_kdu0b")
+
+[node name="crown-molding11" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=1436455669]
+transform = Transform3D(16, 0, 0, 0, -0.32139382, 0.38302222, 0, -0.38302222, -0.32139382, 27, -2.4, 44.8)
+material_override = ExtResource("132_ae2tv")
+mesh = SubResource("PlaneMesh_kdu0b")
+
+[node name="crown-molding12" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=1041279488]
+transform = Transform3D(-16, 3.3484866e-08, 2.809714e-08, 0, -0.32139382, 0.38302222, 1.3987644e-06, 0.38302222, 0.32139382, 27, -2.4, 20.33)
+material_override = ExtResource("132_ae2tv")
+mesh = SubResource("PlaneMesh_kdu0b")
+
 [node name="Decorations" type="Node3D" parent="Modern Musem (Dev Pods era Games)" unique_id=777535549]
 
 [node name="Extinguisher" parent="Modern Musem (Dev Pods era Games)/Decorations" unique_id=786241607 instance=ExtResource("53_mj7h6")]
@@ -3587,66 +3751,6 @@ transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 12.7
 
 [node name="ground-light6" parent="Modern Musem (Dev Pods era Games)" unique_id=650553570 instance=ExtResource("28_m4x27")]
 transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, -12.25, 60.999996, 20.75)
-
-[node name="crown-molding" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)" unique_id=1204937353]
-transform = Transform3D(16, 0, 0, 0, -0.32139382, 0.38302222, 0, -0.38302222, -0.32139382, -7, 7.6, 45.7)
-material_override = ExtResource("132_ae2tv")
-mesh = SubResource("PlaneMesh_kdu0b")
-
-[node name="crown-molding4" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)" unique_id=1852783294]
-transform = Transform3D(-16, -3.3484866e-08, -2.809714e-08, 0, -0.32139382, 0.38302222, -1.3987644e-06, 0.38302222, 0.32139382, -7, 7.6, 21.2)
-material_override = ExtResource("132_ae2tv")
-mesh = SubResource("PlaneMesh_kdu0b")
-
-[node name="crown-molding5" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)" unique_id=561690148]
-transform = Transform3D(5.222307e-07, 0.38302222, 0.32139382, -1.261757e-06, -0.32139382, 0.38302222, 13, -4.6580528e-08, 2.4264558e-08, -22.67, 7.6, 33.5)
-material_override = ExtResource("132_ae2tv")
-mesh = SubResource("PlaneMesh_kdu0b")
-
-[node name="crown-molding6" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)" unique_id=266223487]
-transform = Transform3D(5.222307e-07, 0.38302222, 0.32139382, -1.261757e-06, -0.32139382, 0.38302222, 13, -4.6580528e-08, 2.4264558e-08, 11.325, 7.6, 33)
-material_override = ExtResource("132_ae2tv")
-mesh = SubResource("PlaneMesh_kdu0b")
-
-[node name="crown-molding7" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)" unique_id=1412737038]
-transform = Transform3D(6.142654e-07, -0.3830222, -0.32139385, -1.261757e-06, -0.32139385, 0.3830222, -12.999999, 1.30956614e-08, -5.2361685e-08, 42.66, 7.6, 33)
-material_override = ExtResource("132_ae2tv")
-mesh = SubResource("PlaneMesh_kdu0b")
-
-[node name="crown-molding8" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)" unique_id=1197632868]
-transform = Transform3D(6.142654e-07, -0.3830222, -0.32139385, -1.261757e-06, -0.32139385, 0.3830222, -12.999999, 1.30956614e-08, -5.2361685e-08, 8.66, 7.6, 33)
-material_override = ExtResource("132_ae2tv")
-mesh = SubResource("PlaneMesh_kdu0b")
-
-[node name="crown-molding2" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)" unique_id=664478464]
-transform = Transform3D(16, 0, 0, 0, -0.32139382, 0.38302222, 0, -0.38302222, -0.32139382, 27, 7.6, 44.8)
-material_override = ExtResource("132_ae2tv")
-mesh = SubResource("PlaneMesh_kdu0b")
-
-[node name="crown-molding3" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)" unique_id=11243262]
-transform = Transform3D(-16, 3.3484866e-08, 2.809714e-08, 0, -0.32139382, 0.38302222, 1.3987644e-06, 0.38302222, 0.32139382, 27, 7.6, 20.33)
-material_override = ExtResource("132_ae2tv")
-mesh = SubResource("PlaneMesh_kdu0b")
-
-[node name="crown-molding9" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)" unique_id=999013738]
-transform = Transform3D(5.222307e-07, 0.38302222, 0.32139382, -1.261757e-06, -0.32139382, 0.38302222, 13, -4.6580528e-08, 2.4264558e-08, 11.325, -2.4, 33)
-material_override = ExtResource("132_ae2tv")
-mesh = SubResource("PlaneMesh_kdu0b")
-
-[node name="crown-molding10" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)" unique_id=1634625782]
-transform = Transform3D(6.142654e-07, -0.3830222, -0.32139385, -1.261757e-06, -0.32139385, 0.3830222, -12.999999, 1.30956614e-08, -5.2361685e-08, 42.66, -2.4, 33)
-material_override = ExtResource("132_ae2tv")
-mesh = SubResource("PlaneMesh_kdu0b")
-
-[node name="crown-molding11" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)" unique_id=1436455669]
-transform = Transform3D(16, 0, 0, 0, -0.32139382, 0.38302222, 0, -0.38302222, -0.32139382, 27, -2.4, 44.8)
-material_override = ExtResource("132_ae2tv")
-mesh = SubResource("PlaneMesh_kdu0b")
-
-[node name="crown-molding12" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)" unique_id=1041279488]
-transform = Transform3D(-16, 3.3484866e-08, 2.809714e-08, 0, -0.32139382, 0.38302222, 1.3987644e-06, 0.38302222, 0.32139382, 27, -2.4, 20.33)
-material_override = ExtResource("132_ae2tv")
-mesh = SubResource("PlaneMesh_kdu0b")
 
 [node name="Classical Musem (HomeTeam era Games)" parent="." unique_id=1964976488 instance=ExtResource("129_m4x27")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -27)
