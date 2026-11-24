@@ -141,8 +141,14 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11.
 [node name="wall-trimwork3" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=691354339 instance=ExtResource("5_aqxev")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 11, -7, -12.375)
 
+[node name="Door Frame" type="CSGPolygon3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1370005744]
+transform = Transform3D(-1.6999999, 0, 9.059749e-08, 0, 1.1, 0, -2.5669286e-07, 0, -0.6, -3.8146973e-06, -7, 12.499996)
+polygon = PackedVector2Array(-1.5, 0, -1.5, 2.5, -1, 3.5, 0, 4, 1, 3.5, 1.5, 2.5, 1.5, 0)
+depth = 2.0
+material = ExtResource("1_snxgq")
+
 [node name="Door Hole" type="CSGPolygon3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1858013915]
-transform = Transform3D(-1, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -1, -3.8146973e-06, -7, 12.499996)
+transform = Transform3D(-1.5, 0, 8.742276e-08, 0, 1, 0, -1.3113416e-07, 0, -0.99999994, -3.8146973e-06, -7, 12.499996)
 operation = 2
 polygon = PackedVector2Array(-1.5, 0, -1.5, 2.5, -1, 3.5, 0, 4, 1, 3.5, 1.5, 2.5, 1.5, 0)
 depth = 2.0
@@ -163,15 +169,233 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -14, 31)
 size = Vector3(24, 4, 35)
 material = ExtResource("1_lpmrh")
 
-[node name="west wing" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1092514273]
+[node name="east wing marble" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1276761208]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 0.5, -0.53871155)
+size = Vector3(26, 17, 28)
+material = ExtResource("1_lpmrh")
+
+[node name="west wing marble" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1092514273]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0.5, -0.53871155)
 size = Vector3(26, 17, 28)
 material = ExtResource("1_lpmrh")
 
-[node name="east wing" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1276761208]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 0.5, -0.53871155)
-size = Vector3(26, 17, 28)
-material = ExtResource("1_lpmrh")
+[node name="west wing hallway cut" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=208531580]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.000002, -1.5, -1.4000015)
+operation = 2
+size = Vector3(25.2, 11, 7)
+material = ExtResource("3_lpmrh")
+
+[node name="wall-trimwork4" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=343017513 instance=ExtResource("5_aqxev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.9, -7, -4.9750023)
+
+[node name="wall-trimwork5" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1969408078 instance=ExtResource("5_aqxev")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -11.400002, -7, 2.124998)
+
+[node name="west wing room cut" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=91152476]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.600002, 0.6000004, -1.25)
+operation = 2
+size = Vector3(10, 15.2, 22.5)
+material = ExtResource("3_lpmrh")
+
+[node name="wall-trimwork6" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=2143814270 instance=ExtResource("5_aqxev")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -34.7, -7, 10)
+
+[node name="hole-trim" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1971488115]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -2.6999998, -7.200001)
+size = Vector3(1.2, 4.2, 2.2)
+material = ExtResource("4_gdldj")
+
+[node name="hole-cut" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1230680278]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8, -2.6999998, -7.200001)
+operation = 2
+size = Vector3(1, 4, 2)
+material = ExtResource("4_gdldj")
+
+[node name="hole-trim2" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1449520932]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -2.6999998, -10.100002)
+size = Vector3(1.2, 4.2, 2.2)
+material = ExtResource("4_gdldj")
+
+[node name="hole-cut2" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1276968076]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8, -2.6999998, -10.100002)
+operation = 2
+size = Vector3(1, 4, 2)
+material = ExtResource("4_gdldj")
+
+[node name="hole-trim3" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=647505222]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -2.6999998, 7.3999996)
+size = Vector3(1.2, 4.2, 2.2)
+material = ExtResource("4_gdldj")
+
+[node name="hole-cut3" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1819872627]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8, -2.6999998, 7.3999996)
+operation = 2
+size = Vector3(1, 4, 2)
+material = ExtResource("4_gdldj")
+
+[node name="hole-trim4" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=2039661723]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -2.6999998, 4.499998)
+size = Vector3(1.2, 4.2, 2.2)
+material = ExtResource("4_gdldj")
+
+[node name="hole-cut4" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1320703974]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8, -2.6999998, 4.499998)
+operation = 2
+size = Vector3(1, 4, 2)
+material = ExtResource("4_gdldj")
+
+[node name="hole-trim5" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=595946563]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.100002, -2.6999998, -7.200001)
+size = Vector3(1.2, 4.2, 2.2)
+material = ExtResource("4_gdldj")
+
+[node name="hole-cut5" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1308289861]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.9, -2.6999998, -7.200001)
+operation = 2
+size = Vector3(1, 4, 2)
+material = ExtResource("4_gdldj")
+
+[node name="hole-trim6" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=786340883]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.100002, -2.6999998, -10.100002)
+size = Vector3(1.2, 4.2, 2.2)
+material = ExtResource("4_gdldj")
+
+[node name="hole-cut6" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=206711331]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.9, -2.6999998, -10.100002)
+operation = 2
+size = Vector3(1, 4, 2)
+material = ExtResource("4_gdldj")
+
+[node name="hole-trim7" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1542176674]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.100002, -2.6999998, 7.3999996)
+size = Vector3(1.2, 4.2, 2.2)
+material = ExtResource("4_gdldj")
+
+[node name="hole-cut7" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1525906137]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.9, -2.6999998, 7.3999996)
+operation = 2
+size = Vector3(1, 4, 2)
+material = ExtResource("4_gdldj")
+
+[node name="hole-trim8" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=306507778]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.100002, -2.6999998, 4.499998)
+size = Vector3(1.2, 4.2, 2.2)
+material = ExtResource("4_gdldj")
+
+[node name="hole-cut8" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=935975221]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.9, -2.6999998, 4.499998)
+operation = 2
+size = Vector3(1, 4, 2)
+material = ExtResource("4_gdldj")
+
+[node name="east wing hallway cut" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=397021407]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 21.533329, -1.5, -0.22856903)
+operation = 2
+size = Vector3(25.2, 11, 7)
+material = ExtResource("3_lpmrh")
+
+[node name="wall-trimwork7" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=447664021 instance=ExtResource("5_aqxev")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 33.433327, -7, 3.3464317)
+
+[node name="wall-trimwork8" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1623109370 instance=ExtResource("5_aqxev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.933327, -7, -3.7535667)
+
+[node name="east wing room cut" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=443704115]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 29.133327, 0.6000004, -0.37857056)
+operation = 2
+size = Vector3(10, 15.2, 22.5)
+material = ExtResource("3_lpmrh")
+
+[node name="wall-trimwork9" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1530289539 instance=ExtResource("5_aqxev")]
+transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, 34.233326, -7, -11.628571)
+
+[node name="hole-trim9" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1640955146]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.533325, -2.6999998, 5.57143)
+size = Vector3(1.2, 4.2, 2.2)
+material = ExtResource("4_gdldj")
+
+[node name="hole-cut9" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1221300334]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.333328, -2.6999998, 5.57143)
+operation = 2
+size = Vector3(1, 4, 2)
+material = ExtResource("4_gdldj")
+
+[node name="hole-trim10" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1647558557]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.533325, -2.6999998, 8.471432)
+size = Vector3(1.2, 4.2, 2.2)
+material = ExtResource("4_gdldj")
+
+[node name="hole-cut10" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1757214984]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.333328, -2.6999998, 8.471432)
+operation = 2
+size = Vector3(1, 4, 2)
+material = ExtResource("4_gdldj")
+
+[node name="hole-trim11" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1818936349]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.533325, -2.6999998, -9.028568)
+size = Vector3(1.2, 4.2, 2.2)
+material = ExtResource("4_gdldj")
+
+[node name="hole-cut11" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1744845743]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.333328, -2.6999998, -9.028568)
+operation = 2
+size = Vector3(1, 4, 2)
+material = ExtResource("4_gdldj")
+
+[node name="hole-trim12" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=302012683]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.533325, -2.6999998, -6.1285667)
+size = Vector3(1.2, 4.2, 2.2)
+material = ExtResource("4_gdldj")
+
+[node name="hole-cut12" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1319038603]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.333328, -2.6999998, -6.1285667)
+operation = 2
+size = Vector3(1, 4, 2)
+material = ExtResource("4_gdldj")
+
+[node name="hole-trim13" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=2009043664]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.63333, -2.6999998, 5.57143)
+size = Vector3(1.2, 4.2, 2.2)
+material = ExtResource("4_gdldj")
+
+[node name="hole-cut13" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1356164701]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.43333, -2.6999998, 5.57143)
+operation = 2
+size = Vector3(1, 4, 2)
+material = ExtResource("4_gdldj")
+
+[node name="hole-trim14" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=89694410]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.63333, -2.6999998, 8.471432)
+size = Vector3(1.2, 4.2, 2.2)
+material = ExtResource("4_gdldj")
+
+[node name="hole-cut14" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=369318136]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.43333, -2.6999998, 8.471432)
+operation = 2
+size = Vector3(1, 4, 2)
+material = ExtResource("4_gdldj")
+
+[node name="hole-trim15" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1748946399]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.633327, -2.6999998, -9.028572)
+size = Vector3(1.2, 4.2, 2.2)
+material = ExtResource("4_gdldj")
+
+[node name="hole-cut15" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1729259470]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.433327, -2.6999998, -9.028572)
+operation = 2
+size = Vector3(1, 4, 2)
+material = ExtResource("4_gdldj")
+
+[node name="hole-trim16" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1665120645]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.633327, -2.6999998, -6.1285706)
+size = Vector3(1.2, 4.2, 2.2)
+material = ExtResource("4_gdldj")
+
+[node name="hole-cut16" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1139672236]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.433327, -2.6999998, -6.1285706)
+operation = 2
+size = Vector3(1, 4, 2)
+material = ExtResource("4_gdldj")
 
 [node name="quoin-corner" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1685001849 instance=ExtResource("6_gdldj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, -8, 13.5)
@@ -530,8 +754,15 @@ operation = 2
 size = Vector3(2, 6, 3.5)
 material = ExtResource("1_lpmrh")
 
-[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=2016585613]
+[node name="roof peak" type="CSGPolygon3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=2016585613]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12, 17.5)
+polygon = PackedVector2Array(-39, 0, -0.5, 4, 0.5, 4, 39, 0)
+depth = 5.0
+material = ExtResource("1_lpmrh")
+
+[node name="roof peak cut detail" type="CSGPolygon3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1041034897]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, 22)
+operation = 2
 polygon = PackedVector2Array(-39, 0, -0.5, 4, 0.5, 4, 39, 0)
 depth = 5.0
 material = ExtResource("1_lpmrh")
