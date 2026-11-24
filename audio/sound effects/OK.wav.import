@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://pye8cict3be5"
+path="res://.godot/imported/OK.wav-4b5080abff55c296f8a82e1614675e5c.sample"
+
+[deps]
+
+source_file="res://audio/sound effects/OK.wav"
+dest_files=["res://.godot/imported/OK.wav-4b5080abff55c296f8a82e1614675e5c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -23,11 +23,11 @@ extends StaticBody3D
 @export var button_texture: Texture2D:
 	set = set_button_texture
 
-@onready var scene_changer: ClickSceneChange = %ClickSceneChange
-@onready var button_click_link: ClickLink = %ButtonClickLink
-@onready var button_label: Label3D = %GameLabel
-@onready var play_stand_interactable: InteractableArea = %PlayStandInteractable
-@onready var frame_interactable: InteractableArea = %FrameInteractable
+@onready var scene_changer: ClickSceneChange = get_node_or_null("%ClickSceneChange")
+@onready var button_click_link: ClickLink = get_node_or_null("%ButtonClickLink")
+@onready var button_label: Label3D = get_node_or_null("%GameLabel")
+@onready var play_stand_interactable: InteractableArea = get_node_or_null("%PlayStandInteractable")
+@onready var frame_interactable: InteractableArea = get_node_or_null("%FrameInteractable")
 
 var was_painting_texture: Texture2D
 var was_button_texture: Texture2D
@@ -45,14 +45,14 @@ func set_button_texture(new_button: Texture2D) -> void:
 		show_images_from_inspector()
 
 func show_images_from_inspector():
-	var painting_image := $"BasicCurvyFrame Test/Painting Image"
+	var painting_image := get_node_or_null("BasicCurvyFrame Test/Painting Image")
 	var material: StandardMaterial3D = StandardMaterial3D.new()
 	if painting_image != null:
 		material.albedo_texture = painting_texture
 		material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
 		painting_image.material_override = material
 
-	var button_image := $"Button Game/Button image"
+	var button_image := get_node_or_null("Button Game/Button image")
 	if button_image != null:
 		material = StandardMaterial3D.new()
 		material.albedo_texture = button_texture

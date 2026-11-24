@@ -200,7 +200,16 @@ Mister Rogers once lived a 15-minute walk from the tall brown tower on the right
 
 [node name="Foam Card" parent="College Clubs Exhibit/Frame, Button, Credits" unique_id=390590116 instance=ExtResource("13_x36ia")]
 transform = Transform3D(0, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, 0, 1.6941547, 0, 0.64038754)
-page_text = "edit parent's override text instead"
+page_text = "Buggy Game
+Models and skybox by Chris DeLeon
+
+Collection of building models created for a 3-day public arcade game kiosk at Spring Carnival 2007. This was played inside of a booth students made in celebration of Nintendo games.
+
+The area mapped is overlaps one edge of Carnegie Mellon's campus, including adjacents buildings, with Flagstaff Hill of Schenley Park at the center. These models were part of a C++/OpenGL simulation of the traditional homecoming buggy relay race. In the real race small college students fit inside and steer tube-shaped vehicles. Other college students pushed those buggies for uphill parts. The simulation had custom input we made to steer with a mechanism from a real buggy, and a sliding bar players pushed to go uphill.
+
+Building textures and the skybox were made from photos taken that week. The tall building in the skybox across the bridge is the Cathedral of Learning at the University of Pittsburgh. It's the tallest educational building in the western hemisphere. The shorter cement building to its right in the skybox, Wean Hall, is where the first meetings were held for Game Creation Society in 2004, a college gamedev club Chris cofounded which ten years  laterserved as a model for the community now known as Dev Pods. Two buildings here, Scaife Hall (\"potato chip\" roof) and Skibo Gymnasium (near the brown tower) have since been demolished and replaced by newer buildings, Skibo has been replaced by Highmark. Posner Hall (maze on the roof) was new at the time.
+
+Mister Rogers once lived a 15-minute walk from the tall brown tower on the right. He filmed 900+ episodes of Misters Rogers Neighborhood at WQED near the other side of campus. He passed away a few years prior, but people still shared stories of him walking across campus being kind, such as checking to ensure a student resting in the grass felt ok."
 
 [node name="Speaker" parent="College Clubs Exhibit/Frame, Button, Credits" unique_id=1668457512 instance=ExtResource("14_x7muy")]
 transform = Transform3D(1.0000008, 0, 0, 0, 1, 0, 0, 0, 1.0000008, 3.267889, -2.4513874, -8.476528)
