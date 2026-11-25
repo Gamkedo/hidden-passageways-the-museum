@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6rqykvgq5oni"
-path.s3tc="res://.godot/imported/supply-and-siege.png-cea1788795cc1a23423e56cd53ac3f5d.s3tc.ctex"
+uid="uid://di63xrc4tunyr"
+path.s3tc="res://.godot/imported/gladiator-framed-pic.png-2203b2917967eb40d4a56e297f7522fb.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/supply-and-siege.png"
-dest_files=["res://.godot/imported/supply-and-siege.png-cea1788795cc1a23423e56cd53ac3f5d.s3tc.ctex"]
+source_file="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/gladiator-framed-pic.png"
+dest_files=["res://.godot/imported/gladiator-framed-pic.png-2203b2917967eb40d4a56e297f7522fb.s3tc.ctex"]
 
 [params]
 
@@ -37,5 +37,5 @@ process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
-process/size_limit=512
+process/size_limit=0
 detect_3d/compress_to=0

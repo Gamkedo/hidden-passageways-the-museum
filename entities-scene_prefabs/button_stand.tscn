@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bjbv5y5fcm1dy"]
 
 [ext_resource type="Script" uid="uid://cl8kffkiyit6t" path="res://scripts/click_scene_change.gd" id="1_nupf2"]
-[ext_resource type="Texture2D" uid="uid://dlft5rt3mgqhu" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/gladiator-of-the-golden-house.png" id="2_qm8vf"]
+[ext_resource type="Texture2D" uid="uid://dehiji3hyxbuf" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/gladiator-of-the-golden-house.png" id="2_qm8vf"]
 [ext_resource type="Texture2D" uid="uid://2432776vq113" path="res://textures/play-button-stand.png" id="3_smyr0"]
 [ext_resource type="ArrayMesh" uid="uid://cm2soemey2m52" path="res://models/play-button-stand.obj" id="4_8ahea"]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c27yibhqlpdoi"
-path.s3tc="res://.godot/imported/naous.png-4bccc9bbecb44cbb1e1275aab6865ccf.s3tc.ctex"
+uid="uid://dehiji3hyxbuf"
+path.s3tc="res://.godot/imported/gladiator-of-the-golden-house.png-de782e5dd47d2d9f94c5157d047158de.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/naous.png"
-dest_files=["res://.godot/imported/naous.png-4bccc9bbecb44cbb1e1275aab6865ccf.s3tc.ctex"]
+source_file="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/gladiator-of-the-golden-house.png"
+dest_files=["res://.godot/imported/gladiator-of-the-golden-house.png-de782e5dd47d2d9f94c5157d047158de.s3tc.ctex"]
 
 [params]
 
@@ -37,5 +37,5 @@ process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
-process/size_limit=512
+process/size_limit=0
 detect_3d/compress_to=0

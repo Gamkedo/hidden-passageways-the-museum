@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dnd6tnxvov3lt" path="res://ui/guidebook-demo.gd" id="2_m08e3"]
 [ext_resource type="Texture2D" uid="uid://di83c1pa3ix7" path="res://Dev_Pods_Logo_Large.png" id="2_sw7vr"]
 [ext_resource type="Texture2D" uid="uid://cyfidqioe344i" path="res://models/ratrick.png" id="3_kmlox"]
-[ext_resource type="Texture2D" uid="uid://r870n6ekjct4" path="res://game wall pictures/placeholder/dev pods summer 2025-end of 2026/talon.png" id="4_m08e3"]
+[ext_resource type="Texture2D" uid="uid://c86j66nhq4d5i" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/talon.png" id="4_m08e3"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1238244302]
 
