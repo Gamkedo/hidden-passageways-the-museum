@@ -197,7 +197,7 @@ shaded = true
 texture_filter = 2
 texture = ExtResource("2_ogd0y")
 hframes = 6
-frame = 5
+frame = 4
 script = ExtResource("3_uf5hv")
 frame_time = 0.2
 
@@ -209,7 +209,7 @@ shaded = true
 texture_filter = 2
 texture = ExtResource("2_ogd0y")
 hframes = 6
-frame = 5
+frame = 4
 script = ExtResource("3_uf5hv")
 frame_time = 0.2
 
@@ -221,7 +221,7 @@ shaded = true
 texture_filter = 2
 texture = ExtResource("2_ogd0y")
 hframes = 6
-frame = 5
+frame = 4
 script = ExtResource("3_uf5hv")
 frame_time = 0.2
 
