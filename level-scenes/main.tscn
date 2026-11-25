@@ -136,6 +136,7 @@
 [ext_resource type="PackedScene" uid="uid://dmdy3gabfpwh0" path="res://entities-scene_prefabs/suit_symbols.tscn" id="129_3djdl"]
 [ext_resource type="PackedScene" uid="uid://06oqdlx84nge" path="res://museum/classical_musem_(home_team_era_games).tscn" id="129_m4x27"]
 [ext_resource type="Material" uid="uid://05mwkoucxt2x" path="res://materials/walls_museum/crown-molding.tres" id="132_ae2tv"]
+[ext_resource type="Texture2D" uid="uid://cl0thrcbsb4kr" path="res://game wall pictures/ready-to-use/hometeam nov 2019-april 2025/hometeam-all.png" id="137_21smi"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_xteo1"]
 
@@ -407,19 +408,8 @@ material = ExtResource("7_3lbo0")
 size = Vector2(10.380006, 10.380006)
 orientation = 1
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_svij2"]
-viewport_path = NodePath("../SubViewport")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_21smi"]
-resource_local_to_scene = true
-resource_name = "Pages"
-transparency = 1
-albedo_texture = SubResource("ViewportTexture_svij2")
-roughness = 0.8
-texture_filter = 5
-
 [sub_resource type="ViewportTexture" id="ViewportTexture_87qi0"]
-viewport_path = NodePath("../../Guidebook3d/SubViewport")
+viewport_path = NodePath("../SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_isv17"]
 resource_local_to_scene = true
@@ -437,6 +427,17 @@ resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
 albedo_texture = SubResource("ViewportTexture_h3gjr")
+roughness = 0.8
+texture_filter = 5
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_kpfdj"]
+viewport_path = NodePath("../../Guidebook3d/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0k2yn"]
+resource_local_to_scene = true
+resource_name = "Pages"
+transparency = 1
+albedo_texture = SubResource("ViewportTexture_kpfdj")
 roughness = 0.8
 texture_filter = 5
 
@@ -467,6 +468,14 @@ albedo_texture = ExtResource("7_hgslh")
 albedo_texture = ExtResource("19_tdylj")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_kdu0b"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_21smi"]
+shading_mode = 0
+albedo_texture = ExtResource("137_21smi")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_87qi0"]
+shading_mode = 0
+albedo_texture = ExtResource("137_21smi")
 
 [node name="Main" type="Node3D" unique_id=1018901499]
 script = ExtResource("1_qi2ty")
@@ -2867,7 +2876,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_21smi")
+surface_material_override/0 = SubResource("StandardMaterial3D_isv17")
 
 [node name="Guidebook3d2" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1034692829]
 transform = Transform3D(0.99572617, -6.976736e-08, 0.092355326, 0.07370379, 0.60259724, -0.79463464, -0.05565301, 0.7980456, 0.60002184, 0.33789635, 0.5955966, 0.11873436)
@@ -2881,7 +2890,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_isv17")
+surface_material_override/0 = SubResource("StandardMaterial3D_iiiry")
 
 [node name="Guidebook3d3" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1679212863]
 transform = Transform3D(-0.9742656, -0.12668496, -0.18643428, 0.14209789, -0.98725104, -0.07172081, -0.1749714, -0.0963671, 0.979846, -0.58836937, 0.5955966, 0.11873436)
@@ -2895,7 +2904,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_iiiry")
+surface_material_override/0 = SubResource("StandardMaterial3D_0k2yn")
 
 [node name="Label3D" type="Label3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1183973093]
 transform = Transform3D(0.24000001, 0, 0, 0, 0.24000001, 0, 0, 0, 0.24000001, -0.07500076, 0.61191887, -0.31499863)
@@ -3768,7 +3777,74 @@ transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, -12.
 [node name="Classical Musem (HomeTeam era Games)" parent="." unique_id=1964976488 instance=ExtResource("129_m4x27")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -27)
 
+[node name="HomeTeam All" parent="Classical Musem (HomeTeam era Games)" unique_id=943563676 instance=ExtResource("44_1tes7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 6.7647943, -41.843094)
+game_label = "HomeTeam GameDev
+(Sep 2019-May 2025) "
+button_link = "https://itch.io/c/8560000/hometeam-sep-2019-may-2025-era-of-devpodsgg-games"
+world_scene = "https://itch.io/c/8560000/hometeam-sep-2019-may-2025-era-of-devpodsgg-games"
+frame_interact_text = "139 games by order of release"
+credits = "Information here about HomeTeam years"
+painting_texture = ExtResource("137_21smi")
+button_texture = ExtResource("137_21smi")
+
+[node name="Foam Card" parent="Classical Musem (HomeTeam era Games)/HomeTeam All" index="0" unique_id=390590116]
+page_text = "[b]Gladiator of the Golden House[/b] credits
+Developed Feb 8 - Jun 28, 2026
+
+Project lead, initial game prototype & schedule, core gameplay, core systems (levels, directors, actors, actions, status effects), turn logic, action previews, level & combat design, UI/UX design, player classes, writing (action/status titles & descriptions, cutscenes), actor actions system & related UI, cutscenes, user options & save/load, action cost functionality, enemy behavior systems, unique level logic, sprites (roman army armor accessories, enemy designs & implementation (except Chariots), hex grid tile vfx, jar item, icons, shield, weapons, earth pile boulders), sounds (incl. pickup, swooshes, hit, block, guard broken, hemorrhage, grunts, monsters, eldritch, buffs, menu sounds) and integration, projectiles, status & explosion vfx & sfx, difficulty balancing, boss health bar, reactive crowd speech/sfx triggers, camera movement, character shadows, clouds, player avatar selection, randomized crowd art optimization, font selection, polish & bug fixes: Michael Avrie
+
+Energy system, action types for both enemies and players, status effect support (incl. defense, stun), speech bubbles, openers, health and damage feature, consumable pickups, action card hover tool tip details, enemy action preview, win/loss detection and retry or continue menu, assorted bug fixes: Dalton Charleston
+
+Music (main menu and boss fight), peristent card stash system, Grunt enemy behavior, enemy collision avoidance, animated text HUD popups, actor at coordinate lookup, save/load persistence serialization and round-trip test, snap to hex, damage system improvements, code repository EOL configuration: Philippe Vaillancourt
+
+Colosseum & sky scene art (incl. horror variation), animated banners & flags, gauntlet cursor, health bars, crowd sounds, polish effects (attack slash vfx, weapon sprite bobbing), one liner writing, avatar sprite facing flip, hex grid styling, tile hover highlight designs: Christer \"McFunkypants\" Kaitila
+
+Roman combatant art, crowd art including outfit randomization feature, primary color palette, Squid Emperor art, blue tentacle art: Amanda Stanley
+
+Core hex-grid maths & targeting system including facing / range, area of effect, pickups, enemy drops, tile highlight, facing selector sprite & animation: Jalent (Jason W)
+
+3 player avatars (shirtless with beard, blue hair, green tunic with bow): TheDemonMaster
+
+Early level initial designs, facing graphic, hex grid guide, early lore writing, project icon, additional level design and mechanics concepts: Noah Wizard
+
+Healing pickups and status effects: Mark Guinn
+
+Battle music, battle music win/loss stings, creepy ambient music: Aaron Sherman
+
+Chariot (art and code): Chris Anderson
+
+Move behavior setting for enemies (target/random with distance sorting): Marshy
+
+Compiler error fix: Dan Dela Rosa
+
+Additional gameplay design: Dávid Tóth
+
+Skeleton character drafts, initial color palette suggestions: Jakob Harris
+
+Playtesting: Chris Anderson, Connor Fitzpatrick, TopHatCroat"
+
+[node name="ButtonClickLink" parent="Classical Musem (HomeTeam era Games)/HomeTeam All/Button Game" parent_id_path=PackedInt32Array(943563676, 1440399840) index="0" unique_id=1955919968]
+url = "https://tarnishedmoth.itch.io/gladiator-of-the-golden-house"
+
+[node name="Button image" parent="Classical Musem (HomeTeam era Games)/HomeTeam All/Button Game" parent_id_path=PackedInt32Array(943563676, 1440399840) index="1" unique_id=1896630648]
+material_override = SubResource("StandardMaterial3D_21smi")
+
+[node name="GameLabel" parent="Classical Musem (HomeTeam era Games)/HomeTeam All/Button Game" parent_id_path=PackedInt32Array(943563676, 1440399840) index="2" unique_id=1183973093]
+text = "HomeTeam GameDev
+(Sep 2019-May 2025) "
+
+[node name="BasicCurvyFrame Test" parent="Classical Musem (HomeTeam era Games)/HomeTeam All" index="2" unique_id=1119403653]
+transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, 0, 4.75, 0.15000153)
+
+[node name="Painting Image" parent="Classical Musem (HomeTeam era Games)/HomeTeam All/BasicCurvyFrame Test" index="2" unique_id=784914795]
+material_override = SubResource("StandardMaterial3D_87qi0")
+
+[node name="Speaker" parent="Classical Musem (HomeTeam era Games)/HomeTeam All" index="4" unique_id=1668457512]
+visible = false
+
 [editable path="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook"]
 [editable path="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook"]
 [editable path="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3/guidebook"]
 [editable path="Modern Musem (Dev Pods era Games)/Cyndrive Ships/CyndriveShipsProps/cyndrive_ships_carrier"]
+[editable path="Classical Musem (HomeTeam era Games)/HomeTeam All"]
