@@ -43,6 +43,13 @@ window/stretch/aspect="expand"
 
 Player=""
 
+[importer_defaults]
+
+texture={
+&"compress/mode": 1,
+&"process/size_limit": 1024
+}
+
 [input]
 
 ui_accept={
