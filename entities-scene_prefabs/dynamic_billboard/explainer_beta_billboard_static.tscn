@@ -108,7 +108,7 @@ theme_override_constants/v_separation = 12
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "You've found this project before it's finished!"
+text = "This is a work-in-progress, it will release on Jan 31."
 label_settings = SubResource("LabelSettings_x78ms")
 
 [node name="Label9" type="Label" parent="SubViewportContainer/SubViewport/BillboardDisplay/MarginContainer/ScrollContainer/ScrollContents/GridContainer" unique_id=1274623863]
@@ -124,7 +124,7 @@ custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "The lore we're working on doesn't yet have the areas and parts we'll need for the way it's supposed to be experienced in the final version."
+text = "We're working on some lore beyond the museum's community games history. It's not yet in this version."
 label_settings = SubResource("LabelSettings_x78ms")
 autowrap_mode = 2
 
@@ -141,7 +141,7 @@ custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "The main thing you'll see so far is a museum about the games our community, DevPods.gg, developed since Summer 2025. Each wall image is from a real, free game you can use the red button to play."
+text = "The final game will have 4 buildings, with games made when our group had a different name. We've gone by DevPods.gg since Summer 2025. That's the modern museum here, it's the most ready to explore."
 label_settings = SubResource("LabelSettings_x78ms")
 autowrap_mode = 2
 
@@ -158,7 +158,7 @@ custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "Behind you, and later on by using the taxi, there will be other buildings about games we made 2015-2025."
+text = "Behind you is info about the other buildings, for another 200+ free games we made 2015-2025. Those buildings will focus on a subset of highlighted games, instead of every game as the Dev Pods building does."
 label_settings = SubResource("LabelSettings_x78ms")
 autowrap_mode = 2
 
@@ -175,7 +175,7 @@ custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "Part of the concept is that there will be strange side worlds to find and explore."
+text = "We're also developing strange side areas to discover."
 label_settings = SubResource("LabelSettings_x78ms")
 autowrap_mode = 2
 
@@ -184,7 +184,7 @@ custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "There are not many side worlds yet in this early beta."
+text = "Those side area are not hidden yet in this beta."
 label_settings = SubResource("LabelSettings_x78ms")
 autowrap_mode = 2
 
