@@ -184,7 +184,7 @@ custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "Those side area are not hidden yet in this beta."
+text = "Those side areas are yet not hidden in this beta."
 label_settings = SubResource("LabelSettings_x78ms")
 autowrap_mode = 2
 
