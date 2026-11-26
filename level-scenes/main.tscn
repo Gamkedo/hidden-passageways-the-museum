@@ -33,10 +33,14 @@
 [ext_resource type="PackedScene" uid="uid://bs0x6kcocwrn8" path="res://entities-scene_prefabs/tree_small.tscn" id="16_iixjk"]
 [ext_resource type="PackedScene" uid="uid://cocic8dfy1sa6" path="res://entities-scene_prefabs/tree_big.tscn" id="17_4fg2q"]
 [ext_resource type="Texture2D" uid="uid://cdwd15kcvxucw" path="res://textures/signage/coming-soon-banner_hometeam-gamedev.png" id="17_10aen"]
+[ext_resource type="Texture2D" uid="uid://yej76x2ciqu" path="res://game wall pictures/preview-temp/gamkedo-preview-1.jpg" id="17_xtd4s"]
 [ext_resource type="Texture2D" uid="uid://dnmay4t3srwn8" path="res://textures/signage/dev-pods-games.png" id="18_7y3h6"]
+[ext_resource type="Texture2D" uid="uid://bwaconffo5pvb" path="res://game wall pictures/preview-temp/gamkedo-preview-3.jpg" id="18_hy4di"]
+[ext_resource type="Texture2D" uid="uid://bjfjydudi5nr4" path="res://game wall pictures/preview-temp/la-gamedevs-preview-2.jpg" id="19_5gp3a"]
 [ext_resource type="Material" uid="uid://bhwvi7orkued" path="res://materials/depods-logo.tres" id="19_kh8wp"]
 [ext_resource type="Texture2D" uid="uid://c6rwhafmieawq" path="res://textures/elevator-closed.png" id="19_tdylj"]
 [ext_resource type="Texture2D" uid="uid://bkda52i8n0s4f" path="res://textures/elevator-employees.png" id="19_vq06m"]
+[ext_resource type="Texture2D" uid="uid://u24snlwaj14x" path="res://game wall pictures/preview-temp/la-gamedevs-preview-1.jpg" id="20_a5p35"]
 [ext_resource type="Material" uid="uid://cwisnv1hbjfln" path="res://materials/smoke_particle.tres" id="22_xsvti"]
 [ext_resource type="PackedScene" uid="uid://o8idbyowpqvw" path="res://entities-scene_prefabs/railing.tscn" id="26_c6q64"]
 [ext_resource type="Texture2D" uid="uid://dehiji3hyxbuf" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/gladiator-of-the-golden-house.png" id="26_v80x0"]
@@ -183,6 +187,24 @@ size = Vector3(1.1191406, 1.0465088, 1.074646)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8k08f"]
 albedo_texture = ExtResource("16_iiiry")
+
+[sub_resource type="QuadMesh" id="QuadMesh_y5qfa"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w7dxp"]
+shading_mode = 0
+albedo_texture = ExtResource("17_xtd4s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8nor5"]
+shading_mode = 0
+albedo_texture = ExtResource("18_hy4di")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2n3mm"]
+shading_mode = 0
+albedo_texture = ExtResource("19_5gp3a")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hac3w"]
+shading_mode = 0
+albedo_texture = ExtResource("20_a5p35")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_10aen"]
 albedo_texture = ExtResource("16_d8p2r")
@@ -416,36 +438,36 @@ material = ExtResource("7_3lbo0")
 size = Vector2(10.380006, 10.380006)
 orientation = 1
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_8k08f"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_6xavn"]
 viewport_path = NodePath("../SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xtd4s"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_slow0"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_8k08f")
+albedo_texture = SubResource("ViewportTexture_6xavn")
 roughness = 0.8
 texture_filter = 5
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_hy4di"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_lrbdn"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5gp3a"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b82dh"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_hy4di")
+albedo_texture = SubResource("ViewportTexture_lrbdn")
 roughness = 0.8
 texture_filter = 5
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_a5p35"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_gbv3t"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8nor5"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sqt7j"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_a5p35")
+albedo_texture = SubResource("ViewportTexture_gbv3t")
 roughness = 0.8
 texture_filter = 5
 
@@ -477,27 +499,27 @@ albedo_texture = ExtResource("19_tdylj")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_kdu0b"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2n3mm"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0dqa5"]
 shading_mode = 0
 albedo_texture = ExtResource("137_21smi")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hac3w"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pl7fw"]
 shading_mode = 0
 albedo_texture = ExtResource("137_21smi")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h3gjr"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pcqrn"]
 shading_mode = 0
 albedo_texture = ExtResource("139_iiiry")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iiiry"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k7ixa"]
 shading_mode = 0
 albedo_texture = ExtResource("138_h3gjr")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kpfdj"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xmbax"]
 shading_mode = 0
 albedo_texture = ExtResource("141_0k2yn")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0k2yn"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yc8gk"]
 shading_mode = 0
 albedo_texture = ExtResource("140_kpfdj")
 
@@ -828,11 +850,31 @@ material_override = ExtResource("66_v80x0")
 use_collision = true
 size = Vector3(9, 2.5, 1)
 
-[node name="Under Construction Taxi Wall2" type="CSGBox3D" parent="Outdoors with Portal Taxi" unique_id=1202236831]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.084152, 0, -51.445755)
+[node name="Taxi Temp Wall" type="CSGBox3D" parent="Outdoors with Portal Taxi" unique_id=1202236831]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.084152, 0.35000014, -51.445755)
 material_override = SubResource("StandardMaterial3D_8k08f")
 use_collision = true
-size = Vector3(11, 4, 1)
+size = Vector3(11, 4.7000003, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Outdoors with Portal Taxi/Taxi Temp Wall" unique_id=107459116]
+transform = Transform3D(2, 0, 0, 0, 1.5, 0, 0, 0, 0.5, 4.25, 1.4, 0.54999924)
+mesh = SubResource("QuadMesh_y5qfa")
+surface_material_override/0 = SubResource("StandardMaterial3D_w7dxp")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Outdoors with Portal Taxi/Taxi Temp Wall" unique_id=2049211248]
+transform = Transform3D(2, 0, 0, 0, 1.5, 0, 0, 0, 0.5, 1.75, 1.4, 0.54999924)
+mesh = SubResource("QuadMesh_y5qfa")
+surface_material_override/0 = SubResource("StandardMaterial3D_8nor5")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Outdoors with Portal Taxi/Taxi Temp Wall" unique_id=1067584142]
+transform = Transform3D(2, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -1.5999999, 1.4, 0.54999924)
+mesh = SubResource("QuadMesh_y5qfa")
+surface_material_override/0 = SubResource("StandardMaterial3D_2n3mm")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Outdoors with Portal Taxi/Taxi Temp Wall" unique_id=1322999752]
+transform = Transform3D(2, 0, 0, 0, 1.5, 0, 0, 0, 0.5, -4.15, 1.4, 0.54999924)
+mesh = SubResource("QuadMesh_y5qfa")
+surface_material_override/0 = SubResource("StandardMaterial3D_hac3w")
 
 [node name="Under Construction Unity Museums" type="CSGBox3D" parent="Outdoors with Portal Taxi" unique_id=1061018112]
 transform = Transform3D(-0.47499996, 0, -0.82272416, 0, -0.95, 0, 0.82272416, 0, -0.47499996, -45.165848, -0.75, -47.854248)
@@ -2906,7 +2948,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_xtd4s")
+surface_material_override/0 = SubResource("StandardMaterial3D_slow0")
 
 [node name="Guidebook3d2" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1034692829]
 transform = Transform3D(0.99572617, -6.976736e-08, 0.092355326, 0.07370379, 0.60259724, -0.79463464, -0.05565301, 0.7980456, 0.60002184, 0.33789635, 0.5955966, 0.11873436)
@@ -2920,7 +2962,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_5gp3a")
+surface_material_override/0 = SubResource("StandardMaterial3D_b82dh")
 
 [node name="Guidebook3d3" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1679212863]
 transform = Transform3D(-0.9742656, -0.12668496, -0.18643428, 0.14209789, -0.98725104, -0.07172081, -0.1749714, -0.0963671, 0.979846, -0.58836937, 0.5955966, 0.11873436)
@@ -2934,7 +2976,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_8nor5")
+surface_material_override/0 = SubResource("StandardMaterial3D_sqt7j")
 
 [node name="Label3D" type="Label3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1183973093]
 transform = Transform3D(0.24000001, 0, 0, 0, 0.24000001, 0, 0, 0, 0.24000001, -0.07500076, 0.61191887, -0.31499863)
@@ -3825,17 +3867,17 @@ page_text = "Information here about HomeTeam years"
 url = "https://itch.io/c/8560000/hometeam-sep-2019-may-2025-era-of-devpodsgg-games"
 
 [node name="Button image" parent="Classical Musem (HomeTeam era Games)/HomeTeam All/Button Game" parent_id_path=PackedInt32Array(943563676, 1440399840) index="1" unique_id=1896630648]
-material_override = SubResource("StandardMaterial3D_2n3mm")
+material_override = SubResource("StandardMaterial3D_0dqa5")
 
 [node name="GameLabel" parent="Classical Musem (HomeTeam era Games)/HomeTeam All/Button Game" parent_id_path=PackedInt32Array(943563676, 1440399840) index="2" unique_id=1183973093]
 text = "HomeTeam GameDev
 (Sep 2019-May 2025) "
 
 [node name="BasicCurvyFrame Test" parent="Classical Musem (HomeTeam era Games)/HomeTeam All" index="2" unique_id=1119403653]
-transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, 0, 4.75, 0.15000153)
+transform = Transform3D(-3.4969112e-08, 0, -0.8, 0, 0.8, 0, 0.8, 0, -3.4969112e-08, 0, 4.75, 0.15000153)
 
 [node name="Painting Image" parent="Classical Musem (HomeTeam era Games)/HomeTeam All/BasicCurvyFrame Test" index="2" unique_id=784914795]
-material_override = SubResource("StandardMaterial3D_hac3w")
+material_override = SubResource("StandardMaterial3D_pl7fw")
 
 [node name="Speaker" parent="Classical Musem (HomeTeam era Games)/HomeTeam All" index="4" unique_id=1668457512]
 visible = false
@@ -3846,59 +3888,31 @@ game_label = "Los Angeles
 Game Devs"
 button_link = "https://itch.io/c/8563755/lagamedevs-oct-2015-june-2016-era-of-devpodsgg-games"
 button_interact_text = "LAGameDevs (2015-2016) Games on itch.io"
-credits = "Games made while our group went by the name LA GameDevs (Oct 2015-June 2016), while we were still a local group having in-person meetings in Los Angeles. Our first in-person meeting was held at a rented hotel event space, all later in-person weekly meetings were at a rented room in the Beverly Hills Public Library."
+credits = "Games made while our group went by the name LA GameDevs (Oct 2015-June 2016), while we were still a local group having in-person meetings in Los Angeles. Our first in-person meeting was held at a rented hotel event space, all later in-person weekly meetings were at a rented room in the Beverly Hills Public Library.
+
+This area is being built in a separate Unity project web build, which in the final version this nearby taxi will \"travel\" to by opening on itch.io in a new tab. The building exterior is based on the hotel where the first meeting took place, but the interior will be based on the public library meeting space."
 painting_texture = ExtResource("138_h3gjr")
 button_texture = ExtResource("139_iiiry")
 
 [node name="Foam Card" parent="LAGameDevs" index="0" unique_id=390590116]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.3000002, 0, -0.050001144)
-page_text = "[b]Gladiator of the Golden House[/b] credits
-Developed Feb 8 - Jun 28, 2026
-
-Project lead, initial game prototype & schedule, core gameplay, core systems (levels, directors, actors, actions, status effects), turn logic, action previews, level & combat design, UI/UX design, player classes, writing (action/status titles & descriptions, cutscenes), actor actions system & related UI, cutscenes, user options & save/load, action cost functionality, enemy behavior systems, unique level logic, sprites (roman army armor accessories, enemy designs & implementation (except Chariots), hex grid tile vfx, jar item, icons, shield, weapons, earth pile boulders), sounds (incl. pickup, swooshes, hit, block, guard broken, hemorrhage, grunts, monsters, eldritch, buffs, menu sounds) and integration, projectiles, status & explosion vfx & sfx, difficulty balancing, boss health bar, reactive crowd speech/sfx triggers, camera movement, character shadows, clouds, player avatar selection, randomized crowd art optimization, font selection, polish & bug fixes: Michael Avrie
-
-Energy system, action types for both enemies and players, status effect support (incl. defense, stun), speech bubbles, openers, health and damage feature, consumable pickups, action card hover tool tip details, enemy action preview, win/loss detection and retry or continue menu, assorted bug fixes: Dalton Charleston
-
-Music (main menu and boss fight), peristent card stash system, Grunt enemy behavior, enemy collision avoidance, animated text HUD popups, actor at coordinate lookup, save/load persistence serialization and round-trip test, snap to hex, damage system improvements, code repository EOL configuration: Philippe Vaillancourt
-
-Colosseum & sky scene art (incl. horror variation), animated banners & flags, gauntlet cursor, health bars, crowd sounds, polish effects (attack slash vfx, weapon sprite bobbing), one liner writing, avatar sprite facing flip, hex grid styling, tile hover highlight designs: Christer \"McFunkypants\" Kaitila
-
-Roman combatant art, crowd art including outfit randomization feature, primary color palette, Squid Emperor art, blue tentacle art: Amanda Stanley
-
-Core hex-grid maths & targeting system including facing / range, area of effect, pickups, enemy drops, tile highlight, facing selector sprite & animation: Jalent (Jason W)
-
-3 player avatars (shirtless with beard, blue hair, green tunic with bow): TheDemonMaster
-
-Early level initial designs, facing graphic, hex grid guide, early lore writing, project icon, additional level design and mechanics concepts: Noah Wizard
-
-Healing pickups and status effects: Mark Guinn
-
-Battle music, battle music win/loss stings, creepy ambient music: Aaron Sherman
-
-Chariot (art and code): Chris Anderson
-
-Move behavior setting for enemies (target/random with distance sorting): Marshy
-
-Compiler error fix: Dan Dela Rosa
-
-Additional gameplay design: Dávid Tóth
-
-Skeleton character drafts, initial color palette suggestions: Jakob Harris
-
-Playtesting: Chris Anderson, Connor Fitzpatrick, TopHatCroat"
+page_text = "Games made while our group went by the name LA GameDevs (Oct 2015-June 2016), while we were still a local group having in-person meetings in Los Angeles. Our first in-person meeting was held at a rented hotel event space, all later in-person weekly meetings were at a rented room in the Beverly Hills Public Library."
 
 [node name="ButtonClickLink" parent="LAGameDevs/Button Game" parent_id_path=PackedInt32Array(444055794, 1440399840) index="0" unique_id=1955919968]
-url = "https://tarnishedmoth.itch.io/gladiator-of-the-golden-house"
+url = "https://itch.io/c/8563755/lagamedevs-oct-2015-june-2016-era-of-devpodsgg-games"
 
 [node name="Button image" parent="LAGameDevs/Button Game" parent_id_path=PackedInt32Array(444055794, 1440399840) index="1" unique_id=1896630648]
-material_override = SubResource("StandardMaterial3D_h3gjr")
+material_override = SubResource("StandardMaterial3D_pcqrn")
 
 [node name="GameLabel" parent="LAGameDevs/Button Game" parent_id_path=PackedInt32Array(444055794, 1440399840) index="2" unique_id=1183973093]
 text = "Los Angeles
 Game Devs"
 
-[node name="Painting Image" parent="LAGameDevs/BasicCurvyFrame Test" parent_id_path=PackedInt32Array(444055794, 1119403653) index="2" unique_id=784914795]
-material_override = SubResource("StandardMaterial3D_iiiry")
+[node name="BasicCurvyFrame Test" parent="LAGameDevs" index="2" unique_id=1119403653]
+transform = Transform3D(-8.742277e-09, 0, -0.19999999, 0, 0.19999999, 0, 0.19999999, 0, -8.742277e-09, 0, -0.19999999, 0)
+
+[node name="Painting Image" parent="LAGameDevs/BasicCurvyFrame Test" index="2" unique_id=784914795]
+material_override = SubResource("StandardMaterial3D_k7ixa")
 
 [node name="Speaker" parent="LAGameDevs" index="4" unique_id=1668457512]
 visible = false
@@ -3909,59 +3923,31 @@ game_label = "Gamkedo
 Club"
 button_link = "https://itch.io/c/8564198/gamkedo-club-era-jun-2016-oct-2029-era-of-devpodsgg-games "
 button_interact_text = "Gamkedo Club (2016-2019) Games on itch.io"
-credits = "Games made while our group went by the name Gamkedo Club (Jun 2016-Oct 2019). This is when we switched to fully online, starting with a few hybrid meetings and a small number of long-distance members involved. The first game not led in LA was started when the lead, who lives in the UK, was visiting the US and attended a meeting live to give the presentation. Early in this period is when we started doing super specific credits."
+credits = "Games made while our group went by the name Gamkedo Club (Jun 2016-Oct 2019). This is when we switched to fully online, starting with a few hybrid meetings and a small number of long-distance members involved. The first game not led in LA was started when the lead, who lives in the UK, was visiting the US and attended a meeting live to give the presentation. Early in this period is when we started doing super specific credits.
+
+This set of games will be in a second building in the Unity project, which is in a playable prototype state but not yet populated for visiting. It'll be set in a \"game studio\" which was used as the location for the first Hidden Passageways game, released in 2018, which can be found in the collection this button leads to. This game is the third in that series, the second had a slightly different title: \"Hidden Passages 2\" (playable in the HomeTeam games, linked from the classical art museum nearby)."
 painting_texture = ExtResource("140_kpfdj")
 button_texture = ExtResource("141_0k2yn")
 
 [node name="Foam Card" parent="Gamkedo Club" index="0" unique_id=390590116]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.4, 0, -0.050001144)
-page_text = "[b]Gladiator of the Golden House[/b] credits
-Developed Feb 8 - Jun 28, 2026
-
-Project lead, initial game prototype & schedule, core gameplay, core systems (levels, directors, actors, actions, status effects), turn logic, action previews, level & combat design, UI/UX design, player classes, writing (action/status titles & descriptions, cutscenes), actor actions system & related UI, cutscenes, user options & save/load, action cost functionality, enemy behavior systems, unique level logic, sprites (roman army armor accessories, enemy designs & implementation (except Chariots), hex grid tile vfx, jar item, icons, shield, weapons, earth pile boulders), sounds (incl. pickup, swooshes, hit, block, guard broken, hemorrhage, grunts, monsters, eldritch, buffs, menu sounds) and integration, projectiles, status & explosion vfx & sfx, difficulty balancing, boss health bar, reactive crowd speech/sfx triggers, camera movement, character shadows, clouds, player avatar selection, randomized crowd art optimization, font selection, polish & bug fixes: Michael Avrie
-
-Energy system, action types for both enemies and players, status effect support (incl. defense, stun), speech bubbles, openers, health and damage feature, consumable pickups, action card hover tool tip details, enemy action preview, win/loss detection and retry or continue menu, assorted bug fixes: Dalton Charleston
-
-Music (main menu and boss fight), peristent card stash system, Grunt enemy behavior, enemy collision avoidance, animated text HUD popups, actor at coordinate lookup, save/load persistence serialization and round-trip test, snap to hex, damage system improvements, code repository EOL configuration: Philippe Vaillancourt
-
-Colosseum & sky scene art (incl. horror variation), animated banners & flags, gauntlet cursor, health bars, crowd sounds, polish effects (attack slash vfx, weapon sprite bobbing), one liner writing, avatar sprite facing flip, hex grid styling, tile hover highlight designs: Christer \"McFunkypants\" Kaitila
-
-Roman combatant art, crowd art including outfit randomization feature, primary color palette, Squid Emperor art, blue tentacle art: Amanda Stanley
-
-Core hex-grid maths & targeting system including facing / range, area of effect, pickups, enemy drops, tile highlight, facing selector sprite & animation: Jalent (Jason W)
-
-3 player avatars (shirtless with beard, blue hair, green tunic with bow): TheDemonMaster
-
-Early level initial designs, facing graphic, hex grid guide, early lore writing, project icon, additional level design and mechanics concepts: Noah Wizard
-
-Healing pickups and status effects: Mark Guinn
-
-Battle music, battle music win/loss stings, creepy ambient music: Aaron Sherman
-
-Chariot (art and code): Chris Anderson
-
-Move behavior setting for enemies (target/random with distance sorting): Marshy
-
-Compiler error fix: Dan Dela Rosa
-
-Additional gameplay design: Dávid Tóth
-
-Skeleton character drafts, initial color palette suggestions: Jakob Harris
-
-Playtesting: Chris Anderson, Connor Fitzpatrick, TopHatCroat"
+page_text = "Games made while our group went by the name Gamkedo Club (Jun 2016-Oct 2019). This is when we switched to fully online, starting with a few hybrid meetings and a small number of long-distance members involved. The first game not led in LA was started when the lead, who lives in the UK, was visiting the US and attended a meeting live to give the presentation. Early in this period is when we started doing super specific credits."
 
 [node name="ButtonClickLink" parent="Gamkedo Club/Button Game" parent_id_path=PackedInt32Array(1810017256, 1440399840) index="0" unique_id=1955919968]
-url = "https://tarnishedmoth.itch.io/gladiator-of-the-golden-house"
+url = "https://itch.io/c/8564198/gamkedo-club-era-jun-2016-oct-2029-era-of-devpodsgg-games "
 
 [node name="Button image" parent="Gamkedo Club/Button Game" parent_id_path=PackedInt32Array(1810017256, 1440399840) index="1" unique_id=1896630648]
-material_override = SubResource("StandardMaterial3D_kpfdj")
+material_override = SubResource("StandardMaterial3D_xmbax")
 
 [node name="GameLabel" parent="Gamkedo Club/Button Game" parent_id_path=PackedInt32Array(1810017256, 1440399840) index="2" unique_id=1183973093]
 text = "Gamkedo
 Club"
 
-[node name="Painting Image" parent="Gamkedo Club/BasicCurvyFrame Test" parent_id_path=PackedInt32Array(1810017256, 1119403653) index="2" unique_id=784914795]
-material_override = SubResource("StandardMaterial3D_0k2yn")
+[node name="BasicCurvyFrame Test" parent="Gamkedo Club" index="2" unique_id=1119403653]
+transform = Transform3D(-8.742277e-09, 0, -0.19999999, 0, 0.19999999, 0, 0.19999999, 0, -8.742277e-09, 0, -0.19999999, 0)
+
+[node name="Painting Image" parent="Gamkedo Club/BasicCurvyFrame Test" index="2" unique_id=784914795]
+material_override = SubResource("StandardMaterial3D_yc8gk")
 
 [node name="Speaker" parent="Gamkedo Club" index="4" unique_id=1668457512]
 visible = false
