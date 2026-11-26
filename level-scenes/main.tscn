@@ -3621,9 +3621,38 @@ size = Vector3(54, 22, 19)
 material = ExtResource("9_4h42u")
 
 [node name="concrete-block6" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=1128867525]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 39, 53)
-size = Vector3(14, 40, 41)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.9, 39, 53)
+size = Vector3(22.2, 40, 41)
 material = ExtResource("9_4h42u")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/concrete-block6" unique_id=100411165]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32499886, -9.274998, 2.3250008)
+operation = 2
+size = Vector3(20.45, 20.95, 35.25)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/concrete-block6" unique_id=356362174]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.400002, -20.299997, -11.549999)
+operation = 2
+size = Vector3(2, 2, 4.5)
+
+[node name="concrete-block14" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=334996502]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.75, 12.75, 35.25)
+size = Vector3(5.5, 12.5, 12.5)
+material = ExtResource("9_4h42u")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/concrete-block14" unique_id=1149592136]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 5.25, 8.125)
+size = Vector3(3, 2.5, 8.75)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/concrete-block14" unique_id=1249958754]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, -0.70710677, 0, 0.70710677, 0.70710677, 1.5, 2.5557175, 2.3128624)
+operation = 2
+size = Vector3(2, 14.900001, 2.8)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/concrete-block14" unique_id=336606711]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.75, -2.7379627, -3.208027)
+operation = 2
+size = Vector3(2.5, 2, 2.5)
 
 [node name="concrete-block7" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=187868341]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 43, 36.5)
@@ -3854,7 +3883,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 6.7647943, -41.843094)
 game_label = "HomeTeam GameDev
 (Sep 2019-May 2025) "
 button_link = "https://itch.io/c/8560000/hometeam-sep-2019-may-2025-era-of-devpodsgg-games"
-button_interact_text = "139 games by order of release"
+button_interact_text = "139 games, HomeTeam (2019-2025) collection"
 credits = "Information here about HomeTeam years"
 painting_texture = ExtResource("137_21smi")
 button_texture = ExtResource("137_21smi")
@@ -3897,7 +3926,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, -0.23520589, -18.893093)
 game_label = "Los Angeles
 Game Devs"
 button_link = "https://itch.io/c/8563755/lagamedevs-oct-2015-june-2016-era-of-devpodsgg-games"
-button_interact_text = "LAGameDevs (2015-2016) Games on itch.io"
+button_interact_text = "12 games, LAGameDevs (2015-2016) collection"
 credits = "Games made while our group went by the name LA GameDevs (Oct 2015-June 2016), while we were still a local group having in-person meetings in Los Angeles. Our first in-person meeting was held at a rented hotel event space, all later in-person weekly meetings were at a rented room in the Beverly Hills Public Library.
 
 This area is being built in a separate Unity project web build, which in the final version this nearby taxi will \"travel\" to by opening on itch.io in a new tab. The building exterior is based on the hotel where the first meeting took place, but the interior will be based on the public library meeting space."
@@ -3934,7 +3963,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, -0.23520589, -18.893093)
 game_label = "Gamkedo
 Club"
 button_link = "https://itch.io/c/8564198/gamkedo-club-era-jun-2016-oct-2029-era-of-devpodsgg-games "
-button_interact_text = "Gamkedo Club (2016-2019) Games on itch.io"
+button_interact_text = "64 games, Gamkedo Club (2016-2019) collection"
 credits = "Games made while our group went by the name Gamkedo Club (Jun 2016-Oct 2019). This is when we switched to fully online, starting with a few hybrid meetings and a small number of long-distance members involved. The first game not led in LA was started when the lead, who lives in the UK, was visiting the US and attended a meeting live to give the presentation. Early in this period is when we started doing super specific credits.
 
 This set of games will be in a second building in the Unity project, which is in a playable prototype state but not yet populated for visiting. It'll be set in a \"game studio\" which was used as the location for the first Hidden Passageways game, released in 2018, which can be found in the collection this button leads to. This game is the third in that series, the second had a slightly different title: \"Hidden Passages 2\" (playable in the HomeTeam games, linked from the classical art museum nearby)."
