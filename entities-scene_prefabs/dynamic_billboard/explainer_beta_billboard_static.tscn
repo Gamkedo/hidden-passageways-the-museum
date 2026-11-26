@@ -141,7 +141,7 @@ custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "The final game will have 4 buildings, with games made when our group had a different name. We've gone by DevPods.gg since Summer 2025. That's the modern museum here, it's the most ready to explore."
+text = "The game will have 4 buildings, corresponding to 4 names our group used. We've gone by DevPods.gg since Summer 2025. Our most recent games are in the modern museum ahead. It's ready to explore."
 label_settings = SubResource("LabelSettings_x78ms")
 autowrap_mode = 2
 
@@ -158,7 +158,7 @@ custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 1
-text = "Behind you is info about the other buildings, for another 200+ free games we made 2015-2025. Those buildings will focus on a subset of highlighted games, instead of every game as the Dev Pods building does."
+text = "Behind you is info about the other buildings (WIP) for another 200+ free games we made 2015-2025. Those buildings will focus on a subset of highlighted games, instead of every game as the Dev Pods building does."
 label_settings = SubResource("LabelSettings_x78ms")
 autowrap_mode = 2
 
