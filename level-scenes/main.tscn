@@ -143,6 +143,7 @@
 [ext_resource type="PackedScene" uid="uid://dmdy3gabfpwh0" path="res://entities-scene_prefabs/suit_symbols.tscn" id="129_3djdl"]
 [ext_resource type="PackedScene" uid="uid://06oqdlx84nge" path="res://museum/classical_musem_(home_team_era_games).tscn" id="129_m4x27"]
 [ext_resource type="Material" uid="uid://05mwkoucxt2x" path="res://materials/walls_museum/crown-molding.tres" id="132_ae2tv"]
+[ext_resource type="PackedScene" uid="uid://dnet2j3i5v35v" path="res://environment-csg/zero_gravity_elevator.tscn" id="132_hac3w"]
 [ext_resource type="Texture2D" uid="uid://cl0thrcbsb4kr" path="res://game wall pictures/ready-to-use/hometeam nov 2019-april 2025/hometeam-all.png" id="137_21smi"]
 [ext_resource type="Texture2D" uid="uid://b4yw2ckajtta7" path="res://game wall pictures/preview-temp/lagamedevs-all.png" id="138_h3gjr"]
 [ext_resource type="Texture2D" uid="uid://cufedju6hy1kf" path="res://game wall pictures/preview-temp/lagamedevs-button-logo.png" id="139_iiiry"]
@@ -531,6 +532,11 @@ albedo_texture = ExtResource("140_kpfdj")
 [node name="Main" type="Node3D" unique_id=1018901499]
 script = ExtResource("1_qi2ty")
 
+[node name="FakeDoor" type="CSGBox3D" parent="." unique_id=1721951156]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.575005, 21.150002, 110.02501)
+operation = 2
+size = Vector3(1.85, 3.7, 2.55)
+
 [node name="Player with UI" parent="." unique_id=1354449472 instance=ExtResource("3_lquwl")]
 transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, -1, 0, -7)
 platform_floor_layers = 4294967291
@@ -671,7 +677,7 @@ material = ExtResource("3_a8cb6")
 [node name="CSGBox3D" type="CSGBox3D" parent="Outdoors with Portal Taxi/grassy-terrain/grass-floor" unique_id=1039589962]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.25, -3.5, 92.75)
 operation = 2
-size = Vector3(61.5, 12, 44.5)
+size = Vector3(61.5, 12, 44)
 
 [node name="grass-hill" type="CSGSphere3D" parent="Outdoors with Portal Taxi/grassy-terrain" unique_id=511266430]
 transform = Transform3D(1, 0, 0, 0, 0.25, 0, 0, 0, 1, 63.06263, -11.629219, -93.890434)
@@ -922,7 +928,7 @@ size = Vector3(1, 0.5, 0.05)
 transform = Transform3D(-3.059797e-06, 4.620165e-13, -70, -1.0569706e-05, 70, 9.24033e-13, -70, -1.0569706e-05, 3.059797e-06, 7.386444, 36.78443, 41.673157)
 material_override = SubResource("StandardMaterial3D_3djdl")
 use_collision = true
-size = Vector3(1, 0.5, 0.022558594)
+size = Vector3(1, 0.5, 0.001)
 
 [node name="Elevator Sign Employee Only" type="CSGBox3D" parent="Outdoors with Portal Taxi" unique_id=1967106323]
 transform = Transform3D(0.95, 0, -8.305164e-08, 0, 0.95, 0, -8.305164e-08, 0, -0.95, -39, 4, 14.027496)
@@ -3663,9 +3669,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -250.5, 59.874756)
 size = Vector3(68, 468, 44.25049)
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/concrete-block6" unique_id=909518543]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.575, -19.85, 38.75)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.575, -19.85, 39)
 operation = 2
-size = Vector3(1.85, 3.7, 3.5)
+size = Vector3(1.85, 3.7, 4)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/concrete-block6" unique_id=1187923644]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.400002, 2.550003, -31.325)
+operation = 2
+size = Vector3(5.5, 48.5, 5.25)
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/concrete-block6" unique_id=1457500616]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, -21.75, 60)
@@ -3686,6 +3697,10 @@ radius = 19.0
 height = 13.0005
 sides = 64
 material = ExtResource("105_l8pru")
+
+[node name="ZeroGravityElevator" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/concrete-block6" unique_id=65243958 instance=ExtResource("132_hac3w")]
+transform = Transform3D(3, 0, -4.5298742e-07, 0, 3, 0, -4.5298742e-07, 0, -3, 24.499998, -21.5, -31.5)
+gravity = 0.2
 
 [node name="concrete-block14" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout" unique_id=334996502]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.75, 12.75, 35.25)
