@@ -80,6 +80,7 @@
 [ext_resource type="Texture2D" uid="uid://tsm8yr18f4mh" path="res://textures/signage/orc-coming-soon.jpg" id="41_slow0"]
 [ext_resource type="Texture2D" uid="uid://dqhu04rwu5fdg" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/orbs-and-dash.jpg" id="42_4sa00"]
 [ext_resource type="Script" uid="uid://cm6176wsxfdqx" path="res://entities-scene_prefabs/auto-tracklight.gd" id="43_0m503"]
+[ext_resource type="Texture2D" uid="uid://bta1qu36whjk3" path="res://textures/signage/hidden-passageways-museum-coming-soon.jpg" id="43_b82dh"]
 [ext_resource type="AudioStream" uid="uid://dbwmu2gsso7ja" path="res://audio/dev-pods-game-song-clips-with-credits/Michael Avrie - Beepbox (Crash Em Up).ogg" id="43_d8p2r"]
 [ext_resource type="Texture2D" uid="uid://dy7l45om1gq10" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/orbs-and-dash-logo.png" id="43_ypkhb"]
 [ext_resource type="PackedScene" uid="uid://coqvyei5w8brk" path="res://game wall pictures/frame_button_credits.tscn" id="44_1tes7"]
@@ -252,6 +253,10 @@ albedo_texture = ExtResource("41_lrbdn")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lrbdn"]
 shading_mode = 0
 albedo_texture = ExtResource("41_slow0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gbv3t"]
+shading_mode = 0
+albedo_texture = ExtResource("43_b82dh")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_8jg5c"]
 radius = 1.0454303
@@ -1222,6 +1227,11 @@ surface_material_override/0 = SubResource("StandardMaterial3D_b82dh")
 transform = Transform3D(3.14722e-07, 0.3059905, -0.49845865, -5.3290707e-16, 3.8879778, 0.03922955, 2.4, -4.0125812e-08, 6.536496e-08, 34.322624, -1.0102489, 30.222075)
 mesh = SubResource("QuadMesh_y5qfa")
 surface_material_override/0 = SubResource("StandardMaterial3D_lrbdn")
+
+[node name="SignImage4" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)" unique_id=1652021682]
+transform = Transform3D(3.14722e-07, 0.3059905, -0.49845865, -5.3290707e-16, 3.8879778, 0.03922955, 2.4, -4.0125812e-08, 6.536496e-08, 18.322624, -1.0102489, 30.222075)
+mesh = SubResource("QuadMesh_y5qfa")
+surface_material_override/0 = SubResource("StandardMaterial3D_gbv3t")
 
 [node name="baseboard-trim-upstairs" parent="Modern Musem (Dev Pods era Games)" unique_id=1543233206 instance=ExtResource("29_jkqo2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.01, -0.85, 45.03)
