@@ -12,19 +12,19 @@ size = Vector3(3, 1, 2)
 material = ExtResource("1_q47lh")
 
 [node name="DisplayStandTop" type="CSGBox3D" parent="." unique_id=482984803]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.64, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.1400003, 0)
 size = Vector3(3, 0.25, 2)
 material = ExtResource("1_q47lh")
 
 [node name="DisplayStandGlass" type="CSGBox3D" parent="." unique_id=1083507413]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01199913, 2.0009995, 0.00799942)
-size = Vector3(2.898, 3, 1.89)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01199913, 2.2509995, 0.00799942)
+size = Vector3(2.898, 3.5, 1.89)
 material = ExtResource("2_fipfb")
 
 [node name="DisplayStandGlass2" type="CSGBox3D" parent="." unique_id=513268484]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01199913, 2.0009995, 0.00799942)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01199913, 2.2509995, 0.00799942)
 operation = 2
-size = Vector3(2.772, 3, 1.764)
+size = Vector3(2.772, 3.5, 1.764)
 material = ExtResource("2_fipfb")
 
 [node name="DisplayStandFelt" type="CSGBox3D" parent="." unique_id=1422432869]
@@ -33,12 +33,12 @@ size = Vector3(2.6460001, 0.063, 1.638)
 material = ExtResource("3_q47lh")
 
 [node name="bulb" type="CSGCylinder3D" parent="." unique_id=1369837693]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 3.528, 0.187)
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -2.1855694e-08, 4.028, 0.187)
 radius = 0.125
 material = ExtResource("3_fipfb")
 
 [node name="bulb2" type="CSGCylinder3D" parent="." unique_id=290671639]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 3.528, -0.187)
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -2.1855694e-08, 4.028, -0.187)
 radius = 0.125
 material = ExtResource("3_fipfb")
 
