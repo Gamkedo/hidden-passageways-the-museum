@@ -148,6 +148,7 @@
 [ext_resource type="Texture2D" uid="uid://7c6h2mdxx2tf" path="res://game wall pictures/preview-temp/gamkedo-club-button-logo.png" id="141_0k2yn"]
 [ext_resource type="PackedScene" uid="uid://j2gv3tbsutek" path="res://models/tyler_funks_triune_legacy_hippo_warrior_web_optimized.tscn" id="143_hy4di"]
 [ext_resource type="PackedScene" uid="uid://c8tqx7x66ewpd" path="res://entities-scene_prefabs/credits_foam_card_viewable.tscn" id="144_5gp3a"]
+[ext_resource type="PackedScene" uid="uid://bi1vjubwagq28" path="res://models/elizabeth_mcmahill_operation_sheepherder_cat.tscn" id="145_a5p35"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_xteo1"]
 
@@ -3962,13 +3963,24 @@ visible = false
 [node name="tyler-funks-triune_legacy-hippo_warrior-web_optimized" parent="Classical Musem (HomeTeam era Games)" unique_id=686728872 instance=ExtResource("143_hy4di")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.75, 6.1499996, -29.050001)
 
-[node name="Credits Foam Card Viewable" parent="Classical Musem (HomeTeam era Games)" unique_id=1722904169 instance=ExtResource("144_5gp3a")]
+[node name="FoamCard-tyler-funks-triune_legacy" parent="Classical Musem (HomeTeam era Games)" unique_id=1722904169 instance=ExtResource("144_5gp3a")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 29.5, 5.55, -28)
 page_text = "[b]Triune Legacy[/b] Hippo Warrior
 
 Model, materials, and (removed for exhibit) animation by Tyler Funk
 
-Triune Legacy released Apr 24, 2022. It's a networked multiplayer PvE game built in Unity."
+Triune Legacy released Apr 24, 2022. Tyler also led this project. It's a networked multiplayer PvE game built in Unity."
+
+[node name="Foam Card-elizabeth-osh" parent="Classical Musem (HomeTeam era Games)" unique_id=1810288096 instance=ExtResource("144_5gp3a")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 22.5, 5.55, -28)
+page_text = "[b]Operation Sheep Herder[/b] Player Cat
+
+Model, materials, and (removed for exhibit) animation by Elizabeth McMahill
+
+Operation Sheep Herder was led by Kelly Mark, and released Apr 21, 2024. It's built in Unity."
+
+[node name="elizabeth_mcmahill_operation_sheepherder_cat2" parent="Classical Musem (HomeTeam era Games)" unique_id=45495045 instance=ExtResource("145_a5p35")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 23.5, 6, -29)
 
 [node name="LAGameDevs" parent="." unique_id=444055794 instance=ExtResource("44_1tes7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, -0.23520589, -18.893093)

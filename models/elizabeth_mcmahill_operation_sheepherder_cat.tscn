@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bi1vjubwagq28"]
+
+[ext_resource type="PackedScene" uid="uid://dv4fyuoldjy6k" path="res://models/elizabeth_mcmahill_operation_sheepherder_cat.fbx" id="1_qvv2f"]
+[ext_resource type="Texture2D" uid="uid://i6ggjf0sdpvd" path="res://textures/elizabeth-OSH_Cat_TX_v02.png" id="2_g0r7t"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bfppf"]
+albedo_texture = ExtResource("2_g0r7t")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tjka0"]
+albedo_texture = ExtResource("2_g0r7t")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7t0ft"]
+albedo_texture = ExtResource("2_g0r7t")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e5m5y"]
+albedo_texture = ExtResource("2_g0r7t")
+
+[node name="elizabeth_mcmahill_operation_sheepherder_cat" unique_id=45495045 instance=ExtResource("1_qvv2f")]
+
+[node name="BodyLimbs" parent="." index="0" unique_id=1419263025]
+surface_material_override/0 = SubResource("StandardMaterial3D_bfppf")
+
+[node name="EyeL" parent="." index="1" unique_id=1796459713]
+surface_material_override/0 = SubResource("StandardMaterial3D_tjka0")
+
+[node name="EyeR" parent="." index="2" unique_id=1794256513]
+surface_material_override/0 = SubResource("StandardMaterial3D_7t0ft")
+
+[node name="Head" parent="." index="3" unique_id=1509831515]
+surface_material_override/0 = SubResource("StandardMaterial3D_e5m5y")
