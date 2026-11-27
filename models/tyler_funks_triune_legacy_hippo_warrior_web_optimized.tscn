@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://j2gv3tbsutek"]
+
+[ext_resource type="PackedScene" uid="uid://dd558epsamxh7" path="res://models/tyler-funks-triune_legacy-hippo_warrior-web_optimized.fbx" id="1_e4cka"]
+[ext_resource type="Texture2D" uid="uid://ciif37mvrir66" path="res://textures/tylerfunk-hippo_warrior_albedo.jpg" id="2_jp0ao"]
+[ext_resource type="Texture2D" uid="uid://db7mly2msfx07" path="res://textures/tylerfunk-hippo_warrior_normal.jpg" id="3_7bpj8"]
+[ext_resource type="Texture2D" uid="uid://ulwtnc0rvbl" path="res://textures/tylerfunk-hippo_warrior_sword_albedo.jpg" id="4_oipn1"]
+[ext_resource type="Texture2D" uid="uid://bvnxmkbvbm1jp" path="res://textures/tylerfunk-hippo_warrior_sword_normal.jpg" id="5_tfjjq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5itfd"]
+albedo_texture = ExtResource("2_jp0ao")
+normal_enabled = true
+normal_texture = ExtResource("3_7bpj8")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d1olq"]
+albedo_texture = ExtResource("4_oipn1")
+normal_enabled = true
+normal_texture = ExtResource("5_tfjjq")
+
+[node name="tyler-funks-triune_legacy-hippo_warrior-web_optimized" unique_id=686728872 instance=ExtResource("1_e4cka")]
+
+[node name="belt_002" parent="." index="0" unique_id=1467733584]
+surface_material_override/0 = SubResource("StandardMaterial3D_5itfd")
+surface_material_override/1 = SubResource("StandardMaterial3D_d1olq")
