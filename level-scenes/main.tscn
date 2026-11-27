@@ -74,6 +74,7 @@
 [ext_resource type="Texture2D" uid="uid://cvryfj8lmkalp" path="res://textures/under-construction.png" id="39_1tes7"]
 [ext_resource type="Texture2D" uid="uid://c8fyjd7ayh1ev" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/crazy-arena-chaos-logo.png" id="39_a8cb6"]
 [ext_resource type="Texture2D" uid="uid://dwwuk4176sunh" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/planets-mobile.jpg" id="40_6mvr8"]
+[ext_resource type="Texture2D" uid="uid://lbheqc23stau" path="res://textures/signage/steamrolla-preview.jpg" id="40_6xavn"]
 [ext_resource type="Texture2D" uid="uid://e327qx4qygko" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/planets-mobile-logo.jpg" id="41_fplvf"]
 [ext_resource type="Texture2D" uid="uid://dqhu04rwu5fdg" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/orbs-and-dash.jpg" id="42_4sa00"]
 [ext_resource type="Script" uid="uid://cm6176wsxfdqx" path="res://entities-scene_prefabs/auto-tracklight.gd" id="43_0m503"]
@@ -237,6 +238,10 @@ point_count = 3
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y5qfa"]
 size = Vector3(12, 4, 4.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_slow0"]
+shading_mode = 0
+albedo_texture = ExtResource("40_6xavn")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_8jg5c"]
 radius = 1.0454303
@@ -1192,6 +1197,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.500001, 8.325, -6.4999657)
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5000019, 2.4249997, -6.499958)
 
 [node name="Modern Musem (Dev Pods era Games)" type="Node3D" parent="." unique_id=966479255]
+
+[node name="SignImage" type="MeshInstance3D" parent="Modern Musem (Dev Pods era Games)" unique_id=632755057]
+transform = Transform3D(-1.04907336e-07, -0.30599052, 0.49845865, 0, 3.8879778, 0.03922955, -2.4, 1.3375271e-08, -2.178832e-08, 18.844418, -1.0102489, 30.222075)
+mesh = SubResource("QuadMesh_y5qfa")
+surface_material_override/0 = SubResource("StandardMaterial3D_slow0")
 
 [node name="baseboard-trim-upstairs" parent="Modern Musem (Dev Pods era Games)" unique_id=1543233206 instance=ExtResource("29_jkqo2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.01, -0.85, 45.03)
