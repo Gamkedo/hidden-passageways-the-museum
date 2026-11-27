@@ -8,6 +8,7 @@
 [ext_resource type="Material" uid="uid://blxopw884707r" path="res://materials/classical-museum/white-paint-material.tres" id="4_gdldj"]
 [ext_resource type="PackedScene" uid="uid://dy4418qx7kelu" path="res://environment-csg/wall_trimwork.tscn" id="5_aqxev"]
 [ext_resource type="PackedScene" uid="uid://bplmg13i3qwjm" path="res://environment-csg/quoin_corner.tscn" id="6_gdldj"]
+[ext_resource type="PackedScene" uid="uid://i3mlcpam4twa" path="res://entities-scene_prefabs/bird_particles.tscn" id="9_gyy4n"]
 
 [node name="Classical Musem (HomeTeam era Games)" type="Node3D" unique_id=1964976488]
 
@@ -796,3 +797,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29, -6.4, -6)
 
 [node name="DisplayCase8" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=621414029 instance=ExtResource("4_35kj8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29, -6.4, 6)
+
+[node name="bird-particles" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1877548775 instance=ExtResource("9_gyy4n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64, 16, 32)

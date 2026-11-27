@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bgbocoe44cyxp"]
+
+[ext_resource type="Texture2D" uid="uid://dwkow0xge454p" path="res://textures/canada-goose.png" id="1_5mfds"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.7
+alpha_antialiasing_mode = 0
+cull_mode = 2
+shading_mode = 0
+disable_ambient_light = true
+disable_fog = true
+disable_specular_occlusion = true
+albedo_texture = ExtResource("1_5mfds")
+billboard_mode = 1
+billboard_keep_scale = true

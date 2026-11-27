@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://i3mlcpam4twa"]
+
+[ext_resource type="Curve" uid="uid://b5vwctqv7ieyh" path="res://entities-scene_prefabs/bird_flap_curve.tres" id="1_h8dpu"]
+[ext_resource type="Material" uid="uid://bgbocoe44cyxp" path="res://materials/canada-goose-particle.tres" id="1_q6hbx"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_kdu0b"]
+material = ExtResource("1_q6hbx")
+
+[node name="bird-particles" type="Node3D" unique_id=1877548775]
+
+[node name="canada-geese" type="CPUParticles3D" parent="." unique_id=709857409]
+amount = 16
+lifetime = 60.0
+preprocess = 60.0
+mesh = SubResource("QuadMesh_kdu0b")
+emission_shape = 3
+emission_box_extents = Vector3(4, 1, 4)
+spread = 5.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 0.5
+initial_velocity_max = 1.5
+scale_amount_min = 2.0
+scale_amount_max = 2.0
+split_scale = true
+scale_curve_x = null
+scale_curve_y = ExtResource("1_h8dpu")
+scale_curve_z = null
