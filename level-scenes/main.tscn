@@ -62,9 +62,11 @@
 [ext_resource type="PackedScene" uid="uid://ccmjewtcqxp7" path="res://models/legend_of_shadowtails_ratrick_mesh.glb" id="33_hgslh"]
 [ext_resource type="Texture2D" uid="uid://bioro578cfmun" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/artillery-rampage.jpg" id="34_anu3i"]
 [ext_resource type="AudioStream" uid="uid://c2b81yqtcl8ub" path="res://audio/dev-pods-game-song-clips-with-credits/Stephanie Urch - Battle (King Arthur Tales).ogg" id="34_tatev"]
+[ext_resource type="PackedScene" uid="uid://bvb3dkf1y437q" path="res://models/test_model_jan2016.fbx" id="35_2n3mm"]
 [ext_resource type="Texture2D" uid="uid://barv2ixgl1het" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/artillery-rampage-logo.png" id="35_4sa00"]
 [ext_resource type="AudioStream" uid="uid://ct8od5avs1b33" path="res://audio/dev-pods-game-song-clips-with-credits/Michael Avrie - Whitecaps (Artillery Rampage).ogg" id="36_012j5"]
 [ext_resource type="Texture2D" uid="uid://ctnimjcimfyxh" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/crash-em-up.jpg" id="36_14tmg"]
+[ext_resource type="Script" uid="uid://de6gfw7e418ia" path="res://scripts/test_model_jan_2016-drift.gd" id="36_hac3w"]
 [ext_resource type="Texture2D" uid="uid://di63xrc4tunyr" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/gladiator-framed-pic.png" id="36_u5gq0"]
 [ext_resource type="Texture2D" uid="uid://bulyjthbproa8" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/crash-em-up-logo.png" id="37_6v162"]
 [ext_resource type="AudioStream" uid="uid://1joa5jtgvlrt" path="res://audio/dev-pods-game-song-clips-with-credits/Philippe Vaillancourt - Psytrance (Cargo Bay 5N-AFU).ogg" id="37_bbunl"]
@@ -561,20 +563,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.5, 0, 32)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.5, 0, -32)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Outdoors with Portal Taxi/[World Boundaries]" unique_id=1067343403]
-transform = Transform3D(0.94149655, 0, -0.33702263, 0, 1, 0, 0.33702263, 0, 0.94149655, 1.946352, 0, 113.81478)
+transform = Transform3D(0.94149655, 0, -0.33702263, 0, 1, 0, 0.33702263, 0, 0.94149655, -31.418888, 0, 207.02295)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Outdoors with Portal Taxi/[World Boundaries]/StaticBody3D" unique_id=1739608497]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -16.25, -30.5)
 shape = ExtResource("91_ypkhb")
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="Outdoors with Portal Taxi/[World Boundaries]" unique_id=1879706775]
-transform = Transform3D(0.5051321, 0, 0.86304206, 0, 1, 0, -0.86304206, 0, 0.5051321, 130.74771, 15.508987, 50.214165)
+transform = Transform3D(0.5051321, 0, 0.86304206, 0, 1, 0, -0.86304206, 0, 0.5051321, 132.67563, 15.508987, 85.52398)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Outdoors with Portal Taxi/[World Boundaries]/StaticBody3D2" unique_id=130993889]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, 0)
 shape = ExtResource("91_ypkhb")
 
 [node name="StaticBody3D3" type="StaticBody3D" parent="Outdoors with Portal Taxi/[World Boundaries]" unique_id=834243497]
-transform = Transform3D(-0.5211524, 0, 0.85346365, 0, 1, 0, -0.85346365, 0, -0.5211524, 91.52335, -7.6293945e-06, -35.389565)
+transform = Transform3D(-0.5211524, 0, 0.85346365, 0, 1, 0, -0.85346365, 0, -0.5211524, 108.59263, -7.6293945e-06, -45.812614)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Outdoors with Portal Taxi/[World Boundaries]/StaticBody3D3" unique_id=1165546484]
 shape = ExtResource("91_ypkhb")
@@ -586,7 +589,7 @@ transform = Transform3D(-0.8885095, 0, -0.45885828, 0, 1, 0, 0.45885828, 0, -0.8
 shape = ExtResource("91_ypkhb")
 
 [node name="StaticBody3D5" type="StaticBody3D" parent="Outdoors with Portal Taxi/[World Boundaries]" unique_id=1059915597]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -92.1149, 7.6293945e-06, 7.1251717)
+transform = Transform3D(-6.556708e-08, 0, -1, 0, 1, 0, 1.5, 0, -4.371139e-08, -92.1149, 7.6293945e-06, 7.1251717)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Outdoors with Portal Taxi/[World Boundaries]/StaticBody3D5" unique_id=83876510]
 shape = ExtResource("91_ypkhb")
@@ -763,7 +766,7 @@ size = Vector3(48.5, 2, 24)
 material = ExtResource("13_v6iic")
 
 [node name="WorldFloor" type="StaticBody3D" parent="Outdoors with Portal Taxi" unique_id=40844229]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.5, -40, -32)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.5, -409, -32)
 collision_mask = 4294967295
 input_ray_pickable = false
 metadata/WorldFloor = true
@@ -914,6 +917,12 @@ transform = Transform3D(-4.152582e-08, 3.6303023e-15, 0.95, 8.305164e-08, 0.95, 
 material_override = SubResource("StandardMaterial3D_3djdl")
 use_collision = true
 size = Vector3(1, 0.5, 0.05)
+
+[node name="Closed Upstairs" type="CSGBox3D" parent="Outdoors with Portal Taxi" unique_id=1714962841]
+transform = Transform3D(-3.059797e-06, 4.620165e-13, -70, -1.0569706e-05, 70, 9.24033e-13, -70, -1.0569706e-05, 3.059797e-06, 7.386444, 36.78443, 41.673157)
+material_override = SubResource("StandardMaterial3D_3djdl")
+use_collision = true
+size = Vector3(1, 0.5, 0.022558594)
 
 [node name="Elevator Sign Employee Only" type="CSGBox3D" parent="Outdoors with Portal Taxi" unique_id=1967106323]
 transform = Transform3D(0.95, 0, -8.305164e-08, 0, 0.95, 0, -8.305164e-08, 0, -0.95, -39, 4, 14.027496)
@@ -1074,6 +1083,10 @@ transform = Transform3D(2.9802322e-08, 0, 1, 0, 1, 0, -1, 0, 2.9802322e-08, -104
 material_override = ExtResource("114_4h6t8")
 size = Vector3(128, 1, 16)
 material = ExtResource("9_4h42u")
+
+[node name="test_model_jan2016" parent="Outdoors with Portal Taxi" unique_id=1048766450 instance=ExtResource("35_2n3mm")]
+transform = Transform3D(-0.29999992, 0, 0.51961535, 0, 0.6, 0, -0.51961535, 0, -0.29999992, -31.201912, 12.5, 100.626595)
+script = ExtResource("36_hac3w")
 
 [node name="ducts (no collision)" type="CSGCombiner3D" parent="." unique_id=478167114]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -14.497821, -0.49725342, 44.49996)
@@ -3646,8 +3659,8 @@ operation = 2
 size = Vector3(1.9892578, 2, 4.145508)
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/concrete-block6" unique_id=1900297392]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -250.5, 59.75)
-size = Vector3(68, 468, 44.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -250.5, 59.874756)
+size = Vector3(68, 468, 44.25049)
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/concrete-block6" unique_id=909518543]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.575, -19.85, 38.75)
@@ -3662,7 +3675,7 @@ size = Vector3(58.5, 9.5, 39)
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="Modern Musem (Dev Pods era Games)/CSG Blockout/concrete-block6" unique_id=1354372668]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, -260.075, 60.100006)
 operation = 2
-radius = 19.0
+radius = 19.4
 height = 473.15
 sides = 64
 material = ExtResource("105_l8pru")
