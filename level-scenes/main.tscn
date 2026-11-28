@@ -166,6 +166,7 @@
 [ext_resource type="PackedScene" uid="uid://cjkag3xy0cbys" path="res://entities-scene_prefabs/interaction/play_game_simplebutton.tscn" id="152_0dqa5"]
 [ext_resource type="Texture2D" uid="uid://crkn47wclfut7" path="res://textures/signage/kung-twu.jpg" id="153_gbv3t"]
 [ext_resource type="Texture2D" uid="uid://bgy6qcncki2pl" path="res://textures/signage/chagamon.jpg" id="154_sqt7j"]
+[ext_resource type="Texture2D" uid="uid://cgswk0n85vh3g" path="res://textures/signage/hometeam-flipside.jpg" id="162_477gl"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_xteo1"]
 
@@ -543,13 +544,17 @@ albedo_texture = ExtResource("137_21smi")
 shading_mode = 0
 albedo_texture = ExtResource("137_21smi")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0dqa5"]
-shading_mode = 0
-albedo_texture = ExtResource("153_gbv3t")
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pcqrn"]
 shading_mode = 0
 albedo_texture = ExtResource("154_sqt7j")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8ctpi"]
+shading_mode = 0
+albedo_texture = ExtResource("162_477gl")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0dqa5"]
+shading_mode = 0
+albedo_texture = ExtResource("153_gbv3t")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kvabm"]
 shading_mode = 0
@@ -4148,18 +4153,6 @@ unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.75, 5.3856635, -27.943092)
 game_label = ""
 
-[node name="Play Kung Twu" parent="Classical Musem (HomeTeam era Games)" unique_id=1277110821 instance=ExtResource("152_0dqa5")]
-unique_name_in_owner = true
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 37.95, 7.0856633, -41.093094)
-game_label = ""
-button_link = "https://devpods.itch.io/kung-twu"
-
-[node name="Play Chagamon" parent="Classical Musem (HomeTeam era Games)" unique_id=107055385 instance=ExtResource("152_0dqa5")]
-unique_name_in_owner = true
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15.550001, 7.0856633, -37.743088)
-game_label = ""
-button_link = "https://devpods.itch.io/chagamon"
-
 [node name="Play OSH" parent="Classical Musem (HomeTeam era Games)" unique_id=1798148693 instance=ExtResource("152_0dqa5")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.75, 5.3856635, -27.943092)
@@ -4203,13 +4196,101 @@ Wolf pack behavior (basic), outside sound recording, camera position fix, debugg
 [node name="elizabeth_mcmahill_operation_sheepherder_cat2" parent="Classical Musem (HomeTeam era Games)" unique_id=45495045 instance=ExtResource("145_a5p35")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 23.5, 6, -29)
 
-[node name="WallDisplay KungTwu" type="MeshInstance3D" parent="Classical Musem (HomeTeam era Games)" unique_id=83114412]
-transform = Transform3D(-8.742278e-08, 0, -0.5, 0, 4, 0, 2, 0, -2.1855694e-08, 38.022625, 8.689751, -39.177925)
+[node name="Chagamon" type="Node3D" parent="Classical Musem (HomeTeam era Games)" unique_id=1023071183]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5, 6.5, -40.5)
+
+[node name="WallDisplay" type="MeshInstance3D" parent="Classical Musem (HomeTeam era Games)/Chagamon" unique_id=1336021164]
+transform = Transform3D(-8.742278e-08, 0, 0.5, 0, 4, 0, -2, 0, -2.1855694e-08, 0.02262497, 2.26, 0.92207336)
+mesh = SubResource("QuadMesh_y5qfa")
+surface_material_override/0 = SubResource("StandardMaterial3D_pcqrn")
+
+[node name="FoamCard" parent="Classical Musem (HomeTeam era Games)/Chagamon" unique_id=1444844968 instance=ExtResource("144_5gp3a")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.3000002, 2.3499985)
+page_text = "[b]Chagamon[/b] led by Vaan Hope Khani
+
+It's very rare for a board turn-based digital game to be developed in our community, but Chagamon is an original variation chess which mixes a few weakened well-known pieces (rooks and bishops can only move 5 spaces, knights move fully), no pawns, and a new objective: to get the key (king-like) piece to the opposite corner. Players each start with pieces in each corner, one for escort and one for defendint their keyhold. Due to how classic chess AI is programmed, similar alpha-beta pruning optimizations on predictions were equally useful to get the computer able to play well enough to at least avoid obvious oversights or blunders.
+
+JavaScript for HTML5 canvas, released July 2021.
+
+Project lead, original board game design, core gameplay, computer player AI and related optimizations, piece art, table art, win and lose conditions, sounds: Vaan Hope Khani
+
+Tutorial integration, menu toggle, instruction improvements, tooltip correction: Farah R
+
+Input refactor, UI fixes, reset button, button graphic, turn change: Vince McKeown
+
+Debug display, goal tile contrast change, AI help, turn menu options: Chris DeLeon
+
+Dashboard layout update: Patrick McKeown
+
+Team letter indicator: Filipe Dottori"
+
+[node name="Play Button" parent="Classical Musem (HomeTeam era Games)/Chagamon" unique_id=107055385 instance=ExtResource("152_0dqa5")]
+unique_name_in_owner = true
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.050001144, 0.5856633, 2.7569122)
+game_label = ""
+button_link = "https://devpods.itch.io/chagamon"
+
+[node name="Flipside" type="Node3D" parent="Classical Musem (HomeTeam era Games)" unique_id=2025394]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5, 6.5, -37.6)
+
+[node name="WallDisplay" type="MeshInstance3D" parent="Classical Musem (HomeTeam era Games)/Flipside" unique_id=856763692]
+transform = Transform3D(-8.742278e-08, 0, 0.5, 0, 4, 0, -2, 0, -2.1855694e-08, 0.02262497, 2.26, 0.92207336)
+mesh = SubResource("QuadMesh_y5qfa")
+surface_material_override/0 = SubResource("StandardMaterial3D_8ctpi")
+
+[node name="FoamCard" parent="Classical Musem (HomeTeam era Games)/Flipside" unique_id=1424523690 instance=ExtResource("144_5gp3a")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.3000002, 2.3499985)
+page_text = "[b]Flipside[/b] led by Ryan Malm
+
+Metroidvanias are a notoriously challenging genre. They need expansive environments, a variety of items and abilities that affect where the player can reach, variety in the tilesets, coherent world building, and come with an extremely high bar for the expected quality of game feel and animation. Flipside really shines in how well it got across the moment to moment feel of combat for the genre, with brilliant animations, tight controls and retro effects.
+
+JavaScript for HTML5 canvas, released Apr 2020.
+
+Project lead, main concept, core gameplay, flipspace growth, main level design (incl. hub), minimap, title screen, pixel fonts, additional player animations (EV suit, death, no gun crouch/idle), powerup effects, tiles (dirt), many player sounds, hover tooltips, portrait work, assorted bug fixes, map editor integration, UI design, bullet motion/collision, pooling, achievements, doors, boss concept, flying enemies, flipspace jetpack, parallax, environmental hazards, camera tracking: Ryan Malm
+
+GL renderer and all related fixes/optimizations, level design (Room04, Room06, Room13), flipspace distortion effect, hitbox fixes, health pickups visual, particle system improvements, flip slime, inverted plant tiles, hit flash, flip bird collisions, flip pig integration, flip crawler sprite, game save, level load/unload improvements: H Trayford
+
+Level design (final battle room, mountain bunker, Room10, Room07), robo tank (animation, AI, attack), switch puzzle triggers, tiles (greebles, panels, bolts, lights, tech) text wave effect, audio browser compatibility improvements, warp pads, gamepad support, ladders, glyph tiles, hub signs, additional sound integration, loading progress bar, flip spider, various effects (bolt thrower, landing, muzzle flash, sparks, flamethrower), additional error checking, assorted generated sounds: Christer \"McFunkypants\" Kaitila
+
+Player design improvements, jump/fall animations, air control fix, crouch, additional pause screen details, art and code for aiming up: Marc Silva
+
+Player top collision, gravity fix, rate of fire control, shot reallocation on death: Andrew Mushel
+
+5+ tilesets, song (\"Vanishing\"), enemy Slime animations, portraits art: Jeff \"Axphin\" Hanlon
+
+Music in 4 variations (\"Layers of Cool Lasers\"): Klaim (A. Joël Lamotte)
+
+Audio implementation (advanced; spatialization, ducking, track swapping, and more), volume controls: Michael Fewkes
+
+Creepy synthwave track: Stebs
+
+Assorted sound effects (environment, enemy, attacks, interface, pickups, and more), main dialog box functionality: Vaan Hope Khani
+
+RoboDrone logic: Michelly Oliveira
+
+Blue pipes tiles, OS compatibility fix: Gonzalo Delgado
+
+Animations (walk, idle, with and without gun), initial EV suit: Jeremiah Franczyk
+
+Pause menu, blocked movement while crouching: Matthew \"McCordinator\" McCord
+
+Practice commits: Ian Cherabier, Simon J Hoffiz"
+
+[node name="Play Button" parent="Classical Musem (HomeTeam era Games)/Flipside" unique_id=1937118279 instance=ExtResource("152_0dqa5")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.050001144, 0.5856633, 2.7569122)
+game_label = ""
+button_link = "https://devpods.itch.io/flipside"
+
+[node name="Kung Twu" type="Node3D" parent="Classical Musem (HomeTeam era Games)" unique_id=1663013442]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.95, 7.0856633, -41.093094)
+
+[node name="WallDisplay KungTwu" type="MeshInstance3D" parent="Classical Musem (HomeTeam era Games)/Kung Twu" unique_id=83114412]
+transform = Transform3D(-8.742278e-08, 0, -0.5, 0, 4, 0, 2, 0, -2.1855694e-08, 0.07262421, 1.6599998, 1.9151688)
 mesh = SubResource("QuadMesh_y5qfa")
 surface_material_override/0 = SubResource("StandardMaterial3D_0dqa5")
 
-[node name="FoamCard-kung twu" parent="Classical Musem (HomeTeam era Games)" unique_id=818884996 instance=ExtResource("144_5gp3a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 6.8, -40.699997)
+[node name="FoamCard-kung twu" parent="Classical Musem (HomeTeam era Games)/Kung Twu" unique_id=818884996 instance=ExtResource("144_5gp3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.049999237, -0.28566313, 0.39309692)
 page_text = "[b]Kung Twu[/b] led by H Trayford
 
 This game, based on the lead's favorite classic fighting games, was also the only game created in our community over the years where the lead also created custom merch designs which were available to members.
@@ -4264,30 +4345,11 @@ Gameplay feedback: Bilal A. Cheema
 
 Linux case sensitivity fix: Randy Tan Shaoxian"
 
-[node name="WallDisplay Chagamon" type="MeshInstance3D" parent="Classical Musem (HomeTeam era Games)" unique_id=1336021164]
-transform = Transform3D(-8.742278e-08, 0, 0.5, 0, 4, 0, -2, 0, -2.1855694e-08, 15.522625, 8.789751, -39.577927)
-mesh = SubResource("QuadMesh_y5qfa")
-surface_material_override/0 = SubResource("StandardMaterial3D_pcqrn")
-
-[node name="FoamCard-Chagamon" parent="Classical Musem (HomeTeam era Games)" unique_id=1444844968 instance=ExtResource("144_5gp3a")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 15.5, 6.8, -38.15)
-page_text = "[b]Chagamon[/b] led by Vaan Hope Khani
-
-It's very rare for a board turn-based digital game to be developed in our community, but Chagamon is an original variation chess which mixes a few weakened well-known pieces (rooks and bishops can only move 5 spaces, knights move fully), no pawns, and a new objective: to get the key (king-like) piece to the opposite corner. Players each start with pieces in each corner, one for escort and one for defendint their keyhold. Due to how classic chess AI is programmed, similar alpha-beta pruning optimizations on predictions were equally useful to get the computer able to play well enough to at least avoid obvious oversights or blunders.
-
-JavaScript for HTML5 canvas, released July 2021.
-
-Project lead, original board game design, core gameplay, computer player AI and related optimizations, piece art, table art, win and lose conditions, sounds: Vaan Hope Khani
-
-Tutorial integration, menu toggle, instruction improvements, tooltip correction: Farah R
-
-Input refactor, UI fixes, reset button, button graphic, turn change: Vince McKeown
-
-Debug display, goal tile contrast change, AI help, turn menu options: Chris DeLeon
-
-Dashboard layout update: Patrick McKeown
-
-Team letter indicator: Filipe Dottori"
+[node name="Play Kung Twu" parent="Classical Musem (HomeTeam era Games)/Kung Twu" unique_id=1277110821 instance=ExtResource("152_0dqa5")]
+unique_name_in_owner = true
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+game_label = ""
+button_link = "https://devpods.itch.io/kung-twu"
 
 [node name="LAGameDevs" parent="." unique_id=444055794 instance=ExtResource("44_1tes7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, -0.23520589, -18.893093)
