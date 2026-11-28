@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://cjkag3xy0cbys"]
+
+[ext_resource type="Script" uid="uid://ehbbc0ik5w8" path="res://game wall pictures/frame_button_credits.gd" id="1_6s5em"]
+[ext_resource type="Script" uid="uid://bud6xyvo80vl3" path="res://scripts/click_link.gd" id="2_2uudw"]
+[ext_resource type="Script" uid="uid://bsmp4qaqn0uxw" path="res://entities-scene_prefabs/interaction/objects/interactable_area.gd" id="3_3e5m5"]
+[ext_resource type="PackedScene" uid="uid://cyqgophlok1w5" path="res://entities-scene_prefabs/interaction/display_hint/display_hint.tscn" id="4_yb5y5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pl7fw"]
+size = Vector3(1.5, 1.5, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c8sum"]
+size = Vector3(0.38310242, 0.30490875, 0.22302246)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7tbbo"]
+albedo_color = Color(0.98039216, 0.12941177, 0.14901961, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y5qfa"]
+
+[node name="Play Game Simplebutton" type="StaticBody3D" unique_id=2050546016]
+script = ExtResource("1_6s5em")
+game_label = "Triune Legacy"
+button_link = "https://tfunk.itch.io/triune-legacy"
+button_interact_text = "Open Game"
+
+[node name="ButtonClickLink" type="Node" parent="." unique_id=1589301258]
+unique_name_in_owner = true
+script = ExtResource("2_2uudw")
+url = "https://tfunk.itch.io/triune-legacy"
+metadata/_custom_type_script = "uid://bud6xyvo80vl3"
+
+[node name="CollisionShapeStand" type="CollisionShape3D" parent="." unique_id=657047807]
+transform = Transform3D(-0.19999999, 0, 1.4901161e-08, 0, 0.20000002, 0, -1.4901161e-08, 0, -0.19999999, 0.43624878, 0.27999973, 0.02155304)
+shape = SubResource("BoxShape3D_pl7fw")
+
+[node name="PlayStandInteractable" type="Area3D" parent="." unique_id=1159731038 node_paths=PackedStringArray("display_hint")]
+unique_name_in_owner = true
+transform = Transform3D(0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.49999997, 0.39294052, 0.05000019, 0.13315582)
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("3_3e5m5")
+interact_prompt = "View Game"
+display_hint = NodePath("Marker3D/DisplayHint")
+interacting_pauses_music = true
+metadata/_custom_type_script = "uid://bsmp4qaqn0uxw"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayStandInteractable" unique_id=2074241280]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08506775, 0.20333862, -0.06362915)
+shape = SubResource("BoxShape3D_c8sum")
+
+[node name="Marker3D" type="Marker3D" parent="PlayStandInteractable" unique_id=1137346435]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.42225024, -0.037976623)
+
+[node name="DisplayHint" parent="PlayStandInteractable/Marker3D" unique_id=1673367312 node_paths=PackedStringArray("display_target") instance=ExtResource("4_yb5y5")]
+display_target = NodePath("..")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=664485381]
+transform = Transform3D(-5.9604645e-08, 0, -1, -1, -4.371139e-08, 5.9604645e-08, -4.371139e-08, 1, 2.6054018e-15, 0.42990303, 0.27500057, 0.05179596)
+size = Vector3(0.2, 0.05, 0.2)
+material = SubResource("StandardMaterial3D_7tbbo")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=1413840097]
+transform = Transform3D(-5.9604645e-08, 0, -1, -1, -4.371139e-08, 5.9604645e-08, -4.371139e-08, 1, 2.6054018e-15, 0.42990303, 0.27500057, 0.0017967224)
+size = Vector3(0.3, 0.05, 0.3)
+material = SubResource("StandardMaterial3D_y5qfa")

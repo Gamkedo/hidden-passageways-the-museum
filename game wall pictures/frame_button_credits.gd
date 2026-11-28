@@ -69,7 +69,8 @@ func _ready() -> void:
 		button_click_link.url = button_link
 	
 	var display = get_node("Foam Card") as DisplayText
-	display.page_text = credits
+	if display != null:
+		display.page_text = credits
 
 	var speaker = get_node_or_null("Speaker")
 	if speaker and "stream_nearby" in speaker and ost:
@@ -82,8 +83,9 @@ func _ready() -> void:
 			play_stand_interactable.interaction_complete.connect(open_link)
 			if button_interact_text != "":
 				play_stand_interactable.set_interaction_text(button_interact_text)
-		
-			scene_changer.goto_scene = world_scene
+			if world_scene != "":
+				scene_changer.goto_scene = world_scene
+		if frame_interactable != null:
 			frame_interactable.interaction_complete.connect(open_scene)
 			if frame_interact_text != "":
 				frame_interactable.set_interaction_text(frame_interact_text)
