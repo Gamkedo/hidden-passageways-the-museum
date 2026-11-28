@@ -133,8 +133,12 @@
 [ext_resource type="Texture2D" uid="uid://ctshxydcc7r8d" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/shin-logo.png" id="92_n7nlf"]
 [ext_resource type="Material" uid="uid://dhxo20n8worr6" path="res://materials/concrete-lights.tres" id="104_g8gvm"]
 [ext_resource type="Material" uid="uid://dfcjs6h611xnr" path="res://materials/concrete-dark.tres" id="105_l8pru"]
+[ext_resource type="Texture2D" uid="uid://wb2t1deaduuu" path="res://game wall pictures/placeholder/wip-kitbash.jpg" id="108_ttukw"]
+[ext_resource type="Texture2D" uid="uid://cehl30fbaxspv" path="res://game wall pictures/placeholder/wip-unreal-third-person.jpg" id="108_ylv57"]
 [ext_resource type="AudioStream" uid="uid://sces0d3i8w8y" path="res://audio/dev-pods-game-song-clips-with-credits/Michael Avrie - Echoes (Naous).ogg" id="109_k7ixa"]
 [ext_resource type="Texture2D" uid="uid://crhtibyp2heuc" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/naous.jpg" id="109_pcqrn"]
+[ext_resource type="Texture2D" uid="uid://d0vmqn5ksgvvs" path="res://game wall pictures/placeholder/wip-steamrolla.jpg" id="110_ylv57"]
+[ext_resource type="Texture2D" uid="uid://bwqqpcef440cw" path="res://game wall pictures/placeholder/wip-orc-burp.jpg" id="111_477gl"]
 [ext_resource type="Texture2D" uid="uid://cvk0qgk4q74m6" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/naous-logo.png" id="111_k7ixa"]
 [ext_resource type="PackedScene" uid="uid://ca7psvp35dvx7" path="res://entities-scene_prefabs/grass_clump.tscn" id="113_25n75"]
 [ext_resource type="Material" uid="uid://36365xk5xoy8" path="res://materials/asphalt.tres" id="114_4h6t8"]
@@ -470,36 +474,36 @@ material = ExtResource("7_3lbo0")
 size = Vector2(10.380006, 10.380006)
 orientation = 1
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_0dqa5"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_ylv57"]
 viewport_path = NodePath("../SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pl7fw"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_477gl"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_0dqa5")
+albedo_texture = SubResource("ViewportTexture_ylv57")
 roughness = 0.8
 texture_filter = 5
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_pcqrn"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_8ctpi"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k7ixa"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kdtnm"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_pcqrn")
+albedo_texture = SubResource("ViewportTexture_8ctpi")
 roughness = 0.8
 texture_filter = 5
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_xmbax"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_7uxpd"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yc8gk"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_peegb"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_xmbax")
+albedo_texture = SubResource("ViewportTexture_7uxpd")
 roughness = 0.8
 texture_filter = 5
 
@@ -531,11 +535,11 @@ albedo_texture = ExtResource("19_tdylj")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_kdu0b"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ttukw"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_40hid"]
 shading_mode = 0
 albedo_texture = ExtResource("137_21smi")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ylv57"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3dy5e"]
 shading_mode = 0
 albedo_texture = ExtResource("137_21smi")
 
@@ -547,19 +551,19 @@ albedo_texture = ExtResource("153_gbv3t")
 shading_mode = 0
 albedo_texture = ExtResource("154_sqt7j")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_477gl"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kvabm"]
 shading_mode = 0
 albedo_texture = ExtResource("139_iiiry")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8ctpi"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hv2j4"]
 shading_mode = 0
 albedo_texture = ExtResource("138_h3gjr")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kdtnm"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gfe1u"]
 shading_mode = 0
 albedo_texture = ExtResource("141_0k2yn")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7uxpd"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6eq4l"]
 shading_mode = 0
 albedo_texture = ExtResource("140_kpfdj")
 
@@ -2866,18 +2870,40 @@ ost = ExtResource("73_onsk2")
 painting_texture = ExtResource("56_anu3i")
 button_texture = ExtResource("57_3hhar")
 
-[node name="SOON-OrcBurp" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=1940920562 instance=ExtResource("44_1tes7")]
+[node name="SOON-Unreal third person" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=1940920562 instance=ExtResource("44_1tes7")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -10.623474, -9.235206, 11.524845)
-game_label = "COMING SOON"
+game_label = "Our last Unreal 5 game"
+button_link = "https://devpods.gg"
+button_interact_text = "Join the Team"
 credits = "COMING SOON"
-painting_texture = ExtResource("39_1tes7")
+painting_texture = ExtResource("108_ylv57")
 button_texture = ExtResource("39_1tes7")
 
 [node name="SOON-SteamRolla" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=718369502 instance=ExtResource("44_1tes7")]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -15.429041, -9.235206, 7.524845)
-game_label = "COMING SOON"
+game_label = "In-Development"
+button_link = "https://devpods.gg"
+button_interact_text = "Join the Team"
 credits = "COMING SOON"
-painting_texture = ExtResource("39_1tes7")
+painting_texture = ExtResource("110_ylv57")
+button_texture = ExtResource("39_1tes7")
+
+[node name="SOON-Orcburp" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=1758046449 instance=ExtResource("44_1tes7")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -15.429041, -9.235206, -0.9751549)
+game_label = "In-Development"
+button_link = "https://devpods.gg"
+button_interact_text = "Join the Team"
+credits = "COMING SOON"
+painting_texture = ExtResource("111_477gl")
+button_texture = ExtResource("39_1tes7")
+
+[node name="SOON-Kitbash Toy Clash2" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=1707339802 instance=ExtResource("44_1tes7")]
+transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, 16.070961, -9.235206, -0.9751549)
+game_label = "In-Development"
+button_link = "https://devpods.gg"
+button_interact_text = "Join the Team"
+credits = "COMING SOON"
+painting_texture = ExtResource("108_ttukw")
 button_texture = ExtResource("39_1tes7")
 
 [node name="Naous" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=885371647 instance=ExtResource("44_1tes7")]
@@ -3048,7 +3074,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_pl7fw")
+surface_material_override/0 = SubResource("StandardMaterial3D_477gl")
 
 [node name="Guidebook3d2" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1034692829]
 transform = Transform3D(0.99572617, -6.976736e-08, 0.092355326, 0.07370379, 0.60259724, -0.79463464, -0.05565301, 0.7980456, 0.60002184, 0.33789635, 0.5955966, 0.11873436)
@@ -3062,7 +3088,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_k7ixa")
+surface_material_override/0 = SubResource("StandardMaterial3D_kdtnm")
 
 [node name="Guidebook3d3" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1679212863]
 transform = Transform3D(-0.9742656, -0.12668496, -0.18643428, 0.14209789, -0.98725104, -0.07172081, -0.1749714, -0.0963671, 0.979846, -0.58836937, 0.5955966, 0.11873436)
@@ -3076,7 +3102,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_yc8gk")
+surface_material_override/0 = SubResource("StandardMaterial3D_peegb")
 
 [node name="Label3D" type="Label3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1183973093]
 transform = Transform3D(0.24000001, 0, 0, 0, 0.24000001, 0, 0, 0, 0.24000001, -0.07500076, 0.61191887, -0.31499863)
@@ -4065,7 +4091,7 @@ url = "https://itch.io/c/8560000/hometeam-sep-2019-may-2025-era-of-devpodsgg-gam
 
 [node name="Button image" parent="Classical Musem (HomeTeam era Games)/HomeTeam All/Button Game" parent_id_path=PackedInt32Array(943563676, 1440399840) index="1" unique_id=1896630648]
 transform = Transform3D(0.222912, 0, -0.027712809, 0, 0.27519995, 0, 0.3860949, 0, 0.015999993, 5.6853065, 0.46112013, 0.7685318)
-material_override = SubResource("StandardMaterial3D_ttukw")
+material_override = SubResource("StandardMaterial3D_40hid")
 
 [node name="GameLabel" parent="Classical Musem (HomeTeam era Games)/HomeTeam All/Button Game" parent_id_path=PackedInt32Array(943563676, 1440399840) index="2" unique_id=1183973093]
 transform = Transform3D(0.12, 0, -0.20784612, 0, 0.24000001, 0, 0.20784612, 0, 0.12, 5.6782417, 0.66499996, 0.7606964)
@@ -4085,7 +4111,7 @@ transform = Transform3D(0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.49
 transform = Transform3D(-4.152582e-08, 0, -0.95, 0, 0.95, 0, 0.95, 0, -4.152582e-08, 0, 4.55, 0.20000458)
 
 [node name="Painting Image" parent="Classical Musem (HomeTeam era Games)/HomeTeam All/BasicCurvyFrame Test" index="2" unique_id=784914795]
-material_override = SubResource("StandardMaterial3D_ylv57")
+material_override = SubResource("StandardMaterial3D_3dy5e")
 
 [node name="Speaker" parent="Classical Musem (HomeTeam era Games)/HomeTeam All" index="4" unique_id=1668457512]
 visible = false
@@ -4285,7 +4311,7 @@ This area is being built in a separate Unity project web build, which in the fin
 url = "https://itch.io/c/8563755/lagamedevs-oct-2015-june-2016-era-of-devpodsgg-games"
 
 [node name="Button image" parent="LAGameDevs/Button Game" parent_id_path=PackedInt32Array(444055794, 1440399840) index="1" unique_id=1896630648]
-material_override = SubResource("StandardMaterial3D_477gl")
+material_override = SubResource("StandardMaterial3D_kvabm")
 
 [node name="GameLabel" parent="LAGameDevs/Button Game" parent_id_path=PackedInt32Array(444055794, 1440399840) index="2" unique_id=1183973093]
 text = "Los Angeles
@@ -4295,7 +4321,7 @@ Game Devs"
 transform = Transform3D(-8.742277e-09, 0, -0.19999999, 0, 0.19999999, 0, 0.19999999, 0, -8.742277e-09, 0, -0.19999999, 0)
 
 [node name="Painting Image" parent="LAGameDevs/BasicCurvyFrame Test" index="2" unique_id=784914795]
-material_override = SubResource("StandardMaterial3D_8ctpi")
+material_override = SubResource("StandardMaterial3D_hv2j4")
 
 [node name="Speaker" parent="LAGameDevs" index="4" unique_id=1668457512]
 visible = false
@@ -4322,7 +4348,7 @@ This set of games will be in a second building in the Unity project, which is in
 url = "https://itch.io/c/8564198/gamkedo-club-era-jun-2016-oct-2029-era-of-devpodsgg-games "
 
 [node name="Button image" parent="Gamkedo Club/Button Game" parent_id_path=PackedInt32Array(1810017256, 1440399840) index="1" unique_id=1896630648]
-material_override = SubResource("StandardMaterial3D_kdtnm")
+material_override = SubResource("StandardMaterial3D_gfe1u")
 
 [node name="GameLabel" parent="Gamkedo Club/Button Game" parent_id_path=PackedInt32Array(1810017256, 1440399840) index="2" unique_id=1183973093]
 text = "Gamkedo
@@ -4332,7 +4358,7 @@ Club"
 transform = Transform3D(-8.742277e-09, 0, -0.19999999, 0, 0.19999999, 0, 0.19999999, 0, -8.742277e-09, 0, -0.19999999, 0)
 
 [node name="Painting Image" parent="Gamkedo Club/BasicCurvyFrame Test" index="2" unique_id=784914795]
-material_override = SubResource("StandardMaterial3D_7uxpd")
+material_override = SubResource("StandardMaterial3D_6eq4l")
 
 [node name="Speaker" parent="Gamkedo Club" index="4" unique_id=1668457512]
 visible = false

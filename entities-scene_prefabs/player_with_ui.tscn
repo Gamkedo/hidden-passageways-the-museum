@@ -158,7 +158,7 @@ text = "Move:  WASD / Joystick
 Jump:  Spacebar / Bottom Face Button
 Interact:  F / Left Face Button
 Sprint:  LShift / LT
-Interaction Hints: V / RT
+Interaction Hints: Hold V
 Settings / Free Mouse: Escape"
 fit_content = true
 scroll_active = false
