@@ -133,6 +133,9 @@
 [ext_resource type="Texture2D" uid="uid://ctshxydcc7r8d" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/shin-logo.png" id="92_n7nlf"]
 [ext_resource type="Material" uid="uid://dhxo20n8worr6" path="res://materials/concrete-lights.tres" id="104_g8gvm"]
 [ext_resource type="Material" uid="uid://dfcjs6h611xnr" path="res://materials/concrete-dark.tres" id="105_l8pru"]
+[ext_resource type="AudioStream" uid="uid://sces0d3i8w8y" path="res://audio/dev-pods-game-song-clips-with-credits/Michael Avrie - Echoes (Naous).ogg" id="109_k7ixa"]
+[ext_resource type="Texture2D" uid="uid://crhtibyp2heuc" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/naous.jpg" id="109_pcqrn"]
+[ext_resource type="Texture2D" uid="uid://cvk0qgk4q74m6" path="res://game wall pictures/ready-to-use/dev pods summer 2025-end of 2026/naous-logo.png" id="111_k7ixa"]
 [ext_resource type="PackedScene" uid="uid://ca7psvp35dvx7" path="res://entities-scene_prefabs/grass_clump.tscn" id="113_25n75"]
 [ext_resource type="Material" uid="uid://36365xk5xoy8" path="res://materials/asphalt.tres" id="114_4h6t8"]
 [ext_resource type="Material" uid="uid://bvv2qnftn2yuh" path="res://materials/sidewalk.tres" id="114_s4gn4"]
@@ -2870,19 +2873,42 @@ credits = "COMING SOON"
 painting_texture = ExtResource("39_1tes7")
 button_texture = ExtResource("39_1tes7")
 
-[node name="SOON-TBA" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=718369502 instance=ExtResource("44_1tes7")]
+[node name="SOON-SteamRolla" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=718369502 instance=ExtResource("44_1tes7")]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -15.429041, -9.235206, 7.524845)
 game_label = "COMING SOON"
 credits = "COMING SOON"
 painting_texture = ExtResource("39_1tes7")
 button_texture = ExtResource("39_1tes7")
 
-[node name="SOON-SteamRolla" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=885371647 instance=ExtResource("44_1tes7")]
+[node name="Naous" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=885371647 instance=ExtResource("44_1tes7")]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -15.429041, -9.235206, -8.975155)
-game_label = "COMING SOON"
-credits = "COMING SOON"
-painting_texture = ExtResource("39_1tes7")
-button_texture = ExtResource("39_1tes7")
+game_label = "Naous"
+button_link = "https://uraxii.itch.io/naous"
+credits = "[b]Naous[/b] credits
+Developed July 6 - Jan 11, 2026
+
+Project Lead, core gameplay, main network multiplayer with related backend (including a few rewrites and countless bug fixes), character creation/selection, UI actions, status effects and stat systems, skill cooldowns, spells, global logging, stats manager, assorted integration, entity spawning, camera behavior, collisions, separating gameplay from physics, hub level design, ring of fire: Uraxii (Nicole-Brandon Paul)
+
+Project Co-lead, Lake Natalie environment, town details, archa enemy with animations, models (cliff, crystals, town buildings, dungeon meshes, boulders, foliage, crates, sculptures, cloth flags, rope buntings), environment textures (sky, sun, water, foliage, clouds, cliffs, rocks, mud, sand, wood, wall trim, pipes, decals, hand drawn effects), particle effects (splash, smoke, falling leaves, sand dust), windy cloth shader, moving clouds, waterfall effects, sounds (ambient wind, gem socket, spell fail, footsteps, melee combat, UI tones): Christer Kaitila
+
+Tutorial dungeon with related HUD/hotbar, Coalescence dungeon layout, tutorial sequence authoring (opening, plaza, miniboss, initial horde, clear boulder, enemy reveal, heal, allies backup), music integration with tutorial sequence, interactables, cursor targeting system, controller support, drag & drop inventory, item tooltips, interaction prompts, healthbars, base enemy logic, spellcasting fix, various bug fixes, title screen UI, server install documentation: Jesse Rupe
+
+Music (complete soundtrack, 6 songs), scripted dynamic layered music with transitions, music integration with gameplay, skip-friendly animated credits scene, title screen background scene and lore display, music options menu, weapons models (swords, polearm), various scripting and bug fixes: Michael Avrie
+
+Local testing support and related UI, early version of server/client world scene replication, client API, player spawn with camera control, initialization correction, packet manager, docker build fix: Justin Montgomery
+
+Player base model and materials with idle/walk/run animations, Moebius-style shader: Tyler Funk
+
+Edge detection shader, windy cloth shader double-sided fix, dungeon post processing setup: Liyi Zhang
+
+Quickstart guide (internal doc), ground material detection, client side data saving: Dávid Tóth
+
+Spell icons (fireball, ice, lightning, block, parry, wind, caduceus), deselect target sound: Chad Serrant
+
+Zoom scroll smoothing, prevented camera flipping: David Bates"
+ost = ExtResource("109_k7ixa")
+painting_texture = ExtResource("109_pcqrn")
+button_texture = ExtResource("111_k7ixa")
 
 [node name="Shin and the Guardians of the Spirits" parent="Modern Musem (Dev Pods era Games)/Dev Pods Game Pictures" unique_id=535871088 instance=ExtResource("44_1tes7")]
 transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, -6.929041, -9.235206, -13.405556)
