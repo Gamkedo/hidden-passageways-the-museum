@@ -4255,6 +4255,14 @@ button_link = "https://tfunk.itch.io/rovey"
 [node name="rovey-web-pose2" parent="Classical Musem (HomeTeam era Games)/Rovey" unique_id=2142145679 instance=ExtResource("168_8ctpi")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 3.8499985, 1.8643365, -2.5069084)
 
+[node name="SpotLight3D" type="SpotLight3D" parent="Classical Musem (HomeTeam era Games)/Rovey/rovey-web-pose2" unique_id=1194363563]
+transform = Transform3D(0.6666667, 0, 0, 0, 0.3823843, -0.54610145, 0, 0.54610145, 0.3823843, -0.33333588, 0.0666666, 1.3666763)
+light_energy = 1.572
+light_size = 0.721
+light_specular = 10.671
+spot_range = 7.5
+spot_angle = 45.783707
+
 [node name="Chagamon" type="Node3D" parent="Classical Musem (HomeTeam era Games)" unique_id=1023071183]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5, 6.5, -40.5)
 
