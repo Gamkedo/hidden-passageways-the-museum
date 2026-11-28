@@ -68,15 +68,16 @@ func _ready() -> void:
 	if button_click_link != null:
 		button_click_link.url = button_link
 	
-	var display = get_node("Foam Card") as DisplayText
+	var display = get_node_or_null("Foam Card") as DisplayText
 	if display != null:
 		display.page_text = credits
 
 	var speaker = get_node_or_null("Speaker")
 	if speaker and "stream_nearby" in speaker and ost:
 			$Speaker.stream_nearby = ost
-			$Speaker.speaker_interactable.interaction_prompt_prefix = "Song:"
-			$Speaker.speaker_interactable.interact_prompt = ost.resource_path.get_basename().get_file()
+			var speaker_interactable = $Speaker.get_node_or_null("SpeakerInteractable")
+			speaker_interactable.interaction_prompt_prefix = "Song:"
+			speaker_interactable.interact_prompt = ost.resource_path.get_basename().get_file()
 
 	if not Engine.is_editor_hint():
 		if play_stand_interactable != null:

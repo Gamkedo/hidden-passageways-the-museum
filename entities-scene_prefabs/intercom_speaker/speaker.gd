@@ -1,6 +1,6 @@
 extends StaticBody3D
 
-var stream_nearby: AudioStream = null
+@export var stream_nearby: AudioStream = null
 @onready var speaker_interactable = $SpeakerInteractable
 
 @onready var autoplay_trigger: Area3D = $MusicAutoplayBox
