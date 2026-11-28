@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cbkiyqxl4ekkp"]
+
+[ext_resource type="PackedScene" uid="uid://cv6p5clvoempf" path="res://models/rovey-web-pose.fbx" id="1_cm403"]
+[ext_resource type="Texture2D" uid="uid://bkfcfyp6ajik8" path="res://textures/rovey-dawnbringer-32-1x.png" id="2_jbyxr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_etush"]
+albedo_texture = ExtResource("2_jbyxr")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a3wqa"]
+albedo_texture = ExtResource("2_jbyxr")
+emission_enabled = true
+
+[node name="rovey-web-pose" unique_id=2142145679 instance=ExtResource("1_cm403")]
+
+[node name="RoveyBody" parent="." index="1" unique_id=727293115]
+surface_material_override/0 = SubResource("StandardMaterial3D_etush")
+surface_material_override/1 = SubResource("StandardMaterial3D_a3wqa")

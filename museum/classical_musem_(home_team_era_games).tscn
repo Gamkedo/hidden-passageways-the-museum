@@ -382,28 +382,6 @@ operation = 2
 size = Vector3(1, 4, 2)
 material = ExtResource("4_gdldj")
 
-[node name="hole-trim15" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1748946399]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.633327, -3.25, -9.67857)
-size = Vector3(1.2, 4.2, 2.2)
-material = ExtResource("4_gdldj")
-
-[node name="hole-cut15" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1729259470]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.433327, -3.25, -9.67857)
-operation = 2
-size = Vector3(1, 4, 2)
-material = ExtResource("4_gdldj")
-
-[node name="hole-trim16" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1665120645]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.633327, -3.25, -6.7785683)
-size = Vector3(1.2, 4.2, 2.2)
-material = ExtResource("4_gdldj")
-
-[node name="hole-cut16" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1139672236]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.433327, -3.25, -6.7785683)
-operation = 2
-size = Vector3(1, 4, 2)
-material = ExtResource("4_gdldj")
-
 [node name="quoin-corner" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1685001849 instance=ExtResource("6_gdldj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, -8, 13.5)
 
@@ -780,11 +758,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, -6.4, 0.5)
 [node name="DisplayCase2" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1521766632 instance=ExtResource("4_35kj8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, -6.4, 0.5)
 
-[node name="DisplayCase3" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1707933501 instance=ExtResource("4_35kj8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, -6.4, 0)
-
-[node name="DisplayCase4" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1363662858 instance=ExtResource("4_35kj8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, -6.4, -6)
+[node name="DisplayCase4 Giant for Rovey" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1363662858 instance=ExtResource("4_35kj8")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 29, -6.4, -7.5)
 
 [node name="DisplayCase5" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=785005596 instance=ExtResource("4_35kj8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, -6.4, 6)

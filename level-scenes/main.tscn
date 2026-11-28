@@ -167,6 +167,7 @@
 [ext_resource type="Texture2D" uid="uid://crkn47wclfut7" path="res://textures/signage/kung-twu.jpg" id="153_gbv3t"]
 [ext_resource type="Texture2D" uid="uid://bgy6qcncki2pl" path="res://textures/signage/chagamon.jpg" id="154_sqt7j"]
 [ext_resource type="Texture2D" uid="uid://cgswk0n85vh3g" path="res://textures/signage/hometeam-flipside.jpg" id="162_477gl"]
+[ext_resource type="PackedScene" uid="uid://cbkiyqxl4ekkp" path="res://models/rovey_web_pose.tscn" id="168_8ctpi"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_xteo1"]
 
@@ -475,36 +476,36 @@ material = ExtResource("7_3lbo0")
 size = Vector2(10.380006, 10.380006)
 orientation = 1
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_ylv57"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_kdtnm"]
 viewport_path = NodePath("../SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_477gl"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7uxpd"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_ylv57")
+albedo_texture = SubResource("ViewportTexture_kdtnm")
 roughness = 0.8
 texture_filter = 5
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_8ctpi"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_peegb"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kdtnm"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_40hid"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_8ctpi")
+albedo_texture = SubResource("ViewportTexture_peegb")
 roughness = 0.8
 texture_filter = 5
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_7uxpd"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_3dy5e"]
 viewport_path = NodePath("../../Guidebook3d/SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_peegb"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kvabm"]
 resource_local_to_scene = true
 resource_name = "Pages"
 transparency = 1
-albedo_texture = SubResource("ViewportTexture_7uxpd")
+albedo_texture = SubResource("ViewportTexture_3dy5e")
 roughness = 0.8
 texture_filter = 5
 
@@ -536,11 +537,11 @@ albedo_texture = ExtResource("19_tdylj")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_kdu0b"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_40hid"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hv2j4"]
 shading_mode = 0
 albedo_texture = ExtResource("137_21smi")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3dy5e"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gfe1u"]
 shading_mode = 0
 albedo_texture = ExtResource("137_21smi")
 
@@ -556,19 +557,19 @@ albedo_texture = ExtResource("162_477gl")
 shading_mode = 0
 albedo_texture = ExtResource("153_gbv3t")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kvabm"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6eq4l"]
 shading_mode = 0
 albedo_texture = ExtResource("139_iiiry")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hv2j4"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cpulh"]
 shading_mode = 0
 albedo_texture = ExtResource("138_h3gjr")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gfe1u"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hhygl"]
 shading_mode = 0
 albedo_texture = ExtResource("141_0k2yn")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6eq4l"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tdrlo"]
 shading_mode = 0
 albedo_texture = ExtResource("140_kpfdj")
 
@@ -3079,7 +3080,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_477gl")
+surface_material_override/0 = SubResource("StandardMaterial3D_7uxpd")
 
 [node name="Guidebook3d2" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1034692829]
 transform = Transform3D(0.99572617, -6.976736e-08, 0.092355326, 0.07370379, 0.60259724, -0.79463464, -0.05565301, 0.7980456, 0.60002184, 0.33789635, 0.5955966, 0.11873436)
@@ -3093,7 +3094,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_kdtnm")
+surface_material_override/0 = SubResource("StandardMaterial3D_40hid")
 
 [node name="Guidebook3d3" type="Node3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1679212863]
 transform = Transform3D(-0.9742656, -0.12668496, -0.18643428, 0.14209789, -0.98725104, -0.07172081, -0.1749714, -0.0963671, 0.979846, -0.58836937, 0.5955966, 0.11873436)
@@ -3107,7 +3108,7 @@ cast_shadow = 0
 [node name="Pages" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d3/guidebook" index="1" unique_id=691886567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
 layers = 6
-surface_material_override/0 = SubResource("StandardMaterial3D_peegb")
+surface_material_override/0 = SubResource("StandardMaterial3D_kvabm")
 
 [node name="Label3D" type="Label3D" parent="Modern Musem (Dev Pods era Games)/Guidebook Stand" unique_id=1183973093]
 transform = Transform3D(0.24000001, 0, 0, 0, 0.24000001, 0, 0, 0, 0.24000001, -0.07500076, 0.61191887, -0.31499863)
@@ -4096,7 +4097,7 @@ url = "https://itch.io/c/8560000/hometeam-sep-2019-may-2025-era-of-devpodsgg-gam
 
 [node name="Button image" parent="Classical Musem (HomeTeam era Games)/HomeTeam All/Button Game" parent_id_path=PackedInt32Array(943563676, 1440399840) index="1" unique_id=1896630648]
 transform = Transform3D(0.222912, 0, -0.027712809, 0, 0.27519995, 0, 0.3860949, 0, 0.015999993, 5.6853065, 0.46112013, 0.7685318)
-material_override = SubResource("StandardMaterial3D_40hid")
+material_override = SubResource("StandardMaterial3D_hv2j4")
 
 [node name="GameLabel" parent="Classical Musem (HomeTeam era Games)/HomeTeam All/Button Game" parent_id_path=PackedInt32Array(943563676, 1440399840) index="2" unique_id=1183973093]
 transform = Transform3D(0.12, 0, -0.20784612, 0, 0.24000001, 0, 0.20784612, 0, 0.12, 5.6782417, 0.66499996, 0.7606964)
@@ -4116,7 +4117,7 @@ transform = Transform3D(0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.49
 transform = Transform3D(-4.152582e-08, 0, -0.95, 0, 0.95, 0, 0.95, 0, -4.152582e-08, 0, 4.55, 0.20000458)
 
 [node name="Painting Image" parent="Classical Musem (HomeTeam era Games)/HomeTeam All/BasicCurvyFrame Test" index="2" unique_id=784914795]
-material_override = SubResource("StandardMaterial3D_3dy5e")
+material_override = SubResource("StandardMaterial3D_gfe1u")
 
 [node name="Speaker" parent="Classical Musem (HomeTeam era Games)/HomeTeam All" index="4" unique_id=1668457512]
 visible = false
@@ -4373,7 +4374,7 @@ This area is being built in a separate Unity project web build, which in the fin
 url = "https://itch.io/c/8563755/lagamedevs-oct-2015-june-2016-era-of-devpodsgg-games"
 
 [node name="Button image" parent="LAGameDevs/Button Game" parent_id_path=PackedInt32Array(444055794, 1440399840) index="1" unique_id=1896630648]
-material_override = SubResource("StandardMaterial3D_kvabm")
+material_override = SubResource("StandardMaterial3D_6eq4l")
 
 [node name="GameLabel" parent="LAGameDevs/Button Game" parent_id_path=PackedInt32Array(444055794, 1440399840) index="2" unique_id=1183973093]
 text = "Los Angeles
@@ -4383,7 +4384,7 @@ Game Devs"
 transform = Transform3D(-8.742277e-09, 0, -0.19999999, 0, 0.19999999, 0, 0.19999999, 0, -8.742277e-09, 0, -0.19999999, 0)
 
 [node name="Painting Image" parent="LAGameDevs/BasicCurvyFrame Test" index="2" unique_id=784914795]
-material_override = SubResource("StandardMaterial3D_hv2j4")
+material_override = SubResource("StandardMaterial3D_cpulh")
 
 [node name="Speaker" parent="LAGameDevs" index="4" unique_id=1668457512]
 visible = false
@@ -4410,7 +4411,7 @@ This set of games will be in a second building in the Unity project, which is in
 url = "https://itch.io/c/8564198/gamkedo-club-era-jun-2016-oct-2029-era-of-devpodsgg-games "
 
 [node name="Button image" parent="Gamkedo Club/Button Game" parent_id_path=PackedInt32Array(1810017256, 1440399840) index="1" unique_id=1896630648]
-material_override = SubResource("StandardMaterial3D_gfe1u")
+material_override = SubResource("StandardMaterial3D_hhygl")
 
 [node name="GameLabel" parent="Gamkedo Club/Button Game" parent_id_path=PackedInt32Array(1810017256, 1440399840) index="2" unique_id=1183973093]
 text = "Gamkedo
@@ -4420,7 +4421,7 @@ Club"
 transform = Transform3D(-8.742277e-09, 0, -0.19999999, 0, 0.19999999, 0, 0.19999999, 0, -8.742277e-09, 0, -0.19999999, 0)
 
 [node name="Painting Image" parent="Gamkedo Club/BasicCurvyFrame Test" index="2" unique_id=784914795]
-material_override = SubResource("StandardMaterial3D_6eq4l")
+material_override = SubResource("StandardMaterial3D_tdrlo")
 
 [node name="Speaker" parent="Gamkedo Club" index="4" unique_id=1668457512]
 visible = false
@@ -4429,6 +4430,9 @@ visible = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.575005, 21.150002, 110.02501)
 operation = 2
 size = Vector3(1.85, 3.7, 2.55)
+
+[node name="rovey-web-pose2" parent="." unique_id=2142145679 instance=ExtResource("168_8ctpi")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 56, 6.25, -63.45)
 
 [editable path="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d/guidebook"]
 [editable path="Modern Musem (Dev Pods era Games)/Guidebook Stand/Guidebook3d2/guidebook"]
