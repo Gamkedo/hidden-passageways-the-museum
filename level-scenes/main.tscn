@@ -167,6 +167,7 @@
 [ext_resource type="Texture2D" uid="uid://crkn47wclfut7" path="res://textures/signage/kung-twu.jpg" id="153_gbv3t"]
 [ext_resource type="Texture2D" uid="uid://bgy6qcncki2pl" path="res://textures/signage/chagamon.jpg" id="154_sqt7j"]
 [ext_resource type="Texture2D" uid="uid://cgswk0n85vh3g" path="res://textures/signage/hometeam-flipside.jpg" id="162_477gl"]
+[ext_resource type="Texture2D" uid="uid://drtlx5evjndsg" path="res://textures/signage/hometeam-spark.jpg" id="165_kdtnm"]
 [ext_resource type="PackedScene" uid="uid://cbkiyqxl4ekkp" path="res://models/rovey_web_pose.tscn" id="168_8ctpi"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_xteo1"]
@@ -556,6 +557,10 @@ albedo_texture = ExtResource("162_477gl")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0dqa5"]
 shading_mode = 0
 albedo_texture = ExtResource("153_gbv3t")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_peegb"]
+shading_mode = 0
+albedo_texture = ExtResource("165_kdtnm")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6eq4l"]
 shading_mode = 0
@@ -4259,7 +4264,7 @@ mesh = SubResource("QuadMesh_y5qfa")
 surface_material_override/0 = SubResource("StandardMaterial3D_pcqrn")
 
 [node name="FoamCard" parent="Classical Musem (HomeTeam era Games)/Chagamon" unique_id=1444844968 instance=ExtResource("144_5gp3a")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.3000002, 2.3499985)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.3000002, 2.2999954)
 page_text = "[b]Chagamon[/b] led by Vaan Hope Khani
 
 It's very rare for a board turn-based digital game to be developed in our community, but Chagamon is an original variation chess which mixes a few weakened well-known pieces (rooks and bishops can only move 5 spaces, knights move fully), no pawns, and a new objective: to get the key (king-like) piece to the opposite corner. Players each start with pieces in each corner, one for escort and one for defendint their keyhold. Due to how classic chess AI is programmed, similar alpha-beta pruning optimizations on predictions were equally useful to get the computer able to play well enough to at least avoid obvious oversights or blunders.
@@ -4280,7 +4285,7 @@ Team letter indicator: Filipe Dottori"
 
 [node name="Play Button" parent="Classical Musem (HomeTeam era Games)/Chagamon" unique_id=107055385 instance=ExtResource("152_0dqa5")]
 unique_name_in_owner = true
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.050001144, 0.5856633, 2.7569122)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.050001144, 0.5856633, 2.7069092)
 game_label = ""
 button_link = "https://devpods.itch.io/chagamon"
 
@@ -4293,7 +4298,7 @@ mesh = SubResource("QuadMesh_y5qfa")
 surface_material_override/0 = SubResource("StandardMaterial3D_8ctpi")
 
 [node name="FoamCard" parent="Classical Musem (HomeTeam era Games)/Flipside" unique_id=1424523690 instance=ExtResource("144_5gp3a")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.3000002, 2.3499985)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.3000002, 2.2999992)
 page_text = "[b]Flipside[/b] led by Ryan Malm
 
 Metroidvanias are a notoriously challenging genre. They need expansive environments, a variety of items and abilities that affect where the player can reach, variety in the tilesets, coherent world building, and come with an extremely high bar for the expected quality of game feel and animation. Flipside really shines in how well it got across the moment to moment feel of combat for the genre, with brilliant animations, tight controls and retro effects.
@@ -4331,7 +4336,7 @@ Pause menu, blocked movement while crouching: Matthew \"McCordinator\" McCord
 Practice commits: Ian Cherabier, Simon J Hoffiz"
 
 [node name="Play Button" parent="Classical Musem (HomeTeam era Games)/Flipside" unique_id=1937118279 instance=ExtResource("152_0dqa5")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.050001144, 0.5856633, 2.7569122)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.050001144, 0.5856633, 2.706913)
 game_label = ""
 button_link = "https://devpods.itch.io/flipside"
 
@@ -4344,7 +4349,7 @@ mesh = SubResource("QuadMesh_y5qfa")
 surface_material_override/0 = SubResource("StandardMaterial3D_0dqa5")
 
 [node name="FoamCard-kung twu" parent="Classical Musem (HomeTeam era Games)/Kung Twu" unique_id=818884996 instance=ExtResource("144_5gp3a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.049999237, -0.28566313, 0.39309692)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.049999237, -0.28566313, 0.4930954)
 page_text = "[b]Kung Twu[/b] led by H Trayford
 
 This game, based on the lead's favorite classic fighting games, was also the only game created in our community over the years where the lead also created custom merch designs which were available to members.
@@ -4401,9 +4406,48 @@ Linux case sensitivity fix: Randy Tan Shaoxian"
 
 [node name="Play Kung Twu" parent="Classical Musem (HomeTeam era Games)/Kung Twu" unique_id=1277110821 instance=ExtResource("152_0dqa5")]
 unique_name_in_owner = true
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0.099998474)
 game_label = ""
 button_link = "https://devpods.itch.io/kung-twu"
+
+[node name="Spark" type="Node3D" parent="Classical Musem (HomeTeam era Games)" unique_id=1093363143]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.95, 7.0856633, -38.1931)
+
+[node name="WallDisplay Spark" type="MeshInstance3D" parent="Classical Musem (HomeTeam era Games)/Spark" unique_id=1404885825]
+transform = Transform3D(-8.742278e-08, 0, -0.5, 0, 4, 0, 2, 0, -2.1855694e-08, 0.07262421, 1.6599998, 1.9151688)
+mesh = SubResource("QuadMesh_y5qfa")
+surface_material_override/0 = SubResource("StandardMaterial3D_peegb")
+
+[node name="FoamCard-Spark" parent="Classical Musem (HomeTeam era Games)/Spark" unique_id=1421974756 instance=ExtResource("144_5gp3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.049999237, -0.28566313, 0.49310303)
+page_text = "[b]Spark[/b] led by Tylor Allison
+
+Developed July 4 - Nov 21, 2021
+
+Core gameplay, project lead, NPC behaviors, main artist, primary writer, tutorial, UI framework and primitives, performance optimizations, environment design, building/furniture art, NPC and object interactions, pathfinding, fairy/gnome sprites, custom editor, particles, input handling, asset management, hints system: Tylor Allison
+
+Bar assets (including game cards), floor rune relay, rock relay integration, runes, vendor house flower pot update, spark flower animations, mute refactor, stairs, assorted beach shells, electric zap sound, plants (fern, wild flowers, large leaf plant, shrubs), door open/close sounds, rocks: Vince McKeown
+
+Tree, flower pot (including animation), sounds (fairy wings, wind chimes, silver and gold bells, gnome grumbling variations, cheers, sparks), additional sprite integration, gnome chatter, gloom and enlightened walk states, various scenery decoration improvements (vendor, plant variations, seashells, palm tree): Patrick McKeown
+
+Music: Alan Zaring
+
+Initial main menu functionality, options state, button sounds, music and sound volume sliders, door opening sound, additional level editing: Vaan Hope Khani
+
+Pillar activation sound, vendor sounds, gnome sweeping animation, action UI icons: Chris DeLeon
+
+Title screen decoration, minor tutorial editing, lamp post sound hookup: Christer \"McFunkypants\" Kaitila
+
+Story and dialog work (incl. Ciara, the barkeeper), updates to map areas for vendor and tower: Abhishek @akhmin_ak
+
+NPC morale and like/dislike indicators, indicators sprite sheet: Philip Greene
+
+Tinkerer shop sprites: Gonzalo Delgado"
+
+[node name="Play Spark" parent="Classical Musem (HomeTeam era Games)/Spark" unique_id=1140366954 instance=ExtResource("152_0dqa5")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0.1000061)
+game_label = ""
+button_link = "https://tylorallison.itch.io/spark"
 
 [node name="LAGameDevs" parent="." unique_id=444055794 instance=ExtResource("44_1tes7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, -0.23520589, -18.893093)
