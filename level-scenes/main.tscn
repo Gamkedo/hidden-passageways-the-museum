@@ -889,7 +889,7 @@ shape = SubResource("BoxShape3D_3e5oy")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.3545, -3.191966, -42.729813)
 
 [node name="tree-small2" parent="Outdoors with Portal Taxi" unique_id=946810702 instance=ExtResource("16_iixjk")]
-transform = Transform3D(0.3902278, 0, -0.9207184, 0, 1, 0, 0.9207184, 0, 0.3902278, 30.07125, 1.1247222, -83.45731)
+transform = Transform3D(1.1706834, 0, -2.762155, 0, 3, 0, 2.762155, 0, 1.1706834, 45.07125, 3.6247222, -79.45731)
 
 [node name="tree-big" parent="Outdoors with Portal Taxi" unique_id=1613927015 instance=ExtResource("17_4fg2q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.276974, -3.020609, -36.710236)
