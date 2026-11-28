@@ -156,6 +156,7 @@
 [ext_resource type="PackedScene" uid="uid://j2gv3tbsutek" path="res://models/tyler_funks_triune_legacy_hippo_warrior_web_optimized.tscn" id="143_hy4di"]
 [ext_resource type="PackedScene" uid="uid://c8tqx7x66ewpd" path="res://entities-scene_prefabs/credits_foam_card_viewable.tscn" id="144_5gp3a"]
 [ext_resource type="PackedScene" uid="uid://bi1vjubwagq28" path="res://models/elizabeth_mcmahill_operation_sheepherder_cat.tscn" id="145_a5p35"]
+[ext_resource type="Texture2D" uid="uid://crkn47wclfut7" path="res://textures/signage/kung-twu.jpg" id="153_gbv3t"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_xteo1"]
 
@@ -532,6 +533,10 @@ albedo_texture = ExtResource("137_21smi")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yc8gk"]
 shading_mode = 0
 albedo_texture = ExtResource("137_21smi")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0dqa5"]
+shading_mode = 0
+albedo_texture = ExtResource("153_gbv3t")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ttukw"]
 shading_mode = 0
@@ -4064,6 +4069,14 @@ Model, materials, and (removed for exhibit) animation by Tyler Funk
 
 Triune Legacy released Apr 24, 2022. Tyler also led this project. It's a networked multiplayer PvE game built in Unity."
 
+[node name="FoamCard-tyler-funks-triune_legacy2" parent="Classical Musem (HomeTeam era Games)" unique_id=818884996 instance=ExtResource("144_5gp3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 6.8, -40)
+page_text = "[b]Kung Twu[/b] led by H Trayford
+
+This game, based on the lead's favorite classic fighting games, was also the only game created in our community over the years where the lead also created custom merch designs which were available to members.
+
+JavaScript for HTML5 canvas, released December 2019."
+
 [node name="Foam Card-elizabeth-osh" parent="Classical Musem (HomeTeam era Games)" unique_id=1810288096 instance=ExtResource("144_5gp3a")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 22.5, 5.55, -28)
 page_text = "[b]Operation Sheep Herder[/b] Player Cat
@@ -4074,6 +4087,11 @@ Operation Sheep Herder was led by Kelly Mark, and released Apr 21, 2024. It's bu
 
 [node name="elizabeth_mcmahill_operation_sheepherder_cat2" parent="Classical Musem (HomeTeam era Games)" unique_id=45495045 instance=ExtResource("145_a5p35")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 23.5, 6, -29)
+
+[node name="WallDisplay KungTwu" type="MeshInstance3D" parent="Classical Musem (HomeTeam era Games)" unique_id=83114412]
+transform = Transform3D(-8.742278e-08, 0, -0.5, 0, 4, 0, 2, 0, -2.1855694e-08, 38.022625, 8.689751, -38.527924)
+mesh = SubResource("QuadMesh_y5qfa")
+surface_material_override/0 = SubResource("StandardMaterial3D_0dqa5")
 
 [node name="LAGameDevs" parent="." unique_id=444055794 instance=ExtResource("44_1tes7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, -0.23520589, -18.893093)

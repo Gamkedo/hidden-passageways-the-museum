@@ -208,89 +208,89 @@ material = ExtResource("3_lpmrh")
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -34.7, -7, 10)
 
 [node name="hole-trim" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1971488115]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -2.6999998, -7.200001)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -3.25, -7.200001)
 size = Vector3(1.2, 4.2, 2.2)
 material = ExtResource("4_gdldj")
 
 [node name="hole-cut" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1230680278]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8, -2.6999998, -7.200001)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8, -3.25, -7.200001)
 operation = 2
 size = Vector3(1, 4, 2)
 material = ExtResource("4_gdldj")
 
 [node name="hole-trim2" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1449520932]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -2.6999998, -10.100002)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -3.25, -10.100002)
 size = Vector3(1.2, 4.2, 2.2)
 material = ExtResource("4_gdldj")
 
 [node name="hole-cut2" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1276968076]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8, -2.6999998, -10.100002)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8, -3.25, -10.100002)
 operation = 2
 size = Vector3(1, 4, 2)
 material = ExtResource("4_gdldj")
 
 [node name="hole-trim3" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=647505222]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -2.6999998, 7.3999996)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -3.25, 7.3999996)
 size = Vector3(1.2, 4.2, 2.2)
 material = ExtResource("4_gdldj")
 
 [node name="hole-cut3" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1819872627]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8, -2.6999998, 7.3999996)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8, -3.25, 7.3999996)
 operation = 2
 size = Vector3(1, 4, 2)
 material = ExtResource("4_gdldj")
 
 [node name="hole-trim4" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=2039661723]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -2.6999998, 4.499998)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -3.25, 4.499998)
 size = Vector3(1.2, 4.2, 2.2)
 material = ExtResource("4_gdldj")
 
 [node name="hole-cut4" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1320703974]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8, -2.6999998, 4.499998)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8, -3.25, 4.499998)
 operation = 2
 size = Vector3(1, 4, 2)
 material = ExtResource("4_gdldj")
 
 [node name="hole-trim5" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=595946563]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.100002, -2.6999998, -7.200001)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.100002, -3.25, -7.200001)
 size = Vector3(1.2, 4.2, 2.2)
 material = ExtResource("4_gdldj")
 
 [node name="hole-cut5" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1308289861]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.9, -2.6999998, -7.200001)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.9, -3.25, -7.200001)
 operation = 2
 size = Vector3(1, 4, 2)
 material = ExtResource("4_gdldj")
 
 [node name="hole-trim6" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=786340883]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.100002, -2.6999998, -10.100002)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.100002, -3.25, -10.100002)
 size = Vector3(1.2, 4.2, 2.2)
 material = ExtResource("4_gdldj")
 
 [node name="hole-cut6" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=206711331]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.9, -2.6999998, -10.100002)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.9, -3.25, -10.100002)
 operation = 2
 size = Vector3(1, 4, 2)
 material = ExtResource("4_gdldj")
 
 [node name="hole-trim7" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1542176674]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.100002, -2.6999998, 7.3999996)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.100002, -3.25, 7.3999996)
 size = Vector3(1.2, 4.2, 2.2)
 material = ExtResource("4_gdldj")
 
 [node name="hole-cut7" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1525906137]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.9, -2.6999998, 7.3999996)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.9, -3.25, 7.3999996)
 operation = 2
 size = Vector3(1, 4, 2)
 material = ExtResource("4_gdldj")
 
 [node name="hole-trim8" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=306507778]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.100002, -2.6999998, 4.499998)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.100002, -3.25, 4.499998)
 size = Vector3(1.2, 4.2, 2.2)
 material = ExtResource("4_gdldj")
 
 [node name="hole-cut8" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=935975221]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.9, -2.6999998, 4.499998)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.9, -3.25, 4.499998)
 operation = 2
 size = Vector3(1, 4, 2)
 material = ExtResource("4_gdldj")
@@ -317,89 +317,89 @@ material = ExtResource("3_lpmrh")
 transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, 34.233326, -7, -11.628571)
 
 [node name="hole-trim9" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1640955146]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.533325, -2.6999998, 5.57143)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.533325, -3.3000002, 5.57143)
 size = Vector3(1.2, 4.2, 2.2)
 material = ExtResource("4_gdldj")
 
 [node name="hole-cut9" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1221300334]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.333328, -2.6999998, 5.57143)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.333328, -3.3000002, 5.57143)
 operation = 2
 size = Vector3(1, 4, 2)
 material = ExtResource("4_gdldj")
 
 [node name="hole-trim10" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1647558557]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.533325, -2.6999998, 8.471432)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.533325, -3.3000002, 8.471432)
 size = Vector3(1.2, 4.2, 2.2)
 material = ExtResource("4_gdldj")
 
 [node name="hole-cut10" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1757214984]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.333328, -2.6999998, 8.471432)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.333328, -3.3000002, 8.471432)
 operation = 2
 size = Vector3(1, 4, 2)
 material = ExtResource("4_gdldj")
 
 [node name="hole-trim11" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1818936349]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.533325, -2.6999998, -9.028568)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.533325, -3.3000002, -9.028568)
 size = Vector3(1.2, 4.2, 2.2)
 material = ExtResource("4_gdldj")
 
 [node name="hole-cut11" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1744845743]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.333328, -2.6999998, -9.028568)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.333328, -3.3000002, -9.028568)
 operation = 2
 size = Vector3(1, 4, 2)
 material = ExtResource("4_gdldj")
 
 [node name="hole-trim12" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=302012683]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.533325, -2.6999998, -6.1285667)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.533325, -3.3000002, -6.1285667)
 size = Vector3(1.2, 4.2, 2.2)
 material = ExtResource("4_gdldj")
 
 [node name="hole-cut12" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1319038603]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.333328, -2.6999998, -6.1285667)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 11.333328, -3.3000002, -6.1285667)
 operation = 2
 size = Vector3(1, 4, 2)
 material = ExtResource("4_gdldj")
 
 [node name="hole-trim13" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=2009043664]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.63333, -2.6999998, 5.57143)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.63333, -3.3000002, 5.57143)
 size = Vector3(1.2, 4.2, 2.2)
 material = ExtResource("4_gdldj")
 
 [node name="hole-cut13" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1356164701]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.43333, -2.6999998, 5.57143)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.43333, -3.3000002, 5.57143)
 operation = 2
 size = Vector3(1, 4, 2)
 material = ExtResource("4_gdldj")
 
 [node name="hole-trim14" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=89694410]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.63333, -2.6999998, 8.471432)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.63333, -3.3000002, 8.471432)
 size = Vector3(1.2, 4.2, 2.2)
 material = ExtResource("4_gdldj")
 
 [node name="hole-cut14" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=369318136]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.43333, -2.6999998, 8.471432)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.43333, -3.3000002, 8.471432)
 operation = 2
 size = Vector3(1, 4, 2)
 material = ExtResource("4_gdldj")
 
 [node name="hole-trim15" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1748946399]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.633327, -2.6999998, -9.028572)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.633327, -3.3000002, -9.028572)
 size = Vector3(1.2, 4.2, 2.2)
 material = ExtResource("4_gdldj")
 
 [node name="hole-cut15" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1729259470]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.433327, -2.6999998, -9.028572)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.433327, -3.3000002, -9.028572)
 operation = 2
 size = Vector3(1, 4, 2)
 material = ExtResource("4_gdldj")
 
 [node name="hole-trim16" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1665120645]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.633327, -2.6999998, -6.1285706)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.633327, -3.3000002, -6.1285706)
 size = Vector3(1.2, 4.2, 2.2)
 material = ExtResource("4_gdldj")
 
 [node name="hole-cut16" type="CSGBox3D" parent="Museum Classical (Oct 2019-mid 2025)" unique_id=1139672236]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.433327, -2.6999998, -6.1285706)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.433327, -3.3000002, -6.1285706)
 operation = 2
 size = Vector3(1, 4, 2)
 material = ExtResource("4_gdldj")
