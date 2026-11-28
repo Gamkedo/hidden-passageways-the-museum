@@ -156,6 +156,7 @@
 [ext_resource type="PackedScene" uid="uid://j2gv3tbsutek" path="res://models/tyler_funks_triune_legacy_hippo_warrior_web_optimized.tscn" id="143_hy4di"]
 [ext_resource type="PackedScene" uid="uid://c8tqx7x66ewpd" path="res://entities-scene_prefabs/credits_foam_card_viewable.tscn" id="144_5gp3a"]
 [ext_resource type="PackedScene" uid="uid://bi1vjubwagq28" path="res://models/elizabeth_mcmahill_operation_sheepherder_cat.tscn" id="145_a5p35"]
+[ext_resource type="PackedScene" uid="uid://cyqgophlok1w5" path="res://entities-scene_prefabs/interaction/display_hint/display_hint.tscn" id="152_0dqa5"]
 [ext_resource type="Texture2D" uid="uid://crkn47wclfut7" path="res://textures/signage/kung-twu.jpg" id="153_gbv3t"]
 [ext_resource type="Texture2D" uid="uid://bgy6qcncki2pl" path="res://textures/signage/chagamon.jpg" id="154_sqt7j"]
 
@@ -534,6 +535,17 @@ albedo_texture = ExtResource("137_21smi")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yc8gk"]
 shading_mode = 0
 albedo_texture = ExtResource("137_21smi")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pl7fw"]
+size = Vector3(1.5, 1.5, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c8sum"]
+size = Vector3(0.38310242, 0.30490875, 0.22302246)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7tbbo"]
+albedo_color = Color(0.98039216, 0.12941177, 0.14901961, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y5qfa"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0dqa5"]
 shading_mode = 0
@@ -4072,7 +4084,68 @@ page_text = "[b]Triune Legacy[/b] Hippo Warrior
 
 Model, materials, and (removed for exhibit) animation by Tyler Funk
 
-Triune Legacy released Apr 24, 2022. Tyler also led this project. It's a networked multiplayer PvE game built in Unity."
+Triune Legacy released Apr 24, 2022. Tyler also led this project. It's a networked multiplayer PvE game built in Unity.
+
+Project lead, core gameplay, network code, player models (including materials and animations for both turtle and hippo), spider enemy, follow AI, stone and brick wall materials, level layouts, torch model, pickup orbs, lighting (baking and volumetric), health/mana functionality, trees, avatar switching, animation blending, water shader, UI, spellcasting, sword, rocks, grass, assorted bug fixing: Tyler Funk
+
+Crate with texture, player control fix, goblin enemy, in-game menus, options menu, menu color adjustments, pause menu: Patrick J Thompson
+
+Portal jet effects (with variations), torch flames, shockwave effect with distortion: Andy King
+
+Dungeon pillars and stone walls, spiderwebs, menu and logo improvements, chains, stair fix, crystals, candles with related flame effects, footstep integration: Christer \"McFunkypants\" Kaitila
+
+Barrel (model, materials, and two broken variations): Luis Montaña
+
+Heal sound, magic attack sound, melee attack sound: Rob Tunstall
+
+Dungeon music: Michael Fewkes
+
+Mute toggle, stone step sound: Stebs"
+
+[node name="Button Game2" type="StaticBody3D" parent="Classical Musem (HomeTeam era Games)" unique_id=1265598521]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.75, 5.3856635, -27.943092)
+
+[node name="ButtonClickLink" type="Node" parent="Classical Musem (HomeTeam era Games)/Button Game2" unique_id=1671075748]
+unique_name_in_owner = true
+script = ExtResource("3_1bvp3")
+url = "https://tfunk.itch.io/triune-legacy"
+metadata/_custom_type_script = "uid://bud6xyvo80vl3"
+
+[node name="CollisionShapeStand" type="CollisionShape3D" parent="Classical Musem (HomeTeam era Games)/Button Game2" unique_id=1311730927]
+transform = Transform3D(-0.19999999, 0, 1.4901161e-08, 0, 0.20000002, 0, -1.4901161e-08, 0, -0.19999999, 0.43624878, 0.27999973, 0.02155304)
+shape = SubResource("BoxShape3D_pl7fw")
+
+[node name="PlayStandInteractable" type="Area3D" parent="Classical Musem (HomeTeam era Games)/Button Game2" unique_id=677038512 node_paths=PackedStringArray("display_hint")]
+unique_name_in_owner = true
+transform = Transform3D(0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.49999997, 0.34294128, 0.3000002, 0.13315582)
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("11_fof07")
+interact_prompt = "View Game"
+display_hint = NodePath("Marker3D/DisplayHint")
+interacting_pauses_music = true
+metadata/_custom_type_script = "uid://bsmp4qaqn0uxw"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Classical Musem (HomeTeam era Games)/Button Game2/PlayStandInteractable" unique_id=741256991]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08506775, 0.20333862, -0.06362915)
+shape = SubResource("BoxShape3D_c8sum")
+
+[node name="Marker3D" type="Marker3D" parent="Classical Musem (HomeTeam era Games)/Button Game2/PlayStandInteractable" unique_id=1715965747]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.42225024, -0.037976623)
+
+[node name="DisplayHint" parent="Classical Musem (HomeTeam era Games)/Button Game2/PlayStandInteractable/Marker3D" unique_id=1673367312 node_paths=PackedStringArray("display_target") instance=ExtResource("152_0dqa5")]
+display_target = NodePath("..")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Classical Musem (HomeTeam era Games)/Button Game2" unique_id=182846495]
+transform = Transform3D(-5.9604645e-08, 0, -1, -1, -4.371139e-08, 5.9604645e-08, -4.371139e-08, 1, 2.6054018e-15, 0.42990303, 0.27500057, 0.05179596)
+size = Vector3(0.2, 0.05, 0.2)
+material = SubResource("StandardMaterial3D_7tbbo")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Classical Musem (HomeTeam era Games)/Button Game2" unique_id=1808733840]
+transform = Transform3D(-5.9604645e-08, 0, -1, -1, -4.371139e-08, 5.9604645e-08, -4.371139e-08, 1, 2.6054018e-15, 0.42990303, 0.27500057, 0.0017967224)
+size = Vector3(0.3, 0.05, 0.3)
+material = SubResource("StandardMaterial3D_y5qfa")
 
 [node name="Foam Card-elizabeth-osh" parent="Classical Musem (HomeTeam era Games)" unique_id=1810288096 instance=ExtResource("144_5gp3a")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 22.5, 5.55, -28)
@@ -4080,7 +4153,33 @@ page_text = "[b]Operation Sheep Herder[/b] Player Cat
 
 Model, materials, and (removed for exhibit) animation by Elizabeth McMahill
 
-Operation Sheep Herder was led by Kelly Mark, and released Apr 21, 2024. It's built in Unity."
+Operation Sheep Herder was led by Kelly Mark, and released Apr 21, 2024. It's built in Unity.
+
+Project lead, core gameplay, character models (sheep, wolf) with related animations, character AI (pathing, idle, chase, flee, pack fixes, attack, dog protective behavior), main level design and environment decoration (including trees, grass, terrain), player rock throw aimer, controls, blocked camera dithering effect, game over screen, ghost (prototype only): Kelly Mark
+
+Dog model with animations, health UI, models/textures (barn, sword, lantern, volcano, crater), armageddon effects: Dani (Cassidy) Noble
+
+Dog state changes, cat movement fixes, scene transition fade, AI error logging: Fernanda Robles
+
+Gameplay music: Michael Fewkes
+
+Level design improvements, sheep collision fix, loading manager, pause method: Stebs
+
+Player cat model and related animations: Elizabeth McMahill
+
+Dragon model/texture/animations: Tyler Funk
+
+Dragon flamethrower (texture, material, particle system): Andy Sen
+
+Dragon fire sound, fire effect hookup: Dannyellis Meléndez
+
+Mountain and rock model/texture, butterflies, skyboxes, sheep sounds: Christer \"McFunkypants\" Kaitila
+
+Rock lock-on, wolf star particles hit effect, rock throw fix: Neil Urwin
+
+Settings panel, null crash fix: Alex Joiner
+
+Wolf pack behavior (basic), outside sound recording, camera position fix, debugging visualization improvements (internal use): Chris DeLeon"
 
 [node name="elizabeth_mcmahill_operation_sheepherder_cat2" parent="Classical Musem (HomeTeam era Games)" unique_id=45495045 instance=ExtResource("145_a5p35")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 23.5, 6, -29)
@@ -4096,7 +4195,60 @@ page_text = "[b]Kung Twu[/b] led by H Trayford
 
 This game, based on the lead's favorite classic fighting games, was also the only game created in our community over the years where the lead also created custom merch designs which were available to members.
 
-JavaScript for HTML5 canvas, released December 2019."
+JavaScript for HTML5 canvas, released December 2019.
+
+Project lead, core gameplay (main movement, attacking, collision hitboxes, enemies, level structure), enemy AI, localization support, floor/roof parallax effect, foreground fade, assorted integration, game over and belt award screens, menu key support, gamepad support, assist mode options, prop collision, sprite atlas creation, tuning and bug fixes: H Trayford
+
+Main player animations (idle, punch, kick, falling, walk, blocking, crouch, crouch block, sweep kick), gameplay feedback: Marc Silva
+
+Title screen background art, boss sprites (most - adapted from player sprites), menu yin yang cursor, roof tiles, combat sound effects, title bird art, columns, floor boards effect, wall shadow effect, plain wall, zen ink logo rasterization, image loading improvement, level wall scrolls (x5), UI section border, boss animation timing tweaks, knockback sprites, atlas boss states, gameplay feedback: Jeff \"Axphin\" Hanlon
+
+Japanese letter support, controls remapping functionality, initial menu support, healthbar, sound effects (bone, low pain, steps, menu navigation, low health, 1up, swish), UI background, font system, art (lamp, table, statue, tapestry, carpet, tree, rock, bamboo, background spears, building, painting, broken vase), addl. Japanese localization, gameplay feedback: Vaan Hope Khani
+
+Whoosh air particles and related visual effects, decoration prop art system, keyboard control improvements, help screen, initial French localization, text drop shadow, sound debug toggle, knockouted out body collision and fade, dash blur, dust and smoke particles, knockout stars, hourglass for GUI, zen ink logo, performance optimizations, foosteps visuals, flash from damage, delay after player death, timing experimentation, gameplay feedback: Christer \"McFunkypants\" Kaitila
+
+Event-based input handler and related UI scripting, music fade transition support, advanced timers implementation, improved debug output, addl. extensive sound engine code: Aaron Ishibashi
+
+Composed boss music: Jaime Rivas
+
+Composed main gameplay music: Alan Zaring
+
+Spritesheets by belt color for player knockback, jump, and helicopter kick: Jeremiah Franczyk
+
+Mute toggle, all health meters, score reset bug fixes: Michelly Oliveira
+
+Boss spin kick implementation, enemy woosh dashes, localization tweaks: Stebs
+
+Camera movement, gamepad movement, gitignore addition: Evan Lindsay
+
+Idle animation hookup, addl. Japanese localization: Tyler Funk
+
+Spanish localization, slide during crouch, credits scroll and related browser interactions: Simon J Hoffiz
+
+Polish localization, extensive gameplay feedback: Kornel
+
+French localization: Klaim (A. Joël Lamotte)
+
+Additional French localization: Valentin Lemière
+
+Waterfall painting (based on in-game animation), player sweep attack bug fix: Brian J. Boucher
+
+Vase image, waterfall animation: Andy King
+
+Russian localization (initial), canvas CSS fixes: Oleksandr Dubrovskyi
+
+Player kick sound effects integration: Stephanie Patterson
+
+Background music integration: Eugene Meidinger
+
+Gameplay feedback: Bilal A. Cheema
+
+Linux case sensitivity fix: Randy Tan Shaoxian"
+
+[node name="WallDisplay Chagamon" type="MeshInstance3D" parent="Classical Musem (HomeTeam era Games)" unique_id=1336021164]
+transform = Transform3D(-8.742278e-08, 0, 0.5, 0, 4, 0, -2, 0, -2.1855694e-08, 15.522625, 8.789751, -39.577927)
+mesh = SubResource("QuadMesh_y5qfa")
+surface_material_override/0 = SubResource("StandardMaterial3D_pcqrn")
 
 [node name="FoamCard-Chagamon" parent="Classical Musem (HomeTeam era Games)" unique_id=1444844968 instance=ExtResource("144_5gp3a")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 15.5, 6.8, -38.15)
@@ -4104,12 +4256,19 @@ page_text = "[b]Chagamon[/b] led by Vaan Hope Khani
 
 It's very rare for a board turn-based digital game to be developed in our community, but Chagamon is an original variation chess which mixes a few weakened well-known pieces (rooks and bishops can only move 5 spaces, knights move fully), no pawns, and a new objective: to get the key (king-like) piece to the opposite corner. Players each start with pieces in each corner, one for escort and one for defendint their keyhold. Due to how classic chess AI is programmed, similar alpha-beta pruning optimizations on predictions were equally useful to get the computer able to play well enough to at least avoid obvious oversights or blunders.
 
-JavaScript for HTML5 canvas, released July 2021."
+JavaScript for HTML5 canvas, released July 2021.
 
-[node name="WallDisplay Chagamon" type="MeshInstance3D" parent="Classical Musem (HomeTeam era Games)" unique_id=1336021164]
-transform = Transform3D(-8.742278e-08, 0, 0.5, 0, 4, 0, -2, 0, -2.1855694e-08, 15.522625, 8.789751, -39.577927)
-mesh = SubResource("QuadMesh_y5qfa")
-surface_material_override/0 = SubResource("StandardMaterial3D_pcqrn")
+Project lead, original board game design, core gameplay, computer player AI and related optimizations, piece art, table art, win and lose conditions, sounds: Vaan Hope Khani
+
+Tutorial integration, menu toggle, instruction improvements, tooltip correction: Farah R
+
+Input refactor, UI fixes, reset button, button graphic, turn change: Vince McKeown
+
+Debug display, goal tile contrast change, AI help, turn menu options: Chris DeLeon
+
+Dashboard layout update: Patrick McKeown
+
+Team letter indicator: Filipe Dottori"
 
 [node name="LAGameDevs" parent="." unique_id=444055794 instance=ExtResource("44_1tes7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, -0.23520589, -18.893093)
